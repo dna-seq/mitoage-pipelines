@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- mitoage-pipelines
+# downloads, intermediate files and results are reproduced by the commands, never committed
+data/input/*
+data/interim/*
+data/output/*
+!data/input/.gitkeep
+!data/interim/.gitkeep
+!data/output/.gitkeep
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+*.zip
+.leak_words
+.leak_allow

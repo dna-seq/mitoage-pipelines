@@ -1,0 +1,12 @@
+# The external programs the steps call (found on PATH). The Python side is managed by uv, not by conda:
+#   conda env create -f environment.yml && conda activate mitoage-pipelines && uv sync
+name: mitoage-pipelines
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - mafft=7.526
+  - iqtree=3.1.*
+  - hyphy=2.5.104
+  - fasttree
+  - ncbi-datasets-cli    # not called by the code (the downloader uses NCBI's REST API): the same download by hand

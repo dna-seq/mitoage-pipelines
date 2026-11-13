@@ -1,0 +1,30 @@
+"""Gene lists, in one place."""
+
+# the 13 proteins of the vertebrate mitochondrial genome, named as the build's alignment files are
+MT_GENES = "ATP6 ATP8 COX1 COX2 COX3 CYTB ND1 ND2 ND3 ND4 ND4L ND5 ND6".split()
+# ND6 is on the other strand: base composition at fourfold sites is read from the other twelve
+MT_HEAVY_STRAND = [g for g in MT_GENES if g != "ND6"]
+
+COMPLEX_IV_NUCLEAR = "COX4I1 COX5A COX5B COX6A1 COX6B1 COX6C COX7A2 COX7B COX7C COX8A NDUFA4".split()
+COMPLEX_III_NUCLEAR = "UQCRC1 UQCRC2 CYC1 UQCRFS1 UQCRB UQCRQ UQCRH UQCR10 UQCR11".split()
+CYTOCHROME_C = ["CYCS"]
+COMPLEX_II = "SDHA SDHB SDHC SDHD".split()
+MATRIX = "CS MDH2 SOD2 HSPD1 ACO2 IDH2 FH".split()
+CYTOSOLIC_CONTROLS = ("CSTB FABP3 MB LYZ RBP4 TTR B2M CD59 PFN1 CFL1 GSTP1 PRDX1 PRDX2 TXN PPIA FKBP1A NME1 PEBP1 "
+                      "LGALS1 CRYAB HSPB1 TPT1 PGAM1 CA2 GPX1 SOD1 TPI1 LDHA PGK1 GAPDH").split()
+
+# the groups of the rate-covariation test, by the names its table carries. The cytosolic controls are
+# not listed here: the test takes as control every nuclear protein in its matrix that is in no group.
+GROUPS = {
+    "complex IV nuclear": COMPLEX_IV_NUCLEAR,
+    "complex III nuclear": COMPLEX_III_NUCLEAR,
+    "cytochrome c": CYTOCHROME_C,
+    "complex II (no mt subunit)": COMPLEX_II,
+    "matrix, not respiratory": MATRIX,
+}
+
+# every nuclear gene whose ortholog set `mitoage download orthologs` fetches
+NUCLEAR = COMPLEX_IV_NUCLEAR + COMPLEX_III_NUCLEAR + CYTOCHROME_C + COMPLEX_II + MATRIX + CYTOSOLIC_CONTROLS
+
+# mitochondrial subunits of the complexes with nuclear partners above, named as in the rate matrix
+MT_OF_COMPLEX = {"IV": ["MT-COX1", "MT-COX2", "MT-COX3"], "III": ["MT-CYTB"]}
