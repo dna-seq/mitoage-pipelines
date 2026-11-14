@@ -26,10 +26,12 @@ download_app = typer.Typer(no_args_is_help=True, help="Download the inputs into 
 longevity_app = typer.Typer(no_args_is_help=True, help="Longevity in the alignments of the 13 mitochondrial proteins.")
 peptides_app = typer.Typer(no_args_is_help=True, help="Peptides encoded inside mtDNA.")
 mitoport_app = typer.Typer(no_args_is_help=True, help="Rate covariation of mitochondrial proteins with their nuclear partners.")
+build2_app = typer.Typer(no_args_is_help=True, help="MitoAge build 2 from build 1 and the upstream sources (docs/BUILD2_REPRODUCTION.md).")
 app.add_typer(download_app, name="download")
 app.add_typer(longevity_app, name="longevity")
 app.add_typer(peptides_app, name="peptides")
 app.add_typer(mitoport_app, name="mitoport")
+app.add_typer(build2_app, name="build2")
 
 Build = Annotated[Path, typer.Option("--build", help="the MitoAge build (species.parquet, alignments/)")]
 Out = Annotated[Path, typer.Option("--out", help="folder the tables are written to")]
@@ -87,6 +89,100 @@ def download_orthologs(
     """Mammalian ortholog sets (protein and CDS) of the nuclear genes, from NCBI Datasets."""
     from . import download
     download.orthologs(gene or gene_lists.NUCLEAR, dest, manifest, skip_existing=not force)
+
+
+# --- download: the sources of build 2 -----------------------------------------------------------
+Manifest = Annotated[Path, typer.Option(help="the download record")]
+
+
+@download_app.command("hf")
+def download_hf(revision: Annotated[str, typer.Option(help="commit of the dataset; build 2's when omitted")] = "653afe2a3b79e18ae892e579ded9acdb17e0c334",
+                dest: Annotated[Path, typer.Option(help="where it goes")] = paths.B2_HF, manifest: Manifest = paths.MANIFEST) -> None:
+    """MitoAge build 1 (build1/) and the published build 2 tables and alignments, at a pinned revision."""
+    from .build2 import download
+    download.hf(dest, manifest, revision)
+
+
+@download_app.command("refseq")
+def download_refseq(
+    expect: Annotated[Optional[str], typer.Option(help="refuse unless NCBI's current release is this one")] = None,
+    from_file: Annotated[Optional[Path], typer.Option("--from-file", help="a kept copy of release 237, accepted only with build 2's md5")] = None,
+    efetch: Annotated[bool, typer.Option("--efetch", help="pinned mode without the release file: exactly build 2's accession.versions, by E-utilities")] = False,
+    manifest: Manifest = paths.MANIFEST,
+) -> None:
+    """The RefSeq mitochondrion release (NCBI keeps only the current one), a kept copy of release 237, or --efetch."""
+    from .build2 import download
+    if from_file:
+        download.refseq_from_file(from_file, paths.B2_REFSEQ, manifest)
+    elif efetch:
+        import polars as pl
+        sp = paths.B2_HF / "species.parquet"
+        if not sp.is_file():
+            raise FileNotFoundError(f"no {sp}: run `mitoage download hf` first (the version list is build 2's refseq column)")
+        versions = pl.read_parquet(sp).filter(pl.col("record_status") != "retired")["refseq"].to_list()
+        download.refseq_efetch(versions, paths.B2_REFSEQ, manifest, label="build2-653afe2a3b")
+    else:
+        download.refseq_current(paths.B2_REFSEQ, manifest, expect)
+
+
+@download_app.command("taxonomy")
+def download_taxonomy(
+    archive: Annotated[Optional[str], typer.Option(help="date of a monthly archive (YYYY-MM-01); 2026-11-01 is the closest to build 2's dump of 2026-11-13")] = None,
+    current: Annotated[bool, typer.Option("--current", help="the current new_taxdump instead of an archive")] = False,
+    from_file: Annotated[Optional[Path], typer.Option("--from-file", help="a kept new_taxdump.tar.gz of 2026-11-13, accepted only with build 2's md5")] = None,
+    manifest: Manifest = paths.MANIFEST,
+) -> None:
+    """NCBI Taxonomy (new_taxdump): a dated monthly archive, the current dump, or a kept copy of build 2's."""
+    from .build2 import download
+    if from_file:
+        download.taxdump_from_file(from_file, paths.B2_TAXDUMP, manifest)
+    elif current:
+        download.taxdump_current(paths.B2_TAXDUMP, manifest)
+    else:
+        download.taxdump_archive(archive or "2026-11-01", paths.B2_TAXDUMP, manifest)
+
+
+@download_app.command("lifespan")
+def download_lifespan(manifest: Manifest = paths.MANIFEST,
+                      fishbase_version: Annotated[str, typer.Option(help="FishBase/SeaLifeBase snapshot on source.coop")] = "v26.06") -> None:
+    """AnAge, FishBase and SeaLifeBase (source.coop), USGS Bird Banding Lab longevity records; tries EURING."""
+    from .build2 import download
+    download.anage(paths.B2_ANAGE, manifest)
+    download.fishbase("fb", paths.B2_FISHBASE, manifest, fishbase_version)
+    download.fishbase("slb", paths.B2_SEALIFEBASE, manifest, fishbase_version)
+    download.usgs(paths.B2_USGS, manifest)
+    download.euring(paths.B2_EURING, manifest)
+
+
+@download_app.command("cited")
+def download_cited(manifest: Manifest = paths.MANIFEST) -> None:
+    """The RefSeq records build 1 cites (one accession.version per species), by E-utilities efetch."""
+    from .build2 import build1, download
+    raw = build1.load(paths.B2_BUILD1)
+    download.genbank([s.refseq for s in raw.kept], paths.B2_GENBANK / "cited", manifest, "the records cited by build 1")
+
+
+@download_app.command("legacy")
+def download_legacy(manifest: Manifest = paths.MANIFEST) -> None:
+    """The old site's species ids, from its total_mtDNA export pages (www.mitoage.info)."""
+    from .build2 import download
+    download.legacy(paths.B2_LEGACY, manifest)
+
+
+@download_app.command("contig")
+def download_contig(release: Annotated[str, typer.Option(help="the release whose CONTIG-only records are fetched: a number, or efetch")] = "237",
+                    manifest: Manifest = paths.MANIFEST) -> None:
+    """Sequence of the complete metazoan records that carry only a CONTIG line in the release, by efetch."""
+    from .build2 import download, run
+    download.contig(run.release_file(release)[0], paths.B2_GENBANK / "contig", manifest)
+
+
+@download_app.command("primary")
+def download_primary(manifest: Manifest = paths.MANIFEST,
+                     species: Annotated[Path, typer.Option(help="hagrids whose cited record's INSDC source is fetched, one per line; written by `build2 primary-list`")] = paths.B2_INTERIM / "primary_hagrids.txt") -> None:
+    """The INSDC records named in the COMMENT of build 1's cited RefSeq records (for the re-annotation test)."""
+    from .build2 import download
+    download.primary(species, paths.B2_GENBANK / "cited", paths.B2_GENBANK / "primary", manifest)
 
 
 # --- longevity --------------------------------------------------------------------------------
@@ -322,11 +418,53 @@ def mitoport_coembed(
     coembed.main(embeddings, tree, out)
 
 
+# --- build 2 ----------------------------------------------------------------------------------
+Release = Annotated[str, typer.Option(help="RefSeq input: 237 (build 2's release), another release number, or efetch (build 2's versions by E-utilities)")]
+Taxonomy = Annotated[str, typer.Option(help="taxonomy dump folder under data/input/build2/taxdump: current-2026-11-13 (build 2's), 2026-11-01 (archive), current-<date>")]
+B2Out = Annotated[Path, typer.Option("--out", help="folder the tables are written to")]
+
+
+@build2_app.command("refseq")
+def build2_refseq(release: Release = "237", taxonomy: Taxonomy = "current-2026-11-13") -> None:
+    """Complete metazoan RefSeq mitogenomes, one per NCBI species (refseq_records.parquet)."""
+    from .build2 import run
+    run.stage_refseq(run.inputs(release, taxonomy), paths.B2_INTERIM)
+
+
+@build2_app.command("match")
+def build2_match(release: Release = "237", taxonomy: Taxonomy = "current-2026-11-13") -> None:
+    """Lifespan-source names matched to NCBI species (observations_matched.parquet)."""
+    from .build2 import run
+    run.stage_match(run.inputs(release, taxonomy), paths.B2_INTERIM)
+
+
+@build2_app.command("status")
+def build2_status(release: Release = "237", taxonomy: Taxonomy = "current-2026-11-13") -> None:
+    """Status of the 922 build 1 species and the candidate new species (build1_status.parquet, candidates.parquet)."""
+    from .build2 import run
+    run.stage_status(run.inputs(release, taxonomy), paths.B2_INTERIM)
+
+
+@build2_app.command("primary-list")
+def build2_primary_list(release: Release = "237", taxonomy: Taxonomy = "current-2026-11-13") -> None:
+    """The build 1 species whose INSDC source record `download primary` fetches (primary_hagrids.txt)."""
+    from .build2 import run
+    run.stage_primary_list(run.inputs(release, taxonomy), paths.B2_INTERIM)
+
+
+@build2_app.command("assemble")
+def build2_assemble(release: Release = "237", taxonomy: Taxonomy = "current-2026-11-13", out: B2Out = paths.B2_OUT) -> None:
+    """The build 2 tables: species, region_stats, codon_usage, genome_features, lifespan_observations, changelog, review_list."""
+    from .build2 import run
+    run.stage_assemble(run.inputs(release, taxonomy), out)
+
+
 def main() -> None:
     """The console script: a missing input or program is one line and exit status 1, not a traceback."""
     from .external import MissingProgram
+    from .build2.download import Refused as RefusedDownload
     try:
         app()
-    except (FileNotFoundError, MissingProgram) as e:
+    except (FileNotFoundError, MissingProgram, RefusedDownload) as e:
         typer.echo(f"mitoage: {e}", err=True)
         raise SystemExit(1)
