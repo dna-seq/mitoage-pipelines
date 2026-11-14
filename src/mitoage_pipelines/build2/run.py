@@ -107,6 +107,13 @@ def stage_assemble(inp, out: Path) -> dict:
     info = {"build": "2 (reproduction)", "build_date": inp.build_date, "refseq": inp.release_label, "refseq_file": str(inp.release),
             "taxonomy": inp.taxonomy_label, "taxonomy_folder": str(inp.taxdump), "anage_build": st.anage_build,
             "seconds": round(time.time() - t0, 1)}
+    from . import validate
+    bad = validate.problems(b2["species"], b2["changelog"])
+    status = {s["id"]: s["record_status"] for s in b2["species"]}
+    for t, rows in (("region_stats", b2["stats"]), ("codon_usage", b2["usage"]), ("genome_features", b2["features"])):
+        bad += validate.check_children(status, rows, t)
+    if bad:
+        raise ValueError(f"record_status and changelog disagree ({len(bad)}): " + "; ".join(bad[:5]))
     n = output.write_all(b2, out, info)
     status = {}
     for s in b2["species"]: status[s["record_status"]] = status.get(s["record_status"], 0) + 1

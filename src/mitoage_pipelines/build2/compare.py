@@ -103,12 +103,15 @@ def compare_tree(published: Path, reproduced: Path) -> dict:
 
 
 def main(published: Path, reproduced: Path, out: Path, reason=None, site_tree: Path | None = None) -> dict:
-    from .compare_reasons import classify
-    reason = reason or classify
+    from . import compare_reasons
+    ps, rs = (set(read(x, "species")["id"].to_list()) for x in (published, reproduced))
+    classify, post = compare_reasons.make(ps ^ rs)
     summary, dis, sets = [], [], []
     for t in KEYS:
-        s, d, st = compare_table(t, read(published, t), read(reproduced, t), reason)
+        s, d, st = compare_table(t, read(published, t), read(reproduced, t), reason or classify)
         summary += s; dis += d; sets.append(st)
+    for d in dis:
+        if d["reason"] == "unexplained": d["reason"] = post(d)
     out.mkdir(parents=True, exist_ok=True)
     sm = pl.DataFrame(summary); sm.write_csv(out / "fields.tsv", separator="\t")
     pl.DataFrame(sets).write_csv(out / "rows.tsv", separator="\t")
