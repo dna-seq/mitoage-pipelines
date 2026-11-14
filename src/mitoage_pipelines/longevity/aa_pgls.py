@@ -6,7 +6,9 @@ Per amino acid, its percentage over the 13 proteins (composition.tsv, from `cont
   mass+composition   aa ~ log10 lifespan + log10 adult mass + A4 + C4 + T4   (fourfold sites, from `fourfold`)
 Lambda is estimated by maximum likelihood for each amino acid and model (the phylogenetic signal of the
 residual), on the covariance of the dated species tree (pgls.py). The slope of log10 lifespan is in percentage
-points per tenfold lifespan. q: Benjamini-Hochberg over the 20 amino acids, within class and model.
+points per tenfold lifespan. q: Benjamini-Hochberg over the 20 amino acids, within class, method and model.
+The earlier test of H1 (`controls`, `composition`: random intercepts of order and family) is fitted again on
+the same species (method `mixed`), so that what the tree changes is told apart from what the species set does.
 
 Species: the manuscript's default dataset (not retired; lifespan record of high or acceptable quality and not
 estimated), with body mass, all 13 proteins, fourfold counts, and a tip in the dated tree.
@@ -44,6 +46,23 @@ def fit(C: np.ndarray, y: np.ndarray, X: np.ndarray, lam: float | None = None) -
     return {"lambda": lam, "slope": b[1], "se": se[1], "t": t, "df": df, "p": 2 * stats.t.sf(abs(t), df)}
 
 
+def fit_mixed(sp: pd.DataFrame, aa: str, covs: list[str]) -> dict:
+    """The earlier H1 model: random intercepts of order and of family within it (as `composition`), on the
+    species with both an order and a family."""
+    import warnings
+    import statsmodels.formula.api as smf
+    sp = sp.dropna(subset=["order", "family"])
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            m = smf.mixedlm(f"aa_{aa} ~ ll + " + " + ".join(covs), sp, groups="order",
+                            vc_formula={"family": "0 + C(family)"}).fit()
+        return {"n": len(sp), "lambda": np.nan, "slope": m.params["ll"], "se": m.bse["ll"], "t": m.tvalues["ll"], "p": m.pvalues["ll"]}
+    except Exception as e:                                      # reported, not hidden
+        print(f"mixed model failed for {aa} ({' + '.join(covs)}): {type(e).__name__}")
+        return {"n": len(sp), "lambda": np.nan, "slope": np.nan, "se": np.nan, "t": np.nan, "p": np.nan}
+
+
 def class_covariance(tree_file: Path, slugs: list[str]) -> tuple[np.ndarray, list[str], int]:
     """Covariance of the species of `slugs` that are tips of the tree, taken under their common ancestor (as
     `pgls` does). -> (C, those slugs in the order of C, tips under the ancestor that are not in `slugs`)."""
@@ -77,7 +96,7 @@ def select(data: Path, composition: Path, fourfold: Path, tree_file: Path, cls: 
 
 
 def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, out: Path, cls: str = "Mammalia") -> pd.DataFrame:
-    """Writes `out`: class, model, aa, n, lambda, slope, se, t, p, q."""
+    """Writes `out`: class, method (pgls, mixed), model, aa, n, lambda, slope, se, t, p, q."""
     out.parent.mkdir(parents=True, exist_ok=True)
     sp, steps = select(data, composition, fourfold, tree_file, cls)
     for label, n in steps:
@@ -89,10 +108,14 @@ def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, out: Pa
     for model, covs in MODELS.items():
         X = np.column_stack([sp.ll.to_numpy(), sp[covs].to_numpy()])
         for aa in AAS:
-            rows.append({"class": cls, "model": model, "aa": aa, "n": len(sp), **fit(C, sp["aa_" + aa].to_numpy(), X)})
-    res = pd.DataFrame(rows).drop(columns="df")
-    res["q"] = res.groupby("model").p.transform(lambda p: multipletests(p, method="fdr_bh")[1])
+            r = fit(C, sp["aa_" + aa].to_numpy(), X); r.pop("df")
+            rows.append({"class": cls, "method": "pgls", "model": model, "aa": aa, "n": len(sp), **r})
+            rows.append({"class": cls, "method": "mixed", "model": model, "aa": aa, **fit_mixed(sp, aa, covs)})
+    res = pd.DataFrame(rows)
+    res["q"] = res.groupby(["method", "model"]).p.transform(
+        lambda p: pd.Series(multipletests(p.dropna(), method="fdr_bh")[1], index=p.dropna().index).reindex(p.index))
+    res = res.sort_values(["method", "model", "aa"], ascending=[False, True, True])
     res.to_csv(out, sep="\t", index=False, float_format="%.4g")
     with pd.option_context("display.width", 200):
-        print(res.sort_values(["model", "p"]).to_string(index=False, float_format=lambda v: f"{v:.3g}"))
+        print(res[res.method == "pgls"].sort_values(["model", "p"]).to_string(index=False, float_format=lambda v: f"{v:.3g}"))
     return res
