@@ -61,7 +61,7 @@ uv run mitoage longevity pgls --class Mammalia
 uv run mitoage longevity pgls --class Aves
 
 # H3: selection in long-lived against short-lived lines (HyPhy)
-uv run mitoage longevity relax-prep
+uv run mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 
 # H4: peptides encoded inside mtDNA
@@ -83,7 +83,7 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 
 - **Identical bytes**: `controls`, `fourfold`, `composition`, `sites`, `pgls` (mammals and birds, on the
   dated tree and on a gene-built tree), `peptides pilot`, `relax-prep`, `coevol-prep`, `mitoport select`.
-- **Equal to the second decimal**: `mitoport erc`. MAFFT with several threads and IQ-TREE without a seed are
+- **Equal to the second decimal**: `mitoport erc` (compared on the gene-built tree's topology, as first run). MAFFT with several threads and IQ-TREE without a seed are
   not repeatable run to run; the group medians move by at most 0.002. `--threads 1` and `--seed` make them so.
 - **Does not reproduce**: HyPhy RELAX. On identical inputs a second run of ATP8 gave K = 1.90, p = 0.20
   where the first gave K = 1.49, p = 0.55: the optimiser lands on different optima. Read every RELAX number
@@ -93,9 +93,9 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 
 ## Known gaps
 
-- `relax-prep`, `coevol-prep` and `mitoport align` still take their species tree from the one built from the
-  13 proteins (`longevity concat`, `longevity tree`). The analysis' own rule is the dated species tree; the
-  site test follows it, these three are being moved.
+- A tree built from the 13 proteins themselves (`longevity concat`, `longevity tree`, then `--gene-tree`,
+  or `--tree` with `--outgroup`) is kept only to show how much a result depends on the tree. Every step
+  takes the build's dated species tree by default.
 - The embedding test of mitoport (H6) is not here yet: its embeddings (ESM-2 650M, about 8 GB) were computed
   in another project and are not published.
 - The aligner comparison (`longevity compare-aligners`) compares alignment files you give it; the commands

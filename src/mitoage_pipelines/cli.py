@@ -172,7 +172,7 @@ def longevity_pgls(
 @longevity_app.command("relax-prep")
 def longevity_relax_prep(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION,
-    tree: Annotated[Path, typer.Option(help="the mammal tree")] = paths.tree_file("Mammalia"),
+    tree: Annotated[Path, typer.Option(help="the species tree; the dated one, from `longevity dated-tree`")] = paths.DATED_TREE,
     out: Annotated[Path, typer.Option("--out", help="folder for species.tsv, tree.nwk and <GENE>.fna")] = paths.RELAX,
     n: Annotated[int, typer.Option(help="species per order at each end, at most")] = 10,
     per_family: Annotated[int, typer.Option(help="species of one family at each end, at most")] = 3,
@@ -183,7 +183,9 @@ def longevity_relax_prep(
     The second, disjoint draw of the analysis is the same command with --exclude <first draw>/species.tsv
     and another --out."""
     from .longevity import relax_prep
-    relax_prep.main(data, composition, tree, out, n, per_family, exclude)
+    dated = tree == paths.DATED_TREE
+    relax_prep.main(data, composition, tree, out, n, per_family, exclude,
+                    quality_file=paths.QUALITY_OK if dated else None, in_tree_only=dated)
 
 
 @longevity_app.command("relax")
@@ -202,14 +204,15 @@ def longevity_relax(
 @longevity_app.command("coevol-prep")
 def longevity_coevol_prep(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION,
-    tree: Annotated[Path, typer.Option(help="the mammal tree")] = paths.tree_file("Mammalia"),
-    outgroup: Annotated[Path, typer.Option(help="the outgroup's species")] = paths.outgroup_file("Mammalia"),
+    tree: Annotated[Path, typer.Option(help="the species tree; the dated one, from `longevity dated-tree`")] = paths.DATED_TREE,
+    outgroup: Annotated[Optional[Path], typer.Option(help="only with a tree built from the genes: its outgroup's species, to root it")] = None,
     out: Annotated[Path, typer.Option("--out", help="folder for mammals.ali, mammals.tree, mammals.lht")] = paths.COEVOL,
     per_family: Annotated[int, typer.Option(help="species of one family, at most")] = 1,
 ) -> None:
     """Inputs for Coevol: codons, tree, lifespan and mass."""
     from .longevity import coevol_prep
-    coevol_prep.main(data, composition, tree, outgroup, out, per_family)
+    coevol_prep.main(data, composition, tree, outgroup, out, per_family,
+                     quality_file=paths.QUALITY_OK if outgroup is None else None)
 
 
 @longevity_app.command("carriers")
@@ -256,8 +259,8 @@ def mitoport_select(
 @mitoport_app.command("align")
 def mitoport_align(
     data: Build = paths.BUILD, sel: Sel = paths.MITOPORT_SEL,
-    tree: Annotated[Path, typer.Option(help="the mammal tree")] = paths.tree_file("Mammalia"),
-    outgroup: Annotated[Path, typer.Option(help="the outgroup's species")] = paths.outgroup_file("Mammalia"),
+    tree: Annotated[Path, typer.Option(help="the species tree; the dated one, from `longevity dated-tree`")] = paths.DATED_TREE,
+    outgroup: Annotated[Optional[Path], typer.Option(help="only with a tree built from the genes: its outgroup's species, to root it")] = None,
     mafft_dir: Annotated[Path, typer.Option("--mafft-dir", help="folder for MAFFT's alignments as written")] = paths.MITOPORT_MAFFT,
     aln_dir: AlnDir = paths.MITOPORT_ALN, topology: Topology = paths.MITOPORT_TOPOLOGY,
     genes: GenesFile = paths.MITOPORT_GENES,

@@ -3,9 +3,9 @@ mitochondrial genome, more than nuclear proteins that do not touch mitochondrial
 
 Branch lengths per protein on one topology (from `branch-lengths`). Per branch:
   nuclear background = mean length over the cytosolic control proteins (each scaled to mean 1)
-  mt rate            = mean length over the 13 mt proteins (scaled likewise) / nuclear background
   a nuclear protein's relative rate = its scaled length / nuclear background
-Test A: Spearman correlation over branches of a protein's relative rate with the mt rate, per group.
+A test of a protein's relative rate against the overall mitochondrial rate divided by the same nuclear
+background was dropped: both sides share that denominator, which alone makes them correlate.
 Test B: the same against one complex's mt subunits only, the mt genes scaled by the mt mean.
 Leave-one-out: a control protein's own length is left out of its background.
 
@@ -53,8 +53,8 @@ def main(genes_file: Path, bl_dir: Path, out: Path) -> None:
         for g in gs:
             if g not in M: continue
             b = M[[c for c in ctrl if c != g]].mean(axis=1) if g in ctrl else bg
-            rel = M[g] / b; mtrate = mtmean / b
-            r = {"group": grp, "gene": g, "A_mt_rate": stats.spearmanr(rel[ok], mtrate[ok])[0]}
+            rel = M[g] / b
+            r = {"group": grp, "gene": g}
             for cx, ms in MTC.items():
                 r[f"B_complex_{cx}"] = stats.spearmanr(rel[ok], (M[ms].mean(axis=1) / mtmean)[ok])[0]
             rows.append(r)
@@ -65,9 +65,9 @@ def main(genes_file: Path, bl_dir: Path, out: Path) -> None:
         d = res[res.group == grp]
         if d.empty: continue
         line = f"{grp:28s} n={len(d):2d}"
-        for col in ["A_mt_rate", "B_complex_IV", "B_complex_III"]:
+        for col in ["B_complex_IV", "B_complex_III"]:
             p = stats.mannwhitneyu(d[col], c[col], alternative="two-sided")[1] if grp != "cytosolic control" and len(d) > 1 else float("nan")
             line += f"  {col} {d[col].median():+.2f} (p {p:.2g})"
         print(line)
     with pd.option_context("display.width", 200, "display.max_rows", 200):
-        print(res.sort_values("A_mt_rate", ascending=False).to_string(index=False, float_format=lambda v: f"{v:+.2f}"))
+        print(res.sort_values("B_complex_IV", ascending=False).to_string(index=False, float_format=lambda v: f"{v:+.2f}"))

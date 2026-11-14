@@ -82,7 +82,8 @@ from each end within each order, at most three per family; tips labelled. `mitoa
 (ND3 K = 0.89, p = 0.38; CYTB K = 1.03, p = 0.52); ATP8 appears there only. **No gene shows a difference
 that holds across both draws.** We do not claim the first draw's hits.
 **Open.** Lifespan as a continuous trait on every branch (Coevol on the dated tree; inputs by
-`mitoage longevity coevol-prep`). The species tree for RELAX is to be the dated tree as well.
+`mitoage longevity coevol-prep`). The RELAX runs above used the gene-built tree for their species tree;
+`relax-prep` now writes the dated one, and the runs have not been repeated on it.
 
 ## H4. Peptides encoded inside mtDNA are conserved across species
 
@@ -109,11 +110,12 @@ to cytosolic control proteins, each mitochondrial complex's rate relative to the
 mitochondrial proteins, correlation over branches. `mitoage mitoport select`, `align`, `branch-lengths`,
 `erc`.
 **Controls.** Cytosolic proteins; complex II (no mitochondrial subunit); mitochondrial matrix enzymes.
-**Result (62 mammals with all 67 proteins; on the gene-built tree's topology, to be redone on the dated
-tree).** Complex IV's eleven nuclear subunits follow the mitochondrial
-COX genes (median correlation +0.14 against −0.02 for 23 cytosolic controls, p = 0.0001), and not cytochrome
-b (−0.13). Complex III's nine nuclear subunits against cytochrome b: nothing (−0.07). This reproduces a
-known phenomenon and serves as the method's positive control. **Nothing about lifespan yet.**
+**Result (62 mammals with all 67 proteins, dated species tree).** Complex IV's eleven nuclear subunits follow
+the mitochondrial COX genes (median correlation +0.14 against +0.01 for 23 cytosolic controls, p = 0.004),
+and not cytochrome b (−0.17). Complex III's nine nuclear subunits against cytochrome b: nothing (−0.11
+against −0.06). On the topology of the tree built from the proteins the same test gave p = 0.0001; the
+direction and size are the same, the dated tree is the one that counts. This reproduces a known phenomenon
+and serves as the method's positive control. **Nothing about lifespan yet.**
 **Traps met.** IQ-TREE re-places identical sequences unless told `--keep-ident`, which silently changes the
 tree; NCBI's ortholog sets for CYC1, SDHC and SDHD held 21 to 48 sequences of another gene or a broken
 model, filtered by identity to human; a test of nuclear rate against overall mitochondrial rate with one

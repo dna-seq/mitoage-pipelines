@@ -14,18 +14,25 @@ from ..genes import MT_HEAVY_STRAND
 from ..seqio import read_fasta
 
 
-def main(data: Path, composition: Path, tree_file: Path, outgroup_file: Path, out: Path, per_family: int) -> None:
+def main(data: Path, composition: Path, tree_file: Path, outgroup_file: Path | None, out: Path, per_family: int,
+         quality_file: Path | None = None) -> None:
+    """`outgroup_file` None: `tree_file` is the dated species tree (rooted). `quality_file`: keep only its species."""
     out.mkdir(parents=True, exist_ok=True)
     sp = pd.read_csv(composition, sep="\t"); sp = sp[sp["class"] == "Mammalia"].dropna(subset=["lm"])
+    tree = Phylo.read(tree_file, "newick")
+    if quality_file is not None: sp = sp[sp.slug.isin(set(quality_file.read_text().split()))]
+    if outgroup_file is None: sp = sp[sp.slug.isin({t.name for t in tree.get_terminals()})]
     sel = sp.sort_values("slug").groupby("family").head(per_family)
     names = {s: s.replace("-", "_") for s in sel.slug}
-    tree = Phylo.read(tree_file, "newick")
-    outg = outgroup_file.read_text().split()
-    tree.root_with_outgroup(*[t for t in tree.get_terminals() if t.name in outg][:1])
+    if outgroup_file is not None:
+        outg = outgroup_file.read_text().split()
+        tree.root_with_outgroup(*[t for t in tree.get_terminals() if t.name in outg][:1])
     for t in tree.get_terminals():
         if t.name not in names: tree.prune(t)
     for cl in tree.find_clades(): cl.confidence = None; cl.branch_length = None
     for t in tree.get_terminals(): t.name = names[t.name]
+    multi = [len(c.clades) for c in tree.find_clades() if len(c.clades) > 2]
+    if multi: raise SystemExit(f"Coevol needs a binary tree; {len(multi)} nodes have more than two children")
     buf = io.StringIO(); Phylo.write(tree, buf, "newick", plain=True); (out / "mammals.tree").write_text(buf.getvalue())
     stops = set(CodonTable.unambiguous_dna_by_id[2].stop_codons); cat = {s: [] for s in names}
     for g in MT_HEAVY_STRAND:

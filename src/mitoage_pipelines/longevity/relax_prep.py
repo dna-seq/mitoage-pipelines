@@ -2,7 +2,7 @@
 
 Lifespan residual = log10 lifespan minus what body mass predicts (plain regression within mammals).
 Foreground and Reference are balanced within orders (see below), so that the contrast is not one
-order against another. The tree is the IQ-TREE one, pruned to these species, tips labelled
+order against another. The tree is the build's dated species tree, pruned to these species, tips labelled
 {Foreground} / {Reference}.
 
 Writes species.tsv, tree.nwk and one codon alignment per gene (<GENE>.fna).
@@ -20,11 +20,13 @@ from ..seqio import read_fasta
 
 
 def main(data: Path, composition: Path, tree_file: Path, out: Path, n: int, per_family: int,
-         exclude: Path | None = None) -> None:
+         exclude: Path | None = None, quality_file: Path | None = None, in_tree_only: bool = False) -> None:
     """`n`: species per order at each end at most; `per_family`: of one family at each end at most;
     `exclude`: the species.tsv of an earlier draw, whose species are left out (a second, disjoint draw)."""
     out.mkdir(parents=True, exist_ok=True)
     sp = pd.read_csv(composition, sep="\t"); sp = sp[sp["class"] == "Mammalia"].dropna(subset=["lm"])
+    if quality_file is not None: sp = sp[sp.slug.isin(set(quality_file.read_text().split()))]
+    if in_tree_only: sp = sp[sp.slug.isin({t.name for t in Phylo.read(tree_file, "newick").get_terminals()})]
     b = np.polyfit(sp.lm, sp.ll, 1); sp["resid"] = sp.ll - np.polyval(b, sp.lm)
     if exclude is not None:      # a second, disjoint draw: leave out the species of an earlier one
         sp = sp[~sp.slug.isin(pd.read_csv(exclude, sep="\t").slug)]

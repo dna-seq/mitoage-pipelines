@@ -27,7 +27,7 @@ def mafft_linsi(mafft: str, faa: Path, out: Path, threads: int) -> dict[str, str
     return read_fasta(out)
 
 
-def main(data: Path, sel: Path, tree_file: Path, outgroup_file: Path, mafft_dir: Path, aln_dir: Path,
+def main(data: Path, sel: Path, tree_file: Path, outgroup_file: Path | None, mafft_dir: Path, aln_dir: Path,
          topology: Path, genes_file: Path, species_file: Path, threads: int = 4) -> None:
     mafft = external.find("mafft", env="MAFFT")
     for d in (mafft_dir, aln_dir, topology.parent, genes_file.parent, species_file.parent):
@@ -54,15 +54,18 @@ def main(data: Path, sel: Path, tree_file: Path, outgroup_file: Path, mafft_dir:
     core = {s for s, c in count.items() if c >= 0.9 * len(nuc)}            # species most nuclear genes have
     genes = [g for g in alns if len(core - set(alns[g])) <= 0.12 * len(core)]
     species = sorted(set.intersection(*[set(alns[g]) for g in genes]) & core)
+    tree = Phylo.read(tree_file, "newick")
+    if outgroup_file is None:            # the dated species tree: only species it holds can be placed
+        species = [s for s in species if s in {t.name for t in tree.get_terminals()}]
     print(f"nuclear genes {len(nuc)}; species with >=90% of them {len(core)}; genes kept {len(genes)} (dropped: {sorted(set(alns) - set(genes))}); species in every kept gene {len(species)}")
     for g, d in dropped.items(): print(f"  {g}: {len(d)} sequences dropped (coverage/identity):", " ".join(d[:6]), "..." if len(d) > 6 else "")
     for g in genes:
         rows = {s: alns[g][s] for s in species}; L = len(next(iter(rows.values())))
         cols = [i for i in range(L) if sum(r[i] != "-" for r in rows.values()) >= 0.5 * len(rows)]
         (aln_dir / f"{g}.faa").write_text("".join(f">{s.replace('-', '_')}\n{''.join(r[i] for i in cols)}\n" for s, r in rows.items()))
-    tree = Phylo.read(tree_file, "newick")
-    outg = outgroup_file.read_text().split()
-    tree.root_with_outgroup(*[t for t in tree.get_terminals() if t.name in outg][:1])
+    if outgroup_file is not None:
+        outg = outgroup_file.read_text().split()
+        tree.root_with_outgroup(*[t for t in tree.get_terminals() if t.name in outg][:1])
     for t in tree.get_terminals():
         if t.name not in species: tree.prune(t)
     for cl in tree.find_clades(): cl.confidence = None; cl.branch_length = None
