@@ -79,3 +79,7 @@ USGS_LICENSE = ("U.S. Government work (USGS), presumed public domain; cite Bird 
 BUILD1_LICENSE = "Free for all purposes provided MitoAge is cited (Toren et al. 2016, Nucleic Acids Res 44:D1262-D1265)"
 REFSEQ_VERSION = "release 237 (mitochondrion.1.genomic.gbff.gz, file date 2026-09-03)"
 TAXONOMY_VERSION = "new_taxdump of 2026-11-13 (Last-Modified 2026-11-13T00:42:20Z)"
+
+# The snapshot dataset of the inputs no upstream archive keeps (`--from-snapshot`)
+SNAPSHOT_REPO = "longevity-genie/mitoage-build2-sources"
+SNAPSHOT_REVISION = "9d55d72648d0838c3b5f37fca6185f8b938b3272"   # 2026-11-14, first upload

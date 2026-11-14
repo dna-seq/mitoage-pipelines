@@ -32,6 +32,12 @@ class Refused(RuntimeError):
     """A download that is not what it should be: wrong checksum, wrong release, missing records."""
 
 
+def write_label(folder: Path, label: str) -> None:
+    """How the steps name this input in the tables (changelog upstream_version, reasons)."""
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / "label.json").write_text(json.dumps({"label": label}) + "\n")
+
+
 def md5_of(path: Path) -> str:
     h = hashlib.md5()
     with open(path, "rb") as f:
@@ -106,6 +112,9 @@ def refseq_current(dest_root: Path, manifest: Path, expect: str | None = None) -
     dest = dest_root / f"release{release}" / "mitochondrion.1.genomic.gbff.gz"
     headers = fetch_to(pins.REFSEQ_URL, dest)
     (dest.parent / "RELEASE_NUMBER").write_text(release + "\n")
+    from email.utils import parsedate_to_datetime
+    fdate = parsedate_to_datetime(headers["Last-Modified"]).date().isoformat() if headers.get("Last-Modified") else "unknown"
+    write_label(dest.parent, f"release {release} (mitochondrion.1.genomic.gbff.gz, file date {fdate})")
     md5 = md5_of(dest)
     _manifest(manifest, "ncbi-ftp", pins.REFSEQ_URL, dest.parent, revision=f"release {release}",
               last_modified=headers.get("Last-Modified"), md5=md5,
@@ -127,6 +136,7 @@ def refseq_from_file(src: Path, dest_root: Path, manifest: Path, release: str = 
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(src, dest)
     (dest.parent / "RELEASE_NUMBER").write_text(release + "\n")
+    write_label(dest.parent, pins.REFSEQ_VERSION)
     _manifest(manifest, "local-copy", str(src), dest.parent, revision=f"release {release}", md5=got,
               origin=pins.REFSEQ_URL, matches_build2_pin=True)
     return dest
@@ -197,6 +207,7 @@ def refseq_efetch(versions: list[str], dest_root: Path, manifest: Path, label: s
     if missing:
         raise Refused(f"efetch returned no record for {len(missing)} versions: {', '.join(missing[:10])}")
     out = dest_root / f"efetch-{label}" / "mitochondrion.efetch.gbff.gz"
+    write_label(out.parent, f"the {len(set(versions))} RefSeq accession.versions of build 2 by E-utilities efetch (retrieved {time.strftime('%Y-%m-%d', time.gmtime())})")
     with gzip.open(out, "wt") as f:
         for v in dict.fromkeys(versions):
             f.write((folder / f"{v}.gb").read_text())
@@ -233,6 +244,7 @@ def taxdump_archive(date: str, dest_root: Path, manifest: Path) -> Path:
         names = {Path(n).name: n for n in zf.namelist()}
         _extract(list(names), lambda n: zf.open(names[n]), dest)
     z.unlink()
+    write_label(dest, f"new_taxdump archive of {date}")
     _manifest(manifest, "ncbi-ftp", url, dest, revision=f"new_taxdump archive of {date}", md5=got,
               md5_published=want or "none (the archive has no .md5 files; zip CRCs checked)",
               matches_build2_pin="no (build 2 read the current dump of 2026-11-13; closest archive)" if date != pins.TAXDUMP_BUILD2 else "yes")
@@ -253,6 +265,8 @@ def taxdump_current(dest_root: Path, manifest: Path) -> Path:
     with tarfile.open(tmp) as tf:
         _extract(tf.getnames(), lambda n: tf.extractfile(n), dest)
     tmp.unlink()
+    lm = parsedate_to_datetime(headers["Last-Modified"]).strftime("%Y-%m-%dT%H:%M:%SZ")
+    write_label(dest, f"new_taxdump of {date} (Last-Modified {lm})")
     _manifest(manifest, "ncbi-ftp", url, dest, revision=f"new_taxdump of {date}", last_modified=headers["Last-Modified"],
               md5=got, matches_build2_pin=got == pins.TAXDUMP_BUILD2_MD5)
     return dest

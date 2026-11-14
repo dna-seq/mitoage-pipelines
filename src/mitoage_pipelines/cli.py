@@ -26,12 +26,14 @@ download_app = typer.Typer(no_args_is_help=True, help="Download the inputs into 
 longevity_app = typer.Typer(no_args_is_help=True, help="Longevity in the alignments of the 13 mitochondrial proteins.")
 peptides_app = typer.Typer(no_args_is_help=True, help="Peptides encoded inside mtDNA.")
 mitoport_app = typer.Typer(no_args_is_help=True, help="Rate covariation of mitochondrial proteins with their nuclear partners.")
+snapshot_app = typer.Typer(no_args_is_help=True, help="MAINTAINERS ONLY: build and upload the snapshot dataset of build 2's sources (needs a write token).")
 build2_app = typer.Typer(no_args_is_help=True, help="MitoAge build 2 from build 1 and the upstream sources (docs/BUILD2_REPRODUCTION.md).")
 app.add_typer(download_app, name="download")
 app.add_typer(longevity_app, name="longevity")
 app.add_typer(peptides_app, name="peptides")
 app.add_typer(mitoport_app, name="mitoport")
 app.add_typer(build2_app, name="build2")
+app.add_typer(snapshot_app, name="snapshot")
 
 Build = Annotated[Path, typer.Option("--build", help="the MitoAge build (species.parquet, alignments/)")]
 Out = Annotated[Path, typer.Option("--out", help="folder the tables are written to")]
@@ -95,6 +97,15 @@ def download_orthologs(
 Manifest = Annotated[Path, typer.Option(help="the download record")]
 
 
+Snapshot = Annotated[bool, typer.Option("--from-snapshot", help="read the copy in the snapshot dataset longevity-genie/mitoage-build2-sources (no token) instead of the original source")]
+SnapRev = Annotated[Optional[str], typer.Option("--snapshot-revision", help="revision of the snapshot dataset; the pinned one when omitted")]
+
+
+def _snapshot(kind: str, revision: Optional[str], manifest: Path) -> None:
+    from .build2 import pins, snapshot
+    snapshot.download(kind, revision or pins.SNAPSHOT_REVISION, manifest)
+
+
 @download_app.command("hf")
 def download_hf(revision: Annotated[str, typer.Option(help="commit of the dataset; build 2's when omitted")] = "653afe2a3b79e18ae892e579ded9acdb17e0c334",
                 dest: Annotated[Path, typer.Option(help="where it goes")] = paths.B2_HF, manifest: Manifest = paths.MANIFEST) -> None:
@@ -108,11 +119,14 @@ def download_refseq(
     expect: Annotated[Optional[str], typer.Option(help="refuse unless NCBI's current release is this one")] = None,
     from_file: Annotated[Optional[Path], typer.Option("--from-file", help="a kept copy of release 237, accepted only with build 2's md5")] = None,
     efetch: Annotated[bool, typer.Option("--efetch", help="pinned mode without the release file: exactly build 2's accession.versions, by E-utilities")] = False,
+    from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None,
     manifest: Manifest = paths.MANIFEST,
 ) -> None:
-    """The RefSeq mitochondrion release (NCBI keeps only the current one), a kept copy of release 237, or --efetch."""
+    """The RefSeq mitochondrion release (NCBI keeps only the current one), release 237 from the snapshot, a kept copy, or --efetch."""
     from .build2 import download
-    if from_file:
+    if from_snapshot:
+        _snapshot("refseq", snapshot_revision, manifest)
+    elif from_file:
         download.refseq_from_file(from_file, paths.B2_REFSEQ, manifest)
     elif efetch:
         import polars as pl
@@ -130,11 +144,14 @@ def download_taxonomy(
     archive: Annotated[Optional[str], typer.Option(help="date of a monthly archive (YYYY-MM-01); 2026-11-01 is the closest to build 2's dump of 2026-11-13")] = None,
     current: Annotated[bool, typer.Option("--current", help="the current new_taxdump instead of an archive")] = False,
     from_file: Annotated[Optional[Path], typer.Option("--from-file", help="a kept new_taxdump.tar.gz of 2026-11-13, accepted only with build 2's md5")] = None,
+    from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None,
     manifest: Manifest = paths.MANIFEST,
 ) -> None:
-    """NCBI Taxonomy (new_taxdump): a dated monthly archive, the current dump, or a kept copy of build 2's."""
+    """NCBI Taxonomy (new_taxdump): a monthly archive, the current dump, build 2's dump of 2026-11-13 from the snapshot, or a kept copy."""
     from .build2 import download
-    if from_file:
+    if from_snapshot:
+        _snapshot("taxonomy", snapshot_revision, manifest)
+    elif from_file:
         download.taxdump_from_file(from_file, paths.B2_TAXDUMP, manifest)
     elif current:
         download.taxdump_current(paths.B2_TAXDUMP, manifest)
@@ -144,9 +161,14 @@ def download_taxonomy(
 
 @download_app.command("lifespan")
 def download_lifespan(manifest: Manifest = paths.MANIFEST,
-                      fishbase_version: Annotated[str, typer.Option(help="FishBase/SeaLifeBase snapshot on source.coop")] = "v26.06") -> None:
+                      fishbase_version: Annotated[str, typer.Option(help="FishBase/SeaLifeBase snapshot on source.coop")] = "v26.06",
+                      from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
     """AnAge, FishBase and SeaLifeBase (source.coop), USGS Bird Banding Lab longevity records; tries EURING."""
     from .build2 import download
+    if from_snapshot:
+        _snapshot("lifespan", snapshot_revision, manifest)
+        download.euring(paths.B2_EURING, manifest)
+        return
     download.anage(paths.B2_ANAGE, manifest)
     download.fishbase("fb", paths.B2_FISHBASE, manifest, fishbase_version)
     download.fishbase("slb", paths.B2_SEALIFEBASE, manifest, fishbase_version)
@@ -155,40 +177,52 @@ def download_lifespan(manifest: Manifest = paths.MANIFEST,
 
 
 @download_app.command("cited")
-def download_cited(manifest: Manifest = paths.MANIFEST) -> None:
+def download_cited(manifest: Manifest = paths.MANIFEST, from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
     """The RefSeq records build 1 cites (one accession.version per species), by E-utilities efetch."""
+    if from_snapshot:
+        return _snapshot("cited", snapshot_revision, manifest)
     from .build2 import build1, download
     raw = build1.load(paths.B2_BUILD1)
     download.genbank([s.refseq for s in raw.kept], paths.B2_GENBANK / "cited", manifest, "the records cited by build 1")
 
 
 @download_app.command("legacy")
-def download_legacy(manifest: Manifest = paths.MANIFEST) -> None:
+def download_legacy(manifest: Manifest = paths.MANIFEST, from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
     """The old site's species ids, from its total_mtDNA export pages (www.mitoage.info)."""
+    if from_snapshot:
+        return _snapshot("legacy", snapshot_revision, manifest)
     from .build2 import download
     download.legacy(paths.B2_LEGACY, manifest)
 
 
 @download_app.command("contig")
 def download_contig(release: Annotated[str, typer.Option(help="the release whose CONTIG-only records are fetched: a number, or efetch")] = "237",
-                    manifest: Manifest = paths.MANIFEST) -> None:
+                    manifest: Manifest = paths.MANIFEST, from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
     """Sequence of the complete metazoan records that carry only a CONTIG line in the release, by efetch."""
+    if from_snapshot:
+        return _snapshot("contig", snapshot_revision, manifest)
     from .build2 import download, run
     download.contig(run.release_file(release)[0], paths.B2_GENBANK / "contig", manifest)
 
 
 @download_app.command("primary")
 def download_primary(manifest: Manifest = paths.MANIFEST,
-                     species: Annotated[Path, typer.Option(help="hagrids whose cited record's INSDC source is fetched, one per line; written by `build2 primary-list`")] = paths.B2_INTERIM / "primary_hagrids.txt") -> None:
+                     species: Annotated[Path, typer.Option(help="hagrids whose cited record's INSDC source is fetched, one per line; written by `build2 primary-list`")] = paths.B2_INTERIM / "primary_hagrids.txt",
+                     from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
     """The INSDC records named in the COMMENT of build 1's cited RefSeq records (for the re-annotation test)."""
+    if from_snapshot:
+        return _snapshot("primary", snapshot_revision, manifest)
     from .build2 import download
     download.primary(species, paths.B2_GENBANK / "cited", paths.B2_GENBANK / "primary", manifest)
 
 
 @download_app.command("tree-sources")
 def download_tree_sources(species: Annotated[Path, typer.Option(help="species.parquet of the build the tree is for")] = paths.B2_OUT / "species.parquet",
-                          manifest: Manifest = paths.MANIFEST) -> None:
-    """The Open Tree of Life and TimeTree answers the dated tree needs (asks only for those not yet in data/input/build2/tree)."""
+                          manifest: Manifest = paths.MANIFEST, from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
+    """The Open Tree of Life and TimeTree answers the dated tree needs (asks only for those not yet in data/input/build2/tree).
+    With --from-snapshot: the answers build 2's tree was built from."""
+    if from_snapshot:
+        return _snapshot("tree", snapshot_revision, manifest)
     from .build2 import download, tree
     t = tree.main(species, paths.B2_TREE_IN, paths.B2_INTERIM / "phylogeny.download-check.json", online=True)
     download._manifest(manifest, "opentreeoflife+timetree", f"{tree.pins.OTL_API} induced_subtree, tnrs; {tree.pins.TIMETREE_API} mrca",
@@ -496,6 +530,36 @@ def build2_compare(reproduced: Annotated[Path, typer.Option(help="the reproducti
     """Agreement of the reproduction with the published build 2, per table and field; every disagreement with a reason."""
     from .build2 import compare
     compare.main(published, reproduced, out or reproduced / "compare", site_tree=site_tree)
+
+
+# --- snapshot dataset (maintainers) ---------------------------------------------------------------
+Staging = Annotated[Path, typer.Option(help="the folder the snapshot is assembled in")]
+
+
+@snapshot_app.command("build")
+def snapshot_build(
+    release237: Annotated[Path, typer.Option(help="RefSeq release 237 as build 2 read it (md5-checked)")] = paths.refseq_release("237"),
+    taxdump_tar: Annotated[Path, typer.Option(help="new_taxdump.tar.gz of 2026-11-13 as build 2 read it (md5-checked)")] = Path("new_taxdump.tar.gz"),
+    tree_answers: Annotated[Path, typer.Option(help="folder of the OTL/TimeTree answers build 2's tree read")] = paths.B2_TREE_IN,
+    tree_used: Annotated[Path, typer.Option(help="phylogeny_answers.txt written by `build2 tree`: the answers it read")] = paths.B2_OUT / "phylogeny_answers.txt",
+    dates: Annotated[str, typer.Option(help="JSON: retrieval dates (UTC) of release237, efetch, anage, fishbase, usgs, tree, legacy")] = "{}",
+    staging: Staging = paths.B2_INTERIM / "snapshot",
+) -> None:
+    """Assemble the snapshot dataset (files, MANIFEST.json, card) from data/input."""
+    import json
+    from .build2 import snapshot
+    d = json.loads(dates)
+    used = [l for l in tree_used.read_text().split() if l]
+    e = snapshot.build(staging, paths.B2_IN, {"release237": release237, "taxdump_tar": taxdump_tar, "tree_answers": tree_answers, "tree_used": used,
+                                              **{f"{k}_retrieved": v for k, v in d.items()}})
+    print(f"{len(e)} files, {sum(x['bytes'] for x in e):,} bytes in {staging}")
+
+
+@snapshot_app.command("upload")
+def snapshot_upload(staging: Staging = paths.B2_INTERIM / "snapshot") -> None:
+    """Upload the snapshot as one commit (HF_TOKEN must be set in this command's environment; it is never printed)."""
+    from .build2 import snapshot
+    print(f"{snapshot.REPO}: commit {snapshot.upload(staging)}")
 
 
 def main() -> None:

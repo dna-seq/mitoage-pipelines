@@ -39,12 +39,14 @@ class Answers:
         self.folder, self.online = folder, online
         self.fetched, self.failed, self.read = 0, 0, 0
         self.last = {"otl": 0.0, "tt": 0.0}
+        self.used: list[str] = []          # every answer file the build read or fetched, in order
 
     def _wait(self, k, per_s):
         time.sleep(max(0.0, self.last[k] + 1 / per_s + 0.02 - time.monotonic())); self.last[k] = time.monotonic()
 
     def get(self, rel: str, fetcher, cache_failure=False):
         p = self.folder / rel
+        self.used.append(rel)
         if p.is_file():
             self.read += 1
             return json.loads(p.read_text())
@@ -249,5 +251,6 @@ def main(species_parquet: Path, answers: Path, out: Path, online: bool) -> dict:
     out.write_text(to_json({"version": t["version"], "root": t["root"]}))
     (out.parent / "phylogeny_stats.json").write_text(json.dumps({**t["stats"], "version": t["version"], "answers_read": ans.read,
                                                                  "answers_fetched": ans.fetched, "timetree_failures": ans.failed}, indent=1) + "\n")
+    (out.parent / "phylogeny_answers.txt").write_text("".join(f"{u}\n" for u in dict.fromkeys(ans.used)))
     print(f"{t['version']}: {t['stats']}; answers read {ans.read}, fetched {ans.fetched}, TimeTree failures {ans.failed}")
     return t
