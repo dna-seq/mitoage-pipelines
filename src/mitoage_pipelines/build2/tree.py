@@ -54,7 +54,7 @@ class Answers:
             raise FileNotFoundError(f"no {p}: the tree's answers are not all downloaded (`mitoage download tree-sources`)")
         v = fetcher()
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(json.dumps(v, separators=(",", ":")))
+        p.write_text(to_json(v))            # as the site's code writes its cache (JSON.stringify)
         self.fetched += 1
         return v
 
