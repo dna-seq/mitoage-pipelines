@@ -5,7 +5,7 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - mafft=7.526
+  - mafft=7.526          # also `mitoage build2 align`: build 2's alignments are pinned to v7.526
   - iqtree=3.1.*
   - hyphy=2.5.104
   - fasttree

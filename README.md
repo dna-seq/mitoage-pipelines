@@ -16,6 +16,11 @@ under `data/output`.
   reads the published build, [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage)
   on Hugging Face.
 
+- **MitoAge build 2 from build 1**: [docs/BUILD2_REPRODUCTION.md](docs/BUILD2_REPRODUCTION.md). Every source
+  of build 2 has a downloader here, every rule a step (`mitoage build2 ...`), and `mitoage build2 compare`
+  checks the result against the published build 2: on the pinned inputs every value is identical (see
+  "Build 2 reproduction" below).
+
 Nothing here is peer reviewed.
 
 ## Setup
@@ -32,7 +37,8 @@ it is missing. `environment.yml` names the versions we ran; it has not been solv
 ## Data layout
 
 ```
-data/input     downloads, never edited: the MitoAge build, its dated species tree, NCBI ortholog sets;
+data/input     downloads, never edited: the MitoAge build, its dated species tree, NCBI ortholog sets,
+               the sources of build 2 (data/input/build2);
                MANIFEST.json records what was fetched, from where, at which revision and when
 data/interim   made on the way: alignments, trees, selections, inputs of other programs
 data/output    the result tables
@@ -86,6 +92,52 @@ uv run mitoage mitoport coembed
 The longest steps are RELAX (5 to 40 minutes per gene on 4 cores) and the tree of a class (minutes); the
 rest take seconds to a few minutes.
 
+## Build 2 reproduction
+
+MitoAge build 2 (2026-11-13, 2,335 species) was made by the site's TypeScript pipeline from build 1 (the 2015
+data, 922 species) and current upstream sources. `mitoage build2` makes it again from the same sources, with
+the rules written as Python, and compares the result with the published tables. What build 1 and build 2
+are, every source with its pin and licence, every rule in plain words with the site file that defines it,
+the run times and the comparison are in [docs/BUILD2_REPRODUCTION.md](docs/BUILD2_REPRODUCTION.md).
+
+```sh
+uv run mitoage download hf                          # build 1 (build1/) and the published build 2, revision 653afe2a3b
+uv run mitoage download refseq --from-snapshot      # RefSeq release 237: NCBI keeps only the current release
+uv run mitoage download taxonomy --from-snapshot    # the NCBI taxonomy dump build 2 read (2026-11-13)
+uv run mitoage download lifespan                    # AnAge, FishBase/SeaLifeBase v26.06, USGS BBL; tries EURING
+uv run mitoage download cited && uv run mitoage download contig && uv run mitoage download legacy
+uv run mitoage build2 refseq && uv run mitoage build2 match && uv run mitoage build2 status
+uv run mitoage build2 primary-list && uv run mitoage download primary
+uv run mitoage build2 assemble                      # species, region_stats, codon_usage, genome_features,
+                                                    # lifespan_observations, changelog, review_list
+uv run mitoage download tree-sources --from-snapshot && uv run mitoage build2 tree
+uv run mitoage build2 align                         # MAFFT v7.526 from PATH
+uv run mitoage download tree --ref 8ff350c504bb59c9171eaed729eb6cddaada0f0b
+uv run mitoage build2 compare                       # -> data/output/build2/compare
+```
+
+About seven minutes in all. On 2026-11-14, with these inputs, all 5,302,404 values of the seven tables are
+identical to the published build 2, the 28 alignment files have the same SHA-256 and the dated tree is
+byte-identical. With today's sources instead (RefSeq release 238, today's taxonomy, live Open Tree of Life
+and TimeTree) the species set is the same and the only change of values is one record NCBI re-annotated in
+place (*Pongo pygmaeus* NC_001646.1); the document lists every difference with its reason.
+
+Where it comes from:
+
+- The pipeline that made build 2: [dna-seq/mitoage](https://github.com/dna-seq/mitoage) — its
+  [README](https://github.com/dna-seq/mitoage/blob/main/README.md),
+  [docs/BUILD2_REPORT.md](https://github.com/dna-seq/mitoage/blob/main/docs/BUILD2_REPORT.md),
+  [docs/DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/docs/DECISIONS.md) and
+  [plans/DATA_BUILD2_DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/plans/DATA_BUILD2_DECISIONS.md).
+- The build: [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage) (build 2 at
+  revision `653afe2a3b79e18ae892e579ded9acdb17e0c334`, build 1 in `build1/`).
+- The inputs no upstream archive keeps (RefSeq release 237, the taxonomy dump of 2026-11-13, the GenBank
+  records read by efetch, AnAge build 15, the USGS table, the Open Tree and TimeTree answers, the old site's
+  pages): [longevity-genie/mitoage-build2-sources](https://huggingface.co/datasets/longevity-genie/mitoage-build2-sources),
+  revision `9d55d72648d0838c3b5f37fca6185f8b938b3272`. Every downloader reads the original source by
+  default and this snapshot with `--from-snapshot`; no token is needed. `mitoage snapshot build|upload` is
+  for maintainers only (it needs a write token in `HF_TOKEN`).
+
 ## How far it reproduces
 
 Checked on 2026-11-14 by running the commands above against the outputs of the original runs:
@@ -118,7 +170,9 @@ uv run pytest
 ```
 
 Small real cases with expected values computed by hand in the test: the FASTA reader, fourfold-site
-counts, the tree covariance of the regression.
+counts, the tree covariance of the regression; and the rules of build 2 (`tests/test_build2.py`: the base-label
+fix of build 1, join() segments, the lifespan precedence and its tie-break, name matching, id minting, the
+change classes, record_status against the changelog), each checked to fail when the code it guards is broken.
 
 ## Licence
 

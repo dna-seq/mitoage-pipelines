@@ -10,6 +10,11 @@ Order of a full run:
   mitoage peptides pilot
   mitoage mitoport select && mitoage mitoport align && mitoage mitoport branch-lengths && mitoage mitoport erc
   mitoage download prepared --topic embeddings && mitoage mitoport coembed
+Build 2 from build 1 (docs/BUILD2_REPRODUCTION.md):
+  mitoage download hf|refseq|taxonomy|lifespan|cited|contig|legacy (--from-snapshot where no archive keeps it)
+  mitoage build2 refseq && mitoage build2 match && mitoage build2 status
+  mitoage build2 primary-list && mitoage download primary && mitoage build2 assemble
+  mitoage download tree-sources && mitoage build2 tree && mitoage build2 align && mitoage build2 compare
 Heavy imports happen inside the commands, so that `--help` is quick.
 """
 from pathlib import Path
