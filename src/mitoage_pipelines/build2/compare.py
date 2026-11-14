@@ -104,12 +104,16 @@ def compare_tree(published: Path, reproduced: Path) -> dict:
 
 def main(published: Path, reproduced: Path, out: Path, reason=None, site_tree: Path | None = None) -> dict:
     from . import compare_reasons
-    ps, rs = (set(read(x, "species")["id"].to_list()) for x in (published, reproduced))
-    classify, post = compare_reasons.make(ps ^ rs)
+    psp, rsp = read(published, "species"), read(reproduced, "species")
+    one_side = set(psp["id"].to_list()) ^ set(rsp["id"].to_list())
+    same_refseq = set(psp.join(rsp, on="id", suffix="_r").filter(pl.col("refseq") == pl.col("refseq_r"))["id"].to_list())
+    info = reproduced / "build-info.json"
+    labels = json.loads(info.read_text()) if info.is_file() else {}
     summary, dis, sets = [], [], []
     for t in KEYS:
-        s, d, st = compare_table(t, read(published, t), read(reproduced, t), reason or classify)
+        s, d, st = compare_table(t, read(published, t), read(reproduced, t), reason or compare_reasons.classify)
         summary += s; dis += d; sets.append(st)
+    post = compare_reasons.post_classifier(dis, one_side, same_refseq, labels)
     for d in dis:
         if d["reason"] == "unexplained": d["reason"] = post(d)
     out.mkdir(parents=True, exist_ok=True)
