@@ -4,7 +4,7 @@ Order of a full run:
   mitoage download build && mitoage download orthologs
   mitoage longevity controls && mitoage longevity fourfold && mitoage longevity composition
   mitoage longevity sites
-  mitoage download tree && mitoage longevity dated-tree && mitoage longevity pgls
+  mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
   mitoage peptides pilot
@@ -308,6 +308,18 @@ def longevity_dated_tree(data: Build = paths.BUILD,
     """The dated species tree as newick, and the species with a lifespan record of high or acceptable quality."""
     from .longevity import dated_tree
     dated_tree.main(data, site_tree, paths.DATED_TREE, paths.QUALITY_OK)
+
+
+@longevity_app.command("aa-pgls")
+def longevity_aa_pgls(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    cls: Class = "Mammalia",
+    tree: Annotated[Optional[Path], typer.Option(help="the tree; the dated species tree when omitted")] = None,
+    out: Annotated[Optional[Path], typer.Option("--out", help="the table to write; <output>/longevity/aa_pgls.<Class>.tsv when omitted")] = None,
+) -> None:
+    """H1 on the dated tree: content of each amino acid against lifespan, mass and fourfold composition (Pagel's lambda)."""
+    from .longevity import aa_pgls
+    aa_pgls.main(data, composition, fourfold, tree or paths.DATED_TREE, out or paths.aa_pgls_table(cls), cls)
 
 
 @longevity_app.command("pgls")
