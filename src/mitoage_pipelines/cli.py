@@ -5,6 +5,7 @@ Order of a full run:
   mitoage longevity controls && mitoage longevity fourfold && mitoage longevity composition
   mitoage longevity sites
   mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls && mitoage longevity pgls-power
+  mitoage longevity rates && mitoage longevity motif-pgls
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
   mitoage peptides pilot
@@ -276,6 +277,29 @@ def longevity_sites(
     """Every alignment column against lifespan within families, no tree (the cautionary version: inflated)."""
     from .longevity import sites
     sites.main(data, composition, fourfold, out, alignments_dir, tool)
+
+
+@longevity_app.command("rates")
+def longevity_rates(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.LONGEVITY_OUT,
+) -> None:
+    """H7: substitution rates against lifespan, by the relative-rate test on sister pairs of the dated tree."""
+    from .longevity import rates
+    rates.main(data, composition, fourfold, tree, out)
+
+
+@longevity_app.command("motif-pgls")
+def longevity_motif_pgls(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.LONGEVITY_OUT,
+    structure: Annotated[Optional[Path], typer.Option("--structure", help="mtdna_structure.parquet from another build, while the motif features are not yet in a released one")] = None,
+) -> None:
+    """H8: the build's mtDNA motif, repeat and contact-zone features against lifespan (H1's model)."""
+    from .longevity import motif_pgls
+    motif_pgls.main(data, composition, fourfold, tree, out, structure)
 
 
 @longevity_app.command("concat")

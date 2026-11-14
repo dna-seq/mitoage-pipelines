@@ -78,7 +78,9 @@ uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/ali
     --out data/output/longevity/pgls.aligner-famsa.Mammalia.tsv
 
 # H3: selection in long-lived against short-lived lines (HyPhy)
-uv run mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
+uv run mitoage longevity rates
+mitoage longevity motif-pgls --structure <mtdna_structure.parquet>
+mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 
 # H4: peptides encoded inside mtDNA
