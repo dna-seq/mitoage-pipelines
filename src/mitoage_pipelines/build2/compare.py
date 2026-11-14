@@ -69,7 +69,40 @@ def compare_table(table: str, pub: pl.DataFrame, rep: pl.DataFrame, reason) -> t
     return summary, dis, sets
 
 
-def main(published: Path, reproduced: Path, out: Path, reason=None) -> dict:
+def compare_alignments(published: Path, reproduced: Path) -> dict:
+    """Per alignment file: the SHA-256 of the uncompressed FASTA in each manifest; and the gene lists."""
+    pa, ra = (json.loads((d / "alignments.json").read_text()) for d in (published, reproduced))
+    pf, rf = {f["file"]: f for f in pa["files"]}, {f["file"]: f for f in ra["files"]}
+    same = sorted(k for k in pf if k in rf and pf[k]["sha256"] == rf[k]["sha256"])
+    return {"files_published": len(pf), "files_reproduced": len(rf), "identical_sha256": len(same),
+            "differ": sorted(set(pf) ^ set(rf) | {k for k in pf if k in rf and pf[k]["sha256"] != rf[k]["sha256"]}),
+            **{k: pa[k] == ra[k] for k in ("absent", "duplicates", "codonNotes", "aligner", "source")}}
+
+
+def tree_splits(node: dict, out: set, ages: dict) -> frozenset:
+    if "leaf" in node and not node["children"]:
+        return frozenset([node["leaf"]])
+    below = frozenset().union(*(tree_splits(c, out, ages) for c in node["children"]))
+    out.add(below)
+    return below
+
+
+def compare_tree(published: Path, reproduced: Path) -> dict:
+    """phylogeny.json: identical bytes, or else the leaves, the clades (splits) and the branch lengths that differ."""
+    import hashlib, sys
+    sys.setrecursionlimit(1_000_000)
+    pb, rb = published.read_bytes(), reproduced.read_bytes()
+    res = {"sha256_published": hashlib.sha256(pb).hexdigest(), "sha256_reproduced": hashlib.sha256(rb).hexdigest()}
+    res["identical_bytes"] = res["sha256_published"] == res["sha256_reproduced"]
+    p, r = json.loads(pb), json.loads(rb)
+    sp, sr = set(), set()
+    lp, lr = tree_splits(p["root"], sp, {}), tree_splits(r["root"], sr, {})
+    res.update(version_published=p["version"], version_reproduced=r["version"], leaves_published=len(lp), leaves_reproduced=len(lr),
+               leaves_in_both=len(lp & lr), clades_published=len(sp), clades_reproduced=len(sr), clades_in_both=len(sp & sr))
+    return res
+
+
+def main(published: Path, reproduced: Path, out: Path, reason=None, site_tree: Path | None = None) -> dict:
     from .compare_reasons import classify
     reason = reason or classify
     summary, dis, sets = [], [], []
@@ -86,10 +119,16 @@ def main(published: Path, reproduced: Path, out: Path, reason=None) -> dict:
     by_reason.write_csv(out / "disagreements_by_reason.tsv", separator="\t")
     tot = {"values_compared": int(sm["compared"].sum()), "identical": int(sm["identical"].sum()),
            "within_tolerance": int(sm["within_tolerance"].sum()), "differs": int(sm["differs"].sum())}
-    (out / "summary.json").write_text(json.dumps({"rows": sets, "values": tot}, indent=1) + "\n")
+    extra = {}
+    if (published / "alignments" / "alignments.json").is_file() and (reproduced / "alignments" / "alignments.json").is_file():
+        extra["alignments"] = compare_alignments(published / "alignments", reproduced / "alignments")
+    if site_tree and site_tree.is_file() and (reproduced / "phylogeny.json").is_file():
+        extra["phylogeny"] = compare_tree(site_tree, reproduced / "phylogeny.json")
+    (out / "summary.json").write_text(json.dumps({"rows": sets, "values": tot, **extra}, indent=1) + "\n")
+    for k, v in extra.items(): print(k, v)
     print(pl.DataFrame(sets))
     print(tot)
     if dd.height:
         with pl.Config(tbl_rows=60, fmt_str_lengths=60):
             print(by_reason)
-    return {"rows": sets, "values": tot, "fields": summary}
+    return {"rows": sets, "values": tot, "fields": summary, **extra}

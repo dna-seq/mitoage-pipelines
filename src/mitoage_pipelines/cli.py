@@ -185,6 +185,16 @@ def download_primary(manifest: Manifest = paths.MANIFEST,
     download.primary(species, paths.B2_GENBANK / "cited", paths.B2_GENBANK / "primary", manifest)
 
 
+@download_app.command("tree-sources")
+def download_tree_sources(species: Annotated[Path, typer.Option(help="species.parquet of the build the tree is for")] = paths.B2_OUT / "species.parquet",
+                          manifest: Manifest = paths.MANIFEST) -> None:
+    """The Open Tree of Life and TimeTree answers the dated tree needs (asks only for those not yet in data/input/build2/tree)."""
+    from .build2 import download, tree
+    t = tree.main(species, paths.B2_TREE_IN, paths.B2_INTERIM / "phylogeny.download-check.json", online=True)
+    download._manifest(manifest, "opentreeoflife+timetree", f"{tree.pins.OTL_API} induced_subtree, tnrs; {tree.pins.TIMETREE_API} mrca",
+                       paths.B2_TREE_IN, revision=f"OTL synthetic tree {t['version']}; TimeTree public API (unversioned)")
+
+
 # --- longevity --------------------------------------------------------------------------------
 @longevity_app.command("compare-aligners")
 def longevity_compare_aligners(
@@ -457,6 +467,35 @@ def build2_assemble(release: Release = "237", taxonomy: Taxonomy = "current-2026
     """The build 2 tables: species, region_stats, codon_usage, genome_features, lifespan_observations, changelog, review_list."""
     from .build2 import run
     run.stage_assemble(run.inputs(release, taxonomy), out)
+
+
+@build2_app.command("tree")
+def build2_tree(species: Annotated[Path, typer.Option(help="species.parquet of the build")] = paths.B2_OUT / "species.parquet",
+                out: Annotated[Path, typer.Option("--out", help="the tree to write")] = paths.B2_OUT / "phylogeny.json") -> None:
+    """The dated species tree (Open Tree of Life topology, TimeTree ages) from the answers in data/input/build2/tree; offline."""
+    from .build2 import tree
+    tree.main(species, paths.B2_TREE_IN, out, online=False)
+
+
+@build2_app.command("align")
+def build2_align(release: Release = "237", out: B2Out = paths.B2_OUT / "alignments",
+                 species: Annotated[Path, typer.Option(help="species.parquet of the build whose live species are aligned")] = paths.B2_OUT / "species.parquet",
+                 threads: Annotated[int, typer.Option(help="MAFFT --thread; 4 as in the published run")] = 4) -> None:
+    """Alignments of the 13 proteins (and their codons) and the two rRNAs with MAFFT v7.526 FFT-NS-2 (from PATH or $MAFFT)."""
+    from .build2 import align, run
+    rf, rl = run.release_file(release)
+    m = align.main(species, rf, rl, paths.B2_GENBANK / "contig", out, threads)
+    print(f"{len(m['files'])} alignment files for {m['species']} species -> {out}")
+
+
+@build2_app.command("compare")
+def build2_compare(reproduced: Annotated[Path, typer.Option(help="the reproduction's tables")] = paths.B2_OUT,
+                   published: Annotated[Path, typer.Option(help="the published build 2 (download hf)")] = paths.B2_HF,
+                   site_tree: Annotated[Path, typer.Option(help="build 2's dated tree, from the site repository (download tree)")] = paths.SITE_TREE,
+                   out: Annotated[Optional[Path], typer.Option("--out", help="where the report goes; <reproduced>/compare when omitted")] = None) -> None:
+    """Agreement of the reproduction with the published build 2, per table and field; every disagreement with a reason."""
+    from .build2 import compare
+    compare.main(published, reproduced, out or reproduced / "compare", site_tree=site_tree)
 
 
 def main() -> None:

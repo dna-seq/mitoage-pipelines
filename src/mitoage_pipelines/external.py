@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 
 # program -> the version the published results were made with
-VERSIONS = {"mafft": "MAFFT 7.526", "iqtree": "IQ-TREE 3.1.4", "hyphy": "HyPhy 2.5.104"}
+VERSIONS = {"mafft": "MAFFT 7.526 (v7.526: build 2's alignments are pinned to it)", "iqtree": "IQ-TREE 3.1.4", "hyphy": "HyPhy 2.5.104"}
 
 
 class MissingProgram(RuntimeError):
