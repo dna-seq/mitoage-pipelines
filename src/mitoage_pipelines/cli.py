@@ -342,6 +342,15 @@ def longevity_pgls(
                   cls, alignments_dir, tool, quality_file=paths.QUALITY_OK)
 
 
+@longevity_app.command("pgls-power")
+def longevity_pgls_power(cls: Class = "Mammalia",
+                         table: Annotated[Optional[Path], typer.Option(help="the column test's table; pgls.<Class>.tsv when omitted")] = None,
+                         out: Annotated[Optional[Path], typer.Option("--out", help="the table to write; pgls_power.<Class>.tsv when omitted")] = None) -> None:
+    """H2's power: the smallest residue effect on lifespan detectable at 80 % power and the alpha 5 % FDR needs."""
+    from .longevity import power
+    power.main(table or paths.pgls_table(cls), out or paths.pgls_power_table(cls))
+
+
 @longevity_app.command("relax-prep")
 def longevity_relax_prep(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION,

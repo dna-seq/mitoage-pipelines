@@ -72,7 +72,8 @@ B2_INTERIM = INTERIM / "build2"           # refseq_records.parquet, observations
 
 # --- output: result tables --------------------------------------------------------------------
 LONGEVITY_OUT = OUTPUT / "longevity"      # composition.tsv controls.tsv fourfold.tsv controls_composition.tsv
-                                          # sites.tsv pgls.<Class>.tsv aa_pgls.<Class>.tsv agreement.tsv columns.<GENE>.tsv
+                                          # sites.tsv pgls.<Class>.tsv pgls_power.<Class>.tsv aa_pgls.<Class>.tsv
+                                          # agreement.tsv columns.<GENE>.tsv
 RELAX_OUT = LONGEVITY_OUT / "relax"       # <GENE>.relax.json, as HyPhy writes them
 PEPTIDES_OUT = OUTPUT / "peptides"        # <peptide>.tsv, summary.txt
 MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv
@@ -90,6 +91,11 @@ def outgroup_file(cls: str) -> Path:
 def aa_pgls_table(cls: str) -> Path:
     """H1 on the dated tree, one class, as `mitoage longevity aa-pgls` writes it."""
     return LONGEVITY_OUT / f"aa_pgls.{cls}.tsv"
+
+
+def pgls_power_table(cls: str) -> Path:
+    """The power of the column test of one class, as `mitoage longevity pgls-power` writes it."""
+    return LONGEVITY_OUT / f"pgls_power.{cls}.tsv"
 
 
 def pgls_table(cls: str, gene_tree: bool = False) -> Path:
