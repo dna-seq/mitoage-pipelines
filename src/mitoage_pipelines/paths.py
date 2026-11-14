@@ -37,6 +37,21 @@ EMBEDDINGS = INPUT / "embeddings"         # ESM-2 mean embeddings of both partne
 NCBI = INPUT / "ncbi"                     # NCBI ortholog sets, one folder per gene: ncbi/<GENE>/ncbi_dataset/data
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 
+# --- input: the sources of build 2 (docs/BUILD2_REPRODUCTION.md) --------------------------------
+B2_IN = INPUT / "build2"
+B2_HF = B2_IN / "hf"                      # longevity-genie/mitoage at the pinned revision: build1/ and the build 2 tables
+B2_BUILD1 = B2_HF / "build1"              # MitoAge build 1, the 2015 CSV export as parquet
+B2_REFSEQ = B2_IN / "refseq"              # release<N>/mitochondrion.1.genomic.gbff.gz, or efetch/records.gb.gz
+B2_TAXDUMP = B2_IN / "taxdump"            # <date>/nodes.dmp names.dmp merged.dmp rankedlineage.dmp
+B2_ANAGE = B2_IN / "anage" / "dataset.zip"
+B2_FISHBASE = B2_IN / "fishbase"          # <version>/<table>.parquet
+B2_SEALIFEBASE = B2_IN / "sealifebase"    # <version>/<table>.parquet
+B2_USGS = B2_IN / "usgs_bbl"              # Longevity.php.html and longevity.csv, the table read from it
+B2_EURING = B2_IN / "euring"              # status.json: what the attempt to download it found
+B2_GENBANK = B2_IN / "genbank"            # cited/ (build 1's records), contig/ (sequence of CONTIG-only records), primary/ (INSDC)
+B2_LEGACY = B2_IN / "legacy"              # pages of the old site with its species ids
+B2_TREE_IN = B2_IN / "tree"               # Open Tree of Life and TimeTree answers, one JSON file per request
+
 # --- interim ----------------------------------------------------------------------------------
 ALIGNERS = INTERIM / "aligners"           # <GENE>.<tool>.afa: one gene aligned by several tools
 TREE = INTERIM / "tree"                   # dated.nwk, quality_ok.txt; <Class>.faa, <Class>.outgroup.txt, <Class>.iq.treefile
@@ -52,6 +67,8 @@ MITOPORT_BL = MITOPORT / "bl"             # IQ-TREE branch lengths per protein o
 MITOPORT_TOPOLOGY = MITOPORT / "topology.nwk"
 MITOPORT_GENES = MITOPORT / "genes.txt"
 MITOPORT_SPECIES = MITOPORT / "species.txt"
+
+B2_INTERIM = INTERIM / "build2"           # refseq_records.parquet, observations.parquet, matches.parquet, plan.json, ...
 
 # --- output: result tables --------------------------------------------------------------------
 LONGEVITY_OUT = OUTPUT / "longevity"      # composition.tsv controls.tsv fourfold.tsv controls_composition.tsv
@@ -72,3 +89,19 @@ def outgroup_file(cls: str) -> Path:
 
 def pgls_table(cls: str, gene_tree: bool = False) -> Path:
     return LONGEVITY_OUT / (f"pgls.gene-tree.{cls}.tsv" if gene_tree else f"pgls.{cls}.tsv")
+
+
+# --- output: the reproduction of build 2 --------------------------------------------------------
+B2_OUT = OUTPUT / "build2"                # species, region_stats, codon_usage, genome_features, lifespan_observations,
+                                          # changelog (.parquet), review_list.csv, phylogeny.json, alignments/, compare/
+
+
+def refseq_release(release: str) -> Path:
+    """The RefSeq mitochondrion release file of one release, as `download refseq` writes it."""
+    return B2_REFSEQ / f"release{release}" / "mitochondrion.1.genomic.gbff.gz"
+
+
+def taxdump(label: str) -> Path:
+    """The folder of one NCBI taxonomy dump (an archive date such as 2026-11-01, or current-<date>)."""
+    return B2_TAXDUMP / label
+
