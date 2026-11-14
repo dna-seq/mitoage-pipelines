@@ -4,7 +4,7 @@ Order of a full run:
   mitoage download build && mitoage download orthologs
   mitoage longevity controls && mitoage longevity fourfold && mitoage longevity composition
   mitoage longevity sites
-  mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls
+  mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls && mitoage longevity pgls-power
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
   mitoage peptides pilot

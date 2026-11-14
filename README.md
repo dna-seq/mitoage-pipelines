@@ -62,15 +62,20 @@ uv run mitoage download orthologs         # nuclear subunits and control protein
 uv run mitoage download prepared          # exactly what we fetched and computed; our tables land in data/reference
 
 # H1: amino-acid content against lifespan
-uv run mitoage longevity controls
+uv run mitoage longevity controls         # composition.tsv, and the earlier tree-free tests
 uv run mitoage longevity fourfold
-uv run mitoage longevity composition
+uv run mitoage longevity composition      # the earlier version (mixed model), kept as a lesson
+uv run mitoage longevity dated-tree
+uv run mitoage longevity aa-pgls --class Mammalia    # on the dated tree; also Aves, Actinopterygii, Reptilia
 
 # H2: single residues against lifespan
 uv run mitoage longevity sites            # the tree-free version, kept as a warning: it is inflated
-uv run mitoage longevity dated-tree
 uv run mitoage longevity pgls --class Mammalia
 uv run mitoage longevity pgls --class Aves
+uv run mitoage longevity pgls-power --class Mammalia
+# on a second alignment (after `download prepared --topic aligners`); tools: famsa, muscle5, mafft_iter
+uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/aligners --tool famsa \
+    --out data/output/longevity/pgls.aligner-famsa.Mammalia.tsv
 
 # H3: selection in long-lived against short-lived lines (HyPhy)
 uv run mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
@@ -170,7 +175,8 @@ uv run pytest
 ```
 
 Small real cases with expected values computed by hand in the test: the FASTA reader, fourfold-site
-counts, the tree covariance of the regression; and the rules of build 2 (`tests/test_build2.py`: the base-label
+counts, the tree covariance of the regression, H1's regression against Felsenstein's contrasts on five
+mammals and its species filter, H2's power formula; and the rules of build 2 (`tests/test_build2.py`: the base-label
 fix of build 1, join() segments, the lifespan precedence and its tie-break, name matching, id minting, the
 change classes, record_status against the changelog), each checked to fail when the code it guards is broken.
 
