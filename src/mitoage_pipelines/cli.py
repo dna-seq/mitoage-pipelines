@@ -9,6 +9,7 @@ Order of a full run:
   mitoage longevity coevol-prep
   mitoage peptides pilot
   mitoage mitoport select && mitoage mitoport align && mitoage mitoport branch-lengths && mitoage mitoport erc
+  mitoage download prepared --topic embeddings && mitoage mitoport coembed
 Heavy imports happen inside the commands, so that `--help` is quick.
 """
 from pathlib import Path
@@ -52,6 +53,21 @@ def download_build(
     """The MitoAge build from Hugging Face (longevity-genie/mitoage)."""
     from . import download
     download.build(dest, manifest, revision)
+
+
+@download_app.command("prepared")
+def download_prepared(
+    topic: Annotated[str, typer.Option(help="partners, embeddings, aligners, results, or all")] = "all",
+    revision: Annotated[Optional[str], typer.Option(help="a commit of the dataset, to pin what is read (one topic only)")] = None,
+) -> None:
+    """What we fetched and computed, from Hugging Face, by topic: start any step without redoing those before it.
+    Our result tables go to data/reference, for comparison with a rerun's data/output."""
+    from . import download
+    topics = list(download.PREPARED) if topic == "all" else [topic]
+    if topic != "all" and topic not in download.PREPARED:
+        raise typer.BadParameter(f"unknown topic {topic!r}; one of {', '.join(download.PREPARED)} or all")
+    for t in topics:
+        download.prepared(t, paths.ROOT, paths.MANIFEST, revision if len(topics) == 1 else None)
 
 
 @download_app.command("tree")
@@ -293,6 +309,17 @@ def mitoport_erc(
     """Rate covariation between nuclear subunits and mitochondrial genes, against control proteins."""
     from .mitoport import erc
     erc.main(genes, bl_dir, out)
+
+
+@mitoport_app.command("coembed")
+def mitoport_coembed(
+    embeddings: Annotated[Path, typer.Option(help="folder with <set>-esm2_650m.index.parquet and .mean.npy, from `download prepared --topic embeddings`")] = paths.EMBEDDINGS,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.MITOPORT_OUT,
+) -> None:
+    """Do partners' ESM-2 embedding distances between species follow each other beyond the dated tree?"""
+    from .mitoport import coembed
+    coembed.main(embeddings, tree, out)
 
 
 def main() -> None:

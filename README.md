@@ -8,6 +8,7 @@ It is written so that a reader without access to our machines can rerun it: ever
 command of this repository, every step is one command, and every table a finding is read from is written
 under `data/output`.
 
+- **The pipeline in pictures**: [docs/PIPELINE.md](docs/PIPELINE.md).
 - **What we asked, how we tested it and what came out**: [docs/HYPOTHESES.md](docs/HYPOTHESES.md). Results
   that did not hold, and one mistake of ours, are kept there next to those that did.
 - The website and the pipeline that builds its data are in
@@ -35,9 +36,11 @@ data/input     downloads, never edited: the MitoAge build, its dated species tre
                MANIFEST.json records what was fetched, from where, at which revision and when
 data/interim   made on the way: alignments, trees, selections, inputs of other programs
 data/output    the result tables
+data/reference our own result tables, when fetched with `download prepared`, to compare a rerun with
 ```
 
-All three are ignored by git. `MITOAGE_PIPELINES_DATA` moves the root elsewhere.
+All of it is ignored by git. NCBI's ortholog sets change with every annotation release, so the prepared
+copy is the way to get the records we used. `MITOAGE_PIPELINES_DATA` moves the root elsewhere.
 
 ## Run
 
@@ -48,6 +51,9 @@ All three are ignored by git. `MITOAGE_PIPELINES_DATA` moves the root elsewhere.
 uv run mitoage download build             # the MitoAge build from Hugging Face (about 46 MB)
 uv run mitoage download tree              # the build's dated species tree, from the site's repository
 uv run mitoage download orthologs         # nuclear subunits and control proteins from NCBI (62 genes)
+
+# or: our prepared copies from Hugging Face, by topic (partners, embeddings, aligners, results, all)
+uv run mitoage download prepared          # exactly what we fetched and computed; our tables land in data/reference
 
 # H1: amino-acid content against lifespan
 uv run mitoage longevity controls
@@ -72,6 +78,9 @@ uv run mitoage mitoport select
 uv run mitoage mitoport align
 uv run mitoage mitoport branch-lengths
 uv run mitoage mitoport erc
+
+# H6: embeddings of the partners (needs `download prepared --topic embeddings`)
+uv run mitoage mitoport coembed
 ```
 
 The longest steps are RELAX (5 to 40 minutes per gene on 4 cores) and the tree of a class (minutes); the
@@ -96,8 +105,8 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 - A tree built from the 13 proteins themselves (`longevity concat`, `longevity tree`, then `--gene-tree`,
   or `--tree` with `--outgroup`) is kept only to show how much a result depends on the tree. Every step
   takes the build's dated species tree by default.
-- The embedding test of mitoport (H6) is not here yet: its embeddings (ESM-2 650M, about 8 GB) were computed
-  in another project and are not published.
+- The embeddings (ESM-2 650M) are downloaded, not computed here: the script that made them is in another
+  project. Only the mean over residues is published; the per-residue embeddings (about 8 GB) are not.
 - The aligner comparison (`longevity compare-aligners`) compares alignment files you give it; the commands
   that produced them with each aligner are not wrapped.
 - Lifespan as a continuous trait (Coevol): the inputs are written, the run and its reading are not wrapped.

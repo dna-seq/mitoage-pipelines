@@ -47,6 +47,40 @@ def append_manifest(manifest: Path, source: str, identifier: str, folder: Path, 
     return record
 
 
+# --- prepared data ----------------------------------------------------------------------------
+# What we fetched or computed, published by topic, each dataset laid out like data/ (input/, interim/, output/).
+PREPARED = {
+    "partners": "longevity-genie/mitoage-nuclear-partners",    # NCBI ortholog sets as fetched; mitoport's alignments and trees
+    "embeddings": "longevity-genie/mitoage-embeddings",        # ESM-2 650M mean embeddings of both partners
+    "aligners": "longevity-genie/mitoage-aligner-variants",    # the 13 proteins aligned by four aligners
+    "results": "longevity-genie/mitoage-pipelines",            # the dated tree and every result table
+}
+
+
+def prepared(topic: str, root: Path, manifest: Path, revision: str | None = None, results_dir: Path | None = None) -> None:
+    """One topical dataset into the data root. NCBI's zips are unpacked where `download orthologs` puts them.
+    The `results` topic holds our result tables: they go to `results_dir` (data/reference), never over
+    data/output, so that a rerun can be compared with them."""
+    from huggingface_hub import HfApi, snapshot_download
+    repo = PREPARED[topic]
+    sha = HfApi().dataset_info(repo, revision=revision).sha
+    if topic == "results":
+        dest = results_dir or root / "reference"
+        snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=dest, allow_patterns=["output/*", "output/**"])
+        snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=root, allow_patterns=["input/**", "interim/**"])
+    else:
+        dest = root
+        snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=root, allow_patterns=["input/**", "interim/**"])
+    if topic == "partners":
+        for z in sorted((root / "input" / "ncbi").glob("*.zip")):
+            gene_dir = z.with_suffix("")
+            if not (gene_dir / "ncbi_dataset" / "data" / "protein.faa").is_file():
+                gene_dir.mkdir(exist_ok=True)
+                with zipfile.ZipFile(z) as f: f.extractall(gene_dir)
+    record = append_manifest(manifest, "huggingface", f"datasets/{repo}", dest, revision=sha, topic=topic)
+    print(f"{repo} at {sha} ({topic}) into {dest}")
+
+
 # --- the dated species tree -------------------------------------------------------------------
 SITE_REPO = "dna-seq/mitoage"
 SITE_TREE_PATH = "src/data/generated/phylogeny.json"

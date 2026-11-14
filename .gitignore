@@ -224,6 +224,7 @@ __marimo__/
 data/input/*
 data/interim/*
 data/output/*
+data/reference/
 !data/input/.gitkeep
 !data/interim/.gitkeep
 !data/output/.gitkeep

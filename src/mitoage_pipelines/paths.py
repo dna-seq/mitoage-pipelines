@@ -3,6 +3,7 @@
     data/input     downloads, never edited: the MitoAge build, its dated species tree, the NCBI ortholog sets
     data/interim   made here on the way to a result: alignments, trees, selections, inputs of other programs
     data/output    result tables
+    data/reference our own result tables, from `download prepared`, to compare a rerun with
 
 The root is `data/` in the repository (or in the working directory, when the package is installed
 outside a checkout); the environment variable MITOAGE_PIPELINES_DATA overrides it.
@@ -32,6 +33,7 @@ OUTPUT = ROOT / "output"
 # --- input: downloads -------------------------------------------------------------------------
 BUILD = INPUT / "mitoage"                 # the Hugging Face dataset longevity-genie/mitoage
 SITE_TREE = INPUT / "mitoage-site" / "phylogeny.json"   # the build's dated species tree, from the site's repository
+EMBEDDINGS = INPUT / "embeddings"         # ESM-2 mean embeddings of both partners (prepared data only)
 NCBI = INPUT / "ncbi"                     # NCBI ortholog sets, one folder per gene: ncbi/<GENE>/ncbi_dataset/data
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 
