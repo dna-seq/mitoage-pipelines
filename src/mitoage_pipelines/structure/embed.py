@@ -59,8 +59,11 @@ def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, work: P
     tok = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name, add_pooling_layer=False).to(device).eval()
     try:                       # the snapshot folder of the Hugging Face cache is named by the checkpoint's commit
-        from huggingface_hub import snapshot_download
-        commit = Path(snapshot_download(model_name, local_files_only=True)).name
+        from huggingface_hub import try_to_load_from_cache
+        cached = try_to_load_from_cache(model_name, "config.json")
+        if not isinstance(cached, str):
+            raise FileNotFoundError("config.json is not in the cache")
+        commit = Path(cached).parent.name
     except Exception as e:
         commit = f"unknown ({type(e).__name__})"
         print(f"NOTE: the commit of {model_name} could not be read from the cache: {commit}")
