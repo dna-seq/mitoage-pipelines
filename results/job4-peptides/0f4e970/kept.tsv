@@ -1,0 +1,529 @@
+peptide	reading	class	species	with_region	assessed	open	start	kept	lost	not_assessed	early_stop	no_start_only	kept_share	open_share	median_identity_kept	status
+MENTSH	own	Actinopterygii	893	893	892	592	70	49	843	1	300	543	0.05493273542600897	0.6636771300448431	0.4706	summarised
+MENTSH	own	Amphibia	45	45	45	32	6	6	39	0	13	26	0.13333333333333333	0.7111111111111111	0.38234999999999997	summarised
+MENTSH	own	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	own	Asteroidea	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	own	Aves	427	427	427	346	39	37	390	0	81	309	0.08665105386416862	0.810304449648712	0.4118	summarised
+MENTSH	own	Bivalvia	35	35	35	25	5	2	33	0	10	23	0.05714285714285714	0.7142857142857143	0.0882	summarised
+MENTSH	own	Cephalaspidomorphi	9	9	9	7	0	0	9	0	2	7	0.0	0.7777777777777778		not assessed: under 20 assessed species
+MENTSH	own	Cephalopoda	11	11	11	4	1	1	10	0	7	3	0.09090909090909091	0.36363636363636365	0.4118	not assessed: under 20 assessed species
+MENTSH	own	Chondrichthyes	87	87	87	49	7	7	80	0	38	42	0.08045977011494253	0.5632183908045977	0.5294	summarised
+MENTSH	own	Chromadorea	2	2	2	2	0	0	2	0	0	2	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	own	Echinoidea	4	4	4	2	0	0	4	0	2	2	0.0	0.5		not assessed: under 20 assessed species
+MENTSH	own	Gastropoda	9	9	9	6	0	0	9	0	3	6	0.0	0.6666666666666666		not assessed: under 20 assessed species
+MENTSH	own	Insecta	4	4	4	0	2	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	own	Leptocardii	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	own	Malacostraca	30	29	29	1	3	0	29	1	28	1	0.0	0.034482758620689655		summarised
+MENTSH	own	Mammalia	625	625	622	441	34	32	590	3	181	409	0.05144694533762058	0.7090032154340836	0.5882	summarised
+MENTSH	own	Merostomata	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.2353	not assessed: under 20 assessed species
+MENTSH	own	Polychaeta	4	4	4	4	1	1	3	0	0	3	0.25	1.0	0.4118	not assessed: under 20 assessed species
+MENTSH	own	Reptilia	129	129	129	98	12	12	117	0	31	86	0.09302325581395349	0.7596899224806202	0.4706	summarised
+MENTSH	own	Rhabditophora	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	own	Sarcopterygii	4	4	4	3	1	1	3	0	1	2	0.25	0.75	0.3529	not assessed: under 20 assessed species
+MENTSH	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	own	all	2325	2324	2320	1616	182	149	2171	5	704	1467	0.06422413793103449	0.696551724137931	0.4706	summarised
+MENTSH	standard	Actinopterygii	893	893	892	594	0	0	892	1	298	594	0.0	0.6659192825112108		summarised
+MENTSH	standard	Amphibia	45	45	45	32	0	0	45	0	13	32	0.0	0.7111111111111111		summarised
+MENTSH	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	standard	Asteroidea	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	standard	Aves	427	427	427	346	0	0	427	0	81	346	0.0	0.810304449648712		summarised
+MENTSH	standard	Bivalvia	35	35	35	22	0	0	35	0	13	22	0.0	0.6285714285714286		summarised
+MENTSH	standard	Cephalaspidomorphi	9	9	9	7	0	0	9	0	2	7	0.0	0.7777777777777778		not assessed: under 20 assessed species
+MENTSH	standard	Cephalopoda	11	11	11	4	0	0	11	0	7	4	0.0	0.36363636363636365		not assessed: under 20 assessed species
+MENTSH	standard	Chondrichthyes	87	87	87	49	0	0	87	0	38	49	0.0	0.5632183908045977		summarised
+MENTSH	standard	Chromadorea	2	2	2	2	0	0	2	0	0	2	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	standard	Echinoidea	4	4	4	2	0	0	4	0	2	2	0.0	0.5		not assessed: under 20 assessed species
+MENTSH	standard	Gastropoda	9	9	9	6	0	0	9	0	3	6	0.0	0.6666666666666666		not assessed: under 20 assessed species
+MENTSH	standard	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	standard	Leptocardii	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	standard	Malacostraca	30	29	29	1	0	0	29	1	28	1	0.0	0.034482758620689655		summarised
+MENTSH	standard	Mammalia	625	625	622	463	0	0	622	3	159	463	0.0	0.7443729903536977		summarised
+MENTSH	standard	Merostomata	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	standard	Polychaeta	4	4	4	4	0	0	4	0	0	4	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	standard	Reptilia	129	129	129	98	0	0	129	0	31	98	0.0	0.7596899224806202		summarised
+MENTSH	standard	Rhabditophora	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+MENTSH	standard	Sarcopterygii	4	4	4	3	0	0	4	0	1	3	0.0	0.75		not assessed: under 20 assessed species
+MENTSH	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MENTSH	standard	all	2325	2324	2320	1637	0	0	2320	5	683	1637	0.0	0.7056034482758621		summarised
+MOTS-c	own	Actinopterygii	893	892	892	106	684	96	796	1	786	10	0.10762331838565023	0.11883408071748879	0.4	summarised
+MOTS-c	own	Amphibia	45	45	45	9	38	9	36	0	36	0	0.2	0.2	0.5333	summarised
+MOTS-c	own	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Aves	427	427	422	237	349	188	234	5	185	49	0.44549763033175355	0.5616113744075829	0.0667	summarised
+MOTS-c	own	Bivalvia	35	35	34	13	26	11	23	1	21	2	0.3235294117647059	0.38235294117647056	0.0667	summarised
+MOTS-c	own	Cephalaspidomorphi	9	9	9	0	9	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Cephalopoda	11	11	11	2	11	2	9	0	9	0	0.18181818181818182	0.18181818181818182	0.0	not assessed: under 20 assessed species
+MOTS-c	own	Chondrichthyes	87	87	87	63	84	62	25	0	24	1	0.7126436781609196	0.7241379310344828	0.4667	summarised
+MOTS-c	own	Chromadorea	2	2	2	0	2	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Demospongiae	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.0	not assessed: under 20 assessed species
+MOTS-c	own	Echinoidea	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Gastropoda	9	9	9	5	9	5	4	0	4	0	0.5555555555555556	0.5555555555555556	0.0667	not assessed: under 20 assessed species
+MOTS-c	own	Insecta	4	4	4	1	3	1	3	0	3	0	0.25	0.25	0.0	not assessed: under 20 assessed species
+MOTS-c	own	Leptocardii	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.1333	not assessed: under 20 assessed species
+MOTS-c	own	Malacostraca	30	30	30	21	29	20	10	0	9	1	0.6666666666666666	0.7	0.0	summarised
+MOTS-c	own	Mammalia	625	624	620	147	618	147	473	5	473	0	0.23709677419354838	0.23709677419354838	0.5333	summarised
+MOTS-c	own	Merostomata	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Polychaeta	4	4	4	3	4	3	1	0	1	0	0.75	0.75	0.0667	not assessed: under 20 assessed species
+MOTS-c	own	Reptilia	129	129	129	13	99	13	116	0	116	0	0.10077519379844961	0.10077519379844961	0.2667	summarised
+MOTS-c	own	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Sarcopterygii	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	own	all	2325	2323	2313	622	1972	559	1754	12	1691	63	0.24167747514051016	0.26891482922611326	0.3333	summarised
+MOTS-c	standard	Actinopterygii	893	892	892	472	669	327	565	1	420	145	0.3665919282511211	0.5291479820627802	0.4667	summarised
+MOTS-c	standard	Amphibia	45	45	45	14	18	7	38	0	31	7	0.15555555555555556	0.3111111111111111	0.5333	summarised
+MOTS-c	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	Aves	427	427	422	350	343	280	142	5	72	70	0.6635071090047393	0.8293838862559242	0.0667	summarised
+MOTS-c	standard	Bivalvia	35	35	34	11	18	10	24	1	23	1	0.29411764705882354	0.3235294117647059	0.0667	summarised
+MOTS-c	standard	Cephalaspidomorphi	9	9	9	7	9	7	2	0	2	0	0.7777777777777778	0.7777777777777778	0.4	not assessed: under 20 assessed species
+MOTS-c	standard	Cephalopoda	11	11	11	2	9	1	10	0	9	1	0.09090909090909091	0.18181818181818182	0.0	not assessed: under 20 assessed species
+MOTS-c	standard	Chondrichthyes	87	87	87	63	84	62	25	0	24	1	0.7126436781609196	0.7241379310344828	0.4667	summarised
+MOTS-c	standard	Chromadorea	2	2	2	0	2	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	Demospongiae	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.0	not assessed: under 20 assessed species
+MOTS-c	standard	Echinoidea	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	Gastropoda	9	9	9	2	4	1	8	0	7	1	0.1111111111111111	0.2222222222222222	0.0667	not assessed: under 20 assessed species
+MOTS-c	standard	Insecta	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+MOTS-c	standard	Leptocardii	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.1333	not assessed: under 20 assessed species
+MOTS-c	standard	Malacostraca	30	30	30	18	9	6	24	0	12	12	0.2	0.6	0.1	summarised
+MOTS-c	standard	Mammalia	625	624	620	331	566	296	324	5	289	35	0.4774193548387097	0.5338709677419354	0.6	summarised
+MOTS-c	standard	Merostomata	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	Polychaeta	4	4	4	3	2	2	2	0	1	1	0.5	0.75	0.0667	not assessed: under 20 assessed species
+MOTS-c	standard	Reptilia	129	129	129	62	54	26	103	0	67	36	0.20155038759689922	0.4806201550387597	0.1333	summarised
+MOTS-c	standard	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	Sarcopterygii	4	4	4	3	4	3	1	0	1	0	0.75	0.75	0.0667	not assessed: under 20 assessed species
+MOTS-c	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MOTS-c	standard	all	2325	2323	2313	1341	1794	1030	1283	12	972	311	0.4453091223519239	0.5797665369649806	0.4667	summarised
+MTALTCO1	own	Actinopterygii	893	893	890	4	117	1	889	3	886	3	0.0011235955056179776	0.0044943820224719105	0.4147	summarised
+MTALTCO1	own	Amphibia	45	45	45	0	17	0	45	0	45	0	0.0	0.0		summarised
+MTALTCO1	own	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Aves	427	427	423	59	20	3	420	4	364	56	0.0070921985815602835	0.13947990543735225	0.4961	summarised
+MTALTCO1	own	Bivalvia	35	35	35	0	5	0	35	0	35	0	0.0	0.0		summarised
+MTALTCO1	own	Cephalaspidomorphi	9	9	9	0	0	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Cephalopoda	11	11	11	0	2	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Chondrichthyes	87	87	87	0	10	0	87	0	87	0	0.0	0.0		summarised
+MTALTCO1	own	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Echinoidea	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Gastropoda	9	9	9	0	1	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Insecta	4	4	4	0	2	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Malacostraca	30	30	30	0	2	0	30	0	30	0	0.0	0.0		summarised
+MTALTCO1	own	Mammalia	625	625	625	18	386	13	612	0	607	5	0.0208	0.0288	0.5078	summarised
+MTALTCO1	own	Merostomata	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Polychaeta	4	4	4	0	2	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Reptilia	129	129	128	2	32	0	128	1	126	2	0.0	0.015625		summarised
+MTALTCO1	own	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	Sarcopterygii	4	4	4	1	3	1	3	0	3	0	0.25	0.25	0.4845	not assessed: under 20 assessed species
+MTALTCO1	own	Scyphozoa	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	own	all	2325	2325	2317	84	602	18	2299	8	2233	66	0.007768666378938282	0.03625377643504532	0.50195	summarised
+MTALTCO1	standard	Actinopterygii	893	893	892	0	0	0	892	1	892	0	0.0	0.0		summarised
+MTALTCO1	standard	Amphibia	45	45	45	0	0	0	45	0	45	0	0.0	0.0		summarised
+MTALTCO1	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Aves	427	427	426	13	0	0	426	1	413	13	0.0	0.03051643192488263		summarised
+MTALTCO1	standard	Bivalvia	35	35	35	0	0	0	35	0	35	0	0.0	0.0		summarised
+MTALTCO1	standard	Cephalaspidomorphi	9	9	9	0	0	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Cephalopoda	11	11	11	0	0	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Chondrichthyes	87	87	87	0	0	0	87	0	87	0	0.0	0.0		summarised
+MTALTCO1	standard	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Echinoidea	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Gastropoda	9	9	9	0	0	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Malacostraca	30	30	30	0	0	0	30	0	30	0	0.0	0.0		summarised
+MTALTCO1	standard	Mammalia	625	625	625	0	0	0	625	0	625	0	0.0	0.0		summarised
+MTALTCO1	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Polychaeta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Reptilia	129	129	129	0	0	0	129	0	129	0	0.0	0.0		summarised
+MTALTCO1	standard	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Sarcopterygii	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTCO1	standard	all	2325	2325	2323	13	0	0	2323	2	2310	13	0.0	0.005596211795092553		summarised
+MTALTND4	own	Actinopterygii	893	893	891	243	378	97	794	2	648	146	0.10886644219977554	0.2727272727272727	0.3776	summarised
+MTALTND4	own	Amphibia	45	45	44	8	31	7	37	1	36	1	0.1590909090909091	0.18181818181818182	0.3571	summarised
+MTALTND4	own	Ascidiacea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Asteroidea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Aves	427	427	425	161	387	135	290	2	264	26	0.3176470588235294	0.3788235294117647	0.4082	summarised
+MTALTND4	own	Bivalvia	35	35	35	0	17	0	35	0	35	0	0.0	0.0		summarised
+MTALTND4	own	Cephalaspidomorphi	9	9	9	0	9	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Cephalopoda	11	11	11	0	11	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Chondrichthyes	87	87	87	2	0	0	87	0	85	2	0.0	0.022988505747126436		summarised
+MTALTND4	own	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Echinoidea	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Gastropoda	9	9	9	0	9	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Insecta	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Malacostraca	30	30	30	0	0	0	30	0	30	0	0.0	0.0		summarised
+MTALTND4	own	Mammalia	625	625	622	131	573	125	497	3	491	6	0.20096463022508038	0.21061093247588425	0.5204	summarised
+MTALTND4	own	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Polychaeta	4	4	4	0	3	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Reptilia	129	129	129	32	102	26	103	0	97	6	0.20155038759689922	0.24806201550387597	0.3673	summarised
+MTALTND4	own	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Sarcopterygii	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	own	all	2325	2325	2317	577	1526	390	1927	8	1740	187	0.1683211048769961	0.24902891670263272	0.4184	summarised
+MTALTND4	standard	Actinopterygii	893	893	891	106	303	33	858	2	785	73	0.037037037037037035	0.11896745230078563	0.398	summarised
+MTALTND4	standard	Amphibia	45	45	44	1	26	1	43	1	43	0	0.022727272727272728	0.022727272727272728	0.4898	summarised
+MTALTND4	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Asteroidea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Aves	427	427	426	75	362	57	369	1	351	18	0.13380281690140844	0.176056338028169	0.4184	summarised
+MTALTND4	standard	Bivalvia	35	35	35	0	6	0	35	0	35	0	0.0	0.0		summarised
+MTALTND4	standard	Cephalaspidomorphi	9	9	9	0	7	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Cephalopoda	11	11	11	0	5	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Chondrichthyes	87	87	87	0	0	0	87	0	87	0	0.0	0.0		summarised
+MTALTND4	standard	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Echinoidea	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Gastropoda	9	9	9	0	7	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Malacostraca	30	30	30	0	0	0	30	0	30	0	0.0	0.0		summarised
+MTALTND4	standard	Mammalia	625	625	622	65	520	55	567	3	557	10	0.08842443729903537	0.1045016077170418	0.5204	summarised
+MTALTND4	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Polychaeta	4	4	4	0	2	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Reptilia	129	129	129	17	93	11	118	0	112	6	0.08527131782945736	0.13178294573643412	0.3673	summarised
+MTALTND4	standard	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Sarcopterygii	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+MTALTND4	standard	all	2325	2325	2318	264	1335	157	2161	7	2054	107	0.06773080241587576	0.11389128559102675	0.4286	summarised
+SHLP1	own	Actinopterygii	893	891	891	19	184	1	890	2	872	18	0.001122334455667789	0.02132435465768799	0.3913	summarised
+SHLP1	own	Amphibia	45	45	45	1	5	0	45	0	44	1	0.0	0.022222222222222223		summarised
+SHLP1	own	Ascidiacea	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP1	own	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	Aves	427	427	426	121	185	54	372	1	305	67	0.1267605633802817	0.284037558685446	0.2174	summarised
+SHLP1	own	Bivalvia	35	35	34	16	4	1	33	1	18	15	0.029411764705882353	0.47058823529411764	0.0	summarised
+SHLP1	own	Cephalaspidomorphi	9	9	9	4	9	4	5	0	5	0	0.4444444444444444	0.4444444444444444	0.3478	not assessed: under 20 assessed species
+SHLP1	own	Cephalopoda	11	11	11	7	4	2	9	0	4	5	0.18181818181818182	0.6363636363636364	0.02175	not assessed: under 20 assessed species
+SHLP1	own	Chondrichthyes	87	87	87	1	4	1	86	0	86	0	0.011494252873563218	0.011494252873563218	0.0435	summarised
+SHLP1	own	Chromadorea	2	2	2	1	0	0	2	0	1	1	0.0	0.5		not assessed: under 20 assessed species
+SHLP1	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	Echinoidea	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	Gastropoda	9	9	9	2	3	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP1	own	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	Leptocardii	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP1	own	Malacostraca	30	30	30	10	3	1	29	0	20	9	0.03333333333333333	0.3333333333333333	0.0435	summarised
+SHLP1	own	Mammalia	625	624	622	98	128	5	617	3	524	93	0.008038585209003215	0.15755627009646303	0.8696	summarised
+SHLP1	own	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	Polychaeta	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP1	own	Reptilia	129	129	128	57	6	0	128	1	71	57	0.0	0.4453125		summarised
+SHLP1	own	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	Sarcopterygii	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP1	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	own	all	2325	2322	2317	341	535	69	2248	8	1976	272	0.029779887785930083	0.1471730686232197	0.2174	summarised
+SHLP1	standard	Actinopterygii	893	891	891	123	7	1	890	2	768	122	0.001122334455667789	0.13804713804713806	0.6522	summarised
+SHLP1	standard	Amphibia	45	45	45	22	3	1	44	0	23	21	0.022222222222222223	0.4888888888888889	0.0435	summarised
+SHLP1	standard	Ascidiacea	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP1	standard	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Aves	427	427	426	173	29	5	421	1	253	168	0.011737089201877934	0.4061032863849765	0.2174	summarised
+SHLP1	standard	Bivalvia	35	35	34	15	0	0	34	1	19	15	0.0	0.4411764705882353		summarised
+SHLP1	standard	Cephalaspidomorphi	9	9	9	6	0	0	9	0	3	6	0.0	0.6666666666666666		not assessed: under 20 assessed species
+SHLP1	standard	Cephalopoda	11	11	11	7	0	0	11	0	4	7	0.0	0.6363636363636364		not assessed: under 20 assessed species
+SHLP1	standard	Chondrichthyes	87	87	87	67	2	0	87	0	20	67	0.0	0.7701149425287356		summarised
+SHLP1	standard	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Echinoidea	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Gastropoda	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP1	standard	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Leptocardii	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP1	standard	Malacostraca	30	30	30	10	0	0	30	0	20	10	0.0	0.3333333333333333		summarised
+SHLP1	standard	Mammalia	625	624	621	403	53	48	573	4	218	355	0.07729468599033816	0.6489533011272142	0.8696	summarised
+SHLP1	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Polychaeta	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP1	standard	Reptilia	129	129	128	65	1	0	128	1	63	65	0.0	0.5078125		summarised
+SHLP1	standard	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	Sarcopterygii	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP1	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP1	standard	all	2325	2322	2316	897	95	55	2261	9	1419	842	0.023747841105354058	0.3873056994818653	0.8696	summarised
+SHLP2	own	Actinopterygii	893	891	889	279	171	30	859	4	610	249	0.03374578177727784	0.3138357705286839	0.04	summarised
+SHLP2	own	Amphibia	45	45	45	4	2	0	45	0	41	4	0.0	0.08888888888888889		summarised
+SHLP2	own	Ascidiacea	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	own	Asteroidea	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP2	own	Aves	427	427	425	67	45	11	414	2	358	56	0.02588235294117647	0.15764705882352942	0.2	summarised
+SHLP2	own	Bivalvia	35	35	31	8	2	0	31	4	23	8	0.0	0.25806451612903225		summarised
+SHLP2	own	Cephalaspidomorphi	9	9	9	0	0	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	own	Cephalopoda	11	11	11	2	6	1	10	0	9	1	0.09090909090909091	0.18181818181818182	0.08	not assessed: under 20 assessed species
+SHLP2	own	Chondrichthyes	87	87	87	49	38	27	60	0	38	22	0.3103448275862069	0.5632183908045977	0.08	summarised
+SHLP2	own	Chromadorea	2	2	0	0	0	0	0	2	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	own	Demospongiae	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP2	own	Echinoidea	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP2	own	Gastropoda	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP2	own	Insecta	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	own	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	own	Malacostraca	30	30	30	7	4	1	29	0	23	6	0.03333333333333333	0.23333333333333334	0.0	summarised
+SHLP2	own	Mammalia	625	624	622	30	599	28	594	3	592	2	0.04501607717041801	0.04823151125401929	0.08	summarised
+SHLP2	own	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	own	Polychaeta	4	4	2	0	1	0	2	2	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	own	Reptilia	129	129	128	31	2	0	128	1	97	31	0.0	0.2421875		summarised
+SHLP2	own	Rhabditophora	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	own	Sarcopterygii	4	4	4	0	2	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	own	Scyphozoa	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	own	all	2325	2322	2304	482	873	98	2206	21	1822	384	0.042534722222222224	0.2092013888888889	0.08	summarised
+SHLP2	standard	Actinopterygii	893	891	890	308	12	3	887	3	582	305	0.0033707865168539327	0.34606741573033706	0.04	summarised
+SHLP2	standard	Amphibia	45	45	45	17	1	1	44	0	28	16	0.022222222222222223	0.37777777777777777	0.0	summarised
+SHLP2	standard	Ascidiacea	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	standard	Asteroidea	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP2	standard	Aves	427	427	425	103	4	2	423	2	322	101	0.004705882352941176	0.24235294117647058	0.06	summarised
+SHLP2	standard	Bivalvia	35	35	31	8	0	0	31	4	23	8	0.0	0.25806451612903225		summarised
+SHLP2	standard	Cephalaspidomorphi	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP2	standard	Cephalopoda	11	11	11	2	0	0	11	0	9	2	0.0	0.18181818181818182		not assessed: under 20 assessed species
+SHLP2	standard	Chondrichthyes	87	87	87	55	12	12	75	0	32	43	0.13793103448275862	0.632183908045977	0.04	summarised
+SHLP2	standard	Chromadorea	2	2	0	0	0	0	0	2	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	standard	Demospongiae	1	1	1	1	0	0	1	0	0	1	0.0	1.0		not assessed: under 20 assessed species
+SHLP2	standard	Echinoidea	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP2	standard	Gastropoda	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP2	standard	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	standard	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	standard	Malacostraca	30	30	30	6	0	0	30	0	24	6	0.0	0.2		summarised
+SHLP2	standard	Mammalia	625	624	621	83	575	77	544	4	538	6	0.12399355877616747	0.13365539452495975	0.12	summarised
+SHLP2	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	standard	Polychaeta	4	4	2	0	0	0	2	2	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP2	standard	Reptilia	129	129	128	33	0	0	128	1	95	33	0.0	0.2578125		summarised
+SHLP2	standard	Rhabditophora	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	standard	Sarcopterygii	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP2	standard	Scyphozoa	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP2	standard	all	2325	2322	2304	623	604	95	2209	21	1681	528	0.04123263888888889	0.2703993055555556	0.08	summarised
+SHLP3	own	Actinopterygii	893	891	890	133	246	59	831	3	757	74	0.06629213483146068	0.149438202247191	0.1081	summarised
+SHLP3	own	Amphibia	45	45	45	9	16	4	41	0	36	5	0.08888888888888889	0.2	0.0811	summarised
+SHLP3	own	Ascidiacea	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP3	own	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Aves	427	427	422	63	64	20	402	5	359	43	0.04739336492890995	0.14928909952606634	0.1081	summarised
+SHLP3	own	Bivalvia	35	35	10	4	1	0	10	25	6	4	0.0	0.4		not assessed: under 20 assessed species
+SHLP3	own	Cephalaspidomorphi	9	9	9	5	0	0	9	0	4	5	0.0	0.5555555555555556		not assessed: under 20 assessed species
+SHLP3	own	Cephalopoda	11	11	5	0	0	0	5	6	5	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Chondrichthyes	87	87	87	1	4	0	87	0	86	1	0.0	0.011494252873563218		summarised
+SHLP3	own	Chromadorea	2	2	0	0	0	0	0	2	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP3	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Echinoidea	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP3	own	Gastropoda	9	9	6	0	0	0	6	3	6	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Malacostraca	30	30	29	6	0	0	29	1	23	6	0.0	0.20689655172413793		summarised
+SHLP3	own	Mammalia	625	624	623	75	235	46	577	2	548	29	0.0738362760834671	0.12038523274478331	0.2703	summarised
+SHLP3	own	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Polychaeta	4	4	0	0	0	0	0	4	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP3	own	Reptilia	129	129	129	20	25	5	124	0	109	15	0.03875968992248062	0.15503875968992248	0.0811	summarised
+SHLP3	own	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	Sarcopterygii	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP3	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	own	all	2325	2322	2273	318	592	134	2139	52	1955	184	0.05895292564892213	0.13990321161460625	0.1216	summarised
+SHLP3	standard	Actinopterygii	893	891	889	245	51	7	882	4	644	238	0.007874015748031496	0.2755905511811024	0.1081	summarised
+SHLP3	standard	Amphibia	45	45	45	9	5	1	44	0	36	8	0.022222222222222223	0.2	0.0811	summarised
+SHLP3	standard	Ascidiacea	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP3	standard	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Aves	427	427	422	106	7	3	419	5	316	103	0.0071090047393364926	0.25118483412322273	0.0811	summarised
+SHLP3	standard	Bivalvia	35	35	10	3	0	0	10	25	7	3	0.0	0.3		not assessed: under 20 assessed species
+SHLP3	standard	Cephalaspidomorphi	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP3	standard	Cephalopoda	11	11	5	0	0	0	5	6	5	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Chondrichthyes	87	87	87	3	0	0	87	0	84	3	0.0	0.034482758620689655		summarised
+SHLP3	standard	Chromadorea	2	2	0	0	0	0	0	2	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP3	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Echinoidea	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP3	standard	Gastropoda	9	9	6	0	0	0	6	3	6	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Insecta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Malacostraca	30	30	29	6	0	0	29	1	23	6	0.0	0.20689655172413793		summarised
+SHLP3	standard	Mammalia	625	624	623	72	45	8	615	2	551	64	0.012841091492776886	0.11556982343499198	0.5811	summarised
+SHLP3	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Polychaeta	4	4	0	0	0	0	0	4	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP3	standard	Reptilia	129	129	129	17	4	1	128	0	112	16	0.007751937984496124	0.13178294573643412	0.0811	summarised
+SHLP3	standard	Rhabditophora	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	Sarcopterygii	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP3	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP3	standard	all	2325	2322	2272	465	112	20	2252	53	1807	445	0.008802816901408451	0.20466549295774647	0.1351	summarised
+SHLP4	own	Actinopterygii	893	891	890	3	90	0	890	3	887	3	0.0	0.0033707865168539327		summarised
+SHLP4	own	Amphibia	45	45	45	2	0	0	45	0	43	2	0.0	0.044444444444444446		summarised
+SHLP4	own	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Aves	427	427	427	81	8	0	427	0	346	81	0.0	0.18969555035128804		summarised
+SHLP4	own	Bivalvia	35	35	34	16	4	0	34	1	18	16	0.0	0.47058823529411764		summarised
+SHLP4	own	Cephalaspidomorphi	9	9	9	0	2	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Cephalopoda	11	11	11	4	0	0	11	0	7	4	0.0	0.36363636363636365		not assessed: under 20 assessed species
+SHLP4	own	Chondrichthyes	87	87	87	1	5	0	87	0	86	1	0.0	0.011494252873563218		summarised
+SHLP4	own	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Echinoidea	4	4	4	2	0	0	4	0	2	2	0.0	0.5		not assessed: under 20 assessed species
+SHLP4	own	Gastropoda	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP4	own	Insecta	4	4	4	2	3	1	3	0	2	1	0.25	0.5	0.2	not assessed: under 20 assessed species
+SHLP4	own	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Malacostraca	30	30	30	18	2	2	28	0	12	16	0.06666666666666667	0.6	0.18	summarised
+SHLP4	own	Mammalia	625	624	624	2	608	1	623	1	622	1	0.0016025641025641025	0.003205128205128205	0.24	summarised
+SHLP4	own	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Polychaeta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Reptilia	129	129	129	35	13	1	128	0	94	34	0.007751937984496124	0.2713178294573643	0.04	summarised
+SHLP4	own	Rhabditophora	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP4	own	Sarcopterygii	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	own	all	2325	2322	2319	168	735	5	2314	6	2151	163	0.0021561017680034496	0.0724450194049159	0.2	summarised
+SHLP4	standard	Actinopterygii	893	891	890	266	29	23	867	3	624	243	0.025842696629213482	0.298876404494382	0.4	summarised
+SHLP4	standard	Amphibia	45	45	45	34	0	0	45	0	11	34	0.0	0.7555555555555555		summarised
+SHLP4	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Aves	427	427	427	94	4	0	427	0	333	94	0.0	0.22014051522248243		summarised
+SHLP4	standard	Bivalvia	35	35	34	16	0	0	34	1	18	16	0.0	0.47058823529411764		summarised
+SHLP4	standard	Cephalaspidomorphi	9	9	9	0	0	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Cephalopoda	11	11	11	4	0	0	11	0	7	4	0.0	0.36363636363636365		not assessed: under 20 assessed species
+SHLP4	standard	Chondrichthyes	87	87	87	27	2	2	85	0	60	25	0.022988505747126436	0.3103448275862069	0.04	summarised
+SHLP4	standard	Chromadorea	2	2	2	0	0	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Echinoidea	4	4	4	2	0	0	4	0	2	2	0.0	0.5		not assessed: under 20 assessed species
+SHLP4	standard	Gastropoda	9	9	9	2	0	0	9	0	7	2	0.0	0.2222222222222222		not assessed: under 20 assessed species
+SHLP4	standard	Insecta	4	4	4	2	0	0	4	0	2	2	0.0	0.5		not assessed: under 20 assessed species
+SHLP4	standard	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Malacostraca	30	30	30	17	0	0	30	0	13	17	0.0	0.5666666666666667		summarised
+SHLP4	standard	Mammalia	625	624	623	108	601	98	525	2	515	10	0.15730337078651685	0.17335473515248795	0.56	summarised
+SHLP4	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Polychaeta	4	4	4	0	0	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	Reptilia	129	129	129	44	6	1	128	0	85	43	0.007751937984496124	0.34108527131782945	0.04	summarised
+SHLP4	standard	Rhabditophora	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP4	standard	Sarcopterygii	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP4	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP4	standard	all	2325	2322	2318	617	642	124	2194	7	1701	493	0.05349439171699741	0.26617773943054357	0.52	summarised
+SHLP5	own	Actinopterygii	893	891	891	72	15	0	891	2	819	72	0.0	0.08080808080808081		summarised
+SHLP5	own	Amphibia	45	45	45	5	4	1	44	0	40	4	0.022222222222222223	0.1111111111111111	0.1739	summarised
+SHLP5	own	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Aves	427	427	427	14	0	0	427	0	413	14	0.0	0.03278688524590164		summarised
+SHLP5	own	Bivalvia	35	35	15	6	0	0	15	20	9	6	0.0	0.4		not assessed: under 20 assessed species
+SHLP5	own	Cephalaspidomorphi	9	9	9	1	0	0	9	0	8	1	0.0	0.1111111111111111		not assessed: under 20 assessed species
+SHLP5	own	Cephalopoda	11	11	11	1	0	0	11	0	10	1	0.0	0.09090909090909091		not assessed: under 20 assessed species
+SHLP5	own	Chondrichthyes	87	87	87	26	0	0	87	0	61	26	0.0	0.2988505747126437		summarised
+SHLP5	own	Chromadorea	2	2	2	1	0	0	2	0	1	1	0.0	0.5		not assessed: under 20 assessed species
+SHLP5	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Echinoidea	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP5	own	Gastropoda	9	9	0	0	0	0	0	9	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP5	own	Insecta	4	4	1	0	0	0	1	3	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Malacostraca	30	30	16	1	0	0	16	14	15	1	0.0	0.0625		not assessed: under 20 assessed species
+SHLP5	own	Mammalia	625	624	624	168	81	59	565	1	456	109	0.09455128205128205	0.2692307692307692	0.5652	summarised
+SHLP5	own	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Polychaeta	4	4	3	0	1	0	3	1	3	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	Reptilia	129	129	129	19	11	1	128	0	110	18	0.007751937984496124	0.14728682170542637	0.087	summarised
+SHLP5	own	Rhabditophora	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP5	own	Sarcopterygii	4	4	4	1	1	1	3	0	3	0	0.25	0.25	0.1304	not assessed: under 20 assessed species
+SHLP5	own	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	own	all	2325	2322	2274	316	113	62	2212	51	1958	254	0.027264731750219876	0.13896218117854	0.5652	summarised
+SHLP5	standard	Actinopterygii	893	891	891	748	0	0	891	2	143	748	0.0	0.8395061728395061		summarised
+SHLP5	standard	Amphibia	45	45	45	15	1	1	44	0	30	14	0.022222222222222223	0.3333333333333333	0.1739	summarised
+SHLP5	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Asteroidea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Aves	427	427	427	211	0	0	427	0	216	211	0.0	0.49414519906323184		summarised
+SHLP5	standard	Bivalvia	35	35	15	6	0	0	15	20	9	6	0.0	0.4		not assessed: under 20 assessed species
+SHLP5	standard	Cephalaspidomorphi	9	9	9	1	0	0	9	0	8	1	0.0	0.1111111111111111		not assessed: under 20 assessed species
+SHLP5	standard	Cephalopoda	11	11	11	1	0	0	11	0	10	1	0.0	0.09090909090909091		not assessed: under 20 assessed species
+SHLP5	standard	Chondrichthyes	87	87	87	15	0	0	87	0	72	15	0.0	0.1724137931034483		summarised
+SHLP5	standard	Chromadorea	2	2	2	1	0	0	2	0	1	1	0.0	0.5		not assessed: under 20 assessed species
+SHLP5	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Echinoidea	4	4	4	1	0	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+SHLP5	standard	Gastropoda	9	9	0	0	0	0	0	9	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP5	standard	Insecta	4	4	1	0	0	0	1	3	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Leptocardii	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Malacostraca	30	30	16	1	0	0	16	14	15	1	0.0	0.0625		not assessed: under 20 assessed species
+SHLP5	standard	Mammalia	625	624	623	288	39	34	589	2	335	254	0.05457463884430177	0.4622792937399679	0.6522	summarised
+SHLP5	standard	Merostomata	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Polychaeta	4	4	3	0	0	0	3	1	3	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	Reptilia	129	129	129	44	3	2	127	0	85	42	0.015503875968992248	0.34108527131782945	0.0435	summarised
+SHLP5	standard	Rhabditophora	1	1	0	0	0	0	0	1	0	0	NaN	NaN		not assessed: under 20 assessed species
+SHLP5	standard	Sarcopterygii	4	4	4	3	0	0	4	0	1	3	0.0	0.75		not assessed: under 20 assessed species
+SHLP5	standard	Scyphozoa	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP5	standard	all	2325	2322	2273	1335	43	37	2236	52	938	1298	0.01627804663440387	0.587329520457545	0.6522	summarised
+SHLP6	own	Actinopterygii	893	891	890	15	889	15	875	3	875	0	0.016853932584269662	0.016853932584269662	1.0	summarised
+SHLP6	own	Amphibia	45	45	45	40	45	40	5	0	5	0	0.8888888888888888	0.8888888888888888	0.8947	summarised
+SHLP6	own	Ascidiacea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Asteroidea	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.4211	not assessed: under 20 assessed species
+SHLP6	own	Aves	427	427	427	0	426	0	427	0	427	0	0.0	0.0		summarised
+SHLP6	own	Bivalvia	35	35	33	7	33	7	26	2	26	0	0.21212121212121213	0.21212121212121213	0.2105	summarised
+SHLP6	own	Cephalaspidomorphi	9	9	9	9	9	9	0	0	0	0	1.0	1.0	0.7368	not assessed: under 20 assessed species
+SHLP6	own	Cephalopoda	11	11	11	0	11	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Chondrichthyes	87	87	87	0	87	0	87	0	87	0	0.0	0.0		summarised
+SHLP6	own	Chromadorea	2	2	2	0	2	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Demospongiae	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.3684	not assessed: under 20 assessed species
+SHLP6	own	Echinoidea	4	4	4	4	4	4	0	0	0	0	1.0	1.0	0.5789	not assessed: under 20 assessed species
+SHLP6	own	Gastropoda	9	9	8	0	8	0	8	1	8	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Insecta	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Malacostraca	30	30	30	1	30	1	29	0	29	0	0.03333333333333333	0.03333333333333333	0.0	summarised
+SHLP6	own	Mammalia	625	624	620	371	620	371	249	5	249	0	0.5983870967741935	0.5983870967741935	0.8947	summarised
+SHLP6	own	Merostomata	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Polychaeta	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Reptilia	129	129	129	41	129	41	88	0	88	0	0.3178294573643411	0.3178294573643411	0.8421	summarised
+SHLP6	own	Rhabditophora	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	Sarcopterygii	4	4	4	1	4	1	3	0	3	0	0.25	0.25	0.7895	not assessed: under 20 assessed species
+SHLP6	own	Scyphozoa	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	own	all	2325	2322	2314	491	2312	491	1823	11	1823	0	0.2121866897147796	0.2121866897147796	0.8947	summarised
+SHLP6	standard	Actinopterygii	893	891	890	864	889	863	27	3	26	1	0.9696629213483146	0.9707865168539326	0.8947	summarised
+SHLP6	standard	Amphibia	45	45	45	43	45	43	2	0	2	0	0.9555555555555556	0.9555555555555556	0.8421	summarised
+SHLP6	standard	Ascidiacea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Asteroidea	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.4211	not assessed: under 20 assessed species
+SHLP6	standard	Aves	427	427	427	414	426	414	13	0	13	0	0.9695550351288056	0.9695550351288056	0.8421	summarised
+SHLP6	standard	Bivalvia	35	35	33	7	33	7	26	2	26	0	0.21212121212121213	0.21212121212121213	0.2105	summarised
+SHLP6	standard	Cephalaspidomorphi	9	9	9	9	9	9	0	0	0	0	1.0	1.0	0.7368	not assessed: under 20 assessed species
+SHLP6	standard	Cephalopoda	11	11	11	0	11	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Chondrichthyes	87	87	87	74	87	74	13	0	13	0	0.8505747126436781	0.8505747126436781	0.8947	summarised
+SHLP6	standard	Chromadorea	2	2	2	0	2	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Demospongiae	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.3684	not assessed: under 20 assessed species
+SHLP6	standard	Echinoidea	4	4	4	4	4	4	0	0	0	0	1.0	1.0	0.5789	not assessed: under 20 assessed species
+SHLP6	standard	Gastropoda	9	9	8	0	8	0	8	1	8	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Insecta	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Malacostraca	30	30	30	1	28	0	30	0	29	1	0.0	0.03333333333333333		summarised
+SHLP6	standard	Mammalia	625	624	620	547	620	547	73	5	73	0	0.882258064516129	0.882258064516129	0.8947	summarised
+SHLP6	standard	Merostomata	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Polychaeta	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Reptilia	129	129	129	104	129	104	25	0	25	0	0.8062015503875969	0.8062015503875969	0.8421	summarised
+SHLP6	standard	Rhabditophora	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	Sarcopterygii	4	4	4	4	4	4	0	0	0	0	1.0	1.0	0.7368	not assessed: under 20 assessed species
+SHLP6	standard	Scyphozoa	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+SHLP6	standard	all	2325	2322	2314	2073	2310	2071	243	11	241	2	0.8949870354364736	0.8958513396715644	0.8947	summarised
+humanin	own	Actinopterygii	893	891	891	374	865	357	534	2	517	17	0.4006734006734007	0.41975308641975306	0.5652	summarised
+humanin	own	Amphibia	45	45	45	25	28	11	34	0	20	14	0.24444444444444444	0.5555555555555556	0.5217	summarised
+humanin	own	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Asteroidea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Aves	427	427	427	388	366	342	85	0	39	46	0.8009367681498829	0.9086651053864169	0.5217	summarised
+humanin	own	Bivalvia	35	35	32	10	24	7	25	3	22	3	0.21875	0.3125	0.1739	summarised
+humanin	own	Cephalaspidomorphi	9	9	9	0	0	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Cephalopoda	11	11	11	0	9	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Chondrichthyes	87	87	87	86	1	0	87	0	1	86	0.0	0.9885057471264368		summarised
+humanin	own	Chromadorea	2	2	2	0	2	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Echinoidea	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Gastropoda	9	9	9	1	8	0	9	0	8	1	0.0	0.1111111111111111		not assessed: under 20 assessed species
+humanin	own	Insecta	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Leptocardii	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.2609	not assessed: under 20 assessed species
+humanin	own	Malacostraca	30	30	29	5	25	3	26	1	24	2	0.10344827586206896	0.1724137931034483	0.1739	summarised
+humanin	own	Mammalia	625	624	623	10	463	5	618	2	613	5	0.008025682182985553	0.016051364365971106	0.7391	summarised
+humanin	own	Merostomata	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.1739	not assessed: under 20 assessed species
+humanin	own	Polychaeta	4	4	4	1	1	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+humanin	own	Reptilia	129	129	128	73	49	39	89	1	55	34	0.3046875	0.5703125	0.5652	summarised
+humanin	own	Rhabditophora	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	own	Sarcopterygii	4	4	4	4	4	4	0	0	0	0	1.0	1.0	0.5652	not assessed: under 20 assessed species
+humanin	own	Scyphozoa	1	1	1	1	1	1	0	0	0	0	1.0	1.0	0.2174	not assessed: under 20 assessed species
+humanin	own	all	2325	2322	2316	980	1855	771	1545	9	1336	209	0.3329015544041451	0.4231433506044905	0.5652	summarised
+humanin	standard	Actinopterygii	893	891	891	497	865	478	413	2	394	19	0.5364758698092031	0.5578002244668911	0.5652	summarised
+humanin	standard	Amphibia	45	45	45	42	28	26	19	0	3	16	0.5777777777777777	0.9333333333333333	0.5217	summarised
+humanin	standard	Ascidiacea	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Asteroidea	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Aves	427	427	427	390	366	341	86	0	37	49	0.7985948477751756	0.9133489461358314	0.5217	summarised
+humanin	standard	Bivalvia	35	35	32	2	24	2	30	3	30	0	0.0625	0.0625	0.087	summarised
+humanin	standard	Cephalaspidomorphi	9	9	9	9	0	0	9	0	0	9	0.0	1.0		not assessed: under 20 assessed species
+humanin	standard	Cephalopoda	11	11	11	0	9	0	11	0	11	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Chondrichthyes	87	87	87	87	1	1	86	0	0	86	0.011494252873563218	1.0	0.4783	summarised
+humanin	standard	Chromadorea	2	2	2	0	2	0	2	0	2	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Demospongiae	1	1	1	0	0	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Echinoidea	4	4	4	0	4	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Gastropoda	9	9	9	0	8	0	9	0	9	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Insecta	4	4	4	0	1	0	4	0	4	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Leptocardii	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Malacostraca	30	30	29	1	25	0	29	1	28	1	0.0	0.034482758620689655		summarised
+humanin	standard	Mammalia	625	624	623	557	463	412	211	2	66	145	0.6613162118780096	0.8940609951845907	0.7826	summarised
+humanin	standard	Merostomata	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Polychaeta	4	4	4	1	1	0	4	0	3	1	0.0	0.25		not assessed: under 20 assessed species
+humanin	standard	Reptilia	129	129	128	65	49	34	94	1	63	31	0.265625	0.5078125	0.5652	summarised
+humanin	standard	Rhabditophora	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	Sarcopterygii	4	4	4	4	4	4	0	0	0	0	1.0	1.0	0.5652	not assessed: under 20 assessed species
+humanin	standard	Scyphozoa	1	1	1	0	1	0	1	0	1	0	0.0	0.0		not assessed: under 20 assessed species
+humanin	standard	all	2325	2322	2316	1655	1855	1298	1018	9	661	357	0.5604490500863558	0.7145941278065631	0.5652	summarised

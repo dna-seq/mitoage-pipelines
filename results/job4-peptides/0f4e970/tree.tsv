@@ -1,0 +1,509 @@
+peptide	reading	group	tips	kept	lost	min_changes	losses	gains	root_state	perm_mean_changes	p_clustered	status	seed
+MENTSH	own	Actinopterygii	883	47	836	44	2	42	lost	46.177000	0.048951	tested	20261115
+MENTSH	own	Amphibia	45	6	39	5	1	4	kept	5.756000	0.227772	tested	20261115
+MENTSH	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Aves	423	35	388	23	1	22	lost	34.070000	0.000999	tested	20261115
+MENTSH	own	Bivalvia	30	2	28	2	0	2	lost	1.983000	1.000000	tested	20261115
+MENTSH	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Chondrichthyes	86	7	79	4	0	4	lost	6.822000	0.000999	tested	20261115
+MENTSH	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Malacostraca	29	0	29	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	own	Mammalia	614	30	584	25	1	24	lost	29.549000	0.000999	tested	20261115
+MENTSH	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Reptilia	129	12	117	10	0	10	lost	11.677000	0.033966	tested	20261115
+MENTSH	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MENTSH	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MENTSH	own	all	2290	143	2147	117	4	113	lost	140.097000	0.000999	tested	20261115
+MENTSH	standard	Actinopterygii	883	0	883	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Aves	423	0	423	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Malacostraca	29	0	29	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Mammalia	614	0	614	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Reptilia	129	0	129	0	0	0	lost			no variation: clustering not assessed	20261115
+MENTSH	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MENTSH	standard	all	2290	0	2290	0	0	0	lost			no variation: clustering not assessed	20261115
+MOTS-c	own	Actinopterygii	883	94	789	34	5	29	lost	90.579000	0.000999	tested	20261115
+MOTS-c	own	Amphibia	45	9	36	8	1	7	kept	8.392000	0.486513	tested	20261115
+MOTS-c	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Aves	419	185	234	72	33	39	kept	136.722000	0.000999	tested	20261115
+MOTS-c	own	Bivalvia	29	9	20	4	1	3	lost	8.097000	0.002997	tested	20261115
+MOTS-c	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Chondrichthyes	86	61	25	12	12	0	kept	22.002000	0.000999	tested	20261115
+MOTS-c	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Malacostraca	30	20	10	7	7	0	kept	8.851000	0.100899	tested	20261115
+MOTS-c	own	Mammalia	612	145	467	46	10	36	lost	131.045000	0.000999	tested	20261115
+MOTS-c	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Reptilia	129	13	116	12	0	12	lost	12.536000	0.377622	tested	20261115
+MOTS-c	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	own	all	2284	547	1737	205	52	153	kept	493.418000	0.000999	tested	20261115
+MOTS-c	standard	Actinopterygii	883	325	558	90	21	69	lost	264.749000	0.000999	tested	20261115
+MOTS-c	standard	Amphibia	45	7	38	6	1	5	kept	6.646000	0.307692	tested	20261115
+MOTS-c	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Aves	419	277	142	58	50	8	kept	118.430000	0.000999	tested	20261115
+MOTS-c	standard	Bivalvia	29	8	21	3	1	2	lost	7.336000	0.000999	tested	20261115
+MOTS-c	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Chondrichthyes	86	61	25	12	12	0	kept	21.951000	0.000999	tested	20261115
+MOTS-c	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Malacostraca	30	6	24	6	0	6	lost	5.752000	1.000000	tested	20261115
+MOTS-c	standard	Mammalia	612	293	319	61	22	39	lost	204.533000	0.000999	tested	20261115
+MOTS-c	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Reptilia	129	26	103	14	1	13	lost	24.020000	0.000999	tested	20261115
+MOTS-c	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MOTS-c	standard	all	2284	1018	1266	258	104	154	kept	750.546000	0.000999	tested	20261115
+MTALTCO1	own	Actinopterygii	881	1	880	1	0	1	lost	1.000000	1.000000	tested	20261115
+MTALTCO1	own	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Aves	419	3	416	2	0	2	lost	2.993000	0.007992	tested	20261115
+MTALTCO1	own	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	own	Mammalia	617	13	604	10	0	10	lost	12.930000	0.000999	tested	20261115
+MTALTCO1	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Reptilia	128	0	128	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	own	all	2287	18	2269	14	0	14	lost	17.965000	0.000999	tested	20261115
+MTALTCO1	standard	Actinopterygii	883	0	883	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Aves	422	0	422	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Mammalia	617	0	617	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Reptilia	129	0	129	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTCO1	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MTALTCO1	standard	all	2293	0	2293	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	own	Actinopterygii	882	96	786	79	4	75	lost	92.411000	0.000999	tested	20261115
+MTALTND4	own	Amphibia	44	7	37	6	0	6	lost	6.632000	0.315684	tested	20261115
+MTALTND4	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Aves	421	135	286	92	7	85	lost	114.416000	0.000999	tested	20261115
+MTALTND4	own	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	own	Mammalia	614	125	489	83	8	75	lost	115.091000	0.000999	tested	20261115
+MTALTND4	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Reptilia	129	26	103	22	0	22	lost	24.014000	0.133866	tested	20261115
+MTALTND4	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	own	all	2287	389	1898	282	19	263	lost	364.495000	0.000999	tested	20261115
+MTALTND4	standard	Actinopterygii	882	33	849	31	0	31	lost	32.634000	0.055944	tested	20261115
+MTALTND4	standard	Amphibia	44	1	43	1	0	1	lost	1.000000	1.000000	tested	20261115
+MTALTND4	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Aves	422	57	365	50	0	50	lost	54.247000	0.020979	tested	20261115
+MTALTND4	standard	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+MTALTND4	standard	Mammalia	614	55	559	44	2	42	lost	53.423000	0.000999	tested	20261115
+MTALTND4	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Reptilia	129	11	118	11	0	11	lost	10.713000	1.000000	tested	20261115
+MTALTND4	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+MTALTND4	standard	all	2288	157	2131	137	2	135	lost	153.494000	0.000999	tested	20261115
+SHLP1	own	Actinopterygii	882	1	881	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP1	own	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Aves	422	53	369	22	2	20	lost	50.648000	0.000999	tested	20261115
+SHLP1	own	Bivalvia	30	1	29	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP1	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Chondrichthyes	86	1	85	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP1	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Malacostraca	30	1	29	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP1	own	Mammalia	614	5	609	5	0	5	lost	4.993000	1.000000	tested	20261115
+SHLP1	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Reptilia	128	0	128	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP1	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP1	own	all	2288	68	2220	36	2	34	lost	67.396000	0.000999	tested	20261115
+SHLP1	standard	Actinopterygii	882	0	882	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	standard	Amphibia	45	1	44	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP1	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Aves	422	5	417	4	0	4	lost	4.982000	0.018981	tested	20261115
+SHLP1	standard	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	standard	Mammalia	613	48	565	19	0	19	lost	46.802000	0.000999	tested	20261115
+SHLP1	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Reptilia	128	0	128	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP1	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP1	standard	all	2287	54	2233	24	0	24	lost	53.618000	0.000999	tested	20261115
+SHLP2	own	Actinopterygii	880	30	850	17	0	17	lost	29.712000	0.000999	tested	20261115
+SHLP2	own	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP2	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Aves	421	11	410	11	0	11	lost	10.930000	1.000000	tested	20261115
+SHLP2	own	Bivalvia	27	0	27	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP2	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Chondrichthyes	86	27	59	11	1	10	lost	23.323000	0.000999	tested	20261115
+SHLP2	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Malacostraca	30	1	29	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP2	own	Mammalia	614	27	587	22	0	22	lost	26.623000	0.000999	tested	20261115
+SHLP2	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Polychaeta	2									not assessed: under 20 assessed tips	20261115
+SHLP2	own	Reptilia	128	0	128	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP2	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP2	own	all	2275	97	2178	63	1	62	lost	95.732000	0.000999	tested	20261115
+SHLP2	standard	Actinopterygii	881	3	878	2	0	2	lost	2.997000	0.003996	tested	20261115
+SHLP2	standard	Amphibia	45	1	44	1	1	0	kept	1.000000	1.000000	tested	20261115
+SHLP2	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Aves	421	2	419	2	0	2	lost	1.997000	1.000000	tested	20261115
+SHLP2	standard	Bivalvia	27	0	27	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP2	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Chondrichthyes	86	12	74	2	1	1	lost	11.452000	0.000999	tested	20261115
+SHLP2	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP2	standard	Mammalia	613	76	537	50	2	48	lost	72.689000	0.000999	tested	20261115
+SHLP2	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Polychaeta	2									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	Reptilia	128	0	128	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP2	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP2	standard	all	2275	94	2181	57	3	54	lost	92.818000	0.000999	tested	20261115
+SHLP3	own	Actinopterygii	881	59	822	42	1	41	lost	57.735000	0.000999	tested	20261115
+SHLP3	own	Amphibia	45	4	41	4	0	4	lost	3.900000	1.000000	tested	20261115
+SHLP3	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Aves	419	20	399	15	1	14	lost	19.694000	0.000999	tested	20261115
+SHLP3	own	Bivalvia	9									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Cephalopoda	4									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP3	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Gastropoda	4									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Malacostraca	29	0	29	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP3	own	Mammalia	615	46	569	32	2	30	lost	44.917000	0.000999	tested	20261115
+SHLP3	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Reptilia	129	5	124	5	0	5	lost	4.964000	1.000000	tested	20261115
+SHLP3	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP3	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP3	own	all	2248	134	2114	98	4	94	lost	131.405000	0.000999	tested	20261115
+SHLP3	standard	Actinopterygii	880	7	873	6	0	6	lost	6.989000	0.011988	tested	20261115
+SHLP3	standard	Amphibia	45	1	44	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP3	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Aves	419	3	416	3	0	3	lost	2.991000	1.000000	tested	20261115
+SHLP3	standard	Bivalvia	9									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Cephalopoda	4									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP3	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Gastropoda	4									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Malacostraca	29	0	29	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP3	standard	Mammalia	615	8	607	4	0	4	lost	7.971000	0.000999	tested	20261115
+SHLP3	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Reptilia	129	1	128	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP3	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP3	standard	all	2247	20	2227	15	0	15	lost	19.946000	0.000999	tested	20261115
+SHLP4	own	Actinopterygii	881	0	881	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	own	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Aves	423	0	423	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	own	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Malacostraca	30	2	28	2	0	2	lost	1.989000	1.000000	tested	20261115
+SHLP4	own	Mammalia	616	1	615	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP4	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Reptilia	129	1	128	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP4	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP4	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP4	own	all	2290	5	2285	5	0	5	lost	4.996000	1.000000	tested	20261115
+SHLP4	standard	Actinopterygii	881	23	858	3	0	3	lost	22.816000	0.000999	tested	20261115
+SHLP4	standard	Amphibia	45	0	45	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Aves	423	0	423	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	standard	Bivalvia	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Chondrichthyes	86	2	84	2	0	2	lost	1.990000	1.000000	tested	20261115
+SHLP4	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP4	standard	Mammalia	615	97	518	37	4	33	lost	91.568000	0.000999	tested	20261115
+SHLP4	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Reptilia	129	1	128	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP4	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP4	standard	all	2289	123	2166	43	4	39	lost	120.868000	0.000999	tested	20261115
+SHLP5	own	Actinopterygii	882	0	882	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP5	own	Amphibia	45	1	44	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP5	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Aves	423	0	423	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP5	own	Bivalvia	14									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP5	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Insecta	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Malacostraca	16									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Mammalia	616	58	558	18	15	3	lost	56.246000	0.000999	tested	20261115
+SHLP5	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Polychaeta	3									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Reptilia	129	1	128	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP5	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP5	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP5	own	all	2250	61	2189	21	15	6	lost	60.491000	0.000999	tested	20261115
+SHLP5	standard	Actinopterygii	882	0	882	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP5	standard	Amphibia	45	1	44	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP5	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Aves	423	0	423	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP5	standard	Bivalvia	14									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP5	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Insecta	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Malacostraca	16									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Mammalia	615	34	581	16	3	13	lost	33.440000	0.000999	tested	20261115
+SHLP5	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Polychaeta	3									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Reptilia	129	2	127	2	0	2	lost	1.994000	1.000000	tested	20261115
+SHLP5	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP5	standard	all	2249	37	2212	19	3	16	lost	36.825000	0.000999	tested	20261115
+SHLP6	own	Actinopterygii	881	15	866	11	0	11	lost	14.915000	0.000999	tested	20261115
+SHLP6	own	Amphibia	45	40	5	3	3	0	kept	4.856000	0.007992	tested	20261115
+SHLP6	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Aves	423	0	423	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP6	own	Bivalvia	29	7	22	6	0	6	lost	6.519000	0.398601	tested	20261115
+SHLP6	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP6	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Gastropoda	6									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Malacostraca	30	1	29	1	0	1	lost	1.000000	1.000000	tested	20261115
+SHLP6	own	Mammalia	612	367	245	56	41	15	kept	192.320000	0.000999	tested	20261115
+SHLP6	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Reptilia	129	41	88	13	11	2	lost	35.014000	0.000999	tested	20261115
+SHLP6	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP6	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP6	own	all	2285	487	1798	95	54	41	kept	446.254000	0.000999	tested	20261115
+SHLP6	standard	Actinopterygii	881	854	27	15	15	0	kept	26.711000	0.000999	tested	20261115
+SHLP6	standard	Amphibia	45	43	2	2	2	0	kept	1.983000	1.000000	tested	20261115
+SHLP6	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Aves	423	411	12	7	7	0	kept	11.888000	0.000999	tested	20261115
+SHLP6	standard	Bivalvia	29	7	22	6	0	6	lost	6.535000	0.382617	tested	20261115
+SHLP6	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Chondrichthyes	86	73	13	9	9	0	kept	12.377000	0.003996	tested	20261115
+SHLP6	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Gastropoda	6									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Malacostraca	30	0	30	0	0	0	lost			no variation: clustering not assessed	20261115
+SHLP6	standard	Mammalia	612	541	71	31	25	6	kept	68.241000	0.000999	tested	20261115
+SHLP6	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Reptilia	129	104	25	9	8	1	kept	23.220000	0.000999	tested	20261115
+SHLP6	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+SHLP6	standard	all	2285	2052	233	82	67	15	kept	224.926000	0.000999	tested	20261115
+humanin	own	Actinopterygii	882	355	527	100	20	80	lost	277.310000	0.000999	tested	20261115
+humanin	own	Amphibia	45	11	34	9	0	9	lost	10.002000	0.247752	tested	20261115
+humanin	own	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+humanin	own	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+humanin	own	Aves	423	339	84	41	40	1	kept	77.438000	0.000999	tested	20261115
+humanin	own	Bivalvia	28	7	21	5	0	5	lost	6.547000	0.063936	tested	20261115
+humanin	own	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+humanin	own	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+humanin	own	Chondrichthyes	86	0	86	0	0	0	lost			no variation: clustering not assessed	20261115
+humanin	own	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+humanin	own	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+humanin	own	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+humanin	own	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+humanin	own	Insecta	4									not assessed: under 20 assessed tips	20261115
+humanin	own	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+humanin	own	Malacostraca	29	3	26	2	0	2	lost	2.965000	0.032967	tested	20261115
+humanin	own	Mammalia	615	5	610	5	0	5	lost	4.991000	1.000000	tested	20261115
+humanin	own	Merostomata	1									not assessed: under 20 assessed tips	20261115
+humanin	own	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+humanin	own	Reptilia	128	39	89	14	9	5	lost	33.799000	0.000999	tested	20261115
+humanin	own	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+humanin	own	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+humanin	own	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+humanin	own	all	2287	766	1521	182	69	113	lost	643.369000	0.000999	tested	20261115
+humanin	standard	Actinopterygii	882	472	410	89	62	27	lost	293.398000	0.000999	tested	20261115
+humanin	standard	Amphibia	45	26	19	8	8	0	kept	14.811000	0.000999	tested	20261115
+humanin	standard	Ascidiacea	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	Asteroidea	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	Aves	423	338	85	41	40	1	kept	78.322000	0.000999	tested	20261115
+humanin	standard	Bivalvia	28	2	26	2	0	2	lost	1.974000	1.000000	tested	20261115
+humanin	standard	Cephalaspidomorphi	9									not assessed: under 20 assessed tips	20261115
+humanin	standard	Cephalopoda	10									not assessed: under 20 assessed tips	20261115
+humanin	standard	Chondrichthyes	86	1	85	1	0	1	lost	1.000000	1.000000	tested	20261115
+humanin	standard	Chromadorea	2									not assessed: under 20 assessed tips	20261115
+humanin	standard	Demospongiae	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	Echinoidea	4									not assessed: under 20 assessed tips	20261115
+humanin	standard	Gastropoda	7									not assessed: under 20 assessed tips	20261115
+humanin	standard	Insecta	4									not assessed: under 20 assessed tips	20261115
+humanin	standard	Leptocardii	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	Malacostraca	29	0	29	0	0	0	lost			no variation: clustering not assessed	20261115
+humanin	standard	Mammalia	615	408	207	103	84	19	kept	173.547000	0.000999	tested	20261115
+humanin	standard	Merostomata	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	Polychaeta	4									not assessed: under 20 assessed tips	20261115
+humanin	standard	Reptilia	128	34	94	11	10	1	lost	30.190000	0.000999	tested	20261115
+humanin	standard	Rhabditophora	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	Sarcopterygii	4									not assessed: under 20 assessed tips	20261115
+humanin	standard	Scyphozoa	1									not assessed: under 20 assessed tips	20261115
+humanin	standard	all	2287	1285	1002	257	206	51	lost	746.717000	0.000999	tested	20261115

@@ -1137,6 +1137,26 @@ translated peptide.
 **Not done.** RM16's fourth question (a blind scan of every frame of 20 codons or more); MASL, SHMOOSE and the other
 left-out peptides (`left_out.tsv`); the window null with a criterion that has enough windows (it would be a new
 test, fixed before it is run).
+**Rerun on 0f4e970** (the build round v0.3 of the manuscript cites). Slurm job 6490249 on haumea, 2026-11-15, from
+commit 00e5d12 (the analysis code of 2be936d; 00e5d12 adds only results), build longevity-genie/mitoage 0f4e970
+(dna-seq/mitoage 03c0949: the 9 EURING birds and the parrot ND6 patch; 2,344 species, 2,325 not retired), dated tree
+from dna-seq/mitoage at 03c0949. The tree matches the build: its 2,314 tips are all species of the build, the 9 new
+birds are among them, and the 30 live species without a tip are the same 30 as on c525adb (they are read in `frames`
+and `nulls`, and are absent from `tree` and `pgls`, as before). Again 60 tests pass, 19 of 19 code breaks are caught
+and every table is byte-identical on a second run; tables and log in `results/job4-peptides/0f4e970/`, the c525adb
+ones kept. **What changed.** The build realigned every gene with the new birds (all five host alignments have new
+bytes); the catalogue is byte-identical. Of the 2,316 species in both builds, under the published reading, the state
+is unchanged for humanin, SHLP6, MTALTND4, MTALTCO1 and MENTSH and changes in one species for MOTS-c, but not for the
+frames on the 16S's other strand: SHLP2 25 species (718 change open), SHLP3 14, SHLP4 46 (399 change open), SHLP5 37, SHLP1 1. Their
+columns move with the alignment, so SHLP1-5's counts are alignment-dependent and are quoted with that caveat. The
+reading fixed in advance gives the same answers: the window null with ORF windows is not assessed for any peptide
+under its published reading, so no frame is called kept beyond its host's conservation; H4's open-window null passes
+nowhere (smallest p 0.0099, q >= 0.61); the synonymous null passes for MENTSH in birds alone (12 of 102 families
+kept against 4.0 % expected, p = 0.002, q = 0.030). Context only, the dinucleotide null now also passes for SHLP2 in
+birds and cartilaginous fishes and for SHLP4 in cartilaginous fishes (SHLP4 in ray-finned fishes moves to q = 0.050).
+Tree: the same losses and gains for every frame but MTALTND4 (263 gains, from 262) and SHLP4 (4 losses and 39 gains,
+from 5 and 43); every frame still clustered. Lifespan: unchanged but for the birds' n; humanin in reptiles again
++0.194 (q = 0.039), not read as a signal.
 
 
 ## H16. The published cybrids, simulated: does mismatch at the mito-nuclear contacts predict which complex fails?

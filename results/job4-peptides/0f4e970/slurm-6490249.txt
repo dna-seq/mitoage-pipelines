@@ -1,0 +1,76 @@
+commit 00e5d129be303ec2155a4ab8afc0df2b48fdc37d
+build: 267a16311cca species.parquet; tree: bfcd086948b3 phylogeny.json
+dated tree opentree16.1: 2314 species; lifespan quality high or acceptable: 2229 of 2344
+fourfold.tsv: 2325 species
+51976e828635df5453812ecd20fe04063032c7634d8feea94194ff2a38bccce9  data/interim/tree/dated.nwk
+d8786a480349ffe6502192d8e09f4bd6fa49dd30d1f0d3ab437af1b8fd025f67  data/output/longevity/composition.tsv
+82d3227588f4964fc9c1df8bf4b81759193dec884b218f204719c4db7f35a376  data/output/longevity/fourfold.tsv
+humanin: rRNA-16S + index 962, rCRS 2633 (published 2634-2707), 24 codons, start ATG, then TAA
+SHLP1: rRNA-16S - index 888, rCRS 2559 (published 2561-2490), 24 codons, start ATG, then TAA
+SHLP2: rRNA-16S - index 497, rCRS 2168 (published 2170-2092), 26 codons, start ATG, then TAA
+SHLP3: rRNA-16S - index 148, rCRS 1819 (published 1821-1707), 38 codons, start ATG, then TAG
+SHLP4: rRNA-16S - index 851, rCRS 2522 (published 2524-2446), 26 codons, start ATG, then TGA
+SHLP5: rRNA-16S - index 1183, rCRS 2854 (published 2856-2785), 24 codons, start ATG, then TAG
+SHLP6: rRNA-16S + index 1319, rCRS 2990 (published 2992-3051), 20 codons, start ATG, then TAA
+MOTS-c: rRNA-12S + index 695, rCRS 1343 (published none), 16 codons, start ATG, then TAG
+MTALTND4: ND4 + index 797, rCRS 11557 (published 11,557 to 11,854), 99 codons, start ATG, then TAA
+MTALTCO1: COX1 + index 185, rCRS 6089 (published 6089 to 6866), 259 codons, start ATT, then TAG
+MENTSH: ND2 + index 506, rCRS 4976 (published start codon ATT holds m.4977 (T4977C)), 18 codons, start ATT, then AGG
+humanin: shuffle null skipped species: window shorter than the needed codons or with an unknown base: 1
+SHLP1: shuffle null skipped species: window shorter than the needed codons or with an unknown base: 2
+SHLP2: shuffle null skipped species: window shorter than the needed codons or with an unknown base: 2
+SHLP3: shuffle null skipped species: window shorter than the needed codons or with an unknown base: 12
+SHLP4: shuffle null skipped species: window shorter than the needed codons or with an unknown base: 1
+SHLP5: shuffle null skipped species: window shorter than the needed codons or with an unknown base: 2
+SHLP6: shuffle null skipped species: none
+MOTS-c: shuffle null skipped species: none
+MTALTND4: shuffle null skipped species: unknown base in the window's host codons: 5
+MTALTCO1: shuffle null skipped species: unknown base in the window's host codons: 20
+MENTSH: shuffle null skipped species: none
+
+real	4m18.861s
+user	1m6.305s
+sys	0m8.357s
+31ea5ea83ca02625e5e0a488787a227d81ead6975df7642f7737bf13741c9ca4  data/output/peptides/catalogue.tsv
+b222040a547b762bd7f9d734c54343474c4a5504486da7c6738dc96e1faacf97  data/output/peptides/left_out.tsv
+d00a094f79c9b461ccff820e7d383de2f123263142669fa7d64dbcd096b86806  data/output/peptides/states.tsv
+b1e3e243cc89f2d3bbf770e9b6c3bb19f219f8dcebc01824a455e46dced8fcdc  data/output/peptides/kept.tsv
+c7017e67bedf350a1ced5bd35fe55fd4ea448e5e0a5318ede4117db57958bf2c  data/output/peptides/nulls.tsv
+0c689389931a3f79bdfb6a83fe95aa520d80727367ebc19a9ff4fe9020052019  data/output/peptides/tree.tsv
+5ba20a7ecbb4d7b468667223b6126c8f1c83cc9c9463b0bf4f70ea241f603077  data/output/peptides/pgls.tsv
+............................................................             [100%]
+60 passed in 47.75s
+caught: open over half the codons, not 90 %: tests/test_peptides.py::test_the_array_reading_equals_a_plain_translation_in_every_species[own-humanin]
+caught: a gapped window assessed: tests/test_peptides.py::test_the_array_reading_equals_a_plain_translation_in_every_species[own-humanin]
+caught: an early stop with a start not counted as lost: tests/test_peptides.py::test_the_array_reading_equals_a_plain_translation_in_every_species[own-humanin]
+caught: an unknown base read as a sense codon: tests/test_peptides.py::test_the_array_reading_equals_a_plain_translation_in_every_species[own-humanin]
+caught: the window read from the column after the start: tests/test_peptides.py::test_human_keeps_every_peptide_under_its_published_reading[humanin]
+caught: AGA and AGG kept as stops in the AGR reading: tests/test_peptides.py::test_the_human_row_reads_the_published_peptide_and_then_a_stop[MTALTND4]
+caught: the standard reading starts at TTG and CTG too: tests/test_peptides.py::test_agr_is_arginine_only_in_the_agr_reading
+caught: codons shuffled across amino acids: tests/test_peptides.py::test_the_synonymous_shuffle_keeps_the_protein_and_the_codon_counts[homo-sapiens]
+caught: one shuffle repeated in every replicate: tests/test_peptides.py::test_each_replicate_is_its_own_shuffle
+caught: the last exit not walked last: tests/test_peptides.py::test_the_shuffles_repeat_with_the_seed_and_differ_without
+caught: the frame read one base off: tests/test_peptides.py::test_the_null_reads_the_unshuffled_frame_as_the_observation_does[MTALTND4]
+caught: the peptide's own window in its null: tests/test_peptides.py::test_window_null_windows_are_orfs_in_human_and_never_the_peptide
+caught: null windows in any frame of a protein gene: tests/test_peptides.py::test_window_null_windows_are_orfs_in_human_and_never_the_peptide
+caught: p without the observation counted: tests/test_peptides.py::test_p_counts_ties_and_adds_one
+caught: q over everything, not within null, statistic, level and reading: tests/test_peptides.py::test_q_is_benjamini_hochberg_within_null_statistic_level_and_reading
+caught: a missing tip read as lost: tests/test_peptides.py::test_missing_tips_cost_nothing_and_clustering_is_seen
+caught: a change preferred on a tie: tests/test_peptides.py::test_on_a_tie_the_child_keeps_its_parents_state
+caught: species not assessed fitted as lost: tests/test_peptides.py::test_lifespan_fits_kept_against_lost_and_leaves_out_not_assessed
+caught: the published nucleotides not checked: tests/test_peptides.py::test_published_nucleotides_that_differ_from_the_human_row_are_refused
+19 of 19 mutations caught; sources restored: True
+rerun catalogue.tsv: identical bytes
+rerun left_out.tsv: identical bytes
+rerun states.tsv: identical bytes
+rerun kept.tsv: identical bytes
+rerun nulls.tsv: identical bytes
+rerun tree.tsv: identical bytes
+rerun pgls.tsv: identical bytes
+31ea5ea83ca02625e5e0a488787a227d81ead6975df7642f7737bf13741c9ca4  data/output/peptides/catalogue.tsv
+b222040a547b762bd7f9d734c54343474c4a5504486da7c6738dc96e1faacf97  data/output/peptides/left_out.tsv
+d00a094f79c9b461ccff820e7d383de2f123263142669fa7d64dbcd096b86806  data/output/peptides/states.tsv
+b1e3e243cc89f2d3bbf770e9b6c3bb19f219f8dcebc01824a455e46dced8fcdc  data/output/peptides/kept.tsv
+c7017e67bedf350a1ced5bd35fe55fd4ea448e5e0a5318ede4117db57958bf2c  data/output/peptides/nulls.tsv
+0c689389931a3f79bdfb6a83fe95aa520d80727367ebc19a9ff4fe9020052019  data/output/peptides/tree.tsv
+5ba20a7ecbb4d7b468667223b6126c8f1c83cc9c9463b0bf4f70ea241f603077  data/output/peptides/pgls.tsv
