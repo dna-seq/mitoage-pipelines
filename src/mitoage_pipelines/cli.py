@@ -5,7 +5,7 @@ Order of a full run:
   mitoage longevity controls && mitoage longevity fourfold && mitoage longevity composition
   mitoage longevity sites
   mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls && mitoage longevity pgls-power
-  mitoage longevity rates && mitoage longevity motif-pgls
+  mitoage longevity rates && mitoage longevity motif-pgls && mitoage longevity generation-time
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
   mitoage peptides pilot
@@ -314,6 +314,19 @@ def longevity_motif_pgls(
     """H8: the build's mtDNA motif, repeat and contact-zone features against lifespan (H1's model)."""
     from .longevity import motif_pgls
     motif_pgls.main(data, composition, fourfold, tree, out, structure)
+
+
+@longevity_app.command("generation-time")
+def longevity_generation_time(
+    data: Build = paths.BUILD, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.LONGEVITY_OUT,
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia and Aves)")] = None,
+    maturity: Annotated[str, typer.Option(help="'female': AnAge's female age at maturity; 'any': the male age where the female one is missing")] = "female",
+) -> None:
+    """H11: lifespan or generation time? mtDNA composition against lifespan and age at maturity in one model."""
+    from .longevity import generation_time
+    generation_time.main(data, fourfold, tree, out, tuple(classes or ("Mammalia", "Aves")), maturity)
 
 
 @longevity_app.command("concat")

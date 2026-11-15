@@ -352,3 +352,75 @@ and H0's soft genes (ND6, ND5) are also where structure and sequence differ most
 **Limits.** Mammals only (62 species); one prediction per sequence; agreement between two methods is not
 correctness. Distant phyla, where sequence aligners are more likely to err, are not assessed; at the same rate,
 20 species across phyla would take about one GPU-hour.
+
+## H11. The composition signal that survives the controls is generation time, not lifespan
+
+**Hypothesis.** In the site's correlation table the one family of mtDNA features whose correlation with lifespan
+survives phylogenetic contrasts and body mass is base composition: GC content and a shift from T to C at third
+codon positions. Once the contrast test is calibrated it survives in mammals only (the site repository's
+`docs/PIC_CALIBRATION.md`). The A>G signature on the heavy strand that would produce such a shift rises with
+generation time across mammals (Mikhailova et al. 2022, NAR 50:10264, doi:10.1093/nar/gkac779), and
+lifespan and generation time go together. So the signal could belong to either.
+**Test.** `mitoage longevity generation-time`, into `generation_time.<maturity>.tsv` and
+`generation_time.<maturity>.classes.tsv`. Generation time is not in the build. AnAge's age at female maturity
+is, and serves as its proxy. Each feature, standardised, is regressed on the dated tree with Pagel's lambda
+(and, as a check, with lambda fixed at 1). Three models are fitted on the same species: log10 lifespan with
+log10 body mass, log10 maturity with mass, and all three together. Fourfold composition is not a covariate,
+unlike in H1 and H8, because composition is the response. The 43 features were fixed before any result was
+seen:
+- GC content, GC skew and AT skew of the protein-coding genes and of the whole record;
+- A, C, G and T at fourfold sites (`fourfold`, gene sense);
+- the share of pyrimidine-ending codons that end in C (`c3_share`);
+- the 32 codons ending in U or C, each as a percentage of all complete codons.
+q is Benjamini-Hochberg over the 43 features, within class, model and term. The build is
+longevity-genie/mitoage at c525adb (build 2), and the run of 2026-11-15 reproduces byte for byte. The site's
+contrast code (TypeScript, an independent implementation) gives the same t statistics as the lambda-1 fits,
+to within 0.017 over 152 fits, and exactly for GC content. The remaining difference comes from the site
+rounding codon percentages.
+**Result, mammals (527 species): the signal belongs to lifespan.** Across species, lifespan and maturity
+correlate at r = 0.84; on the contrasts only at 0.34, and no variance inflation on the tree exceeds 1.3, so
+the two can be separated. With mass alone, 11 of the 43 features follow lifespan at q < 0.05. Examples, in
+standard deviations per tenfold lifespan:
+
+| Feature | Lifespan + mass | Adding maturity | Maturity, given lifespan and mass |
+|---|---|---|---|
+| GC content, whole record | +0.49 (p = 7 x 10^-4) | +0.43 (p = 0.004) | +0.12 (p = 0.16) |
+| `c3_share` | +0.41 (p = 0.007) | +0.33 (p = 0.04) | +0.16 (p = 0.07) |
+| T at fourfold sites | -0.40 (p = 0.007) | -0.33 (p = 0.03) | -0.15 (p = 0.09) |
+
+Adding maturity shrinks the lifespan slopes by 10 to 20%, and four features keep q < 0.05 (codons CAC, ACC
+and UGU, and GC of the whole record; q = 0.047). Maturity adds nothing to any composition summary; its one
+feature at q < 0.05 is codon GUU (-0.58, p = 10^-4), which does not follow lifespan at all. The direction is
+the one the A>G signature on the heavy strand predicts: in gene sense, less T and more C. With lambda fixed at
+1, the lifespan terms of the three-trait model all fall just above the threshold (8 at q < 0.05 with mass
+alone, none with maturity added); the estimated lambda is 0.96 to 1.00.
+**Result, birds (281 species): no lifespan signal; maturity carries one, in the opposite direction.**
+Lifespan follows no feature in any model (smallest p 0.045, nothing near the threshold). Age at maturity
+follows six of the 43 at q < 0.05 with mass, and seven with lifespan added:
+- AT skew of the protein-coding genes, -0.74 per tenfold maturity (p = 4 x 10^-4);
+- codon ACC, -0.69;
+- codon GCU, +0.92;
+- AT skew of the whole record, -0.64;
+- GC skew of the protein-coding genes, +0.54;
+- T at fourfold sites, +0.58;
+- with lifespan added, GC skew of the whole record.
+`c3_share` falls (-0.47, p = 0.017, q above 0.05). Later-maturing birds carry more T and less C in gene sense.
+That is the reverse of the mammalian lifespan direction and of what the A>G signature on the heavy strand
+would give. Gene sense does not depend on which strand RefSeq deposited, so the reversal is not a strand
+artefact. With the male age filling a missing female one (`--maturity any`), mammals are unchanged (no
+mammal gains a value). Birds keep five of their features at q < 0.05: T at fourfold sites and the
+whole-record GC skew drop out.
+**Reading.** Mammals: base composition tracks lifespan beyond age at maturity and body mass, with a small
+effect (about 0.4 SD of the feature per tenfold lifespan) that is close to the threshold once maturity is in
+the model. Birds: no lifespan signal, but a maturity one in the other direction. The title of this entry is
+the hypothesis as stated, and in mammals it is not supported. The two classes disagree, so the composition
+signal is not one shared relationship with life history.
+**Limits.**
+- Age at maturity is not generation time. Generation length as Mikhailova et al. used it (Pacifici et al.
+  2013) includes part of the reproductive lifespan, so it is partly lifespan itself. "Lifespan rather than
+  maturity" therefore does not rule out generation time in their sense; it is not in the build, so that test
+  is not assessed.
+- Bird maturity is coarse. 72% of the 296 values are whole years, and 129 are exactly 365 days, so the bird
+  test mostly contrasts species breeding at one year with later ones.
+- Mammals lose 82 of 615 species and birds 124 of 405 to a missing maturity age.
+- The bird reversal is a new observation from a screen of 43 features at q < 0.05, with no replication.

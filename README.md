@@ -84,6 +84,7 @@ uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/ali
 # H3: selection in long-lived against short-lived lines (HyPhy)
 uv run mitoage longevity rates
 mitoage longevity motif-pgls --structure <mtdna_structure.parquet>
+uv run mitoage longevity generation-time   # H11: lifespan or age at maturity; mammals and birds (--maturity any: male age where female is missing)
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 
@@ -174,6 +175,7 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 
 - **Identical bytes**: `controls`, `fourfold`, `composition`, `sites`, `pgls` (mammals and birds, on the
   dated tree and on a gene-built tree), `peptides pilot`, `relax-prep`, `coevol-prep`, `mitoport select`.
+- **Identical bytes on a rerun of 2026-11-15**: `longevity generation-time` (both maturity modes).
 - **Equal to the second decimal**: `mitoport erc` (compared on the gene-built tree's topology, as first run). MAFFT with several threads and IQ-TREE without a seed are
   not repeatable run to run; the group medians move by at most 0.002. `--threads 1` and `--seed` make them so.
 - **Does not reproduce**: HyPhy RELAX. On identical inputs a second run of ATP8 gave K = 1.90, p = 0.20

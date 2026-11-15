@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H10), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H11), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
