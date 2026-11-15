@@ -156,11 +156,20 @@ def _request(url: str, body: dict | None = None, accept: str = "application/json
     raise AssertionError("unreachable")
 
 
+# genes NCBI has renamed since the analysis named them: our name (folders, tables) -> NCBI's current symbol.
+# NDUFA4 is COXFA4 at NCBI (gene 4697) as of 2026-11-15; the old symbol now matches no gene exactly.
+NCBI_SYMBOL = {"NDUFA4": "COXFA4"}
+
+
 def ortholog_gene_ids(symbol: str, taxon: str = "human", ortholog_taxon: str = "mammalia") -> tuple[str, list[int]]:
-    """(id of the gene in `taxon`, ids of its ortholog set within `ortholog_taxon`, in NCBI's order)."""
+    """(id of the gene in `taxon`, ids of its ortholog set within `ortholog_taxon`, in NCBI's order). `symbol` is our
+    name; a gene NCBI has renamed is looked up by its current symbol (NCBI_SYMBOL), and the substitution printed."""
     q = urllib.parse.quote
-    found = json.loads(_request(f"{NCBI_API}/gene/symbol/{q(symbol)}/taxon/{q(taxon)}")).get("reports", [])
-    ids = [r["gene"]["gene_id"] for r in found if r["gene"]["symbol"] == symbol]
+    ncbi = NCBI_SYMBOL.get(symbol, symbol)
+    if ncbi != symbol:
+        print(f"{symbol}: looked up at NCBI as {ncbi}, its current symbol")
+    found = json.loads(_request(f"{NCBI_API}/gene/symbol/{q(ncbi)}/taxon/{q(taxon)}")).get("reports", [])
+    ids = [r["gene"]["gene_id"] for r in found if r["gene"]["symbol"] == ncbi]
     if len(ids) != 1:
         raise RuntimeError(f"{symbol} in {taxon}: expected one gene at NCBI, found {len(ids)}")
     gene_ids: list[int] = []; token = None
