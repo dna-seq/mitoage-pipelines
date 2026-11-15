@@ -14,7 +14,8 @@ under `data/output`.
 - The website and the pipeline that builds its data are in
   [dna-seq/mitoage](https://github.com/dna-seq/mitoage) (TypeScript). This repository is the Python side and
   reads the published build, [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage)
-  on Hugging Face.
+  on Hugging Face. Every dataset this repository downloads is listed in the
+  [MitoAge collection](https://huggingface.co/collections/longevity-genie/mitoage-6af952ac7256661d479577a5) there.
 
 - **MitoAge build 2 from build 1**: [docs/BUILD2_REPRODUCTION.md](docs/BUILD2_REPRODUCTION.md). Every source
   of build 2 has a downloader here, every rule a step (`mitoage build2 ...`), and `mitoage build2 compare`
