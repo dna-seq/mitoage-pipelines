@@ -477,6 +477,20 @@ def longevity_coevol(
     coevol.run(prep, out, chain, cycles)
 
 
+@longevity_app.command("coevol-resume")
+def longevity_coevol_resume(
+    chain: Annotated[int, typer.Option(help="chain number to continue")] = 1,
+    until: Annotated[int, typer.Option(help="stop once this many points are saved")] = 15000,
+    stop_after_hours: Annotated[float | None, typer.Option(help="start no segment that ends after this many hours")] = None,
+    segment_hours: Annotated[float, typer.Option(help="hours between checkpoints")] = 6.0,
+    out: Out = paths.COEVOL_OUT,
+) -> None:
+    """Continue a Coevol chain from its last saved point, with a checkpoint every segment; a chain whose files
+    disagree is restored from its newest checkpoint first (coevol from PATH or $COEVOL). Days of CPU."""
+    from .longevity import coevol
+    coevol.resume(out, chain, until, stop_after_hours, segment_hours)
+
+
 @longevity_app.command("coevol-read")
 def longevity_coevol_read(
     chains: Annotated[list[int], typer.Option("--chain", help="chains to read (repeat the option)")] = [1, 2],
