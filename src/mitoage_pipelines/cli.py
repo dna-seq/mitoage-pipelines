@@ -9,6 +9,7 @@ Order of a full run:
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
   mitoage peptides pilot
+  mitoage peptides catalogue && mitoage peptides frames && mitoage peptides nulls && mitoage peptides tree && mitoage peptides pgls
   mitoage mitoport select && mitoage mitoport align && mitoage mitoport branch-lengths && mitoage mitoport erc
   mitoage download prepared --topic embeddings && mitoage mitoport coembed
   mitoage download pdb 5Z62 && mitoage mitoport contacts && mitoage mitoport burial && mitoage longevity structure-pgls
@@ -550,6 +551,61 @@ def peptides_pilot(data: Build = paths.BUILD, out: Out = paths.PEPTIDES_OUT) -> 
     """Are the reading frames of published mtDNA-encoded peptides kept across species?"""
     from .peptides import pilot
     pilot.main(data, out)
+
+
+@peptides_app.command("catalogue")
+def peptides_catalogue(data: Build = paths.BUILD, out: Out = paths.PEPTIDES_OUT) -> None:
+    """H15 (RM16): place each published peptide in the human row; refuse one whose sequence is not read exactly once.
+    Writes catalogue.tsv and left_out.tsv."""
+    from .peptides import catalogue
+    catalogue.main(data, out)
+
+
+@peptides_app.command("frames")
+def peptides_frames(data: Build = paths.BUILD, out: Out = paths.PEPTIDES_OUT) -> None:
+    """H15 (RM16, question 1): each peptide's frame in every species, under the species' own code and the standard
+    code: kept, lost or not assessed. Writes states.tsv and kept.tsv."""
+    from .peptides import frames
+    frames.main(data, out)
+
+
+@peptides_app.command("nulls")
+def peptides_nulls(
+    data: Build = paths.BUILD, out: Out = paths.PEPTIDES_OUT,
+    replicates: Annotated[int, typer.Option(help="shuffles per species")] = 1000,
+    seed: Annotated[int, typer.Option(help="the base seed of every shuffle")] = 20261115,
+    jobs: Annotated[int, typer.Option(help="peptides computed in parallel")] = 1,
+    peptide: Annotated[Optional[list[str]], typer.Option("--peptide", help="only this peptide; repeat for several")] = None,
+) -> None:
+    """H15 (RM16, question 2): the window null, and the synonymous (protein genes) or dinucleotide (rRNA) shuffle.
+    Writes nulls.tsv."""
+    from .peptides import nulls
+    nulls.main(data, out, replicates, seed, jobs, peptide)
+
+
+@peptides_app.command("tree")
+def peptides_tree(
+    out: Out = paths.PEPTIDES_OUT,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    permutations: Annotated[int, typer.Option(help="random reassignments of the states")] = 1000,
+    seed: Annotated[int, typer.Option(help="seed of the permutations")] = 20261115,
+) -> None:
+    """H15 (RM16, question 3): changes between kept and lost on the dated tree (parsimony), and whether they cluster.
+    Reads states.tsv; writes tree.tsv."""
+    from .peptides import tree as ptree
+    ptree.main(out / "states.tsv", tree, out / "tree.tsv", permutations, seed)
+
+
+@peptides_app.command("pgls")
+def peptides_pgls(
+    data: Build = paths.BUILD, out: Out = paths.PEPTIDES_OUT, composition: Composition = COMPOSITION,
+    fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+) -> None:
+    """H15 (RM16, question 3, secondary): log10 lifespan on the frame kept, H12's model, four classes. Reads
+    states.tsv (after `longevity controls` and `fourfold`); writes pgls.tsv."""
+    from .peptides import lifespan
+    lifespan.main(data, out / "states.tsv", composition, fourfold, tree, out / "pgls.tsv")
 
 
 # --- mitoport ---------------------------------------------------------------------------------

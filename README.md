@@ -99,6 +99,10 @@ uv run mitoage longevity relax
 
 # H4: peptides encoded inside mtDNA
 uv run mitoage peptides pilot
+# H15 (RM16): the whole catalogue across the build, with the window, synonymous and dinucleotide nulls, the tree and
+# lifespan (after `longevity dated-tree`, `controls`, `fourfold`; on haumea: slurm/job4-peptides.sbatch)
+uv run mitoage peptides catalogue && uv run mitoage peptides frames
+uv run mitoage peptides nulls --jobs 8 && uv run mitoage peptides tree && uv run mitoage peptides pgls
 
 # H5: mitochondrial and nuclear partners (MAFFT, IQ-TREE)
 uv run mitoage mitoport select

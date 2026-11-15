@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H12, H14), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H12, H14, H15), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -86,6 +86,25 @@ flowchart LR
 
 For each published peptide: find it in the human row, project its columns onto every species, ask for a
 start codon and an open frame; compare with other windows of the same gene that are open in human.
+
+H15 takes the whole catalogue (eleven peptides) across the build:
+
+```mermaid
+flowchart LR
+  B[build: rRNA and codon alignments<br/>species.parquet, genome_features.parquet] --> CA[peptides catalogue]
+  CA --> C1[catalogue.tsv, left_out.tsv]
+  B --> FR[peptides frames]
+  FR --> S[states.tsv: kept, lost, not assessed<br/>kept.tsv: per class]
+  B --> NU[peptides nulls<br/>window; synonymous or dinucleotide shuffle]
+  NU --> N[nulls.tsv]
+  S --> TR[peptides tree]
+  TREE[dated.nwk] --> TR
+  TR --> T[tree.tsv: losses, clustering]
+  S --> PG[peptides pgls<br/>H12's model]
+  TREE --> PG
+  COMP[composition.tsv, fourfold.tsv] --> PG
+  PG --> P[pgls.tsv]
+```
 
 ## Mitochondrial and nuclear partners: mitoport (H5, H6)
 

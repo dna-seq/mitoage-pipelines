@@ -178,12 +178,13 @@ lifespan.
 and no stop before 90 % of the length. `mitoage peptides pilot`.
 **Control.** Other windows of the same length in the same gene (and frame) that are stop-free in human.
 **Result.** All four are found in human with the published sequence. Across species only SHLP6 looks kept
-(start codon in every vertebrate with the region, frame open in 88 to 97 % per class); humanin is open in
+(start codon in 2,189 of the 2,191 vertebrates with the region: all but one ray-finned fish of 891 and one bird
+of 418; frame open in 88 to 97 % per class); humanin is open in
 89 % of mammals but keeps its ATG in 74 %; MOTS-c is no better than a random open window of 12S; MTALTND4 is
 kept in 36 of 116 primates. **None is beyond the null**: 10 to 14 % of random 16S windows open in human are
 kept as widely as SHLP6.
 **Limits.** A kept frame is not a translated peptide; nuclear copies are out of sight; outside vertebrates
-the windows do not line up. The test against the host gene's synonymous codons shuffled is not done.
+the windows do not line up. The test against the host gene's synonymous codons shuffled is H15's.
 
 ## H5. Mitochondrial and nuclear subunits of one complex evolve together (mitoport)
 
@@ -778,3 +779,71 @@ rerun gives the same bytes. It also runs complex IV through the code before the 
 checks that the contact map, `coupling.tsv`, `lifespan.tsv`, `partners.tsv` and `partners_species.tsv` are the same
 bytes. The build is longevity-genie/mitoage at
 c525adb, and the dated tree is the site's phylogeny.json at 6fe8e72, as in H12.
+## H15. The published mtDNA-encoded peptides across the whole build, against nulls of the host gene (RM16)
+
+**Question.** H4's pilot read four peptides with a window null. RM16 (site repository) asks, in order: is each
+published frame there in each species, under the species' own code and the standard code; is it kept beyond what its
+host gene's conservation gives for free, against windows of the same gene and then against the host's synonymous
+codons shuffled; does keeping or losing it follow the tree, and lifespan. RM16's fourth question, a blind scan of
+every frame of 20 codons or more, is not part of this entry.
+**Fixed before any result was seen** (written with the code, 2026-11-15; no table of this entry had been computed,
+and the only conservation numbers seen were H4's):
+- *Catalogue* (`mitoage peptides catalogue`, `peptides/catalogue.py`). Each sequence and placement copied from the
+  primary paper, each PMID checked by its title on PubMed: humanin and SHLP1 to SHLP6 (Cobb et al. 2016, PMID
+  27070352, Fig. 1A; humanin discovered by Hashimoto et al. 2001, PMID 11371646), MOTS-c (Lee et al. 2015, PMID
+  25738459, Fig. 1A), MTALTND4 (Kienzle et al. 2023, PMID 37198654, Table 1), MTALTCO1 (Robitaille et al. 2026,
+  PMID 41923604; its residues from Kienzle et al. 2023, Table 1, OpenProt IP_306389), MENTSH (Yen et al. 2026, PMID
+  42559346, Fig. 1F). The human row (NC_012920.1) must read each published sequence exactly once under its published
+  reading, followed by a stop, and the printed nucleotides of MOTS-c and MENTSH exactly; otherwise the step refuses.
+  It does: MTALTND4 and MTALTCO1 start at the published rCRS positions, MENTSH's ATT holds m.4977, the SHLPs sit 2
+  and humanin 1 below the paper's numbers. Readings: standard code for humanin, the SHLPs and MOTS-c (cytosolic, as
+  published); the mitochondrial code with AGA/AGG read as arginine for MTALTND4 and MTALTCO1, as their authors read
+  them; the mitochondrial code as NCBI has it for MENTSH, which ends at AGG. SHLP1 to SHLP5 lie on the strand
+  opposite the 16S rRNA. **Left out** (`left_out.tsv`): MASL (D-loop: the build aligns no control region), SHMOOSE
+  (starts over the serine tRNA, which the build does not align; PMID 36127429), Gau (antisense of COX1, mostly
+  computational), the other candidates of Kienzle et al.'s Table 1, SHLP2b (a prediction).
+- *Frame in a species* (`mitoage peptides frames`). The species' first base at or after the human start column, read
+  on the peptide's strand until a stop. Kept: a start codon of the reading there (standard: ATG; own: the NCBI
+  start codons of the species' table) and no stop in the first ceil(0.9 n) codons. Lost: an early stop, or open
+  without a start. Not assessed, a third answer never counted as either: under half the human window's columns hold
+  a base, a base other than ACGT before the decision, or the gene ends first. Both readings for every species: its
+  own NCBI table (with AGR as arginine for the two peptides read that way), and the standard code. Species: every
+  row of the build that is not retired. A class is summarised with at least 20 assessed species.
+- *Window null* (H4's, made exact). Every window of n codons in the same gene, same strand and, in a protein gene,
+  the same frame, not overlapping the peptide in its own frame, that is an ORF in human under the same reading
+  (statistic "kept"), or only stop-free in human (statistic "open", H4's). Statistic: the share of the class'
+  assessed species where the window is kept (open). p = (1 + windows at or above) / (1 + windows); under 20 windows
+  is not assessed.
+- *Synonymous null* (the three frames inside protein genes). In each species, the host gene's codons are permuted
+  among positions coding the same amino acid under the species' own code (protein and codon counts unchanged), 1,000
+  times; the frame is read at the species' window in each shuffle. Statistic: the share of species kept; p = (1 +
+  shuffles at or above) / 1,001.
+- *Dinucleotide null* (the eight frames inside rRNA genes, which have no synonymous codons). Each species' window
+  (3n bases from the start) shuffled 1,000 times keeping its dinucleotide counts and its first and last base
+  (Altschul-Erickson, by a random Eulerian path). Same statistic and p. **Its weakness**: it holds composition, not
+  the rRNA's structure, so a frame more open than its composition predicts may be kept by the rRNA's own
+  constraint. Only the window null can say "beyond the host's conservation" for an rRNA frame; the dinucleotide
+  null is reported as context and decides nothing.
+- *Relatedness.* The shuffles draw each species independently while relatives inherit their frames, so at the level
+  of species they overstate the evidence. Both shuffle nulls are also computed with one species per family (the
+  family's assessed species with the smallest SHA-256 of its slug), and the family level is the one read.
+- *Tree* (`mitoage peptides tree`), on the build's dated tree (the same as H12's: site repository at 6fe8e72).
+  Per peptide, reading and class (and all species): the minimum number of changes between kept and lost (Sankoff,
+  unit costs; polytomies exact; species not assessed are missing tips), losses and gains on one most parsimonious
+  reconstruction (root kept on a tie, changes as close to the tips as allowed), and clustering: the changes against
+  1,000 random reassignments of the same states to the same tips, p_clustered = (1 + at most as many) / 1,001.
+- *Lifespan* (`mitoage peptides pgls`, secondary): H12's model unchanged (`aa_pgls.select`, `class_covariance`,
+  `fit`) in mammals, birds, ray-finned fishes and reptiles: log10 lifespan on the frame kept (1) or lost (0), with
+  log10 body mass and A4, C4, T4, Pagel's lambda; the published reading; not assessed species left out; at least 25
+  species with 5 kept and 5 lost, or not assessed. The state is binary and not standardised (H12 standardised its
+  features): the slope is log10 years kept minus lost.
+- *Thresholds and reading.* q is Benjamini-Hochberg over peptides and classes within null, statistic, level and
+  reading (nulls), over peptides within class (lifespan). A frame is called **kept beyond its host's conservation**
+  in a class only if, under its published reading, the window null (statistic kept) gives q < 0.05 and, for a
+  protein-gene frame, the synonymous null at the family level gives q < 0.05 too. Loss is called clustered at
+  p_clustered < 0.05. Lifespan: q < 0.05. Seeds: 20261115 for every shuffle and permutation, each species' draws
+  seeded from (seed, peptide, species) by SHA-256.
+**Test.** `mitoage peptides catalogue`, `frames`, `nulls --jobs 8`, `tree`, `pgls` (after `longevity dated-tree`,
+`controls`, `fourfold`), into `data/output/peptides/`; on haumea `slurm/job4-peptides.sbatch`, which also runs the
+tests, a check that each test fails when the code it guards is broken (`slurm/job4-peptides-mutations.py`) and a
+second run of every step. Build: longevity-genie/mitoage at c525adb, as H12.
