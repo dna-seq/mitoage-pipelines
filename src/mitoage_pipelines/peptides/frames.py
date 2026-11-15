@@ -202,39 +202,45 @@ def identity(pc: Placed, i: int, p: int, table: codes.Table) -> tuple[float, str
     return same / (pc.n - 1), aa
 
 
+def peptide_rows(pc: Placed, meta: dict, code_of: dict[str, int]) -> list[dict]:
+    """states.tsv's rows of one peptide: every live species, both readings; plain Python values only."""
+    pep, rows = pc.pep, []
+    names = {KEPT: "kept", LOST: "lost", NOT_ASSESSED: "not assessed"}
+    for reading in READINGS:
+        st, tabs = observe(pc, reading, code_of)
+        for i, slug in enumerate(pc.host.slugs):
+            assessed = int(st["state"][i]) != NOT_ASSESSED
+            p = int(st["p"][i])
+            ident, aa = identity(pc, i, p, tabs[i]) if assessed else (float("nan"), "")
+            start = "".join("ACGTN"[b] for b in pc.host.nt[i, p:p + 3]) if p < pc.host.length[i] else ""
+            m = meta[slug]
+            rows.append({"peptide": pep.name, "reading": reading, "slug": slug, "class": m["class"],
+                         "order": m["order"], "family": m["family"], "transl_table": code_of[slug],
+                         "state": names[int(st["state"][i])], "reason": str(st["reason"][i]),
+                         "open": bool(st["open"][i]), "start": bool(st["start"][i]) and assessed, "start_codon": start,
+                         "orf_codons": int(st["orf"][i]) if assessed else None,
+                         "coverage": round(float(st["coverage"][i]), 4),
+                         "identity": None if ident != ident else round(float(ident), 4), "translation": aa})
+    # species with no row in the host alignment: not assessed, said so
+    for slug in sorted(set(meta) - set(pc.host.slugs)):
+        m = meta[slug]
+        for reading in READINGS:
+            rows.append({"peptide": pep.name, "reading": reading, "slug": slug, "class": m["class"],
+                         "order": m["order"], "family": m["family"], "transl_table": code_of[slug],
+                         "state": "not assessed", "reason": "no host row", "open": False, "start": False,
+                         "start_codon": "", "orf_codons": None, "coverage": 0.0, "identity": None, "translation": ""})
+    return rows
+
+
 def main(data: Path, out: Path) -> tuple[pl.DataFrame, pl.DataFrame]:
     out.mkdir(parents=True, exist_ok=True)
     sp = species_table(data)
     meta = {r["slug"]: r for r in sp.iter_rows(named=True)}
     code_of = {s: int(r["transl_table"]) for s, r in meta.items()}
-    live = set(meta)
     hosts: dict = {}
     rows = []
     for pep in PEPTIDES:
-        pc = placed(data, pep, live, hosts)
-        for reading in READINGS:
-            st, tabs = observe(pc, reading, code_of)
-            for i, slug in enumerate(pc.host.slugs):
-                ident, aa = (identity(pc, i, int(st["p"][i]), tabs[i]) if st["state"][i] != NOT_ASSESSED
-                             else (float("nan"), ""))
-                start = "".join("ACGTN"[b] for b in pc.host.nt[i, st["p"][i]:st["p"][i] + 3]) if st["p"][i] < pc.host.length[i] else ""
-                m = meta[slug]
-                rows.append({"peptide": pep.name, "reading": reading, "slug": slug, "class": m["class"],
-                             "order": m["order"], "family": m["family"], "transl_table": code_of[slug],
-                             "state": {KEPT: "kept", LOST: "lost", NOT_ASSESSED: "not assessed"}[int(st["state"][i])],
-                             "reason": st["reason"][i], "open": bool(st["open"][i]),
-                             "start": bool(st["start"][i]) and st["state"][i] != NOT_ASSESSED, "start_codon": start,
-                             "orf_codons": int(st["orf"][i]) if st["state"][i] != NOT_ASSESSED else None,
-                             "coverage": round(float(st["coverage"][i]), 4),
-                             "identity": None if ident != ident else round(ident, 4), "translation": aa})
-        # species with no row in the host alignment: not assessed, said so
-        for slug in sorted(live - set(pc.host.slugs)):
-            m = meta[slug]
-            for reading in READINGS:
-                rows.append({"peptide": pep.name, "reading": reading, "slug": slug, "class": m["class"],
-                             "order": m["order"], "family": m["family"], "transl_table": code_of[slug],
-                             "state": "not assessed", "reason": "no host row", "open": False, "start": False, "start_codon": "",
-                             "orf_codons": None, "coverage": 0.0, "identity": None, "translation": ""})
+        rows += peptide_rows(placed(data, pep, set(meta), hosts), meta, code_of)
     states = pl.DataFrame(rows, infer_schema_length=None).sort(["peptide", "reading", "slug"])
     states.write_csv(out / "states.tsv", separator="\t")
     kept = summarise(states)

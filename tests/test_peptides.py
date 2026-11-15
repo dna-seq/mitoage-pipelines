@@ -417,3 +417,36 @@ def test_published_nucleotides_that_differ_from_the_human_row_are_refused():
     wrong = pep.nucleotides[:48] + "CCC" + pep.nucleotides[51:]       # the residue stays P, the bases do not
     with pytest.raises(ValueError, match="published nucleotides"):
         catalogue.place(catalogue.Peptide(**{**pep.__dict__, "nucleotides": wrong}), paths.BUILD)
+
+
+@needs_build
+def test_the_rows_of_states_tsv_summarise_on_real_data(meta, code_of, hosts):
+    """The rows `frames main` writes, for one peptide, go through `summarise` (a numpy bool among them once broke it
+    on the cluster) and add up."""
+    rows = frames.peptide_rows(placed("MENTSH", meta, hosts), meta, code_of)
+    st = pl.DataFrame(rows, infer_schema_length=None)
+    assert st.schema["open"] == pl.Boolean and st.schema["start"] == pl.Boolean
+    assert st.height == 2 * len(meta)
+    k = frames.summarise(st)
+    assert (k["kept"] + k["lost"] + k["not_assessed"] == k["species"]).all()
+    assert (k["kept"] <= k["start"]).all() and (k["kept"] <= k["open"]).all()
+    allr = k.filter(pl.col("class") == "all")
+    assert allr["species"].to_list() == [len(meta)] * 2
+
+
+@needs_build
+@needs_tree
+def test_tree_main_on_real_rows_counts_only_assessed_tips(meta, code_of, hosts, tmp_path):
+    rows = frames.peptide_rows(placed("MENTSH", meta, hosts), meta, code_of)
+    st = pl.DataFrame(rows, infer_schema_length=None)
+    st.write_csv(tmp_path / "states.tsv", separator="\t")
+    res = tree.main(tmp_path / "states.tsv", paths.DATED_TREE, tmp_path / "tree.tsv", permutations=20)
+    tips = set(tree.Tree(paths.DATED_TREE).tip)
+    for r in res.filter(pl.col("group") == "all").iter_rows(named=True):
+        want = st.filter((pl.col("reading") == r["reading"]) & (pl.col("state") != "not assessed")
+                         & pl.col("slug").is_in(list(tips)))
+        assert r["tips"] == want.height and r["kept"] == (want["state"] == "kept").sum()
+        if r["status"] == "tested":
+            assert r["losses"] + r["gains"] == r["min_changes"] and 0 < r["p_clustered"] <= 1
+    assert (tmp_path / "tree.tsv").read_bytes() == (tree.main(tmp_path / "states.tsv", paths.DATED_TREE,
+                                                              tmp_path / "t2.tsv", permutations=20), (tmp_path / "t2.tsv").read_bytes())[1]
