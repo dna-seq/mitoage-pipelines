@@ -63,9 +63,17 @@ def test_every_species_has_a_row_and_its_own_record(recs):
 def test_the_builds_annotation_is_compared_not_taken(recs):
     """Each record's features as RefSeq deposits them against the build's: same for an unpatched record, and a
     feature only one side has is named, on its side."""
-    assert set(recs.build_annotation) <= {"same", "differs", "no record"}
+    assert set(recs.build_annotation) <= {"same", "differs", "no record", "none current in the build"}
+    assert set(recs.slug[recs.build_annotation == "none current in the build"]) <= set(recs.slug[recs.record_status == "retired"])
     assert (recs.build_annotation == "no record").sum() == (~recs.in_release).sum()
     assert recs.loc[HUMAN, "build_annotation"] == "same"
+    # the records whose annotation differs are exactly those the build's changelog names as patched
+    cl = pd.read_parquet(paths.BUILD / "changelog.parquet")
+    ids = {int(k.split(":")[0]) for k in cl[(cl.diff_class == "annotation_patch") & (cl.table == "genome_features")].row_key}
+    assert set(recs.slug[recs.build_annotation == "differs"]) == set(recs.slug[recs.species_id.isin(ids)])
+    gf = pd.read_parquet(paths.BUILD / "genome_features.parquet")
+    kept = set(gf.slug[gf.record_status == "retired"]) & set(recs.slug[recs.in_release])
+    assert kept and (recs.loc[sorted(kept), "build_annotation"] != "differs").all() or not kept
     assert (recs[recs.build_annotation == "differs"].build_annotation_detail != "").all()
     g = genome(recs, HUMAN)
     built = records.build_features(paths.BUILD)[HUMAN]
@@ -76,6 +84,7 @@ def test_the_builds_annotation_is_compared_not_taken(recs):
     st, de = records.compare_with_build(with_features(g, keep=lambda f: f.name != "ND6"), built)
     assert st == "differs" and de.startswith("only in the build: ND6 CDS")
     assert records.compare_with_build(None, built) == ("no record", "")
+    assert records.compare_with_build(g, None)[0] == records.compare_with_build(g, set())[0] == "none current in the build"
 
 
 # --- strand -----------------------------------------------------------------------------------

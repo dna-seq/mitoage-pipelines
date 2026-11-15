@@ -5,7 +5,7 @@ release is a row with `in_release` false and the reason, which every later step 
 
 The audit reads each record's annotation as RefSeq deposits it. Where the build's own features (genome_features)
 differ from it, as for an annotation the build patched, the record's row says so (`build_annotation`: same, differs
-with the features on either side, or no record) and every per-record table carries that column: the audit does not
+with the features on either side, no record, or none current in the build) and every per-record table carries that column: the audit does not
 take the build's patch in place of the record, and does not hide that the two disagree.
 
 The inputs of the whole audit are hashed here, once, into inputs.tsv: the build's tables and alignments, the
@@ -113,8 +113,10 @@ def _fmt(x: tuple) -> str:
 
 
 def build_features(build: Path) -> dict[str, set]:
-    """slug -> the build's features as (name, type, start, end, strand)."""
-    gf = pl.read_parquet(build / "genome_features.parquet").select("slug", "name", "type", "start", "end", "strand")
+    """slug -> the build's current features as (name, type, start, end, strand). Rows the build keeps as retired (build 1
+    features its record no longer carries; never deleted) are not current and are left out."""
+    gf = (pl.read_parquet(build / "genome_features.parquet").filter(pl.col("record_status") != "retired")
+          .select("slug", "name", "type", "start", "end", "strand"))
     out: dict[str, set] = {}
     for slug, name, typ, start, end, strand in gf.iter_rows():
         out.setdefault(slug, set()).add((name, typ, int(start), int(end), int(strand)))
@@ -122,11 +124,13 @@ def build_features(build: Path) -> dict[str, set]:
 
 
 def compare_with_build(g, built: set | None) -> tuple[str, str]:
-    """same, differs (with what only the build and only the record carry), or no record."""
+    """same, differs (with what only the build and only the record carry), no record, or no current features in the
+    build (a retired species whose record is still in the release)."""
     if g is None:
         return "no record", ""
+    if not built:
+        return "none current in the build", ""
     mine = {(f.name, f.type, f.start, f.end, f.strand) for f in g.features}
-    built = built or set()
     if mine == built:
         return "same", ""
     parts = []

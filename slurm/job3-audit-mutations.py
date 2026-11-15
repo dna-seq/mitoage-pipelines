@@ -20,6 +20,7 @@ MUTATIONS = [
     (A / "records.py", "every record called vertebrate", '"vertebrate": "Vertebrata" in h.lineage.split("; "),', '"vertebrate": True,'),
     (A / "records.py", "an empty order kept as a group named \"\"", "**{c: d[c] or None for c in TAXONOMY_COLUMNS}}", "**{c: d[c] for c in TAXONOMY_COLUMNS}}"),
     (A / "records.py", "the build's annotation never compared", "    if mine == built:", "    if True:"),
+    (A / "records.py", "the build's retired feature rows read as current", '.filter(pl.col("record_status") != "retired")', ""),
     (A / "records.py", "reverse complement keeps the strand", "gm.Segment(n - s.end + 1, n - s.start + 1, -s.strand)",
      "gm.Segment(n - s.end + 1, n - s.start + 1, s.strand)"),
     (A / "order.py", "the other strand read without reversing the order",
