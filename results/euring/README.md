@@ -9,8 +9,10 @@ Every analysis whose numbers the MitoAge manuscript reports (H1 `aa-pgls` in fou
 | before | 6489876 | 4b5e433, 2,335 species (equal to longevity-genie/mitoage c525adbf) | 794c421dfcdc | 4b5e433 |
 | after | 6489877 | fb54cec, 2,344 species: 9 European birds from the EURING list (D15 of the site repository), all genes realigned | 4e4aab66ae53 | fb54cec |
 
-The build with the EURING birds is not on Hugging Face yet, so both runs read `public/data/` of the site's
-repository at the named commit, copied into the data root (`MITOAGE_PIPELINES_DATA`); the logs record the digests.
+Both runs read `public/data/` of the site's repository at the named commit, copied into the data root
+(`MITOAGE_PIPELINES_DATA`); the logs record the digests. The data of fb54cec are byte-identical to those of
+longevity-genie/mitoage revision f75bdc9 on Hugging Face, uploaded the same day, so
+`mitoage download build --revision f75bdc9b812d7845d2ccb24a49643d88d00d57b5` gives the same inputs.
 
 - `*.tsv`: the tables of the "after" run that the manuscript reads.
 - `comparison.txt`: `slurm/compare-runs.py before after`, table by table and class by class.
