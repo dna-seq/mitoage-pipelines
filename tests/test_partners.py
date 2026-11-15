@@ -120,6 +120,18 @@ class TestDiscordance:
             else:
                 assert np.isnan(got.loc[s, "contact"])
 
+    def test_a_species_filling_under_half_the_pairs_is_not_scored(self, built, birds):
+        """Real species and alignments, with the partners of one subunit only: every species then fills fewer than
+        half the contact pairs, and none may be scored."""
+        nuc, mt, _, pr = built
+        slugs, _ = birds
+        one = pr.nuc_gene.value_counts().index[-1]                      # the subunit with the fewest pairs
+        assert (pr.nuc_gene == one).mean() < pt.MIN_SHARE
+        few = {g: (a if g == one else {}) for g, a in nuc.items()}
+        d = pt.discordance(pr, mt, few, slugs[:40])
+        assert d.contact_pairs.gt(0).any() and d.contact_pairs.lt(pt.MIN_SHARE * len(pr)).all()
+        assert d.contact.isna().all() and d["contact minus control"].isna().all()
+
     def test_the_test_variable_is_contact_minus_control(self, birds):
         _, got = birds
         assert np.allclose(got["contact minus control"], got.contact - got.control, equal_nan=True)
