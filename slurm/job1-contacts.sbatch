@@ -4,8 +4,8 @@
 # complex IV's tables equal those of the code before the generalisation. The cluster runs only code that is on main.
 # On the login node, from the root of a fresh clone of main (network is needed there, not in the job):
 #   uv sync --frozen
-#   uv run --frozen mitoage download build --revision c525adbff8c12b19981fdada7f1615c2559b7140
-#   uv run --frozen mitoage download tree --ref 6fe8e726fb32dd1dddc4a967db72af4f60c0215c     # H12's tree
+#   uv run --frozen mitoage download build --revision 0f4e970554b2fe0265e718321f422347293dde17
+#   uv run --frozen mitoage download tree --ref 03c09498564c17d1445bc4c18c70d0e710d471db     # the build's tree (site 03c0949)
 #   uv run --frozen mitoage download pdb 5XTD 5Z62 8H9S 5XTE
 #   uv run --frozen mitoage download orthologs                                             # H5's 62 genes, mammals
 #   uv run --frozen mitoage download orthologs $(printf -- '--gene %s ' $(uv run --frozen python -c \

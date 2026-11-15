@@ -178,6 +178,12 @@ def interface_columns(model, chains: pd.DataFrame, ct: pd.DataFrame, nucaln: Pat
     return nuc_aln, iface_cols, nuc_cols
 
 
+def pair_species(aln: dict, mt_aln: dict[str, dict], tips) -> list[str]:
+    """The species a nuclear protein's coupling is computed over: in its alignment, in every mitochondrial alignment of
+    the complex (each is read for every species pair) and a tip of the tree; sorted."""
+    return sorted(set(aln) & set.intersection(*(set(a) for a in mt_aln.values())) & set(tips))
+
+
 def usual_size(iface_cols: dict) -> int:
     """The median number of interface columns over the subunits that have any (30 when none has): the size of the
     random column sets that stand in for an interface in proteins without one. A subunit that touches no
@@ -282,7 +288,8 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
             mt_by_partner.setdefault(p, {})[g] = s[[p in str(x).split(",") for x in s.partners]].aln_col.to_numpy() - 1
 
     def mt_side(sp, colsets, metric):
-        """distance over species pairs, the three COX genes pooled (mean of the per-gene distances, each scaled to mean 1)"""
+        """distance over species pairs, the complex's mitochondrial genes pooled (mean of the per-gene distances, each
+        scaled to mean 1)"""
         Ds = []
         for g in MTG:
             cols = colsets[g]
@@ -304,7 +311,7 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
             if g not in nuc_aln:
                 continue
             aln = nuc_aln[g]
-            sp = sorted(set(aln) & set(mt_aln["COX1"]) & set(tips))
+            sp = pair_species(aln, mt_aln, tips)
             if len(sp) < 60:
                 continue
             iu = np.triu_indices(len(sp), 1)
@@ -360,7 +367,7 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
     qok = set((work / "species.txt").read_text().split())
     lrows = []
     for label, keep in [("all species", None), ("Mammalia", "Mammalia"), ("with nuclear partners", "nuclear")]:
-        sp = sorted(qok & set(mt_aln[MTG[0]]) & set(tips))
+        sp = sorted(qok & set.intersection(*(set(a) for a in mt_aln.values())) & set(tips))
         tab = sp_tab[sp_tab.slug.isin(sp)].dropna(subset=["max_longevity_years", "adult_weight_g"])
         if keep == "Mammalia":
             tab = tab[tab["class"] == "Mammalia"]

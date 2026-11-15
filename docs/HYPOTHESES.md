@@ -935,8 +935,19 @@ step for the four complexes, the tests, `slurm/job1-contacts-mutations.py` (each
 make a test fail) and H12's mutation check, and then the iface, partners and readouts steps twice, to check that the
 rerun gives the same bytes. It also runs complex IV through the code before the generalisation on the same inputs and
 checks that the contact map, `coupling.tsv`, `lifespan.tsv`, `partners.tsv` and `partners_species.tsv` are the same
-bytes. The build is longevity-genie/mitoage at
-c525adb, and the dated tree is the site's phylogeny.json at 6fe8e72, as in H12.
+bytes. The build is longevity-genie/mitoage at 0f4e970 (the site repository's 03c0949, the build round v0.3 of the
+manuscript cites), and the dated tree is the site's phylogeny.json at 03c0949.
+**Changed after the first job, before any readout existed.** Job 6490155 (from bf691b3, build c525adb) passed its tests
+and both mutation checks (18 of 18 and 19 of 19 caught), then stopped in `mitoport iface` for the first complex other
+than IV: the species of each protein's coupling were still taken from the COX1 alignment. They are now the species in
+every mitochondrial alignment of the complex (`iface.pair_species`); for complex IV that is the same set, and its
+tables stay byte-identical to the earlier code's. The readouts it had written were complex IV's only (its contact map,
+coupling and partner tables, which H5 and H12 already report); `contact_readouts.tsv` had not been written. With the
+rerun the build moves from c525adb (H12's) to 0f4e970, for consistency with the manuscript. Complex IV's species change
+slightly, so its tables are no longer byte-identical to H12's; the job still runs complex IV through the earlier code
+on the same inputs and compares the bytes, which is what shows that the generalisation changed nothing. The readouts,
+their sets and the reading above are unchanged.
+
 ## H15. The published mtDNA-encoded peptides across the whole build, against nulls of the host gene (RM16)
 
 **Question.** H4's pilot read four peptides with a window null. RM16 (site repository) asks, in order: is each

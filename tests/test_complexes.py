@@ -39,6 +39,21 @@ IV_DIGESTS = {"chains.tsv": "853d29226eccebf977fc6d9dd6973107b7e1e515b5917a18f5c
               "species.txt": "54706d4569b7e4bac1029d507e6cd182e7ef5af565aa61f9b57c8abfe76ec37a"}
 
 
+def _on_h12_inputs() -> bool:
+    """True when the last build and tree downloaded are the ones the pinned digests were made from."""
+    import json
+    try:
+        rec = json.loads(paths.MANIFEST.read_text())
+    except (OSError, ValueError):
+        return False
+    hf = [r.get("revision") for r in rec if r.get("identifier") == "datasets/longevity-genie/mitoage"]
+    tree = [r.get("revision") for r in rec if r.get("identifier", "").endswith("phylogeny.json")]
+    return bool(hf and tree) and hf[-1].startswith("c525adb") and tree[-1].startswith("6fe8e72")
+
+
+ON_H12_INPUTS = _on_h12_inputs()
+
+
 def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -103,6 +118,8 @@ def maps(tmp_path_factory):
 @needs_pdb
 @needs_build
 class TestContactMaps:
+    @pytest.mark.skipif(not ON_H12_INPUTS, reason="the pinned digests are of build c525adb and the site's tree at 6fe8e72; "
+                        "on other inputs the job compares complex IV with the earlier code instead")
     def test_complex_iv_is_byte_for_byte_the_published_map(self, maps):
         assert {f: sha(maps["IV"] / f) for f in IV_DIGESTS} == IV_DIGESTS
 
@@ -155,11 +172,11 @@ def entity_rows(cif: Path, genes: dict[str, str]) -> dict[str, str]:
 
 @pytest.fixture(scope="module")
 def synthetic(maps, tmp_path_factory):
-    """Nuclear alignments of complexes III and V in which 40 real species all carry the human residue."""
+    """Nuclear alignments of complexes III and V in which 80 real species all carry the human residue."""
     out = {}
     for name in ("III", "V"):
         cx = complexes.get(name)
-        species = (maps[name] / "species.txt").read_text().split()[:: 50][:40]
+        species = (maps[name] / "species.txt").read_text().split()[:: 25][:80]
         rows = entity_rows(CIFS[name], complexes.chain_genes(CIFS[name], cx))
         folder = tmp_path_factory.mktemp(f"aln{name}")
         for g in cx.nuclear:
@@ -230,6 +247,29 @@ class TestCoupling:
         with pytest.raises(SystemExit, match="no alignment column"):
             iface.main(work, tmp_path, work / "contacts.tsv", CIFS["IV"], paths.BUILD, None, paths.DATED_TREE,
                        tmp_path / "out", skip_esm=True)
+
+    def test_pair_species_hold_every_mitochondrial_alignment(self):
+        """Complex V on the build: ATP6 and ATP8 hold different species, so the set must be their intersection."""
+        mt = {g: read_fasta(paths.BUILD / "alignments" / f"{g}.aa.fasta.gz") for g in complexes.get("V").mt}
+        tips = burial.tree_tips(paths.DATED_TREE.read_text())
+        nuc = dict.fromkeys(set(mt["ATP6"]) | set(mt["ATP8"]), "M")
+        got = iface.pair_species(nuc, mt, tips)
+        assert got == sorted(set(mt["ATP6"]) & set(mt["ATP8"]) & tips)
+        assert (set(mt["ATP6"]) ^ set(mt["ATP8"])) & tips                    # one gene alone would differ
+        assert all(s in mt[g] for g in mt for s in got)
+
+    def test_complex_v_runs_on_its_own_mitochondrial_genes(self, maps, synthetic, tmp_path):
+        """iface on complex V (synthetic nuclear alignments, real ATP6 and ATP8): every partner row is computed over
+        the species in all of the complex's alignments; the complex-IV-only version stopped here on COX1."""
+        folder, species = synthetic["V"]
+        cx = complexes.get("V")
+        iface.main(maps["V"], folder, maps["V"] / "contacts.tsv", CIFS["V"], paths.BUILD, None, paths.DATED_TREE,
+                   tmp_path / "out", skip_esm=True, cx=cx)
+        cp = pd.read_csv(tmp_path / "out" / "coupling.tsv", sep="\t")
+        mt = {g: read_fasta(paths.BUILD / "alignments" / f"{g}.aa.fasta.gz") for g in cx.mt}
+        want = len(iface.pair_species(dict.fromkeys(["homo-sapiens", *species]), mt, burial.tree_tips(paths.DATED_TREE.read_text())))
+        part = cp[cp.group.eq(cx.partner_group)]
+        assert set(part.gene) == set(cx.nuclear) and part.species.eq(want).all() and want >= 60
 
     @pytest.mark.skipif(not (paths.MITOPORT_IFACE_ALN / "COX4I1.afa").is_file(), reason="needs `mitoport iface-align`")
     def test_alignments_of_other_complexes_are_no_cytosolic_controls(self, maps, tmp_path):
