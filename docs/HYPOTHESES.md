@@ -139,6 +139,33 @@ both chains), dN/dS against longevity +0.45 and +0.44 (0.99); as partial correla
 variables (body mass among them), dN/dS against longevity is +0.28 and +0.32 (0.88 and 0.91) and dS against
 longevity −0.13 and −0.10 (0.07 and 0.14), so the raw dS association went with body mass. The runs need to be
 resumed to convergence; until then the result for lifespan as a continuous trait is not assessed.
+**The tree Coevol saw.** `coevol-prep` writes the dated tree's topology without its branch lengths, so
+Coevol was not given the ages: it set every branch to 0.001 and sampled the node ages itself, with no
+calibration. "On the dated tree" above means its topology only. Sampling about a hundred ages jointly with the
+rates is a known slow part of Coevol's sampler and a likely cause of the poor mixing. `coevol-prep
+--fixed-ages` keeps the ages and `coevol --fixed-ages` passes `-fixtimes`, which holds them at the dated tree's
+(scaled to a root age of 1); two such chains are run beside the resumed ones.
+**Two-step cross-check (reading fixed on 2026-11-15, before it was run).** The same 106 mammals, alignment
+and topology as Coevol. Step 1, `mitoage longevity branch-rates`: HyPhy fits MG94xREV with a synonymous rate
+α and a non-synonymous rate β of its own on every branch (the tree unrooted, as HyPhy needs; the two branches
+at the root become one); dS = α·(S̄+N̄) per synonymous site, dN/dS = β/α. Step 2, `mitoage longevity
+branch-pgls`: on the 106 terminal branches, whose species' traits are observed, phylogenetic regression
+(Pagel's λ estimated per response, the dated tree's shared paths) of log10 dN/dS and of log10 (dS per
+million years of the branch's duration on the dated tree) on log10 lifespan and log10 body mass, each alone
+and both together. A branch with α or β estimated at 0 has no logarithm and is left out and counted.
+- **Positive control:** dN/dS rises with body mass (the nearly-neutral expectation; Popadin et al. 2007,
+  mitochondrial genes of mammals). If the slope of log10 dN/dS on log10 mass alone is not positive with
+  p < 0.05, the test lacks power on these data and nothing below is read.
+- **Secondary control:** dS per million years falls with body mass (Nabholz et al. 2008). Reported, not
+  required.
+- **The question:** lifespan with mass in the model (lifespan alone is mostly mass). Two tests, dN/dS and dS
+  per Myr, each two-sided, Holm-corrected over the two. A corrected p < 0.05 with the sign of Coevol's
+  provisional partial correlations (dN/dS +, dS −) is called agreement with Coevol; the opposite sign at
+  p < 0.05 is disagreement; anything else is "no lifespan signal beyond body mass in the two-step test".
+- **Sensitivity, reported beside it:** the same models without terminal branches whose dS exceeds 2
+  (saturated synonymous sites).
+- **What it cannot do:** it ignores the uncertainty of each branch's α and β (Coevol does not), and uses tips
+  only. It is a check of direction and size, not a replacement for the converged chains.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 
