@@ -129,6 +129,10 @@ uv run mitoage longevity coevol --chain 1 && uv run mitoage longevity coevol --c
 uv run mitoage longevity coevol-read              # readcoevol and tracecomp; read only once the chains converge
 ```
 
+On haumea, every analysis the MitoAge manuscript reports runs on one build as one Slurm job,
+`slurm/manuscript-rerun.sbatch` (its header gives the commands); `slurm/compare-runs.py` compares two such runs
+table by table and class by class.
+
 The longest steps are RELAX (5 to 40 minutes per gene on 4 cores) and the tree of a class (minutes); the
 rest take seconds to a few minutes.
 
