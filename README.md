@@ -124,6 +124,16 @@ uv sync --group fold && uv run mitoage structure fold   # ESMFold2 on a CUDA GPU
 # or: uv run mitoage download prepared --topic structures   # the 806 structures of the published run
 uv run mitoage structure msa                      # FoldMason against MAFFT on the same sequences
 
+# H13: an audit of the build's records (strand, gene order, genetic code, duplicates and mislabels; not a longevity test)
+uv run mitoage download refseq --from-snapshot && uv run mitoage download contig --from-snapshot
+uv run mitoage download taxonomy --from-snapshot  # RefSeq release 237 and the taxonomy build 2 read
+uv run mitoage audit records                      # every species' record from the pinned release; inputs.tsv: every input's SHA-256
+uv run mitoage audit strand                       # conventional, reversed, mixed or unknown, beside the GC/AT skews
+uv run mitoage audit order                        # gene order canonicalised by rotation; arrangements per class, order, family; flags
+uv run mitoage audit code                         # declared against NCBI Taxonomy's genetic code; internal stops under each
+uv run mitoage audit duplicates                   # pairs at >= 99 % identity; nearest neighbours outside their order or class
+# (on haumea: slurm/job3-audit.sbatch, which also runs the tests, a mutation check and a rerun)
+
 # H3's continuous-trait model: Coevol 1.6, built from source (days of CPU per chain)
 uv run mitoage longevity coevol --chain 1 && uv run mitoage longevity coevol --chain 2
 uv run mitoage longevity coevol-read              # readcoevol and tracecomp; read only once the chains converge
@@ -251,7 +261,11 @@ readers on real output kept in `tests/data`, fourfold-site
 counts, the tree covariance of the regression, H1's regression against Felsenstein's contrasts on five
 mammals and its species filter, H2's power formula; and the rules of build 2 (`tests/test_build2.py`: the base-label
 fix of build 1, join() segments, the lifespan precedence and its tie-break, name matching, id minting, the
-change classes, record_status against the changelog), each checked to fail when the code it guards is broken.
+change classes, record_status against the changelog), each checked to fail when the code it guards is broken; and the
+audit of H13 (`tests/test_audit.py`, on real records of RefSeq release 237: a reverse-complemented record swaps
+conventional and reversed, a rotated one keeps its arrangement, edited bovids are flagged with the kind of edit, the
+translation under the declared code is RefSeq's own, identical records pair; `slurm/job3-audit-mutations.py` breaks
+22 guards one at a time).
 
 ## Licence
 

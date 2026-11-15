@@ -78,6 +78,7 @@ STRUCTURE_CHAINS = STRUCTURE / "chains"   # <GENE>.pdb: one chain of a solved hu
 STRUCTURE_TMP = STRUCTURE / "msa"         # the sequence and structural alignments the check compares
 EMBED_COX = STRUCTURE / "embed_cox.parquet"   # ESM-2 means over complex IV's contact and control residues (H12)
 
+AUDIT = INTERIM / "audit"                 # records.parquet: the RefSeq record of every species of the build (H13)
 B2_INTERIM = INTERIM / "build2"           # refseq_records.parquet, observations.parquet, matches.parquet, plan.json, ...
 
 # --- output: result tables --------------------------------------------------------------------
@@ -89,6 +90,7 @@ PEPTIDES_OUT = OUTPUT / "peptides"        # <peptide>.tsv, summary.txt
 MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv, coembed.tsv
 IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
 STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
+AUDIT_OUT = OUTPUT / "audit"              # inputs, strand, order, code, pairs, nearest (.tsv): the audit of the records (H13)
 COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol
 
 

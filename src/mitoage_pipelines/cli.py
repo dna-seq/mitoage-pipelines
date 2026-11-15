@@ -21,6 +21,8 @@ Build 2 from build 1 (docs/BUILD2_REPRODUCTION.md):
   mitoage build2 refseq && mitoage build2 match && mitoage build2 status
   mitoage build2 primary-list && mitoage download primary && mitoage build2 assemble
   mitoage download tree-sources && mitoage build2 tree && mitoage build2 align && mitoage build2 compare
+The audit of the build's records (H13), after `download build`, `download refseq|contig|taxonomy --from-snapshot`:
+  mitoage audit records && mitoage audit strand && mitoage audit order && mitoage audit code && mitoage audit duplicates
 Heavy imports happen inside the commands, so that `--help` is quick.
 """
 from pathlib import Path
@@ -38,6 +40,7 @@ longevity_app = typer.Typer(no_args_is_help=True, help="Longevity in the alignme
 peptides_app = typer.Typer(no_args_is_help=True, help="Peptides encoded inside mtDNA.")
 mitoport_app = typer.Typer(no_args_is_help=True, help="Rate covariation of mitochondrial proteins with their nuclear partners.")
 structure_app = typer.Typer(no_args_is_help=True, help="Structural alignments of the 13 mitochondrial proteins: a check of the sequence alignments.")
+audit_app = typer.Typer(no_args_is_help=True, help="An audit of the build's mitogenome records: strand, gene order, genetic code, duplicates (H13; not a longevity test).")
 snapshot_app = typer.Typer(no_args_is_help=True, help="MAINTAINERS ONLY: build and upload the snapshot dataset of build 2's sources (needs a write token).")
 build2_app = typer.Typer(no_args_is_help=True, help="MitoAge build 2 from build 1 and the upstream sources (docs/BUILD2_REPRODUCTION.md).")
 app.add_typer(download_app, name="download")
@@ -46,6 +49,7 @@ app.add_typer(peptides_app, name="peptides")
 app.add_typer(mitoport_app, name="mitoport")
 app.add_typer(structure_app, name="structure")
 app.add_typer(build2_app, name="build2")
+app.add_typer(audit_app, name="audit")
 app.add_typer(snapshot_app, name="snapshot")
 
 Build = Annotated[Path, typer.Option("--build", help="the MitoAge build (species.parquet, alignments/)")]
@@ -775,6 +779,50 @@ def build2_compare(reproduced: Annotated[Path, typer.Option(help="the reproducti
     """Agreement of the reproduction with the published build 2, per table and field; every disagreement with a reason."""
     from .build2 import compare
     compare.main(published, reproduced, out or reproduced / "compare", site_tree=site_tree)
+
+
+# --- audit of the records (H13) ------------------------------------------------------------------
+AuditOut = Annotated[Path, typer.Option("--out", help="folder the audit's tables are written to")]
+AuditWork = Annotated[Path, typer.Option("--work", help="folder of records.parquet, written by `audit records`")]
+
+
+@audit_app.command("records")
+def audit_records(data: Build = paths.BUILD, release: Release = "237", work: AuditWork = paths.AUDIT, out: AuditOut = paths.AUDIT_OUT,
+                  taxonomy: Taxonomy = "current-2026-11-13",
+                  any_release: Annotated[bool, typer.Option("--any-release", help="accept a release file whose md5 is not release 237's")] = False) -> None:
+    """The RefSeq record of every species of the build, from the pinned release; the hashes of every input of the audit."""
+    from .audit import records
+    from .build2 import run
+    records.main(data, run.release_file(release)[0], paths.B2_GENBANK / "contig", paths.taxdump(taxonomy), work, out,
+                 refuse_unpinned=not any_release)
+
+
+@audit_app.command("strand")
+def audit_strand(data: Build = paths.BUILD, work: AuditWork = paths.AUDIT, out: AuditOut = paths.AUDIT_OUT) -> None:
+    """Orientation of each record against the vertebrate convention, beside its GC/AT balance: strand.tsv, strand_summary.tsv."""
+    from .audit import strand
+    strand.main(work, data, out)
+
+
+@audit_app.command("order")
+def audit_order(work: AuditWork = paths.AUDIT, out: AuditOut = paths.AUDIT_OUT) -> None:
+    """Gene order canonicalised by rotation; arrangements per class, order and family; records unique in a family that shares one."""
+    from .audit import order
+    order.main(work, out)
+
+
+@audit_app.command("code")
+def audit_code(work: AuditWork = paths.AUDIT, out: AuditOut = paths.AUDIT_OUT, taxonomy: Taxonomy = "current-2026-11-13") -> None:
+    """Declared against expected (NCBI Taxonomy) genetic code; internal stop codons under each: code.tsv, code_genes.tsv."""
+    from .audit import code
+    code.main(work, paths.taxdump(taxonomy), out)
+
+
+@audit_app.command("duplicates")
+def audit_duplicates(data: Build = paths.BUILD, work: AuditWork = paths.AUDIT, out: AuditOut = paths.AUDIT_OUT) -> None:
+    """Near-identical records of different species (pairs.tsv) and records nearer another order or class (nearest.tsv)."""
+    from .audit import similar
+    similar.main(work, data, out)
 
 
 # --- snapshot dataset (maintainers) ---------------------------------------------------------------

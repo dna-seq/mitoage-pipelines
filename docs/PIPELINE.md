@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H12), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H12) and the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -148,3 +148,20 @@ flowchart TD
   B --> M
   M --> T6[structural_msa.tsv<br/>H10: agreement and cost]
 ```
+
+## The audit of the build's records (H13)
+
+```mermaid
+flowchart TD
+  B[build: species, region_stats,<br/>mtdna_structure, alignments] --> R[audit records]
+  RS[(RefSeq release 237<br/>snapshot, md5-checked)] --> R
+  R --> REC[records.parquet<br/>inputs.tsv]
+  REC --> ST[audit strand] --> T1[strand.tsv, strand_summary.tsv]
+  REC --> OR[audit order] --> T2[order.tsv, order_counts.tsv,<br/>order_arrangements.tsv, order_flags.tsv]
+  TX[(NCBI Taxonomy 2026-11-13)] --> CO[audit code]
+  REC --> CO --> T3[code.tsv, code_genes.tsv]
+  B --> DU[audit duplicates]
+  REC --> DU --> T4[pairs.tsv, nearest.tsv]
+```
+
+A description of the records and a list of candidates for a person to check, not a test about longevity.

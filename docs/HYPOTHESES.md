@@ -601,3 +601,74 @@ are not more concordant than the control pairs in mammals, and only slightly so 
 structural feature that does follow lifespan is the hydropathy of ND5 and ND6 in mammals. It is not codon
 composition, neither that of the 12 genes nor the gene's own. With opposite signs in the two genes and nothing
 comparable in birds, what it means is open.
+
+## H13. Audit of the build's records: strand, gene order, genetic code, duplicates and mislabels (an audit, not a hypothesis test)
+
+**Why.** A referee of the manuscript asked for checks of the records themselves: mislabelled species, duplicate
+genomes, misassigned strands. The site's roadmap item RM8 ("Detect possible duplicate species") is part of it. This
+entry tests nothing about longevity. It describes every mitogenome record of the build and names candidates for a
+person to check; no candidate is a verdict, and nothing is removed from the build because of it.
+**Fixed before any result was seen** (written and committed with the code, 2026-11-15, before any audit step had run
+on the build; the tests had run on a few records):
+- *Records.* Every species of the build longevity-genie/mitoage at c525adb (H12's revision, 2,335 species), with
+  its RefSeq record read from RefSeq release 237, the release build 2 read (`download refseq --from-snapshot`, md5
+  checked against the pin; the CONTIG-only records' sequence from `download contig --from-snapshot`). Features are
+  named with build 2's rules (`build2/genome.py`). A species whose record is not in the release (the retired ones) is
+  a row in every table, marked unknown with the reason. Every input's SHA-256 is written to `inputs.tsv`.
+  `mitoage audit records`.
+- *Strand* (`audit strand`, `strand.tsv`, `strand_summary.tsv`). The vertebrate convention: 12 protein genes on one
+  strand, ND6 on the other. Every annotated copy of the 13 is read. Conventional: every copy on its conventional
+  strand with the 12 on the record's + strand; reversed: every copy on the other strand; mixed: copies both ways (the
+  genes against the convention are named, and which way the majority goes); unknown: no record, outside Vertebrata
+  (by the record's lineage; the convention is the vertebrates'), no protein gene annotated, or fewer than 7 of the 13
+  annotated. Beside it, the record's GC and AT skew over the whole sequence as the build gives them
+  (`region_stats`, total_mtDNA, + strand as deposited), and the build's own `orientation` column; the summary counts,
+  per class and orientation, the records with a negative and a positive skew. The question it answers is whether the
+  sign of the skew follows the orientation of the deposit.
+- *Gene order* (`audit order`, `order.tsv`, `order_counts.tsv`, `order_arrangements.tsv`, `order_flags.tsv`). The 13
+  protein genes, 2 rRNAs and tRNAs as named by build 2, every copy, signed by strand, in order of start on the record;
+  the control region left out. Canonical by rotation: started at COX1 when the record has one COX1, else the first
+  rotation in string order. A second form, canonical under rotation and reversal, tells a reversed deposit from a
+  rearrangement. Two tiers: "full" (with tRNAs; unknown when no tRNA is annotated) and "genes" (13 genes and 2
+  rRNAs). Arrangements counted per class, order and family (the build's taxonomy). A record is flagged when its
+  family has at least 3 records with a known arrangement at that tier, its arrangement occurs once there, and all the
+  other records of the family share one arrangement. Each flag says what differs, checked in this order: reversed
+  deposit (the family's arrangement read from the other strand), gene content (genes absent or extra), strand only
+  (same order, some genes on the other strand), tRNAs only (full tier: the 15 genes in the family's order), order.
+  Whether a difference is a real rearrangement or an annotation error is not decided: every flag but a reversed
+  deposit says "cannot tell from the record".
+- *Genetic code* (`audit code`, `code.tsv`, `code_genes.tsv`). Declared: the /transl_table most of the record's
+  protein genes state (the lower number on a tie; none stated is unknown). Expected: the mitochondrial genetic code
+  NCBI Taxonomy (the dump of 2026-11-13, `download taxonomy --from-snapshot`) gives the record's taxon, made current
+  through merged.dmp. Internal stops: each copy of the 13 genes in its own sense from codon_start, complete codons,
+  every codon but the last complete one; codons with an ambiguity code and codons a /transl_except gives an amino
+  acid are not stops. Under the declared and the expected code. A record is flagged ("neither clean") when both codes
+  are known and both give at least one internal stop; it is not flagged when either is clean; otherwise unknown. A
+  code the audit does not know (it knows NCBI tables 1, 2, 4, 5, 9, 13, 14, 21, 24 and 33) is unknown, never clean.
+- *Near-identical pairs* (`audit duplicates`, `pairs.tsv`). Nucleotide identity over the 13 protein genes, from the
+  build's codon alignments concatenated: matching bases over the columns where both records have A, C, G or T, at
+  least 5,000 such columns. Threshold **0.99**, fixed now and why: mitochondrial divergence within an animal species
+  is usually under 1 %, while sister species usually differ by more than 2 % at COX1 (the barcode gap; Hebert et al.
+  2003, Proc R Soc B 270:313-321). Two species' records within 1 % over all 13 genes are where one species would be:
+  one animal under two names, a misidentified specimen, a hybrid's or introgressed mitogenome, or a very young pair of
+  species. Pairs at 0.999 or more are also marked near-identical; pairs whose whole sequences are equal are reported
+  whatever the alignment says. Each pair carries the rank at which its taxonomy first agrees (same genus, same family,
+  ... different class); pairs from different genera are read first.
+- *Out-of-place records* (`audit duplicates`, `nearest.tsv`). Chosen in advance: amino-acid identity over the 13
+  proteins concatenated (the build's protein alignments; the 20 amino acids, at least 1,500 shared residues), not
+  COX1 alone: more sites, and less saturated than nucleotides at the depth of orders and classes. A record is out of
+  its order when some record outside its order is strictly closer to it than every other record of its order; the
+  same for class. A record whose order (class) has no other record compared with it is unknown. Candidates are ranked
+  by the margin (identity to the closest outside minus identity to the closest inside). The build's classes include
+  paraphyletic ones (Reptilia without birds, Actinopterygii beside Sarcopterygii), so some out-of-class candidates
+  are expected from the scheme alone.
+**Checks of the code.** `tests/test_audit.py` on real records of release 237: a record reverse-complemented by the
+test swaps conventional and reversed and the sign of its GC skew; a record started elsewhere on its circle keeps its
+arrangement; a bovid edited by the test (reverse-complemented, one gene on the other strand, ND6 removed, ND1 and ND2
+swapped, two tRNAs swapped) is flagged in a family of three bovids with the kind the edit made, and nothing is flagged
+without the edit; our translation under the declared code equals RefSeq's /translation; under the standard code every
+internal TGA is a stop; a stop written into COX1 is counted once and survives reverse complement; an unknown code and
+a record without code or genes are unknown; two identical records pair at identity 1 and records relabelled into
+another order sit outside it. `slurm/job3-audit-mutations.py` breaks 22 guards one at a time and checks that a test
+fails each time; `slurm/job3-audit.sbatch` runs every step twice and compares the bytes.
+**Run.** Not yet run.
