@@ -295,7 +295,7 @@ change classes, record_status against the changelog), each checked to fail when 
 audit of H13 (`tests/test_audit.py`, on real records of RefSeq release 237: a reverse-complemented record swaps
 conventional and reversed, a rotated one keeps its arrangement, edited bovids are flagged with the kind of edit, the
 translation under the declared code is RefSeq's own, identical records pair; `slurm/job3-audit-mutations.py` breaks
-23 guards one at a time).
+24 guards one at a time).
 `tests/test_complexes.py` (H14) builds the contact maps of complexes III, IV and V from the structures, checks that
 complex IV's is byte for byte the published one, and tests the readouts; `slurm/job1-contacts-mutations.py` breaks
 each of its guards in turn.

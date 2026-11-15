@@ -3,6 +3,11 @@ read; `mitoage download refseq --from-snapshot` checks its md5), with the sequen
 `download contig`. Every species of the build gets a row, retired ones included: a record that is not in the
 release is a row with `in_release` false and the reason, which every later step reports as not assessed.
 
+The audit reads each record's annotation as RefSeq deposits it. Where the build's own features (genome_features)
+differ from it, as for an annotation the build patched, the record's row says so (`build_annotation`: same, differs
+with the features on either side, or no record) and every per-record table carries that column: the audit does not
+take the build's patch in place of the record, and does not hide that the two disagree.
+
 The inputs of the whole audit are hashed here, once, into inputs.tsv: the build's tables and alignments, the
 release, the CONTIG-only records and the taxonomy dump that `audit code` reads.
 """
@@ -29,7 +34,7 @@ def sha256_of(path: Path) -> str:
 
 def inputs_table(build: Path, release: Path, contig: Path, taxdump: Path) -> pd.DataFrame:
     rows = []
-    for name in ("species.parquet", "region_stats.parquet", "mtdna_structure.parquet"):
+    for name in ("species.parquet", "region_stats.parquet", "mtdna_structure.parquet", "genome_features.parquet"):
         rows.append({"input": f"build/{name}", "source": "longevity-genie/mitoage (download build --revision)",
                      "sha256": sha256_of(build / name)})
     for p in sorted((build / "alignments").glob("*.fasta.gz")):
@@ -89,8 +94,47 @@ def collect(build: Path, release: Path, contig: Path, refuse_unpinned: bool = Tr
             warn.add("sequence read from the CONTIG-only download", s.refseq)
         rows.append({**row, "in_release": True, "reason": "", "vertebrate": "Vertebrata" in h.lineage.split("; "),
                      "lineage": h.lineage, "record_taxid": h.taxid, "length": h.length, "genbank": text})
+    df = pd.DataFrame(rows)
+    built = build_features(build)
+    status, detail = [], []
+    for r in df.itertuples(index=False):
+        st, de = compare_with_build(genome_of(r) if r.in_release else None, built.get(r.slug))
+        status.append(st); detail.append(de)
+        if st != "same":
+            warn.add(f"the build's annotation: {st}", f"{r.slug}: {de}" if de else r.slug)
+    df["build_annotation"], df["build_annotation_detail"] = status, detail
     warn.emit()
-    return pd.DataFrame(rows)
+    return df
+
+
+def _fmt(x: tuple) -> str:
+    name, typ, start, end, strand = x
+    return f"{name} {typ} {start}..{end} ({'+' if strand == 1 else '-'})"
+
+
+def build_features(build: Path) -> dict[str, set]:
+    """slug -> the build's features as (name, type, start, end, strand)."""
+    gf = pl.read_parquet(build / "genome_features.parquet").select("slug", "name", "type", "start", "end", "strand")
+    out: dict[str, set] = {}
+    for slug, name, typ, start, end, strand in gf.iter_rows():
+        out.setdefault(slug, set()).add((name, typ, int(start), int(end), int(strand)))
+    return out
+
+
+def compare_with_build(g, built: set | None) -> tuple[str, str]:
+    """same, differs (with what only the build and only the record carry), or no record."""
+    if g is None:
+        return "no record", ""
+    mine = {(f.name, f.type, f.start, f.end, f.strand) for f in g.features}
+    built = built or set()
+    if mine == built:
+        return "same", ""
+    parts = []
+    if built - mine:
+        parts.append("only in the build: " + ", ".join(_fmt(x) for x in sorted(built - mine)))
+    if mine - built:
+        parts.append("only in the record: " + ", ".join(_fmt(x) for x in sorted(mine - built)))
+    return "differs", "; ".join(parts)
 
 
 def main(build: Path, release: Path, contig: Path, taxdump: Path, interim: Path, out: Path, refuse_unpinned: bool = True) -> pd.DataFrame:
@@ -98,6 +142,7 @@ def main(build: Path, release: Path, contig: Path, taxdump: Path, interim: Path,
     interim.mkdir(parents=True, exist_ok=True)
     df.sort_values("slug", kind="mergesort").to_parquet(interim / "records.parquet", index=False)
     write_tsv(inputs_table(build, release, contig, taxdump), out / "inputs.tsv", ["input"])
+    write_tsv(df[["slug", "refseq", "build_annotation", "build_annotation_detail"]], out / "annotation_vs_build.tsv", ["slug"])
     print(f"{len(df)} species, {int(df.in_release.sum())} records in the release -> {interim / 'records.parquet'}; "
           f"input hashes -> {out / 'inputs.tsv'}")
     return df

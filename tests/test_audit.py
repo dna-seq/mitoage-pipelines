@@ -60,6 +60,24 @@ def test_every_species_has_a_row_and_its_own_record(recs):
         assert set(recs.slug[recs[c].isna()]) == blank and not (recs[c] == "").any()
 
 
+def test_the_builds_annotation_is_compared_not_taken(recs):
+    """Each record's features as RefSeq deposits them against the build's: same for an unpatched record, and a
+    feature only one side has is named, on its side."""
+    assert set(recs.build_annotation) <= {"same", "differs", "no record"}
+    assert (recs.build_annotation == "no record").sum() == (~recs.in_release).sum()
+    assert recs.loc[HUMAN, "build_annotation"] == "same"
+    assert (recs[recs.build_annotation == "differs"].build_annotation_detail != "").all()
+    g = genome(recs, HUMAN)
+    built = records.build_features(paths.BUILD)[HUMAN]
+    assert records.compare_with_build(g, built) == ("same", "")
+    nd6 = next(f for f in g.features if f.name == "ND6")
+    st, de = records.compare_with_build(g, built - {(nd6.name, nd6.type, nd6.start, nd6.end, nd6.strand)})
+    assert st == "differs" and de == f"only in the record: ND6 CDS {nd6.start}..{nd6.end} (-)"
+    st, de = records.compare_with_build(with_features(g, keep=lambda f: f.name != "ND6"), built)
+    assert st == "differs" and de.startswith("only in the build: ND6 CDS")
+    assert records.compare_with_build(None, built) == ("no record", "")
+
+
 # --- strand -----------------------------------------------------------------------------------
 def test_reverse_complement_flips_the_class_and_the_skew(recs):
     vert = recs[recs.in_release & recs.vertebrate.eq(True)]

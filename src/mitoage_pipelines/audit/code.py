@@ -211,6 +211,7 @@ def main(interim: Path, taxdump: Path, out: Path) -> pd.DataFrame:
     genes = pd.DataFrame(gene_rows)
     for c in ("stops_declared", "first_stop_declared", "stops_expected", "first_stop_expected"):
         genes[c] = genes[c].astype("Int64")
+    tab = tab.merge(df[["slug", "build_annotation"]], on="slug", how="left", validate="one_to_one")
     write_tsv(tab, out / "code.tsv", ["slug"])
     write_tsv(genes, out / "code_genes.tsv", ["slug", "gene", "copy"])
     print(f"code match: {tab.code_match.value_counts().sort_index().to_dict()}; neither code clean: "

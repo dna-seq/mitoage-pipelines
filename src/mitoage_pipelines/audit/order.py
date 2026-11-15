@@ -169,6 +169,7 @@ def arrangements(tab: pd.DataFrame) -> pd.DataFrame:
 def main(interim: Path, out: Path) -> pd.DataFrame:
     df = rec.load(interim).rename(columns={"class": "class_"})
     tab = table(df)
+    tab = tab.merge(df[["slug", "build_annotation"]], on="slug", how="left", validate="one_to_one")
     write_tsv(tab, out / "order.tsv", ["slug"])
     write_tsv(counts(tab), out / "order_counts.tsv", ["tier", "level", "group"])
     write_tsv(arrangements(tab), out / "order_arrangements.tsv", ["tier", "arrangement"])

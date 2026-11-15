@@ -97,6 +97,7 @@ def table(df: pd.DataFrame, build: Path) -> pd.DataFrame:
 def main(interim: Path, build: Path, out: Path) -> pd.DataFrame:
     df = rec.load(interim).rename(columns={"class": "class_"})
     tab = table(df, build)
+    tab = tab.merge(df[["slug", "build_annotation"]], on="slug", how="left", validate="one_to_one")
     write_tsv(tab, out / "strand.tsv", ["slug"])
     write_tsv(summary(tab), out / "strand_summary.tsv", ["group", "orientation"])
     print(tab.orientation.value_counts().sort_index().to_string())
