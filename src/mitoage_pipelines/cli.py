@@ -34,6 +34,7 @@ import typer
 
 from . import genes as gene_lists
 from . import paths
+from .build2 import pins as b2pins
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False,
                   help="MitoAge analyses: download the data, then run each step.")
@@ -143,7 +144,7 @@ def _snapshot(kind: str, revision: Optional[str], manifest: Path) -> None:
 
 
 @download_app.command("hf")
-def download_hf(revision: Annotated[str, typer.Option(help="commit of the dataset; build 2's when omitted")] = "653afe2a3b79e18ae892e579ded9acdb17e0c334",
+def download_hf(revision: Annotated[str, typer.Option(help="commit of the dataset; build 2's (with the EURING birds) when omitted")] = b2pins.HF_BUILD2_REVISION,
                 dest: Annotated[Path, typer.Option(help="where it goes")] = paths.B2_HF, manifest: Manifest = paths.MANIFEST) -> None:
     """MitoAge build 1 (build1/) and the published build 2 tables and alignments, at a pinned revision."""
     from .build2 import download
@@ -199,9 +200,10 @@ def download_taxonomy(
 def download_lifespan(manifest: Manifest = paths.MANIFEST,
                       fishbase_version: Annotated[str, typer.Option(help="FishBase/SeaLifeBase snapshot on source.coop")] = "v26.06",
                       from_snapshot: Snapshot = False, snapshot_revision: SnapRev = None) -> None:
-    """AnAge, FishBase and SeaLifeBase (source.coop), USGS Bird Banding Lab longevity records; tries EURING."""
+    """AnAge, FishBase and SeaLifeBase (source.coop), USGS Bird Banding Lab longevity records, and the EURING list
+    of 2023-09-01 (the Internet Archive's copy of the PDF)."""
     from .build2 import download
-    if from_snapshot:
+    if from_snapshot:   # the snapshot has no copy of the EURING PDF: the Internet Archive keeps it
         _snapshot("lifespan", snapshot_revision, manifest)
         download.euring(paths.B2_EURING, manifest)
         return
@@ -969,7 +971,7 @@ def snapshot_build(
     taxdump_tar: Annotated[Path, typer.Option(help="new_taxdump.tar.gz of 2026-11-13 as build 2 read it (md5-checked)")] = Path("new_taxdump.tar.gz"),
     tree_answers: Annotated[Path, typer.Option(help="folder of the OTL/TimeTree answers build 2's tree read")] = paths.B2_TREE_IN,
     tree_used: Annotated[Path, typer.Option(help="phylogeny_answers.txt written by `build2 tree`: the answers it read")] = paths.B2_OUT / "phylogeny_answers.txt",
-    dates: Annotated[str, typer.Option(help="JSON: retrieval dates (UTC) of release237, efetch, anage, fishbase, usgs, tree, legacy")] = "{}",
+    dates: Annotated[str, typer.Option(help="JSON: retrieval dates (UTC) of release237, efetch, anage, fishbase, usgs, euring, tree, legacy")] = "{}",
     staging: Staging = paths.B2_INTERIM / "snapshot",
 ) -> None:
     """Assemble the snapshot dataset (files, MANIFEST.json, card) from data/input."""

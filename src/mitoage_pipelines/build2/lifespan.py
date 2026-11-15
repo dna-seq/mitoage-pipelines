@@ -6,7 +6,8 @@ Values read: AnAge "Maximum longevity (yrs)" (record type from "Specimen origin"
 captive, otherwise observed; quality from "Data quality"); FishBase and SeaLifeBase popchar.tmax
 (observed; tmaxQuality -1 -> questionable, else acceptable), species.LongevityWild (wild, acceptable),
 species.LongevityCaptive (captive, acceptable), popgrowth.tmax (estimated, low); USGS BBL "Minimum age at
-encounter" (wild, acceptable; the oldest banded bird, a minimum). EURING: not read (never retrieved).
+encounter" (wild, acceptable; the oldest banded bird, a minimum). EURING: the list of 2023-09-01 (euring.py), each
+record wild and acceptable, a minimum age.
 
 Matching order: NCBI scientific name, NCBI synonym, the source's own synonym table (FishBase, SeaLifeBase;
 misapplied names never), binomial of a trinomial. A name that gives several species is ambiguous; several
@@ -356,7 +357,9 @@ def load_all(b2_in: dict) -> tuple[list[AnAgeEntry], list[Obs], dict]:
     fb, fb_syn = load_fishbase_like(b2_in["fishbase"], "fb")
     slb, slb_syn = load_fishbase_like(b2_in["sealifebase"], "slb")
     usgs = load_usgs(b2_in["usgs"])
-    obs = anage_observations(anage) + fb + slb + usgs           # EURING would sit before USGS: never retrieved
+    from . import euring
+    eur = euring.load(b2_in["euring"])
+    obs = anage_observations(anage) + fb + slb + eur + usgs
     return anage, obs, {"FishBase": fb_syn, "SeaLifeBase": slb_syn}
 
 

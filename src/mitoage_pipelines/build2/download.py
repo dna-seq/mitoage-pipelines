@@ -341,24 +341,17 @@ def usgs(dest: Path, manifest: Path) -> Path:
 
 
 def euring(dest: Path, manifest: Path) -> Path:
-    """Try the EURING longevity list; whatever happens is written to status.json and recorded."""
+    """The EURING longevity list of 2023-09-01, the Internet Archive's capture of the PDF (euring.org is in
+    maintenance). Refused unless it has the md5 build 2 pinned."""
     dest.mkdir(parents=True, exist_ok=True)
-    status = {"url": pins.EURING_URL, "checked_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-    try:
-        with _open(pins.EURING_URL, tries=2) as r:
-            final, body = r.geturl(), r.read()
-        status.update(final_url=final, bytes=len(body))
-        status["retrieved"] = "maintenance" not in final and b"maintenance" not in body[:5000].lower()
-        if status["retrieved"]:
-            (dest / "longevity-list.html").write_bytes(body)
-    except RuntimeError as e:
-        status.update(retrieved=False, error=str(e))
-    (dest / "status.json").write_text(json.dumps(status, indent=2) + "\n")
-    _manifest(manifest, "euring", pins.EURING_URL, dest, revision="unversioned page", retrieved=status["retrieved"],
-              note="build 2 did not use EURING (not retrieved on 2026-11-13); no parser exists for the list")
-    if not status["retrieved"]:
-        print(f"EURING: not retrieved ({status.get('final_url') or status.get('error')}); build 2 did not use it either")
-    return dest
+    pdf = dest / pins.EURING_PDF
+    fetch_to(pins.EURING_PDF_URL, pdf)
+    h = md5_of(pdf)
+    _manifest(manifest, "euring", pins.EURING_PDF_URL, dest, revision="list of 2023-09-01", md5={"pdf": h},
+              matches_build2_pin=h == pins.EURING_MD5)
+    if h != pins.EURING_MD5:
+        raise Refused(f"the EURING PDF has md5 {h}, not build 2's {pins.EURING_MD5}")
+    return pdf
 
 
 # --- the old site's ids ------------------------------------------------------------------------

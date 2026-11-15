@@ -175,17 +175,17 @@ rest take seconds to a few minutes.
 
 ## Build 2 reproduction
 
-MitoAge build 2 (2026-11-13, 2,335 species) was made by the site's TypeScript pipeline from build 1 (the 2015
+MitoAge build 2 (2026-11-13, with the EURING bird records added on 2026-11-15: 2,344 species) was made by the site's TypeScript pipeline from build 1 (the 2015
 data, 922 species) and current upstream sources. `mitoage build2` makes it again from the same sources, with
 the rules written as Python, and compares the result with the published tables. What build 1 and build 2
 are, every source with its pin and licence, every rule in plain words with the site file that defines it,
 the run times and the comparison are in [docs/BUILD2_REPRODUCTION.md](docs/BUILD2_REPRODUCTION.md).
 
 ```sh
-uv run mitoage download hf                          # build 1 (build1/) and the published build 2, revision 653afe2a3b
+uv run mitoage download hf                          # build 1 (build1/) and the published build 2, revision f75bdc9b81
 uv run mitoage download refseq --from-snapshot      # RefSeq release 237: NCBI keeps only the current release
 uv run mitoage download taxonomy --from-snapshot    # the NCBI taxonomy dump build 2 read (2026-11-13)
-uv run mitoage download lifespan                    # AnAge, FishBase/SeaLifeBase v26.06, USGS BBL; tries EURING
+uv run mitoage download lifespan                    # AnAge, FishBase/SeaLifeBase v26.06, USGS BBL, EURING (Internet Archive)
 uv run mitoage download cited && uv run mitoage download contig && uv run mitoage download legacy
 uv run mitoage build2 refseq && uv run mitoage build2 match && uv run mitoage build2 status
 uv run mitoage build2 primary-list && uv run mitoage download primary
@@ -193,14 +193,14 @@ uv run mitoage build2 assemble                      # species, region_stats, cod
                                                     # lifespan_observations, changelog, review_list
 uv run mitoage download tree-sources --from-snapshot && uv run mitoage build2 tree
 uv run mitoage build2 align                         # MAFFT v7.526 from PATH
-uv run mitoage download tree --ref 8ff350c504bb59c9171eaed729eb6cddaada0f0b
+uv run mitoage download tree --ref 725da087120f535cb87bc5fde189c7c5f35fe436
 uv run mitoage build2 compare                       # -> data/output/build2/compare
 ```
 
-About seven minutes in all. On 2026-11-14, with these inputs, all 5,302,404 values of the seven tables are
+About six minutes in all. On 2026-11-15, with these inputs, all 5,328,755 values of the seven tables are
 identical to the published build 2, the 28 alignment files have the same SHA-256 and the dated tree is
-byte-identical. With today's sources instead (RefSeq release 238, today's taxonomy, live Open Tree of Life
-and TimeTree) the species set is the same and the only change of values is one record NCBI re-annotated in
+byte-identical. On the build before EURING (2,335 species, 2026-11-14), with today's sources instead (RefSeq
+release 238, today's taxonomy, live Open Tree of Life and TimeTree) the species set was the same and the only change of values is one record NCBI re-annotated in
 place (*Pongo pygmaeus* NC_001646.1); the document lists every difference with its reason.
 
 Where it comes from:
@@ -211,13 +211,14 @@ Where it comes from:
   [docs/DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/docs/DECISIONS.md) and
   [plans/DATA_BUILD2_DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/plans/DATA_BUILD2_DECISIONS.md).
 - The build: [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage) (build 2 at
-  revision `653afe2a3b79e18ae892e579ded9acdb17e0c334`, build 1 in `build1/`).
+  revision `f75bdc9b812d7845d2ccb24a49643d88d00d57b5`, the build with the EURING birds, build 1 in `build1/`).
 - The inputs no upstream archive keeps (RefSeq release 237, the taxonomy dump of 2026-11-13, the GenBank
   records read by efetch, AnAge build 15, the USGS table, the Open Tree and TimeTree answers, the old site's
   pages): [longevity-genie/mitoage-build2-sources](https://huggingface.co/datasets/longevity-genie/mitoage-build2-sources),
-  revision `9d55d72648d0838c3b5f37fca6185f8b938b3272`. Every downloader reads the original source by
-  default and this snapshot with `--from-snapshot`; no token is needed. `mitoage snapshot build|upload` is
-  for maintainers only (it needs a write token in `HF_TOKEN`).
+  revision `a76215144ec33d6ed1e5ea599cb797f2651dab1a`. The EURING PDF is not in it: the Internet Archive keeps it.
+  Every downloader reads the original source by default and this snapshot with `--from-snapshot`; no token is
+  needed. `mitoage snapshot build|upload` is for maintainers only (a write token in `HF_TOKEN`, or the machine's
+  stored Hugging Face login).
 
 ## How far it reproduces
 

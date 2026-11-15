@@ -2,12 +2,14 @@
 
 This document says how to go from MitoAge build 1 (the 2015 data) to MitoAge build 2 (2026-11-13) with the
 code of this repository, which sources that takes, which rules turn them into the build 2 tables, and how
-far the result agrees with the published build 2. Every number below comes from commands run on
-2026-11-14 with the code at the commit this document is in.
+far the result agrees with the published build 2. Build 2 here is the build with the EURING bird records (the
+site's decision D15 of 2026-11-15, which added nine European birds); every number of "Pinned inputs" below comes
+from commands run on 2026-11-15 with the code at the commit this document is in, and the variants under "With
+other inputs" from runs of 2026-11-14 on the build before it.
 
 - Build 2 was made by the TypeScript pipeline of the site repository,
   [dna-seq/mitoage](https://github.com/dna-seq/mitoage) (`bun run data`, `bun run align`), at commit
-  `8ff350c504bb59c9171eaed729eb6cddaada0f0b` of `main` for the files cited here. Its own accounts:
+  `725da087120f535cb87bc5fde189c7c5f35fe436` of `main` for the files cited here (the build before EURING: `8ff350c5`). Its own accounts:
   [README](https://github.com/dna-seq/mitoage/blob/main/README.md),
   [docs/BUILD2_REPORT.md](https://github.com/dna-seq/mitoage/blob/main/docs/BUILD2_REPORT.md),
   [docs/BUILD2_OPEN_QUESTIONS.md](https://github.com/dna-seq/mitoage/blob/main/docs/BUILD2_OPEN_QUESTIONS.md),
@@ -15,10 +17,13 @@ far the result agrees with the published build 2. Every number below comes from 
   [plans/DATA_BUILD2_DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/plans/DATA_BUILD2_DECISIONS.md).
 - The published build is the Hugging Face dataset
   [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage): build 2 at revision
-  `653afe2a3b79e18ae892e579ded9acdb17e0c334` (top-level tables and `alignments/`), build 1 in its `build1/` folder.
+  `f75bdc9b812d7845d2ccb24a49643d88d00d57b5` (top-level tables and `alignments/`), build 1 in its `build1/` folder.
+  The build before EURING is revision `653afe2a3b79e18ae892e579ded9acdb17e0c334`; a later one (`0f4e970`, the site's D17)
+  patches gene annotations and is not what this document reproduces.
 - The inputs no upstream archive keeps are in the snapshot dataset
   [longevity-genie/mitoage-build2-sources](https://huggingface.co/datasets/longevity-genie/mitoage-build2-sources),
-  revision `9d55d72648d0838c3b5f37fca6185f8b938b3272` (see "Sources").
+  revision `a76215144ec33d6ed1e5ea599cb797f2651dab1a` (see "Sources"; the first upload, `9d55d72`, holds the tree
+  answers of the build before EURING).
 
 The code here is Python, written for this purpose from the rules; it is not a translation of the TypeScript
 line by line, and it reads the published build 2 only in `mitoage build2 compare` ("never fill a value from
@@ -33,8 +38,8 @@ the same source that checks it").
 changing a value (34 files, one per CSV). The export has 923 species; *Loxioides bailleui* (HAGRID 1598,
 NC_025626.1, 9,243 bp) is not in the release. Its base columns are complement-labelled (see the rules).
 
-**Build 2** re-checks the 922 against current sources and adds species: 2,335 species = 922 from build 1
-(392 original, 465 updated, 46 renamed, 19 retired) + 1,413 new. Its tables: `species`, `region_stats`,
+**Build 2** re-checks the 922 against current sources and adds species: 2,344 species = 922 from build 1
+(392 original, 465 updated, 46 renamed, 19 retired) + 1,422 new. Its tables: `species`, `region_stats`,
 `codon_usage`, `genome_features`, `lifespan_observations` (every lifespan value of every source),
 `changelog` (one row per changed value of a build 1 species, with what explains it), `review_list.csv`,
 and, outside the tables, the gene alignments and the dated species tree (`src/data/generated/phylogeny.json`
@@ -47,27 +52,27 @@ Each is downloaded by one command into `data/input/build2/` and recorded in `dat
 `--from-snapshot` reads the snapshot dataset's copy instead (no token; checked against the snapshot's
 `MANIFEST.json` and against build 2's pin). Pins are in `src/mitoage_pipelines/build2/pins.py`.
 
-| source | what build 2 read (pin) | licence | command | matched the pin on 2026-11-14 |
+| source | what build 2 read (pin) | licence | command | matched the pin on 2026-11-15 |
 | --- | --- | --- | --- | --- |
-| MitoAge build 1 and build 2 | `longevity-genie/mitoage` @ `653afe2a3b79e18ae892e579ded9acdb17e0c334` | build 1: free with citation of Toren et al. 2016; build 2: mixed (FishBase/SeaLifeBase values CC BY-NC 4.0) | `download hf` | yes (revision) |
+| MitoAge build 1 and build 2 | `longevity-genie/mitoage` @ `f75bdc9b812d7845d2ccb24a49643d88d00d57b5` | build 1: free with citation of Toren et al. 2016; build 2: mixed (FishBase/SeaLifeBase values CC BY-NC 4.0) | `download hf` | yes (revision) |
 | NCBI RefSeq mitochondrion | release 237, `mitochondrion.1.genomic.gbff.gz` of 2026-09-03, md5 `4491799651740f49c8f6a011cf9a96e5` | no use restrictions (NCBI) | `download refseq --from-snapshot` (or `--from-file`, `--efetch`); `download refseq` takes the current release | NCBI's current release is **238** (2026-11-13, md5 `11660db0524ea3a09468b969bb7cf31f`): release 237 exists only in the snapshot |
 | NCBI Taxonomy | `new_taxdump.tar.gz` current on 2026-11-13 (Last-Modified 2026-11-13T00:42:20Z), md5 `91f95787dd7c7cfd7042ab7610f2b4b2` | no use restrictions; cite Schoch et al. 2020 | `download taxonomy --from-snapshot`; `--archive 2026-11-01` (the closest monthly archive) or `--current` | the dump of 2026-11-13 is in no NCBI archive (archives keep the 1st of each month); snapshot copy has the pinned md5 |
 | AnAge | build 15 (2023-07-03), `dataset.zip` md5 `7ec4d19f6c8f57b22595a9ffd50ea66b` | HAGR conditions of use; cite Tacutu et al. 2013 | `download lifespan` | yes (md5); the URL is unversioned, a change is reported as a warning |
 | FishBase, SeaLifeBase | v26.06 parquet on source.coop `cboettig/fishbase` (`fb/`, `slb/`): `species`, `popchar`, `popgrowth`, `synonyms` | CC BY-NC 4.0; cite Froese & Pauly; Palomares & Pauly | `download lifespan` | yes (md5 of all 8 files) |
 | USGS Bird Banding Laboratory | NABBP Longevity Records v2025.1, the table of `Longevity.php` | U.S. Government work | `download lifespan` (page saved, table written as CSV) | table: yes (CSV md5 `a84743335e7f080d5891c2f719f53702`); the page's HTML differs from the copy build 2 saved, its table does not |
-| EURING longevity list | requested list of 2023-09-01: **not retrieved** by build 2 (euring.org in maintenance) | not checked | `download lifespan` tries it and writes `euring/status.json` | still redirected to maintenance.euring.org on 2026-11-14; no parser exists, nothing is substituted |
+| EURING longevity list | list of 2023-09-01, `EURING_longevity_list_20230901.pdf` as the Internet Archive captured it on 2026-10-11 (euring.org shows a maintenance page; one SHA-1 for every capture since 2023-12-16), md5 `c82b37efe23fe95b5e2945f894c46496` | no licence stated; cite Fransson, Kolehmainen, Moss & Robinson 2023 | `download lifespan` (also after `--from-snapshot`: the snapshot has no copy, the archive keeps it) | yes (md5) |
 | RefSeq records cited by build 1 | 922 accession.versions, efetch `gbwithparts` | NCBI | `download cited` | byte-identical to build 2's cached copies (922/922) |
 | CONTIG-only records | release records with no sequence (6 used); efetch of the same version, checked against the release length | NCBI | `download contig` | used the same 6 |
 | INSDC source records | records named in the COMMENT of a cited record, for the re-annotation test | NCBI | `build2 primary-list`, then `download primary` | see "Rules: changelog" |
 | Old site ids | `www.mitoage.info` export pages (24) | MitoAge | `download legacy` | all 922 ids recovered |
-| Open Tree of Life | synthetic tree opentree16.1: TNRS and induced subtree | CC0 1.0; cite Hinchliff et al. 2015 | `download tree-sources --from-snapshot` (build 2's answers) or `download tree-sources` (live) | snapshot: the 2,241 answers build 2's tree read |
+| Open Tree of Life | synthetic tree opentree16.1: TNRS and induced subtree | CC0 1.0; cite Hinchliff et al. 2015 | `download tree-sources --from-snapshot` (build 2's answers) or `download tree-sources` (live) | snapshot: the 2,250 answers build 2's tree read; the 20 asked for the nine EURING birds were fetched live on 2026-11-15 and are byte-identical to the site pipeline's |
 | TimeTree 5 | public API `mrca/id/<ids>/json` | free public resource; cite Kumar et al. 2022 | same | same |
-| Build 2's dated tree (for the comparison only) | `src/data/generated/phylogeny.json` of dna-seq/mitoage @ `8ff350c5` | as the site | `download tree --ref <sha>` | — |
+| Build 2's dated tree (for the comparison only) | `src/data/generated/phylogeny.json` of dna-seq/mitoage @ `725da08` | as the site | `download tree --ref <sha>` | — |
 
 **The snapshot dataset** `longevity-genie/mitoage-build2-sources` (public, revision
-`9d55d72648d0838c3b5f37fca6185f8b938b3272`, 18 files, 602,779,343 bytes) holds: RefSeq release 237 as
+`a76215144ec33d6ed1e5ea599cb797f2651dab1a`, 18 files) holds: RefSeq release 237 as
 build 2 read it; the taxonomy dump of 2026-11-13; the cited, CONTIG-only and INSDC records as gzipped
-GenBank files; AnAge build 15 `dataset.zip`; the USGS page and table; the 2,241 OTL/TimeTree answers of the
+GenBank files; AnAge build 15 `dataset.zip`; the USGS page and table; the 2,250 OTL/TimeTree answers of the
 tree (`tree/answers.tar.gz`, file names are the hashes the site's pipeline gives each request); the old
 site's pages; and a mirror of the 8 FishBase/SeaLifeBase tables read. Its card lists for every file the
 original URL, the retrieval date, md5 and SHA-256, the licence and the citation. The NCBI monthly taxonomy
@@ -116,7 +121,11 @@ here `refseq.py`).
 - Values: AnAge maximum longevity (record type from specimen origin: wild, captivity -> captive, else
   observed; quality from data quality); FishBase/SeaLifeBase `popchar.tmax` (observed; quality questionable
   when tmaxQuality is -1), `species.LongevityWild` (wild), `species.LongevityCaptive` (captive),
-  `popgrowth.tmax` (estimated, quality low); USGS "Minimum age at encounter" (wild; years + months/12).
+  `popgrowth.tmax` (estimated, quality low); USGS "Minimum age at encounter" (wild; years + months/12); EURING,
+  each of a species' two oldest ringing records (wild, acceptable; years + months/12 from "37y 0m", the whole
+  years where the month cannot be read, as in one quail's "11y im"). The EURING PDF is read with the standard
+  library (`build2/euring.py`): the text runs of each page, then the table's rows, a bold common name with the
+  oldest record and the scientific name under it with the second.
 - Matching a source name to an NCBI species, in order: NCBI scientific name, NCBI synonym (synonym,
   equivalent name, genbank synonym), the source's own synonym table (FishBase and SeaLifeBase; misapplied
   names never), the binomial of a trinomial. Names compare after removing parenthesised parts and quotes,
@@ -192,10 +201,10 @@ clades), ages made monotone, undated nodes midway between parent and oldest chil
 uv sync && conda env create -f environment.yml      # MAFFT 7.526 for `build2 align`
 
 # inputs (pinned: the snapshot where no upstream archive keeps the file)
-uv run mitoage download hf                           # build 1 and the published build 2, revision 653afe2a3b
+uv run mitoage download hf                           # build 1 and the published build 2, revision f75bdc9b81
 uv run mitoage download refseq --from-snapshot       # RefSeq release 237 (NCBI keeps only the current release)
 uv run mitoage download taxonomy --from-snapshot     # the taxonomy dump of 2026-11-13
-uv run mitoage download lifespan                     # AnAge, FishBase, SeaLifeBase, USGS BBL; tries EURING
+uv run mitoage download lifespan                     # AnAge, FishBase, SeaLifeBase, USGS BBL, EURING (Internet Archive)
 uv run mitoage download cited                        # the 922 RefSeq records build 1 cites (efetch)
 uv run mitoage download contig                       # records with only a CONTIG line in the release (efetch)
 uv run mitoage download legacy                       # the old site's species ids
@@ -208,54 +217,59 @@ uv run mitoage build2 primary-list && uv run mitoage download primary
 uv run mitoage build2 assemble                       # the seven tables -> data/output/build2
 uv run mitoage download tree-sources --from-snapshot && uv run mitoage build2 tree
 uv run mitoage build2 align
-uv run mitoage download tree --ref 8ff350c504bb59c9171eaed729eb6cddaada0f0b   # build 2's tree, for the comparison
+uv run mitoage download tree --ref 725da087120f535cb87bc5fde189c7c5f35fe436   # build 2's tree, for the comparison
 uv run mitoage build2 compare                        # -> data/output/build2/compare
 ```
 
 `build2` steps take `--release` (237, another release number, or `efetch`) and `--taxonomy` (a folder
-under `data/input/build2/taxdump`). Run times of this sequence in a fresh data folder on 2026-11-14 (the machine has 32 cores; the
-sandbox reported 8 to `nproc`; MAFFT ran with 4 threads):
+under `data/input/build2/taxdump`). Run times of this sequence in a fresh data folder on 2026-11-15 (MAFFT ran with
+4 threads):
 
 | command | wall time |
 | --- | ---: |
-| `mitoage download hf` | 13.3 s |
-| `mitoage download refseq --from-snapshot` | 15.5 s |
-| `mitoage download taxonomy --from-snapshot` | 23.7 s |
-| `mitoage download lifespan` | 19.8 s |
-| `mitoage download cited` | 13.2 s |
-| `mitoage download contig` | 8.4 s |
-| `mitoage download legacy` | 55.3 s |
-| `mitoage build2 refseq` | 21.4 s |
-| `mitoage build2 match` | 21.8 s |
-| `mitoage build2 status` | 22.8 s |
-| `mitoage build2 primary-list` | 51.6 s |
-| `mitoage download primary` | 3.3 s |
-| `mitoage build2 assemble` | 52.9 s |
-| `mitoage download tree-sources --from-snapshot` | 2.4 s |
-| `mitoage build2 tree` | 0.4 s |
-| `mitoage build2 align` | 100.5 s |
-| `mitoage download tree --ref 8ff350c504bb59c9171eaed729eb6cddaada0f0b` | 1.0 s |
-| `mitoage build2 compare` | 1.6 s |
-| total | 429 s |
-| `mitoage download tree-sources` (live OTL and TimeTree instead of the snapshot) | 1209.9 s |
-| `mitoage download refseq --efetch` (build 2's 2,316 versions) | 49.4 s |
+| `mitoage download hf` | 16.9 s |
+| `mitoage download refseq --from-snapshot` | 1.9 s |
+| `mitoage download taxonomy --from-snapshot` | 17.8 s |
+| `mitoage download lifespan` | 32.0 s |
+| `mitoage download cited --from-snapshot` | 1.4 s |
+| `mitoage download contig --from-snapshot` | 0.9 s |
+| `mitoage download legacy --from-snapshot` | 0.9 s |
+| `mitoage build2 refseq` | 22.4 s |
+| `mitoage build2 match` | 22.9 s |
+| `mitoage build2 status` | 23.0 s |
+| `mitoage build2 primary-list` | 50.4 s |
+| `mitoage download primary --from-snapshot` | 1.0 s |
+| `mitoage build2 assemble` | 54.2 s |
+| `mitoage download tree-sources --from-snapshot` | 0.8 s |
+| `mitoage build2 tree` | 1.0 s |
+| `mitoage build2 align` | 111.0 s |
+| `mitoage download tree --ref 725da08` | 1.5 s |
+| `mitoage build2 compare` | 1.8 s |
+| total | 362 s |
+
+On 2026-11-14 (the build before EURING) the same steps without the snapshot for `cited`, `contig`, `legacy` and
+`primary` took 429 s; `mitoage download tree-sources` with live Open Tree and TimeTree took 1,209.9 s, and
+`mitoage download refseq --efetch` (build 2's 2,316 versions then) 49.4 s.
 
 ## How far it reproduces
 
-**Pinned inputs** (the commands above, in a fresh data folder): **every value is identical.**
+**Pinned inputs** (the commands above, in a fresh data folder, 2026-11-15): **every value is identical.**
 
 | table | rows published | rows reproduced | same keys | fields | values compared | identical | within tolerance | differ |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| species | 2,335 | 2,335 | 2,335 | 49 | 114,415 | 114,415 | 0 | 0 |
-| region_stats | 46,309 | 46,309 | 46,309 | 17 | 787,253 | 787,253 | 0 | 0 |
-| codon_usage | 32,664 | 32,664 | 32,664 | 94 | 3,070,416 | 3,070,416 | 0 | 0 |
-| genome_features | 88,647 | 88,647 | 88,647 | 12 | 1,063,764 | 1,063,764 | 0 | 0 |
-| lifespan_observations | 7,197 | 7,197 | 7,197 | 19 | 136,743 | 136,743 | 0 | 0 |
-| changelog | 14,392 | 14,392 | 14,392 | 9 | 129,528 | 129,528 | 0 | 0 |
-| review_list | 95 | 95 | 95 | 3 | 285 | 285 | 0 | 0 |
-| **all** | 191,639 | 191,639 | 191,639 | | 5,302,404 | 5,302,404 | 0 | 0 |
+| species | 2,344 | 2,344 | 2,344 | 49 | 114,856 | 114,856 | 0 | 0 |
+| region_stats | 46,489 | 46,489 | 46,489 | 17 | 790,313 | 790,313 | 0 | 0 |
+| codon_usage | 32,790 | 32,790 | 32,790 | 94 | 3,082,260 | 3,082,260 | 0 | 0 |
+| genome_features | 88,992 | 88,992 | 88,992 | 12 | 1,067,904 | 1,067,904 | 0 | 0 |
+| lifespan_observations | 7,541 | 7,541 | 7,541 | 19 | 143,279 | 143,279 | 0 | 0 |
+| changelog | 14,428 | 14,428 | 14,428 | 9 | 129,852 | 129,852 | 0 | 0 |
+| review_list | 97 | 97 | 97 | 3 | 291 | 291 | 0 | 0 |
+| **all** | 192,681 | 192,681 | 192,681 | | 5,328,755 | 5,328,755 | 0 | 0 |
 | alignments (28 FASTA files) | 28 | 28 | 28 | SHA-256 | 28 | 28 | 0 | 0 |
 | dated tree (`phylogeny.json`) | 1 | 1 | 1 | bytes | 1 | 1 | 0 | 0 |
+
+The build 2 published before the EURING list was read (Hugging Face revision `653afe2a3b`, 2,335 species) was
+reproduced the same way on 2026-11-14: all 5,302,404 values, the 28 alignment files and the tree identical.
 
 Keys: species `id`; region_stats and codon_usage `species_id, region`; genome_features
 `species_id, feature_key`; lifespan_observations `species_id, source, source_record_id`; changelog
@@ -263,12 +277,12 @@ Keys: species `id`; region_stats and codon_usage `species_id, region`; genome_fe
 source_name, scientific_name`. Floats are compared exactly (tolerance 1e-9 was not needed).
 Alignments: 28 of 28 files have the SHA-256 of the published uncompressed FASTA, and the lists of absent
 genes, duplicated genes and codon notes are equal. Dated tree: `phylogeny.json` is byte-identical
-(SHA-256 `64c7265e834faa8dfc750d7a1c7ea97004b60ee73177a522fa539aac336c13b7`; opentree16.1, 2,305 leaves,
-2,229 clades, 2,045 nodes dated by TimeTree). The new species by class and lifespan source equal
-`docs/BUILD2_REPORT.md` (Actinopterygii 236 AnAge + 453 FishBase, Aves 245 + 26 USGS BBL, Mammalia 237, ...;
-AnAge 838, FishBase 475, SeaLifeBase 74, USGS BBL 26).
+(SHA-256 `bfcd086948b3e6d44b485201e1cd1af4c536360eebc935fd851d9d3c2ae19e76`; opentree16.1, 2,314 leaves,
+2,238 clades, 2,054 nodes dated by TimeTree). The new species by class and lifespan source are those of the site's
+build report (Actinopterygii 236 AnAge + 453 FishBase, Aves 245 AnAge + 9 EURING + 26 USGS BBL, Mammalia 237, ...;
+AnAge 838, FishBase 475, SeaLifeBase 74, EURING 9, USGS BBL 26).
 
-**With other inputs.** The first two variants change one input; the third takes every source as it is today. `compare` writes every disagreement with a reason
+**With other inputs** (runs of 2026-11-14, on the build before EURING, 2,335 species; not repeated since). The first two variants change one input; the third takes every source as it is today. `compare` writes every disagreement with a reason
 class (`species_in_one_build_only`, `input_label` — the text names another input version, and equals
 once the names are swapped —, `same_version_record_differs`, or `unexplained`).
 
@@ -317,9 +331,10 @@ alignment and tree results).
 - **RefSeq release 237 and the taxonomy dump of 2026-11-13 are kept only in the snapshot dataset.** Without
   it, a reader has `--efetch` (build 2's versions, today's text of each) and the archive of 2026-11-01; the
   differences that brings are counted above.
-- **EURING** was not retrieved by build 2 and is not now; no values are used and no parser exists. The
-  26 birds whose lifespan comes from USGS BBL stay provisional (review flag), as in build 2.
-- **AnAge and the USGS page are unversioned.** Their md5 matched build 2's on 2026-11-14; a later run
+- **EURING** is read from the Internet Archive's capture of its PDF, since euring.org shows a maintenance page.
+  The PDF states no licence, so the snapshot dataset does not copy it; if the archive withdrew it, the pinned md5
+  would still name the file, but this repository could not fetch it.
+- **AnAge and the USGS page are unversioned.** Their md5 matched build 2's on 2026-11-14 and 2026-11-15; a later run
   warns when they change and then differs from build 2.
 - **efetch returns NCBI's current text of a version.** The cited records were byte-identical to build 2's
   copies on 2026-11-14; *Pongo pygmaeus* NC_001646.1, re-annotated on 2026-10-08, already shows how a later

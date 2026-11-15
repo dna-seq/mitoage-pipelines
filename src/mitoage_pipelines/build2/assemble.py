@@ -204,7 +204,8 @@ def load_sources(st: State) -> None:
         if g.taxid is not None: lineage_for.add(tax.species_of(g.taxid) or tax.current(g.taxid))
     st.step("lifespan sources")
     st.anage, st.obs, st.synonyms = st.anage, *ls.load_all({"anage": inp.anage, "fishbase": inp.fishbase,
-                                                             "sealifebase": inp.sealifebase, "usgs": inp.usgs})[1:]
+                                                             "sealifebase": inp.sealifebase, "usgs": inp.usgs,
+                                                             "euring": inp.euring / pins.EURING_PDF})[1:]
     counts = {}
     for o in st.obs: counts[o.source] = counts.get(o.source, 0) + 1
     print(f"  observations: {counts}")
@@ -218,11 +219,6 @@ def load_sources(st: State) -> None:
     for m in st.matches.values(): by[f"{m.source} {m.status}"] = by.get(f"{m.source} {m.status}", 0) + 1
     print("  " + ", ".join(f"{k}: {v}" for k, v in sorted(by.items())))
     st.records = classify(st.headers, tax)
-
-
-def euring_retrieved(inp: Inputs) -> bool:
-    p = inp.euring / "status.json"
-    return p.is_file() and bool(json.loads(p.read_text()).get("retrieved"))
 
 
 # --- stage 3: status of the build 1 species and the candidates ----------------------------------
@@ -352,7 +348,6 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
     tax, inp, RS = st.tax, st.inp, pl_["RS"]
     date = inp.build_date
     changelog, review = [], list(pl_["review"])
-    eur = euring_retrieved(inp)
     def log(c, src, ver):
         changelog.append({"build": 2, "changed_at": date, "table": c["table"], "row_key": c["row_key"], "field": c["field"],
                           "old_value": c["old_value"], "new_value": c["new_value"], "change_type": c["change_type"],
@@ -490,7 +485,6 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
         lifespan = (lifespan_of(lo) if lo else {"source": "MitoAge_build1", "source_version": "MitoAge build 1 (2015-07-01)",
                     "source_record_id": str(sid), "quality": None, "sample_size": None, "record_type": "compiled", "license": pins.BUILD1_LICENSE})
         if lo is None: flag(sid, "lifespan_from_build1_only")
-        if lo is not None and lo.source == "USGS_BBL" and not eur: flag(sid, "lifespan_provisional_euring_not_retrieved")
         species.append({"id": sid, "slug": b1["slug"], "refseq": o["version"] if live else s.refseq, "scientific_name": name,
                         "common_name": common, **taxo, "max_longevity_years": max_lon,
                         "mtdna_size_bp": total["length_bp"] if live else b1["mtdna_size"], "non_coding_bp": nonc, "gc_percent": gc_now,
@@ -541,7 +535,6 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
                         "mtdna_size_bp": total["length_bp"], "non_coding_bp": rows["non_coding"], "gc_percent": gm.js_round(total["gc_percent"], 3),
                         "legacy_id": None, "traits": traits, "ncbi_taxid": c["rec"].taxid_current, "ncbi_species_taxid": c["t"],
                         "lifespan": lifespan_of(c["chosen"]), "previous": [], "retired_reason": None})
-        if c["chosen"].source == "USGS_BBL" and not eur: flag(sid, "lifespan_provisional_euring_not_retrieved")
         status_of[sid] = "new"
         stats += rows["stats"]; usage += rows["usage"]; features[sid] = rows["features"]
         extra[sid] = {"anage_hagrid": entry.hagrid if entry else None, "anage_match": "ncbi name match" if entry else "none",
@@ -650,7 +643,7 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
     return {"species": species, "stats": stats, "usage": usage, "features": feat_rows, "observations": observations,
             "changelog": changelog, "review": review, "extra": extra,
             "report": {"primary_records_used": primary_used, "candidates": len(cands), "retired_child_rows": len(retired_rows),
-                       "contig_only_fetched": contig, "euring_retrieved": eur}}
+                       "contig_only_fetched": contig}}
 
 
 def lifespan_of(o) -> dict:

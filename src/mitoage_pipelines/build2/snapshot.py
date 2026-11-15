@@ -140,7 +140,7 @@ with its original URL, when it was retrieved, its checksums, its licence and how
 holds the same in machine-readable form.
 
 - The build itself: [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage)
-  (build 2 at revision `653afe2a3b79e18ae892e579ded9acdb17e0c334`, build 1 in its `build1/` folder).
+  (build 2 with the EURING bird records at revision `{pins.HF_BUILD2_REVISION}`, build 1 in its `build1/` folder).
 - The pipeline that built it: [dna-seq/mitoage](https://github.com/dna-seq/mitoage) (TypeScript).
 - The independent reproduction that reads this snapshot:
   [dna-seq/mitoage-pipelines](https://github.com/dna-seq/mitoage-pipelines),
@@ -149,7 +149,10 @@ holds the same in machine-readable form.
   needs no token.
 
 Not here, because an upstream archive keeps it: the NCBI taxonomy monthly archive, the FishBase and
-SeaLifeBase snapshots on source.coop (mirrored here only for convenience), and the Hugging Face build itself.
+SeaLifeBase snapshots on source.coop (mirrored here only for convenience), the EURING longevity list of
+2023-09-01 (the Internet Archive's capture of 2026-10-11 of `EURING_longevity_list_20230901.pdf`, md5
+`{pins.EURING_MD5}`; euring.org shows a maintenance page, and the list states no licence), and the Hugging
+Face build itself.
 
 **Licences are per file.** FishBase and SeaLifeBase tables are CC BY-NC 4.0 (non-commercial use, with
 attribution). AnAge is subject to the HAGR conditions of use (https://genomics.senescence.info/legal.html).
@@ -167,14 +170,14 @@ CC0; TimeTree is a free public resource.
 
 
 def upload(staging: Path, token_env: str = "HF_TOKEN") -> str:
-    """Create the dataset (public) when needed and upload `staging` as one commit. The token comes only from
-    the environment variable HF_TOKEN of this command; it is never printed or written."""
+    """Create the dataset (public) when needed and upload `staging` as one commit. The token comes from the
+    environment variable HF_TOKEN of this command, or else from the machine's stored Hugging Face login, which
+    huggingface_hub looks up itself; it is never read here, printed or written."""
     import os
     from huggingface_hub import HfApi
-    token = os.environ.get(token_env)
-    if not token:
-        raise Refused(f"{token_env} is not set: uploading the snapshot is a maintainer step that needs a write token")
-    api = HfApi(token=token)
+    api = HfApi(token=os.environ.get(token_env) or None)
+    if api.whoami().get("name") is None:
+        raise Refused(f"no Hugging Face login: set {token_env} or log in; uploading the snapshot is a maintainer step")
     api.create_repo(REPO, repo_type="dataset", private=False, exist_ok=True)
     info = api.upload_folder(repo_id=REPO, repo_type="dataset", folder_path=str(staging),
                              commit_message="MitoAge build 2 sources: snapshot of the inputs no upstream archive keeps")

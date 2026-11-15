@@ -4,9 +4,12 @@ and the checksums of the copies its audit kept. A download is compared with thes
 reads a value from here that it could read from a source.
 """
 
-# Hugging Face dataset longevity-genie/mitoage: the commit that published build 2 (2026-11-13 18:02 UTC)
+# Hugging Face dataset longevity-genie/mitoage: the revision of build 2 with the EURING birds (the site's D15,
+# dna-seq/mitoage 725da08), the one the manuscript cites. The first upload of build 2, without EURING, was
+# 653afe2a3b79e18ae892e579ded9acdb17e0c334 (2026-11-13 18:02 UTC).
 HF_REPO = "longevity-genie/mitoage"
-HF_BUILD2_REVISION = "653afe2a3b79e18ae892e579ded9acdb17e0c334"
+HF_BUILD2_REVISION = "f75bdc9b812d7845d2ccb24a49643d88d00d57b5"
+SITE_COMMIT = "725da08"   # the site repository's commit that wrote that build (its tree is read from there)
 
 BUILD_DATE = "2026-11-13T00:00:00.000Z"       # build 2's date, written into added_at / changed_at
 BUILD1_DATE = "2015-07-01T00:00:00.000Z"      # build 1's release date
@@ -53,8 +56,18 @@ USGS_VERSION = "NABBP Longevity Records v2025.1 (current through Dec 2025)"
 USGS_HTML_MD5 = "b024376be0641b560c2a9807806df68b"   # the page build 2's audit saved
 USGS_CSV_MD5 = "a84743335e7f080d5891c2f719f53702"    # the table build 2 read, as CSV
 
-# EURING longevity list: build 2 requested the list of 2023-09-01 and could not retrieve it
+# EURING longevity list of 2023-09-01. euring.org shows a maintenance page (since 2026-11-13 at least), so build 2
+# reads the PDF the Internet Archive captured on 2026-10-11, the same file (one SHA-1) as every capture since
+# 2023-12-16 (the site's decision D15). Version, licence and reference as the site's pipeline writes them.
 EURING_URL = "https://euring.org/data-and-codes/longevity-list"
+EURING_PDF_URL = ("https://web.archive.org/web/20261011111048id_/"
+                  "https://euring.org/files/documents/EURING_longevity_list_20230901.pdf")
+EURING_PDF = "EURING_longevity_list_20230901.pdf"
+EURING_MD5 = "c82b37efe23fe95b5e2945f894c46496"
+EURING_VERSION = "list of 2023-09-01 (EURING_longevity_list_20230901.pdf, Internet Archive capture of 2026-10-11)"
+EURING_LICENSE = ("no licence stated on the list or its page (euring.org/data-and-codes/longevity-list-2023); "
+                  "cite Fransson, Kolehmainen, Moss & Robinson (2023) EURING list of longevity records for European birds")
+EURING_REFERENCE = "Fransson, Kolehmainen, Moss & Robinson (2023) EURING list of longevity records for European birds"
 
 # The old site (July 2015), for the old species ids
 LEGACY_URL = "https://www.mitoage.info/export-section/total_mtDNA/for-all-species/?page={page}"
@@ -82,4 +95,4 @@ TAXONOMY_VERSION = "new_taxdump of 2026-11-13 (Last-Modified 2026-11-13T00:42:20
 
 # The snapshot dataset of the inputs no upstream archive keeps (`--from-snapshot`)
 SNAPSHOT_REPO = "longevity-genie/mitoage-build2-sources"
-SNAPSHOT_REVISION = "9d55d72648d0838c3b5f37fca6185f8b938b3272"   # 2026-11-14, first upload
+SNAPSHOT_REVISION = "a76215144ec33d6ed1e5ea599cb797f2651dab1a"   # 2026-11-15: the tree answers of build 2 with the EURING birds (first upload 9d55d72, 2026-11-14)
