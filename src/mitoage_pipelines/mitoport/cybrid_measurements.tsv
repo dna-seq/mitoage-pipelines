@@ -1,0 +1,38 @@
+host	donor	complex	assay	outcome	pct_low	pct_high	significant	source_doi	location	note
+homo-sapiens	pan-troglodytes	I	NQR/CS	measured	59	59	yes	10.1074/jbc.273.23.14210	Fig. 2A
+homo-sapiens	pan-troglodytes	III	QCCR/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	pan-troglodytes	IV	COX/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	pan-troglodytes	V	ATPase/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	pan-paniscus	I	NQR/CS	measured	57	57	yes	10.1074/jbc.273.23.14210	Fig. 2A
+homo-sapiens	pan-paniscus	III	QCCR/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	pan-paniscus	IV	COX/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	pan-paniscus	V	ATPase/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	gorilla-gorilla	I	NQR/CS	measured	55	55	yes	10.1074/jbc.273.23.14210	Fig. 2A
+homo-sapiens	gorilla-gorilla	III	QCCR/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	gorilla-gorilla	IV	COX/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	gorilla-gorilla	V	ATPase/CS	measured			no	10.1074/jbc.273.23.14210	Fig. 2A	no value in the text
+homo-sapiens	pongo-pygmaeus	all	respiration	no_respiring_cybrid			not_stated	10.1073/pnas.94.17.9131	Abstract	species given as orangutan only; both Pongo species scored
+homo-sapiens	pongo-abelii	all	respiration	no_respiring_cybrid			not_stated	10.1073/pnas.94.17.9131	Abstract	species given as orangutan only; both Pongo species scored
+mus-musculus	mus-spretus	I	NQR (rotenone-sensitive)	measured	78	78	no	10.1074/jbc.M004070200	Table III	percentage computed here from the table's means
+mus-musculus	mus-spretus	III	SCCR (II+III)	measured	114	114	no	10.1074/jbc.M004070200	Table III	linked assay; percentage computed here
+mus-musculus	mus-spretus	IV	COX	measured	85	85	no	10.1074/jbc.M004070200	Table III	percentage computed here
+mus-musculus	rattus-norvegicus	I	NQR (rotenone-sensitive)	measured	46	46	yes	10.1074/jbc.M004070200	Table III
+mus-musculus	rattus-norvegicus	III	SCCR (II+III)	measured	37	37	yes	10.1074/jbc.M004070200	Table III	linked assay; complex II alone at 87%
+mus-musculus	rattus-norvegicus	IV	COX	measured	78	78	yes	10.1074/jbc.M004070200	Table III
+mus-musculus	rattus-norvegicus	I	NQR/SDH	measured	45	47	yes	10.1074/jbc.M004053200	Fig. 4A	second laboratory; range over three clones
+mus-musculus	rattus-norvegicus	III	SCCR/SDH	measured			no	10.1074/jbc.M004053200	Fig. 4B	second laboratory; not reduced, no value in the text
+mus-musculus	rattus-norvegicus	IV	COX/SDH	measured	50	53	yes	10.1074/jbc.M004053200	Fig. 4C	second laboratory; range over three clones
+mus-musculus	mus-caroli	I	NQR (rotenone-sensitive)	measured			no	10.1093/molbev/msg132	Fig. 4	no value in the text
+mus-musculus	mus-caroli	III	SCCR (II+III)	measured			no	10.1093/molbev/msg132	Fig. 4	linked assay; no value in the text
+mus-musculus	mus-caroli	IV	COX	measured			no	10.1093/molbev/msg132	Fig. 4	no value in the text
+mus-musculus	mus-terricolor	I	NQR (rotenone-sensitive)	measured			no	10.1093/molbev/msg132	Fig. 4	the paper's Mus dunni line; no value in the text
+mus-musculus	mus-terricolor	III	SCCR (II+III)	measured			no	10.1093/molbev/msg132	Fig. 4	the paper's Mus dunni line; linked assay; no value in the text
+mus-musculus	mus-terricolor	IV	COX	measured			no	10.1093/molbev/msg132	Fig. 4	the paper's Mus dunni line; no value in the text
+mus-musculus	mus-pahari	I	NQR (rotenone-sensitive)	measured			no	10.1093/molbev/msg132	Fig. 4	no value in the text
+mus-musculus	mus-pahari	III	SCCR (II+III)	measured			no	10.1093/molbev/msg132	Fig. 4	linked assay; no value in the text
+mus-musculus	mus-pahari	IV	COX	measured	59	59	yes	10.1093/molbev/msg132	Fig. 4
+mus-musculus	otomys-irroratus	I	NQR (rotenone-sensitive)	measured	72	72	yes	10.1093/molbev/msg132	Fig. 4
+mus-musculus	otomys-irroratus	III	SCCR (II+III)	measured	2	2	yes	10.1093/molbev/msg132	Fig. 4	linked assay
+mus-musculus	otomys-irroratus	IV	COX	measured	44	44	yes	10.1093/molbev/msg132	Fig. 4
+mus-musculus	cricetulus-griseus	all	cybrid formation	no_respiring_cybrid			not_stated	10.1074/jbc.M004070200	Results	no clones; failure need not be at an interface
+mus-musculus	mesocricetus-auratus	all	cybrid formation	no_respiring_cybrid			not_stated	10.1074/jbc.M004070200	Results	no clones; failure need not be at an interface

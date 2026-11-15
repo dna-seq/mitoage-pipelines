@@ -107,6 +107,15 @@ def download_pdb(ids: Annotated[list[str], typer.Argument(help="PDB entry ids, e
     download.pdb([i.upper() for i in ids], paths.PDB, paths.MANIFEST)
 
 
+@download_app.command("cybrid")
+def download_cybrid() -> None:
+    """H16: the mitogenomes of the cybrid hosts and donors (RefSeq, fixed versions) and the cell lines' own
+    cytochrome b records, from NCBI into data/input/cybrid/records.gb, with the file's SHA-256 in the manifest."""
+    from . import download
+    from .mitoport import cybrid
+    download.genbank(cybrid.accessions(), paths.CYBRID_GB, paths.MANIFEST)
+
+
 @download_app.command("orthologs")
 def download_orthologs(
     gene: Annotated[Optional[list[str]], typer.Option("--gene", help="a gene symbol; repeat for several. All the nuclear genes of the analysis when omitted")] = None,
@@ -714,6 +723,18 @@ def mitoport_burial(
     from .mitoport import burial
     cx = _complex(complex_); work = work or cx.work
     burial.main(cif or cx.cif, work / "contacts.tsv", data, tree, quality, work, cx)
+
+
+@mitoport_app.command("cybrid")
+def mitoport_cybrid(
+    gb: Annotated[Path, typer.Option("--gb", help="the GenBank records of `download cybrid`")] = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files 5XTD, 5XTE, 5Z62, 8H9S")] = paths.PDB,
+    out: Out = paths.CYBRID_OUT,
+) -> None:
+    """H16: mismatch at the mito-nuclear contacts of complexes I, III, IV and V for each published cybrid,
+    against the measured complex activities (after `download cybrid` and `download pdb 5XTD 5XTE 5Z62 8H9S`)."""
+    from .mitoport import cybrid
+    cybrid.main(gb, pdb_dir, out)
 
 
 @mitoport_app.command("partners")

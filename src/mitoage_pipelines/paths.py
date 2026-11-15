@@ -38,6 +38,7 @@ NCBI = INPUT / "ncbi"                     # NCBI ortholog sets, one folder per g
 NCBI_VERT = INPUT / "ncbi-vertebrata"     # the same for complex IV's nuclear subunits, within vertebrates (H12)
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
+CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the cybrid hosts and donors (H16)
 
 # --- input: the sources of build 2 (docs/BUILD2_REPRODUCTION.md) --------------------------------
 B2_IN = INPUT / "build2"
@@ -90,6 +91,7 @@ RELAX_OUT = LONGEVITY_OUT / "relax"       # <GENE>.relax.json, as HyPhy writes t
 PEPTIDES_OUT = OUTPUT / "peptides"        # <peptide>.tsv, summary.txt
 MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv, coembed.tsv
 IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
+CYBRID_OUT = MITOPORT_OUT / "cybrid"      # positions.tsv, scores.tsv, calibration.tsv, summary.tsv (H16)
 STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
 AUDIT_OUT = OUTPUT / "audit"              # inputs, strand, order, code, pairs, nearest (.tsv): the audit of the records (H13)
 COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol

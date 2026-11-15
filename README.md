@@ -129,6 +129,11 @@ uv run mitoage mitoport iface --complex I --skip-esm          # mammals; no per-
 uv run mitoage mitoport partners --complex I                  # vertebrate partners of the subunits that touch
 uv run mitoage mitoport readouts                              # the readouts fixed in advance, every complex
 
+# H16: the published cybrids against a mismatch count at the mito-nuclear contacts (seconds on a laptop)
+uv run mitoage download pdb 5XTD 5XTE 5Z62 8H9S
+uv run mitoage download cybrid                    # 15 RefSeq mitogenomes at fixed versions and 3 cell-line cytb records
+uv run mitoage mitoport cybrid                    # positions, scores, calibration and summary tables
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -286,6 +291,11 @@ translation under the declared code is RefSeq's own, identical records pair; `sl
 `tests/test_complexes.py` (H14) builds the contact maps of complexes III, IV and V from the structures, checks that
 complex IV's is byte for byte the published one, and tests the readouts; `slurm/job1-contacts-mutations.py` breaks
 each of its guards in turn.
+`tests/test_cybrid.py` (H16) checks the gene names, the placing of a protein on human positions (a partial
+sequence's ends are unknown, not deleted), the counts and the ROC area by hand, the agreement of sources, the shipped
+measurement table, and that the contact residues of all four complexes are the set `mitoport contacts` finds; each
+test was checked to fail when the code it guards was broken (the cutoff, the second copy of cytochrome b, the
+partial ends, the disagreement of sources, the radical substitutions).
 
 ## Licence
 

@@ -119,6 +119,27 @@ def build(dest: Path, manifest: Path, revision: str | None = None) -> Path:
 RCSB = "https://files.rcsb.org/download"
 
 
+EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
+
+
+def genbank(accessions: list[str], dest: Path, manifest: Path) -> Path:
+    """GenBank records (with their CDS translations) by accession.version, through E-utilities efetch, into
+    `dest`/records.gb, with the file's SHA-256 in the manifest. A versioned accession names fixed bytes of
+    sequence; the annotation around it can still change, which the digest records."""
+    import hashlib
+    dest.mkdir(parents=True, exist_ok=True)
+    unversioned = [a for a in accessions if "." not in a]
+    if unversioned:
+        raise ValueError(f"accessions without a version: {unversioned}")
+    ids = ",".join(sorted(set(accessions)))
+    out = dest / "records.gb"
+    out.write_bytes(_request(f"{EUTILS}/efetch.fcgi?db=nuccore&id={ids}&rettype=gbwithparts&retmode=text", accept="*/*"))
+    digest = hashlib.sha256(out.read_bytes()).hexdigest()
+    append_manifest(manifest, "ncbi-efetch", ids, dest, sha256=digest)
+    print(f"{out}  sha256 {digest}")
+    return out
+
+
 def pdb(ids: list[str], dest: Path, manifest: Path) -> list[Path]:
     """mmCIF files of solved structures from RCSB into `dest`, one record per call with each file's SHA-256:
     RCSB revises entries in place, so the digest is what says which file a result was computed on.
