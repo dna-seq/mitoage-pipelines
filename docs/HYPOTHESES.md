@@ -672,3 +672,82 @@ a record without code or genes are unknown; two identical records pair at identi
 another order sit outside it. `slurm/job3-audit-mutations.py` breaks 22 guards one at a time and checks that a test
 fails each time; `slurm/job3-audit.sbatch` runs every step twice and compares the bytes.
 **Run.** Not yet run.
+
+## H14. In complexes I, III and V too, the coupling belongs to whole proteins, not to the residues that touch (H5's open item)
+
+**Question.** H5 found, for complex IV, that its nuclear subunits co-evolve with the mitochondrial COX genes as whole
+proteins, while the residues that touch carry nothing extra: on the mitochondrial side contact residues couple with
+the nuclear partners no more than burial-matched non-contact residues, on the nuclear side interface columns no more
+than the rest, and (H12, second round) contact pairs are no more concordant than control pairs. Does that hold in
+complex I (5XTD; ND1-6, ND4L), complex III (5XTE; CYTB) and complex V (8H9S; ATP6, ATP8)? This is a question about
+mito-nuclear co-evolution in general, not about longevity.
+**Fixed before any result was seen.** This entry was committed with the code, before the job that computes the
+readouts ran. Complex IV goes through the same code and readouts again, so that it can be compared with the others.
+- *Contact maps* (`mitoport contacts --complex I|III|V`, `mitoport burial --complex ...`): H5's definitions unchanged.
+  A contact is a residue of a mitochondrial subunit with a heavy atom within 4.5 Å of a nuclear subunit. Controls are
+  matched on accessibility in the isolated chain, within the gene, without replacement. Chains are named by their
+  UniProt references (`mitoport/complexes.py`, checked by hand against each entry's entity names and chain ids). Each
+  mitochondrial gene is read from one reference chain. Complex III is a dimer, so cytochrome b is read from chain J
+  and the other copy (V) counts as a mitochondrial partner, not a nuclear one. A nuclear gene in several chains (the
+  c-ring, alpha and beta, the dimer's copies) takes the union of its chains' interface residues.
+- *What the structures give* (seen while the maps were built; they are the design, not results): complex I has 621
+  contact residues (ND1 116, ND2 105, ND3 32, ND4 144, ND4L 17, ND5 176, ND6 31), and 27 of its 37 nuclear subunits
+  touch a mitochondrial one. Complex III has 104 (CYTB), with 6 of 9 subunits touching. Complex V has 129 (ATP6 95,
+  ATP8 34), with 6 of 15 touching. ATP8 runs out of candidate controls: 17 of its 34 contacts have none, and pair tests
+  leave them out. All contact and control residues of the four complexes map to an alignment column. The subunits with
+  at least 5 interface residues in the structure number 24 in complex I, 5 in complex III and 5 in complex V. Complex
+  IV's contact map from the generalised code is byte-identical to H5's and H12's (`sites.tsv` SHA-256 6f219d3a...).
+- *Seen before this entry was written, and therefore not blind*: `mitoport burial` prints the median identity to
+  human of the contact, control and other residues gene by gene. For complexes I, III and V that printout was read.
+  Readout R1a (conservation) is that comparison pooled, so it is reported as descriptive only and enters no decision.
+  No coupling, interface or pair statistic of complexes I, III or V had been computed.
+- *Sequences.* For R0 to R2 (H5's `iface` design): NCBI's mammalian ortholog sets (`download orthologs`) of H5's 62
+  genes, plus the 37 nuclear genes of 5XTD and the 15 of 8H9S; one protein per mammal (`mitoport select`); MAFFT
+  L-INS-i on one thread (`iface-align --threads 1`). The sequence distance only: no per-residue embeddings exist for
+  the new genes, so every `esm_` column is not assessed (`--skip-esm`). For R3 (H12's `partners` design): NCBI's
+  vertebrate ortholog sets of the nuclear subunits that touch (complex I 27, III 6, IV 11, V 6); one protein per
+  species of mammals, birds, ray-finned fishes and reptiles; L-INS-i on one thread. The species of each class are
+  those of H12 (H1's default dataset with a partner sequence, half the contact pairs filled on both sides).
+- *Readouts, per complex.*
+  - R0, the positive control (is there whole-protein coupling to localise?). `seq_control_other` of `mitoport iface`:
+    over pairs of mammals, with patristic distance partialled out, the correlation of a subunit's non-interface
+    columns with the mitochondrial burial-matched controls, so that no contact residue sits on either side. The
+    complex's nuclear subunits are compared with the 30 cytosolic controls, Mann-Whitney, two-sided. H5's own group
+    contrast (`seq_contact_iface`, subunits with an interface) is reported beside it.
+  - R1a, mitochondrial side, conservation: identity to human at the contact against the control residues, the
+    complex's genes pooled (Mann-Whitney, as H5), and over the matched pairs (Wilcoxon signed-rank). Descriptive.
+  - R1b, mitochondrial side, coupling: `seq_excess_mt` (the interface's coupling with the mitochondrial contacts
+    minus with their controls) of the subunits with at least 5 interface columns, against the cytosolic controls
+    (random column sets of the usual interface size, seed 0). Mann-Whitney, two-sided. The interface hypothesis
+    predicts partners above the controls.
+  - R2, nuclear side: `seq_excess_nuc` (interface columns minus the other columns, both against the mitochondrial
+    contacts), with the same sets and test; the hypothesis predicts partners above the controls.
+  - R3, pair concordance: per species, discordance at the contact pairs minus discordance at the control pairs, as
+    H12 defined them. The mean over species is estimated as the intercept of a phylogenetic regression with Pagel's
+    lambda by maximum likelihood on the class's part of the dated tree, with a 95% interval. Mammals are primary;
+    birds, ray-finned fishes and reptiles are reported where they have 25 species or more. The hypothesis predicts a
+    negative intercept (contact pairs more concordant).
+  - Correction: Holm over the 12 interface tests (R1b, R2 and R3 in mammals, for the four complexes), at 0.05.
+  - `mitoport readouts` writes all of them into `contact_readouts.tsv`.
+- *Reading, per complex.*
+  - If R0 shows no whole-protein coupling (`seq_control_other` of the subunits not above the controls at p < 0.05,
+    uncorrected), the complex has no coupling to localise. The interface question is then not assessable there, and
+    the complex is not counted for or against H5's reading.
+  - Otherwise H5's reading holds in the complex when none of R1b, R2 and R3 (mammals) passes Holm in the predicted
+    direction. It fails when at least one does: the contacts then carry coupling beyond the whole protein in that
+    complex, and the entry says on which side.
+  - A readout that passes Holm in the opposite direction is reported as such and does not count against H5's reading.
+  - A readout that cannot be computed (fewer than 3 proteins on a side, fewer than 25 species) is not assessed, and is
+    said as such; the complex's reading then rests on the readouts that remain, and the entry says so.
+  - Power is not equal: complexes III and V have about 5 subunits with an interface each, so a null there bounds
+    little. The medians and, for R3, the interval are reported so that the size can be read, not only the p value.
+- *Secondary, not read for this question*: `mitoport iface` also fits H9's lifespan model on each complex's contact
+  mismatch, and `mitoport partners` fits H12's lifespan models on the pair discordance. Their tables are written
+  as always and reported with numbers only, with no claim.
+**Test.** `slurm/job1-contacts.sbatch` on haumea (the downloads are made beforehand on the login node). It runs every
+step for the four complexes, the tests, `slurm/job1-contacts-mutations.py` (each deliberate break of the new code must
+make a test fail) and H12's mutation check, and then the iface, partners and readouts steps twice, to check that the
+rerun gives the same bytes. It also runs complex IV through the code before the generalisation on the same inputs and
+checks that the contact map, `coupling.tsv`, `lifespan.tsv`, `partners.tsv` and `partners_species.tsv` are the same
+bytes. The build is longevity-genie/mitoage at
+c525adb, and the dated tree is the site's phylogeny.json at 6fe8e72, as in H12.

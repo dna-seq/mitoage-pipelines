@@ -1,7 +1,7 @@
-"""How buried each mitochondrial residue of complex IV is, and a non-contact control set matched on burial.
+"""How buried each mitochondrial residue of a complex is, and a non-contact control set matched on burial.
 
 Solvent accessibility by Shrake-Rupley twice on the solved human enzyme: once in the whole complex, once
-for each mitochondrial chain alone. Relative accessibility divides by the theoretical maxima of Tien et al.
+for each mitochondrial reference chain alone (`complexes.py`; complex IV, 5Z62, unless another is named). Relative accessibility divides by the theoretical maxima of Tien et al.
 2013. A residue is a contact when any heavy atom lies within 4.5 A of a nuclear-encoded subunit
 (contacts.tsv, from `mitoport contacts`). Each contact residue is matched, within its own gene and without
 replacement, to the nearest non-contact residue by accessibility in the isolated chain, the measure that does
@@ -10,8 +10,10 @@ with that column's occupancy and identity to human across the species of the ana
 alignment, a tip on the dated tree and a lifespan record of usable quality.
 
 Writes sites.tsv (one row per residue: group contact, control or other), control_pairs.tsv (which control each
-contact took, in the order of matching), chains.tsv and species.txt.
-Ported from the cluster script `mitoport/iface/burial.py` of 2026-11-14 without change of method.
+contact took, in the order of matching), chains.tsv (`is_mt` 1 for every copy of a mitochondrial protein) and
+species.txt. A contact left without a control because its gene ran out of candidates is said so, gene by gene.
+Ported from the cluster script `mitoport/iface/burial.py` of 2026-11-14 without change of method; complex IV's
+tables are byte for byte what the complex-IV-only version wrote.
 """
 import copy
 import re
@@ -23,10 +25,11 @@ from Bio.Align import PairwiseAligner
 from Bio.PDB import MMCIFParser, ShrakeRupley
 from Bio.PDB.Polypeptide import protein_letters_3to1
 
+from ..genes import MT_GENES
 from ..seqio import read_fasta
+from . import complexes
 from .contacts import entity_descriptions
 
-MTCHAIN = {"A": "COX1", "B": "COX2", "C": "COX3"}       # the chain ids of PDB 5Z62
 MAXASA = dict(ALA=129, ARG=274, ASN=195, ASP=193, CYS=167, GLU=223, GLN=225, GLY=104, HIS=224,
               ILE=197, LEU=201, LYS=236, MET=224, PHE=240, PRO=159, SER=155, THR=172, TRP=285,
               TYR=263, VAL=174)
@@ -37,7 +40,8 @@ NUCNAME = [(r"subunit 4 isoform 1", "COX4I1"), (r"subunit 5A", "COX5A"), (r"subu
 
 
 def gene_of(description: str) -> str | None:
-    """The nuclear gene of complex IV an entity description names, else None."""
+    """The nuclear gene of complex IV an entity description names, else None (read by `structure within`; the
+    contact map names chains by their UniProt references, `complexes.chain_genes`)."""
     for pat, g in NUCNAME:
         if re.search(pat, description, re.I):
             return g
@@ -72,16 +76,21 @@ def match_controls(group: pd.DataFrame) -> tuple[list, list]:
     return list(con.index), taken
 
 
-def main(cif: Path, contacts: Path, build: Path, tree: Path, quality_ok: Path, out: Path) -> Path:
+def main(cif: Path, contacts: Path, build: Path, tree: Path, quality_ok: Path, out: Path,
+         cx: "complexes.Complex | None" = None) -> Path:
+    """`cx`: the complex the entry is (complex IV, 5Z62, when omitted)."""
+    cx = cx or complexes.get("IV")
+    MTCHAIN = {c: g for g, c in cx.mt.items()}              # the reference chain of each mitochondrial gene
     out.mkdir(parents=True, exist_ok=True)
     chain_desc = entity_descriptions(cif)
+    gene_of_chain = complexes.chain_genes(cif, cx)
     model = MMCIFParser(QUIET=True).get_structure("x", str(cif))[0]
     for ch in model:                                     # waters, haems, lipids and ions are not protein
         for r in [r for r in ch if r.id[0] != " "]:
             ch.detach_child(r.id)
     desc = {ch.id: chain_desc.get(ch.id, "?") for ch in model}
-    pd.DataFrame([{"chain": c, "description": v, "gene": MTCHAIN.get(c) or gene_of(v),
-                   "is_mt": int(c in MTCHAIN), "residues": len(model[c])} for c, v in desc.items()]
+    pd.DataFrame([{"chain": c, "description": v, "gene": gene_of_chain[c],
+                   "is_mt": int(gene_of_chain[c] in MT_GENES), "residues": len(model[c])} for c, v in desc.items()]
                  ).to_csv(out / "chains.tsv", sep="\t", index=False)
     sr = ShrakeRupley()
     sr.compute(model, level="R")
@@ -116,18 +125,18 @@ def main(cif: Path, contacts: Path, build: Path, tree: Path, quality_ok: Path, o
     sites = pd.DataFrame(recs)
     sites["d_rasa"] = sites.rasa_alone - sites.rasa_complex
 
-    ct = pd.read_csv(contacts, sep="\t")
+    ct = pd.read_csv(contacts, sep="\t", dtype={"chain": str, "partner_chain": str})
     nuc = ct[ct.partner_is_mt == 0].copy()
-    nuc["partner_gene"] = [gene_of(x) or x for x in nuc.partner]
+    nuc["partner_gene"] = [gene_of_chain[x] for x in nuc.partner_chain]
     per = nuc.groupby(["mt_gene", "pdb_resnum"]).agg(
         n_contacts=("partner_resnum", "size"),
         partners=("partner_gene", lambda s: ",".join(sorted(set(s))))).reset_index()
     sites = sites.merge(per.rename(columns={"mt_gene": "gene"}), on=["gene", "pdb_resnum"], how="left")
     sites["n_contacts"] = sites.n_contacts.fillna(0).astype(int); sites["partners"] = sites.partners.fillna("")
 
-    species = sorted(set(alns["COX1"]) & tree_tips(tree.read_text()) & set(quality_ok.read_text().split()))
+    species = sorted(set.intersection(*(set(alns[g]) for g in cx.mt)) & tree_tips(tree.read_text()) & set(quality_ok.read_text().split()))
     (out / "species.txt").write_text("\n".join(species) + "\n")
-    print(f"species with an alignment, a tip on the dated tree and a lifespan of usable quality: {len(species)}")
+    print(f"species with every alignment of {', '.join(cx.mt)}, a tip on the dated tree and a lifespan of usable quality: {len(species)}")
     occ, ident = [], []
     for g, grp in sites.groupby("gene"):
         M = np.array([list(alns[g][s]) for s in species])
@@ -141,6 +150,9 @@ def main(cif: Path, contacts: Path, build: Path, tree: Path, quality_ok: Path, o
     matched = []
     for g, grp in sites.groupby("gene"):
         con, taken = match_controls(grp)
+        if len(taken) < len(con):
+            print(f"NOTE: {g}: {len(con) - len(taken)} of {len(con)} contact residues have no control: the gene ran out of "
+                  "non-contact residues with a column; they stay contacts, and pair tests leave them out")
         sites.loc[con, "group"] = "contact"
         sites.loc[taken, "group"] = "control"
         matched += [{"gene": g, "contact_resnum": sites.pdb_resnum[c], "contact_aln_col": sites.aln_col[c],

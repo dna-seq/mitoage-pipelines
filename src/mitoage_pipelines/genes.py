@@ -26,5 +26,13 @@ GROUPS = {
 # every nuclear gene whose ortholog set `mitoage download orthologs` fetches
 NUCLEAR = COMPLEX_IV_NUCLEAR + COMPLEX_III_NUCLEAR + CYTOCHROME_C + COMPLEX_II + MATRIX + CYTOSOLIC_CONTROLS
 
+# the nuclear subunits of the solved human complexes I (5XTD) and V (8H9S), as `mitoport complexes` names their
+# entities; not among the genes H5 downloads by default, fetched by name for the contact maps of complexes I and V
+COMPLEX_I_NUCLEAR = ("NDUFV1 NDUFV2 NDUFV3 NDUFS1 NDUFS2 NDUFS3 NDUFS4 NDUFS5 NDUFS6 NDUFS7 NDUFS8 "
+                     "NDUFA1 NDUFA2 NDUFA3 NDUFA5 NDUFA6 NDUFA7 NDUFA8 NDUFA9 NDUFA10 NDUFA11 NDUFA12 NDUFA13 NDUFAB1 "
+                     "NDUFB1 NDUFB2 NDUFB3 NDUFB4 NDUFB5 NDUFB6 NDUFB7 NDUFB8 NDUFB9 NDUFB10 NDUFB11 NDUFC1 NDUFC2").split()
+COMPLEX_V_NUCLEAR = ("ATP5F1A ATP5F1B ATP5F1C ATP5F1D ATP5F1E ATP5PB ATP5PD ATP5PF ATP5PO ATP5MC1 ATP5ME ATP5MF "
+                     "ATP5MG ATP5MJ ATP5IF1").split()
+
 # mitochondrial subunits of the complexes with nuclear partners above, named as in the rate matrix
 MT_OF_COMPLEX = {"IV": ["MT-COX1", "MT-COX2", "MT-COX3"], "III": ["MT-CYTB"]}

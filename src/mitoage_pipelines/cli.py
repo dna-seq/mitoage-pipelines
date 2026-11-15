@@ -598,41 +598,53 @@ def mitoport_coembed(
     coembed.main(embeddings, tree, out)
 
 
-CifOpt = Annotated[Path, typer.Option("--cif", help="the solved structure of complex IV, mmCIF")]
-IfaceDir = Annotated[Path, typer.Option("--work", help="folder of the contact map: contacts.tsv, sites.tsv, chains.tsv, species.txt")]
+CifOpt = Annotated[Optional[Path], typer.Option("--cif", help="the solved structure, mmCIF; the complex's entry in data/input/pdb when omitted (IV 5Z62, I 5XTD, III 5XTE, V 8H9S)")]
+IfaceDir = Annotated[Optional[Path], typer.Option("--work", help="folder of the contact map: contacts.tsv, sites.tsv, chains.tsv, species.txt; data/interim/mitoport/iface for complex IV, iface-<complex> for the others, when omitted")]
+ComplexOpt = Annotated[str, typer.Option("--complex", help="the respiratory complex: IV (5Z62, as published), I (5XTD), III (5XTE) or V (8H9S)")]
+
+
+def _complex(name: str):
+    from .mitoport import complexes
+    return complexes.get(name)
 
 
 @mitoport_app.command("contacts")
-def mitoport_contacts(cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, out: IfaceDir = paths.MITOPORT_IFACE) -> None:
-    """Residues of COX1-3 within 4.5 A of another subunit in the solved complex IV (after `download pdb 5Z62`)."""
+def mitoport_contacts(cif: CifOpt = None, data: Build = paths.BUILD, out: IfaceDir = None, complex_: ComplexOpt = "IV") -> None:
+    """Residues of a complex's mitochondrial subunits within 4.5 A of another subunit (after `download pdb`)."""
     from .mitoport import contacts
-    contacts.main(cif, data, out)
+    cx = _complex(complex_)
+    contacts.main(cif or cx.cif, data, out or cx.work, cx)
 
 
 @mitoport_app.command("burial")
 def mitoport_burial(
-    cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
+    cif: CifOpt = None, data: Build = paths.BUILD, work: IfaceDir = None,
     tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
     quality: Annotated[Path, typer.Option(help="species with a usable lifespan record, from `longevity dated-tree`")] = paths.QUALITY_OK,
+    complex_: ComplexOpt = "IV",
 ) -> None:
-    """Accessibility of each COX1-3 residue, the burial-matched non-contact control, columns and occupancy."""
+    """Accessibility of each mitochondrial residue, the burial-matched non-contact control, columns and occupancy."""
     from .mitoport import burial
-    burial.main(cif, work / "contacts.tsv", data, tree, quality, work)
+    cx = _complex(complex_); work = work or cx.work
+    burial.main(cif or cx.cif, work / "contacts.tsv", data, tree, quality, work, cx)
 
 
 @mitoport_app.command("partners")
 def mitoport_partners(
-    cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
-    nucaln: Annotated[Path, typer.Option("--nucaln", help="the vertebrate alignments of complex IV's nuclear subunits (`iface-align` on the partners' selections)")] = paths.PARTNERS / "aln",
+    cif: CifOpt = None, data: Build = paths.BUILD, work: IfaceDir = None,
+    nucaln: Annotated[Path, typer.Option("--nucaln", help="the vertebrate alignments of the complex's nuclear subunits (`iface-align` on the partners' selections)")] = paths.PARTNERS / "aln",
     composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
     tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
-    out: Out = paths.MITOPORT_OUT,
+    out: Annotated[Optional[Path], typer.Option("--out", help="folder the tables are written to; data/output/mitoport for complex IV, data/output/mitoport/complex-<complex> for the others, when omitted")] = None,
     classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia, Aves, Actinopterygii, Reptilia)")] = None,
+    complex_: ComplexOpt = "IV",
 ) -> None:
-    """H12: discordance of the two sides of complex IV's mito-nuclear contacts against lifespan, class by class."""
+    """H12, H14: discordance of the two sides of a complex's mito-nuclear contacts, and against lifespan, class by class."""
     from .longevity.structure_pgls import CLASSES
     from .mitoport import partners
-    partners.main(cif, data, work, nucaln, composition, fourfold, tree, out, tuple(classes or CLASSES))
+    cx = _complex(complex_)
+    partners.main(cif or cx.cif, data, work or cx.work, nucaln, composition, fourfold, tree, out or cx.partners_out,
+                  tuple(classes or CLASSES), cx)
 
 
 @mitoport_app.command("iface-align")
@@ -648,16 +660,29 @@ def mitoport_iface_align(
 
 @mitoport_app.command("iface")
 def mitoport_iface(
-    cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
+    cif: CifOpt = None, data: Build = paths.BUILD, work: IfaceDir = None,
     nucaln: Annotated[Path, typer.Option("--nucaln", help="the alignments of `iface-align`")] = paths.MITOPORT_IFACE_ALN,
     esm: Annotated[Path, typer.Option(help="folder with {mt13,nuclear}-esm2_650m.index.parquet and .residues.npy, from `download prepared --topic residues`")] = paths.EMBEDDINGS,
     skip_esm: Annotated[bool, typer.Option("--skip-esm", help="run without the embeddings: every esm_ column is left empty (not assessed)")] = False,
     tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
-    out: Out = paths.IFACE_OUT,
+    out: Annotated[Optional[Path], typer.Option("--out", help="folder the tables are written to; data/output/mitoport/iface for complex IV, data/output/mitoport/complex-<complex> for the others, when omitted")] = None,
+    complex_: ComplexOpt = "IV",
 ) -> None:
     """Coupling of contact residues with their nuclear partners over species pairs, and lifespan on the contact mismatch."""
     from .mitoport import iface
-    iface.main(work, nucaln, work / "contacts.tsv", cif, data, esm, tree, out, skip_esm)
+    cx = _complex(complex_); work = work or cx.work
+    iface.main(work, nucaln, work / "contacts.tsv", cif or cx.cif, data, esm, tree, out or cx.out, skip_esm, cx)
+
+
+@mitoport_app.command("readouts")
+def mitoport_readouts(
+    complexes_: Annotated[Optional[list[str]], typer.Option("--complex", help="a complex; repeat for several (default: I, III, IV, V)")] = None,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Annotated[Path, typer.Option("--out", help="the table to write")] = paths.MITOPORT_OUT / "contact_readouts.tsv",
+) -> None:
+    """H14: the readouts fixed in advance, per complex, from the tables of `burial`, `iface` and `partners`."""
+    from .mitoport import readouts
+    readouts.main(tuple(complexes_ or ("I", "III", "IV", "V")), tree, out)
 
 
 # --- structure --------------------------------------------------------------------------------

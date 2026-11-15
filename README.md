@@ -117,6 +117,14 @@ uv run mitoage mitoport iface-align               # every nuclear selection, MAF
 uv run mitoage download prepared --topic residues   # the per-residue embeddings, 7.7 GB
 uv run mitoage mitoport iface                     # or --skip-esm: the esm_ columns left empty, not assessed
 
+# H14: the contact maps of complexes I, III and V (H5's design and H12's pairs; on haumea: slurm/job1-contacts.sbatch)
+uv run mitoage download pdb 5XTD 5XTE 8H9S
+uv run mitoage mitoport contacts --complex I && uv run mitoage mitoport burial --complex I   # also III and V
+uv run mitoage download orthologs --gene NDUFV1 ...          # complex I and V subunits (genes.COMPLEX_I_NUCLEAR, COMPLEX_V_NUCLEAR)
+uv run mitoage mitoport iface --complex I --skip-esm          # mammals; no per-residue embeddings for the new genes
+uv run mitoage mitoport partners --complex I                  # vertebrate partners of the subunits that touch
+uv run mitoage mitoport readouts                              # the readouts fixed in advance, every complex
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -266,6 +274,9 @@ audit of H13 (`tests/test_audit.py`, on real records of RefSeq release 237: a re
 conventional and reversed, a rotated one keeps its arrangement, edited bovids are flagged with the kind of edit, the
 translation under the declared code is RefSeq's own, identical records pair; `slurm/job3-audit-mutations.py` breaks
 22 guards one at a time).
+`tests/test_complexes.py` (H14) builds the contact maps of complexes III, IV and V from the structures, checks that
+complex IV's is byte for byte the published one, and tests the readouts; `slurm/job1-contacts-mutations.py` breaks
+each of its guards in turn.
 
 ## Licence
 

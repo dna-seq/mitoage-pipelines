@@ -1,8 +1,9 @@
-"""Do the contact residues of complex IV change with their nuclear partner, and does that differ with lifespan?
+"""Do the contact residues of a complex change with their nuclear partner, and does that differ with lifespan?
 
-Two sides, both taken from the solved human enzyme. Mitochondrial side: the contact residues of COX1-3
+Two sides, both taken from the solved human enzyme (complex IV, 5Z62, as published; I, III and V with
+`--complex`, `complexes.py`). Mitochondrial side: the contact residues of the complex's mitochondrial genes
 against the burial-matched non-contact control of `mitoport burial`. Nuclear side: for each nuclear subunit,
-the residues it uses to touch a mitochondrial one, against its remaining residues.
+the residues it uses to touch a mitochondrial one (in any of its copies), against its remaining residues.
 
 Test 1 (coupling): over species pairs, the distance on one side against the distance on the other, with the
 patristic distance of the dated tree and its logarithm partialled out (Spearman on residuals), for the four
@@ -19,8 +20,12 @@ among the species of the set, the same over the matched control columns, and the
 standardised; phylogenetic regression of log10 maximum lifespan on it with log10 adult mass, Pagel's lambda
 estimated on the model without it. The slope comes with its standard error and 95% interval.
 
-Writes coupling.tsv and lifespan.tsv. Ported from the cluster script `mitoport/iface/iface.py` of 2026-11-14
-without change of method; the interval columns of lifespan.tsv are added here.
+The groups of proteins: the complex's nuclear subunits ("complex <X> partner"), the nuclear subunits of
+complexes IV and III when they are not the partner, complex II, the matrix enzymes, cytochrome c, and the cytosolic
+controls of `genes.CYTOSOLIC_CONTROLS` that have an alignment; any other alignment in the folder is read and left
+in no group. Writes coupling.tsv and lifespan.tsv. Ported from the cluster script `mitoport/iface/iface.py` of
+2026-11-14 without change of method; the interval columns of lifespan.tsv are added here. Complex IV's tables are
+byte for byte what the complex-IV-only version wrote, on a folder holding H5's 62 alignments.
 """
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -34,11 +39,12 @@ from Bio.PDB.Polypeptide import protein_letters_3to1
 from scipy import linalg, optimize, stats
 
 from .. import external
-from ..genes import COMPLEX_II, COMPLEX_III_NUCLEAR, COMPLEX_IV_NUCLEAR, MATRIX
+from ..genes import COMPLEX_II, COMPLEX_III_NUCLEAR, CYTOSOLIC_CONTROLS, MATRIX
 from ..seqio import read_fasta
+from . import complexes
 from .burial import column_of_position
 
-MTG = ["COX1", "COX2", "COX3"]
+MIN_IFACE = 5            # interface columns a subunit needs for its interface distance (`hamd` needs five shared)
 ESM_COLUMNS = ["contact_iface", "control_iface", "contact_other", "control_other", "excess_mt", "excess_nuc",
                "own_contacts_iface"]
 
@@ -134,6 +140,52 @@ def gls(X: np.ndarray, y: np.ndarray, C: np.ndarray, lam: float):
     return b, np.sqrt(np.diag(cov)), df
 
 
+def interface_columns(model, chains: pd.DataFrame, ct: pd.DataFrame, nucaln: Path) -> tuple[dict, dict, dict]:
+    """({gene: its alignment}, {gene: interface columns}, {gene: other columns}) for every nuclear gene of the
+    structure with an alignment <nucaln>/<GENE>.afa holding the human protein. A residue is interface when it is a
+    partner in `ct` (contacts with the mitochondrial reference chains); a gene in several chains (copies) takes the
+    union of its chains' interface residues. Each chain is placed on the human row by a global alignment."""
+    al = PairwiseAligner(mode="global", open_gap_score=-10, extend_gap_score=-0.5)
+    by_gene = {}
+    for r in chains.itertuples():
+        if not r.is_mt and isinstance(r.gene, str):
+            by_gene.setdefault(r.gene, []).append(r.chain)
+    nuc_aln, iface_cols, nuc_cols = {}, {}, {}
+    for g, cids in by_gene.items():
+        p = nucaln / f"{g}.afa"
+        if not p.exists():
+            print(f"  no alignment for {g}, skipped"); continue
+        aln = read_fasta(p); nuc_aln[g] = aln
+        hrow = aln["homo-sapiens"]; hseq = hrow.replace("-", "")
+        col_of_pos = column_of_position(hrow)
+        cols = set()
+        for cid in cids:
+            res = [r for r in model[cid] if r.id[0] == " "]
+            seq = "".join(protein_letters_3to1.get(r.get_resname().upper(), "X") for r in res)
+            a = al.align(seq, hseq)[0]
+            m = {s0 + k: h0 + k + 1 for (s0, s1), (h0, h1) in zip(*a.aligned) for k in range(s1 - s0)}
+            ident = sum(seq[i] == hseq[j - 1] for i, j in m.items()) / len(seq)
+            pos_of_resnum = {r.id[1]: i for i, r in enumerate(res)}
+            touching = sorted({pos_of_resnum[n] for n in ct[ct.partner_chain == cid].partner_resnum.unique() if n in pos_of_resnum})
+            mine = {col_of_pos[m[i]] for i in touching if i in m and m[i] in col_of_pos}
+            cols |= mine
+            print(f"{g} chain {cid}: {len(seq)} residues, identity to the ortholog set's human protein {ident:.3f}; "
+                  f"interface columns {len(mine)}")
+        iface_cols[g] = np.array(sorted(cols), dtype=int)
+        nuc_cols[g] = np.array(sorted(set(col_of_pos.values()) - cols), dtype=int)
+        if len(cids) > 1:
+            print(f"{g}: {len(cids)} chains, interface columns {len(cols)}, other {len(nuc_cols[g])}")
+    return nuc_aln, iface_cols, nuc_cols
+
+
+def usual_size(iface_cols: dict) -> int:
+    """The median number of interface columns over the subunits that have any (30 when none has): the size of the
+    random column sets that stand in for an interface in proteins without one. A subunit that touches no
+    mitochondrial residue (complexes I, III and V have some) does not pull the size down."""
+    sizes = [len(v) for v in iface_cols.values() if len(v) > 0]
+    return int(np.median(sizes)) if sizes else 30
+
+
 # --- the run ------------------------------------------------------------------------------------
 def esm_load(folder: Path, prefix: str):
     idx = pd.read_parquet(folder / f"{prefix}-esm2_650m.index.parquet")
@@ -149,7 +201,10 @@ def esm_missing(folder: Path | None) -> list[str]:
 
 
 def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: Path | None, tree_file: Path,
-         out: Path, skip_esm: bool = False) -> None:
+         out: Path, skip_esm: bool = False, cx: "complexes.Complex | None" = None) -> None:
+    """`cx`: the complex (complex IV when omitted)."""
+    cx = cx or complexes.get("IV")
+    MTG = list(cx.mt)
     out.mkdir(parents=True, exist_ok=True)
     missing = esm_missing(esm)
     if missing and not skip_esm:
@@ -161,35 +216,17 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
     if not use_esm:
         print("NOTE: no per-residue embeddings: every esm_ column of coupling.tsv is left empty, NOT ASSESSED")
     rng = np.random.default_rng(0)
-    CIV, CIII, CII = COMPLEX_IV_NUCLEAR, COMPLEX_III_NUCLEAR, COMPLEX_II
+    CIII, CII = COMPLEX_III_NUCLEAR, COMPLEX_II
 
-    sites = pd.read_csv(work / "sites.tsv", sep="\t")
-    chains = pd.read_csv(work / "chains.tsv", sep="\t")
-    nuc_chain = {r.chain: r.gene for r in chains.itertuples() if not r.is_mt and isinstance(r.gene, str)}
-    ct = pd.read_csv(contacts, sep="\t"); ct = ct[ct.partner_is_mt == 0]
+    sites = pd.read_csv(work / "sites.tsv", sep="\t", dtype={"chain": str})
+    chains = pd.read_csv(work / "chains.tsv", sep="\t", dtype={"chain": str})
+    ct = pd.read_csv(contacts, sep="\t", dtype={"chain": str, "partner_chain": str}); ct = ct[ct.partner_is_mt == 0]
+    unplaced = sites[sites.group.isin(["contact", "control"]) & sites.aln_col.le(0)]
+    if len(unplaced):
+        raise SystemExit(f"{len(unplaced)} contact or control residues have no alignment column (aln_col 0) in "
+                         f"{work / 'sites.tsv'}; refusing to read them as the alignment's last column")
     model = MMCIFParser(QUIET=True).get_structure("x", str(cif))[0]
-    al = PairwiseAligner(mode="global", open_gap_score=-10, extend_gap_score=-0.5)
-
-    nuc_aln, iface_cols, nuc_cols = {}, {}, {}
-    for cid, g in nuc_chain.items():
-        p = nucaln / f"{g}.afa"
-        if not p.exists():
-            print(f"  no alignment for {g}, skipped"); continue
-        aln = read_fasta(p); nuc_aln[g] = aln
-        hrow = aln["homo-sapiens"]; hseq = hrow.replace("-", "")
-        col_of_pos = column_of_position(hrow)
-        res = [r for r in model[cid] if r.id[0] == " "]
-        seq = "".join(protein_letters_3to1.get(r.get_resname().upper(), "X") for r in res)
-        a = al.align(seq, hseq)[0]
-        m = {s0 + k: h0 + k + 1 for (s0, s1), (h0, h1) in zip(*a.aligned) for k in range(s1 - s0)}
-        ident = sum(seq[i] == hseq[j - 1] for i, j in m.items()) / len(seq)
-        pos_of_resnum = {r.id[1]: i for i, r in enumerate(res)}
-        touching = sorted({pos_of_resnum[n] for n in ct[ct.partner_chain == cid].partner_resnum.unique() if n in pos_of_resnum})
-        cols = sorted({col_of_pos[m[i]] for i in touching if i in m and m[i] in col_of_pos})
-        iface_cols[g] = np.array(cols)
-        nuc_cols[g] = np.array(sorted(set(col_of_pos.values()) - set(cols)))
-        print(f"{g} chain {cid}: {len(seq)} residues, identity to the ortholog set's human protein {ident:.3f}; "
-              f"interface columns {len(cols)}, other {len(nuc_cols[g])}")
+    nuc_aln, iface_cols, nuc_cols = interface_columns(model, chains, ct, nucaln)
     for g in CIII + CII + MATRIX + [x.stem for x in sorted(nucaln.glob("*.afa"))]:
         if g in nuc_aln or not (nucaln / f"{g}.afa").exists():
             continue
@@ -241,7 +278,7 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
     mt_by_partner = {}
     for g in MTG:
         s = sites[(sites.gene == g) & (sites.group == "contact")]
-        for p in CIV:
+        for p in cx.nuclear:
             mt_by_partner.setdefault(p, {})[g] = s[[p in str(x).split(",") for x in s.partners]].aln_col.to_numpy() - 1
 
     def mt_side(sp, colsets, metric):
@@ -255,12 +292,11 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
             Ds.append(D / np.nanmean(D))
         return np.nanmean(np.stack(Ds), axis=0)
 
-    groups = {"complex IV partner": CIV, "complex III nuclear": CIII, "complex II (no mt subunit)": CII,
+    groups = {cx.partner_group: cx.nuclear, **dict(cx.groups), "complex II (no mt subunit)": CII,
               "matrix, not respiratory": MATRIX}
-    known = {g for v in groups.values() for g in v} | {"CYCS"}
     groups["cytochrome c"] = ["CYCS"]
-    groups["cytosolic control"] = sorted(g for g in nuc_aln if g not in known)
-    med_iface = int(np.median([len(v) for v in iface_cols.values()])) if iface_cols else 30
+    groups["cytosolic control"] = sorted(g for g in nuc_aln if g in CYTOSOLIC_CONTROLS)
+    med_iface = usual_size(iface_cols)
 
     rows_out = []
     for grp, genes in groups.items():
@@ -318,16 +354,20 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
             line += f"  {col.replace('seq_', 's:').replace('esm_', 'e:')} {d[col].median():+.3f} (p {p:.2g})"
         print(line)
 
+    if cx.anchor not in nuc_aln:
+        print(f"NOTE: no alignment of {cx.anchor}: the lifespan set 'with nuclear partners' is NOT ASSESSED")
     sp_tab = pd.read_parquet(build / "species.parquet")
     qok = set((work / "species.txt").read_text().split())
     lrows = []
     for label, keep in [("all species", None), ("Mammalia", "Mammalia"), ("with nuclear partners", "nuclear")]:
-        sp = sorted(qok & set(mt_aln["COX1"]) & set(tips))
+        sp = sorted(qok & set(mt_aln[MTG[0]]) & set(tips))
         tab = sp_tab[sp_tab.slug.isin(sp)].dropna(subset=["max_longevity_years", "adult_weight_g"])
         if keep == "Mammalia":
             tab = tab[tab["class"] == "Mammalia"]
         if keep == "nuclear":
-            tab = tab[tab.slug.isin(set(nuc_aln["COX4I1"]))]
+            if cx.anchor not in nuc_aln:
+                continue
+            tab = tab[tab.slug.isin(set(nuc_aln[cx.anchor]))]
         sp = sorted(set(tab.slug))
         if len(sp) < 40:
             print(f"  {label}: {len(sp)} species, skipped"); continue

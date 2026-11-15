@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H12) and the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H12, H14), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -132,6 +132,11 @@ flowchart TD
   TREE --> SP
   SP --> T7[structure_pgls.tsv<br/>H12: contact mismatch and hydropathy, class by class]
 ```
+
+Complexes I (5XTD), III (5XTE) and V (8H9S) go through the same steps with `--complex` (H14): their maps in
+`data/interim/mitoport/iface-<complex>`, their tables in `data/output/mitoport/complex-<complex>`; complex IV keeps the
+places above. `mitoport readouts` reads every complex's `sites.tsv`, `coupling.tsv` and `partners_species.tsv` into
+`contact_readouts.tsv`: H14's readouts, fixed in advance.
 
 ## Structural alignments (H10)
 
