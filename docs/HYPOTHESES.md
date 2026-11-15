@@ -425,12 +425,16 @@ The 43 features were fixed before any result was seen:
 
 q is Benjamini-Hochberg over the 43 features, within class, trait set, model and term.
 
-**Run.** Slurm job 6487335 on haumea, from commit 858974b, on build 2 (longevity-genie/mitoage at
-c525adb) and the dated tree of `longevity dated-tree`; the build and tree checksums match the laptop's.
-All 14 tests pass in the job, and a second run reproduces both maturity modes byte for byte. The tables and
-the job log are in `docs/analyses/h11/`. In an earlier version of this test, the site's TypeScript contrast
-code, an independent implementation, gave the same t statistics as the lambda-1 fits, to within 0.017 over
-152 fits.
+**Run.** The numbers below are from build 2 with the EURING birds: longevity-genie/mitoage revision f75bdc9,
+2,344 species. They come from Slurm job 6489877 on haumea, the "after" run of `slurm/manuscript-rerun.sbatch`
+from commit 2ee27a1, with tables in `results/euring/`. The build before EURING (c525adb) was run twice:
+- as job 6487335 from 858974b (tables in `docs/analyses/h11/`). All 14 tests pass in the job, and a second
+  run reproduces both maturity modes byte for byte;
+- as the "before" run, job 6489876.
+`results/euring/comparison.txt` compares the two builds. The mammalian tables are identical: EURING adds only
+bird tips. In birds only the maturity set changes, from 281 to 282 species. In an earlier version of this
+test, the site's TypeScript contrast code, an independent implementation, gave the same t statistics as the
+lambda-1 fits, to within 0.017 over 152 fits.
 
 **Result, mammals.** Every slow trait follows the composition features. The counts are features of 43 at
 q < 0.05:
@@ -459,21 +463,27 @@ The direction is the one the A>G signature on the heavy strand predicts: in gene
 along the slow end. Body mass by itself barely follows composition, so correcting for it changes little.
 Lambda is 0.94 to 1.00, and with lambda fixed at 1 the axes give 31 and 26.
 **Result, birds.**
-- Lifespan follows nothing in any model (one feature, in the 115 species with a birth weight).
+- Lifespan follows nothing in any model, except codon UAU in the 115 species with a birth weight.
 - Gestation, birth weight, mass and both slow-fast axes follow nothing (107 to 175 species).
-- Only age at maturity follows six or seven features, in the opposite direction to the mammalian slow end.
-  Later-maturing birds carry more T and less C in gene sense:
-  - AT skew of the protein-coding genes, -0.74 SD per tenfold maturity (q = 0.017);
-  - codon ACC, -0.69;
-  - codon GCU, +0.92;
-  - AT skew of the whole record, -0.64;
-  - GC skew of the protein-coding genes, +0.54;
-  - T at fourfold sites, +0.58 (q = 0.042).
+- Only age at maturity follows composition, in 282 species: 7 features alone, 8 with mass, and 8 with
+  lifespan and mass. The direction is the opposite of the mammalian slow end: later-maturing birds carry
+  more T and less C in gene sense. With mass, in SD per tenfold maturity:
+  - AT skew of the protein-coding genes, -0.77 (q = 0.013);
+  - codon ACC, -0.71;
+  - codon GCU, +0.94;
+  - AT skew of the whole record, -0.67;
+  - GC skew of the protein-coding genes, +0.55;
+  - T at fourfold sites, +0.60 (q = 0.032);
+  - GC skew of the whole record, +0.51;
+  - codon CUU, +0.63 (q = 0.047).
+- On the build before EURING (281 species), the same signs held, with 7, 6 and 7 features; CUU and the
+  whole-record GC skew were then just above the threshold.
 - Gene sense does not depend on which strand RefSeq deposited, so the reversal is not a strand artefact.
 - Beyond size, the four bird traits do not share one axis: lifespan loads against the other three.
   Including size they do (all positive, 53% of the variance), and that axis follows no feature.
 - With the male age filling a missing female one (`--maturity any`), mammals are unchanged (no mammal
-  gains a value). Three bird rows change status at q < 0.05.
+  gains a value). Birds have 7 features with mass and 7 with lifespan and mass (283 species; 5 each before
+  EURING), with the same signs.
 
 **Reading.**
 - **Mammals:** mtDNA base composition follows the slow life history as a whole. Taken together, the slow
@@ -486,8 +496,9 @@ Lambda is 0.94 to 1.00, and with lambda fixed at 1 the axes give 31 and 26.
 **Limits.**
 - Age at maturity is not generation length as Mikhailova et al. used it (Pacifici et al. 2013), which
   includes part of the reproductive lifespan; generation length is not in the build.
-- Bird traits are coarse and sparse. 72% of the 296 bird maturity ages are whole years, and 129 are exactly
-  365 days. Only 107 birds have all four traits.
+- Bird traits are coarse and sparse. Of the 292 live birds with a female maturity age, 71.9% are whole
+  years and 129 are exactly 365 days. Only 107 birds have all four traits. (An earlier count, 296, included
+  retired records.)
 - Missing traits cost species: in mammals, 527 of 604 have a maturity age, 557 a gestation, 470 a birth
   weight and 439 all three.
 - The bird maturity reversal comes from a screen of 43 features, with no replication.
