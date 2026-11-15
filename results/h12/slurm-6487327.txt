@@ -1,0 +1,127 @@
+commit 858974b71723830eb317986cdae9f71f0b19d9e2
+build: 794c421dfcdc species.parquet
+5Z62: c9401e6cbf48
+dated tree opentree16.1: 2305 species; lifespan quality high or acceptable: 2220 of 2335
+fourfold.tsv: 2316 species
+  chain A: Cytochrome c oxidase subunit 1 (513 residues)
+  chain B: Cytochrome c oxidase subunit 2 (227 residues)
+  chain C: Cytochrome c oxidase subunit 3 (260 residues)
+  chain D: Cytochrome c oxidase subunit 4 isoform 1, mitochondrial (144 residues)
+  chain E: Cytochrome c oxidase subunit 5A, mitochondrial (109 residues)
+  chain F: Cytochrome c oxidase subunit 5B, mitochondrial (98 residues)
+  chain G: Cytochrome c oxidase subunit 6A1, mitochondrial (75 residues)
+  chain H: Cytochrome c oxidase subunit 6B1 (82 residues)
+  chain I: Cytochrome c oxidase subunit 6C (73 residues)
+  chain J: Cytochrome c oxidase subunit 7A2, mitochondrial (56 residues)
+  chain K: Cytochrome c oxidase subunit 7B, mitochondrial (49 residues)
+  chain L: Cytochrome c oxidase subunit 7C, mitochondrial (47 residues)
+  chain M: Cytochrome c oxidase subunit 8A, mitochondrial (43 residues)
+  chain N: Cytochrome c oxidase subunit NDUFA4 (79 residues)
+mitochondrial chains: {'A': 'COX1', 'B': 'COX2', 'C': 'COX3'}
+  COX1 chain A: 513 residues, identity to the human protein 1.000
+  COX2 chain B: 227 residues, identity to the human protein 1.000
+  COX3 chain C: 260 residues, identity to the human protein 1.000
+COX1: 129 of 513 residues touch a nuclear subunit
+COX2: 77 of 227 residues touch a nuclear subunit
+COX3: 92 of 260 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/h12-structure/data/interim/mitoport/iface/contacts.tsv
+COX1 chain A: 513 residues, 513 mapped, identity to the human protein 1.000
+COX2 chain B: 227 residues, 227 mapped, identity to the human protein 1.000
+COX3 chain C: 260 residues, 260 mapped, identity to the human protein 1.000
+species with an alignment, a tip on the dated tree and a lifespan of usable quality: 2174
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  COX1 contact  n=129  rASA alone 0.413  in complex 0.103  occupancy 1.000  identity 0.913
+  COX1 control  n=129  rASA alone 0.336  in complex 0.141  occupancy 1.000  identity 0.994
+  COX1 other    n=255  rASA alone 0.046  in complex 0.033  occupancy 1.000  identity 0.995
+  COX2 contact  n= 77  rASA alone 0.472  in complex 0.108  occupancy 1.000  identity 0.917
+  COX2 control  n= 77  rASA alone 0.468  in complex 0.250  occupancy 1.000  identity 0.881
+  COX2 other    n= 73  rASA alone 0.097  in complex 0.042  occupancy 1.000  identity 0.937
+  COX3 contact  n= 92  rASA alone 0.380  in complex 0.105  occupancy 1.000  identity 0.943
+  COX3 control  n= 92  rASA alone 0.380  in complex 0.271  occupancy 1.000  identity 0.951
+  COX3 other    n= 76  rASA alone 0.091  in complex 0.066  occupancy 1.000  identity 0.990
+wrote /data/uq2347/runs/mitoage/h12-structure/data/interim/mitoport/iface/sites.tsv /data/uq2347/runs/mitoage/h12-structure/data/interim/mitoport/iface/chains.tsv /data/uq2347/runs/mitoage/h12-structure/data/interim/mitoport/iface/species.txt
+5fc36105b0d1384d395b62a81bd17fc4bc9f983f0c2fb43bccb3fe55ded1ac51  data/interim/tree/dated.nwk
+2970b26d8ed02dfa5daea8f93ce0f7e19544fe644097200c8d05c3860b6a26d8  data/output/longevity/composition.tsv
+385e2d230e7209dbd80faca8e1f4902504f6e19e2a4809cf97f0916b3807e822  data/output/longevity/fourfold.tsv
+6f219d3a7d70e10fce1a5fdf8220b46eb813291eba1159376c17f7b1d0f5e4c7  data/interim/mitoport/iface/sites.tsv
+..........................                                               [100%]
+26 passed in 5.55s
+caught: genes not weighted by their columns: tests/test_structure_pgls.py::TestContactMismatch::test_mismatch_is_counted_against_the_classes_own_consensus
+caught: contact plus control instead of minus: tests/test_structure_pgls.py::TestContactMismatch::test_the_test_variable_is_contact_minus_control
+caught: retired records kept: tests/test_structure_pgls.py::TestHydropathy::test_one_column_per_region_and_no_retired_record
+caught: another region read as total_pc: tests/test_structure_pgls.py::TestHydropathy::test_total_gravy_is_the_kyte_doolittle_mean_of_the_amino_acid_content, tests/test_structure_pgls.py::TestHydropathy::test_one_column_per_region_and_no_retired_record
+caught: feature not standardised: tests/test_structure_pgls.py::TestFits::test_a_slope_is_per_standard_deviation_whatever_the_unit
+caught: normal instead of t interval: tests/test_structure_pgls.py::TestFits::test_the_interval_is_the_slope_plus_minus_t_times_se, tests/test_structure_pgls.py::TestFits::test_every_model_of_a_feature_is_fitted_on_the_same_species
+caught: fitted on fewer than MIN_SPECIES values: tests/test_structure_pgls.py::TestFits::test_too_few_values_is_not_assessed_never_dropped
+caught: q over the whole class, not within family and model: tests/test_structure_pgls.py::TestRun::test_q_is_benjamini_hochberg_within_class_family_and_model
+caught: a class too small is dropped: tests/test_structure_pgls.py::TestRun::test_a_class_too_small_is_written_as_not_assessed
+caught: one model reports the class size as its n: tests/test_structure_pgls.py::TestFits::test_every_model_of_a_feature_is_fitted_on_the_same_species
+caught: a missing contact map not refused: tests/test_structure_pgls.py::TestRun::test_a_missing_contact_map_is_refused
+11 of 11 mutations caught; source restored: True
+contact columns: {'COX1': 129, 'COX2': 77, 'COX3': 92} controls: {'COX1': 129, 'COX2': 77, 'COX3': 92}
+Mammalia: all 13 proteins and a lifespan: 625
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and fourfold counts: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia: 604 species in the test (15 other tips under their common ancestor ignored)
+Mammalia: mean mismatch to the class consensus, contact 0.0888, control 0.0789
+Aves: all 13 proteins and a lifespan: 415
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 402
+Aves: and body mass: 382
+Aves: and fourfold counts: 382
+Aves: and a tip in the dated tree: 379
+Aves: 379 species in the test (40 other tips under their common ancestor ignored)
+Aves: mean mismatch to the class consensus, contact 0.0651, control 0.0578
+Actinopterygii: all 13 proteins and a lifespan: 892
+Actinopterygii: default dataset (live; lifespan quality high or acceptable; not estimated): 826
+Actinopterygii: and body mass: 235
+Actinopterygii: and fourfold counts: 235
+Actinopterygii: and a tip in the dated tree: 235
+Actinopterygii: 235 species in the test (649 other tips under their common ancestor ignored)
+Actinopterygii: mean mismatch to the class consensus, contact 0.0563, control 0.0344
+Reptilia: all 13 proteins and a lifespan: 128
+Reptilia: default dataset (live; lifespan quality high or acceptable; not estimated): 125
+Reptilia: and body mass: 97
+Reptilia: and fourfold counts: 97
+Reptilia: and a tip in the dated tree: 97
+Reptilia: 97 species in the test (458 other tips under their common ancestor ignored)
+Reptilia: mean mismatch to the class consensus, contact 0.2348, control 0.1476
+    family          class   n  tests  q_below_005  smallest_p  smallest_q
+  contacts       Mammalia 604      3            0       0.353       0.825
+  contacts           Aves 379      3            0      0.0215      0.0646
+  contacts Actinopterygii 235      3            0       0.599       0.843
+  contacts       Reptilia  97      3            0      0.0314      0.0521
+hydropathy       Mammalia 604     14            2    0.000952      0.0133
+hydropathy           Aves 379     14            0     0.00563      0.0788
+hydropathy Actinopterygii 235     14            0      0.0466       0.502
+hydropathy       Reptilia  97     14            0      0.0725       0.655
+rerun: identical bytes
+/data/uq2347/runs/mitoage/h12-structure/data/input/mitoage/mtdna_structure.parquet: 2335 species, 33 numeric features
+records naming a long-read technology: 0  (the long-read-only subset cannot be tested on this build)
+         class      subset                       feature   n  lambda  spearman_rho  spearman_p  slope_per_sd      se     t       p     q
+      Mammalia all_records              g4_reverse_total 604   0.959        0.0775      0.0569        0.0165 0.00585  2.82 0.00491 0.162
+Actinopterygii all_records      mirror_repeats_major_arc 198    0.81        -0.158      0.0266       -0.0578  0.0209 -2.76 0.00636  0.21
+      Reptilia all_records        str_dinucleotide_total  97   0.736        -0.189      0.0633        0.0731   0.028  2.61  0.0105 0.163
+      Reptilia all_records               str_bases_total  97   0.736        -0.159       0.121        0.0725  0.0278   2.6  0.0107 0.163
+      Reptilia all_records          mirror_repeats_total  97   0.736          0.14       0.172        0.0563  0.0227  2.48  0.0148 0.163
+          Aves all_records          g4_forward_major_arc 332   0.502        0.0902       0.101        0.0206 0.00907  2.27  0.0236 0.421
+          Aves all_records              g4_forward_total 379   0.502         0.122      0.0171        0.0195 0.00871  2.24  0.0255 0.421
+Actinopterygii all_records longest_homopolymer_major_arc 198    0.81         0.107       0.135       -0.0393  0.0183 -2.14  0.0336 0.544
+      Mammalia all_records   contact_zone_inverted_pairs 602   0.959        -0.181    8.26e-06        0.0114 0.00535  2.13  0.0337 0.557
+      Reptilia all_records     contact_zone_mirror_pairs  96   0.736        0.0494       0.633        0.0584  0.0275  2.12  0.0366 0.302
+          Aves all_records          direct_repeats_total 379   0.502         0.132      0.0103       -0.0254  0.0123 -2.07  0.0387 0.426
+      Reptilia all_records    str_dinucleotide_major_arc  82   0.736        -0.126       0.258        0.0598  0.0306  1.95  0.0543 0.306
+      Reptilia all_records           str_bases_major_arc  82   0.736        -0.152       0.173          0.06  0.0309  1.94  0.0556 0.306
+Actinopterygii all_records    inverted_repeats_major_arc 198    0.81       -0.0223       0.755       -0.0427   0.023 -1.86  0.0647 0.544
+Actinopterygii all_records        str_dinucleotide_total 235    0.81         0.229     0.00039        0.0362  0.0196  1.85  0.0659 0.544
+          Aves all_records   contact_zone_inverted_pairs 368   0.502       -0.0177       0.735         0.017 0.00936  1.82  0.0693 0.572
+      Reptilia all_records longest_homopolymer_major_arc  82   0.736       -0.0537       0.632        0.0449  0.0246  1.83  0.0719 0.339
+      Mammalia all_records       purine_tracts_major_arc 530   0.959       -0.0222        0.61        0.0121 0.00714   1.7  0.0906 0.729
+      Reptilia all_records              g4_forward_total  97   0.736         0.185      0.0702        0.0467  0.0278  1.68  0.0968 0.375
+Actinopterygii all_records                  major_arc_bp 198    0.81          0.21     0.00298       -0.0275  0.0166 -1.66  0.0993 0.655
+
+132 tests; q < 0.05 in 0
+cdbd63127ff80e6339b55a614f0387fe49469c9046d2d8a99fa818d2b0eeb202  data/output/longevity/structure_pgls.tsv
+5065393b5fe6212f3ffad8a1345d256ced074cd58366be24bad96dfd544bd5f2  data/output/longevity/motif_pgls.tsv

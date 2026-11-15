@@ -177,6 +177,8 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 - **Identical bytes**: `controls`, `fourfold`, `composition`, `sites`, `pgls` (mammals and birds, on the
   dated tree and on a gene-built tree), `peptides pilot`, `relax-prep`, `coevol-prep`, `mitoport select`.
 - **Identical bytes on a rerun of 2026-11-15**: `longevity generation-time` (both maturity modes).
+- **Identical bytes on a rerun, on haumea, 2026-11-15**: `longevity structure-pgls` (H12); `longevity motif-pgls`
+  gives the table H8 reports byte for byte.
 - **Equal to the second decimal**: `mitoport erc` (compared on the gene-built tree's topology, as first run). MAFFT with several threads and IQ-TREE without a seed are
   not repeatable run to run; the group medians move by at most 0.002. `--threads 1` and `--seed` make them so.
 - **Does not reproduce**: HyPhy RELAX. On identical inputs a second run of ATP8 gave K = 1.90, p = 0.20

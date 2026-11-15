@@ -453,9 +453,51 @@ the new tests, nothing had been run):
 burial`, `longevity controls`, `fourfold`, `dated-tree`), into `structure_pgls.tsv`; on haumea,
 `slurm/structure-pgls.sbatch`, which also runs `motif-pgls`, the tests, a check that each test fails when the
 code it guards is broken, and a rerun. The build is longevity-genie/mitoage at c525adb.
-**Result.** Pending: the job runs on the cluster. One thing was seen before the run: while the tests were being
-written, a failing assertion printed three q values of the bird contact family under the primary model (0.14,
-0.17, 0.36). The features and the model above were written down before that and were not changed after it.
+**Run.** Slurm job 6487327 on haumea, 2026-11-15, from commit 858974b; tables and log in `results/h12/`. The
+26 tests of `test_structure_pgls.py` and `test_motif_pgls.py` pass, each of 11 deliberate breaks of
+`structure_pgls.py` makes a test fail, and a second run of `structure-pgls` gives the same bytes. The contact map
+(`sites.tsv`) is byte-identical to H5's cluster run. `motif_pgls.tsv` is byte-identical to the table H8 reports.
+`composition.tsv` differs from the laptop's only in the last bit of log10 lifespan and mass (at most 9 x 10^-16).
+**Species.** Mammals 604, birds 379, ray-finned fishes 235 (most fishes lack a body mass), reptiles 97.
+**Result, contact mismatch (H9 in every class): no class.** Slopes are log10 years per standard deviation of
+mismatch, primary model (mass and composition):
+
+| Class | Contact minus control | 95% interval | q | Contact alone | q |
+|---|---|---|---|---|---|
+| Mammals (604) | -0.007 | [-0.029, +0.015] | 0.83 | +0.006 | 0.83 |
+| Birds (379) | -0.014 | [-0.037, +0.009] | 0.24 | -0.044 (p = 0.02) | 0.065 |
+| Ray-finned fishes (235) | -0.015 | [-0.071, +0.041] | 0.84 | -0.006 | 0.84 |
+| Reptiles (97) | -0.107 (p = 0.035) | [-0.207, -0.008] | 0.052 | -0.112 (p = 0.03) | 0.052 |
+
+The mammalian interval is H9's again. Birds bound the contact-specific effect to at most about 8% shorter or 2%
+longer maximum lifespan per standard deviation. Contact mismatch alone leans negative in birds and reptiles,
+but so does mismatch at the burial-matched controls (birds -0.032, reptiles -0.082). That points to overall
+divergence from the class consensus, not the contacts, and nothing passes q < 0.05. The reptile class is
+diverse (mean mismatch to its consensus 0.23 at contacts, against 0.06 to 0.09 elsewhere), and 97 species is
+the smallest set. With mass only, the same picture holds (smallest q 0.056, reptiles).
+**Result, hydropathy (GRAVY): mammals yes, two of 14 genes; birds no.** Mammals, primary model: GRAVY of ND5
+-0.026 per SD ([-0.042, -0.011], p = 0.001, q = 0.013) and of ND6 +0.030 ([+0.010, +0.050], p = 0.003,
+q = 0.024). That is about 6% shorter and 7% longer maximum lifespan per standard deviation; the other 12 genes
+and the total have q >= 0.07 (total -0.029, p = 0.016). With mass only, five pass: ND5 (q = 0.003), the total
+of the 13 (-0.038, q = 0.003), ND6, ND1 and ND2 (q 0.005 to 0.023). Fourfold composition takes about a quarter
+of the total's slope and the significance of ND1, ND2 and the total. Birds, primary model: nothing (smallest
+COX2 +0.029, p = 0.006, q = 0.079); with mass only COX2 passes alone (q = 0.027), so it is not counted. Fishes
+and reptiles: nothing (smallest q 0.23 and 0.66).
+**Result, H8 motifs class by class (rerun, unchanged): no class.** Smallest q: mammals 0.16
+(G-quadruplexes on the reverse strand, +0.017 per SD, p = 0.005, 604 species), birds 0.42 (forward-strand
+G-quadruplexes, p = 0.024, 379), fishes 0.21, reptiles 0.16; 0 of 132 at q < 0.05.
+**Reading.** No structural finding follows lifespan in birds. In mammals, mismatch at complex IV's contacts
+and the motif features show nothing. The two genes whose hydropathy passes go in opposite directions: ND5,
+like the total, is less hydrophobic in longer-lived mammals, and ND6, the only protein read from the other
+strand, is more so. One strand-wide mutational bias would push the amino acids of a gene read from the opposite
+strand the opposite way, and the fourfold covariate is taken over the 12 genes read from the same strand, so it
+does not cover ND6. That fits what H1 and H11 find for composition in mammals, rather than selection on the
+proteins' fold. This is a reading, not a test. It is two of 14 features in one class, with no replication, and
+it is not shared with birds.
+**Seen before the run.** While the tests were being written, a failing assertion printed three q values of the
+bird contact family (0.136, 0.165, 0.360). The run shows they were the mass-only model's (an earlier version of
+this entry wrongly named the primary model). The features and the model above were written down before that and
+were not changed after it.
 **Not assessed, and why.**
 - H10's predicted structures exist for 62 mammals only, and H10 is a check of the alignments with no lifespan
   hypothesis attached. Birds would need about 379 x 13 foldings, some 20 GPU-hours on an A100 at H10's rate.
