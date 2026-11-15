@@ -1,0 +1,68 @@
+commit 49d52d552142fd5079c7fb8969ed4d55be989f34
+build: 794c421dfcdc species.parquet
+audit records: not in the release (status retired): 18 (first: NC_012323.1)
+audit records: sequence read from the CONTIG-only download: 6 (first: NC_053523.1)
+2335 species, 2317 records in the release -> /data/uq2347/runs/mitoage/job3-audit/data/interim/audit/records.parquet; input hashes -> /data/uq2347/runs/mitoage/job3-audit/data/output/audit/inputs.tsv
+audit strand: conventional: 2201 (first: abbottina-rivularis)
+audit strand: mixed: 1 of 13 copies against the convention: 7 (first: anguis-fragilis)
+audit strand: reversed: 3 (first: dasycercus-cristicauda)
+audit strand: unknown: outside Vertebrata: the convention is the vertebrates': 106 (first: acanthosepion-esculentum)
+audit strand: unknown: the record is not in the RefSeq release read: 18 (first: aegypius-monachus)
+orientation
+conventional    2201
+mixed              7
+reversed           3
+unknown          124
+audit order: no tRNA annotated: the full arrangement is unknown: 1 (first: crocidura-russula)
+audit order: the record is not in the RefSeq release read: 18 (first: aegypius-monachus)
+status
+full          2316
+genes only       1
+unknown         18
+flagged: 71 (full 53, genes 18)
+audit code: no record: 18 (first: aegypius-monachus)
+code match: {'unknown': 18, 'yes': 2317}; neither code clean: {'no': 2316, 'unknown': 18, 'yes': 1}
+audit duplicates: in no alignment (not compared): 19 (first: aegypius-monachus)
+audit duplicates: no order in the build: 43 (first: abudefduf-saxatilis)
+audit duplicates: no order in the build; no other record of its class compared: 1 (first: macrostomum-lignano)
+audit duplicates: no other record of its order compared: 33 (first: aegotheles-cristatus)
+audit duplicates: no other record of its order compared; no other record of its class compared: 6 (first: branchiostoma-belcheri)
+2316 records compared; pairs at identity >= 0.99: 84 ({'same family, different genus': 9, 'same genus': 75}); same sequence: 0; out of order: 136, out of class: 4
+............................                                             [100%]
+28 passed in 23.06s
+caught: ND6 not on the other strand: tests/test_audit.py::test_reverse_complement_flips_the_class_and_the_skew, tests/test_audit.py::test_one_gene_on_the_other_strand_is_mixed
+caught: too few genes still classified: tests/test_audit.py::test_missing_annotation_is_unknown_not_conventional
+caught: the convention applied outside Vertebrata: tests/test_audit.py::test_outside_vertebrata_is_unknown
+caught: no reversed class: tests/test_audit.py::test_reverse_complement_flips_the_class_and_the_skew
+caught: every record called vertebrate: tests/test_audit.py::test_outside_vertebrata_is_unknown
+caught: an empty order kept as a group named "": tests/test_audit.py::test_every_species_has_a_row_and_its_own_record
+caught: reverse complement keeps the strand: tests/test_audit.py::test_reverse_complement_flips_the_class_and_the_skew, tests/test_audit.py::test_reverse_complement_keeps_the_unoriented_arrangement, tests/test_audit.py::test_an_edited_record_is_flagged_with_what_differs[reverse-tiers0-reversed deposit], tests/test_audit.py::test_an_inserted_stop_is_counted_once_and_survives_reverse_complement
+caught: the other strand read without reversing the order: tests/test_audit.py::test_reverse_complement_keeps_the_unoriented_arrangement, tests/test_audit.py::test_an_edited_record_is_flagged_with_what_differs[reverse-tiers0-reversed deposit]
+caught: not canonical by rotation: tests/test_audit.py::test_rotation_does_not_change_the_arrangement
+caught: families of two flagged: tests/test_audit.py::test_a_family_of_two_is_too_small_to_share_one
+caught: a tRNA-less record given a full arrangement: tests/test_audit.py::test_a_trna_less_record_has_no_full_arrangement
+caught: a reversed deposit called a rearrangement: tests/test_audit.py::test_an_edited_record_is_flagged_with_what_differs[reverse-tiers0-reversed deposit]
+caught: strand differences not told apart: tests/test_audit.py::test_an_edited_record_is_flagged_with_what_differs[strand-tiers1-strand only]
+caught: the terminal codon counted: tests/test_audit.py::test_translation_under_the_declared_code_is_refseqs, tests/test_audit.py::test_the_standard_code_counts_every_internal_tga, tests/test_audit.py::test_an_inserted_stop_is_counted_once_and_survives_reverse_complement, tests/test_audit.py::test_an_unknown_code_is_unknown_not_clean
+caught: one clean code is not enough: tests/test_audit.py::test_neither_clean_has_three_answers
+caught: an unknown code read as clean: tests/test_audit.py::test_an_unknown_code_is_unknown_not_clean
+caught: merged taxids not followed: tests/test_audit.py::test_expected_code_comes_from_the_taxonomy_with_merges
+caught: codon_start ignored: tests/test_audit.py::test_codon_start_sets_the_frame
+caught: compared columns counted as matches: tests/test_audit.py::test_identity_counts_equal_a_count_by_hand, tests/test_audit.py::test_two_identical_records_pair_and_others_do_not, tests/test_audit.py::test_a_record_given_another_order_sits_outside_it
+caught: a looser identity threshold: tests/test_audit.py::test_two_identical_records_pair_and_others_do_not
+caught: own order not required: tests/test_audit.py::test_a_record_given_another_order_sits_outside_it
+caught: tables not sorted: tests/test_audit.py::test_tables_are_sorted_and_rewritten_byte_for_byte
+caught: warnings in the order raised: tests/test_audit.py::test_warnings_are_counted_by_reason
+23 of 23 mutations caught; sources restored: True
+rerun of every audit step: identical bytes
+4f9b2f193374647987aa853886797e7a81b634e2cac3a3239567db6cf2325c5f  data/output/audit/code_genes.tsv
+14864180185a175bdcef4b25fa4b4c9bdd4db919be6cc4e7efb84d34889c5229  data/output/audit/code.tsv
+2929920c0e45f0383c6f70445b52f83beba50bde8c692ba408ae66a6a6df4e8a  data/output/audit/inputs.tsv
+0c2ae72112e2388390b11efd258b0c826bb4aa269081c6a5b691bf69c39e2c0c  data/output/audit/nearest.tsv
+b5a7a2d844bc9e71f725fd45024082e459316d627cf7a93a0cc605373b35c428  data/output/audit/order_arrangements.tsv
+c38261b528ac254e8d2d0f342c1b4283c3c841b4f1cf8adf6d4dfe25d00ce244  data/output/audit/order_counts.tsv
+cf23ae0f7f63a3a0efe8800003334130d27d8f23b8631ab3e01d3e6a35ed41fc  data/output/audit/order_flags.tsv
+62a9f8e9949f206a6d794c48dc77719c242d23860843e8f5c97731b55bf7f604  data/output/audit/order.tsv
+7c1b8b865b1106b3e9427feaafdd30ab8f22bbc2e9d903bdf8ba0307755d67fd  data/output/audit/pairs.tsv
+8b0cd7c2be36eee6573b9b82d7681dff72868f6e95d13762fe12203183a88e03  data/output/audit/strand_summary.tsv
+564bd0958bdb11942e13011df9469a1a26aa1f41cdc01ac3389aaeacb12faacd  data/output/audit/strand.tsv

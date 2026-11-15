@@ -1,0 +1,42 @@
+input	source	sha256
+build/alignments/ATP6.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	58334d4b566a06f9ba6a80d86c6363346bbf878d213b606b54dde70ab76395f2
+build/alignments/ATP6.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	a99ebc677cceb5e1d82c0f43c680590df76548333868f611dbb2e75e11b2b1a7
+build/alignments/ATP8.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	6d06ed7a7b26361c4e7a7379a2c18923aaed648f5357fbbaa7784b3e13a90a65
+build/alignments/ATP8.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	c4c7dc9340db1dbc76267fe579b4d4a2efb590b7c51f581bdc330352171e2234
+build/alignments/COX1.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	87c503b88f0e07ef50de7d5c7f9dd6e3109d8cc02842cb7324b2e2d931141914
+build/alignments/COX1.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	cf1814fe641efbfc082d635c0e0b66532b153be9dd3a12590deb39d53294cebb
+build/alignments/COX2.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	c5cb7690acb30b883dc175442e110b295a614bccd1f369abd859d4617633bc78
+build/alignments/COX2.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	8a98f1a1a8a36e4b7996c24f092ec959787ef58a6324d6ea2f9783d5e45a0b9a
+build/alignments/COX3.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	daba952b8bf1608b346672fe2a19437993db86fdaea6d1f3ed57a3f76635ab47
+build/alignments/COX3.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	2b843a569a1bddea399fc6d28b8de8884f97395e83b4b3a3f031298501dee9e5
+build/alignments/CYTB.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	7bbefe9f6d29f17304d6c22f7c3b69b8aab6c82ffd4eb6e5767180a3052b886d
+build/alignments/CYTB.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	a7c7cad005cfa7c249122d8397b2991ec18c5b1ad34e5c4d4108451aa23b2f7d
+build/alignments/ND1.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	90f27737476b7bd70d4357cc626d409889bf9f37f34c0995e0a5a180cd93ee66
+build/alignments/ND1.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	e1d1eb75b3c93fd06d9fa0b3003c59063d4b40c0ffd9a97f7ece39be647104fb
+build/alignments/ND2.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	84b77d82651ad578e631e95a3b5183a32dea1fa3fe72866a05df8e7d8d17bcb1
+build/alignments/ND2.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	fd0d05ff64d63b0c17298a5d7fd83aeb45d4d87ee170b0a316a947480ce4540d
+build/alignments/ND3.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	5ee0870ce412c81c9855c6f3d2d4f374c0527e0d95d145b50317ad385b019d93
+build/alignments/ND3.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	032e34e4739a36de42039bd38ca5e8e90253900a8654f96f09639f7c5bfaa3f2
+build/alignments/ND4.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	d94ca711ac278775e32c5a6d942b242280455f81e44d815d10a6a63e1f52cf66
+build/alignments/ND4.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	0e65b9e2f00c089f5f7c027e873a8b86a46a7b1170fb51e615d8b50c044631c6
+build/alignments/ND4L.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	13a95bea96eb57f43b556e6f62f63fb94f7733600975735bb8208608bef72e26
+build/alignments/ND4L.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	47ccb9c73f77858c7cfe53dc692ea450851409d90644116f81e253aa9deb0ef0
+build/alignments/ND5.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	a9e759ce1c391026d9e4428ec888a9566910cb17f5db371aaa081a1b4d9a8b46
+build/alignments/ND5.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	bd42956ad9ae11316cd22f2ae230c60c1fd3a7215e2d4c197a4d903efe81540a
+build/alignments/ND6.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	f722952e9186e2a7e67fbfeb33a22541a1f0383eb4584be2c84ba98b8d371fb7
+build/alignments/ND6.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	be42002d0e31057f431ca1e54584a20f8844a1c8755c64f60ff834e1230b2268
+build/mtdna_structure.parquet	longevity-genie/mitoage (download build --revision)	ac6a0cdee44ee541701e1a4c47e8a694b8c429cff2bbdb1d2340d1fa93d4f9bc
+build/region_stats.parquet	longevity-genie/mitoage (download build --revision)	d3ecdffe99fa8dbe0eabfe1942bd5b4e9d40f2f2d8dfeb72bb1851cfc2329314
+build/species.parquet	longevity-genie/mitoage (download build --revision)	794c421dfcdc6df745b82c5f38570970979b3ca2ebf4b61782ac598cadc59cfc
+genbank/contig/NC_044186.1.gb	NCBI efetch gbwithparts (download contig)	262fb2d84eae3ebe5b597f31e7dd0377b3d5d3fed3fa9a341e489c30b6c48ca5
+genbank/contig/NC_046603.1.gb	NCBI efetch gbwithparts (download contig)	097c274792f341e321b13b93386275743e16fc27d708dc1a9e044fae38e69e0d
+genbank/contig/NC_050197.1.gb	NCBI efetch gbwithparts (download contig)	92d4b16b777f8b3ed51f8c1a75ac12fd13978784a346a9aaf145fe7ddc54cf0a
+genbank/contig/NC_053523.1.gb	NCBI efetch gbwithparts (download contig)	dea75a00eb29e6a15b22632a91e2ec9712c8ac33c39864b199e956bc69782ef8
+genbank/contig/NC_054728.1.gb	NCBI efetch gbwithparts (download contig)	de3ebb3b027a4783d5e44370af5484fa95e140d64508c3ee9677bc90ad33ba04
+genbank/contig/NC_059324.1.gb	NCBI efetch gbwithparts (download contig)	064ad0b30408367278a34894d61897b3e7a5eef9c241cbfc29d5594ea38306dd
+genbank/contig/NC_059325.1.gb	NCBI efetch gbwithparts (download contig)	ccf9da8f427bcc4ddb263d3087f42e17e437db3f4ed421afa9357599f6aa9ca0
+genbank/contig/NC_080739.1.gb	NCBI efetch gbwithparts (download contig)	8f32a92f3664732bf96b4411a339f01eb1f517708a683161b7d30dfe8d7e2b12
+genbank/contig/NC_091244.1.gb	NCBI efetch gbwithparts (download contig)	5b4428abeb0206a490c9e09916e27edc576c1246f4f84a778134f6aeb5c3905e
+refseq/release237/mitochondrion.1.genomic.gbff.gz	NCBI RefSeq mitochondrion (pinned md5 matches)	1ccc29d397d27f899ad573a3b876cc8a8e74ff960c4d83e2a66f7d87bcc8161a
+taxdump/current-2026-11-13/merged.dmp	NCBI Taxonomy new_taxdump (download taxonomy)	f2dd756c35b5ec90cf9a99555a024dfd0e0a259f645bfc6e450cea5c617fd00d
+taxdump/current-2026-11-13/nodes.dmp	NCBI Taxonomy new_taxdump (download taxonomy)	12797580d7940d2e8358c705c8d6bb7849e72d2833565629301665c266768360

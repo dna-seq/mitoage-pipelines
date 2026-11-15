@@ -745,7 +745,92 @@ before the second run, and they showed one departure from the rules above: the b
 missing families as an empty string, which the code read as an order (family) named "", so records with no order were
 compared with each other as if they shared one. The rules above already say a record without an order is unknown; the
 code now reads an empty label as missing, and a test checks it. Nothing else was changed after that run.
-**Run.** Not yet run.
+**Run.** Slurm job 6490112 on haumea, 2026-11-15, from commit 49d52d5, build c525adb; tables and log in
+`results/job3-audit/`. The 28 tests pass, 23 of 23 deliberate breaks are caught, and a second run of every step gives
+the same bytes. 2,335 species: 2,317 records are in release 237 (the 2,316 live ones and the retired *Andrias
+davidianus*), 18 retired records are not, and every table carries those 18 as unknown. Everything below is a
+candidate for a person to check, never a verdict.
+**Result, strand: 2,201 conventional, 3 reversed, 7 mixed, 124 unknown** (106 outside Vertebrata, 18 without a
+record). The sign of the GC skew follows the orientation almost without exception: negative in 2,200 of 2,201
+conventional records and positive in all 3 reversed ones; the one conventional record with a positive GC skew is the
+bonefish *Albula vulpes* (NC_082992.1, +0.043), whose genes are laid out conventionally: a reversal of the
+strand asymmetry itself, as has been reported in some fishes (not checked here), not a deposit of the other strand. The AT skew follows less (positive in 2,034 conventional records, negative in 167, most of them fishes).
+Against the build's own orientation column the two agree on every record except where the build asks for all 13
+genes (5 records with one gene not annotated are conventional here and "noncanonical" there), where its chordate
+rule differs (lancelet, ascidian; outside Vertebrata here), and the retired *Andrias davidianus* (unknown in the build,
+conventional here from its record).
+- Reversed (the whole record is the other strand; GC skew +0.27 to +0.28 in each): *Dasycercus cristicauda*
+  NC_057634.1, *Pseudocaranx dentex* NC_058961.1, *Pseudoscaphirhynchus hermanni* NC_058992.1.
+- Mixed: five *Trematomus* records with ND1 alone on the other strand (*T. eulepidotus* NC_057674.1, *T. hansoni*
+  NC_086619.1, *T. loennbergii* NC_048965.1, *T. newnesi* NC_068275.1, *T. nicolai* NC_065826.1; one genus, so a
+  shared annotation source or a real inversion, which the record cannot tell apart); ND6 alone on the + strand in
+  *Anguis fragilis* NC_012431.1 and *Phocoenoides dalli* NC_053753.1.
+**Result, gene order.** With tRNAs: 244 arrangements among 2,316 records (242 when a reversed deposit is not counted
+apart); the commonest holds 61 %. Mammals 42 arrangements in 624 records, birds 26 in 418, ray-finned fishes 70 in
+893, reptiles 28 in 129. Without tRNAs: 74 arrangements among 2,317 records; mammals 4, birds 8, fishes 10. *Crocidura
+russula* NC_056768.1 is the one record with no tRNA annotated (and no rRNA). 71 flags in all, 53 at the full tier and 18
+at the genes tier:
+- Reversed deposits: the three reversed records above and the bivalve *Prolasmidonta heterodon* NC_037431.1.
+- One gene or rRNA missing, extra or moved where the family shares one arrangement: *Pluvialis fulva* NC_033966.1
+  (no CYTB), *Phalacrocorax auritus* NC_052822.1 (no ND6), *Cacatua pastinator* NC_040142.1 and *Turdus philomelos*
+  NC_029147.1 (a second ND6), *Dryobates minor* NC_061952.1 (a second 12S rRNA), *Protonibea diacanthus* NC_024573.1
+  (two 12S, no 16S), *Ostrea edulis* NC_016180.1 (no 12S), *Hemilepidotus gilberti* NC_034653.1 (16S on the other
+  strand), *Trachypenaeus curvirostris* NC_050695.1 (both rRNAs on the other strand), *Galaxiella nigrostriata*
+  NC_008448.1, *Rana amurensis* NC_030042.1 and *Sepioteuthis lessoniana* NC_007894.1 (genes in another order).
+- With tRNAs: 30 records where one to five tRNAs sit on the other strand of an otherwise shared arrangement (tRNA-Gln,
+  -Glu, -Pro, -Ala most often), 14 with tRNAs absent, extra or unresolved (e.g. *Carcharodon carcharias* NC_022415.1,
+  *Galeorhinus galeus* NC_084376.1 with three extra tRNA-Thr, *Paleosuchus palpebrosus* NC_009729.1 missing three), 6
+  with tRNAs placed differently.
+All but the reversed deposits are "cannot tell from the record"; a single tRNA on the other strand in a family of
+identical arrangements looks like an annotation slip, but the audit does not decide it.
+**Result, genetic code: no mismatch.** Every one of the 2,317 records declares the code NCBI Taxonomy assigns to its
+lineage (2: 2,211; 5: 97; 9: 6; 4: 2; 13: 1), and every one states a transl_table. Internal stops: none in 2,316
+records under either code. One record is flagged, neither code clean: *Pelomedusa subrufa* NC_001947.1 (code 2; 6
+internal stops in ND3 and 8 in ND4L). A likely reading, not checked: turtles' ND3 carries an untranslated extra
+nucleotide that an annotation without join() reads through, and ND4L is read out of frame.
+**Result, near-identical pairs: 84 pairs at identity >= 0.99, 15 of them >= 0.999; no two records with the same
+sequence.** 75 pairs are within a genus (congeneric pairs this close are expected among recently split species: e.g.
+*Agapornis lilianae* and *A. pullarius* NC_045369.1/NC_045368.1, identical over 11,346 bases; *Lepisosteus oculatus*
+and *L. platyrhincus* NC_004744.1/NC_029715.1, 1 difference; *Saimiri boliviensis* and *S. sciureus*, 3; *Eubalaena
+australis* and *E. glacialis*, 8; *Bos javanicus* and *B. taurus*, 16). 9 pairs are from different genera, the
+strongest mislabel candidates:
+- *Echis coloratus* NC_060592.1 and *Vipera berus* NC_036956.1: identical over 11,265 bases (*Echis carinatus*
+  NC_060591.1 at 3 differences from both). The *Vipera berus* record sits inside *Echis*.
+- *Anas platyrhynchos* NC_009684.1 and *Tadorna tadorna* NC_024750.1: 5 differences in 11,373 bases (0.99956).
+- *Carcharhinus acronotus* NC_024055.1 and *Negaprion brevirostris* NC_072260.1: 0.99833.
+- *Arius maculatus* NC_045222.1 and *Netuma thalassina* NC_030323.1: 0.99815.
+- *Didelphis marsupialis* NC_057518.1 and *Metachirus nudicaudatus* NC_006516.1: 0.99727.
+- *Catostomus rimiculus* NC_066944.1, *Chasmistes brevirostris* NC_066948.1 and *Deltistes luxatus* NC_054258.1: three
+  pairs at 0.991 to 0.993, the Klamath suckers, among which hybridisation is reported.
+**Result, out-of-place records: 136 out of order, 4 out of class, 102 unknown** (43 records with no order in the build,
+39 alone in their order or class, 19 in no alignment). 86 of the 136 have their nearest neighbour in their own family:
+the build's orders are not one scheme (AnAge's and NCBI's names side by side: Perciformes against Scombriformes,
+Lutjaniformes or Centrarchiformes; Artiodactyla against Cetacea; Soricomorpha against Eulipotyphla), so these say
+the labels disagree, not that a record is misplaced. The other 50 have their nearest neighbour in another family;
+most margins are below 0.02 in amino-acid identity, at the depth where the 13 proteins resolve fish and bird orders
+poorly. The candidates that stand out:
+- *Seriolella porosa* NC_025665.1 (Centrolophidae, Perciformes) and *Piaractus brachypomus* NC_025315.2 (a pacu,
+  Characiformes) are each other's nearest neighbour at 0.975, far above *Seriolella*'s best within its order (0.869):
+  the *Seriolella* record looks like a characiform's.
+- *Neogobius melanostomus* NC_052757.1 (Gobiidae) is nearest to the bonito *Sarda sarda* at 0.919, against 0.845 to
+  any goby-like record; *Psenopsis anomala* NC_021460.1 is in turn nearest to it.
+- *Cookeolus japonicus* NC_082750.1, *Monotaxis grandoculis* NC_010957.1, *Coryphaena equiselis* NC_087992.1,
+  *Pterois volitans* NC_025290.1, *Alepocephalus bairdii* NC_013567.1 (margins 0.06 to 0.03), then birds whose nearest
+  record is a flamingo (*Todus mexicanus* NC_052799.1, *Fregata magnificens* NC_052797.1, *Crotophaga sulcirostris*
+  NC_052800.1, margins about 0.02), where deep bird relationships are the likelier reading.
+- Out of class: the coelacanth and the lungfish (nearest to sturgeons, a scheme effect: Sarcopterygii is a class of
+  its own here) and two bivalves nearest to gastropods at identities below 0.5.
+**Reading.** The records are clean where it matters most for the analyses: every record declares the expected code
+and only one translates with internal stops, 3 of 2,211 vertebrate records are deposited from the other strand (and
+their GC skew says so), and the 13 protein genes keep one arrangement within almost every family. The candidates a
+person should check first are the identical *Vipera berus* / *Echis coloratus* records, *Tadorna tadorna* at mallard
+identity, *Seriolella porosa* at pacu identity, *Neogobius melanostomus* near the bonito, the four reversed deposits
+(which the analyses reading strand-specific composition should orient or leave out), and *Pelomedusa subrufa*'s
+frame. The out-of-order count mostly measures the build's mixed naming of orders, which is worth fixing in the build
+before any analysis groups species by order.
+**What it cannot tell.** Whether a flagged arrangement is a rearrangement or an annotation error; whether a
+near-identical pair is one species, a misidentification or a young pair of species; which record of a pair is the
+mislabelled one. Each needs the specimen or the original submission.
 
 ## H14. In complexes I, III and V too, the coupling belongs to whole proteins, not to the residues that touch (H5's open item)
 

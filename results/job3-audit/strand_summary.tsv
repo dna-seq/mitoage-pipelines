@@ -1,0 +1,42 @@
+group	orientation	records	gc_skew_negative	gc_skew_positive	gc_skew_zero_or_unknown	at_skew_positive	at_skew_negative	at_skew_zero_or_unknown
+Actinopterygii	conventional	886	885	1	0	748	138	0
+Actinopterygii	mixed	5	5	0	0	0	5	0
+Actinopterygii	reversed	2	0	2	0	0	2	0
+Actinopterygii	unknown	2	2	0	0	1	1	0
+Amphibia	conventional	46	46	0	0	33	13	0
+Amphibia	unknown	1	1	0	0	1	0	0
+Ascidiacea	unknown	1	0	1	0	0	1	0
+Asteroidea	unknown	1	1	0	0	1	0	0
+Aves	conventional	418	418	0	0	418	0	0
+Aves	unknown	5	5	0	0	5	0	0
+Bivalvia	unknown	35	2	33	0	2	33	0
+Cephalaspidomorphi	conventional	9	9	0	0	9	0	0
+Cephalaspidomorphi	unknown	1	1	0	0	1	0	0
+Cephalopoda	unknown	11	11	0	0	11	0	0
+Chondrichthyes	conventional	87	87	0	0	74	13	0
+Chromadorea	unknown	2	0	2	0	0	2	0
+Demospongiae	unknown	1	0	1	0	0	1	0
+Echinoidea	unknown	4	4	0	0	2	2	0
+Gastropoda	unknown	9	4	5	0	2	7	0
+Insecta	unknown	4	4	0	0	4	0	0
+Leptocardii	unknown	1	0	1	0	0	1	0
+Malacostraca	unknown	30	29	1	0	12	18	0
+Mammalia	conventional	623	623	0	0	621	2	0
+Mammalia	mixed	1	1	0	0	1	0	0
+Mammalia	reversed	1	0	1	0	0	1	0
+Mammalia	unknown	2	2	0	0	2	0	0
+Merostomata	unknown	1	1	0	0	1	0	0
+Polychaeta	unknown	4	4	0	0	1	3	0
+Reptilia	conventional	128	128	0	0	128	0	0
+Reptilia	mixed	1	1	0	0	1	0	0
+Reptilia	unknown	7	7	0	0	7	0	0
+Rhabditophora	unknown	1	0	1	0	0	1	0
+Sarcopterygii	conventional	4	4	0	0	3	1	0
+Scyphozoa	unknown	1	0	1	0	0	1	0
+all	conventional	2201	2200	1	0	2034	167	0
+all	mixed	7	7	0	0	2	5	0
+all	reversed	3	0	3	0	0	3	0
+all	unknown	124	78	46	0	53	71	0
+all vertebrates	conventional	2201	2200	1	0	2034	167	0
+all vertebrates	mixed	7	7	0	0	2	5	0
+all vertebrates	reversed	3	0	3	0	0	3	0
