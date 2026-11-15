@@ -1,0 +1,86 @@
+commit af5412674fc0f1eb363156fb2fdead8961fab6ab
+build: 794c421dfcdc species.parquet; tree: 64c7265e834f phylogeny.json
+dated tree opentree16.1: 2305 species; lifespan quality high or acceptable: 2220 of 2335
+fourfold.tsv: 2316 species
+5fc36105b0d1384d395b62a81bd17fc4bc9f983f0c2fb43bccb3fe55ded1ac51  data/interim/tree/dated.nwk
+2970b26d8ed02dfa5daea8f93ce0f7e19544fe644097200c8d05c3860b6a26d8  data/output/longevity/composition.tsv
+385e2d230e7209dbd80faca8e1f4902504f6e19e2a4809cf97f0916b3807e822  data/output/longevity/fourfold.tsv
+humanin: rRNA-16S + index 962, rCRS 2633 (published 2634-2707), 24 codons, start ATG, then TAA
+SHLP1: rRNA-16S - index 888, rCRS 2559 (published 2561-2490), 24 codons, start ATG, then TAA
+SHLP2: rRNA-16S - index 497, rCRS 2168 (published 2170-2092), 26 codons, start ATG, then TAA
+SHLP3: rRNA-16S - index 148, rCRS 1819 (published 1821-1707), 38 codons, start ATG, then TAG
+SHLP4: rRNA-16S - index 851, rCRS 2522 (published 2524-2446), 26 codons, start ATG, then TGA
+SHLP5: rRNA-16S - index 1183, rCRS 2854 (published 2856-2785), 24 codons, start ATG, then TAG
+SHLP6: rRNA-16S + index 1319, rCRS 2990 (published 2992-3051), 20 codons, start ATG, then TAA
+MOTS-c: rRNA-12S + index 695, rCRS 1343 (published none), 16 codons, start ATG, then TAG
+MTALTND4: ND4 + index 797, rCRS 11557 (published 11,557 to 11,854), 99 codons, start ATG, then TAA
+MTALTCO1: COX1 + index 185, rCRS 6089 (published 6089 to 6866), 259 codons, start ATT, then TAG
+MENTSH: ND2 + index 506, rCRS 4976 (published start codon ATT holds m.4977 (T4977C)), 18 codons, start ATT, then AGG
+Traceback (most recent call last):
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/bin/mitoage", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/src/mitoage_pipelines/cli.py", line 975, in main
+    app()
+    ~~~^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/main.py", line 1143, in __call__
+    raise e
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/main.py", line 1126, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/_click/core.py", line 809, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/core.py", line 1305, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/core.py", line 332, in _main
+    rv = self.invoke(ctx)
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/core.py", line 1227, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/core.py", line 1227, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/_click/core.py", line 748, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/_click/core.py", line 490, in invoke
+    return callback(*args, **kwargs)
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/typer/main.py", line 1445, in wrapper
+    return callback(**use_params)
+  File "/data/uq2347/runs/mitoage/job4-peptides/src/mitoage_pipelines/cli.py", line 569, in peptides_frames
+    frames.main(data, out)
+    ~~~~~~~~~~~^^^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/src/mitoage_pipelines/peptides/frames.py", line 240, in main
+    kept = summarise(states)
+  File "/data/uq2347/runs/mitoage/job4-peptides/src/mitoage_pipelines/peptides/frames.py", line 249, in summarise
+    g = both.group_by(["peptide", "reading", "class"]).agg(
+        pl.len().alias("species"),
+    ...<8 lines>...
+        pl.col("identity").filter(pl.col("state") == "kept").median().alias("median_identity_kept"),
+    )
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/polars_bio/_frame_metadata.py", line 132, in call
+    result = original(self, *args, **kwargs)
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/polars/dataframe/group_by.py", line 375, in agg
+    ._collect_eager(optimizations=QueryOptFlags._eager())
+     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/polars/lazyframe/frame.py", line 1949, in _collect_eager
+    return _eager_engine().collect(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        self, optimizations=optimizations, background=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/data/uq2347/runs/mitoage/job4-peptides/.venv/lib/python3.14/site-packages/polars/lazyframe/engine.py", line 410, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+polars.exceptions.ComputeError: & on Float64 and Boolean is not supported
+Hint: cast the Boolean to Float64 using pl.Expr.cast().
+
+real	0m14.427s
+user	0m11.863s
+sys	0m2.293s

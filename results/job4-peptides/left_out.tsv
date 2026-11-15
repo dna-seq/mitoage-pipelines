@@ -1,0 +1,6 @@
+name	source	reason
+Gau	Faure et al. 2011, Biology Direct (antisense strand of COX1)	evidence mostly computational; antisense frames of the protein genes are not part of this test
+Kienzle 2023 Table 1 other candidates	PMID 37198654	IP_306387 (172 residues in ND2; MENTSH is its C-terminal end), IP_306398 (ND4, 35), IP_306403 (CYTB, 49) and three antisense frames found by mass spectrometry: candidates with no characterised product (the western blots show other weights or survive loss of mtDNA)
+MASL	PMID 42337615, doi:10.1186/s12979-026-00576-6, 'An immune-associated mitochondrial DNA variant with sex differences reveals a putative novel microprotein called MASL'	31 residues in the D-loop; the build has no alignment of the control region, and the paper gives the sequence only in a figure without coordinates beyond the SNP (G16393A)
+SHLP2b	PMID 37644144, doi:10.1038/s41598-023-41053-0, 'Evidence of natural selection in the mitochondrial-derived peptides humanin and SHLP6'	a computational prediction, no product shown
+SHMOOSE	PMID 36127429, doi:10.1038/s41380-022-01769-3, 'Mitochondrial DNA variation in Alzheimer's disease reveals a unique microprotein called SHMOOSE'	58 residues starting over the serine tRNA and running into ND5 (rs2853499, m.12372, is residue 47); the build aligns no tRNA, so its start and most of its length have no columns

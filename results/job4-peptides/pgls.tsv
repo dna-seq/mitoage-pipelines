@@ -1,0 +1,45 @@
+class	peptide	reading	n	n_kept	n_lost	lambda	slope	se	lo95	hi95	t	p	status	q
+Actinopterygii	MENTSH	own	235	10	225	0.809744	0.0852748	0.0817431	-0.0757899	0.246339	1.04321	0.297953	tested	0.595907
+Actinopterygii	MOTS-c	standard	235	86	149	0.812188	0.0257938	0.0498431	-0.0724159	0.124004	0.517501	0.605306	tested	0.610233
+Actinopterygii	MTALTCO1	own	233	0	233								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	MTALTND4	own	235	21	214	0.804791	-0.079018	0.0598545	-0.196954	0.038918	-1.32017	0.188097	tested	0.595907
+Actinopterygii	SHLP1	standard	235	0	235								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	SHLP2	standard	235	0	235								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	SHLP3	standard	233	2	231								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	SHLP4	standard	234	4	230								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	SHLP5	standard	235	0	235								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	SHLP6	standard	235	231	4								not assessed: under 25 species or 5 kept or lost	
+Actinopterygii	humanin	standard	235	138	97	0.807296	0.0277725	0.0544087	-0.0794332	0.134978	0.510442	0.610233	tested	0.610233
+Aves	MENTSH	own	379	34	345	0.50239	0.0478725	0.0364892	-0.0238777	0.119623	1.31197	0.190339	tested	0.833326
+Aves	MOTS-c	standard	375	251	124	0.485046	-0.00801766	0.0219039	-0.0510898	0.0350545	-0.366038	0.714547	tested	0.833326
+Aves	MTALTCO1	own	376	3	373								not assessed: under 25 species or 5 kept or lost	
+Aves	MTALTND4	own	379	118	261	0.50214	-0.00419291	0.0199108	-0.0433444	0.0349586	-0.210585	0.833326	tested	0.833326
+Aves	SHLP1	standard	378	4	374								not assessed: under 25 species or 5 kept or lost	
+Aves	SHLP2	standard	375	1	374								not assessed: under 25 species or 5 kept or lost	
+Aves	SHLP3	standard	376	3	373								not assessed: under 25 species or 5 kept or lost	
+Aves	SHLP4	standard	379	0	379								not assessed: under 25 species or 5 kept or lost	
+Aves	SHLP5	standard	379	0	379								not assessed: under 25 species or 5 kept or lost	
+Aves	SHLP6	standard	379	369	10	0.502539	0.0405179	0.0593629	-0.07621	0.157246	0.682546	0.495317	tested	0.833326
+Aves	humanin	standard	379	300	79	0.507522	0.0176316	0.0292591	-0.0399018	0.0751651	0.602603	0.547139	tested	0.833326
+Mammalia	MENTSH	own	601	30	571	0.957531	-0.0369935	0.0222312	-0.0806547	0.00666775	-1.66403	0.0966326	tested	0.326337
+Mammalia	MOTS-c	standard	599	286	313	0.957349	0.00655487	0.0162638	-0.0253869	0.0384966	0.403033	0.687069	tested	0.839751
+Mammalia	MTALTCO1	own	604	13	591	0.959711	0.0618565	0.0301321	0.002679	0.121034	2.05285	0.040522	tested	0.222871
+Mammalia	MTALTND4	own	601	123	478	0.955946	0.0264584	0.0120575	0.00277799	0.0501387	2.19436	0.0285957	tested	0.222871
+Mammalia	SHLP1	standard	600	47	553	0.961295	0.0406767	0.0281049	-0.0145203	0.0958738	1.44732	0.148335	tested	0.326337
+Mammalia	SHLP2	standard	600	75	525	0.956827	-0.00873752	0.0178741	-0.0438416	0.0263666	-0.488837	0.625137	tested	0.839751
+Mammalia	SHLP3	standard	602	8	594	0.957508	0.0768226	0.0493712	-0.0201402	0.173785	1.55602	0.120235	tested	0.326337
+Mammalia	SHLP4	standard	602	95	507	0.956538	-0.0142599	0.0195863	-0.0527264	0.0242065	-0.728059	0.466864	tested	0.733643
+Mammalia	SHLP5	standard	602	34	568	0.956929	0.0025711	0.0264604	-0.0493959	0.0545381	0.0971678	0.922626	tested	0.922626
+Mammalia	SHLP6	standard	599	531	68	0.957617	-0.00452553	0.0240146	-0.0516896	0.0426385	-0.188449	0.850589	tested	0.922626
+Mammalia	humanin	standard	602	400	202	0.958063	-0.0155991	0.0119308	-0.0390307	0.00783242	-1.30747	0.191559	tested	0.351191
+Reptilia	MENTSH	own	97	11	86	0.751394	0.0838503	0.0710581	-0.0572979	0.224999	1.18002	0.241066	tested	0.401777
+Reptilia	MOTS-c	standard	97	20	77	0.728429	0.0216077	0.0719093	-0.121231	0.164447	0.300486	0.764492	tested	0.955615
+Reptilia	MTALTCO1	own	96	0	96								not assessed: under 25 species or 5 kept or lost	
+Reptilia	MTALTND4	own	97	22	75	0.7356	-0.000705837	0.0520205	-0.104038	0.102626	-0.0135684	0.989204	tested	0.989204
+Reptilia	SHLP1	standard	97	0	97								not assessed: under 25 species or 5 kept or lost	
+Reptilia	SHLP2	standard	96	0	96								not assessed: under 25 species or 5 kept or lost	
+Reptilia	SHLP3	standard	97	1	96								not assessed: under 25 species or 5 kept or lost	
+Reptilia	SHLP4	standard	97	0	97								not assessed: under 25 species or 5 kept or lost	
+Reptilia	SHLP5	standard	97	0	97								not assessed: under 25 species or 5 kept or lost	
+Reptilia	SHLP6	standard	97	76	21	0.744457	-0.10043	0.0814223	-0.262166	0.0613051	-1.23345	0.220585	tested	0.401777
+Reptilia	humanin	standard	96	23	73	0.734066	0.194344	0.0713087	0.0526767	0.336011	2.72539	0.0077177	tested	0.0385885

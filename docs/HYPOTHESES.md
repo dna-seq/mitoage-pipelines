@@ -978,6 +978,138 @@ and the only conservation numbers seen were H4's):
 `controls`, `fourfold`), into `data/output/peptides/`; on haumea `slurm/job4-peptides.sbatch`, which also runs the
 tests, a check that each test fails when the code it guards is broken (`slurm/job4-peptides-mutations.py`) and a
 second run of every step. Build: longevity-genie/mitoage at c525adb, as H12.
+**Run.** Slurm job 6490085 on haumea, 2026-11-15, from commit 2be936d (job 6490061, from af54126, stopped at
+`frames`: a numpy bool in its rows broke the summary; fixed with a test, nothing else changed); build
+longevity-genie/mitoage c525adb, dated tree from the site repository at 6fe8e72 (dated.nwk byte-identical to H12's).
+Tables and log in `results/job4-peptides/`. The 60 tests of `tests/test_peptides.py` pass, each of 19 deliberate
+breaks of the code makes a test fail, and a second run of every step gives the same bytes for all seven tables. The
+steps take 7 minutes on 8 cores.
+**Catalogue.** Eleven peptides placed, as fixed above; every one read once from the human row and followed by a stop.
+**Question 1, the frame in each species** (`kept.tsv`; published reading; "start" is ATG under the standard code and
+the NCBI start codons under the species' own). Species with the region, open at 90 %, with the start, kept:
+
+Window null, open: H4's statistic, p over stop-free windows of the gene. Shuffle null: synonymous for the three
+protein-gene frames (decisive), dinucleotide for the eight rRNA frames (context only); p's floor is 1/1,001;
+n.a.: under 20 families.
+
+| Peptide (reading) | Class | With the region | Assessed | Open >= 90% | Start codon | Open and start (kept) | Window null, open: p | Shuffle null, kept, one per family: p (q) |
+|---|---|---|---|---|---|---|---|---|
+| humanin (standard) | mammals | 624 | 623 | 557 | 463 | 412 | 0.098 | <= 0.001 (0.002) |
+| humanin (standard) | birds | 418 | 418 | 381 | 357 | 332 | 0.165 | <= 0.001 (0.002) |
+| humanin (standard) | reptiles | 129 | 128 | 65 | 49 | 34 | 0.233 | <= 0.001 (0.002) |
+| humanin (standard) | amphibians | 45 | 45 | 42 | 28 | 26 | 0.068 | n.a. |
+| humanin (standard) | ray-finned fishes | 891 | 891 | 497 | 865 | 478 | 0.402 | <= 0.001 (0.002) |
+| humanin (standard) | cartilaginous fishes | 87 | 87 | 87 | 1 | 1 | 0.154 | 0.385 (0.615) |
+| SHLP1 (standard) | mammals | 624 | 621 | 403 | 53 | 48 | 0.154 | <= 0.001 (0.002) |
+| SHLP1 (standard) | birds | 418 | 417 | 167 | 29 | 5 | 0.531 | 0.130 (0.216) |
+| SHLP1 (standard) | reptiles | 129 | 129 | 43 | 2 | 0 | 0.496 | 1.000 (1.000) |
+| SHLP1 (standard) | amphibians | 45 | 45 | 22 | 3 | 1 | 0.335 | n.a. |
+| SHLP1 (standard) | ray-finned fishes | 891 | 891 | 123 | 7 | 1 | 0.819 | 0.634 (0.976) |
+| SHLP1 (standard) | cartilaginous fishes | 87 | 87 | 67 | 2 | 0 | 0.085 | 1.000 (1.000) |
+| SHLP2 (standard) | mammals | 624 | 621 | 83 | 575 | 77 | 0.817 | <= 0.001 (0.002) |
+| SHLP2 (standard) | birds | 418 | 413 | 91 | 13 | 1 | 0.746 | 1.000 (1.000) |
+| SHLP2 (standard) | reptiles | 129 | 128 | 20 | 0 | 0 | 0.732 | 1.000 (1.000) |
+| SHLP2 (standard) | amphibians | 45 | 45 | 8 | 0 | 0 | 0.656 | n.a. |
+| SHLP2 (standard) | ray-finned fishes | 891 | 890 | 267 | 0 | 0 | 0.607 | 1.000 (1.000) |
+| SHLP2 (standard) | cartilaginous fishes | 87 | 87 | 10 | 0 | 0 | 0.371 | 1.000 (1.000) |
+| SHLP3 (standard) | mammals | 624 | 623 | 72 | 45 | 8 | 0.258 | 0.009 (0.019) |
+| SHLP3 (standard) | birds | 418 | 413 | 106 | 7 | 3 | 0.226 | 0.037 (0.070) |
+| SHLP3 (standard) | reptiles | 129 | 129 | 17 | 4 | 1 | 0.371 | 0.046 (0.084) |
+| SHLP3 (standard) | amphibians | 45 | 45 | 9 | 5 | 1 | 0.177 | n.a. |
+| SHLP3 (standard) | ray-finned fishes | 891 | 889 | 245 | 51 | 7 | 0.226 | 0.055 (0.096) |
+| SHLP3 (standard) | cartilaginous fishes | 87 | 87 | 3 | 0 | 0 | 0.274 | 1.000 (1.000) |
+| SHLP4 (standard) | mammals | 624 | 623 | 108 | 601 | 98 | 0.626 | <= 0.001 (0.002) |
+| SHLP4 (standard) | birds | 418 | 418 | 39 | 3 | 0 | 0.868 | 1.000 (1.000) |
+| SHLP4 (standard) | reptiles | 129 | 129 | 45 | 5 | 0 | 0.416 | 1.000 (1.000) |
+| SHLP4 (standard) | amphibians | 45 | 45 | 33 | 0 | 0 | 0.164 | n.a. |
+| SHLP4 (standard) | ray-finned fishes | 891 | 890 | 488 | 27 | 22 | 0.283 | 0.002 (0.004) |
+| SHLP4 (standard) | cartilaginous fishes | 87 | 87 | 33 | 0 | 0 | 0.247 | 1.000 (1.000) |
+| SHLP5 (standard) | mammals | 624 | 623 | 288 | 39 | 34 | 0.321 | 0.016 (0.032) |
+| SHLP5 (standard) | birds | 418 | 418 | 203 | 0 | 0 | 0.450 | 1.000 (1.000) |
+| SHLP5 (standard) | reptiles | 129 | 129 | 44 | 3 | 2 | 0.506 | 1.000 (1.000) |
+| SHLP5 (standard) | amphibians | 45 | 45 | 15 | 1 | 1 | 0.480 | n.a. |
+| SHLP5 (standard) | ray-finned fishes | 891 | 891 | 748 | 0 | 0 | 0.070 | 1.000 (1.000) |
+| SHLP5 (standard) | cartilaginous fishes | 87 | 87 | 15 | 0 | 0 | 0.362 | 1.000 (1.000) |
+| SHLP6 (standard) | mammals | 624 | 620 | 547 | 620 | 547 | 0.135 | <= 0.001 (0.002) |
+| SHLP6 (standard) | birds | 418 | 418 | 405 | 417 | 405 | 0.108 | <= 0.001 (0.002) |
+| SHLP6 (standard) | reptiles | 129 | 129 | 104 | 129 | 104 | 0.126 | <= 0.001 (0.002) |
+| SHLP6 (standard) | amphibians | 45 | 45 | 43 | 45 | 43 | 0.056 | n.a. |
+| SHLP6 (standard) | ray-finned fishes | 891 | 890 | 864 | 889 | 863 | 0.102 | <= 0.001 (0.002) |
+| SHLP6 (standard) | cartilaginous fishes | 87 | 87 | 74 | 87 | 74 | 0.211 | <= 0.001 (0.002) |
+| MOTS-c (standard) | mammals | 624 | 620 | 331 | 566 | 296 | 0.535 | <= 0.001 (0.002) |
+| MOTS-c (standard) | birds | 418 | 413 | 342 | 334 | 272 | 0.234 | <= 0.001 (0.002) |
+| MOTS-c (standard) | reptiles | 129 | 129 | 62 | 54 | 26 | 0.581 | <= 0.001 (0.002) |
+| MOTS-c (standard) | amphibians | 45 | 45 | 14 | 18 | 7 | 0.738 | n.a. |
+| MOTS-c (standard) | ray-finned fishes | 892 | 892 | 472 | 669 | 327 | 0.662 | <= 0.001 (0.002) |
+| MOTS-c (standard) | cartilaginous fishes | 87 | 87 | 63 | 84 | 62 | 0.353 | <= 0.001 (0.002) |
+| MTALTND4 (own, AGR=R) | mammals | 625 | 622 | 131 | 573 | 125 | 1.000 | 0.844 (1.000) |
+| MTALTND4 (own, AGR=R) | birds | 418 | 416 | 158 | 379 | 133 | 1.000 | 0.103 (0.772) |
+| MTALTND4 (own, AGR=R) | reptiles | 129 | 129 | 32 | 102 | 26 | 0.609 | 0.758 (1.000) |
+| MTALTND4 (own, AGR=R) | amphibians | 45 | 44 | 8 | 31 | 7 | 0.957 | n.a. |
+| MTALTND4 (own, AGR=R) | ray-finned fishes | 893 | 891 | 243 | 378 | 97 | 0.203 | 0.942 (1.000) |
+| MTALTND4 (own, AGR=R) | cartilaginous fishes | 87 | 87 | 2 | 0 | 0 | 1.000 | 1.000 (1.000) |
+| MTALTCO1 (own, AGR=R) | mammals | 625 | 625 | 18 | 386 | 13 | n.a. | 0.338 (1.000) |
+| MTALTCO1 (own, AGR=R) | birds | 418 | 414 | 57 | 19 | 3 | n.a. | 0.998 (1.000) |
+| MTALTCO1 (own, AGR=R) | reptiles | 129 | 128 | 2 | 32 | 0 | n.a. | 1.000 (1.000) |
+| MTALTCO1 (own, AGR=R) | amphibians | 45 | 45 | 0 | 17 | 0 | n.a. | n.a. |
+| MTALTCO1 (own, AGR=R) | ray-finned fishes | 893 | 890 | 4 | 117 | 1 | n.a. | 1.000 (1.000) |
+| MTALTCO1 (own, AGR=R) | cartilaginous fishes | 87 | 87 | 0 | 10 | 0 | n.a. | 1.000 (1.000) |
+| MENTSH (own, AGR stop) | mammals | 625 | 622 | 441 | 34 | 32 | 0.291 | 0.964 (1.000) |
+| MENTSH (own, AGR stop) | birds | 418 | 418 | 342 | 39 | 37 | 0.299 | <= 0.001 (0.015) |
+| MENTSH (own, AGR stop) | reptiles | 129 | 129 | 98 | 12 | 12 | 0.239 | 0.559 (1.000) |
+| MENTSH (own, AGR stop) | amphibians | 45 | 45 | 32 | 6 | 6 | 0.239 | n.a. |
+| MENTSH (own, AGR stop) | ray-finned fishes | 893 | 892 | 592 | 70 | 49 | 0.410 | 0.672 (1.000) |
+| MENTSH (own, AGR stop) | cartilaginous fishes | 87 | 87 | 49 | 7 | 7 | 0.333 | 0.540 (1.000) |
+
+Under the published reading, only SHLP6 is kept in most of every vertebrate class (81 to 97 %), as H4 found;
+humanin is kept in 66 % of mammals, 79 % of birds and 54 % of ray-finned fishes, but in 1 of 87 cartilaginous fishes,
+whose frame is open in all 87 and lacks the ATG; MOTS-c in 48 % of mammals and 66 % of birds. SHLP1 to SHLP5 are kept
+in at most 16 % of any class (SHLP4 in mammals), and mostly in mammals. Of the frames inside protein genes, MTALTND4
+is kept in 20 % of mammals and 32 % of birds; MTALTCO1 in 18 species (13 mammals: human, three macaques and the
+Allen's swamp monkey, five carnivores, a bovid, the treeshrew and the aardvark, plus three birds, the coelacanth and a
+parrotfish; no other great ape, as its authors found), at 41 to 54 % residue identity with human; MENTSH in 5 to 13 % of each
+class. The standard reading of every frame is in `kept.tsv`.
+**Question 2, beyond the host gene.**
+- *Window null, statistic kept (the decisive one): not assessed for every peptide and class.* The genes hold almost
+  no other ORF of the same length that starts with a start codon in human: under the published readings 0 to 9 such
+  windows per peptide (21 only for MOTS-c read with the mitochondrial code, which is not its published reading),
+  under the 20 the entry requires. Under the reading fixed in advance, **no frame can be
+  called kept beyond its host's conservation**; the decisive null could not be run as designed. Requiring a start
+  codon in human was too strict for genes this short; it is not relaxed here after the fact.
+- *Window null, statistic open (H4's), every peptide and class assessed (61 to 345 windows):* nothing passes (smallest
+  p under the published readings 0.027, SHLP4 in Malacostraca; every q >= 0.64, either reading). SHLP6 is open in 88 to 97 % of vertebrate classes against a
+  window mean of 42 to 56 % (p 0.06 to 0.14): H4's result again.
+- *Synonymous null (protein genes), one species per family:* MENTSH in birds is kept in 12 of 102 families against
+  4.0 % expected from the shuffled codons (p <= 0.001, q = 0.015); in no other class (mammals 4.7 % against 8.8 %,
+  p = 0.96). MTALTND4: no class (birds 35 % against 29 %, p = 0.10, q = 0.77). MTALTCO1: no class (mammals 1.9 %
+  against 1.1 %, p = 0.34). At the species level (not read) MENTSH in birds (q = 0.024) and MTALTCO1 in mammals
+  (q = 0.036) pass.
+- *Dinucleotide null (rRNA, context only):* humanin, SHLP6 and MOTS-c are kept far above what their windows'
+  composition gives in every vertebrate class with 20 families (amphibians have 16), humanin except in cartilaginous
+  fishes (mammals, one species per family: SHLP6 86 % against 5.8 %, humanin 58 % against 2.1 %, MOTS-c 48 % against
+  2.4 %); SHLP1, SHLP2, SHLP3 and SHLP5 in mammals only, SHLP4 in mammals and ray-finned fishes (q <= 0.032). As fixed in advance, this says the frames are more open than
+  the rRNA's composition makes them, not that a peptide keeps them: the rRNA's own constraint does that too.
+**Question 3, the tree** (`tree.tsv`, published reading, all species in the tree). SHLP6: kept at the root, 67 losses
+and 15 gains among 2,276 tips (82 changes against 225 for random tips; clustered, p <= 0.001); in mammals 25 losses
+and 6 gains. Humanin: 206 losses and 51 gains (257 changes against 745); MOTS-c 104 losses and 154 gains. The frames
+inside protein genes are lost at the root and arise again and again: MTALTND4 19 losses and 262 gains, MENTSH 4 and
+113, MTALTCO1 0 and 14; SHLP1 to SHLP5 likewise (0 to 5 losses, 15 to 49 gains). Every peptide's changes are
+clustered on the tree overall (p <= 0.001). Read with the window null's failure: what the tree shows for the protein-gene
+frames is many independent openings, not one old frame kept.
+**Question 3, lifespan** (`pgls.tsv`, secondary). Of 25 fits with enough kept and lost species, one passes q < 0.05:
+humanin in reptiles, +0.194 log10 years for species that keep the frame (23 kept, 73 lost; [+0.053, +0.336],
+p = 0.008, q = 0.039, lambda 0.73). In mammals humanin goes the other way (-0.016, p = 0.19), in birds and fishes it
+shows nothing (p 0.55, 0.61). Next smallest q: 0.22 (MTALTND4 in mammals +0.027, p = 0.029; MTALTCO1 in mammals,
+13 kept, +0.062, p = 0.04). One class, the smallest, with no replication: not read as a lifespan signal.
+**Reading.** The published peptides that look kept across species are the three in the most conserved stretches of
+the rRNA genes (SHLP6, humanin, MOTS-c), and for them the only null that can separate the peptide from the rRNA
+could not be run; the open-window version shows them no wider kept than other open windows of their gene. The frames
+inside protein genes (MTALTND4, MTALTCO1, MENTSH) are not kept beyond what the host protein and its codon usage give,
+in any class but one: MENTSH in birds, kept in 12 % of families against 4 % expected. A kept frame is not a
+translated peptide.
+**Not done.** RM16's fourth question (a blind scan of every frame of 20 codons or more); MASL, SHMOOSE and the other
+left-out peptides (`left_out.tsv`); the window null with a criterion that has enough windows (it would be a new
+test, fixed before it is run).
 
 
 ## H16. The published cybrids, simulated: does mismatch at the mito-nuclear contacts predict which complex fails?
