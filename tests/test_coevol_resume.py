@@ -4,9 +4,12 @@ The .param is the published chain 1's own (haumea, rm12/out/coevol-repo, 2026-11
 Coevol writes three files per cycle in this order: it appends a point to .chain, rewrites .param with the new
 size, then appends a line to .trace. The tests build a chain folder around the real .param with that layout and
 kill it between the writes, which is what a time limit or a node failure does."""
+import os
 import signal
 import stat
+import subprocess
 import sys
+import time
 from pathlib import Path
 
 import pytest
@@ -166,9 +169,13 @@ class TestCheckpoints:
 
 # A stand-in for the coevol binary that writes its three files in Coevol's order, one point per cycle, until
 # .run holds 0 or size passes until: enough to exercise the segments, the stop and the checkpoints for real.
+# FAKE_MODE=hang: then waits forever with its files consistent, as rank 0 of Coevol's MPI build does.
+# FAKE_MODE=stuck: after a few points, appends one more to .chain and waits forever there (files inconsistent).
 FAKE = f"""#!{sys.executable}
-import sys, time
+import os, sys, time
 from pathlib import Path
+(Path('.') / "fake.pid").write_text(str(os.getpid()))
+mode = os.environ.get("FAKE_MODE", "")
 sys.path.insert(0, {str(Path(coevol.__file__).parents[2])!r})
 from mitoage_pipelines.longevity import coevol
 name = sys.argv[1]; d = Path('.')
@@ -181,11 +188,17 @@ while (d / f"{{name}}.run").read_text().strip() != "0":
     time.sleep(0.05)
     with (d / f"{{name}}.chain").open("a") as f:
         f.write("".join(f"pF l{{k}}\\n" for k in range({LPP})))
+    if mode == "stuck" and n >= {SIZE} + 2:
+        time.sleep(3600)
     (d / f"{{name}}.param").write_text(p.replace(f"\\t{{until}}\\t{{n}}", f"\\t{{until}}\\t{{n + 1}}"))
     with (d / f"{{name}}.trace").open("a") as f:
         f.write("f\\t0.1\\n")
 (d / f"{{name}}.run").write_text("0\\n")
+if mode == "hang":
+    time.sleep(3600)
 """
+
+FAST = dict(poll_s=0.02, grace_s=0.4)
 
 
 class TestResume:
@@ -198,7 +211,7 @@ class TestResume:
     def test_runs_to_until_with_a_checkpoint_per_segment(self, tmp_path, monkeypatch):
         self.fake(tmp_path, monkeypatch)
         d = make_chain(tmp_path / "out")
-        coevol.resume(d, 1, until=SIZE + 6, segment_hours=0.5 / 3600)
+        coevol.resume(d, 1, until=SIZE + 6, segment_hours=0.5 / 3600, **FAST)
         ok, why, st = coevol.consistency(d, 1)
         assert ok, why
         assert st["size"] == SIZE + 7                  # Coevol stops once size > until
@@ -210,7 +223,7 @@ class TestResume:
         d = make_chain(tmp_path / "out")
         coevol.checkpoint(d, 1)
         kill_after_param(d)
-        coevol.resume(d, 1, until=SIZE + 2, segment_hours=1 / 3600)
+        coevol.resume(d, 1, until=SIZE + 2, segment_hours=1 / 3600, **FAST)
         assert "RESTORED chain1" in capsys.readouterr().out
         ok, why, st = coevol.consistency(d, 1)
         assert ok, why
@@ -221,13 +234,51 @@ class TestResume:
         d = make_chain(tmp_path / "out")
         kill_after_append(d)
         with pytest.raises(RuntimeError):
-            coevol.resume(d, 1, until=SIZE + 2)
+            coevol.resume(d, 1, until=SIZE + 2, **FAST)
 
     def test_stops_when_its_time_is_spent(self, tmp_path, monkeypatch):
         self.fake(tmp_path, monkeypatch)
         d = make_chain(tmp_path / "out")
         coevol.resume(d, 1, until=10**6, stop_after_hours=1.5 / 3600, segment_hours=1 / 3600,
-                      min_segment_hours=0.2 / 3600)
+                      min_segment_hours=0.2 / 3600, **FAST)
         ok, why, st = coevol.consistency(d, 1)
         assert ok, why
         assert SIZE < st["size"] < SIZE + 200
+
+    def test_ends_a_run_that_stops_saving_but_does_not_exit(self, tmp_path, monkeypatch, capsys):
+        """Coevol's MPI build: rank 0 saves its last point and the job never exits. Each segment is ended once its
+        files are consistent and unchanged, checkpointed, and the next one starts, up to `until`."""
+        self.fake(tmp_path, monkeypatch)
+        monkeypatch.setenv("FAKE_MODE", "hang")
+        d = make_chain(tmp_path / "out")
+        coevol.resume(d, 1, until=SIZE + 4, segment_hours=0.3 / 3600, **FAST)
+        assert "ENDED a coevol" in capsys.readouterr().out
+        ok, why, st = coevol.consistency(d, 1)
+        assert ok, why
+        assert st["size"] == SIZE + 5
+        assert int(sorted((d / "checkpoints" / "chain1").iterdir())[-1].name) == SIZE + 5
+
+    def test_does_not_end_a_run_caught_between_its_writes(self, tmp_path, monkeypatch):
+        """A run whose files disagree (stuck between appending to .chain and rewriting .param) is never ended by
+        the guard: killing it there would leave the chain to be restored; the job's time limit does that."""
+        import threading
+        self.fake(tmp_path, monkeypatch)
+        monkeypatch.setenv("FAKE_MODE", "stuck")
+        d = make_chain(tmp_path / "out")
+        (d / "chain1.param").write_text(coevol.set_until(PARAM, SIZE, SIZE + 100))
+        exe = os.environ["COEVOL"]
+        done, failed = [], []
+
+        def segment():
+            try:
+                done.append(coevol.run_segment([exe, "chain1"], d, 1, 0.5 / 3600, SIZE + 100, grace_s=0.3, poll_s=0.02))
+            except subprocess.CalledProcessError as e:            # the kill below
+                failed.append(e)
+        th = threading.Thread(target=segment, daemon=True)
+        th.start()
+        time.sleep(2.5)                                       # asked to stop at 0.5 s, grace 0.3 s
+        assert th.is_alive() and not done, (done, (d / "chain1.log").read_text()[-500:])  # still waiting, not ended
+        assert not coevol.consistency(d, 1)[0]
+        os.kill(int((d / "fake.pid").read_text()), signal.SIGKILL)
+        th.join(10)
+        assert not th.is_alive() and failed and failed[0].returncode == -signal.SIGKILL

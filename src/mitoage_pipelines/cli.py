@@ -504,12 +504,13 @@ def longevity_coevol_resume(
     until: Annotated[int, typer.Option(help="stop once this many points are saved")] = 15000,
     stop_after_hours: Annotated[float | None, typer.Option(help="start no segment that ends after this many hours")] = None,
     segment_hours: Annotated[float, typer.Option(help="hours between checkpoints")] = 6.0,
+    mpi: Annotated[int, typer.Option(help="ranks for Coevol's MPI build under mpirun ($COEVOL must be that build); 0: serial")] = 0,
     out: Out = paths.COEVOL_OUT,
 ) -> None:
     """Continue a Coevol chain from its last saved point, with a checkpoint every segment; a chain whose files
     disagree is restored from its newest checkpoint first (coevol from PATH or $COEVOL). Days of CPU."""
     from .longevity import coevol
-    coevol.resume(out, chain, until, stop_after_hours, segment_hours)
+    coevol.resume(out, chain, until, stop_after_hours, segment_hours, mpi=mpi)
 
 
 @longevity_app.command("branch-rates")

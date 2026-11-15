@@ -150,18 +150,68 @@ def restore(out: Path, chain: int) -> Path:
     return d
 
 
+def run_segment(cmd: list[str], out: Path, chain: int, hours: float, until: int, grace_s: float = 600.0,
+                poll_s: float = 10.0) -> bool:
+    """Run one segment of chain<N>: start `cmd` in `out`, and once `hours` are spent write 0 into chain<N>.run
+    (again at every poll, since Coevol writes 1 there as it starts). Coevol finishes the cycle it is in and exits.
+    The MPI build of Coevol 1.6 does not: rank 0 saves its last point and returns, and the other ranks wait
+    forever. So a run that was asked to stop (or has passed `until`) and whose files have been consistent and
+    unchanged for `grace_s` seconds is ended (its process group terminated), and says so. Coevol's output goes to
+    chain<N>.log. Returns True when the run had to be ended that way; raises if Coevol failed on its own."""
+    import os
+    import signal
+    import subprocess
+    import time
+    run_file = out / f"chain{chain}.run"
+    deadline = time.monotonic() + hours * 3600
+    with (out / f"chain{chain}.log").open("a") as log:
+        print("+", " ".join(map(str, cmd)), flush=True)
+        p = subprocess.Popen([str(c) for c in cmd], cwd=out, stdout=log, stderr=subprocess.STDOUT,
+                             start_new_session=True)
+        try:
+            last, since = None, time.monotonic()
+            while p.poll() is None:
+                time.sleep(poll_s)
+                now = time.monotonic()
+                asked = now >= deadline
+                if asked and run_file.read_text().strip() != "0":
+                    run_file.write_text("0\n")
+                n = saved_points(out, chain)
+                state = (n, (out / f"chain{chain}.chain").stat().st_size)
+                if state != last:
+                    last, since = state, now
+                elif (asked or n > until) and now - since >= grace_s and consistency(out, chain)[0]:
+                    os.killpg(p.pid, signal.SIGTERM)
+                    try:
+                        p.wait(30)
+                    except subprocess.TimeoutExpired:
+                        os.killpg(p.pid, signal.SIGKILL); p.wait()
+                    print(f"chain{chain}: ENDED a coevol that had stopped saving points {grace_s:.0f} s ago "
+                          f"without exiting ({n} points, files consistent)", flush=True)
+                    return True
+        except BaseException:
+            if p.poll() is None:
+                os.killpg(p.pid, signal.SIGKILL); p.wait()
+            raise
+    if p.returncode != 0:
+        raise subprocess.CalledProcessError(p.returncode, cmd)
+    return False
+
+
 def resume(out: Path, chain: int, until: int, stop_after_hours: float | None = None,
-           segment_hours: float = 6.0, min_segment_hours: float = 0.05) -> None:
+           segment_hours: float = 6.0, min_segment_hours: float = 0.05, mpi: int = 0,
+           grace_s: float = 600.0, poll_s: float = 10.0) -> None:
     """Continue chain<N> in `out` until `until` points are saved, in segments of `segment_hours`, with a
     checkpoint after each. A segment ends the documented way (0 into chain<N>.run): Coevol finishes the cycle it
-    is in and exits with its files in agreement. Before the first segment the chain is checked; if its files
-    disagree (a run killed mid-cycle) it is restored from its newest checkpoint, and refused if it has none.
-    With `stop_after_hours` no segment starts that would end after that many hours; a Slurm job gives the run a
-    time limit with room for one cycle (76.6 s on haumea) beyond it; a remainder under `min_segment_hours` is
-    not started."""
-    import threading
+    is in and stops with its files in agreement (see `run_segment` for the MPI build, which has to be ended).
+    Before the first segment the chain is checked; if its files disagree (a run killed mid-cycle) it is restored
+    from its newest checkpoint, and refused if it has none. With `stop_after_hours` no segment starts that would
+    end after that many hours; a Slurm job gives the run a time limit with room for one cycle and the grace
+    beyond it; a remainder under `min_segment_hours` is not started. `mpi` > 0: run the MPI build ($COEVOL)
+    under `mpirun -np <mpi>`."""
     import time
     coevol = external.find("coevol", env="COEVOL")
+    cmd = ([external.find("mpirun"), "-np", str(mpi)] if mpi > 0 else []) + [coevol, f"chain{chain}"]
     for f in INPUTS + (f"chain{chain}.param",):
         if not (out / f).is_file():
             raise FileNotFoundError(f"{out / f} is missing: nothing to resume")
@@ -188,13 +238,7 @@ def resume(out: Path, chain: int, until: int, stop_after_hours: float | None = N
         param = out / f"chain{chain}.param"
         param.write_text(set_until(param.read_text(), size, until))
         print(f"chain{chain}: {size} points saved, running for up to {hours:.2f} h towards {until}", flush=True)
-        timer = threading.Timer(hours * 3600, lambda: (out / f"chain{chain}.run").write_text("0\n"))
-        timer.daemon = True
-        timer.start()
-        try:
-            external.run([coevol, f"chain{chain}"], cwd=out)
-        finally:
-            timer.cancel()
+        run_segment(cmd, out, chain, hours, until, grace_s, poll_s)
         checkpoint(out, chain)
 
 
