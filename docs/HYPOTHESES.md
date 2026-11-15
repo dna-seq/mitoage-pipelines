@@ -542,3 +542,22 @@ were not changed after it.
   Not run.
 - The per-residue ESM-2 embeddings cover 184 mammals and no bird. Not run.
 - H9's partner-specific branch needs nuclear partners, which exist for 176 mammals only.
+**Second round (asked for on 2026-11-15: run what was not assessed unless it takes many hours).** Folding birds
+(about 20 GPU-hours, and no lifespan hypothesis) stays not assessed. Three tests were added, each fixed before any of
+its results, with H12's species, model and correction:
+- *Hydropathy with each gene's own composition.* A third model for the 14 GRAVY features, "mass+own composition":
+  log10 mass and the shares of A, C and U at the fourfold sites of the same region (gene sense) in place of the
+  12-gene composition, which leaves out ND6. Reading fixed in advance: if ND6's (and ND5's) GRAVY slope loses
+  p < 0.05 under its own composition, its signal is read as composition; if q < 0.05 stays, it is not explained by
+  its own fourfold composition.
+- *Discordance of the mito-nuclear contact pairs* (`mitoport partners`). NCBI's vertebrate ortholog sets of the
+  eleven nuclear subunits, one protein per species, MAFFT L-INS-i on one thread. A pair is a COX1-3 contact residue
+  and a nuclear residue within 4.5 A of it in 5Z62; its control keeps the nuclear residue and takes the mito
+  residue's burial-matched control. In a species a pair is discordant when exactly one side differs from its
+  column's consensus among the class's species. Variables: discordance over the contact pairs, over the control
+  pairs, and their difference (the test); a species needs half the contact pairs filled on both sides.
+- *ESM-2 divergence at the contacts* (`structure embed` on a GPU, then `structure-pgls --family embedding`). ESM-2
+  650M per residue on the ungapped COX1-3 of every species H12 tests; per species and gene the mean over the contact
+  residues and over the control residues; the cosine distance of each from the class's mean vector, weighted over
+  the three genes. Variables: contact, control, contact minus control (the test).
+Jobs: `slurm/h12-partners.sbatch` (CPU) and `slurm/h12-embed.sbatch` (GPU, after the first). Results: pending.

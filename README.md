@@ -85,6 +85,14 @@ uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/ali
 uv run mitoage longevity rates
 uv run mitoage longevity motif-pgls      # H8: the build's motif, repeat and contact-zone features, four classes
 uv run mitoage longevity structure-pgls  # H12: complex IV contact mismatch (after `mitoport burial`) and GRAVY, four classes
+# H12, second round: the partners of complex IV in four classes, and ESM-2 at its contacts (GPU, `uv sync --group fold`)
+uv run mitoage download orthologs --ortholog-taxon vertebrata --dest data/input/ncbi-vertebrata --gene COX4I1 ...  # the 11 subunits
+uv run mitoage mitoport select --ncbi data/input/ncbi-vertebrata --out data/interim/mitoport/partners/sel \
+    --class Mammalia --class Aves --class Actinopterygii --class Reptilia
+uv run mitoage mitoport iface-align --sel data/interim/mitoport/partners/sel --out data/interim/mitoport/partners/aln --threads 1
+uv run mitoage mitoport partners          # discordance of the mito-nuclear contact pairs against lifespan
+uv run mitoage structure embed            # ESM-2 650M means at the contact and control residues (a CUDA GPU)
+uv run mitoage longevity structure-pgls --family embedding --out data/output/longevity/embedding
 uv run mitoage longevity generation-time   # H11: lifespan, maturity, gestation, birth weight and the slow-fast axis; mammals and birds (on haumea: slurm/generation-time.sbatch)
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax

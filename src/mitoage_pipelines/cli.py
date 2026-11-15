@@ -107,10 +107,11 @@ def download_orthologs(
     dest: Annotated[Path, typer.Option(help="where the ortholog sets go, one folder per gene")] = paths.NCBI,
     manifest: Annotated[Path, typer.Option(help="the download record")] = paths.MANIFEST,
     force: Annotated[bool, typer.Option("--force", help="download a gene again even when it is there")] = False,
+    ortholog_taxon: Annotated[str, typer.Option("--ortholog-taxon", help="NCBI taxon the ortholog set is filtered to (the published run: mammalia; H12's partner test: vertebrata)")] = "mammalia",
 ) -> None:
-    """Mammalian ortholog sets (protein and CDS) of the nuclear genes, from NCBI Datasets."""
+    """Ortholog sets (protein and CDS) of the nuclear genes from NCBI Datasets; mammalian unless told otherwise."""
     from . import download
-    download.orthologs(gene or gene_lists.NUCLEAR, dest, manifest, skip_existing=not force)
+    download.orthologs(gene or gene_lists.NUCLEAR, dest, manifest, ortholog_taxon=ortholog_taxon, skip_existing=not force)
 
 
 # --- download: the sources of build 2 -----------------------------------------------------------
@@ -323,12 +324,13 @@ def longevity_structure_pgls(
     work: Annotated[Path, typer.Option("--work", help="folder of `mitoport burial` (sites.tsv), for the contacts family")] = paths.MITOPORT_IFACE,
     out: Out = paths.LONGEVITY_OUT,
     classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia, Aves, Actinopterygii, Reptilia)")] = None,
-    families: Annotated[Optional[list[str]], typer.Option("--family", help="contacts (complex IV contact mismatch) or hydropathy (GRAVY); repeat for both (default)")] = None,
+    families: Annotated[Optional[list[str]], typer.Option("--family", help="contacts (complex IV contact mismatch), hydropathy (GRAVY), embedding (needs `structure embed`); repeat for several (default: contacts and hydropathy)")] = None,
+    embed: Annotated[Path, typer.Option("--embed", help="the table of `structure embed`, for the embedding family")] = paths.EMBED_COX,
 ) -> None:
-    """H12: complex IV contact mismatch and protein hydropathy against lifespan, class by class (H1's model)."""
+    """H12: complex IV contact mismatch, protein hydropathy and ESM-2 divergence against lifespan, class by class (H1's model)."""
     from .longevity import structure_pgls
     structure_pgls.main(data, composition, fourfold, tree, work, out,
-                        tuple(classes or structure_pgls.CLASSES), tuple(families or structure_pgls.FAMILIES))
+                        tuple(classes or structure_pgls.CLASSES), tuple(families or structure_pgls.FAMILIES), embed)
 
 
 @longevity_app.command("generation-time")
@@ -521,10 +523,11 @@ def mitoport_overlap(data: Build = paths.BUILD, ncbi: Ncbi = paths.NCBI) -> None
 def mitoport_select(
     data: Build = paths.BUILD, ncbi: Ncbi = paths.NCBI,
     out: Annotated[Path, typer.Option("--out", help="folder for <GENE>.faa and <GENE>.fna")] = paths.MITOPORT_SEL,
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="class of the build whose species are kept; repeat for several (default: Mammalia)")] = None,
 ) -> None:
     """One protein and coding sequence per species and gene from the NCBI ortholog sets."""
     from .mitoport import select
-    select.main(data, ncbi, out)
+    select.main(data, ncbi, out, tuple(classes or ("Mammalia",)))
 
 
 @mitoport_app.command("align")
@@ -599,6 +602,21 @@ def mitoport_burial(
     burial.main(cif, work / "contacts.tsv", data, tree, quality, work)
 
 
+@mitoport_app.command("partners")
+def mitoport_partners(
+    cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
+    nucaln: Annotated[Path, typer.Option("--nucaln", help="the vertebrate alignments of complex IV's nuclear subunits (`iface-align` on the partners' selections)")] = paths.PARTNERS / "aln",
+    composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.MITOPORT_OUT,
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia, Aves, Actinopterygii, Reptilia)")] = None,
+) -> None:
+    """H12: discordance of the two sides of complex IV's mito-nuclear contacts against lifespan, class by class."""
+    from .longevity.structure_pgls import CLASSES
+    from .mitoport import partners
+    partners.main(cif, data, work, nucaln, composition, fourfold, tree, out, tuple(classes or CLASSES))
+
+
 @mitoport_app.command("iface-align")
 def mitoport_iface_align(
     sel: Sel = paths.MITOPORT_SEL, out: Annotated[Path, typer.Option("--out", help="folder for <GENE>.afa")] = paths.MITOPORT_IFACE_ALN,
@@ -646,6 +664,22 @@ def structure_fold(
     """Predicted structures of the 13 proteins with ESMFold2 (needs a CUDA GPU and `uv sync --group fold`)."""
     from .structure import fold
     fold.main(data, species, out, checkpoint, None, samples)
+
+
+@structure_app.command("embed")
+def structure_embed(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    work: IfaceDir = paths.MITOPORT_IFACE,
+    out: Annotated[Path, typer.Option("--out", help="the table to write")] = paths.EMBED_COX,
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: the four of H12)")] = None,
+    model: Annotated[str, typer.Option(help="the ESM-2 checkpoint on Hugging Face")] = "facebook/esm2_t33_650M_UR50D",
+    batch: Annotated[int, typer.Option(help="sequences per forward pass")] = 16,
+) -> None:
+    """H12: ESM-2 650M means of COX1-3 over complex IV's contact and control residues (a CUDA GPU and `uv sync --group fold`)."""
+    from .longevity.structure_pgls import CLASSES
+    from .structure import embed
+    embed.main(data, composition, fourfold, tree, work, out, tuple(classes or CLASSES), model, batch)
 
 
 @structure_app.command("msa")

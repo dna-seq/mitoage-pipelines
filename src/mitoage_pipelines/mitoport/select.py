@@ -26,9 +26,10 @@ def fasta(p: Path):
         yield f"{name} {description}".strip(), seq
 
 
-def main(data: Path, ncbi: Path, out: Path) -> None:
+def main(data: Path, ncbi: Path, out: Path, classes: tuple[str, ...] = ("Mammalia",)) -> None:
+    """`classes`: the classes of the build whose species are kept (the published run: mammals only)."""
     out.mkdir(parents=True, exist_ok=True)
-    sp = pl.read_parquet(data / "species.parquet").filter(pl.col("class") == "Mammalia")
+    sp = pl.read_parquet(data / "species.parquet").filter(pl.col("class").is_in(list(classes)))
     slug = {" ".join(n.split()[:2]): s for n, s in zip(sp["scientific_name"], sp["slug"])}
     for g in gene_dirs(ncbi):
         d = ncbi / g / "ncbi_dataset" / "data"

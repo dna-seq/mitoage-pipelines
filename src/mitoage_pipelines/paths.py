@@ -35,6 +35,7 @@ BUILD = INPUT / "mitoage"                 # the Hugging Face dataset longevity-g
 SITE_TREE = INPUT / "mitoage-site" / "phylogeny.json"   # the build's dated species tree, from the site's repository
 EMBEDDINGS = INPUT / "embeddings"         # ESM-2 embeddings of both partners, mean and per residue (prepared data only)
 NCBI = INPUT / "ncbi"                     # NCBI ortholog sets, one folder per gene: ncbi/<GENE>/ncbi_dataset/data
+NCBI_VERT = INPUT / "ncbi-vertebrata"     # the same for complex IV's nuclear subunits, within vertebrates (H12)
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
 
@@ -69,11 +70,13 @@ MITOPORT_TOPOLOGY = MITOPORT / "topology.nwk"
 MITOPORT_GENES = MITOPORT / "genes.txt"
 MITOPORT_SPECIES = MITOPORT / "species.txt"
 MITOPORT_IFACE_ALN = MITOPORT / "iface_aln"   # every nuclear selection, MAFFT L-INS-i --anysymbol, unfiltered
+PARTNERS = MITOPORT / "partners"          # sel/ and aln/: complex IV's nuclear subunits in four classes (H12)
 MITOPORT_IFACE = MITOPORT / "iface"       # contacts.tsv, sites.tsv, chains.tsv, species.txt: the complex IV contact map
 STRUCTURE = INTERIM / "structure"
 STRUCTURE_PDBS = STRUCTURE / "pdbs"       # <GENE>/<species>.pdb predicted by ESMFold2, plddt.tsv
 STRUCTURE_CHAINS = STRUCTURE / "chains"   # <GENE>.pdb: one chain of a solved human structure per gene
 STRUCTURE_TMP = STRUCTURE / "msa"         # the sequence and structural alignments the check compares
+EMBED_COX = STRUCTURE / "embed_cox.parquet"   # ESM-2 means over complex IV's contact and control residues (H12)
 
 B2_INTERIM = INTERIM / "build2"           # refseq_records.parquet, observations.parquet, matches.parquet, plan.json, ...
 

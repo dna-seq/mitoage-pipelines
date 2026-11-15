@@ -161,3 +161,87 @@ class TestRun:
     def test_a_missing_contact_map_is_refused(self, tmp_path):
         with pytest.raises(SystemExit, match="sites.tsv is missing"):
             sp_.main(paths.BUILD, COMPOSITION, FOURFOLD, paths.DATED_TREE, tmp_path, tmp_path, classes=("Aves",))
+
+
+# --- second round: own composition, embeddings --------------------------------------------------------------------
+EMBED = paths.EMBED_COX
+needs_embed = pytest.mark.skipif(not EMBED.is_file(), reason="needs `mitoage structure embed` (GPU)")
+
+
+@needs_build
+class TestOwnComposition:
+    def test_the_shares_are_the_regions_own_fourfold_counts(self):
+        pgf = pd.read_parquet(paths.BUILD / "protein_gene_features.parquet").set_index(["region", "slug"])
+        own = sp_.own_composition(paths.BUILD)
+        assert set(own) == set(sp_.GRAVY_REGIONS)
+        for r in ("ND6", "ND5", "total_pc"):
+            raw = pgf.loc[r].loc[own[r].index]
+            assert np.allclose(own[r].a, raw.ff_a / raw.ff_sites) and np.allclose(own[r].u, raw.ff_u / raw.ff_sites)
+            g = raw.ff_g / raw.ff_sites
+            assert np.allclose(own[r][["a", "c", "u"]].sum(axis=1) + g, 1)
+
+    def test_the_own_model_has_mass_and_three_shares(self, birds):
+        from scipy import stats
+        sp, C = birds
+        r = pd.DataFrame(sp_.fit_own(sp, sp_.gravy_table(paths.BUILD).reindex(sp.slug), sp_.own_composition(paths.BUILD), C, "Aves"))
+        assert r.model.eq(sp_.OWN).all() and len(r) == len(sp_.GRAVY_REGIONS) and r.status.eq("tested").all()
+        assert np.allclose((r.ci95_high - r.slope_per_sd) / r.se, stats.t.ppf(0.975, r.n - 2 - 4))
+
+    def test_the_own_model_is_the_regression_on_the_raw_counts(self, birds):
+        """ND6 and the total, assembled here from the raw fourfold counts and fitted with aa_pgls.fit."""
+        from mitoage_pipelines.longevity.aa_pgls import fit
+        sp, C = birds
+        g = sp_.gravy_table(paths.BUILD).reindex(sp.slug)
+        r = pd.DataFrame(sp_.fit_own(sp, g, sp_.own_composition(paths.BUILD), C, "Aves")).set_index("feature")
+        pgf = pd.read_parquet(paths.BUILD / "protein_gene_features.parquet")
+        for reg in ("ND6", "total_pc"):
+            raw = pgf[pgf.region.eq(reg)].set_index("slug").reindex(sp.slug)
+            cov = np.column_stack([raw.ff_a / raw.ff_sites, raw.ff_c / raw.ff_sites, raw.ff_u / raw.ff_sites])
+            x = g[f"gravy:{reg}"].to_numpy()
+            ok = np.isfinite(x) & np.isfinite(cov).all(axis=1)
+            z = (x[ok] - x[ok].mean()) / x[ok].std()
+            want = fit(C[np.ix_(ok, ok)], sp.ll.to_numpy()[ok], np.column_stack([z, sp.lm.to_numpy()[ok], cov[ok]]))
+            assert r.loc[f"gravy:{reg}", "slope_per_sd"] == pytest.approx(want["slope"], rel=1e-9)
+            assert r.loc[f"gravy:{reg}", "p"] == pytest.approx(want["p"], rel=1e-9)
+
+
+class TestEmbedHelpers:
+    def test_residue_index_points_at_the_residue_of_each_column(self, alns):
+        from mitoage_pipelines.structure.embed import residue_index
+        for g in sp_.COX:
+            names = list(alns[g])
+            for s in ["homo-sapiens"] + names[:: len(names) // 6]:
+                row = alns[g][s]; seq = row.replace("-", "")
+                cols = range(len(row))
+                assert [seq[i] for i in residue_index(row, cols)] == [c for c in row if c != "-"]
+
+    def test_letters_esm_does_not_know_become_x_and_are_counted(self):
+        from mitoage_pipelines.structure.embed import clean
+        assert clean("MJ*fK") == ("MXXFK", 2)
+
+
+@needs_build
+@needs_sites
+@needs_embed
+class TestEmbedding:
+    def test_divergence_is_the_weighted_cosine_distance_to_the_class_mean(self, birds):
+        sp, _ = birds
+        emb = pd.read_parquet(EMBED)
+        w = {g: len(v) for g, v in sp_.contact_columns(pd.read_csv(SITES, sep="\t"))["contact"].items()}
+        got = sp_.embedding_divergence(emb, list(sp.slug), w)
+        dims = [c for c in emb.columns if c.startswith("e") and c[1:].isdigit()]
+        e = emb[emb.slug.isin(sp.slug)]
+        for s in list(got.dropna().index)[::40]:
+            tot = 0.0
+            for g in sp_.COX:
+                d = e[(e.gene == g) & (e.set == "contact")].set_index("slug")[dims].astype(float)
+                c = d.mean().to_numpy(); x = d.loc[s].to_numpy()
+                tot += (1 - x @ c / np.linalg.norm(x) / np.linalg.norm(c)) * w[g]
+            assert got.loc[s, "contact"] == pytest.approx(tot / sum(w.values()), rel=1e-9)
+        assert np.allclose(got["contact minus control"], got.contact - got.control, equal_nan=True)
+
+    def test_every_tested_species_was_embedded(self, birds):
+        sp, _ = birds
+        emb = pd.read_parquet(EMBED)
+        assert set(sp.slug) <= set(emb.slug)
+        assert emb.groupby(["gene", "set"]).slug.nunique().nunique() == 1
