@@ -18,6 +18,7 @@ MUTATIONS = [
     (A / "strand.py", "the convention applied outside Vertebrata", "    if not vertebrate:", "    if False:"),
     (A / "strand.py", "no reversed class", "    if not agree:", "    if False:"),
     (A / "records.py", "every record called vertebrate", '"vertebrate": "Vertebrata" in h.lineage.split("; "),', '"vertebrate": True,'),
+    (A / "records.py", "an empty order kept as a group named \"\"", "**{c: d[c] or None for c in TAXONOMY_COLUMNS}}", "**{c: d[c] for c in TAXONOMY_COLUMNS}}"),
     (A / "records.py", "reverse complement keeps the strand", "gm.Segment(n - s.end + 1, n - s.start + 1, -s.strand)",
      "gm.Segment(n - s.end + 1, n - s.start + 1, s.strand)"),
     (A / "order.py", "the other strand read without reversing the order",

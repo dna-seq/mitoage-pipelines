@@ -55,6 +55,9 @@ def test_every_species_has_a_row_and_its_own_record(recs):
     gone = recs[~recs.in_release]
     assert (gone.reason != "").all() and gone.genbank.isna().all()
     assert set(sp[sp.record_status != "retired"].slug) <= set(live.slug)       # every live species has its record
+    for c in records.TAXONOMY_COLUMNS:                 # an empty label in the build is a missing one, not a group named ""
+        blank = set(sp.slug[sp[c].fillna("") == ""])
+        assert set(recs.slug[recs[c].isna()]) == blank and not (recs[c] == "").any()
 
 
 # --- strand -----------------------------------------------------------------------------------
@@ -275,6 +278,20 @@ def test_an_inserted_stop_is_counted_once_and_survives_reverse_complement(recs):
     assert {x: rc[x]["stops_declared"] for x in rc} == {x: after[x]["stops_declared"] for x in after}
     row = code.assess(mut, 2)[0]
     assert row["clean_declared"] == "no" and row["neither_clean"] == "yes" and row["genes_with_stops_declared"] == "COX1:1"
+
+
+def test_codon_start_sets_the_frame(recs):
+    """COX1 annotated one base earlier with codon_start 2 reads the same codons and the same stops."""
+    g = genome(recs, HUMAN)
+    shifted = copy.deepcopy(g)
+    f = next(f for f in shifted.record.features if f.key == "CDS" and gm.feature_name(f)[0] == "COX1")
+    assert f.segments[0].strand == 1 and f.qualifiers.get("codon_start", ["1"]) == ["1"]
+    f.segments[0] = gm.Segment(f.segments[0].start - 1, f.segments[0].end, 1)
+    f.qualifiers["codon_start"] = ["2"]
+    a = next(c for c in code.cds_of(g) if c["gene"] == "COX1")
+    b = next(c for c in code.cds_of(shifted) if c["gene"] == "COX1")
+    assert b["nt"] == a["nt"] and b["pos"] == a["pos"]
+    assert code.internal_stops(b, code.code_table(1)) == code.internal_stops(a, code.code_table(1))
 
 
 def test_an_unknown_code_is_unknown_not_clean(recs):

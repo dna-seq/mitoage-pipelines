@@ -73,7 +73,7 @@ def collect(build: Path, release: Path, contig: Path, refuse_unpinned: bool = Tr
         s = pd.Series(d)
         row = {"slug": s.slug, "species_id": s.id, "scientific_name": s.scientific_name, "refseq": s.refseq,
                "record_status": s.record_status, "phylum": s.phylum, "build_transl_table": s.transl_table,
-               **{c: d[c] for c in TAXONOMY_COLUMNS}}
+               **{c: d[c] or None for c in TAXONOMY_COLUMNS}}        # the build writes a missing order as "": missing, not a name
         h = headers.get(s.refseq)
         if h is None:
             warn.add(f"not in the release (status {s.record_status})", s.refseq)

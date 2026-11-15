@@ -731,8 +731,15 @@ swapped, two tRNAs swapped) is flagged in a family of three bovids with the kind
 without the edit; our translation under the declared code equals RefSeq's /translation; under the standard code every
 internal TGA is a stop; a stop written into COX1 is counted once and survives reverse complement; an unknown code and
 a record without code or genes are unknown; two identical records pair at identity 1 and records relabelled into
-another order sit outside it. `slurm/job3-audit-mutations.py` breaks 22 guards one at a time and checks that a test
+another order sit outside it. `slurm/job3-audit-mutations.py` breaks 23 guards one at a time and checks that a test
 fails each time; `slurm/job3-audit.sbatch` runs every step twice and compares the bytes.
+**First run, stopped.** Slurm job 6490037 on haumea, 2026-11-15, from commit 1d5f8aa. Every step ran and the 27 tests
+passed, but the job stopped on its mutation check: 21 of 22 breaks were caught, and ignoring /codon_start was not (a
+test now moves COX1's start one base back with codon_start 2 and asks for the same codons). Its tables were read
+before the second run, and they showed one departure from the rules above: the build writes 44 missing orders and 6
+missing families as an empty string, which the code read as an order (family) named "", so records with no order were
+compared with each other as if they shared one. The rules above already say a record without an order is unknown; the
+code now reads an empty label as missing, and a test checks it. Nothing else was changed after that run.
 **Run.** Not yet run.
 
 ## H14. In complexes I, III and V too, the coupling belongs to whole proteins, not to the residues that touch (H5's open item)
