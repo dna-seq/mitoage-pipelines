@@ -58,7 +58,12 @@ def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, work: P
     device = "cuda" if torch.cuda.is_available() else "cpu"
     tok = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name, add_pooling_layer=False).to(device).eval()
-    commit = getattr(model.config, "_commit_hash", None)
+    try:                       # the snapshot folder of the Hugging Face cache is named by the checkpoint's commit
+        from huggingface_hub import snapshot_download
+        commit = Path(snapshot_download(model_name, local_files_only=True)).name
+    except Exception as e:
+        commit = f"unknown ({type(e).__name__})"
+        print(f"NOTE: the commit of {model_name} could not be read from the cache: {commit}")
     print(f"{model_name} at {commit} on {device}; torch {torch.__version__}; {len(slugs)} species x {len(COX)} genes")
     jobs, replaced = [], 0
     for g in COX:
