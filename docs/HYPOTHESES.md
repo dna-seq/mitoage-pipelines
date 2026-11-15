@@ -14,6 +14,8 @@ recorded lifespan, log10 years. Nothing here is peer reviewed.
   codons) and of the two rRNA genes. `mitoage download build`.
 - Nuclear orthologs of respiratory-complex subunits and of control proteins, from NCBI's ortholog sets.
   `mitoage download orthologs`.
+- Solved structures of the human respiratory complexes from RCSB, each file's SHA-256 recorded.
+  `mitoage download pdb`.
 
 ## H0. The alignments do not depend on the aligner
 
@@ -126,9 +128,19 @@ from each end within each order, at most three per family; tips labelled. `mitoa
 (K = 0.51, p = 0.003). Second draw (48 against 48, a weaker contrast by construction): neither repeats
 (ND3 K = 0.89, p = 0.38; CYTB K = 1.03, p = 0.52); ATP8 appears there only. **No gene shows a difference
 that holds across both draws.** We do not claim the first draw's hits.
-**Open.** Lifespan as a continuous trait on every branch (Coevol on the dated tree; inputs by
-`mitoage longevity coevol-prep`). The RELAX runs above used the gene-built tree for their species tree;
-`relax-prep` now writes the dated one, and the runs have not been repeated on it.
+**Provisional, not to be quoted: Coevol** (lifespan as a continuous trait on every branch, on the dated
+tree; `mitoage longevity coevol-prep`, `longevity coevol --chain 1` and `--chain 2`, `longevity coevol-read`).
+First run on the cluster on 2026-11-14 and 15 by another agent: two chains of 106 mammals (one per family),
+1,100 cycles each, read after a burn-in of 200. The inputs `coevol-prep` writes are byte-identical to that
+run's; the chains themselves were not rerun. They had not mixed when these numbers were read (tracecomp:
+effective sample size 7 for dN/dS and 15 for the likelihood, relative difference between the chains 0.52 and
+0.79; above 100 and small are needed before any of this is quoted), and with that caveat: dS against longevity −0.52 and −0.49 (posterior probability of a positive correlation 0 in
+both chains), dN/dS against longevity +0.45 and +0.44 (0.99); as partial correlations, given the other three
+variables (body mass among them), dN/dS against longevity is +0.28 and +0.32 (0.88 and 0.91) and dS against
+longevity −0.13 and −0.10 (0.07 and 0.14), so the raw dS association went with body mass. The runs need to be
+resumed to convergence; until then the result for lifespan as a continuous trait is not assessed.
+**Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
+dated one, and the runs have not been repeated on it.
 
 ## H4. Peptides encoded inside mtDNA are conserved across species
 
@@ -160,13 +172,42 @@ the mitochondrial COX genes (median correlation +0.14 against +0.01 for 23 cytos
 and not cytochrome b (−0.17). Complex III's nine nuclear subunits against cytochrome b: nothing (−0.11
 against −0.06). On the topology of the tree built from the proteins the same test gave p = 0.0001; the
 direction and size are the same, the dated tree is the one that counts. This reproduces a known phenomenon
-and serves as the method's positive control. **Nothing about lifespan yet.**
+and serves as the method's positive control. Lifespan: H9.
+**Residue level, complex IV only** (`mitoage download pdb 5Z62`, `mitoport contacts`, `mitoport burial`,
+`mitoport iface-align`, `mitoport iface`; into `sites.tsv` and `coupling.tsv`). Every
+residue of COX1, COX2 and COX3 in the human structure 5Z62 was mapped to its column of the MitoAge alignment;
+the three chains match MitoAge's human sequences at identity 1.000. 298 residues touch a nuclear subunit
+(4.5 Å heavy-atom cutoff), and each was matched to a non-contact residue of the same gene by its accessibility
+in the isolated chain. Contact residues are exposed residues (median relative accessibility 0.41 in the
+isolated chain, against 0.05 for the residues that are neither contact nor control) and are less conserved
+than their matched controls (median identity to human 0.922 against 0.971, Mann-Whitney p = 1.5e-05). Column
+occupancy over the 2,174 species with an alignment, a tip and a usable lifespan has median 1.000; 290 of the
+298 contact columns are at 0.99 or above, the lowest (COX1 position 2) at 0.46. Then, per nuclear protein, the
+correlation over pairs of mammals between its distances and the mitochondrial COX distances, patristic
+distance partialled out, with two distances (differing alignment columns; ESM-2 650M per-residue embeddings
+averaged over the column set); 61 proteins, 87 to 182 mammals each (166 to 181 for complex IV's subunits).
+**The group contrast reproduces**: complex IV's eleven nuclear subunits +0.58 (sequence) and +0.42 (ESM)
+against +0.03 and +0.05 for 29 cytosolic controls (p = 7.2e-05 and 1.1e-04); complex III's nine +0.38
+(sequence, p = 0.0011); complex II, which has no mitochondrial subunit, +0.05 (p = 0.94); matrix enzymes
++0.03 (p = 0.56). **The interface prediction fails**: on the mitochondrial side, contact residues couple more
+than their burial-matched controls by +0.049 for complex IV against +0.016 for the controls (sequence,
+p = 0.43; ESM +0.002, p = 0.37); on the nuclear side, interface columns do no better than the rest with the
+sequence distance (−0.022, p = 0.72). With the ESM distance the nuclear interface columns of complex IV do
+couple more than its other columns (+0.051 against +0.004, p = 0.0096, one of many contrasts and uncorrected),
+so the two distances disagree on the nuclear side and this is not assessed further. **Reading.** The coupling
+is a property of whole proteins that share a complex with mtDNA products, not of the residues that touch: it
+is no evidence of compensation at contacts. Complexes I, III and V have no contact map yet, so this is said
+of complex IV only. **Reproduction.** First run on the cluster on 2026-11-14 by another agent; rerun from this
+code on 2026-11-15: the contact map and `sites.tsv` are byte-identical, and `coupling.tsv` is identical when
+read on that run's nuclear alignments. On freshly made alignments (MAFFT with two threads is not repeatable)
+60 of 62 are identical and one protein's sequence correlations move (UQCRQ, +0.565 to +0.572), which changes
+no group median. The `esm_` columns need the per-residue ESM-2 embeddings, which are not published.
 **Traps met.** IQ-TREE re-places identical sequences unless told `--keep-ident`, which silently changes the
 tree; NCBI's ortholog sets for CYC1, SDHC and SDHD held 21 to 48 sequences of another gene or a broken
 model, filtered by identity to human; a test of nuclear rate against overall mitochondrial rate with one
 shared denominator is invalid and is not reported.
-**Open.** More species (pairwise instead of complete matrix); contact against non-contact residues on the
-solved structures; the pairing against lifespan; embeddings of both partners from a protein language model.
+**Open.** Contact maps for complexes I, III and V; the pairing against lifespan beyond complex IV's contact
+residues.
 
 ## H6. Partners' protein-language-model embeddings move together across species (mitoport)
 
@@ -253,3 +294,59 @@ the three.
 **Limit, and it is the important one.** **The control could not be run.** No record in the build states
 a sequencing technology, so the long-read subset is empty and the mitoVGP caveat stays open: every
 repeat, motif and contact-zone number above is computed on records of unknown assembly type.
+
+## H9. Mismatch at complex IV's mito-nuclear contacts follows lifespan (mitoport)
+
+**Hypothesis.** The port project's question narrowed to mitochondria: species whose COX1-3 residues at the
+contacts with nuclear subunits differ more from the consensus than burial-matched non-contact residues do
+have a different maximum lifespan.
+**Test.** `mitoage mitoport iface`, into `lifespan.tsv` (with each slope's standard error and 95% interval);
+first run on the cluster on 2026-11-14 by another agent, and the rerun from this code gives the same table.
+Per species, the share of H5's 298 contact columns where its residue differs from the most common residue
+of the column among the species of the set (gaps left out), the same at their 298 matched controls, and the
+difference, each standardised; phylogenetic regression of log10 maximum lifespan on it, log10 adult body mass
+in the model, Pagel's lambda estimated on the null model, the build's dated tree.
+**Control.** The burial-matched non-contact residues, as their own regression and as the subtracted term.
+**Result.** All species (1,373, lambda 0.96): slope of contact minus control −0.024 log10 years per standard
+deviation, 95% interval [−0.050, +0.002], which bounds any effect to at most about an 11% shorter or a 0.5%
+longer maximum lifespan per standard deviation of mismatch. Mammals (604): −0.006, [−0.028, +0.017]. The 176
+species that also have nuclear partners: −0.007, [−0.049, +0.035]. Contact and control mismatch alone give
+intervals that include zero in every set as well.
+**Reading.** A bounded null: in these species an association of contact mismatch with lifespan larger than
+about a tenth of maximum lifespan per standard deviation is excluded, and nothing smaller is claimed. Like H2, H7
+and H8, a lifespan question whose answer here is no detectable effect. The
+mitoport plan's stop rule is reached for its contact-residue branch.
+**Limits.** Complex IV only, with one human structure for every species; mismatch counted against the consensus
+residue, not against each species' own nuclear partner (the partners exist for 176 of these species); no result
+of the cybrid calibration that RM11 proposed first is recorded in this repository.
+
+## H10. Aligning by structure changes the columns of the mitochondrial proteins (RM13)
+
+**Hypothesis.** The 13 proteins are membrane proteins of a few families of folds, and sequence aligners may
+misplace columns that structure would put elsewhere.
+**Test.** `mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD`, `structure within`, `structure
+fold` (GPU), `structure msa`; into `within_species.tsv`, `chains.tsv`, `plddt.tsv` and `structural_msa.tsv`.
+First run on the cluster on 2026-11-14 and 15 by another agent; rerun from this code, `within` and `msa` (on
+that run's structures) give the same tables, timings aside; the folding was not rerun. First, the 13 proteins from solved human structures (ND1-6 and ND4L from
+5XTD, COX1-3 from 5Z62, CYTB from 5XTE, ATP6 and ATP8 from 8H9S; identity to MitoAge's human sequences 0.979
+to 1.000), superimposed all against all with US-align. Then predicted structures of the 13 proteins in 62
+mammals (806 structures, ESMFold2, checkpoint `biohub/ESMFold2-Fast`, one sample), aligned by FoldMason and
+compared with MAFFT L-INS-i on the same sequences: the share of residue pairs placed in one column by both,
+over 500 species pairs per gene, overall and in the conserved core.
+**Result, folds.** Of the 78 pairs of mitochondrial proteins three exceed a TM-score of 0.5 normalised by the
+longer chain: ND4-ND5 0.69, ND2-ND4 0.67, ND2-ND5 0.52 (340 to 447 aligned residues, RMSD 2.5 to 2.8 Å), the
+antiporter-like triad of complex I; the next is 0.41 (COX1-ND4). The rest are unrelated folds. Scores
+normalised by the shorter chain run high for short subunits and are not used.
+**Result, alignments.** Median agreement 0.9997 over the 13 genes and 1.000 in the core; the lowest are ND6
+(0.970; core 0.996) and ND5 (0.982), and no core is below 0.993 (ATP6). Mean pLDDT 84.8: 79 to 97 for ten
+proteins, 56 to 62 for ND3, ND4L and ATP8. Disagreement does not follow model confidence (r = −0.03 across
+genes).
+**Cost.** Aligning is trivial (18 s FoldMason, 9 s MAFFT for the 13 genes); folding took 11,949 s for 806
+structures on one A100 (40 GB), 14.8 s per structure, which extrapolates to about 120 GPU-hours on that card
+for the 2,290 species of the build with all 13 proteins (a rough figure: proteins of other phyla differ in
+length).
+**Reading.** At the divergence of mammals structure does not move the columns: the sequence alignments stand,
+and H0's soft genes (ND6, ND5) are also where structure and sequence differ most, by little.
+**Limits.** Mammals only (62 species); one prediction per sequence; agreement between two methods is not
+correctness. Distant phyla, where sequence aligners are more likely to err, are not assessed; at the same rate,
+20 species across phyla would take about one GPU-hour.

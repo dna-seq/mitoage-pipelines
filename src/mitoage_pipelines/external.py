@@ -5,7 +5,10 @@ import subprocess
 from pathlib import Path
 
 # program -> the version the published results were made with
-VERSIONS = {"mafft": "MAFFT 7.526 (v7.526: build 2's alignments are pinned to it)", "iqtree": "IQ-TREE 3.1.4", "hyphy": "HyPhy 2.5.104"}
+VERSIONS = {"mafft": "MAFFT 7.526 (v7.526: build 2's alignments are pinned to it)", "iqtree": "IQ-TREE 3.1.4", "hyphy": "HyPhy 2.5.104",
+            "USalign": "US-align 20241108 (bioconda package usalign 20241201)", "foldmason": "FoldMason 4.dd3c235",
+            "coevol": "Coevol 1.6 (github.com/bayesiancook/coevol at 2661e95fde03832a86e6b1b5a03981bad2a334ec, built from source)",
+            "readcoevol": "readcoevol of Coevol 1.6 (built with coevol)", "tracecomp": "tracecomp of Coevol 1.6 (built with coevol)"}
 
 
 class MissingProgram(RuntimeError):

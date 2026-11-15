@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H6), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H10), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -11,6 +11,7 @@ flowchart LR
     HF[(MitoAge build<br/>Hugging Face)]
     SITE[(dated species tree<br/>site repository)]
     NCBI[(NCBI ortholog sets)]
+    PDB[(solved structures<br/>RCSB PDB)]
   end
   subgraph prepared [Prepared copies on Hugging Face]
     P1[(nuclear partners)]
@@ -21,6 +22,7 @@ flowchart LR
   HF -- "download build" --> IN[data/input]
   SITE -- "download tree" --> IN
   NCBI -- "download orthologs" --> IN
+  PDB -- "download pdb" --> IN
   P1 -- "download prepared" --> IN
   P2 -- "download prepared" --> IN
   P3 -- "download prepared" --> INT[data/interim]
@@ -102,3 +104,39 @@ flowchart TD
 
 Both tests compare nuclear subunits of complexes III and IV with three kinds of control: cytosolic
 proteins, complex II (which has no mitochondrially encoded subunit) and mitochondrial matrix enzymes.
+
+## The contacts of complex IV (H5 residue level, H9)
+
+```mermaid
+flowchart TD
+  C[pdb/5Z62.cif<br/>human complex IV] --> CT[mitoport contacts]
+  B[build: COX1-3 alignments] --> CT
+  CT --> K[contacts.tsv: residue pairs within 4.5 A]
+  K --> BU[mitoport burial<br/>Shrake-Rupley]
+  C --> BU
+  TREE[dated.nwk, quality_ok.txt] --> BU
+  BU --> SI[sites.tsv: contact, burial-matched control, other]
+  S1[sel: one protein per species and gene] --> IA[mitoport iface-align<br/>MAFFT L-INS-i]
+  IA --> NA[iface_aln/GENE.afa]
+  SI --> IF[mitoport iface]
+  NA --> IF
+  E[per-residue ESM-2 embeddings<br/>not published] -.-> IF
+  TREE --> IF
+  IF --> T3[coupling.tsv<br/>H5: contacts against controls over species pairs]
+  IF --> T4[lifespan.tsv<br/>H9: lifespan on the contact mismatch]
+```
+
+## Structural alignments (H10)
+
+```mermaid
+flowchart TD
+  P[pdb: 5XTD 5Z62 8H9S 5XTE ...] --> W[structure within<br/>US-align]
+  B[build: 13 protein alignments] --> W
+  W --> T5[within_species.tsv<br/>which of the 13 folds are related]
+  B --> F[structure fold<br/>ESMFold2, GPU]
+  SP[species.txt of mitoport align<br/>62 mammals] --> F
+  F --> PD[pdbs/GENE/species.pdb, plddt.tsv]
+  PD --> M[structure msa<br/>FoldMason against MAFFT]
+  B --> M
+  M --> T6[structural_msa.tsv<br/>H10: agreement and cost]
+```

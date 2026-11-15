@@ -23,6 +23,8 @@ mitoage = "mitoage_pipelines.cli:main"
 
 [dependency-groups]
 dev = ["pytest"]
+# `mitoage structure fold` only, on a CUDA machine: the published run had esm 3.4.3 and torch 2.15.0 on Python 3.14
+fold = ["esm>=3.4.3; python_version >= '3.12'", "torch>=2.15; python_version >= '3.12'"]
 
 [build-system]
 requires = ["uv_build>=0.9,<0.14"]

@@ -110,6 +110,26 @@ def build(dest: Path, manifest: Path, revision: str | None = None) -> Path:
     return dest
 
 
+# --- solved structures -----------------------------------------------------------------------
+RCSB = "https://files.rcsb.org/download"
+
+
+def pdb(ids: list[str], dest: Path, manifest: Path) -> list[Path]:
+    """mmCIF files of solved structures from RCSB into `dest`, one record per call with each file's SHA-256:
+    RCSB revises entries in place, so the digest is what says which file a result was computed on.
+    A file already there is kept and not fetched again."""
+    import hashlib
+    dest.mkdir(parents=True, exist_ok=True); got, digests = [], {}
+    for i in ids:
+        p = dest / f"{i}.cif"
+        if not p.is_file():
+            p.write_bytes(_request(f"{RCSB}/{i}.cif", accept="*/*"))
+        digests[i] = hashlib.sha256(p.read_bytes()).hexdigest(); got.append(p)
+    append_manifest(manifest, "rcsb", ",".join(ids), dest, sha256=digests)
+    for i, d in digests.items(): print(f"{i}.cif  sha256 {d}")
+    return got
+
+
 # --- NCBI ortholog sets -----------------------------------------------------------------------
 def _request(url: str, body: dict | None = None, accept: str = "application/json", tries: int = 5) -> bytes:
     headers = {"accept": accept, "user-agent": "mitoage-pipelines"}
@@ -123,7 +143,7 @@ def _request(url: str, body: dict | None = None, accept: str = "application/json
                 return r.read()
         except urllib.error.HTTPError as e:
             if e.code not in (429, 500, 502, 503, 504) or attempt == tries - 1:
-                raise RuntimeError(f"NCBI answered {e.code} for {url}: {e.read()[:300]!r}") from e
+                raise RuntimeError(f"the server answered {e.code} for {url}: {e.read()[:300]!r}") from e
         except (urllib.error.URLError, TimeoutError) as e:
             if attempt == tries - 1:
                 raise RuntimeError(f"no answer from {url}: {e} (behind a proxy, set https_proxy)") from e

@@ -9,4 +9,6 @@ dependencies:
   - iqtree=3.1.*
   - hyphy=2.5.104
   - fasttree
+  - usalign=20241201     # `structure within` (the binary reports version 20241108)
+  - foldmason=4.dd3c235  # `structure msa`
   - ncbi-datasets-cli    # not called by the code (the downloader uses NCBI's REST API): the same download by hand

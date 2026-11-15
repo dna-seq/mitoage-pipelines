@@ -11,6 +11,11 @@ Order of a full run:
   mitoage peptides pilot
   mitoage mitoport select && mitoage mitoport align && mitoage mitoport branch-lengths && mitoage mitoport erc
   mitoage download prepared --topic embeddings && mitoage mitoport coembed
+  mitoage download pdb 5Z62 && mitoage mitoport contacts && mitoage mitoport burial
+  mitoage mitoport iface-align && mitoage mitoport iface --esm <folder with the per-residue embeddings>
+  mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD && mitoage structure within
+  mitoage structure fold (GPU) && mitoage structure msa
+  mitoage longevity coevol --chain 1 && mitoage longevity coevol --chain 2 && mitoage longevity coevol-read
 Build 2 from build 1 (docs/BUILD2_REPRODUCTION.md):
   mitoage download hf|refseq|taxonomy|lifespan|cited|contig|legacy (--from-snapshot where no archive keeps it)
   mitoage build2 refseq && mitoage build2 match && mitoage build2 status
@@ -32,12 +37,14 @@ download_app = typer.Typer(no_args_is_help=True, help="Download the inputs into 
 longevity_app = typer.Typer(no_args_is_help=True, help="Longevity in the alignments of the 13 mitochondrial proteins.")
 peptides_app = typer.Typer(no_args_is_help=True, help="Peptides encoded inside mtDNA.")
 mitoport_app = typer.Typer(no_args_is_help=True, help="Rate covariation of mitochondrial proteins with their nuclear partners.")
+structure_app = typer.Typer(no_args_is_help=True, help="Structural alignments of the 13 mitochondrial proteins: a check of the sequence alignments.")
 snapshot_app = typer.Typer(no_args_is_help=True, help="MAINTAINERS ONLY: build and upload the snapshot dataset of build 2's sources (needs a write token).")
 build2_app = typer.Typer(no_args_is_help=True, help="MitoAge build 2 from build 1 and the upstream sources (docs/BUILD2_REPRODUCTION.md).")
 app.add_typer(download_app, name="download")
 app.add_typer(longevity_app, name="longevity")
 app.add_typer(peptides_app, name="peptides")
 app.add_typer(mitoport_app, name="mitoport")
+app.add_typer(structure_app, name="structure")
 app.add_typer(build2_app, name="build2")
 app.add_typer(snapshot_app, name="snapshot")
 
@@ -85,6 +92,13 @@ def download_tree(ref: Annotated[str, typer.Option(help="branch, tag or commit o
     """The build's dated species tree (phylogeny.json) from the site's repository into data/input/mitoage-site."""
     from . import download
     download.site_tree(paths.SITE_TREE, paths.MANIFEST, ref)
+
+
+@download_app.command("pdb")
+def download_pdb(ids: Annotated[list[str], typer.Argument(help="PDB entry ids, e.g. 5Z62")]) -> None:
+    """Solved structures as mmCIF from RCSB into data/input/pdb, with each file's SHA-256 in the manifest."""
+    from . import download
+    download.pdb([i.upper() for i in ids], paths.PDB, paths.MANIFEST)
 
 
 @download_app.command("orthologs")
@@ -421,6 +435,29 @@ def longevity_coevol_prep(
                      quality_file=paths.QUALITY_OK if outgroup is None else None)
 
 
+@longevity_app.command("coevol")
+def longevity_coevol(
+    chain: Annotated[int, typer.Option(help="chain number; the published run had chains 1 and 2")] = 1,
+    cycles: Annotated[int, typer.Option(help="cycles to save; 1,100 in the published run")] = 1100,
+    prep: Annotated[Path, typer.Option(help="folder of `coevol-prep`'s inputs")] = paths.COEVOL,
+    out: Out = paths.COEVOL_OUT,
+) -> None:
+    """One Coevol chain (dS and dN/dS jointly with lifespan and mass; coevol from PATH or $COEVOL). Days of CPU."""
+    from .longevity import coevol
+    coevol.run(prep, out, chain, cycles)
+
+
+@longevity_app.command("coevol-read")
+def longevity_coevol_read(
+    chains: Annotated[list[int], typer.Option("--chain", help="chains to read (repeat the option)")] = [1, 2],
+    burnin: Annotated[int, typer.Option(help="cycles discarded; 200 in the published reading")] = 200,
+    out: Out = paths.COEVOL_OUT,
+) -> None:
+    """readcoevol per chain and tracecomp across chains: correlations, and whether the chains have converged."""
+    from .longevity import coevol
+    coevol.read(out, chains, burnin)
+
+
 @longevity_app.command("carriers")
 def longevity_carriers(data: Build = paths.BUILD, composition: Composition = COMPOSITION) -> None:
     """Which families carry the minor residue at ND5 column 316 and CYTB column 83."""
@@ -510,6 +547,88 @@ def mitoport_coembed(
     """Do partners' ESM-2 embedding distances between species follow each other beyond the dated tree?"""
     from .mitoport import coembed
     coembed.main(embeddings, tree, out)
+
+
+CifOpt = Annotated[Path, typer.Option("--cif", help="the solved structure of complex IV, mmCIF")]
+IfaceDir = Annotated[Path, typer.Option("--work", help="folder of the contact map: contacts.tsv, sites.tsv, chains.tsv, species.txt")]
+
+
+@mitoport_app.command("contacts")
+def mitoport_contacts(cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, out: IfaceDir = paths.MITOPORT_IFACE) -> None:
+    """Residues of COX1-3 within 4.5 A of another subunit in the solved complex IV (after `download pdb 5Z62`)."""
+    from .mitoport import contacts
+    contacts.main(cif, data, out)
+
+
+@mitoport_app.command("burial")
+def mitoport_burial(
+    cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    quality: Annotated[Path, typer.Option(help="species with a usable lifespan record, from `longevity dated-tree`")] = paths.QUALITY_OK,
+) -> None:
+    """Accessibility of each COX1-3 residue, the burial-matched non-contact control, columns and occupancy."""
+    from .mitoport import burial
+    burial.main(cif, work / "contacts.tsv", data, tree, quality, work)
+
+
+@mitoport_app.command("iface-align")
+def mitoport_iface_align(
+    sel: Sel = paths.MITOPORT_SEL, out: Annotated[Path, typer.Option("--out", help="folder for <GENE>.afa")] = paths.MITOPORT_IFACE_ALN,
+    threads: Annotated[int, typer.Option(help="MAFFT --thread per gene; 2 as published, 1 for a repeatable alignment")] = 2,
+    jobs: Annotated[int, typer.Option(help="genes aligned at once")] = 8,
+) -> None:
+    """Every nuclear selection with MAFFT L-INS-i (--anysymbol), unfiltered: the alignments the interface test reads."""
+    from .mitoport import iface
+    iface.align(sel, out, threads, jobs)
+
+
+@mitoport_app.command("iface")
+def mitoport_iface(
+    cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
+    nucaln: Annotated[Path, typer.Option("--nucaln", help="the alignments of `iface-align`")] = paths.MITOPORT_IFACE_ALN,
+    esm: Annotated[Optional[Path], typer.Option(help="folder with {mt13,nuclear}-esm2_650m.index.parquet and .residues.npy (per-residue ESM-2 650M; not published)")] = None,
+    skip_esm: Annotated[bool, typer.Option("--skip-esm", help="run without the embeddings: every esm_ column is left empty (not assessed)")] = False,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.IFACE_OUT,
+) -> None:
+    """Coupling of contact residues with their nuclear partners over species pairs, and lifespan on the contact mismatch."""
+    from .mitoport import iface
+    iface.main(work, nucaln, work / "contacts.tsv", cif, data, esm, tree, out, skip_esm)
+
+
+# --- structure --------------------------------------------------------------------------------
+@structure_app.command("within")
+def structure_within(
+    candidates: Annotated[Optional[list[str]], typer.Argument(help="PDB entries tried in order; the published list when omitted")] = None,
+    data: Build = paths.BUILD, out: Out = paths.STRUCTURE_OUT,
+) -> None:
+    """The solved human proteins of the complexes superimposed all against all (US-align from PATH)."""
+    from .structure import within
+    within.main(data, paths.PDB, candidates or within.CANDIDATES, paths.STRUCTURE_CHAINS, out)
+
+
+@structure_app.command("fold")
+def structure_fold(
+    data: Build = paths.BUILD,
+    species: Annotated[Path, typer.Option(help="species to fold, one per line; the 62 mammals of `mitoport align`")] = paths.MITOPORT_SPECIES,
+    out: Annotated[Path, typer.Option("--out", help="folder for <GENE>/<species>.pdb and plddt.tsv")] = paths.STRUCTURE_PDBS,
+    checkpoint: Annotated[str, typer.Option(help="ESMFold2 checkpoint on Hugging Face")] = "biohub/ESMFold2-Fast",
+    samples: Annotated[int, typer.Option(help="diffusion samples per protein; 1 as published")] = 1,
+) -> None:
+    """Predicted structures of the 13 proteins with ESMFold2 (needs a CUDA GPU and `uv sync --group fold`)."""
+    from .structure import fold
+    fold.main(data, species, out, checkpoint, None, samples)
+
+
+@structure_app.command("msa")
+def structure_msa(
+    pdbs: Annotated[Path, typer.Option(help="the predicted structures of `structure fold`")] = paths.STRUCTURE_PDBS,
+    data: Build = paths.BUILD, out: Out = paths.STRUCTURE_OUT,
+    threads: Annotated[int, typer.Option(help="MAFFT --thread")] = 8,
+) -> None:
+    """FoldMason's structural alignment against MAFFT L-INS-i on the same sequences: agreement and cost."""
+    from .structure import msa
+    msa.main(pdbs, data, paths.STRUCTURE_TMP, out, None, threads)
 
 
 # --- build 2 ----------------------------------------------------------------------------------

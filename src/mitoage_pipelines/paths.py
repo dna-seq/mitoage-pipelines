@@ -36,6 +36,7 @@ SITE_TREE = INPUT / "mitoage-site" / "phylogeny.json"   # the build's dated spec
 EMBEDDINGS = INPUT / "embeddings"         # ESM-2 mean embeddings of both partners (prepared data only)
 NCBI = INPUT / "ncbi"                     # NCBI ortholog sets, one folder per gene: ncbi/<GENE>/ncbi_dataset/data
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
+PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
 
 # --- input: the sources of build 2 (docs/BUILD2_REPRODUCTION.md) --------------------------------
 B2_IN = INPUT / "build2"
@@ -67,6 +68,12 @@ MITOPORT_BL = MITOPORT / "bl"             # IQ-TREE branch lengths per protein o
 MITOPORT_TOPOLOGY = MITOPORT / "topology.nwk"
 MITOPORT_GENES = MITOPORT / "genes.txt"
 MITOPORT_SPECIES = MITOPORT / "species.txt"
+MITOPORT_IFACE_ALN = MITOPORT / "iface_aln"   # every nuclear selection, MAFFT L-INS-i --anysymbol, unfiltered
+MITOPORT_IFACE = MITOPORT / "iface"       # contacts.tsv, sites.tsv, chains.tsv, species.txt: the complex IV contact map
+STRUCTURE = INTERIM / "structure"
+STRUCTURE_PDBS = STRUCTURE / "pdbs"       # <GENE>/<species>.pdb predicted by ESMFold2, plddt.tsv
+STRUCTURE_CHAINS = STRUCTURE / "chains"   # <GENE>.pdb: one chain of a solved human structure per gene
+STRUCTURE_TMP = STRUCTURE / "msa"         # the sequence and structural alignments the check compares
 
 B2_INTERIM = INTERIM / "build2"           # refseq_records.parquet, observations.parquet, matches.parquet, plan.json, ...
 
@@ -76,7 +83,10 @@ LONGEVITY_OUT = OUTPUT / "longevity"      # composition.tsv controls.tsv fourfol
                                           # agreement.tsv columns.<GENE>.tsv
 RELAX_OUT = LONGEVITY_OUT / "relax"       # <GENE>.relax.json, as HyPhy writes them
 PEPTIDES_OUT = OUTPUT / "peptides"        # <peptide>.tsv, summary.txt
-MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv
+MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv, coembed.tsv
+IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
+STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
+COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol
 
 
 def tree_file(cls: str) -> Path:
