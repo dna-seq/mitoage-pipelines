@@ -17,6 +17,8 @@ flowchart LR
     P1[(nuclear partners)]
     P2[(embeddings)]
     P3[(aligner variants)]
+    P5[(per-residue embeddings)]
+    P6[(predicted structures)]
     P4[(results)]
   end
   HF -- "download build" --> IN[data/input]
@@ -26,6 +28,8 @@ flowchart LR
   P1 -- "download prepared" --> IN
   P2 -- "download prepared" --> IN
   P3 -- "download prepared" --> INT[data/interim]
+  P5 -- "download prepared" --> IN
+  P6 -- "download prepared" --> INT
   P1 -- "download prepared" --> INT
   P4 -- "download prepared" --> REF[data/reference]
   IN --> STEPS{{mitoage commands}}
@@ -120,7 +124,7 @@ flowchart TD
   IA --> NA[iface_aln/GENE.afa]
   SI --> IF[mitoport iface]
   NA --> IF
-  E[per-residue ESM-2 embeddings<br/>not published] -.-> IF
+  E[per-residue ESM-2 embeddings<br/>download prepared --topic residues] --> IF
   TREE --> IF
   IF --> T3[coupling.tsv<br/>H5: contacts against controls over species pairs]
   IF --> T4[lifespan.tsv<br/>H9: lifespan on the contact mismatch]
@@ -136,6 +140,7 @@ flowchart TD
   B --> F[structure fold<br/>ESMFold2, GPU]
   SP[species.txt of mitoport align<br/>62 mammals] --> F
   F --> PD[pdbs/GENE/species.pdb, plddt.tsv]
+  HS[(structures on Hugging Face)] -- "download prepared --topic structures" --> PD
   PD --> M[structure msa<br/>FoldMason against MAFFT]
   B --> M
   M --> T6[structural_msa.tsv<br/>H10: agreement and cost]

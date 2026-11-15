@@ -60,7 +60,8 @@ uv run mitoage download build             # the MitoAge build from Hugging Face 
 uv run mitoage download tree              # the build's dated species tree, from the site's repository
 uv run mitoage download orthologs         # nuclear subunits and control proteins from NCBI (62 genes)
 
-# or: our prepared copies from Hugging Face, by topic (partners, embeddings, aligners, results, all)
+# or: our prepared copies from Hugging Face, by topic (partners, embeddings, residues, aligners, structures,
+# results, all; `all` leaves out the 7.7 GB of per-residue embeddings, `--topic residues` fetches them)
 uv run mitoage download prepared          # exactly what we fetched and computed; our tables land in data/reference
 
 # H1: amino-acid content against lifespan
@@ -102,12 +103,14 @@ uv run mitoage download pdb 5Z62                  # the human enzyme from RCSB; 
 uv run mitoage mitoport contacts                  # residue pairs within 4.5 A
 uv run mitoage mitoport burial                    # accessibility, the burial-matched control, columns
 uv run mitoage mitoport iface-align               # every nuclear selection, MAFFT L-INS-i
-uv run mitoage mitoport iface --esm <folder>      # or --skip-esm: the per-residue embeddings are not published
+uv run mitoage download prepared --topic residues   # the per-residue embeddings, 7.7 GB
+uv run mitoage mitoport iface                     # or --skip-esm: the esm_ columns left empty, not assessed
 
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
 uv sync --group fold && uv run mitoage structure fold   # ESMFold2 on a CUDA GPU: 62 mammals x 13 proteins
+# or: uv run mitoage download prepared --topic structures   # the 806 structures of the published run
 uv run mitoage structure msa                      # FoldMason against MAFFT on the same sequences
 
 # H3's continuous-trait model: Coevol 1.6, built from source (days of CPU per chain)
@@ -185,7 +188,9 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
   and on the fresh alignments one protein's sequence correlations move (UQCRQ, +0.565 to +0.572), which
   changes no group median; `--threads 1` makes the alignments repeatable.
 - **Not rerun**: `structure fold` (3.3 GPU-hours) and the Coevol chains (days of CPU each); the `esm_` columns
-  of `mitoport iface` were rerun only with the unpublished per-residue embeddings, on the cluster.
+  of `mitoport iface` were rerun on the cluster with the per-residue embeddings, which are now on Hugging Face
+  (`--topic residues`; their SHA-256 is on the dataset's card), and `structure msa` on the structures now
+  published as `--topic structures`.
 - **Not rerun**: `download orthologs` for all 62 genes (one gene was downloaded and matched the earlier
   download record for record); `relax` for 12 of the 13 genes; the aligner comparison for 11 of 13 genes.
 
@@ -200,11 +205,12 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
   that produced them with each aligner are not wrapped.
 - Lifespan as a continuous trait (Coevol): `longevity coevol` and `coevol-read` wrap the run and its reading;
   the published chains did not converge (effective sample size 7 for dN/dS), so its numbers are provisional.
-- The per-residue ESM-2 embeddings that `mitoport iface` reads for its `esm_` columns (about 7 GB) are not
-  published; without them `--skip-esm` leaves those columns empty, marked not assessed, and the `seq_` columns
-  and the lifespan test are unaffected. Like the mean embeddings, they were made in another project.
-- The 806 predicted structures of H10 (61 MB) are not published; `structure fold` makes them again on a GPU
-  (about 3.3 GPU-hours on an A100), and `structure msa` needs them.
+- The per-residue ESM-2 embeddings that `mitoport iface` reads for its `esm_` columns (7.7 GB) are downloaded,
+  not computed here: like the mean embeddings, they were made in another project. Without them `--skip-esm`
+  leaves those columns empty, marked not assessed; the `seq_` columns and the lifespan test are unaffected.
+- The 806 predicted structures of H10 (150 MB) are downloaded with `--topic structures` or made again by
+  `structure fold` on a GPU (about 3.3 GPU-hours on an A100); a second folding is not expected to give the
+  same coordinates to the last digit, since the model samples.
 
 ## Tests
 

@@ -52,6 +52,8 @@ def append_manifest(manifest: Path, source: str, identifier: str, folder: Path, 
 PREPARED = {
     "partners": "longevity-genie/mitoage-nuclear-partners",    # NCBI ortholog sets as fetched; mitoport's alignments and trees
     "embeddings": "longevity-genie/mitoage-embeddings",        # ESM-2 650M mean embeddings of both partners
+    "residues": "longevity-genie/mitoage-embeddings",          # the same, per residue (7.7 GB): what `mitoport iface` reads
+    "structures": "longevity-genie/mitoage-structures",        # 806 ESMFold2 structures of the 13 proteins in 62 mammals
     "aligners": "longevity-genie/mitoage-aligner-variants",    # the 13 proteins aligned by four aligners
     "results": "longevity-genie/mitoage-pipelines",            # the dated tree and every result table
 }
@@ -70,7 +72,10 @@ def prepared(topic: str, root: Path, manifest: Path, revision: str | None = None
         snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=root, allow_patterns=["input/**", "interim/**"])
     else:
         dest = root
-        snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=root, allow_patterns=["input/**", "interim/**"])
+        # the per-residue embeddings share a dataset with the means: only the `residues` topic fetches them
+        allow = ["input/embeddings/*.residues.npy", "input/embeddings/*.index.parquet"] if topic == "residues" else ["input/**", "interim/**"]
+        ignore = ["*.residues.npy"] if topic == "embeddings" else None
+        snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=root, allow_patterns=allow, ignore_patterns=ignore)
     if topic == "partners":
         for z in sorted((root / "input" / "ncbi").glob("*.zip")):
             gene_dir = z.with_suffix("")

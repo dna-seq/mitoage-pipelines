@@ -154,8 +154,9 @@ def main(work: Path, nucaln: Path, contacts: Path, cif: Path, build: Path, esm: 
     missing = esm_missing(esm)
     if missing and not skip_esm:
         raise FileNotFoundError(
-            "the ESM-2 per-residue embeddings are missing (" + ", ".join(missing) + "). They are not published "
-            "(about 7 GB); give --esm, or --skip-esm to leave every esm_ column empty (not assessed).")
+            "the ESM-2 per-residue embeddings are missing (" + ", ".join(missing) + "): fetch them with "
+            "`mitoage download prepared --topic residues` (7.7 GB), or give --skip-esm to leave every esm_ column "
+            "empty (not assessed).")
     use_esm = not missing
     if not use_esm:
         print("NOTE: no per-residue embeddings: every esm_ column of coupling.tsv is left empty, NOT ASSESSED")

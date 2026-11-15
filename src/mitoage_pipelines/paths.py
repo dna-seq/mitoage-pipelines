@@ -33,7 +33,7 @@ OUTPUT = ROOT / "output"
 # --- input: downloads -------------------------------------------------------------------------
 BUILD = INPUT / "mitoage"                 # the Hugging Face dataset longevity-genie/mitoage
 SITE_TREE = INPUT / "mitoage-site" / "phylogeny.json"   # the build's dated species tree, from the site's repository
-EMBEDDINGS = INPUT / "embeddings"         # ESM-2 mean embeddings of both partners (prepared data only)
+EMBEDDINGS = INPUT / "embeddings"         # ESM-2 embeddings of both partners, mean and per residue (prepared data only)
 NCBI = INPUT / "ncbi"                     # NCBI ortholog sets, one folder per gene: ncbi/<GENE>/ncbi_dataset/data
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served

@@ -12,9 +12,9 @@ Order of a full run:
   mitoage mitoport select && mitoage mitoport align && mitoage mitoport branch-lengths && mitoage mitoport erc
   mitoage download prepared --topic embeddings && mitoage mitoport coembed
   mitoage download pdb 5Z62 && mitoage mitoport contacts && mitoage mitoport burial
-  mitoage mitoport iface-align && mitoage mitoport iface --esm <folder with the per-residue embeddings>
+  mitoage download prepared --topic residues && mitoage mitoport iface-align && mitoage mitoport iface
   mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD && mitoage structure within
-  mitoage structure fold (GPU) && mitoage structure msa
+  mitoage structure fold (GPU), or mitoage download prepared --topic structures; then mitoage structure msa
   mitoage longevity coevol --chain 1 && mitoage longevity coevol --chain 2 && mitoage longevity coevol-read
 Build 2 from build 1 (docs/BUILD2_REPRODUCTION.md):
   mitoage download hf|refseq|taxonomy|lifespan|cited|contig|legacy (--from-snapshot where no archive keeps it)
@@ -74,13 +74,13 @@ def download_build(
 
 @download_app.command("prepared")
 def download_prepared(
-    topic: Annotated[str, typer.Option(help="partners, embeddings, aligners, results, or all")] = "all",
+    topic: Annotated[str, typer.Option(help="partners, embeddings, residues (7.7 GB, not in all), aligners, structures, results, or all")] = "all",
     revision: Annotated[Optional[str], typer.Option(help="a commit of the dataset, to pin what is read (one topic only)")] = None,
 ) -> None:
     """What we fetched and computed, from Hugging Face, by topic: start any step without redoing those before it.
     Our result tables go to data/reference, for comparison with a rerun's data/output."""
     from . import download
-    topics = list(download.PREPARED) if topic == "all" else [topic]
+    topics = [t for t in download.PREPARED if t != "residues"] if topic == "all" else [topic]
     if topic != "all" and topic not in download.PREPARED:
         raise typer.BadParameter(f"unknown topic {topic!r}; one of {', '.join(download.PREPARED)} or all")
     for t in topics:
@@ -586,7 +586,7 @@ def mitoport_iface_align(
 def mitoport_iface(
     cif: CifOpt = paths.PDB / "5Z62.cif", data: Build = paths.BUILD, work: IfaceDir = paths.MITOPORT_IFACE,
     nucaln: Annotated[Path, typer.Option("--nucaln", help="the alignments of `iface-align`")] = paths.MITOPORT_IFACE_ALN,
-    esm: Annotated[Optional[Path], typer.Option(help="folder with {mt13,nuclear}-esm2_650m.index.parquet and .residues.npy (per-residue ESM-2 650M; not published)")] = None,
+    esm: Annotated[Path, typer.Option(help="folder with {mt13,nuclear}-esm2_650m.index.parquet and .residues.npy, from `download prepared --topic residues`")] = paths.EMBEDDINGS,
     skip_esm: Annotated[bool, typer.Option("--skip-esm", help="run without the embeddings: every esm_ column is left empty (not assessed)")] = False,
     tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
     out: Out = paths.IFACE_OUT,
