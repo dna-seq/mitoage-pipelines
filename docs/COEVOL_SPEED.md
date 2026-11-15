@@ -19,6 +19,8 @@ alternatives we looked at, and what we chose.
   | 16 | 68 s |
   | 32 | 66 s |
 
+  On the compute nodes the production legs run at 72–75 s per point on 8 ranks: 1.3× the serial 96 s
+  rather than 1.5×.
   Rank 0 runs every parameter move on the pooled sufficient statistics, serially, so more ranks do not help.
   The MPI build read the serial chain's `.param` and continued it: the log likelihood picked up at
   −570,874 after −570,824. It never exits on its own, because rank 0 returns and the other ranks wait.
@@ -47,7 +49,7 @@ alternatives we looked at, and what we chose.
 
 1. Keep Coevol. Nothing faster implements the same model, and BayesCode's sampler is the same design.
 2. Resume the two published chains on the MPI build with 8 ranks. Each chain runs in 3-day legs with a
-   checkpoint every 6 h, towards 15,000 points: about 10 days at 64 s per point. This matches Lartillot and
+   checkpoint every 6 h, towards 15,000 points: about 11.5 days at 72 s per point, so the four legs submitted may need a fifth. This matches Lartillot and
    Delsuc's 11,000.
 3. Run two new chains with the ages held (`-fixtimes`) beside them. If they mix faster, as expected, they
    give the converged answer first, and they answer the question as H3 states it. The resumed chains then

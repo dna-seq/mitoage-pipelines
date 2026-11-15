@@ -196,8 +196,8 @@ one.
   terminal branches. This design does not reproduce it, so it cannot speak for dN/dS. That explanation is
   ours and has not been tested. The question stays with the Coevol chains.
 **Coevol, resumed (2026-11-15).** Four chains were submitted on haumea in 3-day legs, with a checkpoint every
-6 h, towards 15,000 points each. They use Coevol's MPI build on 8 ranks, at 64 s per point against 90 to 96 s
-serial; `docs/COEVOL_SPEED.md` compares the options.
+6 h, towards 15,000 points each. They use Coevol's MPI build on 8 ranks, at 64 s per point on the test node and 72 to 75 s on the
+compute nodes, against 90 to 96 s serial; `docs/COEVOL_SPEED.md` compares the options.
 - Chains 1 and 2: the published chains, continued. Jobs 6490194 to 6490197 and 6490198 to 6490201.
 - Chains 1 and 2 of `coevol-fixed`: new chains holding the dated ages with -fixtimes. Jobs 6490202 to
   6490205 and 6490206 to 6490209.
