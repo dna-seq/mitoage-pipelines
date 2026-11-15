@@ -1,0 +1,81 @@
+class	method	model	aa	n	lambda	slope	se	t	p	q
+Mammalia	pgls	mass	A	604	0.9992	-0.05033	0.05178	-0.9719	0.3315	0.5525
+Mammalia	pgls	mass	C	604	0.9933	-0.0173	0.01049	-1.649	0.09965	0.2491
+Mammalia	pgls	mass	D	604	0.9701	-0.02775	0.01793	-1.548	0.1223	0.2717
+Mammalia	pgls	mass	E	604	0.9969	-0.009389	0.01196	-0.7851	0.4327	0.6232
+Mammalia	pgls	mass	F	604	0.9973	-0.09144	0.03573	-2.559	0.01074	0.0452
+Mammalia	pgls	mass	G	604	0.9936	0.04794	0.017	2.82	0.004963	0.03309
+Mammalia	pgls	mass	H	604	0.9839	0.07063	0.02366	2.985	0.002953	0.02953
+Mammalia	pgls	mass	I	604	1	-0.2567	0.06864	-3.74	0.0002014	0.004028
+Mammalia	pgls	mass	K	604	1	-0.005572	0.01489	-0.3742	0.7084	0.7457
+Mammalia	pgls	mass	L	604	1	0.07514	0.05228	1.437	0.1512	0.2749
+Mammalia	pgls	mass	M	604	1	-0.02665	0.0589	-0.4525	0.6511	0.7234
+Mammalia	pgls	mass	N	604	0.9959	-0.02452	0.03621	-0.6772	0.4985	0.6232
+Mammalia	pgls	mass	P	604	0.9948	0.04495	0.02515	1.787	0.07439	0.2125
+Mammalia	pgls	mass	Q	604	1	0.006384	0.01264	0.5052	0.6136	0.7219
+Mammalia	pgls	mass	R	604	0.9687	0.005962	0.008797	0.6778	0.4982	0.6232
+Mammalia	pgls	mass	S	604	0.9932	0.004479	0.0464	0.09653	0.9231	0.9231
+Mammalia	pgls	mass	T	604	1	0.1833	0.07215	2.541	0.0113	0.0452
+Mammalia	pgls	mass	V	604	0.9926	0.1274	0.06119	2.082	0.0378	0.126
+Mammalia	pgls	mass	W	604	1	-0.003953	0.005274	-0.7494	0.4539	0.6232
+Mammalia	pgls	mass	Y	604	0.9932	-0.03808	0.02575	-1.479	0.1397	0.2749
+Mammalia	pgls	mass+composition	A	604	0.9877	-0.1292	0.04937	-2.616	0.009118	0.1071
+Mammalia	pgls	mass+composition	C	604	0.993	-0.02074	0.01063	-1.952	0.05144	0.147
+Mammalia	pgls	mass+composition	D	604	0.963	-0.04486	0.01753	-2.558	0.01076	0.1071
+Mammalia	pgls	mass+composition	E	604	0.9966	-0.005297	0.01211	-0.4373	0.6621	0.7789
+Mammalia	pgls	mass+composition	F	604	0.9927	-0.05623	0.03477	-1.617	0.1063	0.2658
+Mammalia	pgls	mass+composition	G	604	0.9913	0.03497	0.01682	2.079	0.03806	0.1269
+Mammalia	pgls	mass+composition	H	604	0.9794	0.05122	0.02345	2.184	0.02935	0.1193
+Mammalia	pgls	mass+composition	I	604	0.9912	-0.1581	0.06549	-2.414	0.01606	0.1071
+Mammalia	pgls	mass+composition	K	604	1	-0.009111	0.0149	-0.6116	0.5411	0.7604
+Mammalia	pgls	mass+composition	L	604	1	0.06185	0.04985	1.241	0.2152	0.4324
+Mammalia	pgls	mass+composition	M	604	1	0.004032	0.05499	0.07332	0.9416	0.985
+Mammalia	pgls	mass+composition	N	604	0.9904	0.01628	0.03444	0.4726	0.6367	0.7789
+Mammalia	pgls	mass+composition	P	604	0.9785	0.02064	0.02436	0.8474	0.3971	0.6834
+Mammalia	pgls	mass+composition	Q	604	1	0.007728	0.01264	0.6114	0.5412	0.7604
+Mammalia	pgls	mass+composition	R	604	0.9647	0.002198	0.008808	0.2495	0.803	0.8923
+Mammalia	pgls	mass+composition	S	604	0.9933	0.000878	0.04682	0.01875	0.985	0.985
+Mammalia	pgls	mass+composition	T	604	0.999	0.1529	0.07021	2.178	0.02983	0.1193
+Mammalia	pgls	mass+composition	V	604	0.98	0.07161	0.05784	1.238	0.2162	0.4324
+Mammalia	pgls	mass+composition	W	604	0.998	-0.004483	0.005438	-0.8244	0.41	0.6834
+Mammalia	pgls	mass+composition	Y	604	0.9892	-0.01438	0.02532	-0.5679	0.5703	0.7604
+Mammalia	mixed	mass	A	604		-0.0335	0.05917	-0.5662	0.5713	0.7141
+Mammalia	mixed	mass	C	604		-0.04606	0.01281	-3.595	0.0003244	0.001622
+Mammalia	mixed	mass	D	604		-0.0418	0.01778	-2.351	0.01873	0.04682
+Mammalia	mixed	mass	E	604		-0.007742	0.01364	-0.5676	0.5703	0.7141
+Mammalia	mixed	mass	F	604		-0.2521	0.04297	-5.866	4.452e-09	4.452e-08
+Mammalia	mixed	mass	G	604		0.03183	0.01896	1.679	0.09312	0.1855
+Mammalia	mixed	mass	H	604		0.03648	0.02525	1.445	0.1485	0.2476
+Mammalia	mixed	mass	I	604		-0.5523	0.08314	-6.643	3.07e-11	6.14e-10
+Mammalia	mixed	mass	K	604		-0.0007303	0.01737	-0.04205	0.9665	0.9665
+Mammalia	mixed	mass	L	604		0.2229	0.06777	3.289	0.001005	0.003349
+Mammalia	mixed	mass	M	604		-0.00777	0.07681	-0.1012	0.9194	0.9665
+Mammalia	mixed	mass	N	604		-0.007222	0.04278	-0.1688	0.8659	0.9621
+Mammalia	mixed	mass	P	604		0.09751	0.02894	3.37	0.0007529	0.003012
+Mammalia	mixed	mass	Q	604		0.03908	0.01599	2.444	0.01452	0.0415
+Mammalia	mixed	mass	R	604		0.007037	0.009011	0.7809	0.4348	0.6212
+Mammalia	mixed	mass	S	604		-0.02093	0.05269	-0.3973	0.6912	0.8131
+Mammalia	mixed	mass	T	604		0.4797	0.09996	4.799	1.598e-06	1.065e-05
+Mammalia	mixed	mass	V	604		0.1137	0.06954	1.635	0.102	0.1855
+Mammalia	mixed	mass	W	604		-0.005203	0.006214	-0.8374	0.4024	0.619
+Mammalia	mixed	mass	Y	604		-0.05556	0.02879	-1.93	0.05366	0.1192
+Mammalia	mixed	mass+composition	A	604		-0.1741	0.05159	-3.374	0.0007407	0.002116
+Mammalia	mixed	mass+composition	C	604		-0.05224	0.01306	-4	6.334e-05	0.0006334
+Mammalia	mixed	mass+composition	D	604		-0.06229	0.01767	-3.524	0.0004245	0.001698
+Mammalia	mixed	mass+composition	E	604		0.0007468	0.01388	0.05381	0.9571	0.9814
+Mammalia	mixed	mass+composition	F	604		-0.1517	0.04008	-3.785	0.0001539	0.0007694
+Mammalia	mixed	mass+composition	G	604		0.01298	0.01871	0.6936	0.4879	0.6971
+Mammalia	mixed	mass+composition	H	604		0.003284	0.02521	0.1302	0.8964	0.9814
+Mammalia	mixed	mass+composition	I	604		-0.3456	0.07367	-4.692	2.712e-06	5.424e-05
+Mammalia	mixed	mass+composition	K	604		-0.002814	0.0177	-0.159	0.8737	0.9814
+Mammalia	mixed	mass+composition	L	604		0.2363	0.06153	3.84	0.0001229	0.0007694
+Mammalia	mixed	mass+composition	M	604		0.05532	0.06702	0.8254	0.4091	0.6295
+Mammalia	mixed	mass+composition	N	604		0.05323	0.03915	1.36	0.1739	0.3447
+Mammalia	mixed	mass+composition	P	604		0.03395	0.02562	1.325	0.1851	0.3447
+Mammalia	mixed	mass+composition	Q	604		0.03422	0.01586	2.158	0.03093	0.07732
+Mammalia	mixed	mass+composition	R	604		0.0006164	0.00912	0.06758	0.9461	0.9814
+Mammalia	mixed	mass+composition	S	604		-0.001232	0.05274	-0.02335	0.9814	0.9814
+Mammalia	mixed	mass+composition	T	604		0.3026	0.08871	3.411	0.0006471	0.002116
+Mammalia	mixed	mass+composition	V	604		0.06915	0.06205	1.114	0.2651	0.4418
+Mammalia	mixed	mass+composition	W	604		-0.008248	0.006288	-1.312	0.1896	0.3447
+Mammalia	mixed	mass+composition	Y	604		0.001546	0.02652	0.05831	0.9535	0.9814

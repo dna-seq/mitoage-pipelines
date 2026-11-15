@@ -1,0 +1,634 @@
+commit 2ee27a10e3b9f717a392fa13d7d66790fe3beffb
+data root /data/uq2347/runs/mitoage/euring-data/before
+794c421dfcdc6df745b82c5f38570970979b3ca2ebf4b61782ac598cadc59cfc  /data/uq2347/runs/mitoage/euring-data/before/input/mitoage/species.parquet
+ac6a0cdee44ee541701e1a4c47e8a694b8c429cff2bbdb1d2340d1fa93d4f9bc  /data/uq2347/runs/mitoage/euring-data/before/input/mitoage/mtdna_structure.parquet
+71170821c038743609d1b11770a89b614671522a08416262042756fba5a2df25  /data/uq2347/runs/mitoage/euring-data/before/input/mitoage/protein_gene_features.parquet
+64c7265e834faa8dfc750d7a1c7ea97004b60ee73177a522fa539aac336c13b7  /data/uq2347/runs/mitoage/euring-data/before/input/mitoage-site/phylogeny.json
+c9401e6cbf48cb0fd0cc8df22f233fd2d894c295be9e144b03781324cb02adfa  /data/uq2347/runs/mitoage/euring-data/before/input/pdb/5Z62.cif
+== longevity dated-tree (2026-11-15T17:10:18Z)
+dated tree opentree16.1: 2305 species; lifespan quality high or acceptable: 2220 of 2335
+== longevity fourfold (2026-11-15T17:11:44Z)
+fourfold.tsv: 2316 species
+== longevity aa-pgls --class Mammalia (2026-11-15T17:11:49Z)
+Mammalia: all 13 proteins and a lifespan: 625
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and fourfold counts: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia: 604 species in the test; 15 other tips under their common ancestor (ignored)
+   class method            model aa   n  lambda    slope      se      t        p       q
+Mammalia   pgls             mass  I 604       1   -0.257  0.0686  -3.74 0.000201 0.00403
+Mammalia   pgls             mass  H 604   0.984   0.0706  0.0237   2.98  0.00295  0.0295
+Mammalia   pgls             mass  G 604   0.994   0.0479   0.017   2.82  0.00496  0.0331
+Mammalia   pgls             mass  F 604   0.997  -0.0914  0.0357  -2.56   0.0107  0.0452
+Mammalia   pgls             mass  T 604       1    0.183  0.0721   2.54   0.0113  0.0452
+Mammalia   pgls             mass  V 604   0.993    0.127  0.0612   2.08   0.0378   0.126
+Mammalia   pgls             mass  P 604   0.995    0.045  0.0251   1.79   0.0744   0.213
+Mammalia   pgls             mass  C 604   0.993  -0.0173  0.0105  -1.65   0.0996   0.249
+Mammalia   pgls             mass  D 604    0.97  -0.0277  0.0179  -1.55    0.122   0.272
+Mammalia   pgls             mass  Y 604   0.993  -0.0381  0.0258  -1.48     0.14   0.275
+Mammalia   pgls             mass  L 604       1   0.0751  0.0523   1.44    0.151   0.275
+Mammalia   pgls             mass  A 604   0.999  -0.0503  0.0518 -0.972    0.331   0.552
+Mammalia   pgls             mass  E 604   0.997 -0.00939   0.012 -0.785    0.433   0.623
+Mammalia   pgls             mass  W 604       1 -0.00395 0.00527 -0.749    0.454   0.623
+Mammalia   pgls             mass  R 604   0.969  0.00596  0.0088  0.678    0.498   0.623
+Mammalia   pgls             mass  N 604   0.996  -0.0245  0.0362 -0.677    0.499   0.623
+Mammalia   pgls             mass  Q 604       1  0.00638  0.0126  0.505    0.614   0.722
+Mammalia   pgls             mass  M 604       1  -0.0267  0.0589 -0.452    0.651   0.723
+Mammalia   pgls             mass  K 604       1 -0.00557  0.0149 -0.374    0.708   0.746
+Mammalia   pgls             mass  S 604   0.993  0.00448  0.0464 0.0965    0.923   0.923
+Mammalia   pgls mass+composition  A 604   0.988   -0.129  0.0494  -2.62  0.00912   0.107
+Mammalia   pgls mass+composition  D 604   0.963  -0.0449  0.0175  -2.56   0.0108   0.107
+Mammalia   pgls mass+composition  I 604   0.991   -0.158  0.0655  -2.41   0.0161   0.107
+Mammalia   pgls mass+composition  H 604   0.979   0.0512  0.0235   2.18   0.0294   0.119
+Mammalia   pgls mass+composition  T 604   0.999    0.153  0.0702   2.18   0.0298   0.119
+Mammalia   pgls mass+composition  G 604   0.991    0.035  0.0168   2.08   0.0381   0.127
+Mammalia   pgls mass+composition  C 604   0.993  -0.0207  0.0106  -1.95   0.0514   0.147
+Mammalia   pgls mass+composition  F 604   0.993  -0.0562  0.0348  -1.62    0.106   0.266
+Mammalia   pgls mass+composition  L 604       1   0.0619  0.0499   1.24    0.215   0.432
+Mammalia   pgls mass+composition  V 604    0.98   0.0716  0.0578   1.24    0.216   0.432
+Mammalia   pgls mass+composition  P 604   0.978   0.0206  0.0244  0.847    0.397   0.683
+Mammalia   pgls mass+composition  W 604   0.998 -0.00448 0.00544 -0.824     0.41   0.683
+Mammalia   pgls mass+composition  K 604       1 -0.00911  0.0149 -0.612    0.541    0.76
+Mammalia   pgls mass+composition  Q 604       1  0.00773  0.0126  0.611    0.541    0.76
+Mammalia   pgls mass+composition  Y 604   0.989  -0.0144  0.0253 -0.568     0.57    0.76
+Mammalia   pgls mass+composition  N 604    0.99   0.0163  0.0344  0.473    0.637   0.779
+Mammalia   pgls mass+composition  E 604   0.997  -0.0053  0.0121 -0.437    0.662   0.779
+Mammalia   pgls mass+composition  R 604   0.965   0.0022 0.00881   0.25    0.803   0.892
+Mammalia   pgls mass+composition  M 604       1  0.00403   0.055 0.0733    0.942   0.985
+Mammalia   pgls mass+composition  S 604   0.993 0.000878  0.0468 0.0188    0.985   0.985
+== longevity aa-pgls --class Aves (2026-11-15T17:12:02Z)
+Aves: all 13 proteins and a lifespan: 415
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 402
+Aves: and body mass: 382
+Aves: and fourfold counts: 382
+Aves: and a tip in the dated tree: 379
+Aves: 379 species in the test; 40 other tips under their common ancestor (ignored)
+class method            model aa   n  lambda    slope      se      t      p     q
+ Aves   pgls             mass  I 379   0.985    0.104  0.0441   2.36 0.0187 0.284
+ Aves   pgls             mass  S 379   0.977  -0.0759  0.0345   -2.2 0.0284 0.284
+ Aves   pgls             mass  V 379   0.972  -0.0757  0.0386  -1.96 0.0507 0.338
+ Aves   pgls             mass  T 379   0.978   0.0681  0.0506   1.35  0.179  0.89
+ Aves   pgls             mass  A 379   0.997  -0.0431  0.0394  -1.09  0.275  0.89
+ Aves   pgls             mass  Q 379   0.996  -0.0118  0.0109  -1.09  0.278  0.89
+ Aves   pgls             mass  K 379   0.949   0.0104  0.0108   0.96  0.338  0.89
+ Aves   pgls             mass  D 379   0.921  0.00959  0.0117  0.819  0.413  0.89
+ Aves   pgls             mass  E 379    0.98  0.00665 0.00924   0.72  0.472  0.89
+ Aves   pgls             mass  M 379   0.999  -0.0209  0.0329 -0.637  0.524  0.89
+ Aves   pgls             mass  H 379       1 -0.00771  0.0145 -0.531  0.596  0.89
+ Aves   pgls             mass  F 379   0.994    0.012  0.0228  0.525    0.6  0.89
+ Aves   pgls             mass  C 379   0.985  0.00386  0.0077  0.501  0.617  0.89
+ Aves   pgls             mass  R 379   0.941  0.00373 0.00875  0.426   0.67  0.89
+ Aves   pgls             mass  Y 379   0.993   0.0053   0.013  0.406  0.685  0.89
+ Aves   pgls             mass  W 379   0.929  0.00225 0.00609  0.369  0.712  0.89
+ Aves   pgls             mass  G 379   0.983 -0.00435  0.0145   -0.3  0.764 0.899
+ Aves   pgls             mass  L 379       1 -0.00712  0.0377 -0.189   0.85 0.914
+ Aves   pgls             mass  N 379   0.951  0.00386  0.0232  0.166  0.868 0.914
+ Aves   pgls             mass  P 379       1  0.00158  0.0182  0.087  0.931 0.931
+ Aves   pgls mass+composition  S 379   0.977  -0.0801   0.034  -2.36 0.0189 0.275
+ Aves   pgls mass+composition  I 379   0.968   0.0895  0.0421   2.13 0.0341 0.275
+ Aves   pgls mass+composition  V 379   0.964  -0.0766  0.0374  -2.05 0.0412 0.275
+ Aves   pgls mass+composition  T 379   0.971    0.073  0.0483   1.51  0.132 0.658
+ Aves   pgls mass+composition  Q 379   0.994  -0.0123   0.011  -1.11  0.266 0.838
+ Aves   pgls mass+composition  K 379   0.941   0.0105  0.0109  0.971  0.332 0.838
+ Aves   pgls mass+composition  E 379    0.98  0.00692 0.00926  0.747  0.455 0.838
+ Aves   pgls mass+composition  A 379   0.972  -0.0255  0.0386 -0.661  0.509 0.838
+ Aves   pgls mass+composition  D 379   0.922  0.00747  0.0116  0.644   0.52 0.838
+ Aves   pgls mass+composition  C 379   0.984  0.00413 0.00772  0.535  0.593 0.838
+ Aves   pgls mass+composition  H 379       1 -0.00773  0.0146  -0.53  0.596 0.838
+ Aves   pgls mass+composition  R 379   0.939  0.00376 0.00878  0.428  0.669 0.838
+ Aves   pgls mass+composition  W 379   0.927  0.00255 0.00611  0.418  0.676 0.838
+ Aves   pgls mass+composition  Y 379   0.994  0.00496  0.0128  0.388  0.698 0.838
+ Aves   pgls mass+composition  F 379   0.988  0.00815  0.0232  0.351  0.726 0.838
+ Aves   pgls mass+composition  N 379   0.937  0.00784  0.0228  0.344  0.731 0.838
+ Aves   pgls mass+composition  L 379       1 -0.00943  0.0328 -0.287  0.774 0.838
+ Aves   pgls mass+composition  M 379   0.963 -0.00895  0.0314 -0.285  0.776 0.838
+ Aves   pgls mass+composition  G 379   0.982 -0.00372  0.0144 -0.258  0.796 0.838
+ Aves   pgls mass+composition  P 379   0.998    0.002  0.0181   0.11  0.912 0.912
+== longevity aa-pgls --class Actinopterygii (2026-11-15T17:12:13Z)
+Actinopterygii: all 13 proteins and a lifespan: 892
+Actinopterygii: default dataset (live; lifespan quality high or acceptable; not estimated): 826
+Actinopterygii: and body mass: 235
+Actinopterygii: and fourfold counts: 235
+Actinopterygii: and a tip in the dated tree: 235
+Actinopterygii: 235 species in the test; 649 other tips under their common ancestor (ignored)
+         class method            model aa   n  lambda    slope      se      t       p      q
+Actinopterygii   pgls             mass  S 235       1   0.0652  0.0213   3.06 0.00245 0.0263
+Actinopterygii   pgls             mass  I 235   0.998   -0.114  0.0374  -3.04 0.00263 0.0263
+Actinopterygii   pgls             mass  T 235   0.993  -0.0935  0.0329  -2.84 0.00492 0.0328
+Actinopterygii   pgls             mass  V 235       1   0.0835  0.0356   2.35  0.0198 0.0991
+Actinopterygii   pgls             mass  A 235   0.998    0.081  0.0365   2.22  0.0275   0.11
+Actinopterygii   pgls             mass  F 235   0.995  -0.0325  0.0182  -1.78  0.0759  0.253
+Actinopterygii   pgls             mass  Y 235       1   0.0128 0.00913    1.4   0.163  0.429
+Actinopterygii   pgls             mass  H 235   0.978  -0.0181  0.0132  -1.37   0.172  0.429
+Actinopterygii   pgls             mass  R 235   0.859   0.0127 0.00996   1.27   0.204  0.453
+Actinopterygii   pgls             mass  N 235       1  -0.0149  0.0152 -0.982   0.327  0.596
+Actinopterygii   pgls             mass  E 235   0.993  0.00937 0.00988  0.949   0.344  0.596
+Actinopterygii   pgls             mass  D 235   0.985  0.00947  0.0103  0.917    0.36  0.596
+Actinopterygii   pgls             mass  W 235   0.985 -0.00649 0.00749 -0.866   0.388  0.596
+Actinopterygii   pgls             mass  M 235       1  -0.0179  0.0228 -0.782   0.435  0.622
+Actinopterygii   pgls             mass  C 235       1  0.00414 0.00588  0.705   0.482  0.642
+Actinopterygii   pgls             mass  K 235   0.947  0.00672  0.0144  0.468    0.64   0.76
+Actinopterygii   pgls             mass  Q 235    0.97 -0.00587  0.0128  -0.46   0.646   0.76
+Actinopterygii   pgls             mass  P 235   0.855  0.00274  0.0244  0.112   0.911  0.934
+Actinopterygii   pgls             mass  G 235   0.992 -0.00155  0.0151 -0.102   0.918  0.934
+Actinopterygii   pgls             mass  L 235       1   0.0025  0.0299 0.0834   0.934  0.934
+Actinopterygii   pgls mass+composition  S 235       1   0.0594  0.0211   2.82 0.00519  0.104
+Actinopterygii   pgls mass+composition  T 235   0.989  -0.0759  0.0329  -2.31  0.0219   0.17
+Actinopterygii   pgls mass+composition  I 235   0.993  -0.0856   0.038  -2.25  0.0254   0.17
+Actinopterygii   pgls mass+composition  V 235   0.994   0.0668  0.0399   1.67  0.0956  0.371
+Actinopterygii   pgls mass+composition  F 235   0.995  -0.0301  0.0183  -1.65   0.101  0.371
+Actinopterygii   pgls mass+composition  A 235   0.992    0.063  0.0394    1.6   0.111  0.371
+Actinopterygii   pgls mass+composition  Y 235       1   0.0135 0.00914   1.48   0.141  0.403
+Actinopterygii   pgls mass+composition  H 235   0.969  -0.0179  0.0138   -1.3   0.196   0.45
+Actinopterygii   pgls mass+composition  R 235   0.863   0.0125  0.0102   1.23    0.22   0.45
+Actinopterygii   pgls mass+composition  E 235   0.991   0.0123  0.0101   1.22   0.225   0.45
+Actinopterygii   pgls mass+composition  D 235   0.984  0.00869  0.0105   0.83   0.408  0.727
+Actinopterygii   pgls mass+composition  K 235   0.939   0.0109  0.0145  0.751   0.453  0.727
+Actinopterygii   pgls mass+composition  W 235   0.985 -0.00542 0.00758 -0.714   0.476  0.727
+Actinopterygii   pgls mass+composition  C 235       1  0.00368 0.00595  0.619   0.536  0.727
+Actinopterygii   pgls mass+composition  N 235       1 -0.00821  0.0146 -0.561   0.575  0.727
+Actinopterygii   pgls mass+composition  M 235       1   -0.012  0.0217 -0.552   0.582  0.727
+Actinopterygii   pgls mass+composition  Q 235   0.969 -0.00625  0.0131 -0.479   0.633  0.744
+Actinopterygii   pgls mass+composition  G 235   0.989 -0.00498  0.0156 -0.319    0.75  0.833
+Actinopterygii   pgls mass+composition  L 235       1  0.00354  0.0277  0.128   0.898    0.9
+Actinopterygii   pgls mass+composition  P 235   0.825  0.00307  0.0244  0.126     0.9    0.9
+== longevity aa-pgls --class Reptilia (2026-11-15T17:12:23Z)
+Reptilia: all 13 proteins and a lifespan: 128
+Reptilia: default dataset (live; lifespan quality high or acceptable; not estimated): 125
+Reptilia: and body mass: 97
+Reptilia: and fourfold counts: 97
+Reptilia: and a tip in the dated tree: 97
+Reptilia: 97 species in the test; 458 other tips under their common ancestor (ignored)
+   class method            model aa  n  lambda    slope     se       t       p      q
+Reptilia   pgls             mass  D 97   0.907   -0.107 0.0374   -2.87 0.00507  0.101
+Reptilia   pgls             mass  I 97       1   -0.294  0.155    -1.9  0.0611  0.611
+Reptilia   pgls             mass  H 97       1   0.0749 0.0512    1.46   0.147  0.668
+Reptilia   pgls             mass  C 97   0.781  -0.0443 0.0315    -1.4   0.164  0.668
+Reptilia   pgls             mass  Q 97       1   0.0574 0.0419    1.37   0.174  0.668
+Reptilia   pgls             mass  L 97       1    0.197  0.174    1.13    0.26  0.668
+Reptilia   pgls             mass  G 97   0.939   0.0786 0.0703    1.12   0.266  0.668
+Reptilia   pgls             mass  A 97       1   -0.184  0.165   -1.12   0.267  0.668
+Reptilia   pgls             mass  V 97   0.991   0.0914  0.112   0.819   0.415  0.786
+Reptilia   pgls             mass  S 97       1   0.0956  0.127    0.75   0.455  0.786
+Reptilia   pgls             mass  T 97       1    0.156   0.21   0.741   0.461  0.786
+Reptilia   pgls             mass  W 97       1  -0.0164 0.0227  -0.723   0.472  0.786
+Reptilia   pgls             mass  F 97   0.995   0.0365  0.074   0.494   0.622  0.945
+Reptilia   pgls             mass  R 97       1 -0.00991 0.0288  -0.343   0.732  0.945
+Reptilia   pgls             mass  P 97       1  -0.0202 0.0736  -0.275   0.784  0.945
+Reptilia   pgls             mass  M 97       1  -0.0487  0.218  -0.224   0.824  0.945
+Reptilia   pgls             mass  N 97   0.991    -0.01  0.078  -0.128   0.898  0.945
+Reptilia   pgls             mass  K 97       1 -0.00588  0.059 -0.0995   0.921  0.945
+Reptilia   pgls             mass  Y 97   0.962  0.00451 0.0564  0.0799   0.936  0.945
+Reptilia   pgls             mass  E 97       1  0.00238 0.0341  0.0698   0.945  0.945
+Reptilia   pgls mass+composition  D 97   0.895    -0.11 0.0375   -2.94 0.00418 0.0836
+Reptilia   pgls mass+composition  A 97   0.988   -0.243   0.14   -1.73   0.087   0.57
+Reptilia   pgls mass+composition  I 97   0.989   -0.211  0.125   -1.68  0.0957   0.57
+Reptilia   pgls mass+composition  Q 97       1   0.0602 0.0413    1.46   0.148   0.57
+Reptilia   pgls mass+composition  C 97   0.779  -0.0455  0.032   -1.42   0.159   0.57
+Reptilia   pgls mass+composition  L 97       1    0.174  0.126    1.38   0.171   0.57
+Reptilia   pgls mass+composition  G 97   0.926   0.0686 0.0669    1.03   0.308  0.684
+Reptilia   pgls mass+composition  F 97   0.985   0.0702 0.0695    1.01   0.315  0.684
+Reptilia   pgls mass+composition  H 97   0.964   0.0488 0.0507   0.962   0.339  0.684
+Reptilia   pgls mass+composition  S 97       1    0.119  0.125   0.952   0.344  0.684
+Reptilia   pgls mass+composition  Y 97   0.877   0.0454 0.0523   0.868   0.388  0.684
+Reptilia   pgls mass+composition  W 97       1  -0.0183  0.023  -0.797   0.427  0.684
+Reptilia   pgls mass+composition  P 97       1   -0.045 0.0586  -0.768   0.445  0.684
+Reptilia   pgls mass+composition  V 97   0.965   0.0578 0.0977   0.591   0.556  0.764
+Reptilia   pgls mass+composition  R 97   0.987  -0.0165 0.0292  -0.566   0.573  0.764
+Reptilia   pgls mass+composition  T 97       1   0.0856  0.181   0.473   0.637  0.796
+Reptilia   pgls mass+composition  M 97       1   0.0319  0.135   0.237   0.814  0.957
+Reptilia   pgls mass+composition  N 97   0.983   0.0078 0.0744   0.105   0.917  0.959
+Reptilia   pgls mass+composition  E 97       1  0.00297 0.0339  0.0876    0.93  0.959
+Reptilia   pgls mass+composition  K 97       1  0.00291  0.057   0.051   0.959  0.959
+== longevity pgls --class Mammalia (2026-11-15T17:12:27Z)
+lifespan quality high or acceptable: 612 of 622
+dated tree: 604 species of Mammalia in it; 15 other tips under their common ancestor (ignored)
+species: 604; root-to-tip height median 181.192, min 181.192, max 181.192
+Pagel's lambda of lifespan given mass and composition: 0.959
+null model: mass slope 0.133 (t 13.2)
+tests: 5259 over 1645 columns; q<0.05: 2; q<0.1: 2; smallest p 9.5e-07
+p-value histogram (10 bins): [650, 541, 518, 530, 495, 484, 519, 528, 531, 463]
+gene  column  human_pos human_aa residue  carriers  others  families_with_both  effect_log10_years     t        p       q
+ ND5     316        200        Q       Q       573      31                   6              -0.213 -4.95 9.55e-07 0.00502
+COX1     499        419        I       I        24     580                   7               0.146  4.32 1.86e-05  0.0489
+ ND4     179         94        L       L       521      83                  14             -0.0922 -3.97 8.12e-05   0.129
+ ND6     275        122        G       E        69     534                   6               0.125  3.92  9.8e-05   0.129
+ ND5     316        200        Q       H        28     576                   5               0.176  3.76 0.000187   0.197
+ ND5     882        543        L       L       114     490                  14             -0.0855 -3.67 0.000265   0.232
+ ND5     163         71        T       V        18     586                  12              -0.104 -3.62 0.000319    0.24
+COX1     572        484        M       A        66     538                  11              0.0912  3.57 0.000385   0.244
+ ND6     275        122        G       G       473     130                   9              -0.095 -3.55 0.000417   0.244
+ ND2     181         53        T       I        28     576                   6              -0.131  -3.5 0.000496   0.251
+ ND4      93         47        N       E        40     523                   6               -0.14 -3.49 0.000526   0.251
+ ND6     177         86        V       V        94     510                  18              0.0792   3.4 0.000721   0.289
+ ND5     161         69        A       I       101     503                  19             -0.0629 -3.38 0.000762   0.289
+ ND1     122         80        T       A        21     583                   9               0.104  3.36 0.000815   0.289
+CYTB      83         43        L       M        41     563                  10               0.102  3.34 0.000886   0.289
+COX1     632        511        M       I       132     472                  13             -0.0671 -3.34 0.000898   0.289
+ ND4     290        184        Q       H        17     587                   5              -0.126 -3.31    0.001   0.289
+ ND6     395        150        R       T       290     313                   6              -0.107  -3.3  0.00101   0.289
+ ND5     181         88        M       M       268     336                  17              0.0648  3.29  0.00104   0.289
+ATP8     197         46        N       K       427     175                  17             -0.0608 -3.18  0.00154   0.405
+COX3     123         51        T       A        35     569                   8             -0.0879 -3.17  0.00163   0.407
+ATP6     123         57        M       M       535      69                   6              -0.112 -3.11  0.00193   0.411
+ ND5    1157        600        L       M        35     567                  14             -0.0826 -3.11  0.00198   0.411
+ ND5     802        514        K       S        52     551                  15             -0.0735 -3.09  0.00206   0.411
+ ND6     127         64        M       M       256     348                   5             -0.0904 -3.08  0.00217   0.411
+== longevity pgls --class Aves (2026-11-15T17:13:02Z)
+lifespan quality high or acceptable: 382 of 395
+dated tree: 379 species of Aves in it; 40 other tips under their common ancestor (ignored)
+species: 379; root-to-tip height median 107.555, min 107.555, max 107.555
+Pagel's lambda of lifespan given mass and composition: 0.502
+null model: mass slope 0.215 (t 11.8)
+tests: 2716 over 1125 columns; q<0.05: 0; q<0.1: 0; smallest p 0.0012
+p-value histogram (10 bins): [318, 261, 284, 266, 282, 275, 254, 241, 274, 261]
+gene  column  human_pos human_aa residue  carriers  others  families_with_both  effect_log10_years     t       p     q
+ ND5     320        204        L       I        23     354                   6              -0.153 -3.27 0.00119 0.598
+ ND5      64         14        S       T       159     220                  21              0.0796   3.2 0.00148 0.598
+COX1     233        169        I       I       359      20                   8               0.131  3.18  0.0016 0.598
+COX3     112         40        M       L        17     362                  10               0.148   3.1 0.00209 0.598
+ATP6      49         17        L       V        20     359                  10              -0.127 -3.06 0.00237 0.598
+ ND5      72         20        L       L       222     157                  14              0.0792  3.04  0.0025 0.598
+ ND2     654        320        T       P       252     127                  18              0.0717  2.97 0.00317 0.598
+ATP6      49         17        L       I       348      31                  11               0.104  2.96 0.00325 0.598
+ ND1     325        249        A       H        17     362                   6              -0.135 -2.94 0.00345 0.598
+ ND5     613        447        N       D        48     331                  13              0.0976  2.92 0.00371 0.598
+ ND2     687        334        T       I       186     193                  21              0.0619  2.91 0.00384 0.598
+ ND4     489        343        I       L       332      47                  11               0.102   2.9 0.00398 0.598
+COX1     589        496        Y       Y        18     361                   6              -0.145 -2.87 0.00427 0.598
+COX1     589        496        Y       H       361      18                   6               0.145  2.87 0.00427 0.598
+ ND5     983        581        K       T       208     171                   6             -0.0882 -2.87 0.00428 0.598
+ ND2     575        281        I       T        48     331                  12              -0.086 -2.86 0.00446 0.598
+ ND3     167         95        I       L        79     299                  14             -0.0889 -2.85  0.0046 0.598
+ ND5     567        417        S       T        48     331                   9               0.101  2.83 0.00494 0.598
+ ND5     134         45        I       L       328      51                  11              0.0858  2.81 0.00527 0.598
+ ND5      61         11        T       T       362      17                   7               0.126   2.8  0.0054 0.598
+ ND4     386        258        A       H       344      35                   8               0.107  2.79 0.00548 0.598
+ ND5     674        467        L       L       332      47                  15             -0.0836 -2.79 0.00553 0.598
+ ND4     556        401        L       F        22     357                   7              -0.128 -2.77 0.00586 0.598
+ ND2     433        218        L       T       259     120                  13              0.0681  2.76 0.00603 0.598
+ATP6     160         81        T       T       134     245                  10              0.0736  2.76 0.00606 0.598
+== longevity rates (2026-11-15T17:13:16Z)
+default dataset with a tip in the dated tree: 1369 species
+cherries: 339 pairs; rows 4746; dS > 1.0 in 24.2% of concatenated pairs
+
+concatenated genes, saturated pairs excluded:
+         class   gene normalisation  includes_saturated   n     slope      se       t      p  lower_rate_in_longer_lived  sign_n  sign_p     q
+      Mammalia CONCAT   dS_mass_adj               False 115     0.113  0.0483    2.33 0.0213                          53     114   0.512 0.149
+      Mammalia CONCAT        dS_raw               False 115    0.0967  0.0465    2.08   0.04                          53     114   0.512 0.224
+          Aves CONCAT    dS_per_myr               False  95  -0.00588 0.00325   -1.81 0.0733                          52      95   0.412 0.257
+          Aves CONCAT          dNdS               False  95   0.00387 0.00286    1.35   0.18                          38      95  0.0642 0.506
+      Mammalia CONCAT    dS_per_myr               False 115    0.0147  0.0129    1.14  0.255                          53     114   0.512 0.879
+          Aves CONCAT        dS_raw               False  95   -0.0251  0.0222   -1.13  0.261                          52      95   0.412 0.835
+Actinopterygii CONCAT          dNdS               False  28   -0.0138  0.0147  -0.935  0.358                          15      26   0.557 0.848
+           all CONCAT   dS_mass_adj               False 257   -0.0284  0.0358  -0.793  0.428                         131     254   0.661 0.774
+           all CONCAT        dN_raw               False 257 -0.000916 0.00183  -0.499  0.618                         132     254   0.572 0.786
+          Aves CONCAT   dS_mass_adj               False  95  -0.00897  0.0223  -0.403  0.688                          52      95   0.412 0.933
+           all CONCAT        dS_raw               False 257   -0.0121   0.034  -0.358  0.721                         131     254   0.661 0.928
+           all CONCAT    dS_per_myr               False 257  -0.00159 0.00478  -0.333   0.74                         131     254   0.661 0.901
+Actinopterygii CONCAT   dS_mass_adj               False  28   -0.0424    0.14  -0.302  0.765                          12      26   0.845 0.997
+      Mammalia CONCAT          dNdS               False 115  -0.00597  0.0214   -0.28   0.78                          61     114   0.512 0.997
+Actinopterygii CONCAT        dS_raw               False  28    0.0273   0.125   0.218  0.829                          12      26   0.845 0.975
+           all CONCAT          dNdS               False 257  -0.00131 0.00648  -0.201  0.841                         121     254    0.49 0.905
+          Aves CONCAT        dN_raw               False  95 -0.000212 0.00117  -0.181  0.857                          45      95   0.682 0.964
+Actinopterygii CONCAT        dN_raw               False  28  0.000548 0.00398   0.138  0.891                          15      26   0.557 0.936
+      Mammalia CONCAT        dN_raw               False 115 -0.000336 0.00294  -0.114  0.909                          61     114   0.512 0.909
+Actinopterygii CONCAT    dS_per_myr               False  28 -0.000517  0.0173 -0.0299  0.976                          12      26   0.845 0.976
+
+655 tests; q < 0.05 in 4
+== longevity motif-pgls (2026-11-15T17:13:31Z)
+/data/uq2347/runs/mitoage/euring-data/before/input/mitoage/mtdna_structure.parquet: 2335 species, 33 numeric features
+records naming a long-read technology: 0  (the long-read-only subset cannot be tested on this build)
+         class      subset                       feature   n  lambda  spearman_rho  spearman_p  slope_per_sd      se     t       p     q
+      Mammalia all_records              g4_reverse_total 604   0.959        0.0775      0.0569        0.0165 0.00585  2.82 0.00491 0.162
+Actinopterygii all_records      mirror_repeats_major_arc 198    0.81        -0.158      0.0266       -0.0578  0.0209 -2.76 0.00636  0.21
+      Reptilia all_records        str_dinucleotide_total  97   0.736        -0.189      0.0633        0.0731   0.028  2.61  0.0105 0.163
+      Reptilia all_records               str_bases_total  97   0.736        -0.159       0.121        0.0725  0.0278   2.6  0.0107 0.163
+      Reptilia all_records          mirror_repeats_total  97   0.736          0.14       0.172        0.0563  0.0227  2.48  0.0148 0.163
+          Aves all_records          g4_forward_major_arc 332   0.502        0.0902       0.101        0.0206 0.00907  2.27  0.0236 0.421
+          Aves all_records              g4_forward_total 379   0.502         0.122      0.0171        0.0195 0.00871  2.24  0.0255 0.421
+Actinopterygii all_records longest_homopolymer_major_arc 198    0.81         0.107       0.135       -0.0393  0.0183 -2.14  0.0336 0.544
+      Mammalia all_records   contact_zone_inverted_pairs 602   0.959        -0.181    8.26e-06        0.0114 0.00535  2.13  0.0337 0.557
+      Reptilia all_records     contact_zone_mirror_pairs  96   0.736        0.0494       0.633        0.0584  0.0275  2.12  0.0366 0.302
+          Aves all_records          direct_repeats_total 379   0.502         0.132      0.0103       -0.0254  0.0123 -2.07  0.0387 0.426
+      Reptilia all_records    str_dinucleotide_major_arc  82   0.736        -0.126       0.258        0.0598  0.0306  1.95  0.0543 0.306
+      Reptilia all_records           str_bases_major_arc  82   0.736        -0.152       0.173          0.06  0.0309  1.94  0.0556 0.306
+Actinopterygii all_records    inverted_repeats_major_arc 198    0.81       -0.0223       0.755       -0.0427   0.023 -1.86  0.0647 0.544
+Actinopterygii all_records        str_dinucleotide_total 235    0.81         0.229     0.00039        0.0362  0.0196  1.85  0.0659 0.544
+          Aves all_records   contact_zone_inverted_pairs 368   0.502       -0.0177       0.735         0.017 0.00936  1.82  0.0693 0.572
+      Reptilia all_records longest_homopolymer_major_arc  82   0.736       -0.0537       0.632        0.0449  0.0246  1.83  0.0719 0.339
+      Mammalia all_records       purine_tracts_major_arc 530   0.959       -0.0222        0.61        0.0121 0.00714   1.7  0.0906 0.729
+      Reptilia all_records              g4_forward_total  97   0.736         0.185      0.0702        0.0467  0.0278  1.68  0.0968 0.375
+Actinopterygii all_records                  major_arc_bp 198    0.81          0.21     0.00298       -0.0275  0.0166 -1.66  0.0993 0.655
+
+132 tests; q < 0.05 in 0
+== mitoport contacts (2026-11-15T17:13:35Z)
+  chain A: Cytochrome c oxidase subunit 1 (513 residues)
+  chain B: Cytochrome c oxidase subunit 2 (227 residues)
+  chain C: Cytochrome c oxidase subunit 3 (260 residues)
+  chain D: Cytochrome c oxidase subunit 4 isoform 1, mitochondrial (144 residues)
+  chain E: Cytochrome c oxidase subunit 5A, mitochondrial (109 residues)
+  chain F: Cytochrome c oxidase subunit 5B, mitochondrial (98 residues)
+  chain G: Cytochrome c oxidase subunit 6A1, mitochondrial (75 residues)
+  chain H: Cytochrome c oxidase subunit 6B1 (82 residues)
+  chain I: Cytochrome c oxidase subunit 6C (73 residues)
+  chain J: Cytochrome c oxidase subunit 7A2, mitochondrial (56 residues)
+  chain K: Cytochrome c oxidase subunit 7B, mitochondrial (49 residues)
+  chain L: Cytochrome c oxidase subunit 7C, mitochondrial (47 residues)
+  chain M: Cytochrome c oxidase subunit 8A, mitochondrial (43 residues)
+  chain N: Cytochrome c oxidase subunit NDUFA4 (79 residues)
+mitochondrial chains: {'A': 'COX1', 'B': 'COX2', 'C': 'COX3'}
+  COX1 chain A: 513 residues, identity to the human protein 1.000
+  COX2 chain B: 227 residues, identity to the human protein 1.000
+  COX3 chain C: 260 residues, identity to the human protein 1.000
+COX1: 129 of 513 residues touch a nuclear subunit
+COX2: 77 of 227 residues touch a nuclear subunit
+COX3: 92 of 260 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/euring-data/before/interim/mitoport/iface/contacts.tsv
+== mitoport burial (2026-11-15T17:13:38Z)
+COX1 chain A: 513 residues, 513 mapped, identity to the human protein 1.000
+COX2 chain B: 227 residues, 227 mapped, identity to the human protein 1.000
+COX3 chain C: 260 residues, 260 mapped, identity to the human protein 1.000
+species with an alignment, a tip on the dated tree and a lifespan of usable quality: 2174
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  COX1 contact  n=129  rASA alone 0.413  in complex 0.103  occupancy 1.000  identity 0.913
+  COX1 control  n=129  rASA alone 0.336  in complex 0.141  occupancy 1.000  identity 0.994
+  COX1 other    n=255  rASA alone 0.046  in complex 0.033  occupancy 1.000  identity 0.995
+  COX2 contact  n= 77  rASA alone 0.472  in complex 0.108  occupancy 1.000  identity 0.917
+  COX2 control  n= 77  rASA alone 0.468  in complex 0.250  occupancy 1.000  identity 0.881
+  COX2 other    n= 73  rASA alone 0.097  in complex 0.042  occupancy 1.000  identity 0.937
+  COX3 contact  n= 92  rASA alone 0.380  in complex 0.105  occupancy 1.000  identity 0.943
+  COX3 control  n= 92  rASA alone 0.380  in complex 0.271  occupancy 1.000  identity 0.951
+  COX3 other    n= 76  rASA alone 0.091  in complex 0.066  occupancy 1.000  identity 0.990
+wrote /data/uq2347/runs/mitoage/euring-data/before/interim/mitoport/iface/sites.tsv /data/uq2347/runs/mitoage/euring-data/before/interim/mitoport/iface/chains.tsv /data/uq2347/runs/mitoage/euring-data/before/interim/mitoport/iface/species.txt
+== longevity structure-pgls (2026-11-15T17:13:46Z)
+contact columns: {'COX1': 129, 'COX2': 77, 'COX3': 92} controls: {'COX1': 129, 'COX2': 77, 'COX3': 92}
+Mammalia: all 13 proteins and a lifespan: 625
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and fourfold counts: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia: 604 species in the test (15 other tips under their common ancestor ignored)
+Mammalia: mean mismatch to the class consensus, contact 0.0888, control 0.0789
+Aves: all 13 proteins and a lifespan: 415
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 402
+Aves: and body mass: 382
+Aves: and fourfold counts: 382
+Aves: and a tip in the dated tree: 379
+Aves: 379 species in the test (40 other tips under their common ancestor ignored)
+Aves: mean mismatch to the class consensus, contact 0.0651, control 0.0578
+Actinopterygii: all 13 proteins and a lifespan: 892
+Actinopterygii: default dataset (live; lifespan quality high or acceptable; not estimated): 826
+Actinopterygii: and body mass: 235
+Actinopterygii: and fourfold counts: 235
+Actinopterygii: and a tip in the dated tree: 235
+Actinopterygii: 235 species in the test (649 other tips under their common ancestor ignored)
+Actinopterygii: mean mismatch to the class consensus, contact 0.0563, control 0.0344
+Reptilia: all 13 proteins and a lifespan: 128
+Reptilia: default dataset (live; lifespan quality high or acceptable; not estimated): 125
+Reptilia: and body mass: 97
+Reptilia: and fourfold counts: 97
+Reptilia: and a tip in the dated tree: 97
+Reptilia: 97 species in the test (458 other tips under their common ancestor ignored)
+Reptilia: mean mismatch to the class consensus, contact 0.2348, control 0.1476
+    family                model          class   n  tests  q_below_005  smallest_p  smallest_q
+  contacts     mass+composition       Mammalia 604      3            0       0.353       0.825
+  contacts     mass+composition           Aves 379      3            0      0.0215      0.0646
+  contacts     mass+composition Actinopterygii 235      3            0       0.599       0.843
+  contacts     mass+composition       Reptilia  97      3            0      0.0314      0.0521
+hydropathy mass+own composition       Mammalia 604     14            2    0.000474     0.00664
+hydropathy mass+own composition           Aves 379     14            1     0.00291      0.0407
+hydropathy mass+own composition Actinopterygii 235     14            0      0.0296        0.32
+hydropathy mass+own composition       Reptilia  97     14            0      0.0426       0.573
+hydropathy     mass+composition       Mammalia 604     14            2    0.000952      0.0133
+hydropathy     mass+composition           Aves 379     14            0     0.00563      0.0788
+hydropathy     mass+composition Actinopterygii 235     14            0      0.0466       0.502
+hydropathy     mass+composition       Reptilia  97     14            0      0.0725       0.655
+== longevity generation-time --maturity female (2026-11-15T17:13:55Z)
+Mammalia: Mammalia in the build: 627
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia:   of which with maturity (female): 527
+Mammalia:   of which with gestation: 557
+Mammalia:   of which with birth_weight: 470
+Mammalia:   of which with all three: 439
+Mammalia: slow-fast axis beyond size on 439 species, 39% of the variance; loadings lifespan +0.51, maturity +0.44, gestation +0.56, birth_weight +0.48
+Mammalia: slow-fast axis with size on 439 species, 55% of the variance; loadings lifespan +0.41, maturity +0.36, gestation +0.38, birth_weight +0.53, mass +0.52
+Mammalia, maturity: 527 species; r with lifespan across species mass 0.72, maturity 0.84; VIF on the tree (lambda 1) lifespan 1.3, mass 1.2, maturity 1.1
+Mammalia, gestation: 557 species; r with lifespan across species mass 0.72, gestation 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 1.2, gestation 1.1
+Mammalia, birth_weight: 470 species; r with lifespan across species mass 0.72, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.2, mass 3.5, birth_weight 3.4
+Mammalia, all: 439 species; r with lifespan across species mass 0.72, maturity 0.86, gestation 0.75, birth_weight 0.71, pace 0.76, pace_size 0.85; VIF on the tree (lambda 1) lifespan 1.4, mass 3.6, maturity 1.3, gestation 1.3, birth_weight 3.9
+Aves: Aves in the build: 423
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 405
+Aves: and body mass: 385
+Aves: and a tip in the dated tree: 382
+Aves:   of which with maturity (female): 281
+Aves:   of which with gestation: 175
+Aves:   of which with birth_weight: 115
+Aves:   of which with all three: 107
+Aves: slow-fast axis beyond size on 107 species, 34% of the variance; loadings lifespan +0.38, maturity -0.49, gestation -0.64, birth_weight -0.45
+Aves: slow-fast axis with size on 107 species, 53% of the variance; loadings lifespan +0.19, maturity +0.44, gestation +0.45, birth_weight +0.51, mass +0.55
+Aves, maturity: 281 species; r with lifespan across species mass 0.69, maturity 0.61; VIF on the tree (lambda 1) lifespan 1.2, mass 1.4, maturity 1.3
+Aves, gestation: 175 species; r with lifespan across species mass 0.72, gestation 0.68; VIF on the tree (lambda 1) lifespan 1.2, mass 1.6, gestation 1.4
+Aves, birth_weight: 115 species; r with lifespan across species mass 0.67, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.1, mass 2.8, birth_weight 2.6
+Aves, all: 107 species; r with lifespan across species mass 0.66, maturity 0.47, gestation 0.62, birth_weight 0.70, pace -0.21, pace_size 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 3.3, maturity 1.4, gestation 1.5, birth_weight 2.7
+   class   competitor                      model         term   n  tests  q_below_005  smallest_p
+    Aves          all                        all birth_weight 107     43            0      0.0563
+    Aves          all                        all    gestation 107     43            0       0.114
+    Aves          all                        all     lifespan 107     43            0     0.00588
+    Aves          all                        all         mass 107     43            0     0.00415
+    Aves          all                        all     maturity 107     43            0     0.00274
+    Aves          all                   lifespan     lifespan 107     43            0     0.00194
+    Aves          all                       mass         mass 107     43            0     0.00871
+    Aves          all                  pace+mass         mass 107     43            0     0.00787
+    Aves          all                  pace+mass         pace 107     43            0      0.0108
+    Aves          all                  pace_size    pace_size 107     43            0      0.0118
+    Aves birth_weight               birth_weight birth_weight 115     43            0      0.0692
+    Aves birth_weight          birth_weight+mass birth_weight 115     43            0      0.0513
+    Aves birth_weight          birth_weight+mass         mass 115     43            0      0.0118
+    Aves birth_weight                   lifespan     lifespan 115     43            1    8.11e-05
+    Aves birth_weight lifespan+birth_weight+mass birth_weight 115     43            0      0.0626
+    Aves birth_weight lifespan+birth_weight+mass     lifespan 115     43            1    0.000262
+    Aves birth_weight lifespan+birth_weight+mass         mass 115     43            0     0.00206
+    Aves birth_weight              lifespan+mass     lifespan 115     43            1    0.000208
+    Aves birth_weight              lifespan+mass         mass 115     43            1    0.000413
+    Aves    gestation                  gestation    gestation 175     43            0      0.0125
+    Aves    gestation             gestation+mass    gestation 175     43            0      0.0317
+    Aves    gestation             gestation+mass         mass 175     43            0     0.00224
+    Aves    gestation                   lifespan     lifespan 175     43            0     0.00472
+    Aves    gestation    lifespan+gestation+mass    gestation 175     43            0      0.0301
+    Aves    gestation    lifespan+gestation+mass     lifespan 175     43            0     0.00763
+    Aves    gestation    lifespan+gestation+mass         mass 175     43            2     0.00014
+    Aves    gestation              lifespan+mass     lifespan 175     43            0     0.00729
+    Aves    gestation              lifespan+mass         mass 175     43            2    0.000439
+    Aves     maturity                   lifespan     lifespan 281     43            0       0.141
+    Aves     maturity              lifespan+mass     lifespan 281     43            0      0.0447
+    Aves     maturity              lifespan+mass         mass 281     43            0      0.0132
+    Aves     maturity     lifespan+maturity+mass     lifespan 281     43            0      0.0553
+    Aves     maturity     lifespan+maturity+mass         mass 281     43            0      0.0262
+    Aves     maturity     lifespan+maturity+mass     maturity 281     43            7    0.000515
+    Aves     maturity                   maturity     maturity 281     43            7    0.000331
+    Aves     maturity              maturity+mass         mass 281     43            0      0.0304
+    Aves     maturity              maturity+mass     maturity 281     43            6    0.000433
+Mammalia          all                        all birth_weight 439     43            2    4.01e-05
+Mammalia          all                        all    gestation 439     43            0     0.00307
+Mammalia          all                        all     lifespan 439     43            0     0.00201
+Mammalia          all                        all         mass 439     43            3    5.99e-05
+Mammalia          all                        all     maturity 439     43            0     0.00283
+Mammalia          all                   lifespan     lifespan 439     43           24    5.69e-05
+Mammalia          all                       mass         mass 439     43            3     0.00208
+Mammalia          all                  pace+mass         mass 439     43            3     0.00174
+Mammalia          all                  pace+mass         pace 439     43           32    2.25e-06
+Mammalia          all                  pace_size    pace_size 439     43           27    3.41e-06
+Mammalia birth_weight               birth_weight birth_weight 470     43           23    1.53e-05
+Mammalia birth_weight          birth_weight+mass birth_weight 470     43           19    1.17e-06
+Mammalia birth_weight          birth_weight+mass         mass 470     43            4    6.97e-05
+Mammalia birth_weight                   lifespan     lifespan 470     43           18    0.000141
+Mammalia birth_weight lifespan+birth_weight+mass birth_weight 470     43           16    2.44e-06
+Mammalia birth_weight lifespan+birth_weight+mass     lifespan 470     43            0     0.00223
+Mammalia birth_weight lifespan+birth_weight+mass         mass 470     43            4     5.2e-05
+Mammalia birth_weight              lifespan+mass     lifespan 470     43            5    0.000788
+Mammalia birth_weight              lifespan+mass         mass 470     43            0      0.0402
+Mammalia    gestation                  gestation    gestation 557     43           21    1.81e-05
+Mammalia    gestation             gestation+mass    gestation 557     43           17       8e-05
+Mammalia    gestation             gestation+mass         mass 557     43            0      0.0458
+Mammalia    gestation                   lifespan     lifespan 557     43            9    9.82e-05
+Mammalia    gestation    lifespan+gestation+mass    gestation 557     43           15    0.000268
+Mammalia    gestation    lifespan+gestation+mass     lifespan 557     43            1    0.000859
+Mammalia    gestation    lifespan+gestation+mass         mass 557     43            0      0.0236
+Mammalia    gestation              lifespan+mass     lifespan 557     43            6    0.000428
+Mammalia    gestation              lifespan+mass         mass 557     43            0      0.0236
+Mammalia     maturity                   lifespan     lifespan 527     43           20    4.06e-05
+Mammalia     maturity              lifespan+mass     lifespan 527     43           11    0.000215
+Mammalia     maturity              lifespan+mass         mass 527     43            0      0.0335
+Mammalia     maturity     lifespan+maturity+mass     lifespan 527     43            4     0.00165
+Mammalia     maturity     lifespan+maturity+mass         mass 527     43            0      0.0477
+Mammalia     maturity     lifespan+maturity+mass     maturity 527     43            1    9.98e-05
+Mammalia     maturity                   maturity     maturity 527     43           12    8.55e-05
+Mammalia     maturity              maturity+mass         mass 527     43            0       0.016
+Mammalia     maturity              maturity+mass     maturity 527     43            1    6.53e-05
+== longevity generation-time --maturity any (2026-11-15T17:14:45Z)
+Mammalia: Mammalia in the build: 627
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia:   of which with maturity (any): 527
+Mammalia:   of which with gestation: 557
+Mammalia:   of which with birth_weight: 470
+Mammalia:   of which with all three: 439
+Mammalia: slow-fast axis beyond size on 439 species, 39% of the variance; loadings lifespan +0.51, maturity +0.44, gestation +0.56, birth_weight +0.48
+Mammalia: slow-fast axis with size on 439 species, 55% of the variance; loadings lifespan +0.41, maturity +0.36, gestation +0.38, birth_weight +0.53, mass +0.52
+Mammalia, maturity: 527 species; r with lifespan across species mass 0.72, maturity 0.84; VIF on the tree (lambda 1) lifespan 1.3, mass 1.2, maturity 1.1
+Mammalia, gestation: 557 species; r with lifespan across species mass 0.72, gestation 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 1.2, gestation 1.1
+Mammalia, birth_weight: 470 species; r with lifespan across species mass 0.72, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.2, mass 3.5, birth_weight 3.4
+Mammalia, all: 439 species; r with lifespan across species mass 0.72, maturity 0.86, gestation 0.75, birth_weight 0.71, pace 0.76, pace_size 0.85; VIF on the tree (lambda 1) lifespan 1.4, mass 3.6, maturity 1.3, gestation 1.3, birth_weight 3.9
+Aves: Aves in the build: 423
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 405
+Aves: and body mass: 385
+Aves: and a tip in the dated tree: 382
+Aves:   of which with maturity (any): 282
+Aves:   of which with gestation: 175
+Aves:   of which with birth_weight: 115
+Aves:   of which with all three: 107
+Aves: slow-fast axis beyond size on 107 species, 34% of the variance; loadings lifespan +0.38, maturity -0.49, gestation -0.64, birth_weight -0.45
+Aves: slow-fast axis with size on 107 species, 53% of the variance; loadings lifespan +0.19, maturity +0.44, gestation +0.45, birth_weight +0.51, mass +0.55
+Aves, maturity: 282 species; r with lifespan across species mass 0.68, maturity 0.60; VIF on the tree (lambda 1) lifespan 1.2, mass 1.4, maturity 1.3
+Aves, gestation: 175 species; r with lifespan across species mass 0.72, gestation 0.68; VIF on the tree (lambda 1) lifespan 1.2, mass 1.6, gestation 1.4
+Aves, birth_weight: 115 species; r with lifespan across species mass 0.67, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.1, mass 2.8, birth_weight 2.6
+Aves, all: 107 species; r with lifespan across species mass 0.66, maturity 0.47, gestation 0.62, birth_weight 0.70, pace -0.21, pace_size 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 3.3, maturity 1.4, gestation 1.5, birth_weight 2.7
+   class   competitor                      model         term   n  tests  q_below_005  smallest_p
+    Aves          all                        all birth_weight 107     43            0      0.0563
+    Aves          all                        all    gestation 107     43            0       0.114
+    Aves          all                        all     lifespan 107     43            0     0.00588
+    Aves          all                        all         mass 107     43            0     0.00415
+    Aves          all                        all     maturity 107     43            0     0.00274
+    Aves          all                   lifespan     lifespan 107     43            0     0.00194
+    Aves          all                       mass         mass 107     43            0     0.00871
+    Aves          all                  pace+mass         mass 107     43            0     0.00787
+    Aves          all                  pace+mass         pace 107     43            0      0.0108
+    Aves          all                  pace_size    pace_size 107     43            0      0.0118
+    Aves birth_weight               birth_weight birth_weight 115     43            0      0.0692
+    Aves birth_weight          birth_weight+mass birth_weight 115     43            0      0.0513
+    Aves birth_weight          birth_weight+mass         mass 115     43            0      0.0118
+    Aves birth_weight                   lifespan     lifespan 115     43            1    8.11e-05
+    Aves birth_weight lifespan+birth_weight+mass birth_weight 115     43            0      0.0626
+    Aves birth_weight lifespan+birth_weight+mass     lifespan 115     43            1    0.000262
+    Aves birth_weight lifespan+birth_weight+mass         mass 115     43            0     0.00206
+    Aves birth_weight              lifespan+mass     lifespan 115     43            1    0.000208
+    Aves birth_weight              lifespan+mass         mass 115     43            1    0.000413
+    Aves    gestation                  gestation    gestation 175     43            0      0.0125
+    Aves    gestation             gestation+mass    gestation 175     43            0      0.0317
+    Aves    gestation             gestation+mass         mass 175     43            0     0.00224
+    Aves    gestation                   lifespan     lifespan 175     43            0     0.00472
+    Aves    gestation    lifespan+gestation+mass    gestation 175     43            0      0.0301
+    Aves    gestation    lifespan+gestation+mass     lifespan 175     43            0     0.00763
+    Aves    gestation    lifespan+gestation+mass         mass 175     43            2     0.00014
+    Aves    gestation              lifespan+mass     lifespan 175     43            0     0.00729
+    Aves    gestation              lifespan+mass         mass 175     43            2    0.000439
+    Aves     maturity                   lifespan     lifespan 282     43            0       0.135
+    Aves     maturity              lifespan+mass     lifespan 282     43            0      0.0215
+    Aves     maturity              lifespan+mass         mass 282     43            0      0.0107
+    Aves     maturity     lifespan+maturity+mass     lifespan 282     43            0      0.0251
+    Aves     maturity     lifespan+maturity+mass         mass 282     43            0      0.0216
+    Aves     maturity     lifespan+maturity+mass     maturity 282     43            5    0.000946
+    Aves     maturity                   maturity     maturity 282     43            7    0.000446
+    Aves     maturity              maturity+mass         mass 282     43            0      0.0307
+    Aves     maturity              maturity+mass     maturity 282     43            5    0.000799
+Mammalia          all                        all birth_weight 439     43            2    4.01e-05
+Mammalia          all                        all    gestation 439     43            0     0.00307
+Mammalia          all                        all     lifespan 439     43            0     0.00201
+Mammalia          all                        all         mass 439     43            3    5.99e-05
+Mammalia          all                        all     maturity 439     43            0     0.00283
+Mammalia          all                   lifespan     lifespan 439     43           24    5.69e-05
+Mammalia          all                       mass         mass 439     43            3     0.00208
+Mammalia          all                  pace+mass         mass 439     43            3     0.00174
+Mammalia          all                  pace+mass         pace 439     43           32    2.25e-06
+Mammalia          all                  pace_size    pace_size 439     43           27    3.41e-06
+Mammalia birth_weight               birth_weight birth_weight 470     43           23    1.53e-05
+Mammalia birth_weight          birth_weight+mass birth_weight 470     43           19    1.17e-06
+Mammalia birth_weight          birth_weight+mass         mass 470     43            4    6.97e-05
+Mammalia birth_weight                   lifespan     lifespan 470     43           18    0.000141
+Mammalia birth_weight lifespan+birth_weight+mass birth_weight 470     43           16    2.44e-06
+Mammalia birth_weight lifespan+birth_weight+mass     lifespan 470     43            0     0.00223
+Mammalia birth_weight lifespan+birth_weight+mass         mass 470     43            4     5.2e-05
+Mammalia birth_weight              lifespan+mass     lifespan 470     43            5    0.000788
+Mammalia birth_weight              lifespan+mass         mass 470     43            0      0.0402
+Mammalia    gestation                  gestation    gestation 557     43           21    1.81e-05
+Mammalia    gestation             gestation+mass    gestation 557     43           17       8e-05
+Mammalia    gestation             gestation+mass         mass 557     43            0      0.0458
+Mammalia    gestation                   lifespan     lifespan 557     43            9    9.82e-05
+Mammalia    gestation    lifespan+gestation+mass    gestation 557     43           15    0.000268
+Mammalia    gestation    lifespan+gestation+mass     lifespan 557     43            1    0.000859
+Mammalia    gestation    lifespan+gestation+mass         mass 557     43            0      0.0236
+Mammalia    gestation              lifespan+mass     lifespan 557     43            6    0.000428
+Mammalia    gestation              lifespan+mass         mass 557     43            0      0.0236
+Mammalia     maturity                   lifespan     lifespan 527     43           20    4.06e-05
+Mammalia     maturity              lifespan+mass     lifespan 527     43           11    0.000215
+Mammalia     maturity              lifespan+mass         mass 527     43            0      0.0335
+Mammalia     maturity     lifespan+maturity+mass     lifespan 527     43            4     0.00165
+Mammalia     maturity     lifespan+maturity+mass         mass 527     43            0      0.0477
+Mammalia     maturity     lifespan+maturity+mass     maturity 527     43            1    9.98e-05
+Mammalia     maturity                   maturity     maturity 527     43           12    8.55e-05
+Mammalia     maturity              maturity+mass         mass 527     43            0       0.016
+Mammalia     maturity              maturity+mass     maturity 527     43            1    6.53e-05
+== done (2026-11-15T17:15:35Z)
+7b5ff7dc97b74ab308de9dac72a5744da799c876caeae02f35af2039d1b6f26f  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/aa_pgls.Actinopterygii.tsv
+cf932b862f87fc7c024eeb70b9a5057f33bbca962a4e70f4adc044e66f4b90df  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/aa_pgls.Aves.tsv
+e0cec513287af0947afa5867ebbf9a1ba9affa93fa78af3c0321280a731e176f  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/aa_pgls.Mammalia.tsv
+11f0d2acd5542b527c02aef3696cdb001efd1d6d8cb5b084da7ddf97aafaa356  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/aa_pgls.Reptilia.tsv
+2970b26d8ed02dfa5daea8f93ce0f7e19544fe644097200c8d05c3860b6a26d8  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/composition.tsv
+92796be4b0dd0722e213bc7b438afc816a0e6969eded44fbe725b8c6cc453a26  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/controls.tsv
+385e2d230e7209dbd80faca8e1f4902504f6e19e2a4809cf97f0916b3807e822  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/fourfold.tsv
+bd540ff4069bff37cc9a8be2aa07eef5c675da37523891df060d763870830103  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/generation_time.any.classes.tsv
+7d9799edbeb375774fd46cfddf8546a47528aa8f48109564d8f5bff89f6d5a6e  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/generation_time.any.tsv
+5c5bb3c32b05781d2545d4f78bf8c41ef027e0fb5b204975dbc5515fcc561263  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/generation_time.female.classes.tsv
+73ac0173a75c4c0212b2a5e130a23fe4bf8b02e0ef25f6d368177836eaf61e5a  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/generation_time.female.tsv
+5065393b5fe6212f3ffad8a1345d256ced074cd58366be24bad96dfd544bd5f2  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/motif_pgls.tsv
+a73a580d15516de5a74fbc326ca810646965228b4fde6536f5bf923c274ed8a4  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/pgls.Aves.tsv
+e415055788363756c96898cea15c15e40bb8020621be5aa5b4dc3ed280143cd1  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/pgls.Mammalia.tsv
+f1e12fd8af7afc7e990455ebe23bd27c4fdeb6cd115e9be1755849da2385a6ff  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/rate_contrasts.tsv
+e567aeb168ac83abd15f8ede69080f6a0b0646dd347244ac2b06b9addaa63dbd  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/rates.tsv
+1118786260ae83856d586b6484dba0b33865c5a52673ec9693d5f47129551195  /data/uq2347/runs/mitoage/euring-data/before/output/longevity/structure_pgls.tsv

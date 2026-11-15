@@ -1,0 +1,81 @@
+class	method	model	aa	n	lambda	slope	se	t	p	q
+Reptilia	pgls	mass	A	97	1	-0.1842	0.165	-1.116	0.2671	0.6677
+Reptilia	pgls	mass	C	97	0.7809	-0.04428	0.03153	-1.404	0.1635	0.6677
+Reptilia	pgls	mass	D	97	0.907	-0.1073	0.03738	-2.87	0.005071	0.1014
+Reptilia	pgls	mass	E	97	1	0.002378	0.03407	0.06979	0.9445	0.9445
+Reptilia	pgls	mass	F	97	0.9946	0.03654	0.07396	0.4941	0.6224	0.9445
+Reptilia	pgls	mass	G	97	0.9394	0.07859	0.07027	1.118	0.2662	0.6677
+Reptilia	pgls	mass	H	97	1	0.07491	0.05123	1.462	0.147	0.6677
+Reptilia	pgls	mass	I	97	1	-0.2936	0.1549	-1.896	0.06106	0.6106
+Reptilia	pgls	mass	K	97	1	-0.005878	0.05905	-0.09955	0.9209	0.9445
+Reptilia	pgls	mass	L	97	1	0.1968	0.1738	1.133	0.2603	0.6677
+Reptilia	pgls	mass	M	97	1	-0.04875	0.218	-0.2236	0.8235	0.9445
+Reptilia	pgls	mass	N	97	0.9911	-0.01	0.07795	-0.1283	0.8982	0.9445
+Reptilia	pgls	mass	P	97	1	-0.02023	0.07358	-0.275	0.7839	0.9445
+Reptilia	pgls	mass	Q	97	1	0.05743	0.04189	1.371	0.1737	0.6677
+Reptilia	pgls	mass	R	97	1	-0.009905	0.02884	-0.3434	0.7321	0.9445
+Reptilia	pgls	mass	S	97	1	0.09557	0.1274	0.7502	0.455	0.7859
+Reptilia	pgls	mass	T	97	1	0.1556	0.2101	0.7408	0.4607	0.7859
+Reptilia	pgls	mass	V	97	0.9906	0.09139	0.1115	0.8194	0.4147	0.7859
+Reptilia	pgls	mass	W	97	1	-0.01644	0.02275	-0.7229	0.4715	0.7859
+Reptilia	pgls	mass	Y	97	0.9623	0.00451	0.05641	0.07994	0.9365	0.9445
+Reptilia	pgls	mass+composition	A	97	0.9877	-0.2427	0.1403	-1.73	0.08704	0.5696
+Reptilia	pgls	mass+composition	C	97	0.7787	-0.04552	0.03203	-1.421	0.1587	0.5696
+Reptilia	pgls	mass+composition	D	97	0.895	-0.1103	0.03754	-2.938	0.004182	0.08364
+Reptilia	pgls	mass+composition	E	97	1	0.002971	0.03392	0.08759	0.9304	0.9594
+Reptilia	pgls	mass+composition	F	97	0.9855	0.07022	0.06948	1.011	0.3148	0.6842
+Reptilia	pgls	mass+composition	G	97	0.9257	0.06861	0.06691	1.025	0.3079	0.6842
+Reptilia	pgls	mass+composition	H	97	0.9638	0.04882	0.05075	0.9621	0.3385	0.6842
+Reptilia	pgls	mass+composition	I	97	0.9891	-0.2111	0.1254	-1.684	0.09569	0.5696
+Reptilia	pgls	mass+composition	K	97	1	0.00291	0.05704	0.05102	0.9594	0.9594
+Reptilia	pgls	mass+composition	L	97	1	0.1741	0.1261	1.38	0.1709	0.5696
+Reptilia	pgls	mass+composition	M	97	1	0.03185	0.1347	0.2365	0.8135	0.9571
+Reptilia	pgls	mass+composition	N	97	0.9829	0.007797	0.07435	0.1049	0.9167	0.9594
+Reptilia	pgls	mass+composition	P	97	1	-0.04502	0.05865	-0.7676	0.4447	0.6842
+Reptilia	pgls	mass+composition	Q	97	1	0.06017	0.04127	1.458	0.1483	0.5696
+Reptilia	pgls	mass+composition	R	97	0.9871	-0.01652	0.02919	-0.5659	0.5728	0.7638
+Reptilia	pgls	mass+composition	S	97	0.9999	0.1192	0.1252	0.9517	0.3438	0.6842
+Reptilia	pgls	mass+composition	T	97	1	0.08558	0.1808	0.4734	0.6371	0.7964
+Reptilia	pgls	mass+composition	V	97	0.9651	0.0578	0.09773	0.5914	0.5557	0.7638
+Reptilia	pgls	mass+composition	W	97	1	-0.01834	0.023	-0.7972	0.4274	0.6842
+Reptilia	pgls	mass+composition	Y	97	0.8774	0.04542	0.05231	0.8683	0.3875	0.6842
+Reptilia	mixed	mass	A	97		-0.1721	0.2116	-0.8134	0.416	0.832
+Reptilia	mixed	mass	C	97		-0.007555	0.03214	-0.2351	0.8141	0.8428
+Reptilia	mixed	mass	D	97		-0.08209	0.03835	-2.141	0.03231	0.3231
+Reptilia	mixed	mass	E	97		-0.02502	0.03848	-0.6502	0.5156	0.8428
+Reptilia	mixed	mass	F	97		0.09343	0.08544	1.094	0.2741	0.6854
+Reptilia	mixed	mass	G	97		0.09632	0.07339	1.312	0.1894	0.541
+Reptilia	mixed	mass	H	97		0.089	0.06238	1.427	0.1537	0.541
+Reptilia	mixed	mass	I	97		-0.3427	0.1953	-1.755	0.07925	0.5284
+Reptilia	mixed	mass	K	97		-0.01643	0.05608	-0.293	0.7695	0.8428
+Reptilia	mixed	mass	L	97		0.2473	0.1629	1.518	0.1291	0.541
+Reptilia	mixed	mass	M	97		0.06822	0.2363	0.2887	0.7728	0.8428
+Reptilia	mixed	mass	N	97		0.01997	0.1007	0.1983	0.8428	0.8428
+Reptilia	mixed	mass	P	97		0.03485	0.0865	0.403	0.687	0.8428
+Reptilia	mixed	mass	Q	97		0.1053	0.04721	2.23	0.02572	0.3231
+Reptilia	mixed	mass	R	97		-0.01979	0.03489	-0.5671	0.5707	0.8428
+Reptilia	mixed	mass	S	97		0.04322	0.1659	0.2605	0.7945	0.8428
+Reptilia	mixed	mass	T	97		-0.1209	0.2795	-0.4325	0.6654	0.8428
+Reptilia	mixed	mass	V	97		0.03696	0.122	0.3029	0.762	0.8428
+Reptilia	mixed	mass	W	97		-0.03438	0.02513	-1.368	0.1713	0.541
+Reptilia	mixed	mass	Y	97		0.05588	0.06237	0.896	0.3702	0.8228
+Reptilia	mixed	mass+composition	A	97		-0.1708	0.1665	-1.026	0.3048	0.5081
+Reptilia	mixed	mass+composition	C	97		-0.01018	0.03267	-0.3114	0.7555	0.8122
+Reptilia	mixed	mass+composition	D	97		-0.07687	0.03782	-2.032	0.04212	0.2471
+Reptilia	mixed	mass+composition	E	97		-0.01425	0.03776	-0.3774	0.7059	0.8122
+Reptilia	mixed	mass+composition	F	97		0.09911	0.0728	1.361	0.1734	0.5081
+Reptilia	mixed	mass+composition	G	97		0.07676	0.06877	1.116	0.2643	0.5081
+Reptilia	mixed	mass+composition	H	97		0.08162	0.06031	1.353	0.176	0.5081
+Reptilia	mixed	mass+composition	I	97		-0.2876	0.1422	-2.022	0.04313	0.2471
+Reptilia	mixed	mass+composition	K	97		-0.01675	0.05771	-0.2903	0.7716	0.8122
+Reptilia	mixed	mass+composition	L	97		0.2828	0.1439	1.965	0.04941	0.2471
+Reptilia	mixed	mass+composition	M	97		0.01758	0.1574	0.1117	0.9111	0.9111
+Reptilia	mixed	mass+composition	N	97		-0.04991	0.1002	-0.4982	0.6183	0.8122
+Reptilia	mixed	mass+composition	P	97		0.02045	0.06608	0.3094	0.757	0.8122
+Reptilia	mixed	mass+composition	Q	97		0.09547	0.04545	2.101	0.03567	0.2471
+Reptilia	mixed	mass+composition	R	97		-0.0125	0.03475	-0.3597	0.719	0.8122
+Reptilia	mixed	mass+composition	S	97		0.05542	0.1561	0.355	0.7226	0.8122
+Reptilia	mixed	mass+composition	T	97		-0.2243	0.2185	-1.026	0.3048	0.5081
+Reptilia	mixed	mass+composition	V	97		0.107	0.09393	1.139	0.2546	0.5081
+Reptilia	mixed	mass+composition	W	97		-0.03251	0.02504	-1.298	0.1942	0.5081
+Reptilia	mixed	mass+composition	Y	97		0.06525	0.05314	1.228	0.2195	0.5081
