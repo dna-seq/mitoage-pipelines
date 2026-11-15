@@ -50,12 +50,12 @@ def append_manifest(manifest: Path, source: str, identifier: str, folder: Path, 
 # --- prepared data ----------------------------------------------------------------------------
 # What we fetched or computed, published by topic, each dataset laid out like data/ (input/, interim/, output/).
 PREPARED = {
-    "partners": "longevity-genie/mitoage-nuclear-partners",    # NCBI ortholog sets as fetched; mitoport's alignments and trees
+    "partners": "longevity-genie/mitoage-nuclear-partners",    # NCBI ortholog sets as fetched (mammals; complex IV across vertebrates); mitoport's alignments and trees
     "embeddings": "longevity-genie/mitoage-embeddings",        # ESM-2 650M mean embeddings of both partners
     "residues": "longevity-genie/mitoage-embeddings",          # the same, per residue (7.7 GB): what `mitoport iface` reads
     "structures": "longevity-genie/mitoage-structures",        # 806 ESMFold2 structures of the 13 proteins in 62 mammals
     "aligners": "longevity-genie/mitoage-aligner-variants",    # the 13 proteins aligned by four aligners
-    "results": "longevity-genie/mitoage-pipelines",            # the dated tree and every result table
+    "results": "longevity-genie/mitoage-pipelines",            # the dated tree and the result tables, complex IV's contact map among them
 }
 
 
@@ -76,8 +76,8 @@ def prepared(topic: str, root: Path, manifest: Path, revision: str | None = None
         allow = ["input/embeddings/*.residues.npy", "input/embeddings/*.index.parquet"] if topic == "residues" else ["input/**", "interim/**"]
         ignore = ["*.residues.npy"] if topic == "embeddings" else None
         snapshot_download(repo, repo_type="dataset", revision=sha, local_dir=root, allow_patterns=allow, ignore_patterns=ignore)
-    if topic == "partners":
-        for z in sorted((root / "input" / "ncbi").glob("*.zip")):
+    if topic == "partners":           # the mammalian sets, and complex IV's eleven subunits across vertebrates (H12)
+        for z in sorted([*(root / "input" / "ncbi").glob("*.zip"), *(root / "input" / "ncbi-vertebrata").glob("*.zip")]):
             gene_dir = z.with_suffix("")
             if not (gene_dir / "ncbi_dataset" / "data" / "protein.faa").is_file():
                 gene_dir.mkdir(exist_ok=True)

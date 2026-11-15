@@ -63,6 +63,10 @@ uv run mitoage download orthologs         # nuclear subunits and control protein
 
 # or: our prepared copies from Hugging Face, by topic (partners, embeddings, residues, aligners, structures,
 # results, all; `all` leaves out the 7.7 GB of per-residue embeddings, `--topic residues` fetches them)
+# The coevolution data is there for reuse beyond our tests: `partners` holds the NCBI ortholog sets and alignments
+# of the nuclear subunits (mammals; complex IV across vertebrates); `results` holds rate covariation (erc.tsv),
+# embedding covariation (coembed.tsv), complex IV's contact map and residue coupling (output/mitoport/iface/), and
+# every species' mito-nuclear pair discordance (partners_species.tsv).
 uv run mitoage download prepared          # exactly what we fetched and computed; our tables land in data/reference
 
 # H1: amino-acid content against lifespan
@@ -90,6 +94,7 @@ uv run mitoage download orthologs --ortholog-taxon vertebrata --dest data/input/
 uv run mitoage mitoport select --ncbi data/input/ncbi-vertebrata --out data/interim/mitoport/partners/sel \
     --class Mammalia --class Aves --class Actinopterygii --class Reptilia
 uv run mitoage mitoport iface-align --sel data/interim/mitoport/partners/sel --out data/interim/mitoport/partners/aln --threads 1
+# or: `download prepared --topic partners` brings those ortholog sets, selections and alignments as published
 uv run mitoage mitoport partners          # discordance of the mito-nuclear contact pairs against lifespan
 uv run mitoage structure embed            # ESM-2 650M means at the contact and control residues (a CUDA GPU)
 uv run mitoage longevity structure-pgls --family embedding --out data/output/longevity/embedding

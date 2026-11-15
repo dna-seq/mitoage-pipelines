@@ -656,6 +656,11 @@ q = 0.55). Smallest q in any class and model 0.077 (fishes, contact alone, mass 
 small (mean cosine distance to the class mean 0.0005 to 0.0026): mean ESM-2 vectors over a hundred residues differ
 little between species of one class, and standardising the variable does not create variation the model never
 sees.
+**Second round, published.** The vertebrate ortholog sets, selections and alignments of complex IV's nuclear
+subunits are in longevity-genie/mitoage-nuclear-partners at 7deb2e0 (`download prepared --topic partners`). The
+contact map with its control pairing, the residue coupling of H5 (`coupling.tsv`, the first cluster run's), H9's
+`lifespan.tsv`, both rounds' H12 tables and the ESM-2 means are in longevity-genie/mitoage-pipelines at 126d237,
+under `output/` (build c525adb), which `download prepared --topic results` puts in `data/reference`.
 **Second round, reading.** Mito-nuclear compatibility at complex IV's contacts, measured three ways (mito-side
 mismatch, discordance of the two sides, embedding divergence), follows lifespan in no class, with intervals that
 exclude effects larger than about 12% of maximum lifespan per standard deviation in mammals and birds. The contact pairs
