@@ -151,7 +151,8 @@ longevity −0.13 and −0.10 (0.07 and 0.14), so the raw dS association went wi
 resumed to convergence; until then the result for lifespan as a continuous trait is not assessed.
 **The tree Coevol saw.** `coevol-prep` writes the dated tree's topology without its branch lengths, so
 Coevol was not given the ages: it set every branch to 0.001 and sampled the node ages itself, with no
-calibration. "On the dated tree" above means its topology only. Sampling about a hundred ages jointly with the
+calibration (its log warns of a non-positive length 210 times, once per branch). "On the dated tree" above
+means its topology only. Sampling about a hundred ages jointly with the
 rates is a known slow part of Coevol's sampler and a likely cause of the poor mixing. `coevol-prep
 --fixed-ages` keeps the ages and `coevol --fixed-ages` passes `-fixtimes`, which holds them at the dated tree's
 (scaled to a root age of 1); two such chains are run beside the resumed ones.
@@ -176,6 +177,32 @@ and both together. A branch with α or β estimated at 0 has no logarithm and is
   (saturated synonymous sites).
 - **What it cannot do:** it ignores the uncertainty of each branch's α and β (Coevol does not), and uses tips
   only. It is a check of direction and size, not a replacement for the converged chains.
+**Two-step result** (haumea, job 6490192, run from d6581f1; `results/h3/two-step/`). There are 209
+branches, of which 106 are terminal and last 12 to 84 Myr. The synonymous fraction is 0.260. Terminal dS has a
+median of 0.66 and a maximum of 1.97, so no branch passes 2 and the sensitivity rows equal the main ones.
+Terminal dN/dS has a median of 0.053 (0.029 to 0.121). α is 0 on 7 short internal branches and on no terminal
+one.
+- **The positive control fails.** On mass alone, the slope of log10 dN/dS is +0.008 per log10 g (SE 0.009,
+  p 0.34, λ 0.29). By the reading fixed above, nothing about lifespan is read from this test.
+- **The secondary control holds.** dS per Myr falls with mass: −0.037 (p 0.0005, λ 0.99).
+- **Not read, because the control failed.** Given mass, the lifespan slope of log10 dN/dS is +0.092
+  (p 0.10). Given mass, the lifespan slope of log10 dS per Myr is −0.129 (p 0.016, Holm 0.033). The dS
+  slope has Coevol's sign, but the rule fixed in advance does not let it count.
+- **Rerun.** A second run in the same job is not byte-identical: HyPhy's 16-thread optimiser stopped
+  0.1 log-likelihood units apart, with α at 0 on 1 branch instead of 7. Terminal dS and dN/dS agree within
+  0.15 %. Every slope and p above agrees to three significant figures, and every verdict is the same.
+- **What it says.** With one species per family, a terminal branch averages dN/dS over 12 to 84 Myr of
+  ancestors, while the trait is today's. Popadin et al. (2007) found their body-mass effect on young
+  terminal branches. This design does not reproduce it, so it cannot speak for dN/dS. That explanation is
+  ours and has not been tested. The question stays with the Coevol chains.
+**Coevol, resumed (2026-11-15).** Four chains were submitted on haumea in 3-day legs, with a checkpoint every
+6 h, towards 15,000 points each. They use Coevol's MPI build on 8 ranks, at 64 s per point against 90 to 96 s
+serial; `docs/COEVOL_SPEED.md` compares the options.
+- Chains 1 and 2: the published chains, continued. Jobs 6490194 to 6490197 and 6490198 to 6490201.
+- Chains 1 and 2 of `coevol-fixed`: new chains holding the dated ages with -fixtimes. Jobs 6490202 to
+  6490205 and 6490206 to 6490209.
+Nothing from them is read until tracecomp gives effective sample sizes above 100 and small relative
+differences.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 

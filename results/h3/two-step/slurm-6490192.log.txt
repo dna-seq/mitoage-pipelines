@@ -1,0 +1,96 @@
+commit d6581f189e68bfa134551f6d4471261baa8e20f0; job 6490192 on node9
+HYPHY 2.5.104(MP) for Linux on x86_64 x86 SSE4 SIMD zlib (v1.3.2)
+99beae1713061401b4268f862ec9e6c1ec6fbb862ea24c2b12687d860e7b9f88  /data/uq2347/runs/mitoage/coevol-resume/data/interim/coevol/mammals.ali
+ee2673b5c3129a92bf3722d65e16c12b1d3c8b9dafbbc7d9bb3c339fcb73a6bd  /data/uq2347/runs/mitoage/coevol-resume/data/interim/coevol/mammals.lht
+8fa5fbd360709cf1f5dd3329ac9a4479f1ef1d544a2d62a6aff4ba607021786f  /data/uq2347/runs/mitoage/coevol-resume/data/interim/coevol/mammals.tree
+5fc36105b0d1384d395b62a81bd17fc4bc9f983f0c2fb43bccb3fe55ded1ac51  /data/uq2347/runs/mitoage/coevol-resume/data/interim/tree/dated.nwk
+== branch_rates 2026-11-15T18:05:19Z
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/hyphy CPU=16 /data/uq2347/runs/mitoage/coevol-resume/src/mitoage_pipelines/longevity/hyphy/local_mg94.bf --alignment mammals.fna --tree mammals.nwk --code Vertebrate-mtDNA --output fit.json
+
+>code => Vertebrate-mtDNA
+/data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/mammals.nwk
+mammals.nwk
+
+>Loaded a multiple sequence alignment with **106** sequences, **3604** codons, and **1** partitions from `/data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/mammals.fna`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -664732.74, AIC-c = 1329899.57 (217 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 17.274
+
+### * Log(L) = -565647.50, AIC-c = 1132159.97 (432 estimated parameters)
+209 branches (106 terminal); synonymous fraction 0.260; lnL -565647.50; alpha 0 on 7, beta 0 on 0
+branch-rates 493.58 s
+        response branches         model term    slope      se     t        p   n  no_log   lam  p_holm
+      log10_dNdS      all      lifespan   ll   0.0661  0.0364  1.82   0.0722 106       0 0.291     NaN
+      log10_dNdS      all          mass   lm  0.00845 0.00886 0.954    0.342 106       0 0.291     NaN
+      log10_dNdS      all lifespan+mass   ll   0.0915  0.0554  1.65    0.102 106       0 0.291   0.102
+      log10_dNdS      all lifespan+mass   lm -0.00814  0.0134 -0.61    0.543 106       0 0.291     NaN
+      log10_dNdS    dS<=2      lifespan   ll   0.0661  0.0364  1.82   0.0722 106       0 0.291     NaN
+      log10_dNdS    dS<=2          mass   lm  0.00845 0.00886 0.954    0.342 106       0 0.291     NaN
+      log10_dNdS    dS<=2 lifespan+mass   ll   0.0915  0.0554  1.65    0.102 106       0 0.291     NaN
+      log10_dNdS    dS<=2 lifespan+mass   lm -0.00814  0.0134 -0.61    0.543 106       0 0.291     NaN
+log10_dS_per_myr      all      lifespan   ll   -0.161  0.0369 -4.36 3.11e-05 106       0 0.995     NaN
+log10_dS_per_myr      all          mass   lm  -0.0366  0.0101 -3.61 0.000472 106       0 0.995     NaN
+log10_dS_per_myr      all lifespan+mass   ll   -0.129  0.0528 -2.44   0.0163 106       0 0.995  0.0325
+log10_dS_per_myr      all lifespan+mass   lm  -0.0119  0.0142 -0.84    0.403 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2      lifespan   ll   -0.161  0.0369 -4.36 3.11e-05 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2          mass   lm  -0.0366  0.0101 -3.61 0.000472 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2 lifespan+mass   ll   -0.129  0.0528 -2.44   0.0163 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2 lifespan+mass   lm  -0.0119  0.0142 -0.84    0.403 106       0 0.995     NaN
+positive control, dN/dS on mass: slope +0.008 (p 0.34) -> FAILS: nothing below is read
+secondary control, dS/Myr on mass: slope -0.037 (p 0.00047), expected negative
+log10_dNdS on lifespan given mass: slope +0.092 (p 0.1, Holm 0.1) -> not read (control failed)
+log10_dS_per_myr on lifespan given mass: slope -0.129 (p 0.016, Holm 0.033) -> not read (control failed)
+== branch_rates_rerun 2026-11-15T18:13:36Z
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/hyphy CPU=16 /data/uq2347/runs/mitoage/coevol-resume/src/mitoage_pipelines/longevity/hyphy/local_mg94.bf --alignment mammals.fna --tree mammals.nwk --code Vertebrate-mtDNA --output fit.json
+
+>code => Vertebrate-mtDNA
+/data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates_rerun/mammals.nwk
+mammals.nwk
+
+>Loaded a multiple sequence alignment with **106** sequences, **3604** codons, and **1** partitions from `/data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates_rerun/mammals.fna`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -664734.06, AIC-c = 1329902.21 (217 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 17.261
+
+### * Log(L) = -565647.40, AIC-c = 1132159.77 (432 estimated parameters)
+209 branches (106 terminal); synonymous fraction 0.260; lnL -565647.40; alpha 0 on 1, beta 0 on 0
+branch-rates 493.02 s
+        response branches         model term    slope      se      t        p   n  no_log   lam  p_holm
+      log10_dNdS      all      lifespan   ll   0.0661  0.0364   1.82   0.0722 106       0 0.291     NaN
+      log10_dNdS      all          mass   lm  0.00845 0.00887  0.953    0.343 106       0 0.291     NaN
+      log10_dNdS      all lifespan+mass   ll   0.0916  0.0554   1.65    0.102 106       0 0.291   0.102
+      log10_dNdS      all lifespan+mass   lm -0.00815  0.0134 -0.611    0.543 106       0 0.291     NaN
+      log10_dNdS    dS<=2      lifespan   ll   0.0661  0.0364   1.82   0.0722 106       0 0.291     NaN
+      log10_dNdS    dS<=2          mass   lm  0.00845 0.00887  0.953    0.343 106       0 0.291     NaN
+      log10_dNdS    dS<=2 lifespan+mass   ll   0.0916  0.0554   1.65    0.102 106       0 0.291     NaN
+      log10_dNdS    dS<=2 lifespan+mass   lm -0.00815  0.0134 -0.611    0.543 106       0 0.291     NaN
+log10_dS_per_myr      all      lifespan   ll   -0.161  0.0369  -4.36  3.1e-05 106       0 0.995     NaN
+log10_dS_per_myr      all          mass   lm  -0.0366  0.0101  -3.61 0.000471 106       0 0.995     NaN
+log10_dS_per_myr      all lifespan+mass   ll   -0.129  0.0528  -2.44   0.0162 106       0 0.995  0.0324
+log10_dS_per_myr      all lifespan+mass   lm  -0.0119  0.0142 -0.839    0.403 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2      lifespan   ll   -0.161  0.0369  -4.36  3.1e-05 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2          mass   lm  -0.0366  0.0101  -3.61 0.000471 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2 lifespan+mass   ll   -0.129  0.0528  -2.44   0.0162 106       0 0.995     NaN
+log10_dS_per_myr    dS<=2 lifespan+mass   lm  -0.0119  0.0142 -0.839    0.403 106       0 0.995     NaN
+positive control, dN/dS on mass: slope +0.008 (p 0.34) -> FAILS: nothing below is read
+secondary control, dS/Myr on mass: slope -0.037 (p 0.00047), expected negative
+log10_dNdS on lifespan given mass: slope +0.092 (p 0.1, Holm 0.1) -> not read (control failed)
+log10_dS_per_myr on lifespan given mass: slope -0.129 (p 0.016, Holm 0.032) -> not read (control failed)
+== rerun identical?
+branches.tsv DIFFERS
+model.json DIFFERS
+pgls.tsv DIFFERS
+cfaf6f8d1a73181092786f98bf8959e39d774a9150e2ec338ce536ade1ba0c1a  /data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/branches.tsv
+c53060bcf8868ae71f2e1ad2453d8de9036506212d002aedeffe3e1b26af019f  /data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/fit.json
+2da1ed895b1f10d18d8f2eb4d5524e0c08e345f85ee962beeff894e706bf4f26  /data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/mammals.fna
+8fa5fbd360709cf1f5dd3329ac9a4479f1ef1d544a2d62a6aff4ba607021786f  /data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/mammals.nwk
+ed9b9e81d215eb51d6801cbfaa6cd30e917008837200cc5a20c1d4b54384cba1  /data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/model.json
+ab8c8a4e9f0472c60aff77501a386a3c25d0f41ad272cf5bb3b32a3925478d53  /data/uq2347/runs/mitoage/coevol-resume/data/output/longevity/branch_rates/pgls.tsv

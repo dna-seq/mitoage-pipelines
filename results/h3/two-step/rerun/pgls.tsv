@@ -1,0 +1,17 @@
+response	branches	model	term	slope	se	t	p	n	no_log	lam	p_holm
+log10_dNdS	all	lifespan	ll	0.06608	0.03639	1.816	0.07222	106	0	0.2909	
+log10_dNdS	all	mass	lm	0.008449	0.008866	0.9529	0.3428	106	0	0.2909	
+log10_dNdS	all	lifespan+mass	ll	0.09156	0.05543	1.652	0.1016	106	0	0.2909	0.1016
+log10_dNdS	all	lifespan+mass	lm	-0.008155	0.01336	-0.6106	0.5428	106	0	0.2909	
+log10_dNdS	dS<=2	lifespan	ll	0.06608	0.03639	1.816	0.07222	106	0	0.2909	
+log10_dNdS	dS<=2	mass	lm	0.008449	0.008866	0.9529	0.3428	106	0	0.2909	
+log10_dNdS	dS<=2	lifespan+mass	ll	0.09156	0.05543	1.652	0.1016	106	0	0.2909	
+log10_dNdS	dS<=2	lifespan+mass	lm	-0.008155	0.01336	-0.6106	0.5428	106	0	0.2909	
+log10_dS_per_myr	all	lifespan	ll	-0.1607	0.03689	-4.357	3.098e-05	106	0	0.9949	
+log10_dS_per_myr	all	mass	lm	-0.03661	0.01014	-3.611	0.0004712	106	0	0.9949	
+log10_dS_per_myr	all	lifespan+mass	ll	-0.1291	0.0528	-2.444	0.01622	106	0	0.9949	0.03243
+log10_dS_per_myr	all	lifespan+mass	lm	-0.01188	0.01416	-0.8394	0.4032	106	0	0.9949	
+log10_dS_per_myr	dS<=2	lifespan	ll	-0.1607	0.03689	-4.357	3.098e-05	106	0	0.9949	
+log10_dS_per_myr	dS<=2	mass	lm	-0.03661	0.01014	-3.611	0.0004712	106	0	0.9949	
+log10_dS_per_myr	dS<=2	lifespan+mass	ll	-0.1291	0.0528	-2.444	0.01622	106	0	0.9949	
+log10_dS_per_myr	dS<=2	lifespan+mass	lm	-0.01188	0.01416	-0.8394	0.4032	106	0	0.9949	

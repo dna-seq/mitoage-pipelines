@@ -12,6 +12,7 @@
 # MITOAGE_PIPELINES_DATA set,  mkdir -p slurm/logs && sbatch --export=ALL,CHAIN=1,OUT=...,MPI=8 slurm/coevol-chain.sbatch
 #SBATCH --job-name=mitoage-coevol
 #SBATCH --partition=compute
+#SBATCH --account=itmz          # compute allows only these accounts; the group shares a 320-CPU cap
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
 #SBATCH --cpus-per-task=1
