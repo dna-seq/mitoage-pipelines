@@ -1,0 +1,43 @@
+input	source	sha256
+build/alignments/ATP6.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	99d6ebd88f08f78b1c91a4aac3df9c90bacf05a5124c597807f4dedb4183fcab
+build/alignments/ATP6.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	5b12f00c9e473adb1a1c9999fff1e6a8dfcadcea023b9b8c45ba6134126e8973
+build/alignments/ATP8.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	3508c25caa9b27555d383695d4bd95e6fa69945be0a315db3a52e450f4a11f7c
+build/alignments/ATP8.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	a804ed1da455fa5c4dad60a4faac704f8823d9b145ad9e5682f747caed0e7dbb
+build/alignments/COX1.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	df024f116ed2fce67ed4e3c13e5eb73b10da3099397f0e506d4b86efd7d380b2
+build/alignments/COX1.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	595e21d86d3595ab91d3d51011677a2f31c6719317762c30801c731195ef8422
+build/alignments/COX2.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	4b3f10f48945a06923545f17e0eabf61e03390b1b5477fd0f754f08ebbf73fbd
+build/alignments/COX2.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	352df5b4ba7e16e8342be4589c0d310342fe493f709db202798595738aecc334
+build/alignments/COX3.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	2b3b29000795f5b594e600eb0326ecba27446ac6e90661950dcf2d56cfebc9d6
+build/alignments/COX3.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	4374fbbdd23a48a03d2103eab55746ef09c90e8d678abd45b5125c936bbbd10e
+build/alignments/CYTB.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	963a8740c8f08615067261fb417fccb4d9c2d5e11d9f8a3499e4a69bbe8d7b66
+build/alignments/CYTB.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	ef634adc49b7429d3cdfe3a79fe3b07f82e42675a636b42a80f4ccdddc8ba34a
+build/alignments/ND1.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	1394606bcf75609c57ad556b9c058dea81f5455b08f8afe9c851e883da634715
+build/alignments/ND1.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	a53009073219386e36873ba307c0df31157f75646f1d15b34ef761dc6002469d
+build/alignments/ND2.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	ea3ff2b398713e64eab323f99d8bd0b28279d527c38bcad3eb28086b16042fee
+build/alignments/ND2.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	e3123ac6bbad3069758493edf8784bbd67f3e2be3e3261b07c76dde4a3761653
+build/alignments/ND3.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	0002f59202d7682c66329db020ba775ac47c64e83a4b0bf6be86446a07c16830
+build/alignments/ND3.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	bfdb6a8d929f2bbebdaa4b1835e8fabdf9fa7f08fb6bda5b755d52c96124f5ce
+build/alignments/ND4.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	e257c9ca5dee764405b74fbab601d87482168404524f38f3be53321e42e1e98e
+build/alignments/ND4.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	66ed316b3bb57f1e3dedd9b493d9b14a0f64494626e30253fb9f371ac5b92e41
+build/alignments/ND4L.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	f1978bf057c86d41e176ce400c5ad0c21a2ca740be72b6dc72ad6cc3bbc13ee3
+build/alignments/ND4L.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	556dfd75043729931e9a7f3cebce56931c103859f7d5b54467013a7031b0868a
+build/alignments/ND5.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	658d89f9b191e7ba702e9e34b71f55c4fb09e918e725aabe38f0b979ebef5809
+build/alignments/ND5.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	a7d9ed3ab65411a86ecada52f7338d952bbdc854971ede0abb575d62fb11819c
+build/alignments/ND6.aa.fasta.gz	longevity-genie/mitoage (download build --revision)	14459d254c9a43fbfb8dfdcf61d47c372f6ff8ad7de5b877225ab44aa4a5b5e8
+build/alignments/ND6.codon.fasta.gz	longevity-genie/mitoage (download build --revision)	2b09ffe81c7e0db82543cd16bea0163f6c8f3622af27098feaa1a2137ba019c5
+build/genome_features.parquet	longevity-genie/mitoage (download build --revision)	e21b4b864f60f8bccc728af8d5ea038908ff6b4cd5b5e1f036b5e06bde423721
+build/mtdna_structure.parquet	longevity-genie/mitoage (download build --revision)	d4fe3328d7eb3e48e31d12f7371601a8265c0ec7d465e808f1abf41a7c4e849f
+build/region_stats.parquet	longevity-genie/mitoage (download build --revision)	13017ad98a1286b9417db92553a14ab026207fe4d597e3a9471e2c3505ba1086
+build/species.parquet	longevity-genie/mitoage (download build --revision)	267a16311cca579af2ca1cd004e99befe66e53e1ae7696d71ffb9f6b7be5dbed
+genbank/contig/NC_044186.1.gb	NCBI efetch gbwithparts (download contig)	262fb2d84eae3ebe5b597f31e7dd0377b3d5d3fed3fa9a341e489c30b6c48ca5
+genbank/contig/NC_046603.1.gb	NCBI efetch gbwithparts (download contig)	097c274792f341e321b13b93386275743e16fc27d708dc1a9e044fae38e69e0d
+genbank/contig/NC_050197.1.gb	NCBI efetch gbwithparts (download contig)	92d4b16b777f8b3ed51f8c1a75ac12fd13978784a346a9aaf145fe7ddc54cf0a
+genbank/contig/NC_053523.1.gb	NCBI efetch gbwithparts (download contig)	dea75a00eb29e6a15b22632a91e2ec9712c8ac33c39864b199e956bc69782ef8
+genbank/contig/NC_054728.1.gb	NCBI efetch gbwithparts (download contig)	de3ebb3b027a4783d5e44370af5484fa95e140d64508c3ee9677bc90ad33ba04
+genbank/contig/NC_059324.1.gb	NCBI efetch gbwithparts (download contig)	064ad0b30408367278a34894d61897b3e7a5eef9c241cbfc29d5594ea38306dd
+genbank/contig/NC_059325.1.gb	NCBI efetch gbwithparts (download contig)	ccf9da8f427bcc4ddb263d3087f42e17e437db3f4ed421afa9357599f6aa9ca0
+genbank/contig/NC_080739.1.gb	NCBI efetch gbwithparts (download contig)	8f32a92f3664732bf96b4411a339f01eb1f517708a683161b7d30dfe8d7e2b12
+genbank/contig/NC_091244.1.gb	NCBI efetch gbwithparts (download contig)	5b4428abeb0206a490c9e09916e27edc576c1246f4f84a778134f6aeb5c3905e
+refseq/release237/mitochondrion.1.genomic.gbff.gz	NCBI RefSeq mitochondrion (pinned md5 matches)	1ccc29d397d27f899ad573a3b876cc8a8e74ff960c4d83e2a66f7d87bcc8161a
+taxdump/current-2026-11-13/merged.dmp	NCBI Taxonomy new_taxdump (download taxonomy)	f2dd756c35b5ec90cf9a99555a024dfd0e0a259f645bfc6e450cea5c617fd00d
+taxdump/current-2026-11-13/nodes.dmp	NCBI Taxonomy new_taxdump (download taxonomy)	12797580d7940d2e8358c705c8d6bb7849e72d2833565629301665c266768360

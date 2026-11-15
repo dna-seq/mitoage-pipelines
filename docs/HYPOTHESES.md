@@ -855,6 +855,35 @@ identity, *Seriolella porosa* at pacu identity, *Neogobius melanostomus* near th
 (which the analyses reading strand-specific composition should orient or leave out), and *Pelomedusa subrufa*'s
 frame. The out-of-order count mostly measures the build's mixed naming of orders, which is worth fixing in the build
 before any analysis groups species by order.
+**Rerun on 0f4e970.** The manuscript's round v0.3 cites build 2 at Hugging Face revision 0f4e970 (dna-seq/mitoage at
+03c0949: the nine EURING birds and the patched ND6 of *Psittacus erithacus*, 2,344 species). Slurm job 6490297 on
+haumea, 2026-11-15, from commit fb1cf00, in the same clone; tables and log in `results/job3-audit/0f4e970/` (those of
+c525adb stay in `results/job3-audit/`). The 29 tests pass, 25 of 25 breaks are caught, and a second run of every step
+gives the same bytes. Two things were added to the code for this build, each with a test and a mutation: the audit
+compares every record's annotation as RefSeq release 237 deposits it with the build's current features
+(`annotation_vs_build.tsv`, and a `build_annotation` column in strand, order and code), and it keeps reading the
+record, not the patch. A first try (job 6490246, cancelled) also compared the feature rows the build keeps as retired
+history and so named *Crocidura russula* and *Lemur catta*; only current rows are compared now.
+- *What differs between the record and the build:* one record, *Psittacus erithacus* NC_027847.1, whose ND6 (CDS
+  17376..17891, - strand) is in the build only, as the build's changelog records (`annotation_patch`). Strand, order
+  and code read it without ND6 (conventional, "not annotated: ND6"; not flagged; code clean). The near-identity and
+  nearest-neighbour steps read the build's alignments, which carry the patched ND6. The retired *Andrias davidianus*
+  has no current features in the build; its record is audited as RefSeq has it.
+- *The nine EURING birds* (*Tadorna ferruginea*, *Phylloscopus canariensis*, *P. ibericus*, *Certhia brachydactyla*,
+  *Cyanopica cyanus*, *Aythya nyroca*, *Tichodroma muraria*, *Picus canus*, *Montifringilla nivalis*) are all in release
+  237, all conventional, all translate cleanly under code 2, none is in a near-identical pair, and none is out of its
+  order or class. One is flagged: *Montifringilla nivalis* NC_025911.1, tRNA-Gln on the other strand of the arrangement
+  its family shares. *Tadorna ferruginea*'s nearest record is *Aythya marila* (0.971), not *Tadorna tadorna*, which
+  fits the *T. tadorna* record being a mallard's.
+- *Counts* (c525adb in brackets): 2,344 species, 2,326 records in the release (2,317), 18 without. Strand: 2,210
+  conventional (2,201), 3 reversed, 7 mixed, 124 unknown, the same records as before; the build now calls *Psittacus*
+  canonical, so four records, not five, are conventional here and "noncanonical" there. Gene order: 245 arrangements
+  with tRNAs (244), 74 without (74), 72 flags (71: the one added is *Montifringilla*). Code: no mismatch in 2,326; the one
+  record with stops under both codes is still *Pelomedusa subrufa*. Pairs: the same 84, byte for byte the same table.
+  Out of place: 136 out of order and 4 out of class, as before; with the realigned proteins *Kryptolebias marmoratus*
+  (margin 0.0004) leaves the out-of-order list and *Lipotes vexillifer* (margin 0.0003, a family-level label case:
+  Cetacea against Artiodactyla) enters it, and identities move in the third or fourth decimal. Every candidate named
+  above stands unchanged.
 **What it cannot tell.** Whether a flagged arrangement is a rearrangement or an annotation error; whether a
 near-identical pair is one species, a misidentification or a young pair of species; which record of a pair is the
 mislabelled one. Each needs the specimen or the original submission.
