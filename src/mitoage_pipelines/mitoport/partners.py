@@ -5,7 +5,7 @@ a residue of COX1-3 and a residue of a nuclear subunit within 4.5 A of it in the
 contacts.tsv). In a species, a pair is discordant when exactly one of its two residues differs from its column's
 consensus (the modal residue among the class's species, gaps left out): one side changed, its partner did not.
 The control pairs keep the nuclear residue and replace the mitochondrial one by its burial-matched non-contact
-control (`mitoport burial`), so they measure how often two residues that do not touch differ independently.
+control (`mitoport burial`, which records the pairing in control_pairs.tsv), so they measure how often two residues that do not touch differ independently.
 
 Per species: discordance over the contact pairs it fills on both sides, the same over the control pairs, and their
 difference (the test). A species is kept when it fills at least half of the contact pairs. The nuclear sequences
@@ -29,24 +29,24 @@ from ..genes import COMPLEX_IV_NUCLEAR
 from ..longevity.aa_pgls import class_covariance, select
 from ..longevity.structure_pgls import CLASSES, MIN_SPECIES, MODELS, fit_features
 from ..seqio import read_fasta
-from .burial import column_of_position, match_controls
+from .burial import column_of_position
 
 COX = ("COX1", "COX2", "COX3")
 VARIABLES = ("contact minus control", "contact", "control")
 MIN_SHARE = 0.5          # a species must fill both sides of at least this share of the contact pairs
 
 
-def control_of(sites: pd.DataFrame) -> dict[tuple[str, int], int]:
-    """{(gene, contact aln_col): its burial-matched control's aln_col}, both 1-based. The pairing is not stored in
-    sites.tsv, so it is recomputed with `burial.match_controls`, and refused unless it gives sites.tsv's control set."""
-    out = {}
+def control_of(sites: pd.DataFrame, matched: pd.DataFrame) -> dict[tuple[str, int], int]:
+    """{(gene, contact aln_col): its burial-matched control's aln_col}, both 1-based, from control_pairs.tsv of
+    `mitoport burial`; refused unless its contacts and controls are exactly sites.tsv's."""
     for g, grp in sites.groupby("gene", sort=False):
-        con, taken = match_controls(grp)
-        if set(con) != set(grp.index[grp.group.eq("contact")]) or set(taken) != set(grp.index[grp.group.eq("control")]):
-            raise SystemExit(f"{g}: recomputing the burial-matched controls does not give sites.tsv's control set; "
-                             "the pairs cannot be rebuilt from this sites.tsv")
-        out.update({(g, int(sites.aln_col[c])): int(sites.aln_col[k]) for c, k in zip(con, taken)})
-    return out
+        m = matched[matched.gene.eq(g)]
+        if (set(m.contact_aln_col) != set(grp.aln_col[grp.group.eq("contact")])
+                or set(m.control_aln_col) != set(grp.aln_col[grp.group.eq("control")])
+                or m.control_aln_col.duplicated().any()):
+            raise SystemExit(f"{g}: control_pairs.tsv does not hold sites.tsv's contacts and controls one to one; "
+                             "run `mitoport burial` again to write both from one run")
+    return {(r.gene, int(r.contact_aln_col)): int(r.control_aln_col) for r in matched.itertuples()}
 
 
 def nuclear_columns(cif: Path, chains: pd.DataFrame, nuc_alns: dict[str, dict[str, str]]) -> dict[tuple[str, int], tuple[str, int]]:
@@ -130,8 +130,8 @@ def main(cif: Path, data: Path, work: Path, nucaln: Path, composition: Path, fou
          classes: tuple[str, ...] = CLASSES) -> pd.DataFrame:
     """Writes partners.tsv (the fits) and partners_species.tsv (every species' discordance and filled pairs)."""
     missing = [g for g in COMPLEX_IV_NUCLEAR if not (nucaln / f"{g}.afa").is_file()]
-    if len(missing) == len(COMPLEX_IV_NUCLEAR) or not (work / "sites.tsv").is_file():
-        raise SystemExit(f"needs the contact map ({work}/sites.tsv, from `mitoport burial`) and the vertebrate partner "
+    if len(missing) == len(COMPLEX_IV_NUCLEAR) or not (work / "sites.tsv").is_file() or not (work / "control_pairs.tsv").is_file():
+        raise SystemExit(f"needs the contact map ({work}/sites.tsv and control_pairs.tsv, from `mitoport burial`) and the vertebrate partner "
                          f"alignments ({nucaln}/<GENE>.afa, from `download orthologs --ortholog-taxon vertebrata`, "
                          "`mitoport select --class ...`, `mitoport iface-align`)")
     if missing:
@@ -140,7 +140,8 @@ def main(cif: Path, data: Path, work: Path, nucaln: Path, composition: Path, fou
     nuc_alns = {g: read_fasta(nucaln / f"{g}.afa") for g in COMPLEX_IV_NUCLEAR if g not in missing}
     mt_alns = {g: read_fasta(data / "alignments" / f"{g}.aa.fasta.gz") for g in COX}
     pr = pairs(pd.read_csv(work / "contacts.tsv", sep="\t"), sites,
-               nuclear_columns(cif, pd.read_csv(work / "chains.tsv", sep="\t"), nuc_alns), control_of(sites))
+               nuclear_columns(cif, pd.read_csv(work / "chains.tsv", sep="\t"), nuc_alns),
+               control_of(sites, pd.read_csv(work / "control_pairs.tsv", sep="\t")))
     print(f"{len(pr)} contact pairs over {pr.mt_gene.nunique()} mitochondrial and {pr.nuc_gene.nunique()} nuclear genes: "
           + ", ".join(f"{g} {n}" for g, n in pr.nuc_gene.value_counts().sort_index().items()))
     out.mkdir(parents=True, exist_ok=True)

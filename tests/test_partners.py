@@ -14,7 +14,7 @@ from mitoage_pipelines.seqio import read_fasta
 WORK = paths.MITOPORT_IFACE
 ALN = paths.PARTNERS / "aln"
 CIF = paths.PDB / "5Z62.cif"
-needs_sites = pytest.mark.skipif(not (WORK / "sites.tsv").is_file(), reason="needs `mitoport contacts` and `mitoport burial`")
+needs_sites = pytest.mark.skipif(not (WORK / "control_pairs.tsv").is_file(), reason="needs `mitoport contacts` and `mitoport burial`")
 needs_partners = pytest.mark.skipif(not (ALN / "COX4I1.afa").is_file(),
                                     reason="needs the vertebrate partner alignments (`mitoport iface-align` on partners/sel)")
 
@@ -24,23 +24,34 @@ def sites():
     return pd.read_csv(WORK / "sites.tsv", sep="\t")
 
 
+@pytest.fixture(scope="module")
+def matched():
+    return pd.read_csv(WORK / "control_pairs.tsv", sep="\t")
+
+
 @needs_sites
 class TestControlPairs:
-    def test_every_contact_gets_its_own_control(self, sites):
-        ctl = pt.control_of(sites)
+    def test_every_contact_gets_its_own_control(self, sites, matched):
+        ctl = pt.control_of(sites, matched)
         con = sites[sites.group.eq("contact")]
         assert set(ctl) == set(zip(con.gene, con.aln_col))
         assert len(set((g, c) for (g, _), c in ctl.items())) == len(ctl)              # no control used twice
         kept = sites[sites.group.eq("control")]
         assert set((g, c) for (g, _), c in ctl.items()) == set(zip(kept.gene, kept.aln_col))
 
-    def test_a_sites_table_whose_controls_do_not_recompute_is_refused(self, sites):
+    def test_a_control_of_another_gene_is_never_taken(self, sites, matched):
+        by = sites.set_index(["gene", "aln_col"])
+        for r in matched.itertuples():
+            assert by.loc[(r.gene, r.contact_aln_col), "group"] == "contact"
+            assert by.loc[(r.gene, r.control_aln_col), "group"] == "control"
+
+    def test_a_sites_table_that_disagrees_with_the_pairing_is_refused(self, sites, matched):
         bad = sites.copy()
         i = bad.index[bad.group.eq("control")][0]
         j = bad.index[bad.group.eq("other") & bad.gene.eq(bad.gene[i]) & bad.aln_col.gt(0)][0]
         bad.loc[i, "group"], bad.loc[j, "group"] = "other", "control"
-        with pytest.raises(SystemExit, match="does not give"):
-            pt.control_of(bad)
+        with pytest.raises(SystemExit, match="one to one"):
+            pt.control_of(bad, matched)
 
 
 @pytest.fixture(scope="module")
@@ -49,7 +60,8 @@ def built():
     mt = {g: read_fasta(paths.BUILD / "alignments" / f"{g}.aa.fasta.gz") for g in pt.COX}
     s = pd.read_csv(WORK / "sites.tsv", sep="\t")
     col = pt.nuclear_columns(CIF, pd.read_csv(WORK / "chains.tsv", sep="\t"), nuc)
-    pr = pt.pairs(pd.read_csv(WORK / "contacts.tsv", sep="\t"), s, col, pt.control_of(s))
+    pr = pt.pairs(pd.read_csv(WORK / "contacts.tsv", sep="\t"), s, col,
+                  pt.control_of(s, pd.read_csv(WORK / "control_pairs.tsv", sep="\t")))
     return nuc, mt, col, pr
 
 
@@ -73,16 +85,18 @@ class TestPairs:
         assert not pr.duplicated().any() and len(pr) > 300
 
 
+@pytest.fixture(scope="module")
+def birds(built):
+    nuc, mt, _, pr = built
+    sp, _ = select(paths.BUILD, paths.LONGEVITY_OUT / "composition.tsv", paths.LONGEVITY_OUT / "fourfold.tsv",
+                   paths.DATED_TREE, "Aves")
+    slugs = [s for s in sp.slug if any(s in a for a in nuc.values())]
+    return slugs, pt.discordance(pr, mt, nuc, slugs)
+
+
 @needs_sites
 @needs_partners
 class TestDiscordance:
-    @pytest.fixture(scope="class")
-    def birds(self, built):
-        nuc, mt, _, pr = built
-        sp, _ = select(paths.BUILD, paths.LONGEVITY_OUT / "composition.tsv", paths.LONGEVITY_OUT / "fourfold.tsv",
-                       paths.DATED_TREE, "Aves")
-        slugs = [s for s in sp.slug if any(s in a for a in nuc.values())]
-        return slugs, pt.discordance(pr, mt, nuc, slugs)
 
     def test_discordance_by_hand(self, built, birds):
         """Exactly one side off its consensus, counted with Counter over the birds, for a sample of species."""

@@ -9,7 +9,8 @@ not depend on the partner being present. Every residue is mapped to its column o
 with that column's occupancy and identity to human across the species of the analysis: those with an
 alignment, a tip on the dated tree and a lifespan record of usable quality.
 
-Writes sites.tsv (one row per residue: group contact, control or other), chains.tsv and species.txt.
+Writes sites.tsv (one row per residue: group contact, control or other), control_pairs.tsv (which control each
+contact took, in the order of matching), chains.tsv and species.txt.
 Ported from the cluster script `mitoport/iface/burial.py` of 2026-11-14 without change of method.
 """
 import copy
@@ -137,12 +138,17 @@ def main(cif: Path, contacts: Path, build: Path, tree: Path, quality_ok: Path, o
     sites["occupancy"] = pd.concat(occ); sites["identity_to_human"] = pd.concat(ident)
 
     sites["group"] = "other"
-    for _, grp in sites.groupby("gene"):
+    matched = []
+    for g, grp in sites.groupby("gene"):
         con, taken = match_controls(grp)
         sites.loc[con, "group"] = "contact"
         sites.loc[taken, "group"] = "control"
+        matched += [{"gene": g, "contact_resnum": sites.pdb_resnum[c], "contact_aln_col": sites.aln_col[c],
+                     "control_resnum": sites.pdb_resnum[k], "control_aln_col": sites.aln_col[k]} for c, k in zip(con, taken)]
     table = out / "sites.tsv"
     sites.to_csv(table, sep="\t", index=False, float_format="%.4f")
+    # which control each contact took: sites.tsv rounds the accessibility, so the pairing cannot be recomputed from it
+    pd.DataFrame(matched).to_csv(out / "control_pairs.tsv", sep="\t", index=False)
 
     print("\nper gene and group: residues, median relative accessibility (isolated chain / in the complex), "
           "median column occupancy, median identity to human")
