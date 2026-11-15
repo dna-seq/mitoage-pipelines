@@ -17,6 +17,15 @@ recorded lifespan, log10 years. Nothing here is peer reviewed.
 - Solved structures of the human respiratory complexes from RCSB, each file's SHA-256 recorded.
   `mitoage download pdb`.
 
+**Which build.** H1, H2, H7, H8 and H12 give the numbers of the build with the nine European birds from the EURING
+list (longevity-genie/mitoage f75bdc9, the data of dna-seq/mitoage fb54cec, 2,344 species), rerun on 2026-11-15 by
+`slurm/manuscript-rerun.sbatch` (job 6489877 from 2ee27a1; tables in `results/euring/`). Where a number changed
+from the build before (c525adb, 2,335 species; job 6489876 reproduced the published tables), the earlier value
+follows in parentheses; `results/euring/README.md` and `comparison.txt` list every change. The nine birds add two
+species to the tested sets, and every gene was realigned with them, which moves alignment columns in every class.
+Mammal results are byte-identical except H2's column screen, whose columns moved. H12's second round (partner
+discordance and ESM-2 embeddings) and H2's power calculation were not rerun and describe the build before.
+
 ## H0. The alignments do not depend on the aligner
 
 **Why it matters.** Every site-level result below reads alignment columns.
@@ -47,7 +56,7 @@ order and family) refitted on the same species (method `mixed`).
 **Species.** The manuscript's default dataset: not retired, lifespan record of high or acceptable quality and
 not estimated; with body mass; a tip of the dated tree. Mammals: 625 with all 13 proteins and a lifespan,
 615 in the default dataset (10 questionable lifespans out), 612 with body mass, 604 in the tree (8 species
-are not in it). Birds 379, ray-finned fishes 235, reptiles 97.
+are not in it). Birds 381 (379), ray-finned fishes 235, reptiles 97.
 **Result, mammals (604).** Lambda is 0.96 to 1 for every amino acid: content follows the tree almost as
 Brownian motion would. With body mass and composition **no amino acid passes q < 0.05**; the smallest q is
 0.11 (alanine −0.13, p = 0.009; aspartate −0.045, p = 0.011; isoleucine −0.16, p = 0.016). Threonine +0.15
@@ -61,7 +70,7 @@ still gives seven amino acids at q < 0.05 with composition: isoleucine −0.35, 
 leucine +0.24, phenylalanine −0.15, aspartate −0.062, threonine +0.30 (q = 0.002) and alanine −0.17. Random
 intercepts of order and family leave most of the shared ancestry in the residual; the dated tree, with lambda
 near 1, takes it out: threonine's slope halves and cysteine's falls by more than half.
-**Result, other classes, with composition.** Nothing at q < 0.05 in birds (smallest p 0.019), ray-finned
+**Result, other classes, with composition.** Nothing at q < 0.05 in birds (smallest p 0.018; 0.019), ray-finned
 fishes (0.005) or reptiles (0.004); cysteine and methionine have p ≥ 0.15 in all three. Threonine goes the
 other way in fishes (−0.076, p = 0.02, q = 0.17; with body mass only −0.094, q = 0.03). Whatever is seen in
 mammals is not shared across vertebrates.
@@ -93,13 +102,14 @@ dates), never one made from these genes; lifespan records of high or acceptable 
 (`mitoage longevity pgls`). It was first run on a tree built from the 13 proteins themselves and on every
 lifespan record, against the rule above. That run gave cytochrome b position 43 (methionine, q = 0.03) as
 "the one site". Rerun as fixed (dated tree, quality filter), that site has q = 0.29.
-**Result as fixed, mammals (604).** P-values are flat. Two columns pass at 5 % false discovery:
+**Result as fixed, mammals (604).** P-values are flat. Two columns pass at 5 % false discovery, among 5,262 tests
+(5,259 before the realignment; the same two columns pass on both alignments, with the same carriers):
 - ND5 position 200 (human numbering): histidine in place of glutamine. It is the marsupials (24 of 28
   carriers): one old change in one clade. Not a longevity site on this evidence.
 - COX1 position 419: isoleucine in 24 species with about 40 % longer lifespan given body mass
   (p = 2e-5, q = 0.049): great apes, elephants, bears, African mole-rats and single species in eight other
   families. On the gene-built tree it had q = 0.27.
-**Result as fixed, birds (379).** Nothing (smallest p 0.001).
+**Result as fixed, birds (381; 379).** Nothing (smallest p 0.0007; 0.001), among 2,738 tests (2,716).
 **Second alignment (H0's rule for the soft gene ND5).** Rerun on the FAMSA, Muscle 5 and iterative MAFFT
 alignments of the same sequences (`mitoage download prepared --topic aligners`, then `mitoage longevity
 pgls --alignments-dir data/interim/aligners --tool <tool> --out ...`): in each, both columns hold the same
@@ -276,19 +286,20 @@ per gene and over the concatenated 13. `mitoage longevity rates`, into `rates.ts
 difference, the difference per million years of the cherry's depth, the dN/dS ratio, and the raw difference
 with the body-mass contrast in the model. A sign test on the same pairs asks the question directly. Pairs
 whose dS exceeds 1 are flagged saturated and every test is reported with and without them.
-**Species.** H1's default dataset: 1,369 species with a tip in the dated tree, giving 339 cherries;
+**Species.** H1's default dataset: 1,371 species (1,369) with a tip in the dated tree, giving 339 cherries;
 dS > 1 in 24.2% of the concatenated pairs.
 **Result.** **Nothing survives on the concatenated genes, under any normalisation, in any class.** The
 closest are mammals with body mass in the model (slope +0.113 per unit log10 lifespan, p = 0.021, q = 0.15,
-115 pairs) and birds per million years (p = 0.073, q = 0.26, 95 pairs). Four of 655 tests pass q < 0.05, all
-single genes, and their signs disagree: ND6 across all species (-0.219, q = 0.0076) and avian CYTB per
-million years (-0.021, q = 0.011) go one way, mammalian ND5 (+0.220, q = 0.010) the other, and mammalian ND2
+115 pairs) and birds per million years (p = 0.071, q = 0.28, 95 pairs; p = 0.073, q = 0.26). Four of 655 tests pass
+q < 0.05, all single genes, the same four on both builds, and their signs disagree: ND6 across all species
+(-0.197, q = 0.0075; -0.219, q = 0.0076) and avian CYTB per million years (-0.022, q = 0.0081; -0.021,
+q = 0.011) go one way, mammalian ND5 (+0.220, q = 0.010) the other, and mammalian ND2
 on dN (-0.017, q = 0.039) is a fourth direction. Four of 655 at a 5% false discovery rate is what the
 correction is designed to allow.
 **Reading.** In these data lifespan does not predict the mitochondrial substitution rate, and that answer is
 the same under all four normalisations. This does not refute the bivalve and fish reports, which are within
 clades this build barely covers; it says the effect is not general across vertebrates.
-**Limit.** A cherry gives one contrast, so the test uses 339 of the 1,369 species. Nei-Gojobori counting is
+**Limit.** A cherry gives one contrast, so the test uses 339 of the 1,371 species. Nei-Gojobori counting is
 appropriate for close pairs and strained at the divergences a quarter of these cherries reach, which is why
 the saturated flag exists rather than a silent filter.
 
@@ -530,41 +541,51 @@ the new tests, nothing had been run):
 **Test.** `mitoage longevity structure-pgls` (after `download pdb 5Z62`, `mitoport contacts`, `mitoport
 burial`, `longevity controls`, `fourfold`, `dated-tree`), into `structure_pgls.tsv`; on haumea,
 `slurm/structure-pgls.sbatch`, which also runs `motif-pgls`, the tests, a check that each test fails when the
-code it guards is broken, and a rerun. The build is longevity-genie/mitoage at c525adb.
+code it guards is broken, and a rerun. The first round's build is longevity-genie/mitoage at c525adb; the numbers
+below are from the rerun on f75bdc9 (see "Which build"), with the first round's in parentheses where they differ.
 **Run.** Slurm job 6487327 on haumea, 2026-11-15, from commit 858974b; tables and log in `results/h12/`. The
 26 tests of `test_structure_pgls.py` and `test_motif_pgls.py` pass, each of 11 deliberate breaks of
 `structure_pgls.py` makes a test fail, and a second run of `structure-pgls` gives the same bytes. The contact map
 (`sites.tsv`) is byte-identical to H5's cluster run. `motif_pgls.tsv` is byte-identical to the table H8 reports.
 `composition.tsv` differs from the laptop's only in the last bit of log10 lifespan and mass (at most 9 x 10^-16).
-**Species.** Mammals 604, birds 379, ray-finned fishes 235 (most fishes lack a body mass), reptiles 97.
-**Result, contact mismatch (H9 in every class): no class.** Slopes are log10 years per standard deviation of
+**Species.** Mammals 604, birds 381 (379), ray-finned fishes 235 (most fishes lack a body mass), reptiles 97.
+**Result, contact mismatch (H9 in every class): no class on the first round's alignment; reptiles, narrowly, on
+the realigned build.** Slopes are log10 years per standard deviation of
 mismatch, primary model (mass and composition):
 
 | Class | Contact minus control | 95% interval | q | Contact alone | q |
 |---|---|---|---|---|---|
 | Mammals (604) | -0.007 | [-0.029, +0.015] | 0.83 | +0.006 | 0.83 |
-| Birds (379) | -0.014 | [-0.037, +0.009] | 0.24 | -0.044 (p = 0.02) | 0.065 |
+| Birds (381) | -0.015 | [-0.037, +0.008] | 0.20 | -0.045 (p = 0.02) | 0.059 |
 | Ray-finned fishes (235) | -0.015 | [-0.071, +0.041] | 0.84 | -0.006 | 0.84 |
-| Reptiles (97) | -0.107 (p = 0.035) | [-0.207, -0.008] | 0.052 | -0.112 (p = 0.03) | 0.052 |
+| Reptiles (97) | -0.111 (p = 0.031) | [-0.211, -0.010] | **0.046** | -0.114 (p = 0.03) | **0.046** |
+
+First round (c525adb): birds (379) -0.014 [-0.037, +0.009], q = 0.24, contact alone -0.044, q = 0.065; reptiles
+-0.107 (p = 0.035) [-0.207, -0.008], q = 0.052, contact alone -0.112, q = 0.052. Mammals and fishes are identical.
+**The reptile result crosses q = 0.05 with no reptile added**: the same 97 species, but the contact columns and the
+class's most common residues come from the alignment of all species, and the nine birds moved it. A result that
+passes or fails with the alignment of another class is not read as a finding.
 
 The mammalian interval is H9's again. Birds bound the contact-specific effect to at most about 8% shorter or 2%
 longer maximum lifespan per standard deviation. Contact mismatch alone leans negative in birds and reptiles,
 but so does mismatch at the burial-matched controls (birds -0.032, reptiles -0.082). That points to overall
-divergence from the class consensus, not the contacts, and nothing passes q < 0.05. The reptile class is
+divergence from the class consensus, not the contacts (reptile controls -0.082 on both builds). The reptile class is
 diverse (mean mismatch to its consensus 0.23 at contacts, against 0.06 to 0.09 elsewhere), and 97 species is
-the smallest set. With mass only, the same picture holds (smallest q 0.056, reptiles).
+the smallest set. With mass only, nothing passes (smallest q 0.051, reptiles; 0.056).
 **Result, hydropathy (GRAVY): mammals yes, two of 14 genes; birds no.** Mammals, primary model: GRAVY of ND5
 -0.026 per SD ([-0.042, -0.011], p = 0.001, q = 0.013) and of ND6 +0.030 ([+0.010, +0.050], p = 0.003,
 q = 0.024). That is about 6% shorter and 7% longer maximum lifespan per standard deviation; the other 12 genes
 and the total have q >= 0.07 (total -0.029, p = 0.016). With mass only, five pass: ND5 (q = 0.003), the total
 of the 13 (-0.038, q = 0.003), ND6, ND1 and ND2 (q 0.005 to 0.023). Fourfold composition takes about a quarter
 of the total's slope and the significance of ND1, ND2 and the total. Birds, primary model: nothing (smallest
-COX2 +0.029, p = 0.006, q = 0.079); with mass only COX2 passes alone (q = 0.027), so it is not counted. Fishes
+COX2 +0.028, p = 0.007, q = 0.10; +0.029, q = 0.079); with mass only COX2 passes alone (q = 0.037; 0.027), so it
+is not counted. Fishes
 and reptiles: nothing (smallest q 0.23 and 0.66).
 **Result, H8 motifs class by class (rerun, unchanged): no class.** Smallest q: mammals 0.16
-(G-quadruplexes on the reverse strand, +0.017 per SD, p = 0.005, 604 species), birds 0.42 (forward-strand
-G-quadruplexes, p = 0.024, 379), fishes 0.21, reptiles 0.16; 0 of 132 at q < 0.05.
-**Reading.** No structural finding follows lifespan in birds. In mammals, mismatch at complex IV's contacts
+(G-quadruplexes on the reverse strand, +0.017 per SD, p = 0.005, 604 species), birds 0.41 (forward-strand
+G-quadruplexes over the major arc, p = 0.023, 334 of the 381; 0.42 and 332 of 379), fishes 0.21, reptiles 0.16; 0 of 132 at q < 0.05.
+**Reading.** No structural finding follows lifespan in birds. In reptiles, contact mismatch passes on one alignment and
+not on the other, with the same species, so it is not read as a finding. In mammals, mismatch at complex IV's contacts
 and the motif features show nothing. The two genes whose hydropathy passes go in opposite directions: ND5,
 like the total, is less hydrophobic in longer-lived mammals, and ND6, the only protein read from the other
 strand, is more so. The 12-gene fourfold covariate does not cover ND6, so a strand-wide mutational bias, which
@@ -619,7 +640,9 @@ q = 0.011), almost exactly the slopes under the 12-gene composition (-0.026, +0.
 +0.034). Under the reading fixed in advance, neither signal is explained by its own gene's fourfold composition.
 The total of the 13 (-0.029, q = 0.07) and ND1, ND2 and COX3 (q 0.076) stay below the threshold. Birds (379):
 COX2 +0.030 ([+0.010, +0.050], q = 0.041). It passes under this model and with mass only (q = 0.027), but not
-under the primary model (q = 0.079): one gene of 14, borderline, and in mammals COX2 shows nothing (p = 0.76).
+under the primary model (q = 0.079): one gene of 14, borderline, and in mammals COX2 shows nothing (p = 0.76). On
+the build with the EURING birds (381, job 6489877) it passes under none but mass only: +0.029, q = 0.056 with its
+own composition, q = 0.037 with mass only.
 Fishes and reptiles: nothing (smallest q 0.32 and 0.57).
 **Second round, discordance of the mito-nuclear contact pairs: no class.** 687 contact pairs (COX1-3 with all
 eleven nuclear subunits). Species with a partner sequence and half the contact pairs filled: mammals 177, birds 78,
