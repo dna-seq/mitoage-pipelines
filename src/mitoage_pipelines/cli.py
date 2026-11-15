@@ -324,7 +324,7 @@ def longevity_generation_time(
     classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia and Aves)")] = None,
     maturity: Annotated[str, typer.Option(help="'female': AnAge's female age at maturity; 'any': the male age where the female one is missing")] = "female",
 ) -> None:
-    """H11: lifespan or generation time? mtDNA composition against lifespan and age at maturity in one model."""
+    """H11: lifespan or another life-history trait? mtDNA composition against lifespan and age at maturity, gestation or birth weight in one model."""
     from .longevity import generation_time
     generation_time.main(data, fourfold, tree, out, tuple(classes or ("Mammalia", "Aves")), maturity)
 

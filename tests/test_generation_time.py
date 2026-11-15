@@ -26,6 +26,7 @@ def feats():
 @pytest.fixture(scope="module")
 def mammals():
     sp, _ = gt.select(paths.BUILD, FOURFOLD, paths.DATED_TREE, "Mammalia", "female")
+    sp = sp.dropna(subset=["ll", "lm", *gt.PACE_TRAITS]).reset_index(drop=True)
     C, order, _ = gt.class_covariance(paths.DATED_TREE, list(sp.slug))
     return sp.set_index("slug").loc[order].reset_index(), C
 
@@ -43,7 +44,7 @@ class TestTraits:
 
     def test_a_zero_or_missing_value_is_missing_not_minus_infinity(self, species):
         t = gt.traits(species, "any")
-        v = t[["ll", "lm", "lmat"]].to_numpy()
+        v = t[["ll", "lm", "lmat", "lgest", "lbw"]].to_numpy()
         assert not np.isinf(v).any()
         assert np.isnan(v).any()
 
@@ -100,8 +101,62 @@ class TestModel:
             r2 = sm.OLS(X[:, j], sm.add_constant(others)).fit().rsquared
             assert vif[j] == pytest.approx(1 / (1 - r2), rel=1e-8)
 
-    def test_every_model_of_a_feature_is_fitted_on_the_same_species(self):
-        rows, info = gt.run_class(paths.BUILD, FOURFOLD, paths.DATED_TREE, "Mammalia", "female")
+    def test_every_model_of_a_competitor_is_fitted_on_the_same_species(self):
+        rows, infos = gt.run_class(paths.BUILD, FOURFOLD, paths.DATED_TREE, "Mammalia", "female")
         res = pd.DataFrame(rows)
-        assert res.groupby("feature").n.nunique().eq(1).all()
-        assert info["n"] == res.n.max()
+        assert res.groupby(["competitor", "feature"]).n.nunique().eq(1).all()
+        n = {i["competitor"]: i["n"] for i in infos}
+        assert res.groupby("competitor").n.max().to_dict() == n
+        # the joint models and the slow-fast axes use the species with every trait
+        assert set(n) == {"maturity", "gestation", "birth_weight", "all"}
+        assert n["all"] < min(n["maturity"], n["gestation"], n["birth_weight"])
+        # mass is reported as a term, not hidden
+        assert {"mass", "pace", "pace_size"} <= set(res.term)
+
+    def test_each_competitor_has_lifespan_alone_itself_alone_and_both(self):
+        ms = gt.models()
+        for c in gt.COMPETITORS:
+            name = gt.NAMES[c]
+            got = {m: cols for comp, m, cols in ms if comp == name}
+            assert got == {"lifespan": ["ll"], name: [c], "lifespan+mass": ["ll", "lm"], f"{name}+mass": [c, "lm"],
+                           f"lifespan+{name}+mass": ["ll", c, "lm"]}
+        joint = {m: cols for comp, m, cols in ms if comp == "all"}
+        assert joint["pace_size"] == ["pace_size"] and joint["pace+mass"] == ["pace", "lm"] and joint["mass"] == ["lm"]
+
+
+@needs_build
+class TestPaceAxis:
+    def test_without_the_tree_it_is_the_ordinary_principal_component_of_mass_residuals(self, mammals):
+        sp, C = mammals
+        Y, m = sp[gt.PACE_TRAITS].to_numpy(), sp.lm.to_numpy()
+        scores, load, share = gt.pace_axis(Y, m, np.eye(len(sp)))
+        X = sm.add_constant(m)
+        R = np.column_stack([sm.OLS(Y[:, j], X).fit().resid for j in range(Y.shape[1])])
+        w, v = np.linalg.eigh(np.corrcoef(R, rowvar=False))
+        v1 = v[:, -1] * np.sign(v[0, -1])
+        assert np.allclose(load, v1)
+        assert share == pytest.approx(w[-1] / w.sum())
+        Z = (R - R.mean(0)) / R.std(0, ddof=1)
+        ref = Z @ v1
+        assert np.allclose(scores, ref / ref.std())
+
+    def test_with_size_and_without_the_tree_it_is_the_ordinary_principal_component(self, mammals):
+        sp, C = mammals
+        Y = sp[[*gt.PACE_TRAITS, "lm"]].to_numpy()
+        scores, load, share = gt.pace_axis(Y, None, np.eye(len(sp)))
+        w, v = np.linalg.eigh(np.corrcoef(Y, rowvar=False))
+        v1 = v[:, -1] * np.sign(v[0, -1])
+        assert np.allclose(load, v1)
+        assert share == pytest.approx(w[-1] / w.sum())
+        Z = (Y - Y.mean(0)) / Y.std(0, ddof=1)
+        assert np.allclose(scores, (Z @ v1) / (Z @ v1).std())
+
+    def test_on_the_tree_lifespan_loads_positively_and_scores_have_unit_sd(self, mammals):
+        sp, C = mammals
+        scores, load, share = gt.pace_axis(sp[gt.PACE_TRAITS].to_numpy(), sp.lm.to_numpy(), C)
+        assert load[0] > 0
+        assert np.linalg.norm(load) == pytest.approx(1)
+        assert scores.std() == pytest.approx(1)
+        assert 0.25 < share <= 1
+        # in mammals every slow trait loads the same way: one slow-fast axis
+        assert (load > 0).all()
