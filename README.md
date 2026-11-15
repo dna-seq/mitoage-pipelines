@@ -194,6 +194,11 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 - **Identical bytes on a rerun, on haumea, 2026-11-15 (H12's second round)**: `longevity structure-pgls` (with the
   own-composition model, and `--family embedding` on one embedding table) and `mitoport partners`. `structure embed`
   itself (ESM-2 on a GPU) was run once.
+- **Identical bytes on a rerun, on haumea, 2026-11-15, of everything the manuscript reports**
+  (`slurm/manuscript-rerun.sbatch`, job 6489876 from 2ee27a1, on the build before the EURING birds): `longevity
+  rates` (`rates.tsv`, `rate_contrasts.tsv`), `motif-pgls`, `generation-time` in both modes, and the rows of
+  `structure-pgls` that `results/h12/` holds. The same job on the build with the EURING birds (job 6489877) gave the
+  tables in `results/euring/`, whose README lists what the nine birds and the realignment changed.
 - **Equal to the second decimal**: `mitoport erc` (compared on the gene-built tree's topology, as first run). MAFFT with several threads and IQ-TREE without a seed are
   not repeatable run to run; the group medians move by at most 0.002. `--threads 1` and `--seed` make them so.
 - **Does not reproduce**: HyPhy RELAX. On identical inputs a second run of ATP8 gave K = 1.90, p = 0.20
