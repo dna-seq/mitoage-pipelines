@@ -1,0 +1,254 @@
+{
+ "branch lengths": {
+  "Node10": {
+   "MLE": 0.0006765092663054613,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.002271694027123993
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0
+   }
+  },
+  "Node11": {
+   "MLE": 0.0825119989595269,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1358608807863616
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.3964041628982674
+   }
+  },
+  "Node15": {
+   "MLE": 0.09016461404924171,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.03221445069614182
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.7594933344169711
+   }
+  },
+  "Node16": {
+   "MLE": 0.04685342196306703,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.0168026416042707
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.3944896957843753
+   }
+  },
+  "Node17": {
+   "MLE": 0.01789901083830281,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.01688139935809882
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.1213337269061528
+   }
+  },
+  "Node2": {
+   "MLE": 0.01604192289321964,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.05386820585493061
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0
+   }
+  },
+  "Node4": {
+   "MLE": 0.07289346591436512,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.09567924511344482
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.4185329022837586
+   }
+  },
+  "Node6": {
+   "MLE": 0.1983984085538003,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.2688866690862932
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 1.115366320110885
+   }
+  },
+  "Node9": {
+   "MLE": 0.07717700134855822,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.06064322687110217
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.5572630237632373
+   }
+  },
+  "acinonyx_jubatus": {
+   "MLE": 0.1725046372629978,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.09267876023379647
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 1.365927143845321
+   }
+  },
+  "acomys_cahirinus": {
+   "MLE": 0.3611891906177478,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1975249732912744
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 2.850216032248372
+   }
+  },
+  "addax_nasomaculatus": {
+   "MLE": 0.08625008168734649,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.07058737788662264
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.6148743109614678
+   }
+  },
+  "ailuropoda_melanoleuca": {
+   "MLE": 0.2056549870992296,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1338174417534057
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 1.562931339831783
+   }
+  },
+  "ailurus_fulgens": {
+   "MLE": 0.1711065082142889,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1111372501526065
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 1.300931807036758
+   }
+  },
+  "allenopithecus_nigroviridis": {
+   "MLE": 0.3197151520324512,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.3501869797844356
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 2.030718837465816
+   }
+  },
+  "alouatta_caraya": {
+   "MLE": 0.1046245804324577,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1303908859947785
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 0.6202006416281782
+   }
+  },
+  "anoura_geoffroyi": {
+   "MLE": 0.335058137985813,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1214738844443559
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 2.817383253597305
+   }
+  },
+  "antechinus_flavipes": {
+   "MLE": 0.4265439141937029,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.5167532118802044
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 2.570146672117074
+   }
+  },
+  "antilocapra_americana": {
+   "MLE": 0.125371276351845,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.04039942756357776
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 1.068387630939733
+   }
+  },
+  "aonyx_capensis": {
+   "MLE": 0.2757377878938959,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.1431186590762726
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 2.197447416687804
+   }
+  },
+  "aotus_azarai": {
+   "MLE": 0.1507984264422409,
+   "non-synonymous rate": {
+    "ID": "beta",
+    "MLE": 0.08515402275354146
+   },
+   "synonymous rate": {
+    "ID": "alpha",
+    "MLE": 1.182439644923925
+   }
+  }
+ },
+ "globals": {
+  "Substitution rate from nucleotide A to nucleotide C": 0.4537483593312875,
+  "Substitution rate from nucleotide A to nucleotide G": 1,
+  "Substitution rate from nucleotide A to nucleotide T": 0.4315227223276942,
+  "Substitution rate from nucleotide C to nucleotide G": 0.3412335228007909,
+  "Substitution rate from nucleotide C to nucleotide T": 1.018605574009178,
+  "Substitution rate from nucleotide G to nucleotide T": 0.1954332811481809
+ },
+ "input": {
+  "file name": "small.fna",
+  "number of sequences": 12,
+  "number of sites": 300,
+  "partition count": 1,
+  "trees": {
+   "0": "((acomys_cahirinus,(allenopithecus_nigroviridis,(aotus_azarai,alouatta_caraya)Node6)Node4)Node2,(((addax_nasomaculatus,antilocapra_americana)Node11,anoura_geoffroyi)Node10,(((aonyx_capensis,ailurus_fulgens)Node17,ailuropoda_melanoleuca)Node16,acinonyx_jubatus)Node15)Node9,antechinus_flavipes)"
+  }
+ },
+ "log likelihood": -7035.679505940054,
+ "parameters": 56
+}

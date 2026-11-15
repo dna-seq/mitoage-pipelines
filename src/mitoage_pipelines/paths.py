@@ -61,6 +61,7 @@ DATED_TREE = TREE / "dated.nwk"           # the dated species tree as newick, ti
 QUALITY_OK = TREE / "quality_ok.txt"      # species whose lifespan record is of high or acceptable quality
 RELAX = INTERIM / "relax"                 # species.tsv, tree.nwk, <GENE>.fna: the inputs of HyPhy RELAX
 COEVOL = INTERIM / "coevol"               # mammals.ali, mammals.tree, mammals.lht
+COEVOL_FIXED = INTERIM / "coevol-fixed"   # the same, with the dated tree's ages kept as branch lengths (-fixtimes)
 MITOPORT = INTERIM / "mitoport"
 MITOPORT_SEL = MITOPORT / "sel"           # one protein (.faa) and coding sequence (.fna) per species and gene
 MITOPORT_MAFFT = MITOPORT / "mafft"       # MAFFT's alignments as it wrote them
@@ -92,6 +93,8 @@ IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
 STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
 AUDIT_OUT = OUTPUT / "audit"              # inputs, strand, order, code, pairs, nearest (.tsv): the audit of the records (H13)
 COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol
+COEVOL_FIXED_OUT = LONGEVITY_OUT / "coevol-fixed"   # the chains run with the ages held (-fixtimes)
+BRANCH_RATES_OUT = LONGEVITY_OUT / "branch_rates"   # H3's two-step check: fit.json, branches.tsv, pgls.tsv
 
 
 def tree_file(cls: str) -> Path:

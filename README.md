@@ -145,6 +145,11 @@ uv run mitoage audit duplicates                   # pairs at >= 99 % identity; n
 # H3's continuous-trait model: Coevol 1.6, built from source (days of CPU per chain)
 uv run mitoage longevity coevol --chain 1 && uv run mitoage longevity coevol --chain 2
 uv run mitoage longevity coevol-read              # readcoevol and tracecomp; read only once the chains converge
+uv run mitoage longevity coevol-resume --chain 1 --stop-after-hours 70   # continue a chain, checkpoint every 6 h
+uv run mitoage longevity coevol-prep --fixed-ages && uv run mitoage longevity coevol --fixed-ages --chain 1
+                                                  # the same with the dated tree's ages held (-fixtimes)
+uv run mitoage longevity branch-rates             # the two-step check: dS and dN/dS per branch (HyPhy, hours)
+uv run mitoage longevity branch-pgls              # then terminal branches against lifespan and mass
 ```
 
 On haumea, every analysis the MitoAge manuscript reports runs on one build as one Slurm job,

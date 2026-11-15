@@ -21,15 +21,18 @@ from .. import external
 INPUTS = ("mammals.ali", "mammals.tree", "mammals.lht")
 
 
-def run(prep: Path, out: Path, chain: int, cycles: int = 1100) -> None:
+def run(prep: Path, out: Path, chain: int, cycles: int = 1100, fixed_ages: bool = False) -> None:
+    """With `fixed_ages`, -fixtimes: the node ages are held at the tree's (coevol-prep --fixed-ages)."""
     coevol = external.find("coevol", env="COEVOL")
     out.mkdir(parents=True, exist_ok=True)
     for f in INPUTS:
         if not (prep / f).is_file():
             raise FileNotFoundError(f"{prep / f} is missing: run `mitoage longevity coevol-prep` first")
         shutil.copyfile(prep / f, out / f)
-    external.run([coevol, "-d", INPUTS[0], "-t", INPUTS[1], "-c", INPUTS[2], "-dsom", "-mtmam", "-x", "1", str(cycles),
-                  f"chain{chain}"], cwd=out)
+    if fixed_ages and ":" not in (out / INPUTS[1]).read_text():
+        raise SystemExit(f"{prep / INPUTS[1]} has no branch lengths: write it with `coevol-prep --fixed-ages`")
+    external.run([coevol, "-d", INPUTS[0], "-t", INPUTS[1], "-c", INPUTS[2], "-dsom", "-mtmam",
+                  *(["-fixtimes"] if fixed_ages else []), "-x", "1", str(cycles), f"chain{chain}"], cwd=out)
 
 
 def saved_points(out: Path, chain: int) -> int:

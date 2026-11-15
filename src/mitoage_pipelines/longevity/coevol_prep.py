@@ -1,9 +1,12 @@
 """Inputs for Coevol: mammals spread over the tree (at most `per_family` per family, those with a body mass),
 the 12 heavy-strand genes concatenated as codons, the IQ-TREE topology pruned and rooted, lifespan and mass.
 
-Writes mammals.ali, mammals.tree and mammals.lht.
+Writes mammals.ali, mammals.tree and mammals.lht. With `fixed_ages` the tree keeps the dated tree's branch
+lengths (millions of years), which Coevol reads as the ages to hold with -fixtimes; without it the tree is the
+topology alone and Coevol samples the ages (the published run).
 """
 import io
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -15,8 +18,10 @@ from ..seqio import read_fasta
 
 
 def main(data: Path, composition: Path, tree_file: Path, outgroup_file: Path | None, out: Path, per_family: int,
-         quality_file: Path | None = None) -> None:
+         quality_file: Path | None = None, fixed_ages: bool = False) -> None:
     """`outgroup_file` None: `tree_file` is the dated species tree (rooted). `quality_file`: keep only its species."""
+    if fixed_ages and outgroup_file is not None:
+        raise SystemExit("--fixed-ages needs the dated tree: a tree built from the genes has no ages")
     out.mkdir(parents=True, exist_ok=True)
     sp = pd.read_csv(composition, sep="\t"); sp = sp[sp["class"] == "Mammalia"].dropna(subset=["lm"])
     tree = Phylo.read(tree_file, "newick")
@@ -29,11 +34,23 @@ def main(data: Path, composition: Path, tree_file: Path, outgroup_file: Path | N
         tree.root_with_outgroup(*[t for t in tree.get_terminals() if t.name in outg][:1])
     for t in tree.get_terminals():
         if t.name not in names: tree.prune(t)
-    for cl in tree.find_clades(): cl.confidence = None; cl.branch_length = None
+    for cl in tree.find_clades():
+        cl.confidence = None
+        if not fixed_ages: cl.branch_length = None
+    if fixed_ages:
+        tree.root.branch_length = None
+        depths = {t.name: d for t, d in tree.depths().items() if t.is_terminal()}
+        if max(depths.values()) - min(depths.values()) > 1e-6 * max(depths.values()):
+            raise SystemExit("the pruned dated tree is not ultrametric: its ages cannot be held")
     for t in tree.get_terminals(): t.name = names[t.name]
     multi = [len(c.clades) for c in tree.find_clades() if len(c.clades) > 2]
     if multi: raise SystemExit(f"Coevol needs a binary tree; {len(multi)} nodes have more than two children")
-    buf = io.StringIO(); Phylo.write(tree, buf, "newick", plain=True); (out / "mammals.tree").write_text(buf.getvalue())
+    buf = io.StringIO()
+    if fixed_ages: Phylo.write(tree, buf, "newick", format_branch_length="%.6f")
+    else: Phylo.write(tree, buf, "newick", plain=True)
+    newick = buf.getvalue().strip()
+    if fixed_ages: newick = re.sub(r"\):[0-9.]+;$", ");", newick)    # no length above the root
+    (out / "mammals.tree").write_text(newick + "\n")
     stops = set(CodonTable.unambiguous_dna_by_id[2].stop_codons); cat = {s: [] for s in names}
     for g in MT_HEAVY_STRAND:
         aln = read_fasta(data / "alignments" / f"{g}.codon.fasta.gz")

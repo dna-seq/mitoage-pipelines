@@ -16,6 +16,7 @@ Order of a full run:
   mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD && mitoage structure within
   mitoage structure fold (GPU), or mitoage download prepared --topic structures; then mitoage structure msa
   mitoage longevity coevol --chain 1 && mitoage longevity coevol --chain 2 && mitoage longevity coevol-read
+  mitoage longevity branch-rates && mitoage longevity branch-pgls   (H3's two-step check of Coevol)
 Build 2 from build 1 (docs/BUILD2_REPRODUCTION.md):
   mitoage download hf|refseq|taxonomy|lifespan|cited|contig|legacy (--from-snapshot where no archive keeps it)
   mitoage build2 refseq && mitoage build2 match && mitoage build2 status
@@ -460,25 +461,31 @@ def longevity_coevol_prep(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION,
     tree: Annotated[Path, typer.Option(help="the species tree; the dated one, from `longevity dated-tree`")] = paths.DATED_TREE,
     outgroup: Annotated[Optional[Path], typer.Option(help="only with a tree built from the genes: its outgroup's species, to root it")] = None,
-    out: Annotated[Path, typer.Option("--out", help="folder for mammals.ali, mammals.tree, mammals.lht")] = paths.COEVOL,
+    out: Annotated[Optional[Path], typer.Option("--out", help="folder for mammals.ali, mammals.tree, mammals.lht "
+                   "(default: data/interim/coevol, or coevol-fixed with --fixed-ages)")] = None,
     per_family: Annotated[int, typer.Option(help="species of one family, at most")] = 1,
+    fixed_ages: Annotated[bool, typer.Option("--fixed-ages", help="keep the dated tree's ages as branch lengths, for -fixtimes")] = False,
 ) -> None:
     """Inputs for Coevol: codons, tree, lifespan and mass."""
     from .longevity import coevol_prep
+    out = out or (paths.COEVOL_FIXED if fixed_ages else paths.COEVOL)
     coevol_prep.main(data, composition, tree, outgroup, out, per_family,
-                     quality_file=paths.QUALITY_OK if outgroup is None else None)
+                     quality_file=paths.QUALITY_OK if outgroup is None else None, fixed_ages=fixed_ages)
 
 
 @longevity_app.command("coevol")
 def longevity_coevol(
     chain: Annotated[int, typer.Option(help="chain number; the published run had chains 1 and 2")] = 1,
     cycles: Annotated[int, typer.Option(help="cycles to save; 1,100 in the published run")] = 1100,
-    prep: Annotated[Path, typer.Option(help="folder of `coevol-prep`'s inputs")] = paths.COEVOL,
-    out: Out = paths.COEVOL_OUT,
+    prep: Annotated[Optional[Path], typer.Option(help="folder of `coevol-prep`'s inputs (default by --fixed-ages)")] = None,
+    out: Annotated[Optional[Path], typer.Option("--out", help="folder of the chain (default: data/output/longevity/"
+                   "coevol, or coevol-fixed with --fixed-ages)")] = None,
+    fixed_ages: Annotated[bool, typer.Option("--fixed-ages", help="hold the node ages at the dated tree's (-fixtimes)")] = False,
 ) -> None:
     """One Coevol chain (dS and dN/dS jointly with lifespan and mass; coevol from PATH or $COEVOL). Days of CPU."""
     from .longevity import coevol
-    coevol.run(prep, out, chain, cycles)
+    coevol.run(prep or (paths.COEVOL_FIXED if fixed_ages else paths.COEVOL),
+               out or (paths.COEVOL_FIXED_OUT if fixed_ages else paths.COEVOL_OUT), chain, cycles, fixed_ages)
 
 
 @longevity_app.command("coevol-resume")
@@ -493,6 +500,30 @@ def longevity_coevol_resume(
     disagree is restored from its newest checkpoint first (coevol from PATH or $COEVOL). Days of CPU."""
     from .longevity import coevol
     coevol.resume(out, chain, until, stop_after_hours, segment_hours)
+
+
+@longevity_app.command("branch-rates")
+def longevity_branch_rates(
+    prep: Annotated[Path, typer.Option(help="folder of `coevol-prep`'s inputs (the same species, codons and topology)")] = paths.COEVOL,
+    tree: Annotated[Path, typer.Option(help="the dated species tree, for each branch's duration")] = paths.DATED_TREE,
+    cpus: Annotated[int, typer.Option(help="HyPhy's threads")] = 16,
+    skip_fit: Annotated[bool, typer.Option("--skip-fit", help="reuse fit.json and only rewrite the table")] = False,
+    out: Out = paths.BRANCH_RATES_OUT,
+) -> None:
+    """H3's two-step check, step 1: dS and dN/dS on every branch (HyPhy, MG94 local; hyphy from PATH). Hours."""
+    from .longevity import branch_rates
+    branch_rates.main_rates(prep, tree, out, cpus, skip_fit)
+
+
+@longevity_app.command("branch-pgls")
+def longevity_branch_pgls(
+    prep: Annotated[Path, typer.Option(help="folder of `coevol-prep`'s inputs (mammals.lht)")] = paths.COEVOL,
+    tree: Annotated[Path, typer.Option(help="the dated species tree")] = paths.DATED_TREE,
+    out: Out = paths.BRANCH_RATES_OUT,
+) -> None:
+    """H3's two-step check, step 2: terminal branches' dN/dS and dS per Myr against lifespan and mass (PGLS)."""
+    from .longevity import branch_rates
+    branch_rates.main_pgls(prep, tree, out)
 
 
 @longevity_app.command("coevol-read")
