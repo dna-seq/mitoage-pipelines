@@ -527,21 +527,23 @@ G-quadruplexes, p = 0.024, 379), fishes 0.21, reptiles 0.16; 0 of 132 at q < 0.0
 **Reading.** No structural finding follows lifespan in birds. In mammals, mismatch at complex IV's contacts
 and the motif features show nothing. The two genes whose hydropathy passes go in opposite directions: ND5,
 like the total, is less hydrophobic in longer-lived mammals, and ND6, the only protein read from the other
-strand, is more so. One strand-wide mutational bias would push the amino acids of a gene read from the opposite
-strand the opposite way, and the fourfold covariate is taken over the 12 genes read from the same strand, so it
-does not cover ND6. That fits what H1 and H11 find for composition in mammals, rather than selection on the
-proteins' fold. This is a reading, not a test. It is two of 14 features in one class, with no replication, and
-it is not shared with birds.
+strand, is more so. The 12-gene fourfold covariate does not cover ND6, so a strand-wide mutational bias, which
+would push a gene read from the other strand the other way, was the first explanation. The second round tested
+it and it does not hold: with each gene's own fourfold composition in the model both slopes stay (below), so
+codon composition does not explain them. It is two of 14 features in one class, with no replication, and it is
+not shared with birds.
 **Seen before the run.** While the tests were being written, a failing assertion printed three q values of the
 bird contact family (0.136, 0.165, 0.360). The run shows they were the mass-only model's (an earlier version of
 this entry wrongly named the primary model). The features and the model above were written down before that and
 were not changed after it.
-**Not assessed, and why.**
+**Not assessed in the first round, and why.**
 - H10's predicted structures exist for 62 mammals only, and H10 is a check of the alignments with no lifespan
   hypothesis attached. Birds would need about 379 x 13 foldings, some 20 GPU-hours on an A100 at H10's rate.
-  Not run.
-- The per-residue ESM-2 embeddings cover 184 mammals and no bird. Not run.
-- H9's partner-specific branch needs nuclear partners, which exist for 176 mammals only.
+  Not run, in either round.
+- The per-residue ESM-2 embeddings cover 184 mammals and no bird. Assessed in the second round, with new
+  embeddings of every species tested.
+- H9's partner-specific branch needs nuclear partners, which existed for 176 mammals only. Assessed in the second
+  round, with vertebrate ortholog sets.
 **Second round (asked for on 2026-11-15: run what was not assessed unless it takes many hours).** Folding birds
 (about 20 GPU-hours, and no lifespan hypothesis) stays not assessed. Three tests were added, each fixed before any of
 its results, with H12's species, model and correction:
@@ -560,4 +562,41 @@ its results, with H12's species, model and correction:
   650M per residue on the ungapped COX1-3 of every species H12 tests; per species and gene the mean over the contact
   residues and over the control residues; the cosine distance of each from the class's mean vector, weighted over
   the three genes. Variables: contact, control, contact minus control (the test).
-Jobs: `slurm/h12-partners.sbatch` (CPU) and `slurm/h12-embed.sbatch` (GPU, after the first). Results: pending.
+Jobs: `slurm/h12-partners.sbatch` (CPU) and `slurm/h12-embed.sbatch` (GPU, after the first).
+**Second round, run.** On haumea, 2026-11-15: CPU job 6488097 and GPU job 6488098, from commit 2933535; tables and
+logs in `results/h12/round2/`. Two earlier CPU runs stopped on their own checks. The first (6488055) refused to
+rebuild the control pairs from `sites.tsv`, whose rounded accessibilities give a different COX1 matching, so
+`mitoport burial` now records the pairing (`control_pairs.tsv`), with `sites.tsv` byte-identical. The second
+(6488075) found one of 19 code breaks uncaught (species filling under half the contact pairs scored), and a test now
+covers it. In the runs reported: 39 and 20 tests pass, 19 of 19 and 2 of 2 code breaks are caught, and every result
+table is byte-identical on a second run. The rows the first round also fitted are identical to it. The ESM-2
+checkpoint is facebook/esm2_t33_650M_UR50D at commit 08e4846 (the one snapshot in the cluster's cache; the job
+failed to record it itself, which `structure embed` now does from the cache's file paths). The 3,945 sequences
+(1,315 species x 3 genes) took 260 s on one A100.
+**Second round, hydropathy with each gene's own composition: the mammalian result stands.** Mammals (604): ND5
+-0.027 per SD ([-0.042, -0.012], p = 5 x 10^-4, q = 0.007) and ND6 +0.033 ([+0.013, +0.053], p = 0.002,
+q = 0.011), almost exactly the slopes under the 12-gene composition (-0.026, +0.030) and with mass only (-0.028,
++0.034). Under the reading fixed in advance, neither signal is explained by its own gene's fourfold composition.
+The total of the 13 (-0.029, q = 0.07) and ND1, ND2 and COX3 (q 0.076) stay below the threshold. Birds (379):
+COX2 +0.030 ([+0.010, +0.050], q = 0.041). It passes under this model and with mass only (q = 0.027), but not
+under the primary model (q = 0.079): one gene of 14, borderline, and in mammals COX2 shows nothing (p = 0.76).
+Fishes and reptiles: nothing (smallest q 0.32 and 0.57).
+**Second round, discordance of the mito-nuclear contact pairs: no class.** 687 contact pairs (COX1-3 with all
+eleven nuclear subunits). Species with a partner sequence and half the contact pairs filled: mammals 177, birds 78,
+ray-finned fishes 41, reptiles 14 (not assessed). Mean discordance at contact and control pairs: mammals 0.135 and
+0.135, birds 0.101 and 0.108, fishes 0.116 and 0.102. Contact minus control, primary model: mammals -0.021 per SD
+([-0.056, +0.014], q = 0.34), birds -0.006 ([-0.056, +0.043], q = 0.80), fishes +0.026 ([-0.061, +0.114],
+q = 0.55). Smallest q in any class and model 0.077 (fishes, contact alone, mass only).
+**Second round, ESM-2 divergence at the contacts: no class.** Contact minus control, primary model: mammals (604)
++0.005 per SD ([-0.032, +0.042], q = 0.79), birds (379) -0.007 ([-0.026, +0.013], q = 0.50), fishes (235) -0.014
+(q = 0.42), reptiles (97) -0.001 (q = 0.98); smallest q in any class and model 0.27. The distances themselves are
+small (mean cosine distance to the class mean 0.0005 to 0.0026): mean ESM-2 vectors over a hundred residues differ
+little between species of one class, and standardising the variable does not create variation the model never
+sees.
+**Second round, reading.** Mito-nuclear compatibility at complex IV's contacts, measured three ways (mito-side
+mismatch, discordance of the two sides, embedding divergence), follows lifespan in no class, with intervals that
+exclude effects larger than about 12% of maximum lifespan per standard deviation in mammals and birds. The contact pairs
+are not more concordant than the control pairs in mammals, and only slightly so in birds (not tested). The one
+structural feature that does follow lifespan is the hydropathy of ND5 and ND6 in mammals. It is not codon
+composition, neither that of the 12 genes nor the gene's own. With opposite signs in the two genes and nothing
+comparable in birds, what it means is open.

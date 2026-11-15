@@ -187,6 +187,9 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 - **Identical bytes on a rerun of 2026-11-15**: `longevity generation-time` (both maturity modes; Slurm job 6487335 on haumea, from 858974b; tables in `docs/analyses/h11/`).
 - **Identical bytes on a rerun, on haumea, 2026-11-15**: `longevity structure-pgls` (H12); `longevity motif-pgls`
   gives the table H8 reports byte for byte.
+- **Identical bytes on a rerun, on haumea, 2026-11-15 (H12's second round)**: `longevity structure-pgls` (with the
+  own-composition model, and `--family embedding` on one embedding table) and `mitoport partners`. `structure embed`
+  itself (ESM-2 on a GPU) was run once.
 - **Equal to the second decimal**: `mitoport erc` (compared on the gene-built tree's topology, as first run). MAFFT with several threads and IQ-TREE without a seed are
   not repeatable run to run; the group medians move by at most 0.002. `--threads 1` and `--seed` make them so.
 - **Does not reproduce**: HyPhy RELAX. On identical inputs a second run of ATP8 gave K = 1.90, p = 0.20

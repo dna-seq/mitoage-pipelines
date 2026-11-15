@@ -1,0 +1,62 @@
+commit 2933535f286050547c36db897c708227f0344410
+index, name, memory.used [MiB], memory.free [MiB]
+0, NVIDIA A100-PCIE-40GB, 18401 MiB, 22064 MiB
+1, NVIDIA A100-PCIE-40GB, 18401 MiB, 22064 MiB
+card 1 has 22064 MiB free, using it
+[transformers] [1mEsmModel LOAD REPORT[0m from: facebook/esm2_t33_650M_UR50D
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+NOTE: the commit of facebook/esm2_t33_650M_UR50D could not be read from the cache: unknown (IncompleteSnapshotError)
+facebook/esm2_t33_650M_UR50D at unknown (IncompleteSnapshotError) on cuda; torch 2.15.0+cu132; 1315 species x 3 genes
+3945 sequences; letters read as X: 0
+embedded in 260 s
+wrote /data/uq2347/runs/mitoage/h12-structure/data/interim/structure/embed_cox.parquet: 7890 rows
+22065bb04891d0fa9f46e406b5ae81592dff6cfe3dbbd90579a72947fa6c49a4  data/interim/structure/embed_cox.parquet
+....................                                                     [100%]
+20 passed in 5.82s
+caught: genes not weighted in the embedding distance: tests/test_structure_pgls.py::TestEmbedding::test_divergence_is_the_weighted_cosine_distance_to_the_class_mean
+caught: distance to the class mean taken as a dot product: tests/test_structure_pgls.py::TestEmbedding::test_divergence_is_the_weighted_cosine_distance_to_the_class_mean
+2 of 2 mutations caught; sources restored: True
+Mammalia: all 13 proteins and a lifespan: 625
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and fourfold counts: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia: 604 species in the test (15 other tips under their common ancestor ignored)
+Mammalia: 604 species with embeddings of COX1-3; mean distance to the class mean, contact 0.0011, control 0.0012
+Aves: all 13 proteins and a lifespan: 415
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 402
+Aves: and body mass: 382
+Aves: and fourfold counts: 382
+Aves: and a tip in the dated tree: 379
+Aves: 379 species in the test (40 other tips under their common ancestor ignored)
+Aves: 379 species with embeddings of COX1-3; mean distance to the class mean, contact 0.0006, control 0.0007
+Actinopterygii: all 13 proteins and a lifespan: 892
+Actinopterygii: default dataset (live; lifespan quality high or acceptable; not estimated): 826
+Actinopterygii: and body mass: 235
+Actinopterygii: and fourfold counts: 235
+Actinopterygii: and a tip in the dated tree: 235
+Actinopterygii: 235 species in the test (649 other tips under their common ancestor ignored)
+Actinopterygii: 235 species with embeddings of COX1-3; mean distance to the class mean, contact 0.0005, control 0.0005
+Reptilia: all 13 proteins and a lifespan: 128
+Reptilia: default dataset (live; lifespan quality high or acceptable; not estimated): 125
+Reptilia: and body mass: 97
+Reptilia: and fourfold counts: 97
+Reptilia: and a tip in the dated tree: 97
+Reptilia: 97 species in the test (458 other tips under their common ancestor ignored)
+Reptilia: 97 species with embeddings of COX1-3; mean distance to the class mean, contact 0.0026, control 0.0026
+   family            model          class   n  tests  q_below_005  smallest_p  smallest_q
+embedding mass+composition       Mammalia 604      3            0       0.282       0.479
+embedding mass+composition           Aves 379      3            0       0.191       0.372
+embedding mass+composition Actinopterygii 235      3            0       0.255        0.42
+embedding mass+composition       Reptilia  97      3            0       0.148       0.333
+rerun: identical bytes
+ba167daebac9d48e18d5c9c6c863cd01a566ac5cddf29f785951dc161f79421b  data/output/longevity/embedding/structure_pgls.tsv
