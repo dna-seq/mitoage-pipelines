@@ -379,6 +379,7 @@ class Genome:
     transl_table: int
     taxid: int | None
     unrecognised: list[str] = field(default_factory=list)
+    patched: list[str] = field(default_factory=list)   # protein genes added by a hand-checked annotation patch
 
 
 def feature_span(segments: list[Segment], length: int) -> tuple[int, int, int]:
@@ -426,8 +427,74 @@ def _resolve_by_position(features: list[Feature], n: int, use_gene_order: bool) 
             restore()
 
 
+# --- hand-checked annotation patches (gene_annotation.py) --------------------------------------
+PRODUCT = {"ATP6": "ATP synthase F0 subunit 6", "ATP8": "ATP synthase F0 subunit 8", "COX1": "cytochrome c oxidase subunit I",
+           "COX2": "cytochrome c oxidase subunit II", "COX3": "cytochrome c oxidase subunit III", "CYTB": "cytochrome b",
+           "ND1": "NADH dehydrogenase subunit 1", "ND2": "NADH dehydrogenase subunit 2", "ND3": "NADH dehydrogenase subunit 3",
+           "ND4": "NADH dehydrogenase subunit 4", "ND4L": "NADH dehydrogenase subunit 4L", "ND5": "NADH dehydrogenase subunit 5",
+           "ND6": "NADH dehydrogenase subunit 6"}
+
+
+def record_table(rec: GbRecord, fallback: int | None) -> int:
+    """The genetic code the record's CDS features name most often (the lower number on a tie), else `fallback`."""
+    counts: dict[int, int] = {}
+    for f in rec.features:
+        if f.key != "CDS": continue
+        try:
+            t = int(f.qualifiers.get("transl_table", ["x"])[0])
+        except ValueError:
+            continue
+        if t > 0: counts[t] = counts.get(t, 0) + 1
+    best, n = fallback, 0
+    for t in sorted(counts):
+        if counts[t] > n: best, n = t, counts[t]
+    if best is None: raise ValueError(f"{rec.accession_version}: the record names no genetic code and none was given")
+    return best
+
+
+def translate_patch(cds: str, table: int, label: str) -> str:
+    """The protein of a patched coding sequence, refused unless it is one open reading frame: whole codons, a stop
+    codon at the end and none before it. The first codon reads as methionine (mitochondrial initiators)."""
+    if len(cds) % 3: raise ValueError(f"{label}: {len(cds)} nt is not whole codons")
+    code = genetic_code(table)
+    aa = []
+    for i in range(0, len(cds), 3):
+        c = cds[i:i + 3].replace("T", "U")
+        if c not in code: raise ValueError(f"{label}: codon {cds[i:i + 3]} at {i // 3 + 1} is not a plain codon")
+        aa.append(code[c])
+    protein = "".join(aa)
+    stop = protein.find("*")
+    if stop != len(protein) - 1:
+        raise ValueError(f"{label}: no stop codon at the end" if stop < 0 else f"{label}: stop codon at codon {stop + 1} of {len(protein)}")
+    return "M" + protein[1:-1]
+
+
+def apply_gene_patches(rec: GbRecord, fallback: int | None, patches=None) -> list[str]:
+    """Add the patches for this record's accession.version as CDS features; returns the genes added."""
+    from .gene_annotation import ANNOTATION_PATCHES
+    mine = [p for p in (ANNOTATION_PATCHES if patches is None else patches) if p.accession == rec.accession_version]
+    if not mine: return []
+    table = record_table(rec, fallback)
+    added = []
+    for p in mine:
+        label = f"annotation patch {p.accession} {p.gene}"
+        if any(f.key == "CDS" and (feature_name(f) or (None,))[0] == p.gene for f in rec.features):
+            raise ValueError(f"{label}: the record now annotates {p.gene} itself; remove the patch")
+        segs, partial = parse_location(p.location)
+        if not segs or partial: raise ValueError(f"{label}: location {p.location} is empty or partial")
+        if any(s.start < 1 or s.end > len(rec.sequence) or s.start > s.end for s in segs):
+            raise ValueError(f"{label}: location {p.location} is outside the {len(rec.sequence)} bp record")
+        translation = translate_patch(extract(rec.sequence, segs), table, label)
+        rec.features.append(GbFeature("CDS", p.location, segs, False, {
+            "gene": [p.gene], "product": [PRODUCT[p.gene]], "transl_table": [str(table)], "codon_start": ["1"],
+            "note": [f"annotated by MitoAge, not by the record: {p.evidence}"], "translation": [translation]}))
+        added.append(p.gene)
+    return added
+
+
 def annotate(text: str, fallback: int, vertebrate_gene_order: bool = True) -> Genome:
     rec = parse_genbank(text)
+    patched = apply_gene_patches(rec, fallback)
     n = len(rec.sequence)
     features: list[Feature] = []
     control: list[Feature] = []
@@ -467,7 +534,7 @@ def annotate(text: str, fallback: int, vertebrate_gene_order: bool = True) -> Ge
     table, best = fallback, 0
     for t, c in tables.items():
         if c > best: table, best = t, c
-    return Genome(rec, features, table, taxid, unrecognised)
+    return Genome(rec, features, table, taxid, unrecognised, patched)
 
 
 # --- regions, codons --------------------------------------------------------------------------

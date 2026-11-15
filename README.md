@@ -182,7 +182,7 @@ are, every source with its pin and licence, every rule in plain words with the s
 the run times and the comparison are in [docs/BUILD2_REPRODUCTION.md](docs/BUILD2_REPRODUCTION.md).
 
 ```sh
-uv run mitoage download hf                          # build 1 (build1/) and the published build 2, revision f75bdc9b81
+uv run mitoage download hf                          # build 1 (build1/) and the published build 2, revision 0f4e970554
 uv run mitoage download refseq --from-snapshot      # RefSeq release 237: NCBI keeps only the current release
 uv run mitoage download taxonomy --from-snapshot    # the NCBI taxonomy dump build 2 read (2026-11-13)
 uv run mitoage download lifespan                    # AnAge, FishBase/SeaLifeBase v26.06, USGS BBL, EURING (Internet Archive)
@@ -193,11 +193,11 @@ uv run mitoage build2 assemble                      # species, region_stats, cod
                                                     # lifespan_observations, changelog, review_list
 uv run mitoage download tree-sources --from-snapshot && uv run mitoage build2 tree
 uv run mitoage build2 align                         # MAFFT v7.526 from PATH
-uv run mitoage download tree --ref 725da087120f535cb87bc5fde189c7c5f35fe436
+uv run mitoage download tree --ref 03c09498564c17d1445bc4c18c70d0e710d471db
 uv run mitoage build2 compare                       # -> data/output/build2/compare
 ```
 
-About six minutes in all. On 2026-11-15, with these inputs, all 5,328,755 values of the seven tables are
+About six minutes in all. On 2026-11-15, with these inputs, all 5,328,887 values of the seven tables are
 identical to the published build 2, the 28 alignment files have the same SHA-256 and the dated tree is
 byte-identical. On the build before EURING (2,335 species, 2026-11-14), with today's sources instead (RefSeq
 release 238, today's taxonomy, live Open Tree of Life and TimeTree) the species set was the same and the only change of values is one record NCBI re-annotated in
@@ -211,7 +211,8 @@ Where it comes from:
   [docs/DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/docs/DECISIONS.md) and
   [plans/DATA_BUILD2_DECISIONS.md](https://github.com/dna-seq/mitoage/blob/main/plans/DATA_BUILD2_DECISIONS.md).
 - The build: [longevity-genie/mitoage](https://huggingface.co/datasets/longevity-genie/mitoage) (build 2 at
-  revision `f75bdc9b812d7845d2ccb24a49643d88d00d57b5`, the build with the EURING birds, build 1 in `build1/`).
+  revision `0f4e970554b2fe0265e718321f422347293dde17`, the build with the EURING birds and the hand-checked gene
+  annotations, build 1 in `build1/`).
 - The inputs no upstream archive keeps (RefSeq release 237, the taxonomy dump of 2026-11-13, the GenBank
   records read by efetch, AnAge build 15, the USGS table, the Open Tree and TimeTree answers, the old site's
   pages): [longevity-genie/mitoage-build2-sources](https://huggingface.co/datasets/longevity-genie/mitoage-build2-sources),

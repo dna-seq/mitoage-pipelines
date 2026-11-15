@@ -78,6 +78,7 @@ def collect(species: list[dict], records: dict[str, str]) -> dict:
     for s in sorted(species, key=lambda x: x["slug"]):
         rec = gm.parse_genbank(records[s["refseq"]])
         if not rec.sequence: raise ValueError(f"record {s['refseq']} of {s['slug']} carries no sequence")
+        gm.apply_gene_patches(rec, None)
         desc = f"{s['scientific_name']} {s['refseq']}"
         copies: dict[str, int] = {}
         for f in rec.features:

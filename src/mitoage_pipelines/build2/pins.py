@@ -4,12 +4,13 @@ and the checksums of the copies its audit kept. A download is compared with thes
 reads a value from here that it could read from a source.
 """
 
-# Hugging Face dataset longevity-genie/mitoage: the revision of build 2 with the EURING birds (the site's D15,
-# dna-seq/mitoage 725da08), the one the manuscript cites. The first upload of build 2, without EURING, was
-# 653afe2a3b79e18ae892e579ded9acdb17e0c334 (2026-11-13 18:02 UTC).
+# Hugging Face dataset longevity-genie/mitoage: the revision of build 2 the manuscript cites, with the EURING birds
+# (the site's D15) and the hand-checked gene annotations (D17), written by dna-seq/mitoage at 03c0949. Earlier
+# uploads: f75bdc9b812d7845d2ccb24a49643d88d00d57b5 (EURING, without the gene patch; site 725da08) and
+# 653afe2a3b79e18ae892e579ded9acdb17e0c334 (the first, 2026-11-13 18:02 UTC, without EURING).
 HF_REPO = "longevity-genie/mitoage"
-HF_BUILD2_REVISION = "f75bdc9b812d7845d2ccb24a49643d88d00d57b5"
-SITE_COMMIT = "725da08"   # the site repository's commit that wrote that build (its tree is read from there)
+HF_BUILD2_REVISION = "0f4e970554b2fe0265e718321f422347293dde17"
+SITE_COMMIT = "03c09498564c17d1445bc4c18c70d0e710d471db"   # the site repository's commit that wrote that build
 
 BUILD_DATE = "2026-11-13T00:00:00.000Z"       # build 2's date, written into added_at / changed_at
 BUILD1_DATE = "2015-07-01T00:00:00.000Z"      # build 1's release date

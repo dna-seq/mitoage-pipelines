@@ -367,6 +367,7 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
     flag = lambda i, f: flags.setdefault(i, []).append(f)
     primary_used = 0
     raw = st.raw
+    patched: dict[int, list[str]] = {}       # live species -> protein genes an annotation patch added
 
     st.step(f"build 1 species: status and differences ({len(origs)})")
     for o in origs:
@@ -378,6 +379,7 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
             g = gm.annotate(g_text, gm.fallback_table(s.phylum), s.phylum == "Chordata")
             if g.record.accession_version != o["version"]: raise ValueError(f"release record {g.record.accession_version} != {o['version']}")
             rows = gm.genome_rows(sid, g)
+            patched[sid] = g.patched
         else:
             bs, bu = build1_rows(st, sid)
             rows = {"stats": bs, "usage": bu, "features": [dict(f) for f in b1["features"]], "non_coding": b1["non_coding"] if b1["non_coding"] is not None else 0}
@@ -519,6 +521,7 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
         ver = c["rec"].header.version
         g = gm.annotate(texts[ver], gm.fallback_table(lin["phylum"]), lin["phylum"] == "Chordata")
         rows = gm.genome_rows(sid, g)
+        patched[sid] = g.patched
         entry = anage_by_hagrid.get(c["hagrid"]) if c["hagrid"] else None
         name = lin["name"]
         slug = slugify(name)
@@ -549,6 +552,41 @@ def assemble(st: State, pl_: dict, use_primary: bool = True) -> dict:
                  "reason": f"Rows of new species {name}"}, RS, ver)
         for x in c["obs"]:
             if x.value_years is not None: observations.append(obs_row(sid, c["t"], x, x is c["chosen"]))
+
+    # protein genes a record leaves out (gene_annotation.py, the site's D17): a patched gene is flagged and logged;
+    # a missing gene carries its reason as a flag, and one with no recorded reason is flagged as unexplained and
+    # listed for review. An entry of the lists that no live species uses is refused, as the site's code refuses it.
+    from .gene_annotation import ANNOTATION_PATCHES, GENE_GAPS, LINEAGE_GENE_GAPS
+    live = [s for s in species if status_of.get(s["id"]) != "retired" and s["id"] in patched]
+    live_records = {s["refseq"] for s in live}
+    for p in ANNOTATION_PATCHES:
+        if p.accession not in live_records: raise ValueError(f"annotation patch {p.accession} {p.gene}: no live species uses that record")
+    gaps_used = set()
+    for s in live:
+        sid = s["id"]
+        for gene in patched[sid]:
+            p = next(x for x in ANNOTATION_PATCHES if x.accession == s["refseq"] and x.gene == gene)
+            flag(sid, f"gene_annotated_by_mitoage:{gene}"); kind(sid, "annotation")
+            log({"table": "genome_features", "row_key": f"{sid}:{gene}#1", "field": "(row)", "old_value": None,
+                 "new_value": f"{gene} CDS {p.location}", "change_type": "correction", "diff_class": "annotation_patch",
+                 "reason": p.evidence, "scope": "row"}, RS, s["refseq"])
+        present = {f["name"] for f in features.get(sid, []) if f["type"] == "CDS"}
+        for gene in gm.PROTEIN_GENES:
+            own = next((x for x in GENE_GAPS if x.accession == s["refseq"] and x.gene == gene), None)
+            if gene in present:
+                if own: raise ValueError(f"gene gap {own.accession} {gene}: the build now has {gene} for {s['scientific_name']}")
+                continue
+            gap = own or next((x for x in LINEAGE_GENE_GAPS if x.gene == gene and s["phylum" if x.rank == "phylum" else "class"] == x.taxon), None)
+            if own: gaps_used.add(own)
+            if gap:
+                flag(sid, f"gene_{gap.reason}:{gene}")
+            else:
+                flag(sid, f"gene_unexplained_absence:{gene}")
+                review.append({"review_type": "protein_gene_not_annotated", "ncbi_taxid": s["ncbi_species_taxid"],
+                               "scientific_name": s["scientific_name"], "refseq": s["refseq"], "source": None, "source_name": None,
+                               "detail": f"{gene} is not annotated in the record and no reason is recorded in pipeline/sources/gene-annotation.ts"})
+    for x in GENE_GAPS:
+        if x not in gaps_used: raise ValueError(f"gene gap {x.accession} {x.gene}: no live species uses that record without the gene")
 
     # review flags, possible duplicates, the review list
     by_name = {s["scientific_name"]: s for s in species}
