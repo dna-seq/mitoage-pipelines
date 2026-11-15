@@ -85,7 +85,7 @@ uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/ali
 uv run mitoage longevity rates
 uv run mitoage longevity motif-pgls      # H8: the build's motif, repeat and contact-zone features, four classes
 uv run mitoage longevity structure-pgls  # H12: complex IV contact mismatch (after `mitoport burial`) and GRAVY, four classes
-uv run mitoage longevity generation-time   # H11: lifespan or age at maturity; mammals and birds (--maturity any: male age where female is missing)
+uv run mitoage longevity generation-time   # H11: lifespan, maturity, gestation, birth weight and the slow-fast axis; mammals and birds (on haumea: slurm/generation-time.sbatch)
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 
@@ -176,7 +176,7 @@ Checked on 2026-11-14 by running the commands above against the outputs of the o
 
 - **Identical bytes**: `controls`, `fourfold`, `composition`, `sites`, `pgls` (mammals and birds, on the
   dated tree and on a gene-built tree), `peptides pilot`, `relax-prep`, `coevol-prep`, `mitoport select`.
-- **Identical bytes on a rerun of 2026-11-15**: `longevity generation-time` (both maturity modes).
+- **Identical bytes on a rerun of 2026-11-15**: `longevity generation-time` (both maturity modes; Slurm job 6487335 on haumea, from 858974b; tables in `docs/analyses/h11/`).
 - **Identical bytes on a rerun, on haumea, 2026-11-15**: `longevity structure-pgls` (H12); `longevity motif-pgls`
   gives the table H8 reports byte for byte.
 - **Equal to the second decimal**: `mitoport erc` (compared on the gene-built tree's topology, as first run). MAFFT with several threads and IQ-TREE without a seed are

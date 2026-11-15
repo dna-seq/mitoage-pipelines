@@ -1,0 +1,9 @@
+class	maturity	competitor	n	vif_lifespan	vif_mass	vif_maturity	r_lifespan_mass	r_lifespan_maturity	vif_gestation	r_lifespan_gestation	vif_birth_weight	r_lifespan_birth_weight	r_lifespan_pace	r_lifespan_pace_size	pace_share	pace_loading_lifespan	pace_loading_maturity	pace_loading_gestation	pace_loading_birth_weight	pace_size_share	pace_size_loading_lifespan	pace_size_loading_maturity	pace_size_loading_gestation	pace_size_loading_birth_weight	pace_size_loading_mass
+Mammalia	female	maturity	527	1.271	1.186	1.146	0.7191	0.8413																	
+Mammalia	female	gestation	557	1.189	1.243		0.7208		1.137	0.7305															
+Mammalia	female	birth_weight	470	1.249	3.473		0.717				3.437	0.7027													
+Mammalia	female	all	439	1.372	3.649	1.286	0.7241	0.8581	1.343	0.7455	3.915	0.7066	0.7621	0.8519	0.3856	0.5137	0.4428	0.5568	0.4797	0.5456	0.4094	0.3641	0.3845	0.5295	0.5211
+Aves	female	maturity	281	1.172	1.445	1.31	0.6857	0.6118																	
+Aves	female	gestation	175	1.188	1.61		0.7162		1.391	0.6789															
+Aves	female	birth_weight	115	1.133	2.821		0.6717				2.608	0.7038													
+Aves	female	all	107	1.158	3.269	1.426	0.6629	0.4667	1.534	0.6215	2.696	0.6965	-0.2125	0.7259	0.3432	0.3808	-0.4945	-0.6385	-0.4503	0.5258	0.194	0.4361	0.4539	0.5114	0.552

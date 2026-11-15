@@ -1,0 +1,216 @@
+commit 858974b71723830eb317986cdae9f71f0b19d9e2
+build: 794c421dfcdc species.parquet
+..............                                                           [100%]
+14 passed in 52.60s
+Mammalia: Mammalia in the build: 627
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia:   of which with maturity (female): 527
+Mammalia:   of which with gestation: 557
+Mammalia:   of which with birth_weight: 470
+Mammalia:   of which with all three: 439
+Mammalia: slow-fast axis beyond size on 439 species, 39% of the variance; loadings lifespan +0.51, maturity +0.44, gestation +0.56, birth_weight +0.48
+Mammalia: slow-fast axis with size on 439 species, 55% of the variance; loadings lifespan +0.41, maturity +0.36, gestation +0.38, birth_weight +0.53, mass +0.52
+Mammalia, maturity: 527 species; r with lifespan across species mass 0.72, maturity 0.84; VIF on the tree (lambda 1) lifespan 1.3, mass 1.2, maturity 1.1
+Mammalia, gestation: 557 species; r with lifespan across species mass 0.72, gestation 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 1.2, gestation 1.1
+Mammalia, birth_weight: 470 species; r with lifespan across species mass 0.72, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.2, mass 3.5, birth_weight 3.4
+Mammalia, all: 439 species; r with lifespan across species mass 0.72, maturity 0.86, gestation 0.75, birth_weight 0.71, pace 0.76, pace_size 0.85; VIF on the tree (lambda 1) lifespan 1.4, mass 3.6, maturity 1.3, gestation 1.3, birth_weight 3.9
+Aves: Aves in the build: 423
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 405
+Aves: and body mass: 385
+Aves: and a tip in the dated tree: 382
+Aves:   of which with maturity (female): 281
+Aves:   of which with gestation: 175
+Aves:   of which with birth_weight: 115
+Aves:   of which with all three: 107
+Aves: slow-fast axis beyond size on 107 species, 34% of the variance; loadings lifespan +0.38, maturity -0.49, gestation -0.64, birth_weight -0.45
+Aves: slow-fast axis with size on 107 species, 53% of the variance; loadings lifespan +0.19, maturity +0.44, gestation +0.45, birth_weight +0.51, mass +0.55
+Aves, maturity: 281 species; r with lifespan across species mass 0.69, maturity 0.61; VIF on the tree (lambda 1) lifespan 1.2, mass 1.4, maturity 1.3
+Aves, gestation: 175 species; r with lifespan across species mass 0.72, gestation 0.68; VIF on the tree (lambda 1) lifespan 1.2, mass 1.6, gestation 1.4
+Aves, birth_weight: 115 species; r with lifespan across species mass 0.67, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.1, mass 2.8, birth_weight 2.6
+Aves, all: 107 species; r with lifespan across species mass 0.66, maturity 0.47, gestation 0.62, birth_weight 0.70, pace -0.21, pace_size 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 3.3, maturity 1.4, gestation 1.5, birth_weight 2.7
+   class   competitor                      model         term   n  tests  q_below_005  smallest_p
+    Aves          all                        all birth_weight 107     43            0      0.0563
+    Aves          all                        all    gestation 107     43            0       0.114
+    Aves          all                        all     lifespan 107     43            0     0.00588
+    Aves          all                        all         mass 107     43            0     0.00415
+    Aves          all                        all     maturity 107     43            0     0.00274
+    Aves          all                   lifespan     lifespan 107     43            0     0.00194
+    Aves          all                       mass         mass 107     43            0     0.00871
+    Aves          all                  pace+mass         mass 107     43            0     0.00787
+    Aves          all                  pace+mass         pace 107     43            0      0.0108
+    Aves          all                  pace_size    pace_size 107     43            0      0.0118
+    Aves birth_weight               birth_weight birth_weight 115     43            0      0.0692
+    Aves birth_weight          birth_weight+mass birth_weight 115     43            0      0.0513
+    Aves birth_weight          birth_weight+mass         mass 115     43            0      0.0118
+    Aves birth_weight                   lifespan     lifespan 115     43            1    8.11e-05
+    Aves birth_weight lifespan+birth_weight+mass birth_weight 115     43            0      0.0626
+    Aves birth_weight lifespan+birth_weight+mass     lifespan 115     43            1    0.000262
+    Aves birth_weight lifespan+birth_weight+mass         mass 115     43            0     0.00206
+    Aves birth_weight              lifespan+mass     lifespan 115     43            1    0.000208
+    Aves birth_weight              lifespan+mass         mass 115     43            1    0.000413
+    Aves    gestation                  gestation    gestation 175     43            0      0.0125
+    Aves    gestation             gestation+mass    gestation 175     43            0      0.0317
+    Aves    gestation             gestation+mass         mass 175     43            0     0.00224
+    Aves    gestation                   lifespan     lifespan 175     43            0     0.00472
+    Aves    gestation    lifespan+gestation+mass    gestation 175     43            0      0.0301
+    Aves    gestation    lifespan+gestation+mass     lifespan 175     43            0     0.00763
+    Aves    gestation    lifespan+gestation+mass         mass 175     43            2     0.00014
+    Aves    gestation              lifespan+mass     lifespan 175     43            0     0.00729
+    Aves    gestation              lifespan+mass         mass 175     43            2    0.000439
+    Aves     maturity                   lifespan     lifespan 281     43            0       0.141
+    Aves     maturity              lifespan+mass     lifespan 281     43            0      0.0447
+    Aves     maturity              lifespan+mass         mass 281     43            0      0.0132
+    Aves     maturity     lifespan+maturity+mass     lifespan 281     43            0      0.0553
+    Aves     maturity     lifespan+maturity+mass         mass 281     43            0      0.0262
+    Aves     maturity     lifespan+maturity+mass     maturity 281     43            7    0.000515
+    Aves     maturity                   maturity     maturity 281     43            7    0.000331
+    Aves     maturity              maturity+mass         mass 281     43            0      0.0304
+    Aves     maturity              maturity+mass     maturity 281     43            6    0.000433
+Mammalia          all                        all birth_weight 439     43            2    4.01e-05
+Mammalia          all                        all    gestation 439     43            0     0.00307
+Mammalia          all                        all     lifespan 439     43            0     0.00201
+Mammalia          all                        all         mass 439     43            3    5.99e-05
+Mammalia          all                        all     maturity 439     43            0     0.00283
+Mammalia          all                   lifespan     lifespan 439     43           24    5.69e-05
+Mammalia          all                       mass         mass 439     43            3     0.00208
+Mammalia          all                  pace+mass         mass 439     43            3     0.00174
+Mammalia          all                  pace+mass         pace 439     43           32    2.25e-06
+Mammalia          all                  pace_size    pace_size 439     43           27    3.41e-06
+Mammalia birth_weight               birth_weight birth_weight 470     43           23    1.53e-05
+Mammalia birth_weight          birth_weight+mass birth_weight 470     43           19    1.17e-06
+Mammalia birth_weight          birth_weight+mass         mass 470     43            4    6.97e-05
+Mammalia birth_weight                   lifespan     lifespan 470     43           18    0.000141
+Mammalia birth_weight lifespan+birth_weight+mass birth_weight 470     43           16    2.44e-06
+Mammalia birth_weight lifespan+birth_weight+mass     lifespan 470     43            0     0.00223
+Mammalia birth_weight lifespan+birth_weight+mass         mass 470     43            4     5.2e-05
+Mammalia birth_weight              lifespan+mass     lifespan 470     43            5    0.000788
+Mammalia birth_weight              lifespan+mass         mass 470     43            0      0.0402
+Mammalia    gestation                  gestation    gestation 557     43           21    1.81e-05
+Mammalia    gestation             gestation+mass    gestation 557     43           17       8e-05
+Mammalia    gestation             gestation+mass         mass 557     43            0      0.0458
+Mammalia    gestation                   lifespan     lifespan 557     43            9    9.82e-05
+Mammalia    gestation    lifespan+gestation+mass    gestation 557     43           15    0.000268
+Mammalia    gestation    lifespan+gestation+mass     lifespan 557     43            1    0.000859
+Mammalia    gestation    lifespan+gestation+mass         mass 557     43            0      0.0236
+Mammalia    gestation              lifespan+mass     lifespan 557     43            6    0.000428
+Mammalia    gestation              lifespan+mass         mass 557     43            0      0.0236
+Mammalia     maturity                   lifespan     lifespan 527     43           20    4.06e-05
+Mammalia     maturity              lifespan+mass     lifespan 527     43           11    0.000215
+Mammalia     maturity              lifespan+mass         mass 527     43            0      0.0335
+Mammalia     maturity     lifespan+maturity+mass     lifespan 527     43            4     0.00165
+Mammalia     maturity     lifespan+maturity+mass         mass 527     43            0      0.0477
+Mammalia     maturity     lifespan+maturity+mass     maturity 527     43            1    9.98e-05
+Mammalia     maturity                   maturity     maturity 527     43           12    8.55e-05
+Mammalia     maturity              maturity+mass         mass 527     43            0       0.016
+Mammalia     maturity              maturity+mass     maturity 527     43            1    6.53e-05
+rerun female: identical bytes
+Mammalia: Mammalia in the build: 627
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia:   of which with maturity (any): 527
+Mammalia:   of which with gestation: 557
+Mammalia:   of which with birth_weight: 470
+Mammalia:   of which with all three: 439
+Mammalia: slow-fast axis beyond size on 439 species, 39% of the variance; loadings lifespan +0.51, maturity +0.44, gestation +0.56, birth_weight +0.48
+Mammalia: slow-fast axis with size on 439 species, 55% of the variance; loadings lifespan +0.41, maturity +0.36, gestation +0.38, birth_weight +0.53, mass +0.52
+Mammalia, maturity: 527 species; r with lifespan across species mass 0.72, maturity 0.84; VIF on the tree (lambda 1) lifespan 1.3, mass 1.2, maturity 1.1
+Mammalia, gestation: 557 species; r with lifespan across species mass 0.72, gestation 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 1.2, gestation 1.1
+Mammalia, birth_weight: 470 species; r with lifespan across species mass 0.72, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.2, mass 3.5, birth_weight 3.4
+Mammalia, all: 439 species; r with lifespan across species mass 0.72, maturity 0.86, gestation 0.75, birth_weight 0.71, pace 0.76, pace_size 0.85; VIF on the tree (lambda 1) lifespan 1.4, mass 3.6, maturity 1.3, gestation 1.3, birth_weight 3.9
+Aves: Aves in the build: 423
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 405
+Aves: and body mass: 385
+Aves: and a tip in the dated tree: 382
+Aves:   of which with maturity (any): 282
+Aves:   of which with gestation: 175
+Aves:   of which with birth_weight: 115
+Aves:   of which with all three: 107
+Aves: slow-fast axis beyond size on 107 species, 34% of the variance; loadings lifespan +0.38, maturity -0.49, gestation -0.64, birth_weight -0.45
+Aves: slow-fast axis with size on 107 species, 53% of the variance; loadings lifespan +0.19, maturity +0.44, gestation +0.45, birth_weight +0.51, mass +0.55
+Aves, maturity: 282 species; r with lifespan across species mass 0.68, maturity 0.60; VIF on the tree (lambda 1) lifespan 1.2, mass 1.4, maturity 1.3
+Aves, gestation: 175 species; r with lifespan across species mass 0.72, gestation 0.68; VIF on the tree (lambda 1) lifespan 1.2, mass 1.6, gestation 1.4
+Aves, birth_weight: 115 species; r with lifespan across species mass 0.67, birth_weight 0.70; VIF on the tree (lambda 1) lifespan 1.1, mass 2.8, birth_weight 2.6
+Aves, all: 107 species; r with lifespan across species mass 0.66, maturity 0.47, gestation 0.62, birth_weight 0.70, pace -0.21, pace_size 0.73; VIF on the tree (lambda 1) lifespan 1.2, mass 3.3, maturity 1.4, gestation 1.5, birth_weight 2.7
+   class   competitor                      model         term   n  tests  q_below_005  smallest_p
+    Aves          all                        all birth_weight 107     43            0      0.0563
+    Aves          all                        all    gestation 107     43            0       0.114
+    Aves          all                        all     lifespan 107     43            0     0.00588
+    Aves          all                        all         mass 107     43            0     0.00415
+    Aves          all                        all     maturity 107     43            0     0.00274
+    Aves          all                   lifespan     lifespan 107     43            0     0.00194
+    Aves          all                       mass         mass 107     43            0     0.00871
+    Aves          all                  pace+mass         mass 107     43            0     0.00787
+    Aves          all                  pace+mass         pace 107     43            0      0.0108
+    Aves          all                  pace_size    pace_size 107     43            0      0.0118
+    Aves birth_weight               birth_weight birth_weight 115     43            0      0.0692
+    Aves birth_weight          birth_weight+mass birth_weight 115     43            0      0.0513
+    Aves birth_weight          birth_weight+mass         mass 115     43            0      0.0118
+    Aves birth_weight                   lifespan     lifespan 115     43            1    8.11e-05
+    Aves birth_weight lifespan+birth_weight+mass birth_weight 115     43            0      0.0626
+    Aves birth_weight lifespan+birth_weight+mass     lifespan 115     43            1    0.000262
+    Aves birth_weight lifespan+birth_weight+mass         mass 115     43            0     0.00206
+    Aves birth_weight              lifespan+mass     lifespan 115     43            1    0.000208
+    Aves birth_weight              lifespan+mass         mass 115     43            1    0.000413
+    Aves    gestation                  gestation    gestation 175     43            0      0.0125
+    Aves    gestation             gestation+mass    gestation 175     43            0      0.0317
+    Aves    gestation             gestation+mass         mass 175     43            0     0.00224
+    Aves    gestation                   lifespan     lifespan 175     43            0     0.00472
+    Aves    gestation    lifespan+gestation+mass    gestation 175     43            0      0.0301
+    Aves    gestation    lifespan+gestation+mass     lifespan 175     43            0     0.00763
+    Aves    gestation    lifespan+gestation+mass         mass 175     43            2     0.00014
+    Aves    gestation              lifespan+mass     lifespan 175     43            0     0.00729
+    Aves    gestation              lifespan+mass         mass 175     43            2    0.000439
+    Aves     maturity                   lifespan     lifespan 282     43            0       0.135
+    Aves     maturity              lifespan+mass     lifespan 282     43            0      0.0215
+    Aves     maturity              lifespan+mass         mass 282     43            0      0.0107
+    Aves     maturity     lifespan+maturity+mass     lifespan 282     43            0      0.0251
+    Aves     maturity     lifespan+maturity+mass         mass 282     43            0      0.0216
+    Aves     maturity     lifespan+maturity+mass     maturity 282     43            5    0.000946
+    Aves     maturity                   maturity     maturity 282     43            7    0.000446
+    Aves     maturity              maturity+mass         mass 282     43            0      0.0307
+    Aves     maturity              maturity+mass     maturity 282     43            5    0.000799
+Mammalia          all                        all birth_weight 439     43            2    4.01e-05
+Mammalia          all                        all    gestation 439     43            0     0.00307
+Mammalia          all                        all     lifespan 439     43            0     0.00201
+Mammalia          all                        all         mass 439     43            3    5.99e-05
+Mammalia          all                        all     maturity 439     43            0     0.00283
+Mammalia          all                   lifespan     lifespan 439     43           24    5.69e-05
+Mammalia          all                       mass         mass 439     43            3     0.00208
+Mammalia          all                  pace+mass         mass 439     43            3     0.00174
+Mammalia          all                  pace+mass         pace 439     43           32    2.25e-06
+Mammalia          all                  pace_size    pace_size 439     43           27    3.41e-06
+Mammalia birth_weight               birth_weight birth_weight 470     43           23    1.53e-05
+Mammalia birth_weight          birth_weight+mass birth_weight 470     43           19    1.17e-06
+Mammalia birth_weight          birth_weight+mass         mass 470     43            4    6.97e-05
+Mammalia birth_weight                   lifespan     lifespan 470     43           18    0.000141
+Mammalia birth_weight lifespan+birth_weight+mass birth_weight 470     43           16    2.44e-06
+Mammalia birth_weight lifespan+birth_weight+mass     lifespan 470     43            0     0.00223
+Mammalia birth_weight lifespan+birth_weight+mass         mass 470     43            4     5.2e-05
+Mammalia birth_weight              lifespan+mass     lifespan 470     43            5    0.000788
+Mammalia birth_weight              lifespan+mass         mass 470     43            0      0.0402
+Mammalia    gestation                  gestation    gestation 557     43           21    1.81e-05
+Mammalia    gestation             gestation+mass    gestation 557     43           17       8e-05
+Mammalia    gestation             gestation+mass         mass 557     43            0      0.0458
+Mammalia    gestation                   lifespan     lifespan 557     43            9    9.82e-05
+Mammalia    gestation    lifespan+gestation+mass    gestation 557     43           15    0.000268
+Mammalia    gestation    lifespan+gestation+mass     lifespan 557     43            1    0.000859
+Mammalia    gestation    lifespan+gestation+mass         mass 557     43            0      0.0236
+Mammalia    gestation              lifespan+mass     lifespan 557     43            6    0.000428
+Mammalia    gestation              lifespan+mass         mass 557     43            0      0.0236
+Mammalia     maturity                   lifespan     lifespan 527     43           20    4.06e-05
+Mammalia     maturity              lifespan+mass     lifespan 527     43           11    0.000215
+Mammalia     maturity              lifespan+mass         mass 527     43            0      0.0335
+Mammalia     maturity     lifespan+maturity+mass     lifespan 527     43            4     0.00165
+Mammalia     maturity     lifespan+maturity+mass         mass 527     43            0      0.0477
+Mammalia     maturity     lifespan+maturity+mass     maturity 527     43            1    9.98e-05
+Mammalia     maturity                   maturity     maturity 527     43           12    8.55e-05
+Mammalia     maturity              maturity+mass         mass 527     43            0       0.016
+Mammalia     maturity              maturity+mass     maturity 527     43            1    6.53e-05
+rerun any: identical bytes
+bd540ff4069bff37cc9a8be2aa07eef5c675da37523891df060d763870830103  data/output/longevity/generation_time.any.classes.tsv
+7d9799edbeb375774fd46cfddf8546a47528aa8f48109564d8f5bff89f6d5a6e  data/output/longevity/generation_time.any.tsv
+5c5bb3c32b05781d2545d4f78bf8c41ef027e0fb5b204975dbc5515fcc561263  data/output/longevity/generation_time.female.classes.tsv
+73ac0173a75c4c0212b2a5e130a23fe4bf8b02e0ef25f6d368177836eaf61e5a  data/output/longevity/generation_time.female.tsv
