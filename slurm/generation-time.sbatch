@@ -2,7 +2,7 @@
 # H11 (`mitoage longevity generation-time`) on the cluster host haumea, with its tests and a rerun check.
 # The cluster runs only code that is on main. On the login node, from the root of a checkout pulled from main:
 #   uv sync --frozen
-#   uv run mitoage download build --revision c525adbff8c12b19981fdada7f1615c2559b7140
+#   uv run mitoage download build --revision f75bdc9b812d7845d2ccb24a49643d88d00d57b5   # build 2 with the EURING birds
 #   uv run mitoage download tree && uv run mitoage longevity dated-tree && uv run mitoage longevity fourfold
 #   mkdir -p slurm/logs && sbatch slurm/generation-time.sbatch
 # Writes data/output/longevity/generation_time.{female,any}{,.classes}.tsv and slurm/logs/<job>.log, which
