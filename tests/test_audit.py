@@ -175,6 +175,12 @@ def test_a_family_that_shares_one_arrangement_flags_nothing(recs, bovids):
     assert order.flags(family_table(recs, bovids)).empty
 
 
+def test_a_family_of_two_is_too_small_to_share_one(recs, bovids):
+    """Two records that differ: neither is the odd one out. With a third that shares one's arrangement, the other is."""
+    assert order.flags(family_table(recs, bovids[:2], records.reverse_complement)).empty
+    assert len(order.flags(family_table(recs, bovids, records.reverse_complement))) == 2
+
+
 @pytest.mark.parametrize("edit,tiers,kind", [
     ("reverse", {"full", "genes"}, "reversed deposit"),
     ("strand", {"full", "genes"}, "strand only"),
