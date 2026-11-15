@@ -1,0 +1,188 @@
+commit 7ab48d2194cbe0c7664095bd2e084c0428505e1f
+build: 267a16311cca species.parquet; MAFFT: v7.526 (2024/Apr/26)
+dated tree opentree16.1: 2314 species; lifespan quality high or acceptable: 2229 of 2344
+fourfold.tsv: 2325 species
+  chain A: Cytochrome c oxidase subunit 1 = COX1 (513 residues)
+  chain B: Cytochrome c oxidase subunit 2 = COX2 (227 residues)
+  chain C: Cytochrome c oxidase subunit 3 = COX3 (260 residues)
+  chain D: Cytochrome c oxidase subunit 4 isoform 1, mitochondrial = COX4I1 (144 residues)
+  chain E: Cytochrome c oxidase subunit 5A, mitochondrial = COX5A (109 residues)
+  chain F: Cytochrome c oxidase subunit 5B, mitochondrial = COX5B (98 residues)
+  chain G: Cytochrome c oxidase subunit 6A1, mitochondrial = COX6A1 (75 residues)
+  chain H: Cytochrome c oxidase subunit 6B1 = COX6B1 (82 residues)
+  chain I: Cytochrome c oxidase subunit 6C = COX6C (73 residues)
+  chain J: Cytochrome c oxidase subunit 7A2, mitochondrial = COX7A2 (56 residues)
+  chain K: Cytochrome c oxidase subunit 7B, mitochondrial = COX7B (49 residues)
+  chain L: Cytochrome c oxidase subunit 7C, mitochondrial = COX7C (47 residues)
+  chain M: Cytochrome c oxidase subunit 8A, mitochondrial = COX8A (43 residues)
+  chain N: Cytochrome c oxidase subunit NDUFA4 = NDUFA4 (79 residues)
+mitochondrial reference chains: {'A': 'COX1', 'B': 'COX2', 'C': 'COX3'} ; other copies: none
+  COX1 chain A: 513 residues, identity to the human protein 1.000
+  COX2 chain B: 227 residues, identity to the human protein 1.000
+  COX3 chain C: 260 residues, identity to the human protein 1.000
+COX1: 129 of 513 residues touch a nuclear subunit
+COX2: 77 of 227 residues touch a nuclear subunit
+COX3: 92 of 260 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/h12-0f4e970/data/interim/mitoport/iface/contacts.tsv
+COX1 chain A: 513 residues, 513 mapped, identity to the human protein 1.000
+COX2 chain B: 227 residues, 227 mapped, identity to the human protein 1.000
+COX3 chain C: 260 residues, 260 mapped, identity to the human protein 1.000
+species with every alignment of COX1, COX2, COX3, a tip on the dated tree and a lifespan of usable quality: 2183
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  COX1 contact  n=129  rASA alone 0.413  in complex 0.103  occupancy 1.000  identity 0.913
+  COX1 control  n=129  rASA alone 0.336  in complex 0.141  occupancy 1.000  identity 0.994
+  COX1 other    n=255  rASA alone 0.046  in complex 0.033  occupancy 1.000  identity 0.995
+  COX2 contact  n= 77  rASA alone 0.472  in complex 0.108  occupancy 1.000  identity 0.918
+  COX2 control  n= 77  rASA alone 0.468  in complex 0.250  occupancy 1.000  identity 0.880
+  COX2 other    n= 73  rASA alone 0.097  in complex 0.042  occupancy 1.000  identity 0.936
+  COX3 contact  n= 92  rASA alone 0.380  in complex 0.105  occupancy 1.000  identity 0.943
+  COX3 control  n= 92  rASA alone 0.380  in complex 0.271  occupancy 1.000  identity 0.951
+  COX3 other    n= 76  rASA alone 0.091  in complex 0.066  occupancy 1.000  identity 0.990
+wrote /data/uq2347/runs/mitoage/h12-0f4e970/data/interim/mitoport/iface/sites.tsv /data/uq2347/runs/mitoage/h12-0f4e970/data/interim/mitoport/iface/chains.tsv /data/uq2347/runs/mitoage/h12-0f4e970/data/interim/mitoport/iface/species.txt
+COX4I1	human 169 aa	species 414	length min/median/max 77/169/285	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX5A	human 150 aa	species 313	length min/median/max 116/150/274	off by >20% 19	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX5B	human 129 aa	species 267	length min/median/max 108/129/271	off by >20% 14	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6A1	human 109 aa	species 396	length min/median/max 71/109/217	off by >20% 34	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6B1	human 86 aa	species 384	length min/median/max 50/86/137	off by >20% 12	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6C	human 75 aa	species 393	length min/median/max 73/76/143	off by >20% 23	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7A2	human 83 aa	species 284	length min/median/max 77/83/235	off by >20% 21	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7B	human 80 aa	species 393	length min/median/max 65/80/190	off by >20% 25	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7C	human 63 aa	species 346	length min/median/max 38/63/157	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX8A	human 69 aa	species 273	length min/median/max 51/69/256	off by >20% 16	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA4	human 81 aa	species 277	length min/median/max 68/82/169	off by >20% 5	species with 2+ gene ids 1	CDS length mismatch dropped 0
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX4I1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX5A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX5B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX6B1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX6A1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX6C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX7A2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX7B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX7C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX8A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA4.faa
+COX4I1	414 sequences	348 columns
+COX5A	313 sequences	424 columns
+COX5B	267 sequences	309 columns
+COX6A1	396 sequences	271 columns
+COX6B1	384 sequences	172 columns
+COX6C	393 sequences	209 columns
+COX7A2	284 sequences	326 columns
+COX7B	393 sequences	277 columns
+COX7C	346 sequences	231 columns
+COX8A	273 sequences	423 columns
+NDUFA4	277 sequences	240 columns
+51976e828635df5453812ecd20fe04063032c7634d8feea94194ff2a38bccce9  data/interim/tree/dated.nwk
+d8786a480349ffe6502192d8e09f4bd6fa49dd30d1f0d3ab437af1b8fd025f67  data/output/longevity/composition.tsv
+82d3227588f4964fc9c1df8bf4b81759193dec884b218f204719c4db7f35a376  data/output/longevity/fourfold.tsv
+0f800a1f076da452cb5ea16cb1e67ca11ad27fad0505b6af7c760d5b987308b5  data/interim/mitoport/iface/sites.tsv
+7e81956fc16761a7a2ef36077f939b3bc3f51cf23892d75a311c17a788853cb2  data/interim/mitoport/partners/aln/COX4I1.afa
+ae20680061de4056ef765e0dcda86019bcd60f1241b95e60e4de390c61753e5f  data/interim/mitoport/partners/aln/COX5A.afa
+9ce9a6f59ad50a76b829dba54b780aa8a048319cf7ea94c91fdbb71ca53526b9  data/interim/mitoport/partners/aln/COX5B.afa
+03e166c499ce36ab59918cd88ee3017b572cce24e8436a1feb31db2d5c94937b  data/interim/mitoport/partners/aln/COX6A1.afa
+5558ba288072ed71f84b28219469875f1d04732ba0dece2d4a428bdbf2097d95  data/interim/mitoport/partners/aln/COX6B1.afa
+0f1d29d6d25d829b45c4ed81022cacf0bb7f4183ed6e1d8da02e091233e6555c  data/interim/mitoport/partners/aln/COX6C.afa
+60f49d31f23530da50da8a0db41a1c8927acd3d0c596bbd275f139386009c151  data/interim/mitoport/partners/aln/COX7A2.afa
+d47f09616b1cc39168f5b59bc4a05b16701306583cba283311ccdc620f1092a1  data/interim/mitoport/partners/aln/COX7B.afa
+edd5c7da118058e856995b33f5554fe18684197aa35c1f2b5802c54ab9c61e3d  data/interim/mitoport/partners/aln/COX7C.afa
+e2530fd8fea702bb022bfc61d0a455ab84b3855ef4eb41f2b3de30f4f87db7d4  data/interim/mitoport/partners/aln/COX8A.afa
+fe3d74e3fe5efe4007d4cd6a3a507d02488c79d200bbcd6a96dff689dde0a613  data/interim/mitoport/partners/aln/NDUFA4.afa
+..................ss.....................                                [100%]
+39 passed, 2 skipped in 10.86s
+caught: genes not weighted by their columns: tests/test_structure_pgls.py::TestContactMismatch::test_mismatch_is_counted_against_the_classes_own_consensus
+caught: contact plus control instead of minus: tests/test_structure_pgls.py::TestContactMismatch::test_the_test_variable_is_contact_minus_control
+caught: retired records kept: tests/test_structure_pgls.py::TestHydropathy::test_one_column_per_region_and_no_retired_record
+caught: another region read as total_pc: tests/test_structure_pgls.py::TestHydropathy::test_total_gravy_is_the_kyte_doolittle_mean_of_the_amino_acid_content, tests/test_structure_pgls.py::TestHydropathy::test_one_column_per_region_and_no_retired_record
+caught: feature not standardised: tests/test_structure_pgls.py::TestFits::test_a_slope_is_per_standard_deviation_whatever_the_unit
+caught: normal instead of t interval: tests/test_structure_pgls.py::TestFits::test_the_interval_is_the_slope_plus_minus_t_times_se, tests/test_structure_pgls.py::TestFits::test_every_model_of_a_feature_is_fitted_on_the_same_species
+caught: fitted on fewer than MIN_SPECIES values: tests/test_structure_pgls.py::TestFits::test_too_few_values_is_not_assessed_never_dropped
+caught: q over the whole class, not within family and model: tests/test_structure_pgls.py::TestRun::test_q_is_benjamini_hochberg_within_class_family_and_model
+caught: a class too small is dropped: tests/test_structure_pgls.py::TestRun::test_a_class_too_small_is_written_as_not_assessed
+caught: one model reports the class size as its n: tests/test_structure_pgls.py::TestFits::test_every_model_of_a_feature_is_fitted_on_the_same_species
+caught: a missing contact map not refused: tests/test_structure_pgls.py::TestRun::test_a_missing_contact_map_is_refused
+caught: own composition read from the 12-gene covariate: tests/test_structure_pgls.py::TestOwnComposition::test_the_own_model_is_the_regression_on_the_raw_counts
+caught: U share taken from G: tests/test_structure_pgls.py::TestOwnComposition::test_the_shares_are_the_regions_own_fourfold_counts, tests/test_structure_pgls.py::TestOwnComposition::test_the_own_model_has_mass_and_three_shares, tests/test_structure_pgls.py::TestOwnComposition::test_the_own_model_is_the_regression_on_the_raw_counts, ERROR tests/test_structure_pgls.py::TestRun::test_q_is_benjamini_hochberg_within_class_family_and_model, ERROR tests/test_structure_pgls.py::TestRun::test_a_class_too_small_is_written_as_not_assessed, ERROR tests/test_structure_pgls.py::TestRun::test_every_family_and_variable_is_in_the_table
+caught: either side off its consensus instead of exactly one: tests/test_partners.py::TestDiscordance::test_discordance_by_hand
+caught: consensus over every species, not the class: tests/test_partners.py::TestDiscordance::test_discordance_by_hand
+caught: species filling few pairs kept: tests/test_partners.py::TestDiscordance::test_a_species_filling_under_half_the_pairs_is_not_scored
+caught: a pairing that disagrees with sites.tsv accepted: tests/test_partners.py::TestControlPairs::test_a_sites_table_that_disagrees_with_the_pairing_is_refused
+caught: control pair is the contact itself: tests/test_partners.py::TestPairs::test_pairs_are_contacts_on_the_mito_side_and_controls_are_not
+caught: residue index off by one: tests/test_structure_pgls.py::TestEmbedHelpers::test_residue_index_points_at_the_residue_of_each_column
+19 of 19 mutations caught; sources restored: True
+contact columns: {'COX1': 129, 'COX2': 77, 'COX3': 92} controls: {'COX1': 129, 'COX2': 77, 'COX3': 92}
+Mammalia: all 13 proteins and a lifespan: 625
+Mammalia: default dataset (live; lifespan quality high or acceptable; not estimated): 615
+Mammalia: and body mass: 612
+Mammalia: and fourfold counts: 612
+Mammalia: and a tip in the dated tree: 604
+Mammalia: 604 species in the test (15 other tips under their common ancestor ignored)
+Mammalia: mean mismatch to the class consensus, contact 0.0888, control 0.0789
+Aves: all 13 proteins and a lifespan: 425
+Aves: default dataset (live; lifespan quality high or acceptable; not estimated): 412
+Aves: and body mass: 385
+Aves: and fourfold counts: 385
+Aves: and a tip in the dated tree: 382
+Aves: 382 species in the test (46 other tips under their common ancestor ignored)
+Aves: mean mismatch to the class consensus, contact 0.0651, control 0.0579
+Actinopterygii: all 13 proteins and a lifespan: 892
+Actinopterygii: default dataset (live; lifespan quality high or acceptable; not estimated): 826
+Actinopterygii: and body mass: 235
+Actinopterygii: and fourfold counts: 235
+Actinopterygii: and a tip in the dated tree: 235
+Actinopterygii: 235 species in the test (649 other tips under their common ancestor ignored)
+Actinopterygii: mean mismatch to the class consensus, contact 0.0563, control 0.0344
+Reptilia: all 13 proteins and a lifespan: 128
+Reptilia: default dataset (live; lifespan quality high or acceptable; not estimated): 125
+Reptilia: and body mass: 97
+Reptilia: and fourfold counts: 97
+Reptilia: and a tip in the dated tree: 97
+Reptilia: 97 species in the test (467 other tips under their common ancestor ignored)
+Reptilia: mean mismatch to the class consensus, contact 0.2361, control 0.1479
+    family                model          class   n  tests  q_below_005  smallest_p  smallest_q
+  contacts     mass+composition       Mammalia 604      3            0       0.353       0.825
+  contacts     mass+composition           Aves 382      3            0       0.018      0.0541
+  contacts     mass+composition Actinopterygii 235      3            0       0.599       0.843
+  contacts     mass+composition       Reptilia  97      3            2      0.0302      0.0462
+hydropathy mass+own composition       Mammalia 604     14            2    0.000474     0.00664
+hydropathy mass+own composition           Aves 382     14            1      0.0032      0.0449
+hydropathy mass+own composition Actinopterygii 235     14            0      0.0296        0.32
+hydropathy mass+own composition       Reptilia  97     14            0      0.0426       0.573
+hydropathy     mass+composition       Mammalia 604     14            2    0.000952      0.0133
+hydropathy     mass+composition           Aves 382     14            0      0.0061      0.0854
+hydropathy     mass+composition Actinopterygii 235     14            0      0.0466       0.502
+hydropathy     mass+composition       Reptilia  97     14            0      0.0725       0.655
+rerun longevity structure-pgls: identical bytes
+687 contact pairs over 3 mitochondrial and 11 nuclear genes: COX4I1 95, COX5A 15, COX5B 113, COX6A1 86, COX6B1 70, COX6C 59, COX7A2 66, COX7B 15, COX7C 79, COX8A 42, NDUFA4 47
+Mammalia: 604 species in H12's set, 177 with a partner sequence
+Mammalia: 177 species fill half the contact pairs; mean discordance contact 0.1347, control 0.1348
+Aves: 382 species in H12's set, 78 with a partner sequence
+Aves: 78 species fill half the contact pairs; mean discordance contact 0.1014, control 0.1081
+Actinopterygii: 235 species in H12's set, 61 with a partner sequence
+Actinopterygii: 41 species fill half the contact pairs; mean discordance contact 0.1163, control 0.1023
+Reptilia: 97 species in H12's set, 14 with a partner sequence
+         class               feature            model   n                                           status   lambda  slope_per_sd  ci95_low  ci95_high      p      q
+      Mammalia contact minus control mass+composition 177                                           tested    0.936       -0.0213    -0.056     0.0135  0.228  0.342
+      Mammalia contact minus control             mass 177                                           tested    0.937       -0.0223    -0.058     0.0134  0.219  0.394
+      Mammalia               contact mass+composition 177                                           tested    0.937        0.0139   -0.0573     0.0851    0.7    0.7
+      Mammalia               contact             mass 177                                           tested    0.937       0.00739   -0.0652       0.08  0.841  0.841
+      Mammalia               control mass+composition 177                                           tested    0.937        0.0439   -0.0236      0.111  0.201  0.342
+      Mammalia               control             mass 177                                           tested    0.938        0.0395   -0.0299      0.109  0.263  0.394
+          Aves contact minus control mass+composition  78                                           tested    0.291      -0.00633   -0.0556      0.043  0.799  0.799
+          Aves contact minus control             mass  78                                           tested    0.333      -0.00219    -0.049     0.0446  0.926  0.926
+          Aves               contact mass+composition  78                                           tested 3.84e-06       -0.0585     -0.11   -0.00669 0.0275 0.0824
+          Aves               contact             mass  78                                           tested    0.242       -0.0478    -0.104    0.00813 0.0928  0.139
+          Aves               control mass+composition  78                                           tested    0.322       -0.0514    -0.107    0.00398 0.0684  0.103
+          Aves               control             mass  78                                           tested    0.357       -0.0507    -0.104    0.00272 0.0625  0.139
+Actinopterygii contact minus control mass+composition  41                                           tested    0.838        0.0262   -0.0613      0.114  0.547  0.547
+Actinopterygii contact minus control             mass  41                                           tested    0.856      -0.00271   -0.0929     0.0875  0.952  0.952
+Actinopterygii               contact mass+composition  41                                           tested    0.796        0.0678  -0.00617      0.142 0.0712  0.214
+Actinopterygii               contact             mass  41                                           tested    0.773        0.0762   0.00509      0.147 0.0364 0.0767
+Actinopterygii               control mass+composition  41                                           tested    0.844        0.0536   -0.0225       0.13  0.162  0.243
+Actinopterygii               control             mass  41                                           tested    0.838        0.0688 -0.000362      0.138 0.0512 0.0767
+      Reptilia                     * mass+composition  14 not assessed: 14 species with a partner sequence      NaN           NaN       NaN        NaN    NaN    NaN
+      Reptilia                     *             mass  14 not assessed: 14 species with a partner sequence      NaN           NaN       NaN        NaN    NaN    NaN
+rerun mitoport partners: identical bytes
+615c67dccf7f5ba87fb208d7faf107b662bce0d5d0dbb9bda41a3d9a4adb2840  data/output/longevity/structure_pgls.tsv
+3e9a203283b9ee165ee029dc9e4748bb906f8df25645332d360e155a5adb1185  data/output/mitoport/partners.tsv
+48e2ebaa892ee7011607a176f6b9ec539838aedde35ab64a3a9a5649ee59d610  data/output/mitoport/partners_species.tsv

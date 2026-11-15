@@ -24,7 +24,8 @@ from the build before (c525adb, 2,335 species; job 6489876 reproduced the publis
 follows in parentheses; `results/euring/README.md` and `comparison.txt` list every change. The nine birds add two
 species to the tested sets, and every gene was realigned with them, which moves alignment columns in every class.
 Mammal results are byte-identical except H2's column screen, whose columns moved. H12's second round (partner
-discordance and ESM-2 embeddings) and H2's power calculation were not rerun and describe the build before.
+discordance, ESM-2 embeddings, hydropathy with each gene's own composition) was rerun on the build after that,
+0f4e970, which the manuscript cites; see H12. H2's power calculation was not rerun and describes the build before.
 
 ## H0. The alignments do not depend on the aligner
 
@@ -688,6 +689,22 @@ subunits are in longevity-genie/mitoage-nuclear-partners at 7deb2e0 (`download p
 contact map with its control pairing, the residue coupling of H5 (`coupling.tsv`, the first cluster run's), H9's
 `lifespan.tsv`, both rounds' H12 tables and the ESM-2 means are in longevity-genie/mitoage-pipelines at 126d237,
 under `output/` (build c525adb), which `download prepared --topic results` puts in `data/reference`.
+**Second round, rerun on 0f4e970** (the build manuscript v0.3 cites: f75bdc9's EURING birds and the African grey
+parrot's ND6; dna-seq/mitoage 03c0949, 2,344 species). Slurm jobs 6490380 (CPU) and 6490381 (GPU) on haumea,
+2026-11-15, from commit 7ab48d2, with the vertebrate ortholog sets as published (nuclear-partners 7deb2e0), so that
+only the build changes; tables and logs in `results/h12/round2/0f4e970/`. The checks are the same: 39 and 20 tests
+pass, 19 of 19 and 2 of 2 code breaks are caught, and every table is byte-identical on a second run. The ESM-2
+checkpoint is recorded by the job this time (08e4846, as above).
+- Unchanged in every row: all mammal and fish rows of the three tables, and the whole partner table (the same 177
+  mammals, 78 birds and 41 fishes have a partner sequence and enough pairs).
+- Birds, 382 (379): hydropathy of COX2 with its own composition +0.030, q = 0.045 (0.041); under the primary model
+  q = 0.085 (0.079). Contact mismatch alone -0.045, q = 0.054 (0.065). Embedding divergence, contact minus control,
+  -0.007, q = 0.46 (0.50).
+- Reptiles, 97 (the same species, realigned genes): contact minus control -0.111 and contact mismatch alone -0.114,
+  both q = 0.046 (0.052), as in the first round's rerun on f75bdc9. It is read as before: the same species pass on one alignment and not on the
+  other, which is not a finding.
+- Nothing else crosses q = 0.05 in either direction. The mammalian ND5 and ND6 hydropathy, and every null of the
+  second round, stand on the current build.
 **Second round, reading.** Mito-nuclear compatibility at complex IV's contacts, measured three ways (mito-side
 mismatch, discordance of the two sides, embedding divergence), follows lifespan in no class, with intervals that
 exclude effects larger than about 12% of maximum lifespan per standard deviation in mammals and birds. The contact pairs

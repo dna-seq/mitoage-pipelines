@@ -1,0 +1,25 @@
+class	family	feature	model	n	status	lambda	slope_per_sd	se	ci95_low	ci95_high	t	p	q
+Mammalia	embedding	contact	mass+composition	604	tested	0.95944	-0.022117	0.02056	-0.062495	0.01826	-1.0758	0.28246	0.47921
+Mammalia	embedding	control	mass+composition	604	tested	0.95941	-0.022321	0.022402	-0.066318	0.021676	-0.99636	0.31948	0.47921
+Mammalia	embedding	contact minus control	mass+composition	604	tested	0.95891	0.0049954	0.018858	-0.03204	0.042031	0.2649	0.79118	0.79118
+Aves	embedding	contact	mass+composition	382	tested	0.52341	-0.018264	0.013394	-0.044601	0.0080721	-1.3636	0.1735	0.34786
+Aves	embedding	control	mass+composition	382	tested	0.52042	-0.01622	0.013546	-0.042855	0.010415	-1.1974	0.23191	0.34786
+Aves	embedding	contact minus control	mass+composition	382	tested	0.51848	-0.0073419	0.0099133	-0.026834	0.012151	-0.74061	0.45939	0.45939
+Actinopterygii	embedding	control	mass+composition	235	tested	0.81852	0.023049	0.020205	-0.016763	0.062861	1.1407	0.25518	0.42011
+Actinopterygii	embedding	contact	mass+composition	235	tested	0.81495	0.01925	0.021145	-0.022414	0.060914	0.91036	0.36359	0.42011
+Actinopterygii	embedding	contact minus control	mass+composition	235	tested	0.8152	-0.014405	0.017835	-0.049546	0.020737	-0.80768	0.42011	0.42011
+Reptilia	embedding	contact	mass+composition	97	tested	0.69884	-0.055236	0.038053	-0.13082	0.020353	-1.4515	0.15007	0.33303
+Reptilia	embedding	control	mass+composition	97	tested	0.7027	-0.044744	0.036389	-0.11703	0.027539	-1.2296	0.22202	0.33303
+Reptilia	embedding	contact minus control	mass+composition	97	tested	0.73581	-0.00031805	0.023572	-0.047141	0.046505	-0.013493	0.98926	0.98926
+Mammalia	embedding	contact	mass	604	tested	0.96366	-0.019687	0.020764	-0.060465	0.021092	-0.94812	0.34345	0.60259
+Mammalia	embedding	control	mass	604	tested	0.96361	-0.019018	0.022664	-0.063528	0.025492	-0.83913	0.40173	0.60259
+Mammalia	embedding	contact minus control	mass	604	tested	0.96311	0.0017655	0.01911	-0.035764	0.039295	0.092389	0.92642	0.92642
+Aves	embedding	contact	mass	382	tested	0.54288	-0.01692	0.013231	-0.042936	0.0090957	-1.2788	0.20175	0.38889
+Aves	embedding	control	mass	382	tested	0.54006	-0.015032	0.013305	-0.041193	0.011128	-1.1298	0.25926	0.38889
+Aves	embedding	contact minus control	mass	382	tested	0.53381	-0.0061022	0.0097863	-0.025344	0.01314	-0.62354	0.5333	0.5333
+Actinopterygii	embedding	control	mass	235	tested	0.83081	0.022513	0.020485	-0.017848	0.062874	1.099	0.27291	0.45251
+Actinopterygii	embedding	contact	mass	235	tested	0.82756	0.018945	0.02144	-0.023297	0.061187	0.88363	0.37781	0.45251
+Actinopterygii	embedding	contact minus control	mass	235	tested	0.82601	-0.013585	0.018052	-0.049152	0.021983	-0.75251	0.45251	0.45251
+Reptilia	embedding	contact	mass	97	tested	0.70475	-0.056808	0.037186	-0.13064	0.017025	-1.5277	0.12995	0.2684
+Reptilia	embedding	control	mass	97	tested	0.70895	-0.04782	0.035313	-0.11793	0.022295	-1.3542	0.17893	0.2684
+Reptilia	embedding	contact minus control	mass	97	tested	0.74323	0.0045317	0.0222	-0.039547	0.048611	0.20413	0.83869	0.83869
