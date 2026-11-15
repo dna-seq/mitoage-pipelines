@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H11), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H12), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -109,7 +109,7 @@ flowchart TD
 Both tests compare nuclear subunits of complexes III and IV with three kinds of control: cytosolic
 proteins, complex II (which has no mitochondrially encoded subunit) and mitochondrial matrix enzymes.
 
-## The contacts of complex IV (H5 residue level, H9)
+## The contacts of complex IV (H5 residue level, H9, H12)
 
 ```mermaid
 flowchart TD
@@ -128,6 +128,9 @@ flowchart TD
   TREE --> IF
   IF --> T3[coupling.tsv<br/>H5: contacts against controls over species pairs]
   IF --> T4[lifespan.tsv<br/>H9: lifespan on the contact mismatch]
+  SI --> SP[longevity structure-pgls<br/>with GRAVY from the build]
+  TREE --> SP
+  SP --> T7[structure_pgls.tsv<br/>H12: contact mismatch and hydropathy, class by class]
 ```
 
 ## Structural alignments (H10)

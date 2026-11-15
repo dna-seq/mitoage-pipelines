@@ -11,7 +11,7 @@ Order of a full run:
   mitoage peptides pilot
   mitoage mitoport select && mitoage mitoport align && mitoage mitoport branch-lengths && mitoage mitoport erc
   mitoage download prepared --topic embeddings && mitoage mitoport coembed
-  mitoage download pdb 5Z62 && mitoage mitoport contacts && mitoage mitoport burial
+  mitoage download pdb 5Z62 && mitoage mitoport contacts && mitoage mitoport burial && mitoage longevity structure-pgls
   mitoage download prepared --topic residues && mitoage mitoport iface-align && mitoage mitoport iface
   mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD && mitoage structure within
   mitoage structure fold (GPU), or mitoage download prepared --topic structures; then mitoage structure msa
@@ -314,6 +314,21 @@ def longevity_motif_pgls(
     """H8: the build's mtDNA motif, repeat and contact-zone features against lifespan (H1's model)."""
     from .longevity import motif_pgls
     motif_pgls.main(data, composition, fourfold, tree, out, structure)
+
+
+@longevity_app.command("structure-pgls")
+def longevity_structure_pgls(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    work: Annotated[Path, typer.Option("--work", help="folder of `mitoport burial` (sites.tsv), for the contacts family")] = paths.MITOPORT_IFACE,
+    out: Out = paths.LONGEVITY_OUT,
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia, Aves, Actinopterygii, Reptilia)")] = None,
+    families: Annotated[Optional[list[str]], typer.Option("--family", help="contacts (complex IV contact mismatch) or hydropathy (GRAVY); repeat for both (default)")] = None,
+) -> None:
+    """H12: complex IV contact mismatch and protein hydropathy against lifespan, class by class (H1's model)."""
+    from .longevity import structure_pgls
+    structure_pgls.main(data, composition, fourfold, tree, work, out,
+                        tuple(classes or structure_pgls.CLASSES), tuple(families or structure_pgls.FAMILIES))
 
 
 @longevity_app.command("generation-time")

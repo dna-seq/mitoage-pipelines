@@ -424,3 +424,41 @@ signal is not one shared relationship with life history.
   test mostly contrasts species breeding at one year with later ones.
 - Mammals lose 82 of 615 species and birds 124 of 405 to a missing maturity age.
 - The bird reversal is a new observation from a screen of 43 features at q < 0.05, with no replication.
+
+## H12. The structural findings in every class: complex IV contacts, hydropathy, motifs (additions to H8-H10)
+
+**Question.** H8 to H10 found nothing about lifespan, but H9 asked it only of all species pooled and of
+mammals, and the protein features the build publishes (GRAVY hydropathy) were never put to this repository's
+model at all. Does any structural feature follow lifespan in mammals or in birds (and in ray-finned fishes and
+reptiles where the data allow)? Kept apart from H11, which is about base composition and life history.
+**Fixed before any result was seen** (written into the session's notes before the first run, 2026-11-15; of
+the new tests, nothing had been run):
+- Species, per class: H1's default dataset (`aa_pgls.select`): not retired, lifespan record of high or
+  acceptable quality and not estimated, body mass, all 13 proteins, fourfold counts, a tip of the dated tree;
+  the class's part of the tree (`aa_pgls.class_covariance`). Under 25 species: not assessed.
+- Model: log10 maximum lifespan on the feature, standardised over the species of the fit (a slope is log10
+  years per standard deviation), with log10 adult body mass and the fourfold composition (A4, C4, T4), Pagel's
+  lambda by maximum likelihood for each fit (`aa_pgls.fit`). Also, for comparison with H9's original model,
+  with mass only. q: Benjamini-Hochberg within class, family and model; mass with composition is the primary
+  model.
+- Family "contacts" (H9 taken into each class): per species, the share of the 298 contact columns of COX1-3
+  (5Z62, `mitoport burial`) whose residue differs from the column's modal residue among that class's tested
+  species, the same over the 298 burial-matched controls, and their difference, which is the test. Three
+  variables per class.
+- Family "hydropathy": GRAVY of each of the 13 proteins and of all 13 together, from
+  `protein_gene_features.parquet`. Fourteen features per class.
+- H8's motifs: `longevity motif-pgls` rerun unchanged (lambda estimated on its model without the feature) and
+  read class by class.
+**Test.** `mitoage longevity structure-pgls` (after `download pdb 5Z62`, `mitoport contacts`, `mitoport
+burial`, `longevity controls`, `fourfold`, `dated-tree`), into `structure_pgls.tsv`; on haumea,
+`slurm/structure-pgls.sbatch`, which also runs `motif-pgls`, the tests, a check that each test fails when the
+code it guards is broken, and a rerun. The build is longevity-genie/mitoage at c525adb.
+**Result.** Pending: the job runs on the cluster. One thing was seen before the run: while the tests were being
+written, a failing assertion printed three q values of the bird contact family under the primary model (0.14,
+0.17, 0.36). The features and the model above were written down before that and were not changed after it.
+**Not assessed, and why.**
+- H10's predicted structures exist for 62 mammals only, and H10 is a check of the alignments with no lifespan
+  hypothesis attached. Birds would need about 379 x 13 foldings, some 20 GPU-hours on an A100 at H10's rate.
+  Not run.
+- The per-residue ESM-2 embeddings cover 184 mammals and no bird. Not run.
+- H9's partner-specific branch needs nuclear partners, which exist for 176 mammals only.

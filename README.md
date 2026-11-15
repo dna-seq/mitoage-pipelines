@@ -83,7 +83,8 @@ uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/ali
 
 # H3: selection in long-lived against short-lived lines (HyPhy)
 uv run mitoage longevity rates
-mitoage longevity motif-pgls --structure <mtdna_structure.parquet>
+uv run mitoage longevity motif-pgls      # H8: the build's motif, repeat and contact-zone features, four classes
+uv run mitoage longevity structure-pgls  # H12: complex IV contact mismatch (after `mitoport burial`) and GRAVY, four classes
 uv run mitoage longevity generation-time   # H11: lifespan or age at maturity; mammals and birds (--maturity any: male age where female is missing)
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
