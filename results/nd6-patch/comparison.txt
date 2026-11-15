@@ -1,0 +1,62 @@
+aa_pgls.Actinopterygii.tsv: identical bytes
+aa_pgls.Aves.tsv: differs
+  Aves: differs; rows A 80, B 80, shared 0
+aa_pgls.Mammalia.tsv: identical bytes
+aa_pgls.Reptilia.tsv: identical bytes
+composition.tsv: differs
+  Actinopterygii: identical; rows A 892, B 892, shared 892
+  Amphibia: identical; rows A 45, B 45, shared 45
+  Ascidiacea: identical; rows A 1, B 1, shared 1
+  Asteroidea: identical; rows A 1, B 1, shared 1
+  Aves: differs; rows A 424, B 425, shared 424
+  Bivalvia: identical; rows A 17, B 17, shared 17
+  Cephalaspidomorphi: identical; rows A 9, B 9, shared 9
+  Cephalopoda: identical; rows A 11, B 11, shared 11
+  Chondrichthyes: identical; rows A 87, B 87, shared 87
+  Demospongiae: identical; rows A 1, B 1, shared 1
+  Echinoidea: identical; rows A 4, B 4, shared 4
+  Gastropoda: identical; rows A 9, B 9, shared 9
+  Insecta: identical; rows A 4, B 4, shared 4
+  Leptocardii: identical; rows A 1, B 1, shared 1
+  Malacostraca: identical; rows A 29, B 29, shared 29
+  Mammalia: identical; rows A 625, B 625, shared 625
+  Merostomata: identical; rows A 1, B 1, shared 1
+  Polychaeta: identical; rows A 4, B 4, shared 4
+  Reptilia: identical; rows A 128, B 128, shared 128
+  Rhabditophora: identical; rows A 1, B 1, shared 1
+  Sarcopterygii: identical; rows A 4, B 4, shared 4
+  Scyphozoa: identical; rows A 1, B 1, shared 1
+controls.tsv: differs
+  (whole table): differs; rows A 200, B 200, shared 120
+fourfold.tsv: identical bytes
+generation_time.any.classes.tsv: identical bytes
+generation_time.any.tsv: identical bytes
+generation_time.female.classes.tsv: identical bytes
+generation_time.female.tsv: identical bytes
+motif_pgls.tsv: differs
+  Actinopterygii: identical; rows A 33, B 33, shared 33
+  Aves: differs; rows A 33, B 33, shared 0
+  Mammalia: identical; rows A 33, B 33, shared 33
+  Reptilia: identical; rows A 33, B 33, shared 33
+pgls.Aves.tsv: differs
+  (whole table): differs; rows A 2738, B 2742, shared 0
+pgls.Mammalia.tsv: differs
+  (whole table): differs; rows A 5262, B 5262, shared 4918
+rate_contrasts.tsv: differs
+  Actinopterygii: identical; rows A 532, B 532, shared 532
+  Amphibia: identical; rows A 14, B 14, shared 14
+  Aves: differs; rows A 1414, B 1428, shared 1414
+  Chondrichthyes: identical; rows A 112, B 112, shared 112
+  Mammalia: identical; rows A 2352, B 2352, shared 2352
+  Reptilia: identical; rows A 322, B 322, shared 322
+rates.tsv: differs
+  Actinopterygii: identical; rows A 140, B 140, shared 140
+  Aves: differs; rows A 140, B 140, shared 0
+  Mammalia: identical; rows A 140, B 140, shared 140
+  Reptilia: identical; rows A 95, B 95, shared 95
+  all: differs; rows A 140, B 140, shared 0
+structure_pgls.tsv: differs
+  Actinopterygii: identical; rows A 48, B 48, shared 48
+  Aves: differs; rows A 48, B 48, shared 0
+  Mammalia: identical; rows A 48, B 48, shared 48
+  Reptilia: identical; rows A 48, B 48, shared 48
