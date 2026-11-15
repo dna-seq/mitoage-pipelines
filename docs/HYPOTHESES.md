@@ -233,10 +233,11 @@ probably the lineage's mitochondrial rate, which the tree's time does not remove
 ## H7. Lifespan predicts the substitution rate of the mitochondrial proteins
 
 **Hypothesis.** Published, and contested in both directions: long-lived lineages have been reported with
-slower mitochondrial substitution rates in bivalves (Sacco et al. 2021, Front Mol Biosci,
-doi:10.3389/fmolb.2021.626042) and in fishes (doi:10.1098/rstb.2025.0085), while a survey across
-vertebrates found that whether the association appears at all depends on how the rate is normalised
-(Hernandez-Pacheco et al. 2026, GBE, doi:10.1093/gbe/evag067). The caveat is the reason to test it here.
+slower mitochondrial substitution rates in bivalves (Mortz et al. 2021, Front Mol Biosci,
+doi:10.3389/fmolb.2021.626042) and in fishes (Le Cam et al. 2026, Phil Trans R Soc B 381,
+doi:10.1098/rstb.2025.0085), while a survey across vertebrates found that whether the association appears
+at all depends on how the rate is normalised (Sterling, Zwonitzer & Havird 2026, GBE,
+doi:10.1093/gbe/evag067). The caveat is the reason to test it here.
 **Test.** The relative-rate test on cherries of the dated tree. Two tips sharing a parent have had the same
 time since they split, so measuring each against one common outgroup makes the rate difference a contrast
 that needs no divergence-time correction. dN and dS are Nei-Gojobori counts with the Jukes-Cantor
