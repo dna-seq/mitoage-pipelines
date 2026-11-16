@@ -13,3 +13,4 @@ fish air-breathing: FishBase AirBreathing facultative or obligate ('WaterAssumed
 fish regional endothermy: Thunnus, Katsuwonus, Istiophoridae, Xiphiidae, Lampris	Actinopterygii	893	16	877	0	4	4	4	2	61
 shark regional endothermy: Lamnidae, Alopiidae	Chondrichthyes	87	7	80	0	2	3	3	0	0
 fish electric discharge: FishBase Electrogenic weakly or strongly discharging	Actinopterygii,Chondrichthyes	980	23	957	0	6	14	9	0	61
+bat hibernation: Wilkinson & Adams 2019 (DRUM), within Chiroptera	Mammalia	625	17	27	581	3	7	4	6	177

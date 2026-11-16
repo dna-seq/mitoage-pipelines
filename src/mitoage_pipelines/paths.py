@@ -40,6 +40,7 @@ MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and 
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
 CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the cybrid hosts and donors (H16)
 TECH_GB = INPUT / "technology"            # refseq/ and source/: GenBank records the sequencing technology is read from (H8's control)
+HIBERNATION = INPUT / "hibernation"        # the bat table of Wilkinson & Adams 2019 (DRUM) and Heldstab et al. 2018 (Dryad, placed by hand)
 
 # --- input: the sources of build 2 (docs/BUILD2_REPRODUCTION.md) --------------------------------
 B2_IN = INPUT / "build2"

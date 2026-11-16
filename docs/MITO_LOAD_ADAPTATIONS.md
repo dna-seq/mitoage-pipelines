@@ -7,7 +7,8 @@ can be found in coevolutions".
 This document ranks the candidates by what the MitoAge build can test, with five things settled for each: why the
 adaptation should load mitochondria, how species are classified, how many species of the build it covers, how many
 independent origins it has on the tree, and what signal to expect with which tool. The shortlist agreed with the
-maintainer the same day ("Fish ecology + mammals") is written as H21, H22 and H23 in `docs/HYPOTHESES.md`. Nothing
+maintainer the same day ("Fish ecology + mammals") is written as H21, H22 and H23 in `docs/HYPOTHESES.md`; his follow-up
+("check for hibernation idea as it is connected with longevity", "bats look interesting") as H24 and H25. Nothing
 here has been run. Every citation was taken from a search result and its title checked; none is from memory.
 
 Temperature, size and metabolic rate as continuous traits are H20 and are not repeated here.
@@ -27,7 +28,8 @@ whose record or classification is wrong.
 need the nuclear subunits, and those exist for 177 mammals, 78 birds and 61 ray-finned fishes (complex IV's vertebrate
 set of H12). H19's vertebrate alignments, once run, will hold a median of about 120 ray-finned fishes per gene. Only
 four candidates put more than 8 trait-bearing species into the partner set: marine mammals (26), diadromous fishes
-(22), hibernating mammals (to be counted with the source below) and bats (13). Every other candidate can be tested on
+(22), bats (13) and, probably, hibernating mammals (to be counted with the mammal-wide source below; 6 hibernating bats
+are in the set). Every other candidate can be tested on
 the mitochondrial genes only: dN/dS, RELAX, aBSREL, substitution rate, composition.
 
 **Unknown is not no.** FishBase leaves migration (`AnaCat`) empty for 403 of 893 ray-finned fishes and depth for 322.
@@ -37,7 +39,8 @@ Its air-breathing field defaults to `WaterAssumed`, which means no record exists
 ## The tally
 
 From `docs/analyses/mito-load/` (inputs, rules and columns in its README). Every rule is an explicit taxonomic rule
-or a FishBase v26.06 field. Traits that need a source we do not hold yet are not tallied: hibernation, high altitude,
+or a FishBase v26.06 field, except bat hibernation, read from the pinned table of Wilkinson & Adams 2019. Traits that
+need a source we do not hold yet are not tallied: hibernation beyond bats, high altitude,
 migration and diving in birds.
 
 | Candidate (rule) | Scope | Yes | No | Unknown | Families | Clades | Changes | Yes with partners |
@@ -56,6 +59,7 @@ migration and diving in birds.
 | Fish regional endothermy: *Thunnus*, *Katsuwonus*, billfishes, *Lampris* | 893 | 16 | 877 | 0 | 4 | 4 | 4 | 2 |
 | Shark regional endothermy: Lamnidae, Alopiidae | 87 cartilaginous | 7 | 80 | 0 | 2 | 3 | 3 | 0 |
 | Electric discharge: FishBase `Electrogenic` (19 of the 23 are skates) | 980 fishes | 23 | 957 | 0 | 6 | 14 | 9 | 0 |
+| Bat hibernation: Wilkinson & Adams 2019, within Chiroptera | 44 bats | 17 | 27 | 0 | 3 | 7 | 4 | 6 |
 
 ## The candidates, ranked
 
@@ -102,16 +106,21 @@ migration and diving in birds.
 
 ### Tier 2: few origins, partners in hand (mammals)
 
-**Hibernation (shortlisted: H23).**
+**Hibernation (shortlisted: H23, and with longevity H24).**
 1. *Why.* Hibernators suppress metabolism to about 6% of basal rate during torpor bouts, daily heterotherms to about
    35% (Ruf & Geiser 2015); Staples (2016) reviews how mitochondrial metabolism takes part in that suppression.
    Their mitochondria cycle between deep suppression and the high flux of arousal.
-2. *Classification.* Ruf & Geiser 2015, the species table of 214 heterotherms (43 birds, 171 mammals), each labelled
-   hibernator or daily heterotherm. A species absent from it is "not recorded as heterothermic", not "homeothermic":
-   the review lists the species that were studied. This is a new source, to be downloaded and pinned at the run step.
-3. *Counts.* Not counted yet: they wait for the table. The build has 625 mammals, 177 of them with partners.
-4. *Origins.* To be counted from the table. Torpor is widespread across mammals, so origins and losses will be hard
-   to tell apart.
+2. *Classification.* Ruf & Geiser's species table of 214 heterotherms was the first choice, but no script can fetch it
+   (the publisher, PMC and the authors' repository each answer with a bot challenge). In its place, and better for a
+   two-state trait because it codes non-hibernators too: the supplementary table of Heldstab, Isler & van Schaik 2018
+   (1,104 mammals; Dryad, CC0), downloaded by hand once and accepted only with the md5 of Dryad's file listing; and for
+   bats the trait table of Wilkinson & Adams 2019 (DRUM, SHA-256 pinned), `Hibernation` Yes or No. Both are fetched or
+   checked by `download hibernation`. A species in neither is unknown; disagreement is unknown.
+3. *Counts.* Bats: all 44 matched (42 by name, 2 by NCBI synonym), 17 hibernate, 27 do not, 6 hibernators with
+   partners. Mammals beyond bats: not counted until the Dryad file is placed.
+4. *Origins.* Bats: 4 changes, 7 trait clades (the hibernating Vespertilionidae with one tropical *Myotis* that does
+   not hibernate, *Rhinolophus*, *Mystacina*). Torpor is widespread across mammals, so origins and losses will be
+   hard to tell apart.
 5. *Signal and tool.* Two-sided RELAX and paired ω; on the coevolution side, the joint mitochondrial and nuclear rate
    shift on hibernator branches.
 
@@ -127,7 +136,17 @@ migration and diving in birds.
 5. *Signal and tool.* RELAX across the four clades, aBSREL on their four stems; the joint rate shift on the
    coevolution side.
 
-**Bats (the positive control of H23).**
+**Hibernation and longevity (H24).** Hibernating mammals have about 15% higher annual survival than non-hibernators of
+similar size, mature later and have longer generations, yet do not live longer than non-hibernators with similar
+survival, so the link runs through lower mortality (Turbill, Bieber & Ruf 2011). Hibernating bats live about 6 years
+longer on average than those that do not hibernate (Wilkinson & South 2002), and body mass and hibernation predict bat
+longevity again in a larger sample (Wilkinson & Adams 2019). Ageing itself slows: epigenetic age essentially stalls
+through the hibernation of yellow-bellied marmots (Pinho et al. 2022), and big brown bats age more slowly by a bat
+epigenetic clock during hibernation (Sullivan et al. 2022). H11 found that mtDNA composition follows the slow life
+history as a whole; hibernation is a slow life history reached many times. H24 asks whether part of lifespan's
+composition signal is hibernation's, and whether hibernators accumulate mtDNA substitutions more slowly per year.
+
+**Bats (the positive control of H23, and inside bats H25).**
 1. *Why.* Both the mitochondrial and the nuclear OXPHOS genes show adaptive evolution on the ancestral branch of bats
    (Shen et al. 2010).
 2. *Classification.* Order Chiroptera.
@@ -135,6 +154,13 @@ migration and diving in birds.
 4. *Origins.* One, so not a test of flight. It is the branch on which a method that claims to see a joint
    mitochondrial and nuclear shift must see it first.
 5. *Signal and tool.* Nuclear OXPHOS subunits faster than cytosolic controls on the bat stem; aBSREL on the stem.
+6. *Inside bats (H25).* Bats outlive non-flying mammals of their size, which Austad & Fischer (1991) read as reduced
+   vulnerability to the environment rather than slow metabolism; as later reviews summarise it, heart mitochondria of
+   the little brown bat produced half to a third of the reactive oxygen species of a shrew's and a mouse's
+   (Brunet-Rossinni 2004). Within bats, flight is shared by every species and lifespan is far less tied to body mass,
+   the confound of every mammal-wide test. 43 of the 44 bats have a lifespan record of high or acceptable quality.
+   H25 tests lifespan against the substitution rate on sister pairs and against composition, and hibernation against
+   constraint (RELAX across its 7 bat clades), with the power that 43 species and 4 origins allow.
 
 ### Tier 3: several origins, few species (mitochondrial genes only, not shortlisted)
 
@@ -167,7 +193,9 @@ Agreed with the maintainer on 2026-11-16 (the answer to "Which shortlist should 
 written for?" was "Fish ecology + mammals"):
 - **H21**, diadromous fishes;
 - **H22**, deep-sea fishes;
-- **H23**, hibernating and marine mammals, with bats as the positive control.
+- **H23**, hibernating and marine mammals, with bats as the positive control;
+- and, after the maintainer's follow-up the same day: **H24**, hibernation and longevity across mammals; **H25**, lifespan,
+  hibernation and the mitochondrial genome inside bats.
 
 They share one design, defined in full in `docs/HYPOTHESES.md`:
 - *Mitochondrial side, one contrast per origin:* each trait clade paired with its nearest relative outside it, and an
@@ -180,12 +208,20 @@ They share one design, defined in full in `docs/HYPOTHESES.md`:
 
 ## Sources to add, the maintainer's call
 
-- **Ruf & Geiser 2015, the species table** (needed by H23's hibernation arm). Without it the arm is not assessed.
+- **Hibernation** (H23-H25): approved by the maintainer on 2026-11-16 ("Yes, write both", to writing H24 and H25 and
+  pinning both hibernation tables). The bat table of Wilkinson & Adams 2019 is pinned and fetched. The mammal table of
+  Heldstab et al. 2018 waits for one download by hand: "Supplementary material.xlsx" from
+  https://datadryad.org/dataset/doi:10.5061/dryad.753d06g, saved as
+  `data/input/hibernation/heldstab_2018_supplementary_material.xlsx`. Ruf & Geiser 2015 could not be fetched (above).
 - AVONET (bird migration, hand-wing index); EltonTraits 1.0 (diving in birds and mammals); COMBINE (mammal traits;
   whether it carries a hibernation field was not confirmed). None is needed by H21-H23.
 
 ## References
 
+- Austad SN, Fischer KE (1991) Mammalian aging, metabolism, and ecology: evidence from the bats and marsupials.
+  J Gerontol 46:B47-B53. doi:10.1093/geronj/46.2.b47
+- Brunet-Rossinni (2004) Reduced free-radical production and extreme longevity in the little brown bat (Myotis
+  lucifugus) versus two non-flying mammals. Mech Ageing Dev 125. doi:10.1016/j.mad.2003.09.003
 - Dalziel AC, Moyes CD, Fredriksson E, Lougheed SC (2006) Molecular evolution of cytochrome c oxidase in
   high-performance fish (Teleostei: Scombroidei). J Mol Evol 62:319-331. doi:10.1007/s00239-005-0110-7
 - da Fonseca RR, Johnson WE, O'Brien SJ, Ramos MJ, Antunes A (2008) The adaptive evolution of the mammalian
@@ -198,9 +234,13 @@ They share one design, defined in full in `docs/HYPOTHESES.md`:
   (anchovies, herrings, sardines, and relatives). Syst Biol. PMID 38756097
 - Foote AD et al. (2015) Convergent evolution of the genomes of marine mammals. Nat Genet 47:272-275.
   doi:10.1038/ng.3198
+- Heldstab SA, Isler K, van Schaik CP (2018) Hibernation constrains brain size evolution in mammals. J Evol Biol.
+  doi:10.1111/jeb.13353. Data: Dryad doi:10.5061/dryad.753d06g
 - McNab BK (1984) Physiological convergence amongst ant-eating and termite-eating mammals. J Zool 203:485-510.
   doi:10.1111/j.1469-7998.1984.tb02345.x
 - Papetti et al. (2007) Antarctic fish mitochondrial genomes lack ND6 gene. J Mol Evol. doi:10.1007/s00239-007-9030-z
+- Pinho et al. (2022) Hibernation slows epigenetic ageing in yellow-bellied marmots. Nat Ecol Evol 6:418-426.
+  doi:10.1038/s41559-022-01679-1
 - Ruf, Geiser (2015) Daily torpor and hibernation in birds and mammals. Biol Rev 90:891-926. doi:10.1111/brv.12137
 - Scott GR et al. (2011) Molecular evolution of cytochrome c oxidase underlies high-altitude adaptation in the
   bar-headed goose. Mol Biol Evol 28:351-363. doi:10.1093/molbev/msq205
@@ -213,12 +253,20 @@ They share one design, defined in full in `docs/HYPOTHESES.md`:
 - Staples JF (2016) Metabolic flexibility: hibernation, torpor, and estivation. Compr Physiol 6:737-771.
 - Strohm, Gwiazdowski, Hanner (2015) Fast fish face fewer mitochondrial mutations: patterns of dN/dS across fish
   mitogenomes. Gene 572:27-34. doi:10.1016/j.gene.2015.06.074
+- Sullivan IR, Adams DM, Greville LJS, Faure PA, Wilkinson GS (2022) Big brown bats experience slower epigenetic ageing
+  during hibernation. Proc R Soc B 289. doi:10.1098/rspb.2022.0635
 - Sun, Shen, Irwin, Zhang (2011) Evaluating the roles of energetic functional constraints on teleost
   mitochondrial-encoded protein evolution. Mol Biol Evol 28:39-44. doi:10.1093/molbev/msq256
 - Tobias et al. (2022) AVONET: morphological, ecological and geographical data for all birds. Ecol Lett 25:581-597.
   doi:10.1111/ele.13898
 - Tomasco IH, Lessa EP (2011) The evolution of mitochondrial genomes in subterranean caviomorph rodents: adaptation
   against a background of purifying selection. Mol Phylogenet Evol 61:64-70. doi:10.1016/j.ympev.2011.06.014
+- Turbill C, Bieber C, Ruf T (2011) Hibernation is associated with increased survival and the evolution of slow life
+  histories among mammals. Proc R Soc B 278:3355-3363. doi:10.1098/rspb.2011.0190
+- Wilkinson GS, Adams DM (2019) Recurrent evolution of extreme longevity in bats. Biol Lett 15:20180860.
+  doi:10.1098/rsbl.2018.0860. Data: DRUM hdl:1903/21501
+- Wilkinson GS, South JM (2002) Life history, ecology and longevity in bats. Aging Cell 1:124-131.
+  doi:10.1046/j.1474-9728.2002.00020.x
 - Wilman H et al. (2014) EltonTraits 1.0: species-level foraging attributes of the world's birds and mammals. Ecology
   95:2027. doi:10.1890/13-1917.1
 - Zhuang, Cheng (2010) ND6 gene "lost" and found: evolution of mitochondrial gene rearrangement in Antarctic

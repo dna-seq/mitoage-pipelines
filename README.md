@@ -105,6 +105,8 @@ uv run mitoage longevity structure-pgls --family embedding --out data/output/lon
 uv run mitoage longevity generation-time   # H11: lifespan, maturity, gestation, birth weight and the slow-fast axis; mammals and birds (on haumea: slurm/generation-time.sbatch)
 uv run mitoage download fishbase-temperature   # FishBase's species, synonyms and stocks tables, md5-checked
 uv run mitoage longevity thermal   # H20: temperature, size and metabolic rate against sister-pair rates and composition; Lehmann et al. retested (on haumea: slurm/h20-thermal.sbatch)
+uv run mitoage download hibernation   # H23-H25: bat hibernation (Wilkinson & Adams 2019, DRUM, SHA-256 pinned); the mammal table
+                                      # (Heldstab et al. 2018, Dryad) is saved by hand first, as the command says, and md5-checked
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 

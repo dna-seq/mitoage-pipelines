@@ -7,6 +7,7 @@ Order of a full run:
   mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls && mitoage longevity pgls-power
   mitoage longevity rates && mitoage longevity generation-time
   mitoage download fishbase-temperature && mitoage longevity thermal   (H20)
+  mitoage download hibernation   (H23-H25; the mammal table is placed by hand first)
   mitoage download technology && mitoage longevity technology && mitoage longevity motif-pgls
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
@@ -108,6 +109,14 @@ def download_pdb(ids: Annotated[list[str], typer.Argument(help="PDB entry ids, e
     """Solved structures as mmCIF from RCSB into data/input/pdb, with each file's SHA-256 in the manifest."""
     from . import download
     download.pdb([i.upper() for i in ids], paths.PDB, paths.MANIFEST)
+
+
+@download_app.command("hibernation")
+def download_hibernation() -> None:
+    """H23-H25: the bat hibernation table of Wilkinson & Adams 2019 from DRUM (SHA-256 pinned), and the mammal table of
+    Heldstab et al. 2018 if it has been placed by hand (Dryad serves files only to a browser; md5 checked)."""
+    from .adaptations import hibernation
+    hibernation.fetch(paths.HIBERNATION, paths.MANIFEST)
 
 
 @download_app.command("technology")

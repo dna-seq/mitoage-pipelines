@@ -1783,5 +1783,121 @@ used.
   chance; it is a check that the method can see a published shift, not a calibration of its error rate. The coupling
   of H14 belongs to whole proteins and probably follows the lineage's overall rate, so a joint shift on trait branches
   says the partners changed speed together there, not why.
+**Changed before the run** (2026-11-16, before any analysis code of H21-H23 existed and before any statistic of these traits was
+computed). Trait A's source. The species table of Ruf & Geiser 2015 could not be fetched by a script: the publisher's
+page, PMC's copy and the authors' repository each answer with a bot challenge, which this project does not get
+around. In its place, and better suited to a two-state trait because it codes non-hibernators as well:
+- the supplementary table of Heldstab, Isler & van Schaik 2018 ("Hibernation constrains brain size evolution in
+  mammals", J Evol Biol, doi:10.1111/jeb.13353; 1,104 mammals; Dryad doi:10.5061/dryad.753d06g, CC0), which Dryad
+  serves only to a browser, so it is downloaded by hand once and accepted only with the md5 of Dryad's file listing
+  (`download hibernation`, `adaptations/hibernation.py`). Its column and values are fixed when it is first read, before
+  any statistic, and recorded here; until then trait A is not assessed;
+- for bats, the trait table of Wilkinson & Adams 2019 ("Recurrent evolution of extreme longevity in bats", Biol Lett
+  15:20180860, doi:10.1098/rsbl.2018.0860; DRUM hdl:1903/21501, SHA-256 pinned), `Hibernation` Yes = 1, No = 0; it
+  matches all 44 bats of the build (42 by exact name, 2 by NCBI synonym): 17 hibernate, 27 do not, 4 changes on the tree.
+Where both sources code a species and disagree, it is unknown, and the count is reported. A species in neither is
+unknown, as before. Daily heterotherms are no longer a separate class (neither source has one).
 **Test.** As H21.
+**Result.** Not yet run.
+
+## H24. Hibernation and longevity in mammals: is part of lifespan's mitochondrial signal hibernation's?
+
+**Question.** The maintainer, 2026-11-16: "check for hibernation idea as it is connected with longevity". It is, in the
+literature. Hibernating mammals have about 15% higher annual survival than non-hibernators of similar size, mature
+later and have longer generation times, yet do not live longer than non-hibernators with similar survival (Turbill,
+Bieber & Ruf 2011, Proc R Soc B 278:3355, doi:10.1098/rspb.2011.0190): the link runs through lower mortality. Among
+bats, hibernation is among the strongest predictors of longevity, hibernators living about 6 years longer on average
+(Wilkinson & South 2002, Aging Cell 1:124, doi:10.1046/j.1474-9728.2002.00020.x), and body mass and hibernation predict
+bat longevity again in a larger sample (Wilkinson & Adams 2019, Biol Lett 15:20180860, doi:10.1098/rsbl.2018.0860).
+Ageing itself slows during hibernation: epigenetic age essentially stalls through the hibernation of yellow-bellied
+marmots (Pinho et al. 2022, Nat Ecol Evol 6:418, doi:10.1038/s41559-022-01679-1), and big brown bats age more slowly by
+a multi-species bat clock during hibernation (Sullivan et al. 2022, Proc R Soc B 289, doi:10.1098/rspb.2022.0635).
+H11 found that mtDNA composition follows the slow life history of mammals as a whole, more than lifespan alone.
+Hibernation is a slow life history reached many times over. Two questions: does part of what reads as lifespan's
+composition signal belong to hibernation? And do hibernators, with months at a few percent of basal metabolism and
+longer generations, accumulate mtDNA substitutions more slowly per year?
+**Seen before this entry was written, and therefore not blind.** The design tally (`docs/analyses/mito-load/`),
+including the bat row: 17 hibernating and 27 non-hibernating bats, 7 trait clades, 4 changes, 6 hibernators with
+partners. The bat table's file was opened to find its columns; it also carries longevity, body mass and latitude, and
+its rows were printed while the columns were found, but no relationship in it was computed. No lifespan, rate or
+composition statistic of hibernators was computed in the build. The mammal-wide table had not been read (not yet
+placed). H11's tables were read when H11 was written.
+**Fixed before any analysis code was written.**
+- *Trait.* H23's trait A as changed before the run: Heldstab et al. 2018 for mammals, Wilkinson & Adams 2019 for bats,
+  disagreement and absence unknown. Until the mammal-wide table is placed, every readout here runs on bats only and
+  is reported as "bats only" under H25, not here; this entry's readouts are then not assessed.
+- *Species.* Mammals of H1's default dataset (lifespan record of high or acceptable quality, a tip of the dated tree),
+  with an adult mass, all 12 heavy-strand codon alignments and a known hibernation state. Build 0f4e970, the site's
+  tree at 03c0949.
+- *P, the positive control.* Phylogenetic regression (Pagel's lambda by maximum likelihood) of log10 lifespan on
+  hibernation (0/1) and log10 mass. Predicted: the hibernation term positive, p < 0.05. P failing does not stop the
+  readouts below, but it is said first, because the published link is then not reproduced on these records.
+- *L1, composition follows hibernation (descriptive).* H11's 43 features, each standardised, on hibernation and log10
+  mass, as H11 fits them; Benjamini-Hochberg q over the 43; the count at q < 0.05 and each slope.
+- *L2, lifespan's composition signal with hibernation in the model (primary reading, no p).* For each of the 43
+  features, the lifespan slope of feature ~ log10 lifespan + log10 mass, fitted with and without hibernation added, on
+  the same species. Readouts: the count of features whose lifespan term has q < 0.05 in each model, and the median over
+  those passing in the model without hibernation of |slope with| / |slope without|. Reading: a median ratio below 0.5
+  with the count at least halved is "largely hibernation's"; a median ratio above 0.8 is "not hibernation's"; between,
+  "partly". Fewer than 5 features passing without hibernation: "not assessed" (nothing to divide).
+- *L3, the substitution rate (primary).* H21's design R2, one pair per origin of hibernation, with the readout on dS per
+  million years: Δ = log10 dS of the hibernating sister to the outgroup − log10 dS of the other; Wilcoxon signed-rank,
+  two-sided. Predicted negative (slower in hibernators). At least 8 pairs, or not assessed. Δ of dN and Δω reported
+  beside it.
+- *Correction.* L3 is the one p-valued primary test; it is read at p < 0.05. L1's q values are read as H11's are.
+- *Reading.* L3 "as predicted" when Δ is negative with p < 0.05; positive, "opposite"; else "not detected", with the
+  median Δ and its interval. L2 as defined above. Neither is read as hibernation causing anything: hibernators differ
+  from their relatives in latitude, size and ecology too.
+- *Known weaknesses, said in advance.* Heldstab et al.'s coding, its definition of hibernation and its coverage of the
+  build are unknown until the file is read. Turbill et al. found the longevity of hibernators matched their survival,
+  so a hibernation effect here may be one of lower mortality, which composition would follow only through generation
+  time. In bats, Wilkinson & South found every hibernator's longevity record came from the field, so record type and
+  hibernation go together. Latitude predicts longevity among hibernating bats (Wilkinson & Adams 2019) and is not in
+  the build. Torpor's gains and losses are hard to tell apart, so L3's pairs may count a loss as an origin.
+**Test.** To be written, with H21-H23's.
+**Result.** Not yet run.
+
+## H25. Inside bats: lifespan, hibernation and the mitochondrial genome where flight is held constant
+
+**Question.** The maintainer: "bats look interesting". Bats outlive non-flying mammals of their size, and Austad & Fischer
+(1991, J Gerontol 46:B47, doi:10.1093/geronj/46.2.b47) read such long lives as reduced vulnerability to the environment
+rather than slow metabolism. As later reviews summarise it, the heart mitochondria of the little brown bat produced
+about half to a third of the reactive oxygen species of a shrew's and a white-footed mouse's (Brunet-Rossinni 2004,
+Mech Ageing Dev 125, doi:10.1016/j.mad.2003.09.003). Across mammals, our tests found no lifespan signal in the
+substitution rate (H7) and a composition signal that follows the slow life history (H11), with body mass the confound
+in every model. Within bats lifespan is far less tied to mass, and flight, the bats' one origin, is shared by every
+species, so it drops out. Does lifespan follow the mitochondrial genome within bats, and does hibernation, which arose
+about four times among the build's bats, change the constraint on it?
+**Seen before this entry was written, and therefore not blind.** As H24: the bat row of the design tally and the
+family-by-family counts of bats with a lifespan record of high or acceptable quality (43 of 44) and with partners
+(13). No lifespan, rate or composition statistic of bats was computed.
+**Fixed before any analysis code was written.**
+- *Species.* The bats of the build with a tip of the dated tree, all 12 heavy-strand codon alignments and an adult
+  mass; for the lifespan readouts, a lifespan record of high or acceptable quality as well. Build 0f4e970, the site's
+  tree at 03c0949. Hibernation from Wilkinson & Adams 2019 as fixed under H23's change.
+- *B1, the positive control.* log10 lifespan on hibernation and log10 mass, phylogenetic regression with Pagel's lambda.
+  Predicted positive, p < 0.05. Most of the build's bat lifespans come from AnAge, as Wilkinson & Adams's do, so this
+  checks the tree and the records, not the published result independently.
+- *B2, the rate (primary).* H20's sister pairs (`thermal.disjoint_pairs`: the largest set of bat pairs whose paths share
+  no branch), dS and dN per million years over the 12 genes; regression over pairs of Δ log10 dS per Myr on Δ log10
+  lifespan and Δ log10 mass, by GLS with Pagel's lambda, as H20 fits its pairs. The lifespan slope, two-sided. At least
+  12 pairs, or not assessed. dN per Myr and dN/dS reported beside it.
+- *B3, composition (descriptive).* H11's 43 features on log10 lifespan and log10 mass, and on hibernation and log10
+  mass, phylogenetic regression with Pagel's lambda; Benjamini-Hochberg q over the 43; counts at q < 0.05 and each
+  slope, set beside H11's mammalian counts as numbers only (different species sets, no test between them).
+- *B4, hibernation and constraint (primary).* H21's design R1 (RELAX) with the bat hibernation clades as test branches
+  and the control draws among non-hibernating bat clades; it needs 3 trait clades and has 7. R2 (pairs) needs 8 and is
+  not assessed.
+- *B5, the coevolution side.* 13 bats have partners, 6 of them hibernators: within bats the coupling is not assessed.
+  The bat stem as a whole is H23's positive control.
+- *Correction.* Holm over B2 and B4.
+- *Reading.* B2: a lifespan slope with Holm p < 0.05 is reported with its sign; else "not detected", with the slope's
+  95% interval, which is what bounds the answer: about 20 pairs leave large effects open. B4 as H23's R1, two-sided,
+  under H21's two conditions. B3 as H11 reads its counts.
+- *Known weaknesses, said in advance.* About 43 species and four origins of hibernation: B4 bounds little, and B2's
+  interval will be wide. Bat lifespans are maxima of banding records of uneven effort, and hibernators' come mostly from
+  the field. Bats' small size puts them at one end of the mammalian mass range, so nothing here is compared with other
+  orders as a test. The bat mitogenomes in RefSeq are not a random draw of bats (Vespertilionidae, Pteropodidae and
+  Phyllostomidae are 38 of the 44).
+**Test.** To be written, with H21-H24's.
 **Result.** Not yet run.
