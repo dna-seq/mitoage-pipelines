@@ -145,6 +145,12 @@ uv run mitoage mitoport cybrid-coev               # co-evolved residue pairs the
 uv sync --group fold && uv run mitoage mitoport cybrid-esm   # ESM-2 masked marginals, alone and with the partner (GPU)
 uv run mitoage mitoport cybrid-readout            # H16's readouts for these scores, beside H16's baselines
 
+# H18: the cybrids by an interface energy on the chimeric complexes (on haumea: slurm/h18-energy.sbatch, CPU nodes)
+uv sync --group energy                            # OpenMM and PDBFixer
+uv run mitoage download pdb 5XTD 5XTE 5Z62 8H9S 8OM1 7O3H 7O37
+uv run mitoage mitoport cybrid-energy --list      # the 44 tasks; one with --task N, or --host, --donor and --complex
+uv run mitoage mitoport cybrid-energy-collect && uv run mitoage mitoport cybrid-energy-readout
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -318,6 +324,11 @@ of a pair out by hand, checks that host and donor are left out of their own coun
 unscored and never zero, and tests the ESM-2 bookkeeping on a table of log-probabilities in place of the model (which
 positions are masked, pairs over the model's length, the partner's effect); `slurm/h17-cybrid-mutations.py` breaks 11
 guards one at a time.
+
+`tests/test_cybrid_energy.py` (H18) checks by hand which chain is which protein, what is substituted and what is
+counted as not modelled, the tasks and the collection; with OpenMM installed, the cutting of a chain at a break, the
+free and restrained atoms, and on COX2 of 5Z62 the system, the substitutions made and that two groups moved apart do
+not interact; `slurm/h18-energy-mutations.py` breaks 12 guards one at a time.
 
 ## Licence
 

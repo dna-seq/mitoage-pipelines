@@ -327,6 +327,7 @@ def summarise(scores: pd.DataFrame, meas: pd.DataFrame, names: tuple[str, ...] =
 
 # --- H17: the same readouts for the co-evolution and language-model scores --------------------------------
 H17_PRIMARY = ("coev_excess", "coev_excess_mean", "esm_contact", "esm_contact_mean", "esm_partner_excess")
+H18_PRIMARY = ("ddE", "ddE_per_change")
 H17_OTHER = ("coev_contact", "coev_control", "coev_excess_t50", "coev_excess_noorder", "esm_control", "esm_all",
              "esm_partner_effect", "esm_partner_effect_control")
 H17_BASELINE = ("d_contact", "d_all", "f_all")
@@ -402,3 +403,26 @@ def main(gb: Path, pdb_dir: Path, out: Path, measurements: Path = MEASUREMENTS) 
         print(cal[["host", "donor", "complex", "status", "pct", "d_contact", "f_contact", "d_all", "f_all"]].to_string(index=False))
         print(summary.to_string(index=False))
     print("wrote", out)
+
+
+def readout_energy(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame:
+    """H16's readouts T1 to T4 for H18's interface energy, beside H16's baselines on the same points. Reads scores.tsv
+    (`mitoport cybrid`) and energy_scores.tsv (`mitoport cybrid-energy-collect`). Only rows whose status is `computed`
+    or `no substitution to model` carry a score; a point without one is left out of the readouts it would enter.
+    Writes h18_calibration.tsv and h18_summary.tsv."""
+    key = ["host", "donor", "complex"]
+    for f in ("scores.tsv", "energy_scores.tsv"):
+        if not (out / f).is_file():
+            raise SystemExit(f"{out / f} is missing")
+    e = pd.read_csv(out / "energy_scores.tsv", sep="\t")
+    scores = pd.read_csv(out / "scores.tsv", sep="\t")[key + list(H17_BASELINE)].merge(e[key + list(H18_PRIMARY)], on=key, how="left")
+    names = H18_PRIMARY + H17_BASELINE
+    cal, summary = summarise(scores, read_measurements(measurements), names, t2b=names, t3=names,
+                             t4=("ddE", "d_contact", "d_all"))
+    cal = cal.merge(e[key + [c for c in ("ddE_sd", "substituted", "interface_substituted", "unmodelled", "status") if c in e]], on=key, how="left")
+    cal.to_csv(out / "h18_calibration.tsv", sep="\t", index=False, float_format="%.4f")
+    summary.to_csv(out / "h18_summary.tsv", sep="\t", index=False, float_format="%.3f")
+    with pd.option_context("display.width", 220, "display.max_colwidth", 110, "display.max_rows", 400):
+        print(summary.to_string(index=False))
+    print("wrote", out / "h18_calibration.tsv", out / "h18_summary.tsv")
+    return summary

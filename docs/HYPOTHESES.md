@@ -1395,3 +1395,33 @@ the interface question is an energy on the threaded chimeric complexes, or molec
 no effective sequences for the conserved COX proteins, so complex IV's co-evolution score is close to unweighted
 noise; the library did not report the checkpoint's commit; one partner pair of complex I exceeds the model's length in
 each host and was not assessed.
+
+## H18. The cybrids by an interface energy on the chimeric complexes (H16's and H17's open item)
+
+**Question.** Counts (H16), co-evolved pairs and a language model (H17) do not find the cybrids' defects better than
+divergence. Does a physical score: is the interface between the mtDNA-encoded and the nuclear subunits weaker, by a
+force field, in the chimeric complex than in the host's own?
+**Fixed before any energy was computed.** This entry was committed with the code, before any job ran; the protocol's
+numbers are in the docstring of `mitoport/cybrid_energy.py`. One trial was made while writing the code, on one subunit
+(human COX2 with gorilla's residues, 100 iterations, one start), to see that the steps run; its number enters nothing.
+- *Models.* The host's complex as solved: human 5XTD, 5XTE, 5Z62, 8H9S; mouse 8OM1 (I), 7O3H (III), 7O37 (IV). So
+  the mouse host is scored on mouse structures, not on the human map as in H16 and H17. The system is the complex's
+  mtDNA-encoded chains and every chain that touches them, protein only. The chimera takes the donor's residue at each
+  resolved position where donor and host differ; the reference is the host's complex through the same steps.
+- *Energy.* AMBER14 with the GBn2 implicit solvent in OpenMM, on CPU. Side chains within 8 Å of a substitution are
+  free, everything else is held; three starts each for chimera and reference. `ddE` is the chimera's interaction
+  energy between the mtDNA-encoded and the other chains minus the reference's (kJ/mol; positive is a weaker
+  interface), with `ddE_sd` from the starts. `ddE_per_change` divides by the substitutions at the interface.
+- *Readouts and rule.* H16's table, points and T1 to T4, and H17's rule, unchanged: `ddE` (and separately
+  `ddE_per_change`) adds to divergence if, against `d_all`, it has a higher area in T2 by at least 0.10, a more
+  negative Spearman in T1, and names the most reduced complex in at least 5 of the 6 pairs of T3. Two of three is
+  partial and claimed as nothing.
+- *Known weaknesses, said in advance.* No cofactors: complex IV's hemes and copper, complex III's hemes and the
+  iron-sulfur clusters are removed, and they sit at or near the interfaces in question. Implicit water for membrane
+  proteins, with no membrane. An interaction energy without entropy, on a minimised structure, with a fixed backbone:
+  a substitution that would move the backbone or change assembly is not seen. Insertions, deletions and unresolved
+  residues are not modelled (counted per task). The energy's own noise is measured by the starts and may exceed the
+  differences sought. Mouse complex V is not scored.
+**Test.** `slurm/h18-energy.sbatch`, an array over the 44 (host, donor, complex) tasks on haumea's CPU nodes (no GPU),
+then `slurm/h18-energy-check.sbatch`: the collection, the readout, the tests and the breaks of each guard.
+**Result.** Not yet run.

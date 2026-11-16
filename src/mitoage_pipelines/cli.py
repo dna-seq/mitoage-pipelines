@@ -769,6 +769,46 @@ def mitoport_cybrid_readout(out: Out = paths.CYBRID_OUT) -> None:
     cybrid.readout(out)
 
 
+@mitoport_app.command("cybrid-energy-readout")
+def mitoport_cybrid_energy_readout(out: Out = paths.CYBRID_OUT) -> None:
+    """H18: H16's readouts T1 to T4 for the interface energy, beside H16's baselines."""
+    from .mitoport import cybrid
+    cybrid.readout_energy(out)
+
+
+@mitoport_app.command("cybrid-energy")
+def mitoport_cybrid_energy(
+    host: Annotated[Optional[str], typer.Option(help="host species slug (with --donor and --complex)")] = None,
+    donor: Annotated[Optional[str], typer.Option(help="donor species slug")] = None,
+    complex_: Annotated[Optional[str], typer.Option("--complex", help="I, III, IV or V")] = None,
+    task: Annotated[Optional[int], typer.Option(help="instead of the three: the 0-based index of the task, as --list prints them (for a Slurm array)")] = None,
+    list_: Annotated[bool, typer.Option("--list", help="print the tasks and stop")] = False,
+    gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+    out: Out = paths.CYBRID_OUT,
+    threads: Annotated[Optional[int], typer.Option(help="CPU threads for OpenMM (all cores when omitted)")] = None,
+) -> None:
+    """H18: the interface energy of one cybrid's chimeric complex against the host's own (OpenMM on CPU; `uv sync --group energy`)."""
+    from .mitoport import cybrid, cybrid_energy
+    tasks = cybrid_energy.triples(cybrid.read_measurements())
+    if list_:
+        for i, t in enumerate(tasks):
+            print(i, *t)
+        return
+    if task is not None:
+        host, donor, complex_ = tasks[task]
+    if not (host and donor and complex_):
+        raise SystemExit("give --task, or --host, --donor and --complex")
+    cybrid_energy.run(host, donor, complex_, gb, pdb_dir, out, threads)
+
+
+@mitoport_app.command("cybrid-energy-collect")
+def mitoport_cybrid_energy_collect(out: Out = paths.CYBRID_OUT) -> None:
+    """H18: energy_scores.tsv from the tables of the `cybrid-energy` tasks; a task without a table is said."""
+    from .mitoport import cybrid_energy
+    cybrid_energy.collect(out)
+
+
 @mitoport_app.command("partners")
 def mitoport_partners(
     cif: CifOpt = None, data: Build = paths.BUILD, work: IfaceDir = None,
