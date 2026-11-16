@@ -1652,8 +1652,9 @@ The pair counts differ from those seen while writing this entry, which used the 
 - **Fishes, where the test is strongest, lean the other way.** The size control passes, and the slope on 1/kT is
   positive, colder water with the faster rate, in both pairings. E is -0.22 eV, and its interval excludes every
   positive E above 0.04 eV: within these 74 pairs, a temperature effect of the sign metabolic theory predicts and of
-  more than a small size is not compatible with the data. (Gillooly et al. 2005's own value of E was not read here:
-  the paper's full text was not reachable from this session.)
+  more than a small size is not compatible with the data. Gillooly et al. 2005 take E = 0.65 eV from the kinetics of
+  metabolism, and their type I regressions over rates compiled across taxa without a tree averaged 0.40 eV (n = 4);
+  the interval excludes both. (Read from PMC544068 on 2026-11-16, after this entry's result was first written.)
 - Exploratory, not tests:
   - In ray-finned fishes dN per Myr follows 1/kT in the same direction, +0.095 per unit 1/kT (q = 0.0045, 74 pairs;
     E = -0.22 [-0.36, -0.08] eV), while dN/dS does not move (+0.003, p = 0.94). Colder-water fishes change their
