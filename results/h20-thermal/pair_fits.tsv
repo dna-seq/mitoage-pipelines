@@ -1,0 +1,133 @@
+class	model	pairing	n_species	n_pairs_all	n_saturated	n_pairs	response	term	status	lambda	slope	se	t	df	p	E_eV	E_low	E_high	q
+Mammalia	size	disjoint	614	307	74	232	log10_dS_per_myr	size	assessed	0.96265	-0.048636	0.034433	-1.4125	230	0.15917				0.30774
+Mammalia	size	disjoint	614	307	74	232	log10_dN_per_myr	size	assessed	0.87665	-0.0033859	0.028026	-0.12081	230	0.90395				0.90395
+Mammalia	size	disjoint	614	307	74	232	log10_dNdS	size	assessed	0.72306	0.041772	0.014633	2.8547	230	0.0047016				0.042315
+Mammalia	size	cherries	614	176	24	152	log10_dS_per_myr	size	assessed	0.46476	-0.055503	0.03004	-1.8476	150	0.06663				0.14212
+Mammalia	size	cherries	614	176	24	152	log10_dN_per_myr	size	assessed	0.64937	-0.015634	0.029353	-0.53264	150	0.59507				0.61549
+Mammalia	size	cherries	614	176	24	152	log10_dNdS	size	assessed	0.49428	0.034934	0.015609	2.238	150	0.026692				0.035589
+Mammalia	temperature	disjoint	250	125	54	71	log10_dS_per_myr	inv_kt	assessed	0.85491	-0.37825	0.22008	-1.7187	69	0.090153	0.87096	-0.13999	1.8819	0.30774
+Mammalia	temperature	disjoint	250	125	54	71	log10_dN_per_myr	inv_kt	assessed	0.81104	-0.19503	0.22393	-0.87094	69	0.38681	0.44908	-0.57956	1.4777	0.7973
+Mammalia	temperature	disjoint	250	125	54	71	log10_dNdS	inv_kt	assessed	0.86728	0.18404	0.11325	1.625	69	0.10871	-0.42378	-0.94402	0.096462	0.2446
+Mammalia	temperature	cherries	250	34	5	29	log10_dS_per_myr	inv_kt	assessed	5.9609e-06	-0.42337	0.26523	-1.5962	27	0.12208	0.97485	-0.27825	2.2279	0.16277
+Mammalia	temperature	cherries	250	34	5	29	log10_dN_per_myr	inv_kt	assessed	5.9609e-06	-0.13774	0.27106	-0.50813	27	0.61549	0.31715	-0.96349	1.5978	0.61549
+Mammalia	temperature	cherries	250	34	5	29	log10_dNdS	inv_kt	assessed	5.9609e-06	0.28563	0.094029	3.0377	27	0.0052369	-0.6577	-1.1019	-0.21346	0.016068
+Mammalia	temperature+size	disjoint	249	124	53	71	log10_dS_per_myr	inv_kt	assessed	0.81449	-0.43543	0.2166	-2.0102	68	0.048375	1.0026	0.0073634	1.9978	0.30774
+Mammalia	temperature+size	disjoint	249	124	53	71	log10_dS_per_myr	size	assessed	0.81449	-0.045703	0.033029	-1.3837	68	0.17097				0.30774
+Mammalia	temperature+size	disjoint	249	124	53	71	log10_dN_per_myr	inv_kt	assessed	0.80655	-0.20788	0.22732	-0.91447	68	0.3637	0.47865	-0.56582	1.5231	0.7973
+Mammalia	temperature+size	disjoint	249	124	53	71	log10_dN_per_myr	size	assessed	0.80655	-0.012997	0.034644	-0.37516	68	0.70871				0.7973
+Mammalia	temperature+size	disjoint	249	124	53	71	log10_dNdS	inv_kt	assessed	0.8185	0.22721	0.10957	2.0736	68	0.041903	-0.52318	-1.0266	-0.019724	0.16311
+Mammalia	temperature+size	disjoint	249	124	53	71	log10_dNdS	size	assessed	0.8185	0.032719	0.016713	1.9577	68	0.054369				0.16311
+Mammalia	temperature+size	cherries	249	33	4	29	log10_dS_per_myr	inv_kt	assessed	5.9609e-06	-0.52957	0.28137	-1.8821	26	0.071058	1.2194	-0.11235	2.5511	0.14212
+Mammalia	temperature+size	cherries	249	33	4	29	log10_dS_per_myr	size	assessed	5.9609e-06	-0.063223	0.057573	-1.0981	26	0.28221				0.28221
+Mammalia	temperature+size	cherries	249	33	4	29	log10_dN_per_myr	inv_kt	assessed	5.9609e-06	-0.23687	0.28865	-0.82059	26	0.41934	0.54541	-0.82081	1.9116	0.61549
+Mammalia	temperature+size	cherries	249	33	4	29	log10_dN_per_myr	size	assessed	5.9609e-06	-0.059016	0.059064	-0.99919	26	0.32691				0.61549
+Mammalia	temperature+size	cherries	249	33	4	29	log10_dNdS	inv_kt	assessed	5.9609e-06	0.2927	0.10196	2.8708	26	0.008034	-0.67397	-1.1565	-0.19141	0.016068
+Mammalia	temperature+size	cherries	249	33	4	29	log10_dNdS	size	assessed	5.9609e-06	0.0042066	0.020862	0.20164	26	0.84177				0.84177
+Mammalia	metabolic+size	disjoint	203	101	54	47	log10_dS_per_myr	lmr	assessed	0.99999	0.022712	0.20797	0.10921	44	0.91354				0.91354
+Mammalia	metabolic+size	disjoint	203	101	54	47	log10_dS_per_myr	size	assessed	0.99999	-0.0446	0.1556	-0.28663	44	0.77574				0.8727
+Mammalia	metabolic+size	disjoint	203	101	54	47	log10_dN_per_myr	lmr	assessed	0.97508	0.09764	0.22184	0.44013	44	0.662				0.7973
+Mammalia	metabolic+size	disjoint	203	101	54	47	log10_dN_per_myr	size	assessed	0.97508	-0.072181	0.16387	-0.44047	44	0.66175				0.7973
+Mammalia	metabolic+size	disjoint	203	101	54	47	log10_dNdS	lmr	assessed	0.82167	-0.072656	0.12347	-0.58843	44	0.55925				0.62916
+Mammalia	metabolic+size	disjoint	203	101	54	47	log10_dNdS	size	assessed	0.82167	0.070705	0.090351	0.78255	44	0.43808				0.57662
+Mammalia	metabolic+size	cherries	203	24	5	19	log10_dS_per_myr	lmr	not assessed: 19 pairs, fewer than 20										
+Mammalia	metabolic+size	cherries	203	24	5	19	log10_dS_per_myr	size	not assessed: 19 pairs, fewer than 20										
+Mammalia	metabolic+size	cherries	203	24	5	19	log10_dN_per_myr	lmr	not assessed: 19 pairs, fewer than 20										
+Mammalia	metabolic+size	cherries	203	24	5	19	log10_dN_per_myr	size	not assessed: 19 pairs, fewer than 20										
+Mammalia	metabolic+size	cherries	203	24	5	19	log10_dNdS	lmr	not assessed: 19 pairs, fewer than 20										
+Mammalia	metabolic+size	cherries	203	24	5	19	log10_dNdS	size	not assessed: 19 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dS_per_myr	inv_kt	assessed	0.9994	-0.50132	0.30577	-1.6395	40	0.10895	1.1543	-0.26864	2.5773	0.30774
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dS_per_myr	lmr	assessed	0.9994	-0.19226	0.26509	-0.72526	40	0.47251				0.70877
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dS_per_myr	size	assessed	0.9994	0.11543	0.20388	0.56618	40	0.57444				0.73856
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dN_per_myr	inv_kt	assessed	0.97488	-0.4905	0.29198	-1.6799	40	0.10076	1.1294	-0.22935	2.4882	0.7973
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dN_per_myr	lmr	assessed	0.97488	-0.21501	0.27619	-0.77851	40	0.44085				0.7973
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dN_per_myr	size	assessed	0.97488	0.15322	0.20836	0.7354	40	0.46639				0.7973
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dNdS	inv_kt	assessed	0.86308	0.0088164	0.14123	0.062425	40	0.95054	-0.020301	-0.67755	0.63695	0.95054
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dNdS	lmr	assessed	0.86308	-0.11559	0.15101	-0.76548	40	0.44848				0.57662
+Mammalia	temperature+metabolic+size	disjoint	185	92	48	44	log10_dNdS	size	assessed	0.86308	0.10283	0.11063	0.92945	40	0.35823				0.57662
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dS_per_myr	inv_kt	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dS_per_myr	lmr	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dS_per_myr	size	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dN_per_myr	inv_kt	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dN_per_myr	lmr	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dN_per_myr	size	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dNdS	inv_kt	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dNdS	lmr	not assessed: 14 pairs, fewer than 20										
+Mammalia	temperature+metabolic+size	cherries	185	18	4	14	log10_dNdS	size	not assessed: 14 pairs, fewer than 20										
+Aves	size	disjoint	395	197	11	185	log10_dS_per_myr	size	assessed	0.77448	-0.049991	0.03695	-1.3529	183	0.17775				0.53325
+Aves	size	disjoint	395	197	11	185	log10_dN_per_myr	size	assessed	0.78024	-0.033119	0.040099	-0.82593	183	0.40992				0.49301
+Aves	size	disjoint	395	197	11	185	log10_dNdS	size	assessed	0.65841	0.016999	0.026349	0.64515	183	0.51964				0.51964
+Aves	size	cherries	395	112	2	109	log10_dS_per_myr	size	assessed	0.85274	-0.099205	0.044309	-2.2389	107	0.02723				0.02723
+Aves	size	cherries	395	112	2	109	log10_dN_per_myr	size	assessed	0.82864	-0.062722	0.05313	-1.1805	107	0.24041				0.24041
+Aves	size	cherries	395	112	2	109	log10_dNdS	size	assessed	0.58257	0.031905	0.029832	1.0695	107	0.28726				0.28726
+Aves	metabolic+size	disjoint	74	37	4	33	log10_dS_per_myr	lmr	assessed	0.87141	0.17056	0.38908	0.43838	30	0.66425				0.66425
+Aves	metabolic+size	disjoint	74	37	4	33	log10_dS_per_myr	size	assessed	0.87141	-0.15244	0.27347	-0.55745	30	0.58136				0.66425
+Aves	metabolic+size	disjoint	74	37	4	33	log10_dN_per_myr	lmr	assessed	5.9609e-06	-0.39204	0.33871	-1.1575	30	0.25621				0.49301
+Aves	metabolic+size	disjoint	74	37	4	33	log10_dN_per_myr	size	assessed	5.9609e-06	0.14907	0.21479	0.69401	30	0.49301				0.49301
+Aves	metabolic+size	disjoint	74	37	4	33	log10_dNdS	lmr	assessed	6.4368e-06	-1.0063	0.43601	-2.3079	30	0.028083				0.042124
+Aves	metabolic+size	disjoint	74	37	4	33	log10_dNdS	size	assessed	6.4368e-06	0.69956	0.2765	2.5301	30	0.016889				0.042124
+Aves	metabolic+size	cherries	74	10	0	10	log10_dS_per_myr	lmr	not assessed: 10 pairs, fewer than 20										
+Aves	metabolic+size	cherries	74	10	0	10	log10_dS_per_myr	size	not assessed: 10 pairs, fewer than 20										
+Aves	metabolic+size	cherries	74	10	0	10	log10_dN_per_myr	lmr	not assessed: 10 pairs, fewer than 20										
+Aves	metabolic+size	cherries	74	10	0	10	log10_dN_per_myr	size	not assessed: 10 pairs, fewer than 20										
+Aves	metabolic+size	cherries	74	10	0	10	log10_dNdS	lmr	not assessed: 10 pairs, fewer than 20										
+Aves	metabolic+size	cherries	74	10	0	10	log10_dNdS	size	not assessed: 10 pairs, fewer than 20										
+Actinopterygii	size	disjoint	876	438	138	288	log10_dS_per_myr	size	assessed	0.50811	-0.14761	0.069979	-2.1093	286	0.035785				0.10735
+Actinopterygii	size	disjoint	876	438	138	288	log10_dN_per_myr	size	assessed	0.40626	-0.17858	0.069116	-2.5837	286	0.01027				0.015405
+Actinopterygii	size	disjoint	876	438	138	288	log10_dNdS	size	assessed	0.50506	-0.020725	0.046843	-0.44244	286	0.65851				0.96014
+Actinopterygii	size	cherries	876	262	59	198	log10_dS_per_myr	size	assessed	0.22008	-0.12195	0.079905	-1.5262	196	0.12857				0.30089
+Actinopterygii	size	cherries	876	262	59	198	log10_dN_per_myr	size	assessed	0.14482	-0.17821	0.076471	-2.3304	196	0.020803				0.031204
+Actinopterygii	size	cherries	876	262	59	198	log10_dNdS	size	assessed	0.32833	-0.035659	0.055165	-0.6464	196	0.51878				0.87123
+Actinopterygii	temperature	disjoint	254	127	47	74	log10_dS_per_myr	inv_kt	assessed	0.96317	0.09611	0.057543	1.6702	72	0.099215	-0.2213	-0.48543	0.042827	0.15187
+Actinopterygii	temperature	disjoint	254	127	47	74	log10_dN_per_myr	inv_kt	assessed	0.26196	0.097359	0.029979	3.2476	72	0.0017691	-0.22418	-0.36179	-0.08657	0.0044946
+Actinopterygii	temperature	disjoint	254	127	47	74	log10_dNdS	inv_kt	assessed	0.86765	0.0022382	0.044627	0.050154	72	0.96014	-0.0051537	-0.21	0.19969	0.96014
+Actinopterygii	temperature	cherries	254	52	12	40	log10_dS_per_myr	inv_kt	assessed	5.9609e-06	0.029834	0.02625	1.1365	38	0.26285	-0.068696	-0.19106	0.053666	0.3349
+Actinopterygii	temperature	cherries	254	52	12	40	log10_dN_per_myr	inv_kt	assessed	3.6794e-06	0.086758	0.035367	2.4531	38	0.018865	-0.19977	-0.36463	-0.03491	0.031204
+Actinopterygii	temperature	cherries	254	52	12	40	log10_dNdS	inv_kt	assessed	0.49646	0.050646	0.036069	1.4041	38	0.1684	-0.11662	-0.28475	0.051514	0.5052
+Actinopterygii	temperature+size	disjoint	253	126	46	74	log10_dS_per_myr	inv_kt	assessed	0.96303	0.096187	0.05793	1.6604	71	0.10125	-0.22148	-0.48745	0.044493	0.15187
+Actinopterygii	temperature+size	disjoint	253	126	46	74	log10_dS_per_myr	size	assessed	0.96303	-0.018866	0.15703	-0.12014	71	0.90471				0.90471
+Actinopterygii	temperature+size	disjoint	253	126	46	74	log10_dN_per_myr	inv_kt	assessed	0.2226	0.094976	0.029957	3.1704	71	0.0022473	-0.21869	-0.35623	-0.081153	0.0044946
+Actinopterygii	temperature+size	disjoint	253	126	46	74	log10_dN_per_myr	size	assessed	0.2226	-0.055991	0.12965	-0.43186	71	0.66715				0.66924
+Actinopterygii	temperature+size	disjoint	253	126	46	74	log10_dNdS	inv_kt	assessed	0.8794	0.0031631	0.04544	0.069611	71	0.9447	-0.0072833	-0.21591	0.20134	0.96014
+Actinopterygii	temperature+size	disjoint	253	126	46	74	log10_dNdS	size	assessed	0.8794	0.071649	0.14277	0.50184	71	0.61733				0.96014
+Actinopterygii	temperature+size	cherries	253	52	12	40	log10_dS_per_myr	inv_kt	assessed	5.9609e-06	0.029017	0.026416	1.0985	37	0.27909	-0.066815	-0.19006	0.056427	0.3349
+Actinopterygii	temperature+size	cherries	253	52	12	40	log10_dS_per_myr	size	assessed	5.9609e-06	-0.097392	0.12716	-0.76592	37	0.44858				0.44858
+Actinopterygii	temperature+size	cherries	253	52	12	40	log10_dN_per_myr	inv_kt	assessed	4.6782e-06	0.084889	0.035054	2.4217	37	0.020468	-0.19546	-0.35901	-0.031921	0.031204
+Actinopterygii	temperature+size	cherries	253	52	12	40	log10_dN_per_myr	size	assessed	4.6782e-06	-0.22297	0.16874	-1.3214	37	0.19448				0.19465
+Actinopterygii	temperature+size	cherries	253	52	12	40	log10_dNdS	inv_kt	assessed	0.46772	0.051184	0.036319	1.4093	37	0.1671	-0.11786	-0.2873	0.051591	0.5052
+Actinopterygii	temperature+size	cherries	253	52	12	40	log10_dNdS	size	assessed	0.46772	-0.02689	0.16474	-0.16323	37	0.87123				0.87123
+Actinopterygii	temperature_range+size	disjoint	273	136	54	77	log10_dS_per_myr	inv_kt_range	assessed	0.54789	0.047443	0.047156	1.0061	74	0.31765	-0.10924	-0.32559	0.10711	0.38118
+Actinopterygii	temperature_range+size	disjoint	273	136	54	77	log10_dS_per_myr	size	assessed	0.54789	-0.17927	0.081769	-2.1924	74	0.031493				0.10735
+Actinopterygii	temperature_range+size	disjoint	273	136	54	77	log10_dN_per_myr	inv_kt_range	assessed	0.46268	0.018086	0.042168	0.4289	74	0.66924	-0.041645	-0.23511	0.15182	0.66924
+Actinopterygii	temperature_range+size	disjoint	273	136	54	77	log10_dN_per_myr	size	assessed	0.46268	-0.29898	0.073034	-4.0938	74	0.00010715				0.00064288
+Actinopterygii	temperature_range+size	disjoint	273	136	54	77	log10_dNdS	inv_kt_range	assessed	0.4856	-0.029772	0.036916	-0.8065	74	0.42254	0.068554	-0.10082	0.23792	0.96014
+Actinopterygii	temperature_range+size	disjoint	273	136	54	77	log10_dNdS	size	assessed	0.4856	-0.10774	0.063957	-1.6846	74	0.096279				0.57767
+Actinopterygii	temperature_range+size	cherries	273	42	7	35	log10_dS_per_myr	inv_kt_range	assessed	5.9609e-06	0.12147	0.082449	1.4733	32	0.15045	-0.27969	-0.6664	0.10701	0.30089
+Actinopterygii	temperature_range+size	cherries	273	42	7	35	log10_dS_per_myr	size	assessed	5.9609e-06	-0.41475	0.10834	-3.8282	32	0.00056606				0.0033964
+Actinopterygii	temperature_range+size	cherries	273	42	7	35	log10_dN_per_myr	inv_kt_range	assessed	5.9609e-06	0.087262	0.065872	1.3247	32	0.19465	-0.20093	-0.50988	0.10802	0.19465
+Actinopterygii	temperature_range+size	cherries	273	42	7	35	log10_dN_per_myr	size	assessed	5.9609e-06	-0.42975	0.086558	-4.9648	32	2.2009e-05				0.00013206
+Actinopterygii	temperature_range+size	cherries	273	42	7	35	log10_dNdS	inv_kt_range	assessed	5.9609e-06	-0.034208	0.066378	-0.51535	32	0.60985	0.078767	-0.23256	0.39009	0.87123
+Actinopterygii	temperature_range+size	cherries	273	42	7	35	log10_dNdS	size	assessed	5.9609e-06	-0.014994	0.087223	-0.1719	32	0.8646				0.87123
+Chondrichthyes	size	disjoint	86	43	6	37	log10_dS_per_myr	size	assessed	0.41202	0.32255	0.28249	1.1418	35	0.26128				0.26128
+Chondrichthyes	size	disjoint	86	43	6	37	log10_dN_per_myr	size	assessed	0.54777	0.36025	0.28256	1.275	35	0.21073				0.21073
+Chondrichthyes	size	disjoint	86	43	6	37	log10_dNdS	size	assessed	5.9609e-06	-0.14609	0.08568	-1.7051	35	0.097037				0.097037
+Chondrichthyes	size	cherries	86	27	0	27	log10_dS_per_myr	size	assessed	0.30145	0.28579	0.34051	0.83931	25	0.40925				0.40925
+Chondrichthyes	size	cherries	86	27	0	27	log10_dN_per_myr	size	assessed	0.49407	0.26029	0.34168	0.7618	25	0.4533				0.4533
+Chondrichthyes	size	cherries	86	27	0	27	log10_dNdS	size	assessed	4.6629e-06	-0.22625	0.098072	-2.307	25	0.029622				0.029622
+Chondrichthyes	temperature	disjoint	40	20	3	17	log10_dS_per_myr	inv_kt	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature	disjoint	40	20	3	17	log10_dN_per_myr	inv_kt	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature	disjoint	40	20	3	17	log10_dNdS	inv_kt	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature	cherries	40	7	0	7	log10_dS_per_myr	inv_kt	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature	cherries	40	7	0	7	log10_dN_per_myr	inv_kt	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature	cherries	40	7	0	7	log10_dNdS	inv_kt	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature+size	disjoint	40	20	3	17	log10_dS_per_myr	inv_kt	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature+size	disjoint	40	20	3	17	log10_dS_per_myr	size	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature+size	disjoint	40	20	3	17	log10_dN_per_myr	inv_kt	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature+size	disjoint	40	20	3	17	log10_dN_per_myr	size	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature+size	disjoint	40	20	3	17	log10_dNdS	inv_kt	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature+size	disjoint	40	20	3	17	log10_dNdS	size	not assessed: 17 pairs, fewer than 20										
+Chondrichthyes	temperature+size	cherries	40	7	0	7	log10_dS_per_myr	inv_kt	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature+size	cherries	40	7	0	7	log10_dS_per_myr	size	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature+size	cherries	40	7	0	7	log10_dN_per_myr	inv_kt	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature+size	cherries	40	7	0	7	log10_dN_per_myr	size	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature+size	cherries	40	7	0	7	log10_dNdS	inv_kt	not assessed: 7 pairs, fewer than 20										
+Chondrichthyes	temperature+size	cherries	40	7	0	7	log10_dNdS	size	not assessed: 7 pairs, fewer than 20										

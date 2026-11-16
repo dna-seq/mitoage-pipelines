@@ -1,0 +1,10 @@
+test	kind	class	model	term	predicted_sign	status	n_pairs	lambda	slope	se	p	cherries_status	cherries_n_pairs	cherries_slope	cherries_p	E_eV	E_low	E_high	p_holm	reading	n_species	ols_r2
+P1	control	Mammalia	size	size	-1	assessed	232	0.96265	-0.048636	0.034433	0.15917	assessed	152	-0.055503	0.06663				0.15917	not detected		
+P2	control	Actinopterygii	size	size	-1	assessed	288	0.50811	-0.14761	0.069979	0.035785	assessed	198	-0.12195	0.12857				0.035785	as predicted		
+T1	primary	Actinopterygii	temperature+size	inv_kt	-1	assessed	74	0.96303	0.096187	0.05793	0.10125	assessed	40	0.029017	0.27909	-0.22148	-0.48745	0.044493	0.30374	not detected		
+T2	primary	Chondrichthyes	temperature+size	inv_kt	-1	not assessed: 17 pairs, fewer than 20						not assessed: 7 pairs, fewer than 20								not assessed		
+T3	primary	Mammalia	temperature+size	inv_kt	-1	assessed	71	0.81449	-0.43543	0.2166	0.048375	assessed	29	-0.52957	0.071058	1.0026	0.0073634	1.9978	0.1935	not read: the size control of this class did not pass		
+M1	primary	Mammalia	metabolic+size	lmr	1	assessed	47	0.99999	0.022712	0.20797	0.91354	not assessed: 19 pairs, fewer than 20							1	not read: the size control of this class did not pass		
+M2	primary	Aves	metabolic+size	lmr	1	assessed	33	0.87141	0.17056	0.38908	0.66425	not assessed: 10 pairs, fewer than 20							1	not detected		
+L1	retest	Mammalia	gc+metabolic	gc_percent:total_mtDNA	1	assessed		0.96642	0.018335	0.0067548	0.0072263								0.0072263	as published	201	0.48794
+L2	retest	Mammalia	gc+metabolic+mass+temperature	gc_percent:total_mtDNA	1	assessed		0.94684	0.017209	0.0064523	0.0083567								0.0083567	as published	183	0.57613

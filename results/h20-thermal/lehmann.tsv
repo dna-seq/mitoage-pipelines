@@ -1,0 +1,11 @@
+model	n	status	term	ols_r2	ols_slope	lambda	slope	se	t	p
+gc	607	assessed	gc_percent:total_mtDNA	0.22031	0.064544	0.98208	0.0262	0.0052566	4.9841	8.138e-07
+gc+metabolic	201	assessed	gc_percent:total_mtDNA	0.48794	0.045709	0.96642	0.018335	0.0067548	2.7144	0.0072263
+gc+metabolic	201	assessed	lmr	0.48794	0.18352	0.96642	0.15758	0.021607	7.2931	7.1127e-12
+gc+metabolic+mass	201	assessed	gc_percent:total_mtDNA	0.56821	0.043304	0.9553	0.017518	0.0065111	2.6904	0.0077494
+gc+metabolic+mass	201	assessed	lmr	0.56821	-0.25633	0.9553	-0.021075	0.055016	-0.38308	0.70208
+gc+metabolic+mass	201	assessed	size	0.56821	0.32863	0.9553	0.14663	0.041737	3.5132	0.00054904
+gc+metabolic+mass+temperature	183	assessed	gc_percent:total_mtDNA	0.57613	0.048383	0.94684	0.017209	0.0064523	2.6671	0.0083567
+gc+metabolic+mass+temperature	183	assessed	lmr	0.57613	-0.067996	0.94684	0.0039403	0.069971	0.056314	0.95516
+gc+metabolic+mass+temperature	183	assessed	size	0.57613	0.20008	0.94684	0.12457	0.051937	2.3985	0.017496
+gc+metabolic+mass+temperature	183	assessed	inv_kt	0.57613	0.30165	0.94684	0.33946	0.076714	4.425	1.6768e-05

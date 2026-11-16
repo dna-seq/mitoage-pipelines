@@ -1628,7 +1628,59 @@ definitions are in its docstring).
 **Test.** `slurm/h20-thermal.sbatch` on haumea: the tests and the breaks of each guard first
 (`slurm/h20-thermal-mutations.py`), `longevity thermal`, and a second run to check that the tables come out the
 same bytes.
-**Result.** Not yet run.
+**Run.** Slurm job 6494078 on haumea from 78f8734, build 0f4e970 (species.parquet 267a16311cca), the site's tree at
+03c0949, FishBase v26.06 (all three tables at their pinned md5). The 21 tests pass, all 18 breaks of the guards are
+caught, and a second run gives the same bytes for every table. Tables and the log are in `results/h20-thermal/`.
+The pair counts differ from those seen while writing this entry, which used the laptop's older copy of the tree.
+**Result.** log10 dS per Myr, pairs with no shared branch; the plain cherries beside:
+
+| Test | Class | Pairs | Slope | p | Holm p | E, eV [95%] | Cherries: pairs, slope, p | Reading |
+|---|---|--:|--:|--:|--:|---|---|---|
+| P1 | mammals, size | 232 | -0.049 | 0.16 | | | 152, -0.056, 0.067 | control not passed |
+| P2 | ray-finned fishes, size | 288 | -0.148 | 0.036 | | | 198, -0.122, 0.13 | control passed |
+| T1 | ray-finned fishes, 1/kT with size | 74 | +0.096 | 0.10 | 0.30 | -0.22 [-0.49, +0.04] | 40, +0.029, 0.28 | not detected |
+| T2 | cartilaginous fishes | 17 | | | | | 7 | not assessed |
+| T3 | mammals, 1/kT with size | 71 | -0.435 | 0.048 | 0.19 | +1.00 [+0.01, +2.00] | 29, -0.53, 0.071 | not read (P1) |
+| M1 | mammals, metabolic rate with mass | 47 | +0.023 | 0.91 | 1 | | 19, not assessed | not read (P1) |
+| M2 | birds, metabolic rate with mass | 33 | +0.171 | 0.66 | 1 | | 10, not assessed | not detected |
+| L1 | mammals, GC with metabolic rate (201 species) | | +0.018 per % GC | 0.0072 | | | | as published |
+| L2 | mammals, GC with metabolic rate, mass, 1/kT (183) | | +0.017 per % GC | 0.0084 | | | | as published |
+
+- **No primary test passes.** In mammals the size control did not pass (the mtDNA rate falls with mass, -0.049, but
+  p = 0.16 on 232 pairs), so the mammalian temperature and metabolic-rate tests are not read; T3's nominal p = 0.048
+  would not pass Holm either (0.19).
+- **Fishes, where the test is strongest, lean the other way.** The size control passes, and the slope on 1/kT is
+  positive, colder water with the faster rate, in both pairings. E is -0.22 eV, and its interval excludes every
+  positive E above 0.04 eV: within these 74 pairs, a temperature effect of the sign metabolic theory predicts and of
+  more than a small size is not compatible with the data. (Gillooly et al. 2005's own value of E was not read here:
+  the paper's full text was not reachable from this session.)
+- Exploratory, not tests:
+  - In ray-finned fishes dN per Myr follows 1/kT in the same direction, +0.095 per unit 1/kT (q = 0.0045, 74 pairs;
+    E = -0.22 [-0.36, -0.08] eV), while dN/dS does not move (+0.003, p = 0.94). Colder-water fishes change their
+    mitochondrial proteins faster per million years, in proportion to their synonymous rate. Size is in the model;
+    depth, generation time and the pair ages are not, and FishBase's temperatures are modelled from occurrences.
+  - dN per Myr falls with fish length (-0.18, q = 0.015, 288 pairs), and with the temperature range's midpoint in
+    the model more steeply (-0.30, q = 0.0006).
+  - dN/dS rises with body mass in mammals (+0.042, q = 0.042, 232 pairs), the nearly-neutral expectation, which H3
+    used as its positive control.
+  - Birds: dN/dS falls with mass-specific metabolic rate (-1.0, q = 0.042) on 33 pairs; too few to read.
+  - Composition: no feature follows 1/kT at q < 0.05 in mammals (250 species) or ray-finned fishes (255); 6 of 43
+    do in cartilaginous fishes (40 species, unreplicated). Metabolic rate follows none in mammals or birds. Lifespan
+    with mass follows 11 features in mammals (614 species) and keeps 8 with body temperature and metabolic rate in
+    the model (185): the composition signal of H11 is not carried by either.
+- **Lehmann et al. reproduces in direction, not in size.** On the tree, GC content keeps a positive slope on lifespan
+  with metabolic rate in the model (L1) and with mass and body temperature added (L2). The OLS R^2 of their model is
+  0.49 on 201 species, not 0.77 on 140. Their metabolic rate is a stand-in for mass: with log10 mass in the model its
+  slope is -0.02 (p = 0.70), while mass gives +0.15 (p = 0.0005). Body temperature, not a test here, carries
+  lifespan beyond mass and metabolic rate on the tree: +0.34 per unit 1/kT (p = 1.7 x 10^-5, 183 species), cooler
+  mammals living longer.
+
+**Reading.** Metabolic theory's prediction for the mitochondrial clock is not supported in these data. In ray-finned
+fishes, the class with the widest temperature range and a passing size control, the rate does not rise with water
+temperature; dN per Myr rises in colder water, which is exploratory and opposite to the prediction. The mammalian
+tests cannot be read, because the known size effect did not show on these pairs. Lehmann et al.'s association of
+mtDNA GC with lifespan survives the tree and body temperature, at a smaller share of the variance, and their
+metabolic rate adds nothing once mass is in the model.
 
 ## H21. Diadromous fishes: the mitochondrial genes, and their nuclear partners, on the branches where diadromy arose
 
