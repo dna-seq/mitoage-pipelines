@@ -146,3 +146,79 @@ def test_ambiguous_when_one_name_reaches_two_species(bats, build_mammals):
     m = hib.match(pd.concat([sp, row], ignore_index=True), bats, NAMES).set_index("slug")
     for s in (syn.slug, syn.slug + "-copy"):
         assert pd.isna(m.at[s, "state"]) and m.at[s, "how"].startswith("ambiguous")
+
+
+MAMMALS = paths.HIBERNATION / hib.MAMMALS_FILE
+need_mammals = pytest.mark.skipif(not MAMMALS.is_file(), reason="needs the Dryad file saved by hand, then `download hibernation`")
+
+
+@pytest.fixture(scope="module")
+def mammals():
+    return hib.read_mammals(MAMMALS)
+
+
+@need_mammals
+def test_mammals_every_row_read(mammals):
+    import zipfile
+    # the paper's abstract: brain size estimates of 1,104 mammalian species; the workbook's own filter range is
+    # A1:P1105 (a header and 1,104 rows), read from workbook.xml, not from the sheet the reader parses
+    wb = zipfile.ZipFile(MAMMALS).read("xl/workbook.xml").decode()
+    assert "$A$1:$P$1105" in wb
+    assert len(mammals) == 1104
+    assert mammals.hibernation.isin([0, 1]).all() and mammals.name.is_unique
+    assert set(mammals.hibernation[mammals.group.eq("Chiroptera")]) <= {0, 1}
+
+
+@need_mammals
+@pytest.mark.parametrize("change", ["value", "duplicate", "empty"])
+def test_mammals_refused(monkeypatch, change):
+    rows = hib.xlsx_rows(MAMMALS)
+    i_hib, i_name = rows[0].index("hibernation"), rows[0].index("Genus species")
+    rows = [list(r) for r in rows]
+    if change == "value":
+        rows[1][i_hib] = "2"
+    elif change == "duplicate":
+        rows.append(list(rows[1]))
+    else:
+        rows[1][i_name] = "  "
+    monkeypatch.setattr(hib, "xlsx_rows", lambda path, sheet="": rows)
+    with pytest.raises(hib.Refused):
+        hib.read_mammals(MAMMALS)
+
+
+@need_mammals
+@need_all
+def test_combine(mammals, bats, build_mammals):
+    c = hib.combine(build_mammals, mammals, bats, NAMES).set_index("slug")
+    m, b = c.mammals, c.bats
+    both = m.notna() & b.notna()
+    assert (c.state[both & m.eq(b)] == m[both & m.eq(b)]).all()
+    assert c.state[both & m.ne(b)].isna().all() and (c.how[both & m.ne(b)] == "sources disagree").all()
+    only_m, only_b = m.notna() & b.isna(), m.isna() & b.notna()
+    assert (c.state[only_m] == m[only_m]).all() and (c.state[only_b] == b[only_b]).all()
+    assert c.state[m.isna() & b.isna()].isna().all()
+    assert c.state.notna().sum() == (only_m | only_b | (both & m.eq(b))).sum()
+
+
+@need_mammals
+def test_xlsx_cells_land_in_their_columns():
+    """The workbook's filter range is A1:P1105, so the header fills exactly columns A to P (16), starting at A."""
+    rows = hib.xlsx_rows(MAMMALS)
+    assert len(rows) == 1105 and len(rows[0]) == 16 and rows[0][0] == "Group" and rows[0][15].startswith("Ref.")
+
+
+@need_mammals
+@need_all
+def test_combine_disagreement_is_unknown(mammals, bats, build_mammals):
+    """A bat known to both sources, with the bat table's state flipped, becomes unknown."""
+    c = hib.combine(build_mammals, mammals, bats, NAMES).set_index("slug")
+    both = c.index[c.mammals.notna() & c.bats.notna()]
+    if not len(both):
+        pytest.skip("no species is known to both sources")
+    slug = both[0]
+    sci = build_mammals.set_index("slug").at[slug, "scientific_name"]
+    m = hib.match(build_mammals[build_mammals.slug.eq(slug)], bats, NAMES).iloc[0]
+    name = sci if m.how == "exact name" else m.table_name
+    flipped = bats.assign(hibernation=lambda t: t.hibernation.where(t.name.ne(name), 1 - t.hibernation))
+    c2 = hib.combine(build_mammals, mammals, flipped, NAMES).set_index("slug")
+    assert pd.isna(c2.at[slug, "state"]) and c2.at[slug, "how"] == "sources disagree"

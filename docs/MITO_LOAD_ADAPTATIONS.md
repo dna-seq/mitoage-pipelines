@@ -28,8 +28,7 @@ whose record or classification is wrong.
 need the nuclear subunits, and those exist for 177 mammals, 78 birds and 61 ray-finned fishes (complex IV's vertebrate
 set of H12). H19's vertebrate alignments, once run, will hold a median of about 120 ray-finned fishes per gene. Only
 four candidates put more than 8 trait-bearing species into the partner set: marine mammals (26), diadromous fishes
-(22), bats (13) and, probably, hibernating mammals (to be counted with the mammal-wide source below; 6 hibernating bats
-are in the set). Every other candidate can be tested on
+(22), hibernating mammals (20) and bats (13). Every other candidate can be tested on
 the mitochondrial genes only: dN/dS, RELAX, aBSREL, substitution rate, composition.
 
 **Unknown is not no.** FishBase leaves migration (`AnaCat`) empty for 403 of 893 ray-finned fishes and depth for 322.
@@ -39,8 +38,8 @@ Its air-breathing field defaults to `WaterAssumed`, which means no record exists
 ## The tally
 
 From `docs/analyses/mito-load/` (inputs, rules and columns in its README). Every rule is an explicit taxonomic rule
-or a FishBase v26.06 field, except bat hibernation, read from the pinned table of Wilkinson & Adams 2019. Traits that
-need a source we do not hold yet are not tallied: hibernation beyond bats, high altitude,
+or a FishBase v26.06 field, except hibernation, read from the pinned tables of Heldstab et al. 2018 and Wilkinson &
+Adams 2019. Traits that need a source we do not hold yet are not tallied: high altitude,
 migration and diving in birds.
 
 | Candidate (rule) | Scope | Yes | No | Unknown | Families | Clades | Changes | Yes with partners |
@@ -60,6 +59,7 @@ migration and diving in birds.
 | Shark regional endothermy: Lamnidae, Alopiidae | 87 cartilaginous | 7 | 80 | 0 | 2 | 3 | 3 | 0 |
 | Electric discharge: FishBase `Electrogenic` (19 of the 23 are skates) | 980 fishes | 23 | 957 | 0 | 6 | 14 | 9 | 0 |
 | Bat hibernation: Wilkinson & Adams 2019, within Chiroptera | 44 bats | 17 | 27 | 0 | 3 | 7 | 4 | 6 |
+| Mammal hibernation: Heldstab et al. 2018, with Wilkinson & Adams 2019 for bats | 625 mammals | 41 | 394 | 190 | 16 | 25 | 20 | 20 |
 
 ## The candidates, ranked
 
@@ -116,9 +116,11 @@ migration and diving in birds.
    (1,104 mammals; Dryad, CC0), downloaded by hand once and accepted only with the md5 of Dryad's file listing; and for
    bats the trait table of Wilkinson & Adams 2019 (DRUM, SHA-256 pinned), `Hibernation` Yes or No. Both are fetched or
    checked by `download hibernation`. A species in neither is unknown; disagreement is unknown.
-3. *Counts.* Bats: all 44 matched (42 by name, 2 by NCBI synonym), 17 hibernate, 27 do not, 6 hibernators with
-   partners. Mammals beyond bats: not counted until the Dryad file is placed.
-4. *Origins.* Bats: 4 changes, 7 trait clades (the hibernating Vespertilionidae with one tropical *Myotis* that does
+3. *Counts.* All mammals: 41 hibernate, 394 do not, 190 unknown (absent from both sources: cetaceans, sirenians and
+   others missing from a brain-size dataset); 20 hibernators with partners. Bats: all 44 matched (42 by name, 2 by NCBI
+   synonym), 17 hibernate, 27 do not; the 19 bats both sources code agree.
+4. *Origins.* All mammals: 20 changes, 25 trait clades in 16 families, so H24's pairs and H23's coevolution side can
+   be assessed. Bats: 4 changes, 7 trait clades (the hibernating Vespertilionidae with one tropical *Myotis* that does
    not hibernate, *Rhinolophus*, *Mystacina*). Torpor is widespread across mammals, so origins and losses will be
    hard to tell apart.
 5. *Signal and tool.* Two-sided RELAX and paired ω; on the coevolution side, the joint mitochondrial and nuclear rate
@@ -209,10 +211,11 @@ They share one design, defined in full in `docs/HYPOTHESES.md`:
 ## Sources to add, the maintainer's call
 
 - **Hibernation** (H23-H25): approved by the maintainer on 2026-11-16 ("Yes, write both", to writing H24 and H25 and
-  pinning both hibernation tables). The bat table of Wilkinson & Adams 2019 is pinned and fetched. The mammal table of
-  Heldstab et al. 2018 waits for one download by hand: "Supplementary material.xlsx" from
-  https://datadryad.org/dataset/doi:10.5061/dryad.753d06g, saved as
-  `data/input/hibernation/heldstab_2018_supplementary_material.xlsx`. Ruf & Geiser 2015 could not be fetched (above).
+  pinning both hibernation tables). The bat table of Wilkinson & Adams 2019 is fetched and SHA-256 checked. The mammal
+  table of Heldstab et al. 2018 sits behind Dryad's bot check, so it is downloaded by hand ("Supplementary
+  material.xlsx" from https://datadryad.org/dataset/doi:10.5061/dryad.753d06g, saved as
+  `data/input/hibernation/heldstab_2018_supplementary_material.xlsx`) and accepted only with Dryad's md5; the
+  maintainer saved it on 2026-11-16. Ruf & Geiser 2015 could not be fetched (above).
 - AVONET (bird migration, hand-wing index); EltonTraits 1.0 (diving in birds and mammals); COMBINE (mammal traits;
   whether it carries a hibernation field was not confirmed). None is needed by H21-H23.
 

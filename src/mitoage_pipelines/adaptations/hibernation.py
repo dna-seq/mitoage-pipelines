@@ -7,8 +7,8 @@
 - Mammals: the supplementary table of Heldstab et al. 2018 ("Hibernation constrains brain size evolution in
   mammals", J Evol Biol, doi:10.1111/jeb.13353), Dryad doi:10.5061/dryad.753d06g, CC0. Dryad serves files only to
   a browser or a token holder, so the file is downloaded by hand from the dataset page and placed at
-  `MAMMALS_FILE`; `fetch` accepts it only with the md5 Dryad's own file listing gives. Its reader is written when
-  the file is first read, before any lifespan or mtDNA statistic is computed on it (H24).
+  `MAMMALS_FILE`; `fetch` accepts it only with the md5 Dryad's own file listing gives. One sheet, "Appendix S1",
+  1,104 species; only `Genus species` and `hibernation` (1 or 0) are read. It carries no lifespan.
 
 Matching to the build: a table name equal to the build's scientific name; otherwise a name that NCBI's taxonomy
 (names.dmp, any name class) gives to the build species' own taxid. A build species reached by two table rows with
@@ -16,6 +16,9 @@ different states, or a table name reaching two build species, is "ambiguous" and
 not in the table is unknown, never "does not hibernate".
 """
 import hashlib
+import re
+import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import pandas as pd
@@ -67,6 +70,86 @@ def read_bats(path: Path) -> pd.DataFrame:
     if dup:
         raise Refused(f"{path.name}: names given twice: {', '.join(sorted(set(dup)))}")
     return t
+
+
+XLSX_NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+
+
+def xlsx_rows(path: Path, sheet: str = "xl/worksheets/sheet1.xml") -> list[list[str]]:
+    """The cells of one sheet as text, rows in order, each row as wide as its last filled cell; an empty cell is "".
+    Shared and inline strings are resolved; numbers are kept as the file writes them. (No spreadsheet package is a
+    dependency of this repository, and this file needs nothing more.)"""
+    with zipfile.ZipFile(path) as z:
+        shared = []
+        if "xl/sharedStrings.xml" in z.namelist():
+            for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall("m:si", XLSX_NS):
+                shared.append("".join(t.text or "" for t in si.iter(f"{{{XLSX_NS['m']}}}t")))
+        root = ET.fromstring(z.read(sheet))
+    out = []
+    for row in root.iter(f"{{{XLSX_NS['m']}}}row"):
+        cells = {}
+        for c in row.findall("m:c", XLSX_NS):
+            col = 0
+            for ch in re.match(r"[A-Z]+", c.get("r")).group():
+                col = col * 26 + ord(ch) - 64
+            kind, v = c.get("t"), c.find("m:v", XLSX_NS)
+            if kind == "s":
+                text = shared[int(v.text)]
+            elif kind == "inlineStr":
+                text = "".join(t.text or "" for t in c.iter(f"{{{XLSX_NS['m']}}}t"))
+            else:
+                text = v.text if v is not None and v.text is not None else ""
+            cells[col - 1] = text
+        out.append([cells.get(i, "") for i in range(max(cells) + 1)] if cells else [])
+    return out
+
+
+def read_mammals(path: Path) -> pd.DataFrame:
+    """name, group (the order), hibernation (1/0) from Heldstab et al.'s sheet. Refuses a hibernation value other than
+    1 or 0, an empty name, and a name given twice."""
+    rows = xlsx_rows(path)
+    head = rows[0]
+    try:
+        i_name, i_grp, i_hib = head.index("Genus species"), head.index("Group"), head.index("hibernation")
+    except ValueError as e:
+        raise Refused(f"{path.name}: no column {e}") from e
+    out = []
+    for n, r in enumerate(rows[1:], start=2):
+        r = r + [""] * (len(head) - len(r))
+        name, value = " ".join(r[i_name].split()), r[i_hib].strip()
+        if not name:
+            raise Refused(f"{path.name} row {n}: empty Genus species")
+        if value not in ("0", "1"):
+            raise Refused(f"{path.name} row {n}: hibernation {value!r} is neither 1 nor 0")
+        out.append((name, r[i_grp].strip(), int(value)))
+    t = pd.DataFrame(out, columns=["name", "group", "hibernation"])
+    dup = t.name[t.name.duplicated()].tolist()
+    if dup:
+        raise Refused(f"{path.name}: names given twice: {', '.join(sorted(set(dup)))}")
+    return t
+
+
+def combine(species: pd.DataFrame, mammals: pd.DataFrame | None, bats: pd.DataFrame | None,
+            names_dmp: Path | None) -> pd.DataFrame:
+    """One state per build species from both sources (each matched by `match`): slug, state, how, and each source's
+    own state. Known in one source only: that state. Known in both and equal: that state. Known in both and different:
+    unknown, "sources disagree". Known in neither: unknown."""
+    cols = {}
+    for key, table in (("mammals", mammals), ("bats", bats)):
+        if table is not None:
+            cols[key] = match(species, table, names_dmp).set_index("slug").state
+    out = pd.DataFrame(cols, index=pd.Index(species.slug, name="slug")).astype("Int64")
+    known = out.notna().sum(axis=1)
+    state, how = pd.Series(pd.NA, index=out.index, dtype="Int64"), pd.Series("in neither", index=out.index)
+    one = known == 1
+    state[one] = out[one].bfill(axis=1).iloc[:, 0]
+    how[one] = "one source"
+    two = known == 2
+    agree = two & out.nunique(axis=1).eq(1)
+    state[agree] = out[agree].iloc[:, 0]
+    how[agree] = "both agree"
+    how[two & ~agree] = "sources disagree"
+    return out.assign(state=state, how=how).reset_index()
 
 
 def ncbi_taxids(names_dmp: Path, wanted: set[str]) -> dict[str, set[int]]:

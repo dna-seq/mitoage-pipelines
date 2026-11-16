@@ -2,12 +2,13 @@
 how many are unknown, how often the trait changes on the dated tree, and how many trait-bearing species have
 nuclear partners. It is design information, read before H21-H23 were written; it tests nothing.
 
-    uv run python docs/analyses/mito-load/tally.py SITE_CHECKOUT FISHBASE_DIR OUT_TSV [BATS_TABLE NAMES_DMP]
+    uv run python docs/analyses/mito-load/tally.py SITE_CHECKOUT FISHBASE_DIR OUT_TSV [BATS_TABLE NAMES_DMP [MAMMAL_TABLE]]
 
 SITE_CHECKOUT: dna-seq/mitoage at 03c0949 or later with the same data (public/data/species.csv,
 src/data/generated/phylogeny.json, public/data/mitoport/partners_species.parquet).
 FISHBASE_DIR: FishBase v26.06 from source.coop, the species, synonyms and stocks tables (`download fishbase-temperature`).
 BATS_TABLE, NAMES_DMP: the bat table of `download hibernation` and NCBI's names.dmp; with them, bat hibernation is tallied.
+MAMMAL_TABLE: Heldstab et al. 2018's sheet; with it, hibernation across mammals (both sources combined) is tallied.
 
 Every rule below is an explicit taxonomic rule or a FishBase field. A trait whose classification needs a source we
 do not hold (hibernation, high altitude, migration in birds, diving in birds) is not tallied here.
@@ -115,7 +116,8 @@ def trait_clades(tree: dict, state: dict) -> int:
     return out
 
 
-def main(site: Path, fb: Path, out: Path, bats: Path | None = None, names: Path | None = None) -> pd.DataFrame:
+def main(site: Path, fb: Path, out: Path, bats: Path | None = None, names: Path | None = None,
+         mammals: Path | None = None) -> pd.DataFrame:
     sp = pd.read_csv(site / "public/data/species.csv", low_memory=False)
     sp = sp[sp.retired_reason.isna()].copy()
     fish = sp["class"].isin(FISHES)
@@ -135,6 +137,13 @@ def main(site: Path, fb: Path, out: Path, bats: Path | None = None, names: Path 
             ("Mammalia",), lambda d: d.bat_hibernation.eq(1) & d.order.eq("Chiroptera"),
             lambda d: d.order.ne("Chiroptera") | d.bat_hibernation.isna())
         print("bat matching: " + ", ".join(f"{k} {v}" for k, v in m.how.value_counts().items()))
+    if mammals is not None:
+        mam = sp[sp["class"].eq("Mammalia")]
+        c = hib.combine(mam, hib.read_mammals(mammals), hib.read_bats(bats) if bats else None, names).set_index("slug")
+        sp["mammal_hibernation"] = sp.slug.map(c.state)
+        r["mammal hibernation: Heldstab et al. 2018, with Wilkinson & Adams 2019 for bats"] = (
+            ("Mammalia",), lambda d: d.mammal_hibernation.eq(1), lambda d: d.mammal_hibernation.isna())
+        print("mammal hibernation: " + ", ".join(f"{k} {v}" for k, v in c.how.value_counts().items()))
     tree = json.load(open(site / "src/data/generated/phylogeny.json"))["root"]
     partners = set(pd.read_parquet(site / "public/data/mitoport/partners_species.parquet").slug)
     rows = []
@@ -158,5 +167,5 @@ def main(site: Path, fb: Path, out: Path, bats: Path | None = None, names: Path 
 
 if __name__ == "__main__":
     pd.set_option("display.width", 250); pd.set_option("display.max_colwidth", 60)
-    extra = [Path(a) for a in sys.argv[4:6]]
+    extra = [Path(a) for a in sys.argv[4:7]]
     print(main(Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3]), *extra).to_string(index=False))

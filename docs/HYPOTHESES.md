@@ -1797,6 +1797,14 @@ around. In its place, and better suited to a two-state trait because it codes no
   matches all 44 bats of the build (42 by exact name, 2 by NCBI synonym): 17 hibernate, 27 do not, 4 changes on the tree.
 Where both sources code a species and disagree, it is unknown, and the count is reported. A species in neither is
 unknown, as before. Daily heterotherms are no longer a separate class (neither source has one).
+The mammal table, saved by the maintainer from Dryad on 2026-11-16 and accepted by its md5
+(c5e58d7f194bc830bc7ba854ad54aabe, as Dryad lists it), was then read for its layout only, before any statistic: one
+sheet, "Appendix S1", 1,104 rows; the column `hibernation` holds 1 (80 species) or 0 (1,024), nothing else, and is read
+with `Genus species` (`hibernation.read_mammals`). Its other columns (brain and body mass, diurnality, substrate, diet,
+mid-latitude) are not read. Combined with the bat table (`hibernation.combine`) over the build's 625 mammals: 41
+hibernate, 394 do not, 190 are unknown (in neither source: cetaceans, sirenians and others absent from a brain-size
+dataset); 19 bats are coded by both sources, all alike, so no species is unknown by disagreement. 16 families of
+hibernators, 25 trait clades and 20 changes on the dated tree; 20 hibernators are in H12's partner set of 177 mammals.
 **Test.** As H21.
 **Result.** Not yet run.
 
@@ -1819,13 +1827,14 @@ longer generations, accumulate mtDNA substitutions more slowly per year?
 **Seen before this entry was written, and therefore not blind.** The design tally (`docs/analyses/mito-load/`),
 including the bat row: 17 hibernating and 27 non-hibernating bats, 7 trait clades, 4 changes, 6 hibernators with
 partners. The bat table's file was opened to find its columns; it also carries longevity, body mass and latitude, and
-its rows were printed while the columns were found, but no relationship in it was computed. No lifespan, rate or
-composition statistic of hibernators was computed in the build. The mammal-wide table had not been read (not yet
-placed). H11's tables were read when H11 was written.
+its rows were printed while the columns were found, but no relationship in it was computed. After this entry was
+first committed, the mammal-wide table was placed and read for its layout and its counts (recorded under H23's change:
+41 hibernators, 394 not, 190 unknown, 20 changes, 20 with partners); it carries no lifespan, and no statistic was
+computed on it. No lifespan, rate or composition statistic of hibernators was computed in the build. H11's tables were
+read when H11 was written.
 **Fixed before any analysis code was written.**
 - *Trait.* H23's trait A as changed before the run: Heldstab et al. 2018 for mammals, Wilkinson & Adams 2019 for bats,
-  disagreement and absence unknown. Until the mammal-wide table is placed, every readout here runs on bats only and
-  is reported as "bats only" under H25, not here; this entry's readouts are then not assessed.
+  disagreement and absence unknown (both tables are in hand as of 2026-11-16; see H23's change).
 - *Species.* Mammals of H1's default dataset (lifespan record of high or acceptable quality, a tip of the dated tree),
   with an adult mass, all 12 heavy-strand codon alignments and a known hibernation state. Build 0f4e970, the site's
   tree at 03c0949.

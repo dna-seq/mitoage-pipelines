@@ -14,3 +14,4 @@ fish regional endothermy: Thunnus, Katsuwonus, Istiophoridae, Xiphiidae, Lampris
 shark regional endothermy: Lamnidae, Alopiidae	Chondrichthyes	87	7	80	0	2	3	3	0	0
 fish electric discharge: FishBase Electrogenic weakly or strongly discharging	Actinopterygii,Chondrichthyes	980	23	957	0	6	14	9	0	61
 bat hibernation: Wilkinson & Adams 2019 (DRUM), within Chiroptera	Mammalia	625	17	27	581	3	7	4	6	177
+mammal hibernation: Heldstab et al. 2018, with Wilkinson & Adams 2019 for bats	Mammalia	625	41	394	190	16	25	20	20	177
