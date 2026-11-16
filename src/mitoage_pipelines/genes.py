@@ -34,5 +34,15 @@ COMPLEX_I_NUCLEAR = ("NDUFV1 NDUFV2 NDUFV3 NDUFS1 NDUFS2 NDUFS3 NDUFS4 NDUFS5 ND
 COMPLEX_V_NUCLEAR = ("ATP5F1A ATP5F1B ATP5F1C ATP5F1D ATP5F1E ATP5PB ATP5PD ATP5PF ATP5PO ATP5MC1 ATP5ME ATP5MF "
                      "ATP5MG ATP5MJ ATP5IF1").split()
 
+# H19's membrane control: integral proteins of the inner mitochondrial membrane that are in no respiratory complex and
+# have no mtDNA-encoded partner (carriers, the pyruvate carrier, protein import, MICOS, LETM1, the calcium uniporter,
+# prohibitins). TIMM23 is left out: NCBI's symbol lookup returns a gene with 134 vertebrate orthologs.
+INNER_MEMBRANE = ("SLC25A1 SLC25A11 SLC25A12 SLC25A20 SLC25A22 MPC1 MPC2 TIMM17A TIMM22 TIMM50 IMMT LETM1 MCU "
+                  "PHB1 PHB2").split()
+
+# every nuclear gene H19 reads from NCBI's vertebrate ortholog sets (`mitoport classes`)
+H19_NUCLEAR = (COMPLEX_I_NUCLEAR + COMPLEX_III_NUCLEAR + COMPLEX_IV_NUCLEAR + COMPLEX_V_NUCLEAR + CYTOCHROME_C
+               + COMPLEX_II + MATRIX + INNER_MEMBRANE + CYTOSOLIC_CONTROLS)
+
 # mitochondrial subunits of the complexes with nuclear partners above, named as in the rate matrix
 MT_OF_COMPLEX = {"IV": ["MT-COX1", "MT-COX2", "MT-COX3"], "III": ["MT-CYTB"]}

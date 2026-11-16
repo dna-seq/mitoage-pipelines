@@ -883,6 +883,20 @@ def mitoport_readouts(
     readouts.main(tuple(complexes_ or ("I", "III", "IV", "V")), tree, out)
 
 
+@mitoport_app.command("classes")
+def mitoport_classes(
+    data: Build = paths.BUILD,
+    nucaln: Annotated[Path, typer.Option("--nucaln", help="the vertebrate alignments of every nuclear protein read (`iface-align` on the selections of the vertebrate ortholog sets)")] = paths.PARTNERS / "aln",
+    tree: Annotated[Path, typer.Option(help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Annotated[Path, typer.Option("--out", help="folder the tables are written to")] = paths.MITOPORT_OUT / "classes",
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia, Aves, Actinopterygii, Reptilia)")] = None,
+    complexes_: Annotated[Optional[list[str]], typer.Option("--complex", help="a complex; repeat for several (default: I, III, IV, V)")] = None,
+) -> None:
+    """H19: mito-nuclear coupling class by class, against distance from the mtDNA-encoded core, and its mitochondrial side."""
+    from .mitoport import classes as h19
+    h19.main(data, nucaln, tree, out, tuple(classes or h19.CLASSES), tuple(complexes_ or h19.COMPLEXES))
+
+
 # --- structure --------------------------------------------------------------------------------
 @structure_app.command("within")
 def structure_within(

@@ -135,6 +135,14 @@ uv run mitoage mitoport iface --complex I --skip-esm          # mammals; no per-
 uv run mitoage mitoport partners --complex I                  # vertebrate partners of the subunits that touch
 uv run mitoage mitoport readouts                              # the readouts fixed in advance, every complex
 
+# H19: the coupling class by class, against distance from the mtDNA-encoded core, and its mitochondrial side
+# (after the contact maps of the four complexes; on haumea: slurm/h19-classes.sbatch)
+uv run mitoage download orthologs --ortholog-taxon vertebrata --dest data/input/ncbi-vertebrata --gene NDUFV1 ...   # genes.H19_NUCLEAR
+uv run mitoage mitoport select --ncbi data/input/ncbi-vertebrata --out data/interim/mitoport/partners/sel \
+  --class Mammalia --class Aves --class Actinopterygii --class Reptilia
+uv run mitoage mitoport iface-align --sel data/interim/mitoport/partners/sel --out data/interim/mitoport/partners/aln --threads 1
+uv run mitoage mitoport classes                               # core_distance, class_coupling, class_matrix, class_readouts
+
 # H16: the published cybrids against a mismatch count at the mito-nuclear contacts (seconds on a laptop)
 uv run mitoage download pdb 5XTD 5XTE 5Z62 8H9S
 uv run mitoage download cybrid                    # 15 RefSeq mitogenomes at fixed versions and 3 cell-line cytb records

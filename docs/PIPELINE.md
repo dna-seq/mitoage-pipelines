@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H12, H14, H15), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H12, H14 to H19), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -156,6 +156,11 @@ Complexes I (5XTD), III (5XTE) and V (8H9S) go through the same steps with `--co
 `data/interim/mitoport/iface-<complex>`, their tables in `data/output/mitoport/complex-<complex>`; complex IV keeps the
 places above. `mitoport readouts` reads every complex's `sites.tsv`, `coupling.tsv` and `partners_species.tsv` into
 `contact_readouts.tsv`: H14's readouts, fixed in advance.
+
+`mitoport classes` (H19) reads the four maps and the vertebrate alignments of every subunit and control protein
+(`data/interim/mitoport/partners/aln`), class by class, into `data/output/mitoport/classes`: `core_distance.tsv`
+(each subunit's distance from the mtDNA-encoded chains), `class_coupling.tsv` (per class, protein and set of
+mitochondrial genes), `class_matrix.tsv` (group medians) and `class_readouts.tsv` (the readouts fixed in advance).
 
 ## Structural alignments (H10)
 

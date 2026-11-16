@@ -1436,3 +1436,109 @@ numbers are in the docstring of `mitoport/cybrid_energy.py`. One trial was made 
 **Test.** `slurm/h18-energy.sbatch`, an array over the 44 (host, donor, complex) tasks on haumea's CPU nodes (no GPU),
 then `slurm/h18-energy-check.sbatch`: the collection, the readout, the tests and the breaks of each guard.
 **Result.** Not yet run.
+
+## H19. The coupling in birds and fishes, its fall with distance from the mtDNA-encoded core, and what its mitochondrial side is
+
+**Question.** H5 and H14 found that the nuclear subunits of complexes I, III, IV and V follow the mitochondrial genes
+as whole proteins, in mammals, and that the residues that touch add nothing. None of it follows lifespan (H9, H12).
+Three things about the coupling itself, of interest beyond lifespan:
+1. Does it hold outside mammals? The whole-protein result in mammals is known (Weaver, Rabinowitz, Thueson & Havird
+   2022, Mol Biol Evol 39:msac233, doi:10.1093/molbev/msac233: 58 mammals of eight orders; its introduction says
+   such rate correlations had not been run in a vertebrate before). Birds and ray-finned fishes have not been read.
+2. Does it fall with a subunit's distance from the mtDNA-encoded subunits of its complex? H14 says the touching
+   residues carry nothing extra; this asks whether the touching subunits do.
+3. What is the mitochondrial side? Does a subunit follow the mitochondrial genes of its own complex more than those
+   of the others, and does it follow the mitochondrial proteins' change or the neutral rate of the genome?
+
+**Seen before this entry was written, and therefore not blind.** On H14's tables (mammals, `coupling.tsv` of the four
+complexes) an exploratory look, 2026-11-16, gave: subunits that touch a mitochondrial subunit against those that do
+not, median `seq_control_other` 0.51 against 0.20 in complex I (27 and 10, Mann-Whitney p = 0.0006), 0.45 against
+0.25 in III (6 and 3), 0.37 against 0.20 in V (6 and 9); coupling against the distance defined below, ranked and
+centred within complex, Spearman -0.43 over 72 subunits (p = 0.0002); and complex IV's and III's nuclear subunits
+coupled with the mitochondrial genes of every complex about alike (IV: 0.49, 0.48, 0.42, 0.48 with I, III, IV, V;
+III: 0.46, 0.40, 0.34, 0.41), complex V's own subunits with ATP6 and ATP8 at 0.21. So in mammals readout G below is
+a second look at a pattern already seen, and S is partly seen. Also seen, as the design: how many species of each
+class the 50 vertebrate alignments of H14's job hold (medians 182 mammals, 78 birds, 120 ray-finned fishes, 19
+reptiles per gene), and H12's and H14's discordance means in birds and fishes, which are another statistic. No
+coupling had been computed in any class but mammals, no control protein had a vertebrate alignment, and the fourfold
+transversion distance had not been computed for any species.
+
+**Fixed before any result was seen.** This entry was committed with the code, before the job ran
+(`mitoport/classes.py`; the definitions are in its docstring).
+- *Classes.* Mammals, birds, ray-finned fishes and reptiles of the build (longevity-genie/mitoage at 0f4e970, the
+  site's tree at 03c0949). A species counts when it is in the 13 mitochondrial protein alignments, in the 12
+  heavy-strand codon alignments, a tip of the dated tree and in at least one nuclear alignment. A protein is read in a
+  class with 40 species or more, a correlation with 200 usable pairs or more. Reptiles are expected below that (not
+  assessed, and said).
+- *Proteins.* NCBI's vertebrate ortholog sets (`download orthologs --ortholog-taxon vertebrata`), one protein per
+  species (`mitoport select`), MAFFT L-INS-i on one thread, of: the 72 nuclear subunits of the four solved human
+  complexes (I 37, III 9, IV 11, V 15), cytochrome c, complex II (4), the 7 matrix enzymes and the 30 cytosolic
+  controls of H5, and 15 proteins of the inner membrane that are in no respiratory complex (`genes.INNER_MEMBRANE`:
+  carriers, the pyruvate carrier, import, MICOS, LETM1, the calcium uniporter, prohibitins), chosen here as the
+  membrane's control. The 50 sets H14's job downloaded are reused as they are; the others are downloaded for this
+  run.
+- *Coupling.* H14's R0 statistic within one class: over pairs of the class's species, the Spearman correlation of
+  the nuclear protein's distance (share of differing residues over the columns the human protein fills, the columns
+  that touch a mitochondrial subunit left out) with the distance of a set of mitochondrial genes at their
+  burial-matched non-contact control residues, the patristic distance of the dated tree and its logarithm partialled
+  out. Sets: the genes of complex I, III, IV or V, and all 13. No contact residue is on either side.
+- *Distance from the core.* Per nuclear subunit, in the human structure (5XTD, 5XTE, 5Z62, 8H9S): the median, over
+  its heavy atoms, of the distance to the nearest heavy atom of any mtDNA-encoded chain; a gene in several chains
+  takes the chain with the smallest median.
+- *Readouts, per class.* Groups of proteins are compared by Mann-Whitney, two-sided, with 5 proteins or more on each
+  side.
+  - C1 (question 1), per complex: its subunits against the cytosolic controls, coupling with the complex's own
+    mitochondrial genes. Predicted: subunits above.
+  - G1 (question 2): over the subunits of the four complexes, each one's coupling with its own complex's genes against
+    its distance from the core, both ranked within complex, the correlation pooled; p by 10,000 permutations within
+    complex (seed fixed). Predicted: negative. G2: the same with the subunit's own divergence (its mean distance over
+    the pairs) partialled out within complex, because the far subunits are the conserved ones and a protein that
+    hardly changes has little to correlate. G3: subunits with 5 interface columns or more against subunits with
+    none, ranked within complex, permutation p.
+  - M1, M2 (the membrane): the inner-membrane proteins against the cytosolic controls, and the subunits that touch
+    against the inner-membrane proteins; coupling with all 13 genes. O1 to O3, reported: complex II, the matrix
+    enzymes and the subunits that touch nothing, each against the cytosolic controls.
+  - S1 (question 3), per complex: the coupling with the complex's own genes, the distance of the other complexes'
+    mitochondrial genes partialled out as well (as its rank over the pairs); subunits against cytosolic controls.
+    Predicted under complex-specific coupling: subunits above. S2: the reverse, the coupling with the other
+    complexes' genes given the complex's own.
+  - T1 to T3 (question 3), all subunits against the cytosolic controls, all 13 genes: T1, the coupling with the
+    neutral distance (share of transversions at the fourfold-degenerate third positions two species share in one
+    codon family, 12 heavy-strand genes, at least 100 sites); T2, the coupling with the mitochondrial proteins given
+    the neutral distance; T3, the coupling with the neutral distance given the proteins. The controls take out what
+    both genomes share through the lineage's generation time.
+  - `class_matrix.tsv`: the median coupling of every group with every set, descriptive.
+- *Correction.* Holm within class over C1 (four), G1, S1 (four), T2 and T3.
+- *Reading.*
+  - Positive control: in mammals C1 must give the subunits above the controls at p < 0.05 in all four complexes, as
+    H14's R0 did through the mammalian ortholog sets (medians +0.49, +0.40, +0.42, +0.21). If it does not, the
+    vertebrate sets or this code differ from H14's in something that matters, and nothing below is read.
+  - Question 1: the coupling holds in a class and complex when C1 passes Holm there with the subunits above. Classes
+    are compared by their medians only: they differ in species, in depth and in rate, and no test between classes is
+    made.
+  - Question 2: the gradient holds in a class when G1 is negative and passes Holm. It counts as replicated when it
+    holds in birds or in fishes; the mammalian G1 is reported and is not a test (seen above). If G1 holds and G2 has
+    p >= 0.05, the gradient cannot be told from the far subunits being conserved. If the inner-membrane proteins are
+    above the cytosolic controls (M1, p < 0.05) and the touching subunits are not above them (M2, p >= 0.05), touching
+    cannot be told from sitting in the inner membrane.
+  - Question 3, specificity: a complex's coupling is complex-specific in a class when S1 passes Holm there with the
+    subunits above. Where C1 passes and S1 does not, the subunits follow the mitochondrial genome and not their own
+    partners more than the rest; S2 is reported beside it.
+  - Question 3, rate: T2 passes Holm and T3 does not: the subunits follow the change of the mitochondrial proteins
+    beyond the genome's neutral rate. T3 passes and T2 does not: they follow the neutral rate. Both: both. Neither:
+    the two are not separated in these data.
+  - A readout that cannot be computed is "not assessed" with its reason, is left out of the correction, and is never
+    counted as a negative answer.
+- *Known weaknesses, said in advance.* Species pairs are not independent, which is why only groups of proteins are
+  tested; proteins of one complex are not independent either. One human structure stands for every species.
+  Ray-finned fishes carry duplicated genes, and `select` keeps one protein per species (the one nearest the human
+  length), so a fish's protein may be the other copy. The distances are uncorrected shares; fourfold transversions
+  saturate late, not never, and the fishes are deep. The mitochondrial sets differ in size (control residues: I 621,
+  IV 298, V 112, III 104), so in S1 a small complex's own side is the noisier one and the comparison leans against
+  complexes III and V. The inner-membrane set was chosen by hand. The mammals go through the vertebrate ortholog sets
+  and one species set per protein, so their numbers will not equal H14's. The ortholog sets were downloaded on two
+  dates (H14's job and this run).
+**Test.** `slurm/h19-classes.sbatch` on haumea: the tests and the breaks of each guard first
+(`slurm/h19-classes-mutations.py`), the contact maps, the selections and alignments (the 50 of H14's job are compared
+with its own, byte for byte), `mitoport classes`, and a second run to check that the tables come out the same bytes.
+**Result.** Not yet run.
