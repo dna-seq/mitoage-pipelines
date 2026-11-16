@@ -1,0 +1,15 @@
+candidate	classes	species	yes	no	unknown	families_yes	trait_clades	min_changes	yes_with_partners	scope_with_partners
+mammal flight: order Chiroptera	Mammalia	625	44	581	0	8	1	1	13	177
+mammal marine: cetacean families (under Cetacea or Artiodactyla), Otariidae, Phocidae, Odobenidae, Sirenia, Enhydra	Mammalia	625	50	575	0	16	4	4	26	177
+mammal semi-aquatic: Lutrinae genera, Castor, Ornithorhynchus, Neomys, Myocastor, Hippopotamidae, Condylura	Mammalia	625	13	612	0	7	9	7	5	177
+mammal subterranean: Bathyergidae, Spalacidae, Talpidae, Spalacopus, Ellobius	Mammalia	625	7	618	0	5	5	5	2	177
+mammal myrmecophagy: Myrmecophagidae, Tachyglossidae, Myrmecobiidae, Orycteropodidae, Proteles, Priodontes, Tolypeutes, Melursus	Mammalia	625	11	614	0	7	7	7	3	177
+bird flightless: Struthioniformes, Casuariiformes, Sphenisciformes, Strigops	Aves	427	11	416	0	5	3	3	4	78
+fish diadromous: FishBase AnaCat anadromous, catadromous, amphidromous or diadromous	Actinopterygii	893	122	368	403	36	69	59	22	61
+fish deep: FishBase DepthRangeDeep >= 1000 m	Actinopterygii	893	52	519	322	28	41	40	8	61
+fish deep: FishBase DemersPelag bathydemersal or bathypelagic	Actinopterygii	893	38	855	0	24	32	32	2	61
+fish polar: FishBase EnvTemp 'polar' in any stock	Actinopterygii	893	42	851	0	15	34	30	3	61
+fish air-breathing: FishBase AirBreathing facultative or obligate ('WaterAssumed' = unknown)	Actinopterygii	893	32	0	861	21	1	0	3	61
+fish regional endothermy: Thunnus, Katsuwonus, Istiophoridae, Xiphiidae, Lampris	Actinopterygii	893	16	877	0	4	4	4	2	61
+shark regional endothermy: Lamnidae, Alopiidae	Chondrichthyes	87	7	80	0	2	3	3	0	0
+fish electric discharge: FishBase Electrogenic weakly or strongly discharging	Actinopterygii,Chondrichthyes	980	23	957	0	6	14	9	0	61

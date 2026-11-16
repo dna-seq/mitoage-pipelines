@@ -9,6 +9,9 @@ command of this repository, every step is one command, and every table a finding
 under `data/output`.
 
 - **The pipeline in pictures**: [docs/PIPELINE.md](docs/PIPELINE.md).
+- **Adaptations that load mitochondria** (flight, diving, hibernation, migration, the deep sea and others), ranked by
+  what the build can test, with each one's independent origins on the tree:
+  [docs/MITO_LOAD_ADAPTATIONS.md](docs/MITO_LOAD_ADAPTATIONS.md). H21 to H23 are its shortlist.
 - **What we asked, how we tested it and what came out**: [docs/HYPOTHESES.md](docs/HYPOTHESES.md). Results
   that did not hold, and one mistake of ours, are kept there next to those that did.
 - The website and the pipeline that builds its data are in

@@ -1629,3 +1629,159 @@ definitions are in its docstring).
 (`slurm/h20-thermal-mutations.py`), `longevity thermal`, and a second run to check that the tables come out the
 same bytes.
 **Result.** Not yet run.
+
+## H21. Diadromous fishes: the mitochondrial genes, and their nuclear partners, on the branches where diadromy arose
+
+**Question.** `docs/MITO_LOAD_ADAPTATIONS.md` ranks the adaptations that should load mitochondria by what the build can
+test; the maintainer chose its shortlist on 2026-11-16 ("Fish ecology + mammals"): H21, H22, H23. Diadromy (moving
+between fresh and salt water) couples long sustained swimming with an osmoregulatory switch, and it arose many times.
+Across 401 teleost mitogenomes, migratory fishes had lower Ka/Ks in the mitochondrial protein genes than
+non-migratory ones (Sun, Shen, Irwin & Zhang 2011, Mol Biol Evol 28:39, doi:10.1093/molbev/msq256), and sedentary
+fishes showed relaxed purifying selection in all 13 genes (Strohm, Gwiazdowski & Hanner 2015, Gene 572:27,
+doi:10.1016/j.gene.2015.06.074). Neither counted independent origins. Does the build show stronger constraint on the
+mitochondrial genes where diadromy arose, counting each origin once, and do the nuclear subunits of the respiratory
+complexes shift rate on the same branches?
+**Seen before this entry was written, and therefore not blind.** The design tally of `docs/analyses/mito-load/`
+(2026-11-16): how many species carry each candidate trait, how many are unknown, the trait clades and the fewest
+changes on the dated tree, and how many are in H12's partner set. For diadromy: 122 yes, 368 no, 403 unknown among 893
+ray-finned fishes; 69 trait clades, 59 changes; 22 yes among the 61 fishes with complex IV partners. No rate,
+selection, composition or coupling statistic was computed for this or any other candidate trait. H11, H14 and H19's
+design were read; H20's fits were not.
+**Fixed before any code was written.** This entry is committed before the code. The code must implement these
+definitions; anything changed before the run is listed under "Changed before the run", with its reason.
+The design below is shared by H21, H22 and H23, which refer to it as "H21's design".
+- *Data.* Build 0f4e970 and the site's tree at 03c0949, retired records out. Species of the class with a tip and all
+  12 heavy-strand codon alignments (as H19); ND6 is reported apart, exploratory.
+- *Trait.* FishBase v26.06 (`download fishbase-temperature`; matched by H20's rule, `thermal.fishbase_codes`),
+  `species.AnaCat`: anadromous, catadromous, amphidromous or diadromous = 1; potamodromous, oceanodromous,
+  non-migratory or oceano-estuarine = 0; empty, or no FishBase match = unknown. Unknown species are left out of every
+  test and counted, never read as 0.
+- *Trait clades.* On the dated tree pruned to the species with a known state: the maximal clades whose tips are all 1.
+- *R1, RELAX (primary).* Tips: every trait species, and for each trait clade the three state-0 species nearest its
+  root on the tree. Test branches: the stem and every branch inside each trait clade; reference: all others. HyPhy
+  RELAX (2.5.104) on the 12 genes concatenated, each species' genetic code. *Control:* 20 draws, each replacing every
+  trait clade by a state-0 clade of the same class matched on species count (within a factor of 2) and on stem age
+  (nearest), without replacement (seed 0), tips and branches built the same way. Readout: K, the likelihood ratio and
+  its p.
+- *R2, one pair per origin (primary).* For each trait clade: the trait species nearest the clade's root (ties by name),
+  its nearest state-0 relative outside the clade, and an outgroup, the known species nearest the root of the smallest
+  clade holding both, outside it. Pairs are accepted in order of increasing sister distance, and one whose path shares
+  a branch with a pair already accepted is dropped and counted. dN and dS of each sister to the outgroup over the 12
+  genes (Nei-Gojobori with the Jukes-Cantor correction, each species' code, as H7). Readout:
+  Δω = log10(dN/dS of the trait sister) − log10(dN/dS of the other), Wilcoxon signed-rank over pairs, two-sided; the
+  sign test and Δ of dN and of dS alone reported beside it. Pairs with dS above 1 to the outgroup are left out and
+  counted, and reported with them as a sensitivity. With size: the intercept of Δω regressed on the pair's difference
+  in log10 size (FishBase maximum length for fishes, AnAge adult mass for mammals), reported beside.
+- *R3, composition (exploratory).* H11's 43 features against the trait (0/1) with log10 size, phylogenetic regression
+  with Pagel's lambda by maximum likelihood, Benjamini-Hochberg q over the 43; the count at q < 0.05. No direction is
+  predicted and no single feature is read.
+- *R4, aBSREL (exploratory).* HyPhy aBSREL on the stem branch of each trait clade, Holm over stems, and on the stems of
+  the first control draw of R1; the two counts reported.
+- *C, the coevolution side.* Species: the class's species in the tree with the 13 mitochondrial proteins and every
+  protein of H19's vertebrate alignments of the nuclear subunits of complexes I, III, IV and V and of the 30 cytosolic
+  controls (`genes.CYTOSOLIC_CONTROLS`). If fewer than 5 trait species remain, the proteins kept are those present in
+  at least 90% of the species, and the species those that have all of them; the entry says which. Branch lengths per
+  protein on the dated topology pruned to them (`mitoport branch-lengths`, H5's models). Per branch b: each protein's
+  length scaled by its mean over branches; the nuclear background the mean over the cytosolic controls (a control's
+  own length left out of its background); a nuclear protein's relative rate r = its scaled length / background; the
+  mitochondrial rate m = the mean scaled length of the 13 / background. Foreground: the stems and inner branches of the
+  trait clades present.
+  - C1: per protein, s = median over foreground of log r − median over the other branches of log r. The subunits of the
+    four complexes against the cytosolic controls, Mann-Whitney, two-sided.
+  - C2: median over foreground of log m − median over the other branches, against 1,000 draws of matched state-0
+    clade sets (R1's matching), two-sided empirical p.
+  - At least 3 trait clades and 5 trait species in the species set, or C is not assessed.
+  - C is read only if H23's positive control (bats) passes; otherwise C is "not read" in H21, H22 and H23.
+- *Minimums.* R2 needs 8 accepted pairs, R1 3 trait clades; below that a readout is "not assessed".
+- *Correction.* Holm over the primary readouts that could be assessed: R1, R2, C1, C2.
+- *Reading.*
+  - R1 "as predicted" when K > 1 (selection intensified on diadromous branches) with Holm p < 0.05 and the likelihood
+    ratio above at least 19 of the 20 control draws'; K < 1 under the same two conditions is "opposite to the
+    prediction"; p < 0.05 without the control condition is "not separated from the control clades", said as such;
+    else "not detected".
+  - R2 "as predicted" when Δω is negative with Holm p < 0.05; positive, "opposite"; else "not detected". The count of
+    pairs and the median Δω with its interval are given, so the bound can be read.
+  - C: no direction predicted. C1 and C2 passing Holm with the same sign is a "joint shift" of the mitochondrial genes
+    and their nuclear partners on diadromous branches; one alone is said as such.
+- *Secondary, reported and outside the correction.* Any migration (`AnaCat` anadromous, catadromous, amphidromous,
+  diadromous, potamodromous or oceanodromous) against non-migratory (86 species), which is closer to Sun et al.'s
+  contrast. The trait and its pair's differences in size and in H20's preferred temperature are tabulated.
+- *Known weaknesses, said in advance.* `AnaCat` is empty for 45% of the fishes, and the empty ones are not a random
+  draw. FishBase's labels are per species, not per population; a partly diadromous species is labelled by its record.
+  Twelve genes are one linked molecule, so per-gene results are not independent. Fish pairs are deep and saturate,
+  which costs dS first. Ray-finned fishes carry duplicated nuclear genes, and `mitoport select` keeps one copy (H19).
+  The positive control is a mammal branch, so it shows that the method can see a known shift, not that it can in fishes.
+**Test.** To be written: one command per readout, and a Slurm job on haumea, with the tests and the breaks of each
+guard first, as H19 and H20 do.
+**Result.** Not yet run.
+
+## H22. Deep-sea fishes: relaxed or adapted mitochondria where the deep sea was entered
+
+**Question.** Two published readings point in opposite directions. Oxygen consumption falls with depth in
+benthopelagic fishes and, less strongly, in benthic ones (Drazen & Seibel 2007, Limnol Oceanogr 52:2306,
+doi:10.4319/lo.2007.52.5.2306), which predicts relaxed constraint on the mitochondrial genes. Yet 11 mitochondrial
+genes carry convergent or parallel amino-acid changes across nine independent deep-sea lineages, read as repeated
+adaptation (Shen, Pu, Chen, Murphy & Shen 2019, Front Genet 10:925, doi:10.3389/fgene.2019.00925). On the branches
+where fishes entered the deep sea, counting each entry once, is the constraint on the mitochondrial genes relaxed,
+intensified, or neither?
+**Seen before this entry was written, and therefore not blind.** As H21: the design tally only. By habitat, 38 deep-sea
+species of 893 ray-finned fishes, 32 trait clades, 32 changes, 2 in the partner set; by depth (≥ 1000 m), 52 yes,
+519 no, 322 unknown, 41 clades, 40 changes, 8 in the partner set.
+**Fixed before any code was written.** H21's design, with:
+- *Trait (primary).* FishBase v26.06 `species.DemersPelag` bathydemersal or bathypelagic = 1, any other value = 0; no
+  FishBase match = unknown.
+- *Trait (sensitivity).* `species.DepthRangeDeep` ≥ 1000 m = 1, < 200 m = 0, 200 to 999 m left out, empty = unknown.
+- *Readouts.* R1 and R2 primary, Holm over the two. R3 and R4 exploratory; R4 is where Shen et al.'s positive
+  selection would show. C is expected to be not assessed with the partner set of 2026-11-16 (2 trait species); it is
+  computed if H19's fish alignments hold at least 5.
+- *Reading.* No direction is predicted. R1 with K < 1 under H21's two conditions is "relaxed: as the low-metabolism
+  reading predicts"; K > 1, "intensified". R2: Δω positive with Holm p < 0.05 goes with relaxation, negative with
+  intensification. R1 and R2 disagreeing is said as such. A sensitivity definition that disagrees with the primary is
+  reported and not used to choose.
+- *Known weaknesses, said in advance.* FishBase's depth habitat is a coarse label, and a species' recorded depth range
+  is its deepest record, not where it mostly lives. Deep-sea fishes are cold, so a relaxation here cannot be told
+  from H20's temperature without H20's result beside it. The deep-sea lineages of the build are the ones with
+  mitogenomes in RefSeq, a fraction of those Shen et al. sampled.
+**Test.** As H21.
+**Result.** Not yet run.
+
+## H23. Hibernating and marine mammals, with bats as the positive control: the mitochondrial genes and their nuclear partners
+
+**Question.** The mammals are where the nuclear partners are (177 species in H12's set). Bats are one origin and so no
+test of flight, but both the mitochondrial and the nuclear OXPHOS genes show adaptive evolution on the ancestral bat
+branch (Shen et al. 2010, PNAS 107:8666, PMC2889356): a method that claims to see a joint mitochondrial and nuclear
+shift must see it there first. Hibernators suppress metabolism to about 6% of basal rate during torpor bouts, daily
+heterotherms to about 35% (Ruf & Geiser 2015, Biol Rev 90:891, doi:10.1111/brv.12137). Marine mammals dive, and
+entered the sea four times among the build's mammals; across three of those origins, convergent substitutions were
+as common in terrestrial sister taxa (Foote et al. 2015, Nat Genet 47:272, doi:10.1038/ng.3198). On the branches
+where hibernation or marine life arose, do the mitochondrial genes change constraint, and do their nuclear partners
+shift rate with them?
+**Seen before this entry was written, and therefore not blind.** As H21: the design tally only. Bats: 44 species, 1
+clade, 13 in the partner set. Marine: 50 species (cetacean families whether filed under Cetacea or Artiodactyla,
+Otariidae, Phocidae, Odobenidae, Sirenia, *Enhydra*), 4 clades, 4 changes, 26 in the partner set. Hibernation was not
+tallied: its source is not yet downloaded. A rough hand list of hibernating genera was run in the brainstorm and is not
+used.
+**Fixed before any code was written.** H21's design, with:
+- *Positive control (P).* Order Chiroptera. C1 on the bat stem branch alone: the subunits of the four complexes against
+  the cytosolic controls, predicted positive (the subunits faster on the bat stem). P passes with p < 0.05 in that
+  direction, read alone, outside the correction. If P fails, C is "not read" in H21, H22 and H23. R4 (aBSREL) on the bat
+  stem is reported beside it.
+- *Hibernation (trait A).* The species table of Ruf & Geiser 2015, downloaded from the publisher's supplementary file
+  and pinned by SHA-256 at the run step (a new source; the maintainer's call, said in `docs/MITO_LOAD_ADAPTATIONS.md`).
+  Hibernator = 1. Reference = mammals not in that table as hibernator or daily heterotherm, called "not recorded as
+  heterothermic", never "homeothermic": the review lists the species studied. Daily heterotherms are left out of both
+  sides and reported apart. Names matched by exact name or by NCBI synonym; an ambiguous match is unknown. If the table
+  cannot be obtained in machine-readable form, trait A is not assessed, and the entry says so.
+- *Marine (trait B).* The rule above. With 4 trait clades, R2 (8 pairs) is not assessed; R1 and C are.
+- *Readouts.* For each trait: R1, R2 and C (C1, C2) primary, R3 and R4 exploratory. Holm over the primary readouts of
+  both traits that could be assessed.
+- *Reading.* No direction is predicted for either trait. Each readout is read as in H21, two-sided: K < 1 "relaxed",
+  K > 1 "intensified", under H21's two conditions; C1 and C2 with the same sign, a "joint shift".
+- *Known weaknesses, said in advance.* The reference side of trait A holds heterotherms nobody has studied. Torpor is
+  spread widely across mammals, so gains and losses are hard to tell apart, and the trait clades may count losses as
+  separate origins. Four marine origins bound little whatever R1 says. One positive-control branch can pass or fail by
+  chance; it is a check that the method can see a published shift, not a calibration of its error rate. The coupling
+  of H14 belongs to whole proteins and probably follows the lineage's overall rate, so a joint shift on trait branches
+  says the partners changed speed together there, not why.
+**Test.** As H21.
+**Result.** Not yet run.
