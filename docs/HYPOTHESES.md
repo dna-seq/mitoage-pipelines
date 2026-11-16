@@ -2059,6 +2059,29 @@ and its code under `src/mitoage_pipelines/adaptations/`, which this hypothesis c
   origin. In mammals the long-lived clades will hold many bats, which are also H23's positive control for C; the
   sensitivity definition is the answer to that for R2, and there is none for R1. Mass is one adult value per species.
   Twelve genes are one linked molecule.
-**Test.** `mitoage adapt longevity-traits` writes the trait table; the steps of H21 then run on it into
-`out/adapt-longevity/`; `slurm/adapt-longevity.sbatch`.
+**Code, and what it decided where the text above leaves room** (2026-11-17, written before any job ran). The code is
+`src/mitoage_pipelines/adaptations/longevity.py`, with its commands under `mitoage adapt longevity-*`; it calls H21's
+`clades`, `pairs`, `selection`, `coupling` and `run.reading` and changes none of them.
+- *The percentiles.* The 75th percentile and the median are taken over the species of the class that have that
+  residual (pandas' linear interpolation); a residual equal to the upper cut is 1, one equal to the median is unknown.
+- *The fit within orders.* Lifespan and mass are centred within each order of at least 5 species and one slope is
+  fitted through all of them; its cuts are taken over those species of the class.
+- *One class at a time.* The trait table holds both classes; pairs and selection inputs are made per class, from the
+  class's species alone, so a control clade or an outgroup is never of the other class.
+- *ΔdS in the readout.* A row "R2 dS", outside the correction, with the reading by its own p.
+- *C's positive control.* Read from H21 to H25's `readout.tsv`; while that file is absent, C is "not read".
+**Seen before the run, while the code was checked** (2026-11-17, build 0f4e970, species.parquet 267a16311cca, the dated
+tree of `longevity dated-tree`). The counts of the trait: `long_lived` 151 yes, 302 no, 172 unknown in mammals and 96,
+191, 140 in birds; `long_lived_in_order` 145, 289, 191 and 90, 178, 159. One check of the pair and readout steps was
+meant to print statuses only and also printed the readings: mammals have 6 unsaturated pairs on the primary definition
+(26 on the sensitivity one; 58 with saturated pairs there), so the mammals' primary R2 will be "not assessed" by the
+rule as fixed; birds have 41 unsaturated pairs (49 on the sensitivity definition). The readings seen: "not detected" for
+the birds' R2 on both definitions, for the birds' ΔdS and for the mammals' R2 on the sensitivity definition. No
+estimate, median or p was printed, and the tables were deleted unread. No definition was changed after this; the
+mammals' minimum stays as fixed. R1 had not run.
+**Test.** On the cluster, from a clone of main: `slurm/adapt-longevity.sbatch` (the tests `tests/test_adapt_longevity.py`,
+the 15 breaks of `slurm/adapt-longevity-mutations.py`, `adapt longevity-traits`, `longevity-pairs`,
+`longevity-selection-prep` for both classes, all again into a second folder and compared byte for byte); then
+`slurm/adapt-longevity-selection.sbatch` (RELAX on 2 classes x 21 draws, aBSREL on draws 0 and 1); `adapt
+longevity-coupling` on H23's prepared mammal set; `adapt longevity-readout`.
 **Result.** Not yet run.

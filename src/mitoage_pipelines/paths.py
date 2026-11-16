@@ -96,6 +96,7 @@ IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
 CYBRID_OUT = MITOPORT_OUT / "cybrid"      # positions.tsv, scores.tsv, calibration.tsv, summary.tsv (H16); coev_*, esm_*, h17_* (H17)
 STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
 ADAPT_OUT = OUTPUT / "adaptations"        # traits, pairs, fits, selection/, coupling/, readout (H21-H25)
+ADAPT_LONGEVITY_OUT = OUTPUT / "adapt-longevity"   # the same steps for H26's trait, long-lived for body mass
 AUDIT_OUT = OUTPUT / "audit"              # inputs, strand, order, code, pairs, nearest (.tsv): the audit of the records (H13)
 COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol
 COEVOL_FIXED_OUT = LONGEVITY_OUT / "coevol-fixed"   # the chains run with the ages held (-fixtimes)

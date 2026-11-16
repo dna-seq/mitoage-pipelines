@@ -1217,6 +1217,52 @@ def adapt_readout(out: AdaptOut = paths.ADAPT_OUT) -> None:
     from .adaptations import run
     run.readout(out)
 
+
+# --- H26: long-lived for body mass, in H21's design ----------------------------------------------------------------
+LongOut = Annotated[Path, typer.Option("--out", help="folder of H26's tables")]
+LongClass = Annotated[str, typer.Option("--class", help="Mammalia or Aves")]
+
+
+@adapt_app.command("longevity-traits")
+def adapt_longevity_traits(data: Build = paths.BUILD, tree: DatedTree = paths.DATED_TREE,
+                           out: LongOut = paths.ADAPT_LONGEVITY_OUT) -> None:
+    """H26's trait for mammals and birds: long-lived for body mass, 1, 0 or unknown (traits.tsv, residuals.tsv)."""
+    from .adaptations import longevity
+    longevity.main_traits(data, tree, out)
+
+
+@adapt_app.command("longevity-pairs")
+def adapt_longevity_pairs(data: Build = paths.BUILD, tree: DatedTree = paths.DATED_TREE,
+                          out: LongOut = paths.ADAPT_LONGEVITY_OUT) -> None:
+    """H26's R2: one pair per origin of long life, per class and definition (<Class>/pairs.tsv, pair_tests.tsv)."""
+    from .adaptations import longevity
+    longevity.run_pairs(data, tree, out)
+
+
+@adapt_app.command("longevity-selection-prep")
+def adapt_longevity_selection_prep(cls: LongClass, data: Build = paths.BUILD, tree: DatedTree = paths.DATED_TREE,
+                                   out: LongOut = paths.ADAPT_LONGEVITY_OUT) -> None:
+    """H26's RELAX and aBSREL inputs for one class; then `adapt relax` and `adapt absrel` with
+    `--out <folder>/<Class> --trait long_lived`."""
+    from .adaptations import longevity
+    print(longevity.selection_prep(data, tree, out, cls).to_string(index=False))
+
+
+@adapt_app.command("longevity-coupling")
+def adapt_longevity_coupling(out: LongOut = paths.ADAPT_LONGEVITY_OUT,
+                             work: Annotated[Path, typer.Option("--work", help="H23's prepared mammal set, with its branch lengths under bl/")] = paths.ADAPT_OUT / "coupling" / "Mammalia") -> None:
+    """H26's C1 and C2 in mammals, on the species set and branch lengths H23 prepared."""
+    from .adaptations import longevity
+    longevity.run_coupling(out, work)
+
+
+@adapt_app.command("longevity-readout")
+def adapt_longevity_readout(out: LongOut = paths.ADAPT_LONGEVITY_OUT,
+                            adapt_readout: Annotated[Path, typer.Option("--adapt-readout", help="H21-H25's readout.tsv, for H23's positive control")] = paths.ADAPT_OUT / "readout.tsv") -> None:
+    """Every readout of H26 with Holm within each class and the reading fixed in docs/HYPOTHESES.md."""
+    from .adaptations import longevity
+    longevity.readout(out, adapt_readout)
+
 def main() -> None:
     """The console script: a missing input or program is one line and exit status 1, not a traceback."""
     from .external import MissingProgram

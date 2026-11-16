@@ -110,6 +110,7 @@ uv run mitoage download hibernation   # H23-H25: bat hibernation (Wilkinson & Ad
 uv run mitoage adapt traits && uv run mitoage adapt pairs && uv run mitoage adapt fits   # H21-H25: trait states, one pair per origin, the phylogenetic fits
 uv run mitoage adapt selection-prep --trait diadromy && uv run mitoage adapt relax --trait diadromy --draw 0   # RELAX on draw 0 and 20 control draws (on haumea: slurm/adapt-*.sbatch)
 uv run mitoage adapt coupling-prep --class Mammalia   # then `mitoport branch-lengths` on its folder, `adapt coupling`, and `adapt readout`
+uv run mitoage adapt longevity-traits && uv run mitoage adapt longevity-pairs     # H26: long-lived for body mass in the same design; then `adapt longevity-selection-prep --class Mammalia|Aves`, `longevity-coupling`, `longevity-readout`
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 
