@@ -2001,3 +2001,64 @@ log10 lifespan and mean log10 mass, GLS with Pagel's lambda, each pair at its fi
 minimum of 12 pairs, its two-sided reading and its place in the correction are unchanged.
 **Test.** As H21 (`adapt fits` writes B1, B2 and B3; B4 is RELAX on `bat_hibernation` in `slurm/adapt-selection.sbatch`).
 **Result.** Not yet run.
+
+## H26. Long-lived for their body mass: the mitochondrial genes where long life arose, counting each origin once
+
+**Question.** The maintainer, 2026-11-13, asked "to check for convergent evolution of unrelated species selected for
+longevity", and on 2026-11-16, asked whether that step should be its own framework or one more trait in H21's design:
+"wait the code to land and then add longevity". Long life for a given size arose many times in mammals and in birds. The
+longevity hypothesis says selection lowers the mitochondrial mutation rate in long-lived species (Nabholz, Glémin &
+Galtier 2008, Mol Biol Evol 25:120, doi:10.1093/molbev/msm248; Galtier, Jobson, Nabholz, Glémin & Blier 2009, Biol Lett
+5:413, doi:10.1098/rsbl.2008.0662), and mitochondrial proteins evolve more slowly in long-lived mammals and birds
+(Galtier, Blier & Nabholz 2009, Mitochondrion 9:51, doi:10.1016/j.mito.2008.11.006). On the branches where species
+became long-lived for their mass, is selection on the mitochondrial protein genes stronger than on matched branches
+where they did not, each origin counted once?
+**What this entry does not test.** Convergence at single sites (the same amino acid reached independently): H21's design
+has no such test. CSUBST, PCOC and RERconverge, named in the first plan, are not run here.
+**Seen before this entry was written, and therefore not blind.** H1 to H3, H7 and H11 and their results: no single
+residue robustly associated with lifespan; H3's RELAX on long-lived against short-lived tips, where ND3 and cytochrome b
+came out relaxed in one draw of species (K = 0.71 and 0.51) and not in a second; H3's Coevol chains, unconverged, with
+dN/dS rising and dS falling with lifespan; H7, where lifespan does not predict the substitution rate on 339 sister
+pairs; H11, where composition follows the slow life history. Those lean against the prediction below, and it is kept
+as the published one. H21 to H25 are written and had not run. For the trait defined below nothing was computed: no
+count of long-lived species, of trait clades or of pairs, and no residual.
+**Fixed before any code was written.** This entry is committed before the code. "H21's design" is the text of H21 above
+and its code under `src/mitoage_pipelines/adaptations/`, which this hypothesis calls and does not change.
+- *Data.* Build 0f4e970 and the site's tree at 03c0949, retired records out. Two classes, each its own analysis and its
+  own correction: Mammalia and Aves.
+- *Species with a residual.* Species of the class in H1's default dataset (`aa_pgls.default_dataset`: lifespan record
+  of high or acceptable quality, not estimated) with an adult mass above 0, a tip of the dated tree and all 12
+  heavy-strand codon alignments.
+- *Residual.* Ordinary least squares of log10 maximum lifespan on log10 adult mass over those species, one fit per
+  class. The fit is not phylogenetic on purpose: the residual says how long a species lives for its mass, and the tree
+  enters where origins are counted.
+- *Trait `long_lived` (primary).* Residual at or above the class's 75th percentile = 1; below the class's median = 0;
+  between the two = unknown ("intermediate, left out"). A species of the class without a residual is unknown. Unknown
+  species are left out of every test and counted, never read as 0.
+- *Trait `long_lived_in_order` (sensitivity).* The same cuts on the residual of a fit with one intercept per order and
+  a common slope, over the orders with at least 5 species with a residual; species of smaller orders unknown. It asks
+  the same of a species against its own order, so that bats or parrots as a whole do not carry the result.
+- *R1, RELAX (primary), R2, one pair per origin (primary), R4, aBSREL (exploratory).* As H21's design, with its trait
+  clades, control draws, pair rule, saturation rule, minimums and code choices. R1 and R4 on `long_lived`; R2 on both
+  definitions. R2's size term is the pair's difference in log10 adult mass.
+- *C, the coevolution side.* Mammals only, on the species set and branch lengths H23 prepares
+  (`out/coupling/Mammalia`), with `long_lived` as the foreground; C1 and C2 as H21's design, and read only if H23's
+  positive control passes. In birds C is not assessed: H21 to H25 prepare no bird set.
+- *R3 is not run.* Composition against lifespan and mass is H1's and H11's, on the continuous trait.
+- *Predicted.* R1: K > 1, selection intensified on the branches of long-lived clades. R2: Δω negative. ΔdS is reported
+  beside R2 and predicted negative by the longevity hypothesis, outside the correction. C: no direction.
+- *Correction.* Holm within each class over its primary readouts that could be assessed: R1, R2, and in mammals C1, C2.
+- *Reading.* As H21's: R1 "as predicted" when K > 1 with Holm p < 0.05 and the likelihood ratio above at least 19 of
+  the 20 control draws'; K < 1 under both conditions "opposite to the prediction"; p < 0.05 without the control
+  condition "not separated from the control clades"; else "not detected". R2 "as predicted" when Δω is negative with
+  Holm p < 0.05; positive, "opposite"; else "not detected", with the count of pairs and the median with its interval.
+  A result in one class and not the other is said as such and is not called convergent across classes.
+- *Known weaknesses, said in advance.* The cuts (upper quarter against lower half) are arbitrary and make a 0/1 trait of
+  a continuous one; H3's Coevol asks the continuous question. Maximum lifespan grows with the number of animals
+  recorded, so well-studied species look long-lived. A species at 1 beside relatives at 0 may be a record, not an
+  origin. In mammals the long-lived clades will hold many bats, which are also H23's positive control for C; the
+  sensitivity definition is the answer to that for R2, and there is none for R1. Mass is one adult value per species.
+  Twelve genes are one linked molecule.
+**Test.** `mitoage adapt longevity-traits` writes the trait table; the steps of H21 then run on it into
+`out/adapt-longevity/`; `slurm/adapt-longevity.sbatch`.
+**Result.** Not yet run.
