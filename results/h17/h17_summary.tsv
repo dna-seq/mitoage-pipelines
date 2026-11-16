@@ -1,0 +1,142 @@
+test	score	n	value	reads
+T1	coev_excess	13	-0.061	Spearman of activity (% of control) against the score; negative is the prediction
+T1	coev_excess_mean	13	-0.030	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_contact	13	0.327	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_contact_mean	13	0.413	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_partner_excess	13	-0.118	Spearman of activity (% of control) against the score; negative is the prediction
+T1	coev_contact	13	-0.099	Spearman of activity (% of control) against the score; negative is the prediction
+T1	coev_control	13	0.129	Spearman of activity (% of control) against the score; negative is the prediction
+T1	coev_excess_t50	13	0.030	Spearman of activity (% of control) against the score; negative is the prediction
+T1	coev_excess_noorder	13	0.058	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_control	13	0.055	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_all	13	0.333	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_partner_effect	13	-0.374	Spearman of activity (% of control) against the score; negative is the prediction
+T1	esm_partner_effect_control	13	-0.096	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_contact	13	-0.195	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_all	13	-0.355	Spearman of activity (% of control) against the score; negative is the prediction
+T1	f_all	13	-0.594	Spearman of activity (% of control) against the score; negative is the prediction
+T2	coev_excess	9 reduced, 20 not	0.733	area under the ROC curve for reduced against not reduced
+T2	coev_excess_mean	9 reduced, 20 not	0.667	area under the ROC curve for reduced against not reduced
+T2	esm_contact	9 reduced, 20 not	0.328	area under the ROC curve for reduced against not reduced
+T2	esm_contact_mean	9 reduced, 20 not	0.328	area under the ROC curve for reduced against not reduced
+T2	esm_partner_excess	9 reduced, 20 not	0.583	area under the ROC curve for reduced against not reduced
+T2	coev_contact	9 reduced, 20 not	0.511	area under the ROC curve for reduced against not reduced
+T2	coev_control	9 reduced, 20 not	0.200	area under the ROC curve for reduced against not reduced
+T2	coev_excess_t50	9 reduced, 20 not	0.511	area under the ROC curve for reduced against not reduced
+T2	coev_excess_noorder	9 reduced, 20 not	0.544	area under the ROC curve for reduced against not reduced
+T2	esm_control	9 reduced, 20 not	0.356	area under the ROC curve for reduced against not reduced
+T2	esm_all	9 reduced, 20 not	0.500	area under the ROC curve for reduced against not reduced
+T2	esm_partner_effect	9 reduced, 20 not	0.783	area under the ROC curve for reduced against not reduced
+T2	esm_partner_effect_control	9 reduced, 20 not	0.661	area under the ROC curve for reduced against not reduced
+T2	d_contact	9 reduced, 20 not	0.800	area under the ROC curve for reduced against not reduced
+T2	d_all	9 reduced, 20 not	0.744	area under the ROC curve for reduced against not reduced
+T2	f_all	9 reduced, 20 not	0.606	area under the ROC curve for reduced against not reduced
+T2b	coev_excess (complex I)	5 reduced, 4 not	0.700	T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess_mean (complex I)	5 reduced, 4 not	0.700	T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact (complex I)	5 reduced, 4 not	0.350	T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact_mean (complex I)	5 reduced, 4 not	0.350	T2 within one complex; added after the first run (exploratory)
+T2b	esm_partner_excess (complex I)	5 reduced, 4 not	0.850	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex I)	5 reduced, 4 not	0.600	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess (complex III)	1 reduced, 7 not	0.286	T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess_mean (complex III)	1 reduced, 7 not	0.286	T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact (complex III)	1 reduced, 7 not	0.000	T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact_mean (complex III)	1 reduced, 7 not	0.000	T2 within one complex; added after the first run (exploratory)
+T2b	esm_partner_excess (complex III)	1 reduced, 7 not	0.857	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex III)	1 reduced, 7 not	0.857	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess (complex IV)	3 reduced, 6 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess_mean (complex IV)	3 reduced, 6 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact (complex IV)	3 reduced, 6 not	0.389	T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact_mean (complex IV)	3 reduced, 6 not	0.389	T2 within one complex; added after the first run (exploratory)
+T2b	esm_partner_excess (complex IV)	3 reduced, 6 not	0.556	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex IV)	3 reduced, 6 not	0.861	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	coev_excess_mean (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	esm_contact_mean (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	esm_partner_excess (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2	left out			mus-musculus / rattus-norvegicus complex III: the sources disagree (10.1074/jbc.M004053200;10.1074/jbc.M004070200)
+T3	coev_excess	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest coev_excess in complex I
+T3	coev_excess_mean	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest coev_excess_mean in complex III
+T3	esm_contact	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest esm_contact in complex V
+T3	esm_contact_mean	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest esm_contact_mean in complex V
+T3	esm_partner_excess	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest esm_partner_excess in complex I
+T3	d_contact	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_contact in complex I
+T3	d_all	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest f_all in complex III
+T3	coev_excess	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest coev_excess in complex I
+T3	coev_excess_mean	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest coev_excess_mean in complex I
+T3	esm_contact	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest esm_contact in complex I
+T3	esm_contact_mean	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest esm_contact_mean in complex V
+T3	esm_partner_excess	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest esm_partner_excess in complex I
+T3	d_contact	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_contact in complex I
+T3	d_all	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest f_all in complex III
+T3	coev_excess	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest coev_excess in complex I
+T3	coev_excess_mean	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest coev_excess_mean in complex I
+T3	esm_contact	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest esm_contact in complex I
+T3	esm_contact_mean	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest esm_contact_mean in complex V
+T3	esm_partner_excess	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest esm_partner_excess in complex I
+T3	d_contact	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_contact in complex I
+T3	d_all	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest f_all in complex V
+T3	coev_excess	2	0.000	mus-musculus / rattus-norvegicus: most reduced I, highest coev_excess in complex IV
+T3	coev_excess_mean	2	0.000	mus-musculus / rattus-norvegicus: most reduced I, highest coev_excess_mean in complex IV
+T3	esm_contact	2	0.000	mus-musculus / rattus-norvegicus: most reduced I, highest esm_contact in complex IV
+T3	esm_contact_mean	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest esm_contact_mean in complex I
+T3	esm_partner_excess	2	0.000	mus-musculus / rattus-norvegicus: most reduced I, highest esm_partner_excess in complex IV
+T3	d_contact	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_contact in complex I
+T3	d_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_all in complex I
+T3	f_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest f_all in complex I
+T3	coev_excess	3	1.000	mus-musculus / mus-pahari: most reduced IV, highest coev_excess in complex IV
+T3	coev_excess_mean	3	1.000	mus-musculus / mus-pahari: most reduced IV, highest coev_excess_mean in complex IV
+T3	esm_contact	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest esm_contact in complex I
+T3	esm_contact_mean	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest esm_contact_mean in complex I
+T3	esm_partner_excess	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest esm_partner_excess in complex III
+T3	d_contact	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_contact in complex I
+T3	d_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_all in complex I
+T3	f_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest f_all in complex I
+T3	coev_excess	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest coev_excess in complex IV
+T3	coev_excess_mean	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest coev_excess_mean in complex IV
+T3	esm_contact	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest esm_contact in complex I
+T3	esm_contact_mean	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest esm_contact_mean in complex I
+T3	esm_partner_excess	3	1.000	mus-musculus / otomys-irroratus: most reduced III, highest esm_partner_excess in complex III
+T3	d_contact	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_contact in complex I
+T3	d_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_all in complex I
+T3	f_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest f_all in complex I
+T4	coev_excess	3	1.000	homo-sapiens / pongo-pygmaeus: total coev_excess 81.3958 against at most 48.83 for a donor that respired
+T4	coev_excess_mean	3	1.000	homo-sapiens / pongo-pygmaeus: total coev_excess_mean 0.16316 against at most 0.0292 for a donor that respired
+T4	esm_contact	3	0.000	homo-sapiens / pongo-pygmaeus: total esm_contact 41.0751 against at most 43.4356 for a donor that respired
+T4	esm_contact_mean	3	1.000	homo-sapiens / pongo-pygmaeus: total esm_contact_mean 0.2472 against at most 0.22919 for a donor that respired
+T4	esm_partner_excess	3	1.000	homo-sapiens / pongo-pygmaeus: total esm_partner_excess 11.4107 against at most 10.7387 for a donor that respired
+T4	d_contact	3	1.000	homo-sapiens / pongo-pygmaeus: total d_contact 161 against at most 80 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-pygmaeus: total d_all 443 against at most 209 for a donor that respired
+T4	coev_excess	3	0.000	homo-sapiens / pongo-abelii: total coev_excess 20.2667 against at most 48.83 for a donor that respired
+T4	coev_excess_mean	3	0.000	homo-sapiens / pongo-abelii: total coev_excess_mean -0.05592 against at most 0.0292 for a donor that respired
+T4	esm_contact	3	0.000	homo-sapiens / pongo-abelii: total esm_contact 32.642 against at most 43.4356 for a donor that respired
+T4	esm_contact_mean	3	0.000	homo-sapiens / pongo-abelii: total esm_contact_mean 0.20079 against at most 0.22919 for a donor that respired
+T4	esm_partner_excess	3	0.000	homo-sapiens / pongo-abelii: total esm_partner_excess 7.38105 against at most 10.7387 for a donor that respired
+T4	d_contact	3	1.000	homo-sapiens / pongo-abelii: total d_contact 165 against at most 80 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-abelii: total d_all 426 against at most 209 for a donor that respired
+T4	coev_excess	6	1.000	mus-musculus / cricetulus-griseus: total coev_excess 36.8764 against at most 5.55242 for a donor that respired
+T4	coev_excess_mean	6	0.000	mus-musculus / cricetulus-griseus: total coev_excess_mean 0.02898 against at most 0.04446 for a donor that respired
+T4	esm_contact	6	1.000	mus-musculus / cricetulus-griseus: total esm_contact 92.4889 against at most 21.4214 for a donor that respired
+T4	esm_contact_mean	6	1.000	mus-musculus / cricetulus-griseus: total esm_contact_mean 0.25394 against at most 0.04859 for a donor that respired
+T4	esm_partner_excess	6	1.000	mus-musculus / cricetulus-griseus: total esm_partner_excess 4.68225 against at most 0.24196 for a donor that respired
+T4	d_contact	6	1.000	mus-musculus / cricetulus-griseus: total d_contact 277 against at most 169 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / cricetulus-griseus: total d_all 740 against at most 415 for a donor that respired
+T4	coev_excess	6	1.000	mus-musculus / mesocricetus-auratus: total coev_excess 36.1661 against at most 5.55242 for a donor that respired
+T4	coev_excess_mean	6	1.000	mus-musculus / mesocricetus-auratus: total coev_excess_mean 0.09462 against at most 0.04446 for a donor that respired
+T4	esm_contact	6	1.000	mus-musculus / mesocricetus-auratus: total esm_contact 30.8013 against at most 21.4214 for a donor that respired
+T4	esm_contact_mean	6	1.000	mus-musculus / mesocricetus-auratus: total esm_contact_mean 0.11433 against at most 0.04859 for a donor that respired
+T4	esm_partner_excess	6	1.000	mus-musculus / mesocricetus-auratus: total esm_partner_excess 3.27397 against at most 0.24196 for a donor that respired
+T4	d_contact	6	1.000	mus-musculus / mesocricetus-auratus: total d_contact 266 against at most 169 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / mesocricetus-auratus: total d_all 714 against at most 415 for a donor that respired

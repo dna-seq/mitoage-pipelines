@@ -1361,4 +1361,37 @@ table, the points and the readouts T1 to T4 (and T2b) are H16's, unchanged (`mit
 **Test.** `slurm/h17-cybrid.sbatch` (CPU: the contact maps, the co-evolution score, the tests and the breaks of each
 guard, a rerun check) and `slurm/h17-cybrid-esm.sbatch` (GPU: the ESM-2 scores, then the readout), on haumea, on the
 inputs of H14's job (build 0f4e970, its vertebrate partner alignments).
-**Result.** Not yet run.
+**Result** (haumea jobs 6493605 and 6493606, run from 329d9a6; `results/h17/`). No score meets the rule; none meets
+two of its three parts.
+
+| score | T1 Spearman (13) | T2 area (9 against 20) | T3 most reduced complex named (of 6) |
+| --- | --- | --- | --- |
+| `d_all` (divergence, the baseline) | −0.36 | 0.74 | 4 |
+| `coev_excess` | −0.06 | 0.73 | 4 |
+| `coev_excess_mean` | −0.03 | 0.67 | 3 |
+| `esm_contact` | +0.33 | 0.33 | 2 |
+| `esm_contact_mean` | +0.41 | 0.33 | 1 |
+| `esm_partner_excess` | −0.12 | 0.58 | 4 |
+
+- *Co-evolution.* `coev_excess` names *M. pahari*'s complex IV, which no count does, but names complex IV for the rat
+  and for *Otomys* too, where complexes I and III are the most reduced. Its sensitivities fall to chance in T2 (0.51
+  with the pseudocount 0.5, 0.54 with the host's order left out), so what it has rests on the host's relatives. The
+  pairs' statistics are thin where the proteins are conserved: at 80% identity the 418 species of complex IV count as
+  3.3 effective sequences, complex III's 420 as 16.8 (complex I 74.5, complex V 58.9).
+- *ESM-2 alone* goes the wrong way: complexes whose donor residues the model finds less likely are the less reduced
+  ones (T2 0.33, T1 positive).
+- *ESM-2 with the partner.* `esm_partner_excess` names *Otomys*' complex III, the 2% of control that no other score
+  finds, and the three apes' complex I; it misses the rat and *M. pahari*, and across all points separates reduced from
+  normal complexes poorly (0.58).
+- *T4*, donors that gave no cybrid: both hamsters score above every donor that respired with `coev_excess`,
+  `esm_contact` and `esm_partner_excess`; of the two orangutans only *P. pygmaeus* does, and not with `esm_contact`.
+  Divergence places all four.
+**Reading.** By the rule fixed in advance, these sequence-based scores do not find the cybrids' defects: neither the
+co-evolved pairs nor ESM-2 orders the measured activities or separates reduced from normal complexes better than
+divergence. Two single hits are not claims and are named only as what a later test could ask again: the partner
+reading of ESM-2 at *Otomys*' complex III, and the co-evolution score at *M. pahari*'s complex IV. What remains for
+the interface question is an energy on the threaded chimeric complexes, or molecular dynamics at a few sites.
+**Limits.** Those said in advance, and: the 80% identity weighting, standard for families of proteins, leaves almost
+no effective sequences for the conserved COX proteins, so complex IV's co-evolution score is close to unweighted
+noise; the library did not report the checkpoint's commit; one partner pair of complex I exceeds the model's length in
+each host and was not assessed.

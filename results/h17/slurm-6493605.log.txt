@@ -1,0 +1,299 @@
+commit 329d9a6ca557c8f4573cdad2d737237f088b105d
+267a16311cca579af2ca1cd004e99befe66e53e1ae7696d71ffb9f6b7be5dbed  data/input/mitoage/species.parquet
+0f7ffe14c23ab28b6f0a99f7961930de5b6e25659415aaecfb41883b26fbde6a  data/input/cybrid/records.gb
+7bee4569638b05a2b23709f17b51b28ed56c50b0d2df19d86028a490ad29ac32  data/input/pdb/5XTD.cif
+2daafe97179293a3de6e75d562178b905f8f1c053b8e39e2b9b15c46b28bc6cb  data/input/pdb/5XTE.cif
+c9401e6cbf48cb0fd0cc8df22f233fd2d894c295be9e144b03781324cb02adfa  data/input/pdb/5Z62.cif
+8125baa6e3319d70ff30f7685b0be9690364a06b8868c9f29c5892fb30c45f10  data/input/pdb/8H9S.cif
+dc712a025912e5d7fb418d94a88bfa23016533c74729849b54c4c8dcbc17395c  data/interim/mitoport/iface/contacts.tsv
+3a2f475ef1df2e433cf5a352920764804d83afd34a829f894989d22bb40252e4  data/interim/mitoport/iface-I/contacts.tsv
+3a749aed657d6af92982a3efa802d59137edabb528d65ac4fa19cf6152905767  data/interim/mitoport/iface-III/contacts.tsv
+23404bf1d7391269f494f131933fcee945c43a87967891e87a86f1a943fadcbe  data/interim/mitoport/iface-V/contacts.tsv
+a9856e7fd86777719b0d5acbb59666b6a8aedecbf2ee1529789ab202e3ca5f52  data/interim/mitoport/iface-III/sites.tsv
+99ad571cfaaffeef4f76496925b2f801bd21b4bf26d5bba1b8d33243ab65106d  data/interim/mitoport/iface-I/sites.tsv
+0f800a1f076da452cb5ea16cb1e67ca11ad27fad0505b6af7c760d5b987308b5  data/interim/mitoport/iface/sites.tsv
+9dbc177b8bbf3b715072eabce4bd3746529b86884020c566fc95f85073396b85  data/interim/mitoport/iface-V/sites.tsv
+06676ab7cd5a883fcdd7729ed0bc376f8fd6b09da2d1719d0dbe98ea2dad56f7  data/interim/mitoport/iface/control_pairs.tsv
+84da0458f688dc0629c9f9f5d85e50b05ec11959ee13ccee196cfdc2c7d5cf9d  data/interim/mitoport/iface-I/control_pairs.tsv
+1bc9f1dc144ba0b4fec7b35387d26ea0400a31764de40d4bf4a43978acdba3e7  data/interim/mitoport/iface-III/control_pairs.tsv
+6eaf85a125e16f3312188a9ecff8925418951bd9377c8dccd8dd70972edad618  data/interim/mitoport/iface-V/control_pairs.tsv
+853d29226eccebf977fc6d9dd6973107b7e1e515b5917a18f5c1753a34a44df5  data/interim/mitoport/iface/chains.tsv
+ea2766c223a9985147002e87b15aa0a87bd333edcef91ab3f2e1375964cb9508  data/interim/mitoport/iface-I/chains.tsv
+72589d01c381c4302d972072bec523e820c171adc42625da2dd64c7a395096a0  data/interim/mitoport/iface-III/chains.tsv
+2b7b18a73d5a5642564b0b4a288a6d4acdc2a780a63db9151f7da5c807ea53bd  data/interim/mitoport/iface-V/chains.tsv
+ab2e5555117689dfa130ab2888630318d0290b36dd4d8b6094c21ec2640006cc  -
+complex I (5XTD): 2113 of 2114 positions resolved, 621 touch a nuclear subunit, 558 another mtDNA-encoded one
+complex III (5XTE): 378 of 380 positions resolved, 104 touch a nuclear subunit, 26 another mtDNA-encoded one
+complex IV (5Z62): 1000 of 1001 positions resolved, 298 touch a nuclear subunit, 255 another mtDNA-encoded one
+complex V (8H9S): 274 of 294 positions resolved, 129 touch a nuclear subunit, 62 another mtDNA-encoded one
+        host             donor complex      status    pct  d_contact  f_contact  d_all    f_all
+homo-sapiens   pan-troglodytes       I     reduced  59.00         42   0.067633    108 0.051088
+homo-sapiens   pan-troglodytes     III not_reduced    NaN          6   0.057692     25 0.065789
+homo-sapiens   pan-troglodytes      IV not_reduced    NaN          6   0.020134     18 0.017982
+homo-sapiens   pan-troglodytes       V not_reduced    NaN          5   0.038760     17 0.057823
+homo-sapiens      pan-paniscus       I     reduced  57.00         49   0.078905    109 0.051561
+homo-sapiens      pan-paniscus     III not_reduced    NaN          9   0.086538     25 0.065789
+homo-sapiens      pan-paniscus      IV not_reduced    NaN          8   0.026846     17 0.016983
+homo-sapiens      pan-paniscus       V not_reduced    NaN          6   0.046512     15 0.051020
+homo-sapiens   gorilla-gorilla       I     reduced  55.00         53   0.085346    134 0.063387
+homo-sapiens   gorilla-gorilla     III not_reduced    NaN          7   0.067308     28 0.073684
+homo-sapiens   gorilla-gorilla      IV not_reduced    NaN          8   0.026846     24 0.023976
+homo-sapiens   gorilla-gorilla       V not_reduced    NaN         12   0.093023     23 0.078231
+mus-musculus       mus-spretus       I not_reduced  78.00         28   0.045089     71 0.033586
+mus-musculus       mus-spretus     III not_reduced 114.00          0   0.000000      4 0.010526
+mus-musculus       mus-spretus      IV not_reduced  85.00          3   0.010067      4 0.003996
+mus-musculus rattus-norvegicus       I     reduced  46.00        128   0.206119    346 0.163671
+mus-musculus rattus-norvegicus     III    disagree  37.00          5   0.048077     23 0.060526
+mus-musculus rattus-norvegicus      IV     reduced  64.75          9   0.030201     20 0.019980
+mus-musculus        mus-caroli       I not_reduced    NaN         74   0.119163    194 0.091769
+mus-musculus        mus-caroli     III not_reduced    NaN          4   0.038462     11 0.028947
+mus-musculus        mus-caroli      IV not_reduced    NaN          4   0.013423      8 0.007992
+mus-musculus    mus-terricolor       I not_reduced    NaN         51   0.082126    140 0.066225
+mus-musculus    mus-terricolor     III not_reduced    NaN          0   0.000000      7 0.018421
+mus-musculus    mus-terricolor      IV not_reduced    NaN          4   0.013423      8 0.007992
+mus-musculus        mus-pahari       I not_reduced    NaN        100   0.161031    237 0.112110
+mus-musculus        mus-pahari     III not_reduced    NaN          4   0.038462     11 0.028947
+mus-musculus        mus-pahari      IV     reduced  59.00          6   0.020134     14 0.013986
+mus-musculus  otomys-irroratus       I     reduced  72.00        137   0.220612    325 0.153737
+mus-musculus  otomys-irroratus     III     reduced   2.00          8   0.076923     25 0.065789
+mus-musculus  otomys-irroratus      IV     reduced  44.00         11   0.036913     22 0.021978
+test                      score                 n     value                                                                                                              reads
+  T1                  d_contact                13 -0.195323                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T1                  f_contact                13 -0.464925                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T1          d_contact_radical                13 -0.193909                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T1               d_noncontact                13 -0.322314                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T1               f_noncontact                13 -0.550964                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T1                      d_all                13 -0.355372                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T1                      f_all                13 -0.594223                                  Spearman of activity (% of control) against the score; negative is the prediction
+  T2                  d_contact 9 reduced, 20 not  0.800000                                                           area under the ROC curve for reduced against not reduced
+  T2                  f_contact 9 reduced, 20 not  0.680556                                                           area under the ROC curve for reduced against not reduced
+  T2          d_contact_radical 9 reduced, 20 not  0.763889                                                           area under the ROC curve for reduced against not reduced
+  T2               d_noncontact 9 reduced, 20 not  0.733333                                                           area under the ROC curve for reduced against not reduced
+  T2               f_noncontact 9 reduced, 20 not  0.541667                                                           area under the ROC curve for reduced against not reduced
+  T2                      d_all 9 reduced, 20 not  0.744444                                                           area under the ROC curve for reduced against not reduced
+  T2                      f_all 9 reduced, 20 not  0.605556                                                           area under the ROC curve for reduced against not reduced
+ T2b      d_contact (complex I)  5 reduced, 4 not  0.600000                                                     T2 within one complex; added after the first run (exploratory)
+ T2b      f_contact (complex I)  5 reduced, 4 not  0.600000                                                     T2 within one complex; added after the first run (exploratory)
+ T2b   d_noncontact (complex I)  5 reduced, 4 not  0.550000                                                     T2 within one complex; added after the first run (exploratory)
+ T2b          d_all (complex I)  5 reduced, 4 not  0.550000                                                     T2 within one complex; added after the first run (exploratory)
+ T2b          f_all (complex I)  5 reduced, 4 not  0.550000                                                     T2 within one complex; added after the first run (exploratory)
+ T2b    d_contact (complex III)  1 reduced, 7 not  0.857143                                                     T2 within one complex; added after the first run (exploratory)
+ T2b    f_contact (complex III)  1 reduced, 7 not  0.857143                                                     T2 within one complex; added after the first run (exploratory)
+ T2b d_noncontact (complex III)  1 reduced, 7 not  0.642857                                                     T2 within one complex; added after the first run (exploratory)
+ T2b        d_all (complex III)  1 reduced, 7 not  0.714286                                                     T2 within one complex; added after the first run (exploratory)
+ T2b        f_all (complex III)  1 reduced, 7 not  0.714286                                                     T2 within one complex; added after the first run (exploratory)
+ T2b     d_contact (complex IV)  3 reduced, 6 not  0.861111                                                     T2 within one complex; added after the first run (exploratory)
+ T2b     f_contact (complex IV)  3 reduced, 6 not  0.861111                                                     T2 within one complex; added after the first run (exploratory)
+ T2b  d_noncontact (complex IV)  3 reduced, 6 not  0.611111                                                     T2 within one complex; added after the first run (exploratory)
+ T2b         d_all (complex IV)  3 reduced, 6 not  0.722222                                                     T2 within one complex; added after the first run (exploratory)
+ T2b         f_all (complex IV)  3 reduced, 6 not  0.722222                                                     T2 within one complex; added after the first run (exploratory)
+ T2b      d_contact (complex V)  0 reduced, 3 not       NaN                                                     T2 within one complex; added after the first run (exploratory)
+ T2b      f_contact (complex V)  0 reduced, 3 not       NaN                                                     T2 within one complex; added after the first run (exploratory)
+ T2b   d_noncontact (complex V)  0 reduced, 3 not       NaN                                                     T2 within one complex; added after the first run (exploratory)
+ T2b          d_all (complex V)  0 reduced, 3 not       NaN                                                     T2 within one complex; added after the first run (exploratory)
+ T2b          f_all (complex V)  0 reduced, 3 not       NaN                                                     T2 within one complex; added after the first run (exploratory)
+  T2                   left out                         NaN mus-musculus / rattus-norvegicus complex III: the sources disagree (10.1074/jbc.M004053200;10.1074/jbc.M004070200)
+  T3                  f_contact                 4  1.000000                                     homo-sapiens / pan-troglodytes: most reduced I, highest f_contact in complex I
+  T3                  d_contact                 4  1.000000                                     homo-sapiens / pan-troglodytes: most reduced I, highest d_contact in complex I
+  T3                      f_all                 4  0.000000                                       homo-sapiens / pan-troglodytes: most reduced I, highest f_all in complex III
+  T3                      d_all                 4  1.000000                                         homo-sapiens / pan-troglodytes: most reduced I, highest d_all in complex I
+  T3                  f_contact                 4  0.000000                                      homo-sapiens / pan-paniscus: most reduced I, highest f_contact in complex III
+  T3                  d_contact                 4  1.000000                                        homo-sapiens / pan-paniscus: most reduced I, highest d_contact in complex I
+  T3                      f_all                 4  0.000000                                          homo-sapiens / pan-paniscus: most reduced I, highest f_all in complex III
+  T3                      d_all                 4  1.000000                                            homo-sapiens / pan-paniscus: most reduced I, highest d_all in complex I
+  T3                  f_contact                 4  0.000000                                     homo-sapiens / gorilla-gorilla: most reduced I, highest f_contact in complex V
+  T3                  d_contact                 4  1.000000                                     homo-sapiens / gorilla-gorilla: most reduced I, highest d_contact in complex I
+  T3                      f_all                 4  0.000000                                         homo-sapiens / gorilla-gorilla: most reduced I, highest f_all in complex V
+  T3                      d_all                 4  1.000000                                         homo-sapiens / gorilla-gorilla: most reduced I, highest d_all in complex I
+  T3                  f_contact                 2  1.000000                                   mus-musculus / rattus-norvegicus: most reduced I, highest f_contact in complex I
+  T3                  d_contact                 2  1.000000                                   mus-musculus / rattus-norvegicus: most reduced I, highest d_contact in complex I
+  T3                      f_all                 2  1.000000                                       mus-musculus / rattus-norvegicus: most reduced I, highest f_all in complex I
+  T3                      d_all                 2  1.000000                                       mus-musculus / rattus-norvegicus: most reduced I, highest d_all in complex I
+  T3                  f_contact                 3  0.000000                                         mus-musculus / mus-pahari: most reduced IV, highest f_contact in complex I
+  T3                  d_contact                 3  0.000000                                         mus-musculus / mus-pahari: most reduced IV, highest d_contact in complex I
+  T3                      f_all                 3  0.000000                                             mus-musculus / mus-pahari: most reduced IV, highest f_all in complex I
+  T3                      d_all                 3  0.000000                                             mus-musculus / mus-pahari: most reduced IV, highest d_all in complex I
+  T3                  f_contact                 3  0.000000                                  mus-musculus / otomys-irroratus: most reduced III, highest f_contact in complex I
+  T3                  d_contact                 3  0.000000                                  mus-musculus / otomys-irroratus: most reduced III, highest d_contact in complex I
+  T3                      f_all                 3  0.000000                                      mus-musculus / otomys-irroratus: most reduced III, highest f_all in complex I
+  T3                      d_all                 3  0.000000                                      mus-musculus / otomys-irroratus: most reduced III, highest d_all in complex I
+  T4                  d_contact                 3  1.000000                    homo-sapiens / pongo-pygmaeus: total d_contact 161 against at most 80 for a donor that respired
+  T4                      d_all                 3  1.000000                       homo-sapiens / pongo-pygmaeus: total d_all 443 against at most 209 for a donor that respired
+  T4                  d_contact                 3  1.000000                      homo-sapiens / pongo-abelii: total d_contact 165 against at most 80 for a donor that respired
+  T4                      d_all                 3  1.000000                         homo-sapiens / pongo-abelii: total d_all 426 against at most 209 for a donor that respired
+  T4                  d_contact                 6  1.000000               mus-musculus / cricetulus-griseus: total d_contact 277 against at most 169 for a donor that respired
+  T4                      d_all                 6  1.000000                   mus-musculus / cricetulus-griseus: total d_all 740 against at most 415 for a donor that respired
+  T4                  d_contact                 6  1.000000             mus-musculus / mesocricetus-auratus: total d_contact 266 against at most 169 for a donor that respired
+  T4                      d_all                 6  1.000000                 mus-musculus / mesocricetus-auratus: total d_all 714 against at most 415 for a donor that respired
+wrote /data/uq2347/runs/mitoage/h17-cybrid/data/output/mitoport/cybrid
+complex I: 1347 contact pairs, 27 nuclear genes with an alignment, 420 species with every mitochondrial protein and a partner, effective sequences 74.5
+complex III: 225 contact pairs, 6 nuclear genes with an alignment, 420 species with every mitochondrial protein and a partner, effective sequences 16.8
+complex IV: 687 contact pairs, 11 nuclear genes with an alignment, 418 species with every mitochondrial protein and a partner, effective sequences 3.3
+NOTE: ATP8: 17 of 34 contact residues have no control (`mitoport burial` ran out of candidates); their pairs are left out
+complex V: 254 contact pairs, 5 nuclear genes with an alignment, 418 species with every mitochondrial protein and a partner, effective sequences 58.9
+        host                donor complex  pairs_scored  pairs_changed  pairs_unscored  coev_contact  coev_control  coev_excess  coev_excess_t50  coev_excess_noorder
+homo-sapiens      gorilla-gorilla       I          1327            100              20        25.952        -5.827       31.779           22.863              -15.955
+homo-sapiens         pan-paniscus       I          1327             95              20        16.141       -36.142       52.283           49.350               40.632
+homo-sapiens      pan-troglodytes       I          1327             74              20       -11.776       -25.857       14.081           12.539               36.930
+homo-sapiens         pongo-abelii       I          1324            213              23        34.748         1.000       33.747           47.345               33.411
+homo-sapiens       pongo-pygmaeus       I          1324            199              23        46.777        25.645       21.132           56.282               63.592
+mus-musculus   cricetulus-griseus       I          1295            394              52        49.453        31.741       17.712           41.866               41.760
+mus-musculus mesocricetus-auratus       I          1293            387              54        14.045         4.496        9.550            0.846               32.819
+mus-musculus           mus-caroli       I          1297            132              50       -37.234        31.464      -68.698          -47.368              -34.542
+mus-musculus           mus-pahari       I          1291            178              56         6.222        10.065       -3.843            6.684                6.373
+mus-musculus          mus-spretus       I          1299             49              48         3.121        13.567      -10.447            0.021               -5.367
+mus-musculus       mus-terricolor       I          1297             93              50        -2.019        18.014      -20.033           -4.246              -13.990
+mus-musculus     otomys-irroratus       I          1286            253              61       -46.335         2.490      -48.825          -44.683              -45.309
+mus-musculus    rattus-norvegicus       I          1281            223              66       -51.147       -26.767      -24.379          -14.626               -7.211
+homo-sapiens      gorilla-gorilla     III           225             14               0        -7.015        -2.222       -4.793           -2.652              -11.130
+homo-sapiens         pan-paniscus     III           225             22               0        -7.069        -2.475       -4.595           -0.786              -13.790
+homo-sapiens      pan-troglodytes     III           225             14               0        -3.122        -6.318        3.197            0.756               -7.539
+homo-sapiens         pongo-abelii     III           225             21               0         7.553         1.581        5.972            5.309                2.506
+homo-sapiens       pongo-pygmaeus     III           225             22               0        -2.818         3.373       -6.190           -1.396               -0.970
+mus-musculus   cricetulus-griseus     III           225             23               0         6.064         2.394        3.670          -11.920              -10.748
+mus-musculus mesocricetus-auratus     III           225             23               0         4.760         0.076        4.684          -11.245               -6.170
+mus-musculus           mus-caroli     III           225              4               0         1.911        -0.088        2.000            2.930                3.457
+mus-musculus           mus-pahari     III           225              4               0        -0.644         0.000       -0.644           -0.542               -0.085
+mus-musculus          mus-spretus     III           225              0               0         0.000         0.000        0.000            0.000                0.000
+mus-musculus       mus-terricolor     III           225              0               0         0.000         0.000        0.000            0.000                0.000
+mus-musculus     otomys-irroratus     III           225             10               0         1.282         2.940       -1.658           -4.649               -2.560
+mus-musculus    rattus-norvegicus     III           225              9               0        -0.219        12.059      -12.279          -13.947              -11.482
+homo-sapiens      gorilla-gorilla      IV           678             15               9         1.460        -0.302        1.763           -7.975                8.039
+homo-sapiens         pan-paniscus      IV           681             19               6        -1.699         0.621       -2.321            8.559               17.820
+homo-sapiens      pan-troglodytes      IV           681             16               6        -1.479         0.966       -2.445            5.432               15.142
+homo-sapiens         pongo-abelii      IV           681             45               6        16.699         3.994       12.705            1.509               32.071
+homo-sapiens       pongo-pygmaeus      IV           681             46               6        47.581        12.371       35.209           11.878               36.046
+mus-musculus   cricetulus-griseus      IV           681             48               6        29.775         4.654       25.121           15.206               30.112
+mus-musculus mesocricetus-auratus      IV           681             49               6         7.074        -1.003        8.077           -4.862                8.866
+mus-musculus           mus-caroli      IV           681             10               6        -3.593         2.495       -6.088          -16.215               -9.682
+mus-musculus           mus-pahari      IV           681             20               6         6.236         0.218        6.018           -7.622               -2.678
+mus-musculus          mus-spretus      IV           681              8               6         0.961         1.979       -1.018            2.403               -1.297
+mus-musculus       mus-terricolor      IV           681             10               6        -3.479         4.620       -8.100          -21.112              -10.681
+mus-musculus     otomys-irroratus      IV           681             25               6         1.807       -12.108       13.915            4.986               10.237
+mus-musculus    rattus-norvegicus      IV           681             23               6        -4.237        -9.929        5.693           -6.981               -8.270
+homo-sapiens      gorilla-gorilla       V           254             14               0         6.681         0.907        5.774            7.715               -5.479
+homo-sapiens         pan-paniscus       V           254             10               0         3.772         0.310        3.462            4.606               -8.174
+homo-sapiens      pan-troglodytes       V           254              9               0         1.026         4.543       -3.517           -4.052              -16.281
+homo-sapiens         pongo-abelii       V           254             53               0         1.657        33.815      -32.158          -23.422              -57.431
+homo-sapiens       pongo-pygmaeus       V           254             58               0        45.450        14.206       31.245           28.698               -8.916
+mus-musculus   cricetulus-griseus       V           254             46               0         3.294        12.921       -9.627            4.084               -0.270
+mus-musculus mesocricetus-auratus       V           254             50               0        19.564         5.710       13.855           20.021               27.572
+mus-musculus           mus-caroli       V           250             20               4         4.287        -0.326        4.613           14.876               17.589
+mus-musculus           mus-pahari       V           254             15               0         2.424        -1.598        4.021           11.222               15.700
+mus-musculus          mus-spretus       V           254              2               0         0.510         0.000        0.510            0.834                0.788
+mus-musculus       mus-terricolor       V           254              3               0         0.549        -3.355        3.904            8.548               14.486
+mus-musculus     otomys-irroratus       V           254             17               0        11.875        -5.747       17.621           17.991               34.196
+mus-musculus    rattus-norvegicus       V           254             16               0         2.082         2.853       -0.771            0.601               13.239
+wrote /data/uq2347/runs/mitoage/h17-cybrid/data/output/mitoport/cybrid/coev_scores.tsv /data/uq2347/runs/mitoage/h17-cybrid/data/output/mitoport/cybrid/coev_pairs.tsv
+rerun: identical bytes
+NOT ASSESSED: /data/uq2347/runs/mitoage/h17-cybrid/data/output/mitoport/cybrid/esm_scores.tsv is missing; its scores are left out of the summary
+test                          score                 n     value                                                                                                                 reads
+  T1                    coev_excess                13 -0.060523                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1               coev_excess_mean                13 -0.030261                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1                   coev_contact                13 -0.099037                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1                   coev_control                13  0.129299                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1                coev_excess_t50                13  0.030261                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1            coev_excess_noorder                13  0.057772                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1                      d_contact                13 -0.195323                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1                          d_all                13 -0.355372                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T1                          f_all                13 -0.594223                                     Spearman of activity (% of control) against the score; negative is the prediction
+  T2                    coev_excess 9 reduced, 20 not  0.733333                                                              area under the ROC curve for reduced against not reduced
+  T2               coev_excess_mean 9 reduced, 20 not  0.666667                                                              area under the ROC curve for reduced against not reduced
+  T2                   coev_contact 9 reduced, 20 not  0.511111                                                              area under the ROC curve for reduced against not reduced
+  T2                   coev_control 9 reduced, 20 not  0.200000                                                              area under the ROC curve for reduced against not reduced
+  T2                coev_excess_t50 9 reduced, 20 not  0.511111                                                              area under the ROC curve for reduced against not reduced
+  T2            coev_excess_noorder 9 reduced, 20 not  0.544444                                                              area under the ROC curve for reduced against not reduced
+  T2                      d_contact 9 reduced, 20 not  0.800000                                                              area under the ROC curve for reduced against not reduced
+  T2                          d_all 9 reduced, 20 not  0.744444                                                              area under the ROC curve for reduced against not reduced
+  T2                          f_all 9 reduced, 20 not  0.605556                                                              area under the ROC curve for reduced against not reduced
+ T2b        coev_excess (complex I)  5 reduced, 4 not  0.700000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b   coev_excess_mean (complex I)  5 reduced, 4 not  0.700000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b          d_contact (complex I)  5 reduced, 4 not  0.600000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b              d_all (complex I)  5 reduced, 4 not  0.550000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b              f_all (complex I)  5 reduced, 4 not  0.550000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b      coev_excess (complex III)  1 reduced, 7 not  0.285714                                                        T2 within one complex; added after the first run (exploratory)
+ T2b coev_excess_mean (complex III)  1 reduced, 7 not  0.285714                                                        T2 within one complex; added after the first run (exploratory)
+ T2b        d_contact (complex III)  1 reduced, 7 not  0.857143                                                        T2 within one complex; added after the first run (exploratory)
+ T2b            d_all (complex III)  1 reduced, 7 not  0.714286                                                        T2 within one complex; added after the first run (exploratory)
+ T2b            f_all (complex III)  1 reduced, 7 not  0.714286                                                        T2 within one complex; added after the first run (exploratory)
+ T2b       coev_excess (complex IV)  3 reduced, 6 not  1.000000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b  coev_excess_mean (complex IV)  3 reduced, 6 not  1.000000                                                        T2 within one complex; added after the first run (exploratory)
+ T2b         d_contact (complex IV)  3 reduced, 6 not  0.861111                                                        T2 within one complex; added after the first run (exploratory)
+ T2b             d_all (complex IV)  3 reduced, 6 not  0.722222                                                        T2 within one complex; added after the first run (exploratory)
+ T2b             f_all (complex IV)  3 reduced, 6 not  0.722222                                                        T2 within one complex; added after the first run (exploratory)
+ T2b        coev_excess (complex V)  0 reduced, 3 not       NaN                                                        T2 within one complex; added after the first run (exploratory)
+ T2b   coev_excess_mean (complex V)  0 reduced, 3 not       NaN                                                        T2 within one complex; added after the first run (exploratory)
+ T2b          d_contact (complex V)  0 reduced, 3 not       NaN                                                        T2 within one complex; added after the first run (exploratory)
+ T2b              d_all (complex V)  0 reduced, 3 not       NaN                                                        T2 within one complex; added after the first run (exploratory)
+ T2b              f_all (complex V)  0 reduced, 3 not       NaN                                                        T2 within one complex; added after the first run (exploratory)
+  T2                       left out                         NaN    mus-musculus / rattus-norvegicus complex III: the sources disagree (10.1074/jbc.M004053200;10.1074/jbc.M004070200)
+  T3                    coev_excess                 4  1.000000                                      homo-sapiens / pan-troglodytes: most reduced I, highest coev_excess in complex I
+  T3               coev_excess_mean                 4  0.000000                               homo-sapiens / pan-troglodytes: most reduced I, highest coev_excess_mean in complex III
+  T3                      d_contact                 4  1.000000                                        homo-sapiens / pan-troglodytes: most reduced I, highest d_contact in complex I
+  T3                          d_all                 4  1.000000                                            homo-sapiens / pan-troglodytes: most reduced I, highest d_all in complex I
+  T3                          f_all                 4  0.000000                                          homo-sapiens / pan-troglodytes: most reduced I, highest f_all in complex III
+  T3                    coev_excess                 4  1.000000                                         homo-sapiens / pan-paniscus: most reduced I, highest coev_excess in complex I
+  T3               coev_excess_mean                 4  1.000000                                    homo-sapiens / pan-paniscus: most reduced I, highest coev_excess_mean in complex I
+  T3                      d_contact                 4  1.000000                                           homo-sapiens / pan-paniscus: most reduced I, highest d_contact in complex I
+  T3                          d_all                 4  1.000000                                               homo-sapiens / pan-paniscus: most reduced I, highest d_all in complex I
+  T3                          f_all                 4  0.000000                                             homo-sapiens / pan-paniscus: most reduced I, highest f_all in complex III
+  T3                    coev_excess                 4  1.000000                                      homo-sapiens / gorilla-gorilla: most reduced I, highest coev_excess in complex I
+  T3               coev_excess_mean                 4  1.000000                                 homo-sapiens / gorilla-gorilla: most reduced I, highest coev_excess_mean in complex I
+  T3                      d_contact                 4  1.000000                                        homo-sapiens / gorilla-gorilla: most reduced I, highest d_contact in complex I
+  T3                          d_all                 4  1.000000                                            homo-sapiens / gorilla-gorilla: most reduced I, highest d_all in complex I
+  T3                          f_all                 4  0.000000                                            homo-sapiens / gorilla-gorilla: most reduced I, highest f_all in complex V
+  T3                    coev_excess                 2  0.000000                                   mus-musculus / rattus-norvegicus: most reduced I, highest coev_excess in complex IV
+  T3               coev_excess_mean                 2  0.000000                              mus-musculus / rattus-norvegicus: most reduced I, highest coev_excess_mean in complex IV
+  T3                      d_contact                 2  1.000000                                      mus-musculus / rattus-norvegicus: most reduced I, highest d_contact in complex I
+  T3                          d_all                 2  1.000000                                          mus-musculus / rattus-norvegicus: most reduced I, highest d_all in complex I
+  T3                          f_all                 2  1.000000                                          mus-musculus / rattus-norvegicus: most reduced I, highest f_all in complex I
+  T3                    coev_excess                 3  1.000000                                         mus-musculus / mus-pahari: most reduced IV, highest coev_excess in complex IV
+  T3               coev_excess_mean                 3  1.000000                                    mus-musculus / mus-pahari: most reduced IV, highest coev_excess_mean in complex IV
+  T3                      d_contact                 3  0.000000                                            mus-musculus / mus-pahari: most reduced IV, highest d_contact in complex I
+  T3                          d_all                 3  0.000000                                                mus-musculus / mus-pahari: most reduced IV, highest d_all in complex I
+  T3                          f_all                 3  0.000000                                                mus-musculus / mus-pahari: most reduced IV, highest f_all in complex I
+  T3                    coev_excess                 3  0.000000                                  mus-musculus / otomys-irroratus: most reduced III, highest coev_excess in complex IV
+  T3               coev_excess_mean                 3  0.000000                             mus-musculus / otomys-irroratus: most reduced III, highest coev_excess_mean in complex IV
+  T3                      d_contact                 3  0.000000                                     mus-musculus / otomys-irroratus: most reduced III, highest d_contact in complex I
+  T3                          d_all                 3  0.000000                                         mus-musculus / otomys-irroratus: most reduced III, highest d_all in complex I
+  T3                          f_all                 3  0.000000                                         mus-musculus / otomys-irroratus: most reduced III, highest f_all in complex I
+  T4                    coev_excess                 3  1.000000              homo-sapiens / pongo-pygmaeus: total coev_excess 81.3958 against at most 48.83 for a donor that respired
+  T4               coev_excess_mean                 3  1.000000        homo-sapiens / pongo-pygmaeus: total coev_excess_mean 0.16316 against at most 0.0292 for a donor that respired
+  T4                      d_contact                 3  1.000000                       homo-sapiens / pongo-pygmaeus: total d_contact 161 against at most 80 for a donor that respired
+  T4                          d_all                 3  1.000000                          homo-sapiens / pongo-pygmaeus: total d_all 443 against at most 209 for a donor that respired
+  T4                    coev_excess                 3  0.000000                homo-sapiens / pongo-abelii: total coev_excess 20.2667 against at most 48.83 for a donor that respired
+  T4               coev_excess_mean                 3  0.000000         homo-sapiens / pongo-abelii: total coev_excess_mean -0.05592 against at most 0.0292 for a donor that respired
+  T4                      d_contact                 3  1.000000                         homo-sapiens / pongo-abelii: total d_contact 165 against at most 80 for a donor that respired
+  T4                          d_all                 3  1.000000                            homo-sapiens / pongo-abelii: total d_all 426 against at most 209 for a donor that respired
+  T4                    coev_excess                 6  1.000000        mus-musculus / cricetulus-griseus: total coev_excess 36.8764 against at most 5.55242 for a donor that respired
+  T4               coev_excess_mean                 6  0.000000   mus-musculus / cricetulus-griseus: total coev_excess_mean 0.02898 against at most 0.04446 for a donor that respired
+  T4                      d_contact                 6  1.000000                  mus-musculus / cricetulus-griseus: total d_contact 277 against at most 169 for a donor that respired
+  T4                          d_all                 6  1.000000                      mus-musculus / cricetulus-griseus: total d_all 740 against at most 415 for a donor that respired
+  T4                    coev_excess                 6  1.000000      mus-musculus / mesocricetus-auratus: total coev_excess 36.1661 against at most 5.55242 for a donor that respired
+  T4               coev_excess_mean                 6  1.000000 mus-musculus / mesocricetus-auratus: total coev_excess_mean 0.09462 against at most 0.04446 for a donor that respired
+  T4                      d_contact                 6  1.000000                mus-musculus / mesocricetus-auratus: total d_contact 266 against at most 169 for a donor that respired
+  T4                          d_all                 6  1.000000                    mus-musculus / mesocricetus-auratus: total d_all 714 against at most 415 for a donor that respired
+wrote /data/uq2347/runs/mitoage/h17-cybrid/data/output/mitoport/cybrid/h17_calibration.tsv /data/uq2347/runs/mitoage/h17-cybrid/data/output/mitoport/cybrid/h17_summary.tsv
+ef326b0b8553123122aeb18a302db324b884f217a2d74b8b752757e9344ce857  data/output/mitoport/cybrid/calibration.tsv
+47ec0d10ad2fd02b2ec808f84d94dfc9d7de03afb9eedc0fd535bc2f65af3733  data/output/mitoport/cybrid/coev_pairs.tsv
+396eded971d6f57fb7c28c122ac833300578c6987e20f3f6583b58389486a70f  data/output/mitoport/cybrid/coev_scores.tsv
+e5597d35ae1f8cbb0e8e03ec3d78692c8ee13819c4a8265b0b8cf4d0f9dd69d3  data/output/mitoport/cybrid/h17_calibration.tsv
+3c0d816e2dbc6e814238e8564b86d494264b157493dc96a02433c81ee12b99c1  data/output/mitoport/cybrid/h17_summary.tsv
+ff934597020d953988fb606014801d7a1deda64369eb6b7aa236e4df07ca05b8  data/output/mitoport/cybrid/positions.tsv
+018f7ed510530518a43a8478f7e6be80a9f2d6a6024a40573cb39145a88f40c7  data/output/mitoport/cybrid/scores.tsv
+8c4169dde71627ec92270ff8617f529d21d78ca92ff95508faee2e21aa3e6a3b  data/output/mitoport/cybrid/sequences.tsv
+245866f76ed3f9e8570afae578fbf06e7a54d92a25156e53d3ea5b4f220f08e0  data/output/mitoport/cybrid/summary.tsv
+...........................                                              [100%]
+27 passed in 31.51s
+caught: the identity threshold strict: tests/test_cybrid_h17.py::TestWeights::test_the_threshold_and_gaps
+caught: host and donor counted in their own pairs: tests/test_cybrid_h17.py::TestJointAndPmi::test_skipped_species_gaps_and_weights
+caught: sequence weights ignored: tests/test_cybrid_h17.py::TestJointAndPmi::test_skipped_species_gaps_and_weights
+caught: the loss with its sign turned: tests/test_cybrid_h17.py::TestJointAndPmi::test_pmi_and_loss_by_hand
+caught: a pair with too few species scored: tests/test_cybrid_h17.py::TestScorePair::test_unknown_residues_and_thin_pairs_are_unscored_not_zero
+caught: an unscored pair counted as scored: tests/test_cybrid_h17.py::TestScorePair::test_unknown_residues_and_thin_pairs_are_unscored_not_zero
+caught: a pair over the model's length run: tests/test_cybrid_h17.py::TestEsmBookkeeping::test_tasks_mask_only_differing_positions_and_skip_long_pairs
+caught: the partner's effect not taken against the protein alone: tests/test_cybrid_h17.py::TestEsmBookkeeping::test_scores_by_hand
+caught: a partner that was not run read as assessed: tests/test_cybrid_h17.py::TestEsmBookkeeping::test_a_partner_that_was_not_run_is_not_assessed
+caught: every position masked: tests/test_cybrid_h17.py::TestEsmBookkeeping::test_tasks_mask_only_differing_positions_and_skip_long_pairs
+caught: a missing score table passed over in silence: tests/test_cybrid_h17.py::TestReadout::test_missing_tables_are_said_and_left_out
+11 of 11 mutations caught; sources restored: True
