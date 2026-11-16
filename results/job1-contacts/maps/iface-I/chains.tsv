@@ -1,0 +1,46 @@
+chain	description	gene	is_mt	residues
+A	NADH dehydrogenase [ubiquinone] flavoprotein 1, mitochondrial	NDUFV1	0	431
+B	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8, mitochondrial	NDUFS8	0	176
+C	NADH dehydrogenase [ubiquinone] iron-sulfur protein 7, mitochondrial	NDUFS7	0	156
+E	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6	NDUFA6	0	113
+F	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2	NDUFA2	0	83
+G	Acyl carrier protein, mitochondrial	NDUFAB1	0	85
+H	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5	NDUFA5	0	112
+I	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 7	NDUFA7	0	95
+J	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9, mitochondrial	NDUFA9	0	337
+K	NADH dehydrogenase [ubiquinone] flavoprotein 3, mitochondrial	NDUFV3	0	33
+L	NADH dehydrogenase [ubiquinone] iron-sulfur protein 4, mitochondrial	NDUFS4	0	118
+M	NADH-ubiquinone oxidoreductase 75 kDa subunit, mitochondrial	NDUFS1	0	687
+N	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12	NDUFA12	0	143
+O	NADH dehydrogenase [ubiquinone] flavoprotein 2, mitochondrial	NDUFV2	0	212
+P	NADH dehydrogenase [ubiquinone] iron-sulfur protein 3, mitochondrial	NDUFS3	0	208
+Q	NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial	NDUFS2	0	430
+S	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1	NDUFA1	0	70
+T	NADH dehydrogenase [ubiquinone] iron-sulfur protein 6, mitochondrial	NDUFS6	0	95
+U	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 3	NDUFA3	0	83
+V	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 11	NDUFA11	0	140
+W	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13	NDUFA13	0	138
+X	Acyl carrier protein, mitochondrial	NDUFAB1	0	85
+Y	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2, mitochondrial	NDUFB2	0	59
+Z	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3	NDUFB3	0	80
+a	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 5, mitochondrial	NDUFB5	0	138
+b	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 6	NDUFB6	0	124
+c	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8, mitochondrial	NDUFB8	0	153
+d	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10	NDUFB10	0	171
+e	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 11, mitochondrial	NDUFB11	0	97
+f	NADH dehydrogenase [ubiquinone] 1 subunit C1, mitochondrial	NDUFC1	0	47
+g	NADH dehydrogenase [ubiquinone] 1 subunit C2	NDUFC2	0	119
+h	NADH dehydrogenase [ubiquinone] iron-sulfur protein 5	NDUFS5	0	104
+i	NADH-ubiquinone oxidoreductase chain 2	ND2	1	347
+j	NADH-ubiquinone oxidoreductase chain 3	ND3	1	115
+k	NADH-ubiquinone oxidoreductase chain 4L	ND4L	1	97
+l	NADH-ubiquinone oxidoreductase chain 5	ND5	1	603
+m	NADH-ubiquinone oxidoreductase chain 6	ND6	1	174
+n	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1	NDUFB1	0	56
+o	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 4	NDUFB4	0	128
+p	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9	NDUFB9	0	172
+r	NADH-ubiquinone oxidoreductase chain 4	ND4	1	459
+s	NADH-ubiquinone oxidoreductase chain 1	ND1	1	318
+u	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8	NDUFA8	0	169
+v	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7	NDUFB7	0	111
+w	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial	NDUFA10	0	320

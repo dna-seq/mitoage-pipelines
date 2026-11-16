@@ -1,0 +1,29 @@
+chain	description	gene	is_mt	residues
+K	ATP synthase F(0) complex subunit B1, mitochondrial	ATP5PB	0	198
+L	ATP synthase-coupling factor 6, mitochondrial	ATP5PF	0	67
+M	ATP synthase subunit d, mitochondrial	ATP5PD	0	156
+A	ATP synthase subunit alpha, mitochondrial	ATP5F1A	0	503
+B	ATP synthase subunit alpha, mitochondrial	ATP5F1A	0	477
+C	ATP synthase subunit alpha, mitochondrial	ATP5F1A	0	487
+E	ATP synthase subunit beta, mitochondrial	ATP5F1B	0	456
+F	ATP synthase subunit beta, mitochondrial	ATP5F1B	0	466
+D	ATP synthase subunit beta, mitochondrial	ATP5F1B	0	470
+G	ATP synthase subunit gamma, mitochondrial	ATP5F1C	0	271
+J	ATPase inhibitor, mitochondrial	ATP5IF1	0	35
+O	ATP synthase subunit O, mitochondrial	ATP5PO	0	187
+1	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+2	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+3	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+4	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+5	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+6	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+7	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+8	ATP synthase F(0) complex subunit C1, mitochondrial	ATP5MC1	0	75
+H	ATP synthase subunit delta, mitochondrial	ATP5F1D	0	132
+I	ATP synthase subunit epsilon, mitochondrial	ATP5F1E	0	45
+N	ATP synthase subunit a	ATP6	1	223
+P	ATP synthase subunit ATP5MJ, mitochondrial	ATP5MJ	0	41
+Q	ATP synthase protein 8	ATP8	1	51
+R	ATP synthase subunit f, mitochondrial	ATP5MF	0	78
+S	ATP synthase subunit g, mitochondrial	ATP5MG	0	77
+T	ATP synthase subunit e, mitochondrial	ATP5ME	0	44

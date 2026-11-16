@@ -1,0 +1,293 @@
+mt_gene	chain	pdb_resnum	pdb_res	human_pos	human_aa	partner_chain	partner	partner_is_mt	partner_resnum	partner_res
+CYTB	J	2	THR	2	T	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	335	ASN
+CYTB	J	2	THR	2	T	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	370	PHE
+CYTB	J	2	THR	2	T	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	371	VAL
+CYTB	J	3	PRO	3	P	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	367	ASP
+CYTB	J	3	PRO	3	P	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	370	PHE
+CYTB	J	4	MET	4	M	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	479	ARG
+CYTB	J	5	ARG	5	R	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	366	ASP
+CYTB	J	5	ARG	5	R	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	470	ARG
+CYTB	J	6	LYS	6	K	A	Cytochrome b-c1 complex subunit 8	0	4	GLU
+CYTB	J	6	LYS	6	K	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	366	ASP
+CYTB	J	6	LYS	6	K	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	367	ASP
+CYTB	J	6	LYS	6	K	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	464	GLN
+CYTB	J	8	ASN	8	N	V	Cytochrome b	1	199	PHE
+CYTB	J	9	PRO	9	P	V	Cytochrome b	1	198	LEU
+CYTB	J	9	PRO	9	P	V	Cytochrome b	1	199	PHE
+CYTB	J	9	PRO	9	P	V	Cytochrome b	1	202	GLU
+CYTB	J	10	LEU	10	L	V	Cytochrome b	1	195	LEU
+CYTB	J	10	LEU	10	L	V	Cytochrome b	1	198	LEU
+CYTB	J	10	LEU	10	L	V	Cytochrome b	1	199	PHE
+CYTB	J	12	LYS	12	K	V	Cytochrome b	1	202	GLU
+CYTB	J	13	LEU	13	L	V	Cytochrome b	1	198	LEU
+CYTB	J	20	ASP	20	D	A	Cytochrome b-c1 complex subunit 8	0	5	PHE
+CYTB	J	22	PRO	22	P	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	22	PRO	22	P	A	Cytochrome b-c1 complex subunit 8	0	5	PHE
+CYTB	J	25	SER	25	S	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	25	SER	25	S	F	Cytochrome b-c1 complex subunit 7	0	71	LEU
+CYTB	J	25	SER	25	S	H	Cytochrome c1, heme protein, mitochondrial	0	311	TRP
+CYTB	J	26	ASN	26	N	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	26	ASN	26	N	F	Cytochrome b-c1 complex subunit 7	0	70	ASN
+CYTB	J	26	ASN	26	N	F	Cytochrome b-c1 complex subunit 7	0	71	LEU
+CYTB	J	47	THR	47	T	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	136	PHE
+CYTB	J	50	PHE	50	F	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	136	PHE
+CYTB	J	50	PHE	50	F	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	139	SER
+CYTB	J	50	PHE	50	F	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	140	MET
+CYTB	J	52	ALA	52	A	V	Cytochrome b	1	176	THR
+CYTB	J	52	ALA	52	A	V	Cytochrome b	1	180	THR
+CYTB	J	53	MET	53	M	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	140	MET
+CYTB	J	53	MET	53	M	V	Cytochrome b	1	176	THR
+CYTB	J	53	MET	53	M	V	Cytochrome b	1	177	ARG
+CYTB	J	53	MET	53	M	V	Cytochrome b	1	180	THR
+CYTB	J	53	MET	53	M	V	Cytochrome b	1	181	PHE
+CYTB	J	54	HIS	54	H	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	139	SER
+CYTB	J	54	HIS	54	H	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	143	SER
+CYTB	J	54	HIS	54	H	V	Cytochrome b	1	176	THR
+CYTB	J	54	HIS	54	H	V	Cytochrome b	1	177	ARG
+CYTB	J	55	TYR	55	Y	V	Cytochrome b	1	176	THR
+CYTB	J	56	SER	56	S	V	Cytochrome b	1	58	ASP
+CYTB	J	57	PRO	57	P	V	Cytochrome b	1	57	PRO
+CYTB	J	58	ASP	58	D	V	Cytochrome b	1	56	SER
+CYTB	J	58	ASP	58	D	V	Cytochrome b	1	58	ASP
+CYTB	J	58	ASP	58	D	V	Cytochrome b	1	61	THR
+CYTB	J	61	THR	61	T	V	Cytochrome b	1	58	ASP
+CYTB	J	63	PHE	63	F	H	Cytochrome c1, heme protein, mitochondrial	0	129	PHE
+CYTB	J	64	SER	64	S	H	Cytochrome c1, heme protein, mitochondrial	0	129	PHE
+CYTB	J	67	ALA	67	A	H	Cytochrome c1, heme protein, mitochondrial	0	129	PHE
+CYTB	J	67	ALA	67	A	H	Cytochrome c1, heme protein, mitochondrial	0	199	TYR
+CYTB	J	68	HIS	68	H	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	143	SER
+CYTB	J	68	HIS	68	H	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	145	ASP
+CYTB	J	70	THR	70	T	H	Cytochrome c1, heme protein, mitochondrial	0	199	TYR
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	129	PHE
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	130	VAL
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	198	SER
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	199	TYR
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	277	ALA
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	278	SER
+CYTB	J	71	ARG	71	R	H	Cytochrome c1, heme protein, mitochondrial	0	280	PRO
+CYTB	J	72	ASP	72	D	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	143	SER
+CYTB	J	72	ASP	72	D	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	144	ALA
+CYTB	J	72	ASP	72	D	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	145	ASP
+CYTB	J	72	ASP	72	D	H	Cytochrome c1, heme protein, mitochondrial	0	133	ARG
+CYTB	J	72	ASP	72	D	H	Cytochrome c1, heme protein, mitochondrial	0	134	HIS
+CYTB	J	72	ASP	72	D	H	Cytochrome c1, heme protein, mitochondrial	0	174	TYR
+CYTB	J	73	VAL	73	V	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	139	SER
+CYTB	J	73	VAL	73	V	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	143	SER
+CYTB	J	74	ASN	74	N	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	138	SER
+CYTB	J	74	ASN	74	N	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	139	SER
+CYTB	J	74	ASN	74	N	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	141	SER
+CYTB	J	75	TYR	75	Y	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	135	GLN
+CYTB	J	75	TYR	75	Y	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	138	SER
+CYTB	J	75	TYR	75	Y	H	Cytochrome c1, heme protein, mitochondrial	0	284	HIS
+CYTB	J	77	TRP	77	W	H	Cytochrome c1, heme protein, mitochondrial	0	281	GLU
+CYTB	J	77	TRP	77	W	H	Cytochrome c1, heme protein, mitochondrial	0	285	ARG
+CYTB	J	77	TRP	77	W	H	Cytochrome c1, heme protein, mitochondrial	0	288	MET
+CYTB	J	78	ILE	78	I	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	135	GLN
+CYTB	J	78	ILE	78	I	H	Cytochrome c1, heme protein, mitochondrial	0	288	MET
+CYTB	J	79	ILE	79	I	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	136	PHE
+CYTB	J	79	ILE	79	I	C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	139	SER
+CYTB	J	81	TYR	81	Y	H	Cytochrome c1, heme protein, mitochondrial	0	202	ARG
+CYTB	J	81	TYR	81	Y	H	Cytochrome c1, heme protein, mitochondrial	0	281	GLU
+CYTB	J	108	LEU	108	L	F	Cytochrome b-c1 complex subunit 7	0	39	TYR
+CYTB	J	155	TYR	155	Y	T	Cytochrome b-c1 complex subunit 10	0	38	TRP
+CYTB	J	155	TYR	155	Y	T	Cytochrome b-c1 complex subunit 10	0	40	LEU
+CYTB	J	162	GLN	162	Q	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	141	SER
+CYTB	J	163	TRP	163	W	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	137	VAL
+CYTB	J	163	TRP	163	W	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	140	MET
+CYTB	J	163	TRP	163	W	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	141	SER
+CYTB	J	166	GLY	166	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	140	MET
+CYTB	J	166	GLY	166	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	141	SER
+CYTB	J	166	GLY	166	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	142	ALA
+CYTB	J	166	GLY	166	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	143	SER
+CYTB	J	166	GLY	166	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	146	VAL
+CYTB	J	167	GLY	167	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	141	SER
+CYTB	J	167	GLY	167	G	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	146	VAL
+CYTB	J	168	TYR	168	Y	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	150	ALA
+CYTB	J	168	TYR	168	Y	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	170	ARG
+CYTB	J	173	PRO	173	P	V	Cytochrome b	1	53	MET
+CYTB	J	176	THR	176	T	V	Cytochrome b	1	52	ALA
+CYTB	J	176	THR	176	T	V	Cytochrome b	1	53	MET
+CYTB	J	176	THR	176	T	V	Cytochrome b	1	54	HIS
+CYTB	J	176	THR	176	T	V	Cytochrome b	1	55	TYR
+CYTB	J	177	ARG	177	R	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	140	MET
+CYTB	J	177	ARG	177	R	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	141	SER
+CYTB	J	177	ARG	177	R	V	Cytochrome b	1	53	MET
+CYTB	J	179	PHE	179	F	V	Cytochrome b	1	179	PHE
+CYTB	J	180	THR	180	T	V	Cytochrome b	1	52	ALA
+CYTB	J	180	THR	180	T	V	Cytochrome b	1	53	MET
+CYTB	J	180	THR	180	T	V	Cytochrome b	1	183	PHE
+CYTB	J	181	PHE	181	F	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	140	MET
+CYTB	J	181	PHE	181	F	V	Cytochrome b	1	53	MET
+CYTB	J	183	PHE	183	F	V	Cytochrome b	1	183	PHE
+CYTB	J	184	ILE	184	I	V	Cytochrome b	1	187	PHE
+CYTB	J	187	PHE	187	F	V	Cytochrome b	1	184	ILE
+CYTB	J	195	LEU	195	L	V	Cytochrome b	1	10	LEU
+CYTB	J	198	LEU	198	L	V	Cytochrome b	1	9	PRO
+CYTB	J	198	LEU	198	L	V	Cytochrome b	1	10	LEU
+CYTB	J	198	LEU	198	L	V	Cytochrome b	1	13	LEU
+CYTB	J	199	PHE	199	F	V	Cytochrome b	1	9	PRO
+CYTB	J	199	PHE	199	F	V	Cytochrome b	1	10	LEU
+CYTB	J	201	HIS	201	H	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	202	GLU	202	E	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	202	GLU	202	E	V	Cytochrome b	1	9	PRO
+CYTB	J	202	GLU	202	E	V	Cytochrome b	1	12	LYS
+CYTB	J	203	THR	203	T	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	204	GLY	204	G	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	207	ASN	207	N	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	209	LEU	209	L	F	Cytochrome b-c1 complex subunit 7	0	30	LEU
+CYTB	J	209	LEU	209	L	F	Cytochrome b-c1 complex subunit 7	0	66	ALA
+CYTB	J	209	LEU	209	L	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	209	LEU	209	L	F	Cytochrome b-c1 complex subunit 7	0	70	ASN
+CYTB	J	211	ILE	211	I	F	Cytochrome b-c1 complex subunit 7	0	32	LEU
+CYTB	J	211	ILE	211	I	F	Cytochrome b-c1 complex subunit 7	0	36	ASP
+CYTB	J	211	ILE	211	I	F	Cytochrome b-c1 complex subunit 7	0	37	THR
+CYTB	J	211	ILE	211	I	F	Cytochrome b-c1 complex subunit 7	0	63	ILE
+CYTB	J	212	THR	212	T	F	Cytochrome b-c1 complex subunit 7	0	40	GLU
+CYTB	J	212	THR	212	T	F	Cytochrome b-c1 complex subunit 7	0	63	ILE
+CYTB	J	212	THR	212	T	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	213	SER	213	S	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	214	HIS	214	H	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	214	HIS	214	H	A	Cytochrome b-c1 complex subunit 8	0	8	LEU
+CYTB	J	214	HIS	214	H	A	Cytochrome b-c1 complex subunit 8	0	9	THR
+CYTB	J	214	HIS	214	H	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	463	GLU
+CYTB	J	215	SER	215	S	A	Cytochrome b-c1 complex subunit 8	0	9	THR
+CYTB	J	215	SER	215	S	A	Cytochrome b-c1 complex subunit 8	0	11	MET
+CYTB	J	215	SER	215	S	F	Cytochrome b-c1 complex subunit 7	0	60	MET
+CYTB	J	215	SER	215	S	F	Cytochrome b-c1 complex subunit 7	0	64	LYS
+CYTB	J	215	SER	215	S	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	215	SER	215	S	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	278	ARG
+CYTB	J	216	ASP	216	D	F	Cytochrome b-c1 complex subunit 7	0	64	LYS
+CYTB	J	216	ASP	216	D	F	Cytochrome b-c1 complex subunit 7	0	67	LEU
+CYTB	J	216	ASP	216	D	F	Cytochrome b-c1 complex subunit 7	0	68	ASP
+CYTB	J	216	ASP	216	D	H	Cytochrome c1, heme protein, mitochondrial	0	317	ARG
+CYTB	J	217	LYS	217	K	A	Cytochrome b-c1 complex subunit 8	0	3	ARG
+CYTB	J	217	LYS	217	K	A	Cytochrome b-c1 complex subunit 8	0	5	PHE
+CYTB	J	217	LYS	217	K	A	Cytochrome b-c1 complex subunit 8	0	8	LEU
+CYTB	J	218	ILE	218	I	A	Cytochrome b-c1 complex subunit 8	0	5	PHE
+CYTB	J	218	ILE	218	I	H	Cytochrome c1, heme protein, mitochondrial	0	314	LEU
+CYTB	J	219	THR	219	T	A	Cytochrome b-c1 complex subunit 8	0	5	PHE
+CYTB	J	222	PRO	222	P	H	Cytochrome c1, heme protein, mitochondrial	0	310	LYS
+CYTB	J	222	PRO	222	P	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	469	ASN
+CYTB	J	223	TYR	223	Y	H	Cytochrome c1, heme protein, mitochondrial	0	310	LYS
+CYTB	J	223	TYR	223	Y	H	Cytochrome c1, heme protein, mitochondrial	0	311	TRP
+CYTB	J	223	TYR	223	Y	H	Cytochrome c1, heme protein, mitochondrial	0	313	VAL
+CYTB	J	223	TYR	223	Y	H	Cytochrome c1, heme protein, mitochondrial	0	314	LEU
+CYTB	J	223	TYR	223	Y	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	467	ASP
+CYTB	J	223	TYR	223	Y	L	Cytochrome b-c1 complex subunit 1, mitochondrial	0	469	ASN
+CYTB	J	224	TYR	224	Y	H	Cytochrome c1, heme protein, mitochondrial	0	311	TRP
+CYTB	J	226	ILE	226	I	H	Cytochrome c1, heme protein, mitochondrial	0	303	VAL
+CYTB	J	226	ILE	226	I	H	Cytochrome c1, heme protein, mitochondrial	0	306	ILE
+CYTB	J	226	ILE	226	I	H	Cytochrome c1, heme protein, mitochondrial	0	307	LYS
+CYTB	J	226	ILE	226	I	H	Cytochrome c1, heme protein, mitochondrial	0	310	LYS
+CYTB	J	226	ILE	226	I	H	Cytochrome c1, heme protein, mitochondrial	0	311	TRP
+CYTB	J	227	LYS	227	K	H	Cytochrome c1, heme protein, mitochondrial	0	307	LYS
+CYTB	J	227	LYS	227	K	H	Cytochrome c1, heme protein, mitochondrial	0	311	TRP
+CYTB	J	230	LEU	230	L	H	Cytochrome c1, heme protein, mitochondrial	0	303	VAL
+CYTB	J	230	LEU	230	L	H	Cytochrome c1, heme protein, mitochondrial	0	304	TYR
+CYTB	J	230	LEU	230	L	H	Cytochrome c1, heme protein, mitochondrial	0	307	LYS
+CYTB	J	233	LEU	233	L	H	Cytochrome c1, heme protein, mitochondrial	0	296	MET
+CYTB	J	233	LEU	233	L	H	Cytochrome c1, heme protein, mitochondrial	0	299	LEU
+CYTB	J	233	LEU	233	L	H	Cytochrome c1, heme protein, mitochondrial	0	300	VAL
+CYTB	J	233	LEU	233	L	H	Cytochrome c1, heme protein, mitochondrial	0	303	VAL
+CYTB	J	236	LEU	236	L	H	Cytochrome c1, heme protein, mitochondrial	0	296	MET
+CYTB	J	237	LEU	237	L	H	Cytochrome c1, heme protein, mitochondrial	0	292	MET
+CYTB	J	237	LEU	237	L	H	Cytochrome c1, heme protein, mitochondrial	0	296	MET
+CYTB	J	237	LEU	237	L	H	Cytochrome c1, heme protein, mitochondrial	0	300	VAL
+CYTB	J	240	MET	240	M	H	Cytochrome c1, heme protein, mitochondrial	0	292	MET
+CYTB	J	241	THR	241	T	H	Cytochrome c1, heme protein, mitochondrial	0	292	MET
+CYTB	J	243	THR	243	T	H	Cytochrome c1, heme protein, mitochondrial	0	285	ARG
+CYTB	J	244	LEU	244	L	H	Cytochrome c1, heme protein, mitochondrial	0	285	ARG
+CYTB	J	244	LEU	244	L	H	Cytochrome c1, heme protein, mitochondrial	0	288	MET
+CYTB	J	244	LEU	244	L	H	Cytochrome c1, heme protein, mitochondrial	0	289	GLY
+CYTB	J	244	LEU	244	L	H	Cytochrome c1, heme protein, mitochondrial	0	292	MET
+CYTB	J	245	PHE	245	F	H	Cytochrome c1, heme protein, mitochondrial	0	101	LEU
+CYTB	J	245	PHE	245	F	H	Cytochrome c1, heme protein, mitochondrial	0	285	ARG
+CYTB	J	245	PHE	245	F	H	Cytochrome c1, heme protein, mitochondrial	0	289	GLY
+CYTB	J	245	PHE	245	F	H	Cytochrome c1, heme protein, mitochondrial	0	292	MET
+CYTB	J	245	PHE	245	F	H	Cytochrome c1, heme protein, mitochondrial	0	293	LEU
+CYTB	J	246	SER	246	S	H	Cytochrome c1, heme protein, mitochondrial	0	285	ARG
+CYTB	J	247	PRO	247	P	H	Cytochrome c1, heme protein, mitochondrial	0	285	ARG
+CYTB	J	248	ASP	248	D	H	Cytochrome c1, heme protein, mitochondrial	0	202	ARG
+CYTB	J	248	ASP	248	D	H	Cytochrome c1, heme protein, mitochondrial	0	279	GLU
+CYTB	J	252	ASP	252	D	H	Cytochrome c1, heme protein, mitochondrial	0	205	HIS
+CYTB	J	253	PRO	253	P	H	Cytochrome c1, heme protein, mitochondrial	0	202	ARG
+CYTB	J	253	PRO	253	P	H	Cytochrome c1, heme protein, mitochondrial	0	203	ALA
+CYTB	J	253	PRO	253	P	H	Cytochrome c1, heme protein, mitochondrial	0	204	ARG
+CYTB	J	253	PRO	253	P	H	Cytochrome c1, heme protein, mitochondrial	0	205	HIS
+CYTB	J	254	ASP	254	D	H	Cytochrome c1, heme protein, mitochondrial	0	202	ARG
+CYTB	J	254	ASP	254	D	H	Cytochrome c1, heme protein, mitochondrial	0	203	ALA
+CYTB	J	254	ASP	254	D	H	Cytochrome c1, heme protein, mitochondrial	0	204	ARG
+CYTB	J	254	ASP	254	D	H	Cytochrome c1, heme protein, mitochondrial	0	205	HIS
+CYTB	J	256	TYR	256	Y	H	Cytochrome c1, heme protein, mitochondrial	0	199	TYR
+CYTB	J	256	TYR	256	Y	H	Cytochrome c1, heme protein, mitochondrial	0	202	ARG
+CYTB	J	256	TYR	256	Y	H	Cytochrome c1, heme protein, mitochondrial	0	203	ALA
+CYTB	J	257	THR	257	T	H	Cytochrome c1, heme protein, mitochondrial	0	203	ALA
+CYTB	J	257	THR	257	T	H	Cytochrome c1, heme protein, mitochondrial	0	204	ARG
+CYTB	J	261	PRO	261	P	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	172	LYS
+CYTB	J	262	LEU	262	L	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	171	GLY
+CYTB	J	262	LEU	262	L	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	172	LYS
+CYTB	J	262	LEU	262	L	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	173	PRO
+CYTB	J	262	LEU	262	L	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	216	VAL
+CYTB	J	262	LEU	262	L	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	221	GLY
+CYTB	J	263	ASN	263	N	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	219	HIS
+CYTB	J	263	ASN	263	N	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	220	LEU
+CYTB	J	263	ASN	263	N	P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	0	221	GLY
+CYTB	J	267	HIS	267	H	H	Cytochrome c1, heme protein, mitochondrial	0	205	HIS
+CYTB	J	311	LYS	311	K	F	Cytochrome b-c1 complex subunit 7	0	38	ILE
+CYTB	J	311	LYS	311	K	F	Cytochrome b-c1 complex subunit 7	0	39	TYR
+CYTB	J	312	GLN	312	Q	F	Cytochrome b-c1 complex subunit 7	0	37	THR
+CYTB	J	312	GLN	312	Q	F	Cytochrome b-c1 complex subunit 7	0	39	TYR
+CYTB	J	313	GLN	313	Q	F	Cytochrome b-c1 complex subunit 7	0	39	TYR
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	25	ALA
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	26	GLY
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	27	PHE
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	30	LEU
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	32	LEU
+CYTB	J	317	PHE	317	F	F	Cytochrome b-c1 complex subunit 7	0	37	THR
+CYTB	J	318	ARG	318	R	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	319	PRO	319	P	A	Cytochrome b-c1 complex subunit 8	0	48	ARG
+CYTB	J	319	PRO	319	P	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	319	PRO	319	P	F	Cytochrome b-c1 complex subunit 7	0	24	ALA
+CYTB	J	320	LEU	320	L	F	Cytochrome b-c1 complex subunit 7	0	20	TRP
+CYTB	J	320	LEU	320	L	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	322	GLN	322	Q	A	Cytochrome b-c1 complex subunit 8	0	48	ARG
+CYTB	J	323	SER	323	S	A	Cytochrome b-c1 complex subunit 8	0	52	GLN
+CYTB	J	326	TRP	326	W	A	Cytochrome b-c1 complex subunit 8	0	48	ARG
+CYTB	J	326	TRP	326	W	A	Cytochrome b-c1 complex subunit 8	0	49	VAL
+CYTB	J	326	TRP	326	W	A	Cytochrome b-c1 complex subunit 8	0	52	GLN
+CYTB	J	326	TRP	326	W	A	Cytochrome b-c1 complex subunit 8	0	53	PHE
+CYTB	J	327	LEU	327	L	A	Cytochrome b-c1 complex subunit 8	0	52	GLN
+CYTB	J	330	ALA	330	A	A	Cytochrome b-c1 complex subunit 8	0	52	GLN
+CYTB	J	330	ALA	330	A	A	Cytochrome b-c1 complex subunit 8	0	53	PHE
+CYTB	J	330	ALA	330	A	A	Cytochrome b-c1 complex subunit 8	0	56	PHE
+CYTB	J	333	LEU	333	L	A	Cytochrome b-c1 complex subunit 8	0	53	PHE
+CYTB	J	333	LEU	333	L	A	Cytochrome b-c1 complex subunit 8	0	56	PHE
+CYTB	J	334	ILE	334	I	A	Cytochrome b-c1 complex subunit 8	0	56	PHE
+CYTB	J	337	TRP	337	W	A	Cytochrome b-c1 complex subunit 8	0	59	ILE
+CYTB	J	337	TRP	337	W	A	Cytochrome b-c1 complex subunit 8	0	60	TYR
+CYTB	J	337	TRP	337	W	A	Cytochrome b-c1 complex subunit 8	0	63	GLY
+CYTB	J	337	TRP	337	W	A	Cytochrome b-c1 complex subunit 8	0	64	THR
+CYTB	J	342	PRO	342	P	A	Cytochrome b-c1 complex subunit 8	0	67	PHE
+CYTB	J	344	SER	344	S	A	Cytochrome b-c1 complex subunit 8	0	67	PHE
+CYTB	J	345	TYR	345	Y	A	Cytochrome b-c1 complex subunit 8	0	66	GLU
+CYTB	J	345	TYR	345	Y	A	Cytochrome b-c1 complex subunit 8	0	70	SER
+CYTB	J	346	PRO	346	P	A	Cytochrome b-c1 complex subunit 8	0	66	GLU
+CYTB	J	346	PRO	346	P	A	Cytochrome b-c1 complex subunit 8	0	67	PHE
+CYTB	J	346	PRO	346	P	A	Cytochrome b-c1 complex subunit 8	0	70	SER
+CYTB	J	347	PHE	347	F	A	Cytochrome b-c1 complex subunit 8	0	67	PHE
+CYTB	J	350	ILE	350	I	A	Cytochrome b-c1 complex subunit 8	0	59	ILE
+CYTB	J	350	ILE	350	I	A	Cytochrome b-c1 complex subunit 8	0	62	TRP
+CYTB	J	373	GLU	373	E	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	375	LYS	375	K	F	Cytochrome b-c1 complex subunit 7	0	18	ARG
+CYTB	J	376	MET	376	M	F	Cytochrome b-c1 complex subunit 7	0	17	ILE
+CYTB	J	376	MET	376	M	F	Cytochrome b-c1 complex subunit 7	0	18	ARG
+CYTB	J	376	MET	376	M	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	377	LEU	377	L	F	Cytochrome b-c1 complex subunit 7	0	21	TYR
+CYTB	J	377	LEU	377	L	F	Cytochrome b-c1 complex subunit 7	0	27	PHE
+CYTB	J	377	LEU	377	L	F	Cytochrome b-c1 complex subunit 7	0	34	ARG
+CYTB	J	378	LYS	378	K	F	Cytochrome b-c1 complex subunit 7	0	18	ARG
+CYTB	J	378	LYS	378	K	F	Cytochrome b-c1 complex subunit 7	0	34	ARG
+CYTB	J	378	LYS	378	K	F	Cytochrome b-c1 complex subunit 7	0	89	PHE
+CYTB	J	378	LYS	378	K	F	Cytochrome b-c1 complex subunit 7	0	92	GLU
+CYTB	J	379	TRP	379	W	F	Cytochrome b-c1 complex subunit 7	0	34	ARG

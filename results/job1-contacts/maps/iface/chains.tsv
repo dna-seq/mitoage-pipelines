@@ -1,0 +1,15 @@
+chain	description	gene	is_mt	residues
+A	Cytochrome c oxidase subunit 1	COX1	1	513
+B	Cytochrome c oxidase subunit 2	COX2	1	227
+C	Cytochrome c oxidase subunit 3	COX3	1	260
+D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	COX4I1	0	144
+E	Cytochrome c oxidase subunit 5A, mitochondrial	COX5A	0	109
+F	Cytochrome c oxidase subunit 5B, mitochondrial	COX5B	0	98
+G	Cytochrome c oxidase subunit 6A1, mitochondrial	COX6A1	0	75
+H	Cytochrome c oxidase subunit 6B1	COX6B1	0	82
+I	Cytochrome c oxidase subunit 6C	COX6C	0	73
+J	Cytochrome c oxidase subunit 7A2, mitochondrial	COX7A2	0	56
+K	Cytochrome c oxidase subunit 7B, mitochondrial	COX7B	0	49
+L	Cytochrome c oxidase subunit 7C, mitochondrial	COX7C	0	47
+M	Cytochrome c oxidase subunit 8A, mitochondrial	COX8A	0	43
+N	Cytochrome c oxidase subunit NDUFA4	NDUFA4	0	79

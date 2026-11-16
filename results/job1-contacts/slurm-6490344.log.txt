@@ -1,0 +1,1663 @@
+commit 7ab48d2194cbe0c7664095bd2e084c0428505e1f; compared with the code in /data/uq2347/runs/mitoage/job1-contacts-base/src
+build: 267a16311cca species.parquet; MAFFT: v7.526 (2024/Apr/26)
+dated tree opentree16.1: 2314 species; lifespan quality high or acceptable: 2229 of 2344
+fourfold.tsv: 2325 species
+  chain A: Cytochrome c oxidase subunit 1 = COX1 (513 residues)
+  chain B: Cytochrome c oxidase subunit 2 = COX2 (227 residues)
+  chain C: Cytochrome c oxidase subunit 3 = COX3 (260 residues)
+  chain D: Cytochrome c oxidase subunit 4 isoform 1, mitochondrial = COX4I1 (144 residues)
+  chain E: Cytochrome c oxidase subunit 5A, mitochondrial = COX5A (109 residues)
+  chain F: Cytochrome c oxidase subunit 5B, mitochondrial = COX5B (98 residues)
+  chain G: Cytochrome c oxidase subunit 6A1, mitochondrial = COX6A1 (75 residues)
+  chain H: Cytochrome c oxidase subunit 6B1 = COX6B1 (82 residues)
+  chain I: Cytochrome c oxidase subunit 6C = COX6C (73 residues)
+  chain J: Cytochrome c oxidase subunit 7A2, mitochondrial = COX7A2 (56 residues)
+  chain K: Cytochrome c oxidase subunit 7B, mitochondrial = COX7B (49 residues)
+  chain L: Cytochrome c oxidase subunit 7C, mitochondrial = COX7C (47 residues)
+  chain M: Cytochrome c oxidase subunit 8A, mitochondrial = COX8A (43 residues)
+  chain N: Cytochrome c oxidase subunit NDUFA4 = NDUFA4 (79 residues)
+mitochondrial reference chains: {'A': 'COX1', 'B': 'COX2', 'C': 'COX3'} ; other copies: none
+  COX1 chain A: 513 residues, identity to the human protein 1.000
+  COX2 chain B: 227 residues, identity to the human protein 1.000
+  COX3 chain C: 260 residues, identity to the human protein 1.000
+COX1: 129 of 513 residues touch a nuclear subunit
+COX2: 77 of 227 residues touch a nuclear subunit
+COX3: 92 of 260 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface/contacts.tsv
+COX1 chain A: 513 residues, 513 mapped, identity to the human protein 1.000
+COX2 chain B: 227 residues, 227 mapped, identity to the human protein 1.000
+COX3 chain C: 260 residues, 260 mapped, identity to the human protein 1.000
+species with every alignment of COX1, COX2, COX3, a tip on the dated tree and a lifespan of usable quality: 2183
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  COX1 contact  n=129  rASA alone 0.413  in complex 0.103  occupancy 1.000  identity 0.913
+  COX1 control  n=129  rASA alone 0.336  in complex 0.141  occupancy 1.000  identity 0.994
+  COX1 other    n=255  rASA alone 0.046  in complex 0.033  occupancy 1.000  identity 0.995
+  COX2 contact  n= 77  rASA alone 0.472  in complex 0.108  occupancy 1.000  identity 0.918
+  COX2 control  n= 77  rASA alone 0.468  in complex 0.250  occupancy 1.000  identity 0.880
+  COX2 other    n= 73  rASA alone 0.097  in complex 0.042  occupancy 1.000  identity 0.936
+  COX3 contact  n= 92  rASA alone 0.380  in complex 0.105  occupancy 1.000  identity 0.943
+  COX3 control  n= 92  rASA alone 0.380  in complex 0.271  occupancy 1.000  identity 0.951
+  COX3 other    n= 76  rASA alone 0.091  in complex 0.066  occupancy 1.000  identity 0.990
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface/sites.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface/chains.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface/species.txt
+  chain A: NADH dehydrogenase [ubiquinone] flavoprotein 1, mitochondrial = NDUFV1 (431 residues)
+  chain B: NADH dehydrogenase [ubiquinone] iron-sulfur protein 8, mitochondrial = NDUFS8 (176 residues)
+  chain C: NADH dehydrogenase [ubiquinone] iron-sulfur protein 7, mitochondrial = NDUFS7 (156 residues)
+  chain E: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6 = NDUFA6 (113 residues)
+  chain F: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2 = NDUFA2 (83 residues)
+  chain G: Acyl carrier protein, mitochondrial = NDUFAB1 (85 residues)
+  chain H: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5 = NDUFA5 (112 residues)
+  chain I: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 7 = NDUFA7 (95 residues)
+  chain J: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9, mitochondrial = NDUFA9 (337 residues)
+  chain K: NADH dehydrogenase [ubiquinone] flavoprotein 3, mitochondrial = NDUFV3 (33 residues)
+  chain L: NADH dehydrogenase [ubiquinone] iron-sulfur protein 4, mitochondrial = NDUFS4 (118 residues)
+  chain M: NADH-ubiquinone oxidoreductase 75 kDa subunit, mitochondrial = NDUFS1 (687 residues)
+  chain N: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12 = NDUFA12 (143 residues)
+  chain O: NADH dehydrogenase [ubiquinone] flavoprotein 2, mitochondrial = NDUFV2 (212 residues)
+  chain P: NADH dehydrogenase [ubiquinone] iron-sulfur protein 3, mitochondrial = NDUFS3 (208 residues)
+  chain Q: NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial = NDUFS2 (430 residues)
+  chain S: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1 = NDUFA1 (70 residues)
+  chain T: NADH dehydrogenase [ubiquinone] iron-sulfur protein 6, mitochondrial = NDUFS6 (95 residues)
+  chain U: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 3 = NDUFA3 (83 residues)
+  chain V: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 11 = NDUFA11 (140 residues)
+  chain W: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13 = NDUFA13 (138 residues)
+  chain X: Acyl carrier protein, mitochondrial = NDUFAB1 (85 residues)
+  chain Y: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2, mitochondrial = NDUFB2 (59 residues)
+  chain Z: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3 = NDUFB3 (80 residues)
+  chain a: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 5, mitochondrial = NDUFB5 (138 residues)
+  chain b: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 6 = NDUFB6 (124 residues)
+  chain c: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8, mitochondrial = NDUFB8 (153 residues)
+  chain d: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10 = NDUFB10 (171 residues)
+  chain e: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 11, mitochondrial = NDUFB11 (97 residues)
+  chain f: NADH dehydrogenase [ubiquinone] 1 subunit C1, mitochondrial = NDUFC1 (47 residues)
+  chain g: NADH dehydrogenase [ubiquinone] 1 subunit C2 = NDUFC2 (119 residues)
+  chain h: NADH dehydrogenase [ubiquinone] iron-sulfur protein 5 = NDUFS5 (104 residues)
+  chain i: NADH-ubiquinone oxidoreductase chain 2 = ND2 (347 residues)
+  chain j: NADH-ubiquinone oxidoreductase chain 3 = ND3 (115 residues)
+  chain k: NADH-ubiquinone oxidoreductase chain 4L = ND4L (97 residues)
+  chain l: NADH-ubiquinone oxidoreductase chain 5 = ND5 (603 residues)
+  chain m: NADH-ubiquinone oxidoreductase chain 6 = ND6 (174 residues)
+  chain n: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1 = NDUFB1 (56 residues)
+  chain o: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 4 = NDUFB4 (128 residues)
+  chain p: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9 = NDUFB9 (172 residues)
+  chain r: NADH-ubiquinone oxidoreductase chain 4 = ND4 (459 residues)
+  chain s: NADH-ubiquinone oxidoreductase chain 1 = ND1 (318 residues)
+  chain u: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8 = NDUFA8 (169 residues)
+  chain v: NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7 = NDUFB7 (111 residues)
+  chain w: NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial = NDUFA10 (320 residues)
+mitochondrial reference chains: {'s': 'ND1', 'i': 'ND2', 'j': 'ND3', 'r': 'ND4', 'k': 'ND4L', 'l': 'ND5', 'm': 'ND6'} ; other copies: none
+  ND1 chain s: 318 residues, identity to the human protein 0.994
+  ND2 chain i: 347 residues, identity to the human protein 0.997
+  ND3 chain j: 115 residues, identity to the human protein 0.983
+  ND4 chain r: 459 residues, identity to the human protein 0.996
+  ND4L chain k: 97 residues, identity to the human protein 0.979
+  ND5 chain l: 603 residues, identity to the human protein 0.995
+  ND6 chain m: 174 residues, identity to the human protein 0.994
+ND1: 116 of 318 residues touch a nuclear subunit
+ND2: 105 of 347 residues touch a nuclear subunit
+ND3: 32 of 115 residues touch a nuclear subunit
+ND4: 144 of 459 residues touch a nuclear subunit
+ND4L: 17 of 97 residues touch a nuclear subunit
+ND5: 176 of 603 residues touch a nuclear subunit
+ND6: 31 of 174 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-I/contacts.tsv
+ND1 chain s: 318 residues, 318 mapped, identity to the human protein 0.994
+ND2 chain i: 347 residues, 347 mapped, identity to the human protein 0.997
+ND3 chain j: 115 residues, 115 mapped, identity to the human protein 0.983
+ND4 chain r: 459 residues, 459 mapped, identity to the human protein 0.996
+ND4L chain k: 97 residues, 97 mapped, identity to the human protein 0.979
+ND5 chain l: 603 residues, 603 mapped, identity to the human protein 0.995
+ND6 chain m: 174 residues, 174 mapped, identity to the human protein 0.994
+species with every alignment of ND1, ND2, ND3, ND4, ND4L, ND5, ND6, a tip on the dated tree and a lifespan of usable quality: 2179
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  ND1 contact  n=116  rASA alone 0.428  in complex 0.081  occupancy 1.000  identity 0.843
+  ND1 control  n=116  rASA alone 0.275  in complex 0.127  occupancy 1.000  identity 0.911
+  ND1 other    n= 86  rASA alone 0.028  in complex 0.019  occupancy 1.000  identity 0.954
+  ND2 contact  n=105  rASA alone 0.395  in complex 0.074  occupancy 0.992  identity 0.292
+  ND2 control  n=105  rASA alone 0.288  in complex 0.138  occupancy 0.999  identity 0.380
+  ND2 other    n=137  rASA alone 0.035  in complex 0.028  occupancy 1.000  identity 0.690
+  ND3 contact  n= 32  rASA alone 0.588  in complex 0.166  occupancy 1.000  identity 0.898
+  ND3 control  n= 32  rASA alone 0.548  in complex 0.295  occupancy 1.000  identity 0.288
+  ND3 other    n= 51  rASA alone 0.393  in complex 0.066  occupancy 1.000  identity 0.543
+  ND4 contact  n=144  rASA alone 0.354  in complex 0.104  occupancy 0.998  identity 0.514
+  ND4 control  n=144  rASA alone 0.207  in complex 0.120  occupancy 1.000  identity 0.698
+  ND4 other    n=171  rASA alone 0.022  in complex 0.021  occupancy 1.000  identity 0.894
+  ND4L contact  n= 17  rASA alone 0.614  in complex 0.127  occupancy 0.996  identity 0.258
+  ND4L control  n= 17  rASA alone 0.564  in complex 0.077  occupancy 1.000  identity 0.706
+  ND4L other    n= 63  rASA alone 0.337  in complex 0.035  occupancy 1.000  identity 0.527
+  ND5 contact  n=176  rASA alone 0.406  in complex 0.135  occupancy 0.998  identity 0.410
+  ND5 control  n=176  rASA alone 0.365  in complex 0.243  occupancy 0.999  identity 0.423
+  ND5 other    n=251  rASA alone 0.031  in complex 0.030  occupancy 1.000  identity 0.948
+  ND6 contact  n= 31  rASA alone 0.497  in complex 0.160  occupancy 0.959  identity 0.200
+  ND6 control  n= 31  rASA alone 0.499  in complex 0.090  occupancy 0.996  identity 0.263
+  ND6 other    n=112  rASA alone 0.344  in complex 0.091  occupancy 0.998  identity 0.296
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-I/sites.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-I/chains.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-I/species.txt
+  chain A: Cytochrome b-c1 complex subunit 8 = UQCRQ (81 residues)
+  chain B: Cytochrome b-c1 complex subunit Rieske, mitochondrial = UQCRFS1 (57 residues)
+  chain C: Cytochrome b-c1 complex subunit Rieske, mitochondrial = UQCRFS1 (196 residues)
+  chain D: Cytochrome b-c1 complex subunit 9 = UQCR10 (62 residues)
+  chain E: Cytochrome b-c1 complex subunit 6, mitochondrial = UQCRH (74 residues)
+  chain F: Cytochrome b-c1 complex subunit 7 = UQCRB (106 residues)
+  chain G: Cytochrome b-c1 complex subunit 10 = UQCR11 (51 residues)
+  chain H: Cytochrome c1, heme protein, mitochondrial = CYC1 (241 residues)
+  chain J: Cytochrome b = CYTB (378 residues)
+  chain K: Cytochrome b-c1 complex subunit 2, mitochondrial = UQCRC2 (419 residues)
+  chain L: Cytochrome b-c1 complex subunit 1, mitochondrial = UQCRC1 (446 residues)
+  chain N: Cytochrome b-c1 complex subunit 8 = UQCRQ (81 residues)
+  chain O: Cytochrome b-c1 complex subunit Rieske, mitochondrial = UQCRFS1 (57 residues)
+  chain P: Cytochrome b-c1 complex subunit Rieske, mitochondrial = UQCRFS1 (196 residues)
+  chain Q: Cytochrome b-c1 complex subunit 9 = UQCR10 (62 residues)
+  chain R: Cytochrome b-c1 complex subunit 6, mitochondrial = UQCRH (74 residues)
+  chain S: Cytochrome b-c1 complex subunit 7 = UQCRB (106 residues)
+  chain T: Cytochrome b-c1 complex subunit 10 = UQCR11 (51 residues)
+  chain U: Cytochrome c1, heme protein, mitochondrial = CYC1 (241 residues)
+  chain V: Cytochrome b = CYTB (378 residues)
+  chain W: Cytochrome b-c1 complex subunit 2, mitochondrial = UQCRC2 (419 residues)
+  chain Y: Cytochrome b-c1 complex subunit 1, mitochondrial = UQCRC1 (446 residues)
+mitochondrial reference chains: {'J': 'CYTB'} ; other copies: ['V']
+  CYTB chain J: 378 residues, identity to the human protein 1.000
+CYTB: 104 of 378 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-III/contacts.tsv
+CYTB chain J: 378 residues, 378 mapped, identity to the human protein 1.000
+species with every alignment of CYTB, a tip on the dated tree and a lifespan of usable quality: 2182
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  CYTB contact  n=104  rASA alone 0.393  in complex 0.131  occupancy 1.000  identity 0.871
+  CYTB control  n=104  rASA alone 0.381  in complex 0.340  occupancy 1.000  identity 0.904
+  CYTB other    n=170  rASA alone 0.126  in complex 0.116  occupancy 1.000  identity 0.979
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-III/sites.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-III/chains.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-III/species.txt
+  chain K: ATP synthase F(0) complex subunit B1, mitochondrial = ATP5PB (198 residues)
+  chain L: ATP synthase-coupling factor 6, mitochondrial = ATP5PF (67 residues)
+  chain M: ATP synthase subunit d, mitochondrial = ATP5PD (156 residues)
+  chain A: ATP synthase subunit alpha, mitochondrial = ATP5F1A (503 residues)
+  chain B: ATP synthase subunit alpha, mitochondrial = ATP5F1A (477 residues)
+  chain C: ATP synthase subunit alpha, mitochondrial = ATP5F1A (487 residues)
+  chain E: ATP synthase subunit beta, mitochondrial = ATP5F1B (456 residues)
+  chain F: ATP synthase subunit beta, mitochondrial = ATP5F1B (466 residues)
+  chain D: ATP synthase subunit beta, mitochondrial = ATP5F1B (470 residues)
+  chain G: ATP synthase subunit gamma, mitochondrial = ATP5F1C (271 residues)
+  chain J: ATPase inhibitor, mitochondrial = ATP5IF1 (35 residues)
+  chain O: ATP synthase subunit O, mitochondrial = ATP5PO (187 residues)
+  chain 1: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 2: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 3: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 4: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 5: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 6: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 7: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain 8: ATP synthase F(0) complex subunit C1, mitochondrial = ATP5MC1 (75 residues)
+  chain H: ATP synthase subunit delta, mitochondrial = ATP5F1D (132 residues)
+  chain I: ATP synthase subunit epsilon, mitochondrial = ATP5F1E (45 residues)
+  chain N: ATP synthase subunit a = ATP6 (223 residues)
+  chain P: ATP synthase subunit ATP5MJ, mitochondrial = ATP5MJ (41 residues)
+  chain Q: ATP synthase protein 8 = ATP8 (51 residues)
+  chain R: ATP synthase subunit f, mitochondrial = ATP5MF (78 residues)
+  chain S: ATP synthase subunit g, mitochondrial = ATP5MG (77 residues)
+  chain T: ATP synthase subunit e, mitochondrial = ATP5ME (44 residues)
+mitochondrial reference chains: {'N': 'ATP6', 'Q': 'ATP8'} ; other copies: none
+  ATP6 chain N: 223 residues, identity to the human protein 1.000
+  ATP8 chain Q: 51 residues, identity to the human protein 1.000
+ATP6: 95 of 223 residues touch a nuclear subunit
+ATP8: 34 of 51 residues touch a nuclear subunit
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-V/contacts.tsv
+ATP6 chain N: 223 residues, 223 mapped, identity to the human protein 1.000
+ATP8 chain Q: 51 residues, 51 mapped, identity to the human protein 1.000
+species with every alignment of ATP6, ATP8, a tip on the dated tree and a lifespan of usable quality: 2165
+NOTE: ATP8: 17 of 34 contact residues have no control: the gene ran out of non-contact residues with a column; they stay contacts, and pair tests leave them out
+
+per gene and group: residues, median relative accessibility (isolated chain / in the complex), median column occupancy, median identity to human
+  ATP6 contact  n= 95  rASA alone 0.392  in complex 0.098  occupancy 1.000  identity 0.619
+  ATP6 control  n= 95  rASA alone 0.360  in complex 0.288  occupancy 0.999  identity 0.352
+  ATP6 other    n= 33  rASA alone 0.017  in complex 0.010  occupancy 1.000  identity 0.962
+  ATP8 contact  n= 34  rASA alone 0.598  in complex 0.197  occupancy 0.985  identity 0.196
+  ATP8 control  n= 17  rASA alone 0.471  in complex 0.186  occupancy 0.999  identity 0.242
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-V/sites.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-V/chains.tsv /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/iface-V/species.txt
+ACO2	human 780 aa	species 183	length min/median/max 709/781/845	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5F1A	human 503 aa	species 184	length min/median/max 449/553/553	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5F1B	human 529 aa	species 183	length min/median/max 122/528/559	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5F1C	human 298 aa	species 179	length min/median/max 170/298/328	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5F1D	human 168 aa	species 176	length min/median/max 131/168/233	off by >20% 9	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5F1E	human 51 aa	species 169	length min/median/max 42/51/95	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5IF1	human 106 aa	species 181	length min/median/max 102/107/191	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5MC1	human 136 aa	species 183	length min/median/max 135/136/155	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5ME	human 69 aa	species 157	length min/median/max 68/71/288	off by >20% 27	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5MF	human 88 aa	species 164	length min/median/max 49/88/175	off by >20% 9	species with 2+ gene ids 0	CDS length mismatch dropped 0
+ATP5MG	human 103 aa	species 182	length min/median/max 86/103/157	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5MJ	human 75 aa	species 169	length min/median/max 47/60/126	off by >20% 31	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5PB	human 256 aa	species 179	length min/median/max 242/256/406	off by >20% 2	species with 2+ gene ids 0	CDS length mismatch dropped 0
+ATP5PD	human 137 aa	species 183	length min/median/max 137/161/238	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5PF	human 108 aa	species 183	length min/median/max 106/108/142	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5PO	human 213 aa	species 184	length min/median/max 211/213/245	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+B2M	human 119 aa	species 159	length min/median/max 118/119/134	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CA2	human 260 aa	species 150	length min/median/max 251/260/308	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CD59	human 128 aa	species 171	length min/median/max 89/123/323	off by >20% 11	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CFL1	human 166 aa	species 177	length min/median/max 139/166/315	off by >20% 25	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX4I1	human 169 aa	species 183	length min/median/max 77/169/285	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX5A	human 150 aa	species 182	length min/median/max 120/152/180	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX5B	human 129 aa	species 182	length min/median/max 125/129/271	off by >20% 11	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6A1	human 109 aa	species 181	length min/median/max 76/109/217	off by >20% 17	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6B1	human 86 aa	species 183	length min/median/max 85/86/130	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6C	human 75 aa	species 170	length min/median/max 73/75/143	off by >20% 12	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7A2	human 83 aa	species 183	length min/median/max 82/83/173	off by >20% 17	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7B	human 80 aa	species 178	length min/median/max 76/80/190	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7C	human 63 aa	species 172	length min/median/max 63/63/143	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX8A	human 69 aa	species 168	length min/median/max 65/69/256	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CRYAB	human 175 aa	species 182	length min/median/max 173/175/245	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CS	human 466 aa	species 174	length min/median/max 203/466/548	off by >20% 1	species with 2+ gene ids 0	CDS length mismatch dropped 0
+CSTB	human 98 aa	species 161	length min/median/max 84/98/144	off by >20% 5	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CYC1	human 325 aa	species 182	length min/median/max 174/325/741	off by >20% 10	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CYCS	human 105 aa	species 180	length min/median/max 99/105/105	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+FABP3	human 144 aa	species 184	length min/median/max 129/133/154	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+FH	human 510 aa	species 182	length min/median/max 434/508/512	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+FKBP1A	human 108 aa	species 180	length min/median/max 79/108/257	off by >20% 10	species with 2+ gene ids 1	CDS length mismatch dropped 0
+GAPDH	human 293 aa	species 179	length min/median/max 290/333/426	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+GPX1	human 203 aa	species 11	length min/median/max 134/156/161	off by >20% 11	species with 2+ gene ids 1	CDS length mismatch dropped 0
+GSTP1	human 210 aa	species 112	length min/median/max 108/210/323	off by >20% 9	species with 2+ gene ids 1	CDS length mismatch dropped 0
+HSPB1	human 205 aa	species 182	length min/median/max 118/205/220	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+HSPD1	human 573 aa	species 183	length min/median/max 456/573/611	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+IDH2	human 400 aa	species 183	length min/median/max 322/452/497	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+LDHA	human 274 aa	species 89	length min/median/max 265/332/393	off by >20% 75	species with 2+ gene ids 1	CDS length mismatch dropped 0
+LGALS1	human 135 aa	species 178	length min/median/max 131/135/164	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+LYZ	human 148 aa	species 125	length min/median/max 124/148/268	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+MB	human 154 aa	species 184	length min/median/max 99/154/214	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+MDH2	human 296 aa	species 182	length min/median/max 231/338/364	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA1	human 70 aa	species 169	length min/median/max 70/70/92	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA10	human 375 aa	species 180	length min/median/max 203/355/415	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA11	human 228 aa	species 183	length min/median/max 106/141/264	off by >20% 180	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA12	human 63 aa	species 183	length min/median/max 63/145/191	off by >20% 171	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA13	human 144 aa	species 179	length min/median/max 135/144/228	off by >20% 11	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA2	human 76 aa	species 183	length min/median/max 76/99/142	off by >20% 171	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA3	human 84 aa	species 180	length min/median/max 62/84/332	off by >20% 47	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA4	human 81 aa	species 181	length min/median/max 81/82/152	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA5	human 101 aa	species 184	length min/median/max 94/116/160	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA6	human 128 aa	species 181	length min/median/max 127/128/192	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA7	human 113 aa	species 182	length min/median/max 62/113/169	off by >20% 4	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA8	human 128 aa	species 182	length min/median/max 128/172/207	off by >20% 165	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA9	human 377 aa	species 182	length min/median/max 173/377/400	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFAB1	human 156 aa	species 181	length min/median/max 110/156/207	off by >20% 10	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB1	human 58 aa	species 164	length min/median/max 48/58/229	off by >20% 47	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB10	human 172 aa	species 181	length min/median/max 169/176/218	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB11	human 153 aa	species 178	length min/median/max 149/154/269	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB2	human 105 aa	species 180	length min/median/max 95/105/139	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB3	human 98 aa	species 182	length min/median/max 53/98/108	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB4	human 120 aa	species 184	length min/median/max 112/129/208	off by >20% 4	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB5	human 137 aa	species 184	length min/median/max 119/189/228	off by >20% 103	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB6	human 97 aa	species 184	length min/median/max 96/128/283	off by >20% 119	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB7	human 137 aa	species 182	length min/median/max 99/137/165	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB8	human 172 aa	species 183	length min/median/max 163/186/196	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB9	human 123 aa	species 183	length min/median/max 123/179/227	off by >20% 154	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFC1	human 76 aa	species 182	length min/median/max 59/76/119	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFC2	human 88 aa	species 165	length min/median/max 88/120/211	off by >20% 157	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS1	human 691 aa	species 182	length min/median/max 665/727/729	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS2	human 457 aa	species 183	length min/median/max 412/463/550	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS3	human 264 aa	species 183	length min/median/max 226/264/364	off by >20% 4	species with 2+ gene ids 1	CDS length mismatch dropped 1
+NDUFS4	human 120 aa	species 183	length min/median/max 89/175/320	off by >20% 153	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS5	human 106 aa	species 181	length min/median/max 98/106/163	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS6	human 124 aa	species 181	length min/median/max 116/124/259	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS7	human 182 aa	species 182	length min/median/max 132/216/287	off by >20% 13	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS8	human 210 aa	species 183	length min/median/max 170/210/244	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFV1	human 455 aa	species 182	length min/median/max 323/464/467	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFV2	human 249 aa	species 182	length min/median/max 225/249/430	off by >20% 4	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFV3	human 108 aa	species 182	length min/median/max 102/110/502	off by >20% 30	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NME1	human 152 aa	species 107	length min/median/max 118/152/267	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PEBP1	human 187 aa	species 181	length min/median/max 96/187/267	off by >20% 15	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PFN1	human 181 aa	species 183	length min/median/max 75/140/219	off by >20% 167	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PGAM1	human 239 aa	species 178	length min/median/max 159/254/314	off by >20% 5	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PGK1	human 417 aa	species 178	length min/median/max 342/417/466	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PPIA	human 105 aa	species 180	length min/median/max 104/164/316	off by >20% 122	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PRDX1	human 199 aa	species 179	length min/median/max 154/199/235	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+PRDX2	human 198 aa	species 178	length min/median/max 197/198/237	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+RBP4	human 201 aa	species 182	length min/median/max 111/201/392	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+SDHA	human 616 aa	species 183	length min/median/max 383/664/781	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+SDHB	human 262 aa	species 181	length min/median/max 245/280/388	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+SDHC	human 150 aa	species 184	length min/median/max 132/169/350	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+SDHD	human 85 aa	species 179	length min/median/max 79/118/162	off by >20% 108	species with 2+ gene ids 1	CDS length mismatch dropped 0
+SOD1	human 154 aa	species 182	length min/median/max 80/153/241	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+SOD2	human 222 aa	species 182	length min/median/max 155/222/305	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+TPI1	human 249 aa	species 180	length min/median/max 213/286/288	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+TPT1	human 197 aa	species 179	length min/median/max 127/172/287	off by >20% 4	species with 2+ gene ids 1	CDS length mismatch dropped 0
+TTR	human 147 aa	species 176	length min/median/max 114/147/176	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+TXN	human 85 aa	species 153	length min/median/max 83/105/281	off by >20% 139	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCR10	human 62 aa	species 178	length min/median/max 62/64/134	off by >20% 3	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCR11	human 56 aa	species 176	length min/median/max 55/56/389	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRB	human 79 aa	species 181	length min/median/max 74/111/170	off by >20% 150	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRC1	human 480 aa	species 183	length min/median/max 355/480/550	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRC2	human 453 aa	species 183	length min/median/max 106/453/488	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRFS1	human 274 aa	species 178	length min/median/max 261/274/348	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRH	human 85 aa	species 183	length min/median/max 81/85/97	off by >20% 0	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRQ	human 82 aa	species 181	length min/median/max 82/82/142	off by >20% 12	species with 2+ gene ids 1	CDS length mismatch dropped 0
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5F1A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ACO2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5F1C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5F1B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5PB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5PO.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5IF1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5MF.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5PD.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5F1D.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5MC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5MG.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5PF.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5F1E.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5ME.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/ATP5MJ.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/B2M.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CA2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CD59.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CFL1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX4I1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX5A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX5B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX6A1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX6B1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX6C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX7A2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX7B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX7C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/COX8A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CRYAB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CS.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CSTB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CYC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/CYCS.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/FABP3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/FH.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/FKBP1A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/GAPDH.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/GPX1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/GSTP1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/HSPB1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/HSPD1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/IDH2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/LDHA.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/LGALS1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/LYZ.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/MB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/MDH2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA10.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA11.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA12.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA13.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA4.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA5.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA6.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA7.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA8.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFA9.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFAB1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB10.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB11.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB4.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB5.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB6.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB7.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB8.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFB9.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFC2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS4.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS5.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS6.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS7.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFS8.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFV1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFV2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NDUFV3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/NME1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PEBP1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PFN1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PGAM1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PGK1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PPIA.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PRDX1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/PRDX2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/RBP4.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/SDHA.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/SDHB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/SDHC.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/SDHD.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/SOD1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/SOD2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/TPI1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/TPT1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/TTR.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/TXN.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCR10.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCR11.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCRB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCRC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCRC2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCRFS1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCRH.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 /data/uq2347/runs/mitoage/job1-contacts/data/interim/mitoport/sel/UQCRQ.faa
+ACO2	183 sequences	925 columns
+ATP5F1A	184 sequences	633 columns
+ATP5F1B	183 sequences	573 columns
+ATP5F1C	179 sequences	328 columns
+ATP5F1D	176 sequences	264 columns
+ATP5F1E	169 sequences	120 columns
+ATP5IF1	181 sequences	225 columns
+ATP5MC1	183 sequences	168 columns
+ATP5ME	157 sequences	412 columns
+ATP5MF	164 sequences	238 columns
+ATP5MG	182 sequences	165 columns
+ATP5MJ	169 sequences	185 columns
+ATP5PB	179 sequences	415 columns
+ATP5PD	183 sequences	238 columns
+ATP5PF	183 sequences	209 columns
+ATP5PO	184 sequences	249 columns
+B2M	159 sequences	171 columns
+CA2	150 sequences	376 columns
+CD59	171 sequences	463 columns
+CFL1	177 sequences	318 columns
+COX4I1	183 sequences	304 columns
+COX5A	182 sequences	213 columns
+COX5B	182 sequences	294 columns
+COX6A1	181 sequences	232 columns
+COX6B1	183 sequences	145 columns
+COX6C	170 sequences	151 columns
+COX7A2	183 sequences	202 columns
+COX7B	178 sequences	257 columns
+COX7C	172 sequences	149 columns
+COX8A	168 sequences	392 columns
+CRYAB	182 sequences	263 columns
+CS	174 sequences	638 columns
+CSTB	161 sequences	178 columns
+CYC1	182 sequences	862 columns
+CYCS	180 sequences	105 columns
+FABP3	184 sequences	187 columns
+FH	182 sequences	516 columns
+FKBP1A	180 sequences	314 columns
+GAPDH	179 sequences	533 columns
+GPX1	11 sequences	170 columns
+GSTP1	112 sequences	448 columns
+HSPB1	182 sequences	248 columns
+HSPD1	183 sequences	625 columns
+IDH2	183 sequences	586 columns
+LDHA	89 sequences	482 columns
+LGALS1	178 sequences	180 columns
+LYZ	125 sequences	269 columns
+MB	184 sequences	242 columns
+MDH2	182 sequences	404 columns
+NDUFA1	169 sequences	102 columns
+NDUFA10	180 sequences	766 columns
+NDUFA11	183 sequences	426 columns
+NDUFA12	183 sequences	241 columns
+NDUFA13	179 sequences	237 columns
+NDUFA2	183 sequences	194 columns
+NDUFA3	180 sequences	417 columns
+NDUFA4	181 sequences	152 columns
+NDUFA5	184 sequences	206 columns
+NDUFA6	181 sequences	219 columns
+NDUFA7	182 sequences	174 columns
+NDUFA8	182 sequences	221 columns
+NDUFA9	182 sequences	427 columns
+NDUFAB1	181 sequences	226 columns
+NDUFB1	164 sequences	284 columns
+NDUFB10	181 sequences	226 columns
+NDUFB11	178 sequences	276 columns
+NDUFB2	180 sequences	172 columns
+NDUFB3	182 sequences	123 columns
+NDUFB4	184 sequences	226 columns
+NDUFB5	184 sequences	255 columns
+NDUFB6	184 sequences	286 columns
+NDUFB7	182 sequences	181 columns
+NDUFB8	183 sequences	205 columns
+NDUFB9	183 sequences	249 columns
+NDUFC1	182 sequences	157 columns
+NDUFC2	165 sequences	239 columns
+NDUFS1	182 sequences	777 columns
+NDUFS2	183 sequences	659 columns
+NDUFS3	182 sequences	502 columns
+NDUFS4	183 sequences	435 columns
+NDUFS5	181 sequences	165 columns
+NDUFS6	181 sequences	376 columns
+NDUFS7	182 sequences	488 columns
+NDUFS8	183 sequences	277 columns
+NDUFV1	182 sequences	474 columns
+NDUFV2	182 sequences	542 columns
+NDUFV3	182 sequences	772 columns
+NME1	107 sequences	267 columns
+PEBP1	181 sequences	293 columns
+PFN1	183 sequences	269 columns
+PGAM1	178 sequences	411 columns
+PGK1	178 sequences	470 columns
+PPIA	180 sequences	328 columns
+PRDX1	179 sequences	235 columns
+PRDX2	178 sequences	273 columns
+RBP4	182 sequences	713 columns
+SDHA	183 sequences	908 columns
+SDHB	181 sequences	500 columns
+SDHC	184 sequences	432 columns
+SDHD	179 sequences	243 columns
+SOD1	182 sequences	254 columns
+SOD2	182 sequences	355 columns
+TPI1	180 sequences	356 columns
+TPT1	179 sequences	427 columns
+TTR	176 sequences	197 columns
+TXN	153 sequences	312 columns
+UQCR10	178 sequences	135 columns
+UQCR11	176 sequences	460 columns
+UQCRB	181 sequences	177 columns
+UQCRC1	183 sequences	634 columns
+UQCRC2	183 sequences	502 columns
+UQCRFS1	178 sequences	372 columns
+UQCRH	183 sequences	119 columns
+UQCRQ	181 sequences	175 columns
+ATP5MC1	human 136 aa	species 388	length min/median/max 99/136/215	off by >20% 15	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5MF	human 88 aa	species 382	length min/median/max 49/89/175	off by >20% 34	species with 2+ gene ids 0	CDS length mismatch dropped 0
+ATP5MJ	human 75 aa	species 362	length min/median/max 41/58/208	off by >20% 218	species with 2+ gene ids 1	CDS length mismatch dropped 1
+ATP5PB	human 256 aa	species 393	length min/median/max 177/255/406	off by >20% 9	species with 2+ gene ids 0	CDS length mismatch dropped 0
+ATP5PD	human 137 aa	species 403	length min/median/max 120/161/238	off by >20% 18	species with 2+ gene ids 1	CDS length mismatch dropped 0
+ATP5PF	human 108 aa	species 413	length min/median/max 98/108/249	off by >20% 10	species with 2+ gene ids 1	CDS length mismatch dropped 1
+COX4I1	human 169 aa	species 414	length min/median/max 77/169/285	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX5A	human 150 aa	species 313	length min/median/max 116/150/274	off by >20% 19	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX5B	human 129 aa	species 267	length min/median/max 108/129/271	off by >20% 14	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6A1	human 109 aa	species 396	length min/median/max 71/109/217	off by >20% 34	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6B1	human 86 aa	species 384	length min/median/max 50/86/137	off by >20% 12	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX6C	human 75 aa	species 393	length min/median/max 73/76/143	off by >20% 23	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7A2	human 83 aa	species 284	length min/median/max 77/83/235	off by >20% 21	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7B	human 80 aa	species 393	length min/median/max 65/80/190	off by >20% 25	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX7C	human 63 aa	species 346	length min/median/max 38/63/157	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+COX8A	human 69 aa	species 273	length min/median/max 51/69/256	off by >20% 16	species with 2+ gene ids 1	CDS length mismatch dropped 0
+CYC1	human 325 aa	species 385	length min/median/max 82/320/741	off by >20% 19	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA1	human 70 aa	species 383	length min/median/max 36/70/132	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA10	human 375 aa	species 398	length min/median/max 203/355/419	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA11	human 228 aa	species 392	length min/median/max 77/140/264	off by >20% 385	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA12	human 63 aa	species 403	length min/median/max 63/146/298	off by >20% 391	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA13	human 144 aa	species 382	length min/median/max 80/144/228	off by >20% 16	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA3	human 84 aa	species 331	length min/median/max 62/84/332	off by >20% 59	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA4	human 81 aa	species 277	length min/median/max 68/82/169	off by >20% 5	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA6	human 128 aa	species 402	length min/median/max 68/128/251	off by >20% 20	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA8	human 128 aa	species 415	length min/median/max 100/172/220	off by >20% 391	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFA9	human 377 aa	species 397	length min/median/max 173/378/516	off by >20% 7	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFAB1	human 156 aa	species 276	length min/median/max 59/154/305	off by >20% 21	species with 2+ gene ids 1	CDS length mismatch dropped 1
+NDUFB1	human 58 aa	species 314	length min/median/max 48/58/229	off by >20% 51	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB10	human 172 aa	species 409	length min/median/max 124/175/221	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB11	human 153 aa	species 361	length min/median/max 87/151/269	off by >20% 13	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB2	human 105 aa	species 394	length min/median/max 67/102/139	off by >20% 4	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB3	human 98 aa	species 282	length min/median/max 53/98/173	off by >20% 2	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB4	human 120 aa	species 407	length min/median/max 62/129/208	off by >20% 14	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB5	human 137 aa	species 409	length min/median/max 119/186/238	off by >20% 321	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB6	human 97 aa	species 410	length min/median/max 58/128/283	off by >20% 331	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB7	human 137 aa	species 366	length min/median/max 94/126/177	off by >20% 5	species with 2+ gene ids 1	CDS length mismatch dropped 1
+NDUFB8	human 172 aa	species 412	length min/median/max 117/187/241	off by >20% 5	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFB9	human 123 aa	species 407	length min/median/max 122/175/241	off by >20% 361	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFC2	human 88 aa	species 386	length min/median/max 66/110/211	off by >20% 373	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS2	human 457 aa	species 396	length min/median/max 171/463/599	off by >20% 10	species with 2+ gene ids 1	CDS length mismatch dropped 1
+NDUFS3	human 264 aa	species 407	length min/median/max 154/261/462	off by >20% 12	species with 2+ gene ids 1	CDS length mismatch dropped 1
+NDUFS5	human 106 aa	species 396	length min/median/max 63/106/163	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS7	human 182 aa	species 410	length min/median/max 84/217/328	off by >20% 94	species with 2+ gene ids 1	CDS length mismatch dropped 0
+NDUFS8	human 210 aa	species 273	length min/median/max 81/210/425	off by >20% 6	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCR11	human 56 aa	species 387	length min/median/max 39/56/389	off by >20% 36	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRB	human 79 aa	species 402	length min/median/max 74/111/170	off by >20% 347	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRC1	human 480 aa	species 392	length min/median/max 355/480/552	off by >20% 1	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRFS1	human 274 aa	species 400	length min/median/max 110/273/366	off by >20% 8	species with 2+ gene ids 1	CDS length mismatch dropped 0
+UQCRQ	human 82 aa	species 394	length min/median/max 30/82/142	off by >20% 16	species with 2+ gene ids 1	CDS length mismatch dropped 0
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/ATP5MC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/ATP5MF.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/ATP5PB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/ATP5PD.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX4I1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX5A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX6A1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX6B1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX7B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX5B.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX6C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/ATP5MJ.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/ATP5PF.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX7A2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX8A.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/COX7C.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/CYC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA10.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA11.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA12.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA13.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA4.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA6.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA8.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFA9.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFAB1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB10.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB11.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB4.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB5.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB6.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB7.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB8.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFB9.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFC2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFS2.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFS3.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFS5.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFS7.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/NDUFS8.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/UQCR11.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/UQCRB.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/UQCRC1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/UQCRFS1.faa
++ /data/uq2347/micromamba/envs/mitoage-msa/bin/mafft --localpair --maxiterate 1000 --anysymbol --quiet --thread 1 data/interim/mitoport/partners/sel/UQCRQ.faa
+ATP5MC1	388 sequences	358 columns
+ATP5MF	382 sequences	281 columns
+ATP5MJ	361 sequences	332 columns
+ATP5PB	393 sequences	542 columns
+ATP5PD	403 sequences	283 columns
+ATP5PF	412 sequences	349 columns
+COX4I1	414 sequences	348 columns
+COX5A	313 sequences	424 columns
+COX5B	267 sequences	309 columns
+COX6A1	396 sequences	271 columns
+COX6B1	384 sequences	172 columns
+COX6C	393 sequences	209 columns
+COX7A2	284 sequences	326 columns
+COX7B	393 sequences	277 columns
+COX7C	346 sequences	231 columns
+COX8A	273 sequences	423 columns
+CYC1	385 sequences	1006 columns
+NDUFA1	383 sequences	200 columns
+NDUFA10	398 sequences	870 columns
+NDUFA11	392 sequences	589 columns
+NDUFA12	403 sequences	397 columns
+NDUFA13	382 sequences	240 columns
+NDUFA3	331 sequences	533 columns
+NDUFA4	277 sequences	240 columns
+NDUFA6	402 sequences	306 columns
+NDUFA8	415 sequences	242 columns
+NDUFA9	397 sequences	655 columns
+NDUFAB1	275 sequences	483 columns
+NDUFB1	314 sequences	321 columns
+NDUFB10	409 sequences	254 columns
+NDUFB11	361 sequences	483 columns
+NDUFB2	394 sequences	237 columns
+NDUFB3	282 sequences	186 columns
+NDUFB4	407 sequences	327 columns
+NDUFB5	409 sequences	302 columns
+NDUFB6	410 sequences	324 columns
+NDUFB7	365 sequences	228 columns
+NDUFB8	412 sequences	266 columns
+NDUFB9	407 sequences	284 columns
+NDUFC2	386 sequences	259 columns
+NDUFS2	395 sequences	887 columns
+NDUFS3	406 sequences	655 columns
+NDUFS5	396 sequences	190 columns
+NDUFS7	410 sequences	601 columns
+NDUFS8	273 sequences	488 columns
+UQCR11	387 sequences	616 columns
+UQCRB	402 sequences	184 columns
+UQCRC1	392 sequences	708 columns
+UQCRFS1	400 sequences	451 columns
+UQCRQ	394 sequences	220 columns
+51976e828635df5453812ecd20fe04063032c7634d8feea94194ff2a38bccce9  data/interim/tree/dated.nwk
+d8786a480349ffe6502192d8e09f4bd6fa49dd30d1f0d3ab437af1b8fd025f67  data/output/longevity/composition.tsv
+82d3227588f4964fc9c1df8bf4b81759193dec884b218f204719c4db7f35a376  data/output/longevity/fourfold.tsv
+7bee4569638b05a2b23709f17b51b28ed56c50b0d2df19d86028a490ad29ac32  data/input/pdb/5XTD.cif
+2daafe97179293a3de6e75d562178b905f8f1c053b8e39e2b9b15c46b28bc6cb  data/input/pdb/5XTE.cif
+c9401e6cbf48cb0fd0cc8df22f233fd2d894c295be9e144b03781324cb02adfa  data/input/pdb/5Z62.cif
+8125baa6e3319d70ff30f7685b0be9690364a06b8868c9f29c5892fb30c45f10  data/input/pdb/8H9S.cif
+853d29226eccebf977fc6d9dd6973107b7e1e515b5917a18f5c1753a34a44df5  data/interim/mitoport/iface/chains.tsv
+dc712a025912e5d7fb418d94a88bfa23016533c74729849b54c4c8dcbc17395c  data/interim/mitoport/iface/contacts.tsv
+06676ab7cd5a883fcdd7729ed0bc376f8fd6b09da2d1719d0dbe98ea2dad56f7  data/interim/mitoport/iface/control_pairs.tsv
+ea2766c223a9985147002e87b15aa0a87bd333edcef91ab3f2e1375964cb9508  data/interim/mitoport/iface-I/chains.tsv
+3a2f475ef1df2e433cf5a352920764804d83afd34a829f894989d22bb40252e4  data/interim/mitoport/iface-I/contacts.tsv
+84da0458f688dc0629c9f9f5d85e50b05ec11959ee13ccee196cfdc2c7d5cf9d  data/interim/mitoport/iface-I/control_pairs.tsv
+72589d01c381c4302d972072bec523e820c171adc42625da2dd64c7a395096a0  data/interim/mitoport/iface-III/chains.tsv
+3a749aed657d6af92982a3efa802d59137edabb528d65ac4fa19cf6152905767  data/interim/mitoport/iface-III/contacts.tsv
+1bc9f1dc144ba0b4fec7b35387d26ea0400a31764de40d4bf4a43978acdba3e7  data/interim/mitoport/iface-III/control_pairs.tsv
+a9856e7fd86777719b0d5acbb59666b6a8aedecbf2ee1529789ab202e3ca5f52  data/interim/mitoport/iface-III/sites.tsv
+99ad571cfaaffeef4f76496925b2f801bd21b4bf26d5bba1b8d33243ab65106d  data/interim/mitoport/iface-I/sites.tsv
+0f800a1f076da452cb5ea16cb1e67ca11ad27fad0505b6af7c760d5b987308b5  data/interim/mitoport/iface/sites.tsv
+2b7b18a73d5a5642564b0b4a288a6d4acdc2a780a63db9151f7da5c807ea53bd  data/interim/mitoport/iface-V/chains.tsv
+23404bf1d7391269f494f131933fcee945c43a87967891e87a86f1a943fadcbe  data/interim/mitoport/iface-V/contacts.tsv
+6eaf85a125e16f3312188a9ecff8925418951bd9377c8dccd8dd70972edad618  data/interim/mitoport/iface-V/control_pairs.tsv
+9dbc177b8bbf3b715072eabce4bd3746529b86884020c566fc95f85073396b85  data/interim/mitoport/iface-V/sites.tsv
+0cc0aa85218983657f87b6ca5424ecb238eb4c60ceb6e653a99f9a25481d53bb  data/interim/mitoport/iface_aln/ACO2.afa
+388360c56d1efff093d42fe33f4d9f0324788ff98437df3877362ea132186f10  data/interim/mitoport/iface_aln/ATP5F1A.afa
+7282ff9851f2ee1fc2f6c897cf708f349cd2a4f8863a2de2806de6fb1ed002a4  data/interim/mitoport/iface_aln/ATP5F1B.afa
+3375ba552b95a3edb2c5661c601a15fad830f62fa9d0b7ab67784e85297e3700  data/interim/mitoport/iface_aln/ATP5F1C.afa
+3da3b47626e3831c4f613c015fee50784e94cd8fbb35445ac7a4aa1e5bb863b5  data/interim/mitoport/iface_aln/ATP5F1D.afa
+2af01612333b4b434bcf902a40384c5cf6168eb107a9b381d8234e885dec8148  data/interim/mitoport/iface_aln/ATP5F1E.afa
+7095d6f6b95bab031d31526aa9c610e40c11718e1a0c606becc0ee08c7780859  data/interim/mitoport/iface_aln/ATP5IF1.afa
+c336db15bed90f4f9e7caaa0ef80d3bf61b02e89c6fe3c88aae104b05d30a22a  data/interim/mitoport/iface_aln/ATP5MC1.afa
+5070cc2d449423483ce0b6af5e35a23be60fc25a4d42fb305d9db9367de8f5d8  data/interim/mitoport/iface_aln/ATP5ME.afa
+8fe761005b1e2397cd95bcd2f14172403e39917f14862c2f37bf30a4544cfac1  data/interim/mitoport/iface_aln/ATP5MF.afa
+2dd2567594ae01ffa705c38387cb3ee3376f73a557b9cc862855b5d9d0c68cdf  data/interim/mitoport/iface_aln/ATP5MG.afa
+83813d6220c7471ba8826d572cfbdfe46517327d2e2f8dcaae1612023d4dd1c9  data/interim/mitoport/iface_aln/ATP5MJ.afa
+3a10ad99d088e39d5a7b63fdc51485573b3f33921ec1f408e3738dbd16a28599  data/interim/mitoport/iface_aln/ATP5PB.afa
+f271b7b7bb4d8250d0872eccd3de29d7a9481181bf14131412f71d3140f97e6d  data/interim/mitoport/iface_aln/ATP5PD.afa
+21697d6e19783cc4982dab104767ef55bf0a49a87dd2072c67f6bb55064fa599  data/interim/mitoport/iface_aln/ATP5PF.afa
+d19fe9883e15853822e1791b14738896b765a004075aafeabc5bb034a645dd61  data/interim/mitoport/iface_aln/ATP5PO.afa
+baad8495154d5fa23905e1c6c1972401c7544f04626cea4f981317f0c42f989f  data/interim/mitoport/iface_aln/B2M.afa
+a24ad03d498faff0892bd3456524e68f5866f30477bfd8fc069b60a1d91ef0ac  data/interim/mitoport/iface_aln/CA2.afa
+b771328614a9f58bceaf77273a6b0a06dca057e084bc55c256881e5b3d426358  data/interim/mitoport/iface_aln/CD59.afa
+49b55f5847139493d6fb9ad26f1b1d21b1ad2e8b87b994328fb990992a7f2aad  data/interim/mitoport/iface_aln/CFL1.afa
+2db1dc78fa76c356ecfc3b4ec41703ac640ddaeb38190f7740d24cacbe16f728  data/interim/mitoport/iface_aln/COX4I1.afa
+017bc4c281b5b48c540ae2f6dd4316a4619778884ae6d977ef6e3bc023ef60d5  data/interim/mitoport/iface_aln/COX5A.afa
+ce4eeb90bb26df8385a3c23c00cd001a5bc7146925216dfd2430baa43e97bca1  data/interim/mitoport/iface_aln/COX5B.afa
+c800ad6efc19259e04ba189eeba67403571381438b4444db92d0af6645c95af7  data/interim/mitoport/iface_aln/COX6A1.afa
+074814618dfd0d43cba697844f34d3cda214495d3e2864b9ca52907e11ef5e97  data/interim/mitoport/iface_aln/COX6B1.afa
+87ae2705b41387ace0e47b60fc4c412c5aedc885bec1eaed5b47dd44455777d4  data/interim/mitoport/iface_aln/COX6C.afa
+098331cf8e50d8de9c62dfe4705bcd6040854c80866964f0e64f56e7540bb8de  data/interim/mitoport/iface_aln/COX7A2.afa
+4070c63c80ef5b9ce5dffc92f3c6eccf5e4f0ee37660070281f4df2076dc7152  data/interim/mitoport/iface_aln/COX7B.afa
+0d03d208882496e1bef03dfe9b806326155eaf852589d794116686bd410207cb  data/interim/mitoport/iface_aln/COX7C.afa
+efb4af8cf27912a20c911cd010db0470bf1b5925f50c77ea5618a0d543868974  data/interim/mitoport/iface_aln/COX8A.afa
+c05a4a00a81ae7e15039f95953f81a02132651ad9e4efc91749202bacefb7bec  data/interim/mitoport/iface_aln/CRYAB.afa
+5c15c7ead440c52e8ae220434084fa5a9b4ae36d8331fb9e9ea0eb56dfdb05a5  data/interim/mitoport/iface_aln/CS.afa
+226936e3e36acf81cc3ade21cf5bb96f85a990178406db36b027ab4185385f96  data/interim/mitoport/iface_aln/CSTB.afa
+424e527bc302ed9b9398d1afda31c3a269a3c67dfe438bdd77333dc7616dd140  data/interim/mitoport/iface_aln/CYC1.afa
+8ee0339dd2705afcf321716129ab254186cbf4e62176f799b47568811d5cdb1c  data/interim/mitoport/iface_aln/CYCS.afa
+23657c78e8ac4fb5cea94df22b0bd8dcd21a919a893232469bac1d2da125323c  data/interim/mitoport/iface_aln/FABP3.afa
+d0e43cd3d49bae4389c2fa3cadd1b9e1a03d59e68031f71a9265ca2235dcfa0e  data/interim/mitoport/iface_aln/FH.afa
+b84dc0836f0f230b817641501eaf423f228cdda554fed2c3c213b17f0604d17f  data/interim/mitoport/iface_aln/FKBP1A.afa
+0f2711ea61d87cb859a13884329cac0575c1a1e4fc199d08ecc78a0aae43ef0a  data/interim/mitoport/iface_aln/GAPDH.afa
+e1828708b36c7cc122bbba9adce3e09272baac8dc07abadf471b9b40acc0a5f9  data/interim/mitoport/iface_aln/GPX1.afa
+629e9b6f6dbbc9823f876fd0e15c249f867f68df0dc57f13cfd88a9257b7b7f7  data/interim/mitoport/iface_aln/GSTP1.afa
+1a36f8a36d59c54d2c49bb2e10cc819f555aeeb3c82203cb611b66d2e91eb6c7  data/interim/mitoport/iface_aln/HSPB1.afa
+369140a1b71fe8452fd579d1515455925c70345476796742db580d383a40b7e0  data/interim/mitoport/iface_aln/HSPD1.afa
+d1adbd143e99ee7edf99185d2630e7ae5d26de90d0d87168f63d89983b4a3827  data/interim/mitoport/iface_aln/IDH2.afa
+67b2c89da9bd8ad234faf57c3965b601935c8b3081b4b0cb7d30ccab308e740e  data/interim/mitoport/iface_aln/LDHA.afa
+732d1c0f3d7948a1f1c357ccf4177d24a3165be10ea7f24f7ad72380e12f905c  data/interim/mitoport/iface_aln/LGALS1.afa
+ef07c83bebf1d97cac4638020aa4f22ec95b3adc38f6769d454a758f9fa42f07  data/interim/mitoport/iface_aln/LYZ.afa
+88b10ab22536a31910ecfc481aebb4ecb57199f8da2409cb99b45e2ca634ccc3  data/interim/mitoport/iface_aln/MB.afa
+cf0063eab9769b67d3f36f400bd2205a0377abcdf49395755553fdafe91b6c95  data/interim/mitoport/iface_aln/MDH2.afa
+877fd42c89aea0e96f42999c45053f81971fcd5e50336aacd977cc16cd7788db  data/interim/mitoport/iface_aln/NDUFA10.afa
+72f395c5f78db5916d68b30e7de4d53848d72528dfdab9609b4b0742a81c601d  data/interim/mitoport/iface_aln/NDUFA11.afa
+bdc33950ece63ee399c1c99f624b1203c677b67e0a2c6f5be21d8747f1d9e1ac  data/interim/mitoport/iface_aln/NDUFA12.afa
+108baba93c687ff20107c3ded65719f6f88da92b6c493a3c783141a16131db5f  data/interim/mitoport/iface_aln/NDUFA13.afa
+18bf4c107f7ed70b2f6cb4fb5d0eff7d1430d23d1216e4f5a558e38ea348d5e9  data/interim/mitoport/iface_aln/NDUFA1.afa
+d582523e7e2de91e6e52be83d72f7a8954325d3e63d856706172c31e10905aa6  data/interim/mitoport/iface_aln/NDUFA2.afa
+bc2c4a93be29d12e5305368ca1513a56fafb7425c49f4310d11b42a5892b223b  data/interim/mitoport/iface_aln/NDUFA3.afa
+274e035e448e3e8ba16a2f739232ff02ef55a8c18a05dfc3bc716ee94743eeda  data/interim/mitoport/iface_aln/NDUFA4.afa
+d48cd00afea9fd4acc3613c2bc9bda119323d80b4cc16ab13d188ec5e8d09759  data/interim/mitoport/iface_aln/NDUFA5.afa
+4de064eaf4fe764309e5aaa50588ecf0822d8bd5c3894791b7a3fad626228c31  data/interim/mitoport/iface_aln/NDUFA6.afa
+ef0369414625d145ad7d66a8c99eebedcd937773d34656aa63049b7ebc99bfa3  data/interim/mitoport/iface_aln/NDUFA7.afa
+ad4c8bdf1109378b019f9eefd2e62ccb31978ca81cb5f4d2e3627cf523ff7a35  data/interim/mitoport/iface_aln/NDUFA8.afa
+5dcaac7d406a08b943c76848e03f4aab7c3447840fb6fc4e28f71d8f456dce18  data/interim/mitoport/iface_aln/NDUFA9.afa
+3673ca0933656cb8dbe10950ad10ebf2ab3129295f3814d1fede5a41b268498d  data/interim/mitoport/iface_aln/NDUFAB1.afa
+8f4a06248588052e313e88aa7e19571d053ccd487abb4148ef462bd3f1eeea46  data/interim/mitoport/iface_aln/NDUFB10.afa
+5d973348d61073ff44267a366cec7e8eed8aacead01fdd284cc8bf98972e608b  data/interim/mitoport/iface_aln/NDUFB11.afa
+32bfd77dd4a55c42190a9cb8644c433edb74f98b39a818ad99df73139600ebdf  data/interim/mitoport/iface_aln/NDUFB1.afa
+cf637988adcf29dd1acdeca4fe5a5e27fd2fe4b49cfc169521fcf50e1f44d4ef  data/interim/mitoport/iface_aln/NDUFB2.afa
+61add0ce55bb1cd47453e0b8c953ac47048a03c1d66d97d471ffd94530b945cc  data/interim/mitoport/iface_aln/NDUFB3.afa
+5ad46b8197eb54b9ea2a713867f0249fd3a8dea267c4d10781f95d12811b4d76  data/interim/mitoport/iface_aln/NDUFB4.afa
+0e304587446df923a460996ef53182304d85f3d90e97261cd1fb0b38fdb235d9  data/interim/mitoport/iface_aln/NDUFB5.afa
+875b0c556c7a87868e94ff29e32aa06e06523b59a5ca712bd943c135e58d57c1  data/interim/mitoport/iface_aln/NDUFB6.afa
+bb0854790b176ce8d4b8e059055fa4dedcdd5024221b0c8e68c6d869aa12f69c  data/interim/mitoport/iface_aln/NDUFB7.afa
+666e643bb9cd484af58c844da41bd1961cbdaf7332881dafbd4220234d46c30a  data/interim/mitoport/iface_aln/NDUFB8.afa
+7096678e98ef7ba2c45c42f7d0c997a17cecc79fd2d60f3790fde926dd48b4fe  data/interim/mitoport/iface_aln/NDUFB9.afa
+7160229387c5fd9717366f7675f5e913d8b97ef236017499465074d8de9370de  data/interim/mitoport/iface_aln/NDUFC1.afa
+b343e3f2915d7c8a5b75d87369c963e913deb5944a52338abe0a12367803bf09  data/interim/mitoport/iface_aln/NDUFC2.afa
+d1b3e87fa4f4f5bb8b87b95718849b4d69bde52900cea1c978fe6cbc3d5d2694  data/interim/mitoport/iface_aln/NDUFS1.afa
+1bb806b728cfe15b0ef79fa8b2f5ee97f13ce94f1956f98a571ed4a2ae870620  data/interim/mitoport/iface_aln/NDUFS2.afa
+7bd9db3ce66ddaa2570eb463b141d9dbcce041366bdfd3ed1cccb8fdac599f6b  data/interim/mitoport/iface_aln/NDUFS3.afa
+c258fc23085f97f56dd1d226594d85b5fe39d0cb3afabbda45fdeb35c35fd6a9  data/interim/mitoport/iface_aln/NDUFS4.afa
+ea3a3048907781087193f8b9ec4f41799b9e1f822b9316abcdaeb9704d62b962  data/interim/mitoport/iface_aln/NDUFS5.afa
+cc2b99a73b404adf222983de0d01d51dc758cceeb8c0a790aa235fbe003395bf  data/interim/mitoport/iface_aln/NDUFS6.afa
+b67e1feea0bcbf01b9528f3052cf96b3f1f95dc36cd73bbbe7c99c3510998ea1  data/interim/mitoport/iface_aln/NDUFS7.afa
+1e26bc2323f272155990de34a1ba5fe33bdf10ff51098d55de5cd5677f124bdc  data/interim/mitoport/iface_aln/NDUFS8.afa
+2f2e09b37e894b9398be06d06200123fc30f6405312aece7824798fcaf0d57c3  data/interim/mitoport/iface_aln/NDUFV1.afa
+6f3734de70e9918dc6ab8e06fa9f8eaa25130d35b3bcd4a4cbad542a7c1318ed  data/interim/mitoport/iface_aln/NDUFV2.afa
+6306420811eeac3274312744efc32388da066b594d88af0d745416ce972ef517  data/interim/mitoport/iface_aln/NDUFV3.afa
+b4bdfdbf94e0a81d8351c3d4bcc116ec5f37e38ab5ce9182c0c90f4bf8dea59b  data/interim/mitoport/iface_aln/NME1.afa
+c8901f9c5879818b9c587d1a93905afd9a0990ca56312f384e61038c90d5ed36  data/interim/mitoport/iface_aln/PEBP1.afa
+85083ba4698307fc4320c3a56174f290b1e9a25ae488201587ea793e4b330910  data/interim/mitoport/iface_aln/PFN1.afa
+9f420d836d69254bcc7f01ba6f19ff0028d9b12118174dc53884483e63ab0369  data/interim/mitoport/iface_aln/PGAM1.afa
+ac030583afd59bc7f42adc2a2717f7d62b102913ca29c4ba331ed0694180a785  data/interim/mitoport/iface_aln/PGK1.afa
+368595a82c9ad2f0c89a2a4f81e96239d73758b1608b7729ddcaa491a3425f3f  data/interim/mitoport/iface_aln/PPIA.afa
+d5d41255d14187e4249fbf0812f663dd5d4704fc12f486cfdce95be43d0a16ee  data/interim/mitoport/iface_aln/PRDX1.afa
+05a7a061ba51a45a69422766b5482d62fdf9fd02d4639cb7a1bc90937b5bb7ed  data/interim/mitoport/iface_aln/PRDX2.afa
+26680193d2f6bf8d42d0f43735fc113ab2587393acb60c693438ffa26efd9aba  data/interim/mitoport/iface_aln/RBP4.afa
+d16a1a94496c95bc07af5f87ec166070a0593515d1d22db4eb6208f25595569e  data/interim/mitoport/iface_aln/SDHA.afa
+a7bc3db728889beeb0f501db28a5d55b8b48b242b3884e29175f0a5030f97560  data/interim/mitoport/iface_aln/SDHB.afa
+d317ce5e9ed5570ec9e0c507426d42bad70fd7a874497ca7999711b7b30501aa  data/interim/mitoport/iface_aln/SDHC.afa
+432c2b56541f590bf44d1a93c88f5dd52b0b59f2c721a6ead3bb3aec04657682  data/interim/mitoport/iface_aln/SDHD.afa
+d12ae6905b3f6c6b1db2a69f422bf9af1e75cf2c7f6e85d18676f774b78822f5  data/interim/mitoport/iface_aln/SOD1.afa
+d23a5e1059071aeff2d399217653c4a952acdf084f046ee44b34642ddbdc6932  data/interim/mitoport/iface_aln/SOD2.afa
+08993d159783b7d386ebef2a4ec2d86222dab1551c8271fa021d56e2d4bad96d  data/interim/mitoport/iface_aln/TPI1.afa
+6b905d41a62de033fadc3a1def7bc0f04508203be7eba7e8e907854e44a730b4  data/interim/mitoport/iface_aln/TPT1.afa
+bc6f60c473848bffca6738dae09def91d4bb4611679f3acf6d6b99572397a6fa  data/interim/mitoport/iface_aln/TTR.afa
+c23f0ccf845f5be9fa10d1b0af9a7b4ffa1641b1203d7b5f0535418fd712df07  data/interim/mitoport/iface_aln/TXN.afa
+4475994946b44d2e526b119c4ae1ffe690be408a7db5681e541bb860f3277332  data/interim/mitoport/iface_aln/UQCR10.afa
+b583598cb5ddee3c8fff49d8b53c624a7524f92139374362fd10f7495c01421a  data/interim/mitoport/iface_aln/UQCR11.afa
+98ad6222cb287d76d70472f185e1b909e20b7bb6f211ca7436799079c136a907  data/interim/mitoport/iface_aln/UQCRB.afa
+6aafbbb8d311b85ffcc63ac4ce4c0fd17c35e4cffc6d26db625ef47bfc2de40e  data/interim/mitoport/iface_aln/UQCRC1.afa
+c42442017d69c0b8376501fd7b9880d7bc4e7269c41e3ebc43dbb6647843d70b  data/interim/mitoport/iface_aln/UQCRC2.afa
+e18e3b625edafddf1ea3c37479914243ddb1e0403a4e5ccfa83cf86f25634af1  data/interim/mitoport/iface_aln/UQCRFS1.afa
+b5e83dd9e3eeb773af96ff98ba81e044672233e4beb54c158868d93f880acf18  data/interim/mitoport/iface_aln/UQCRH.afa
+faa5993c6a885afde484501103358f2358f0ffb98ed7f0cbd43a00c24044a7c4  data/interim/mitoport/iface_aln/UQCRQ.afa
+8f4b188dfda8d04530597ee548b2047692947a3acea7b9ed684e01c1891ace42  data/interim/mitoport/partners/aln/ATP5MC1.afa
+4f6e305dc9b1213377e3ec43a639b798c14bad982a466c7acbddad958ec70972  data/interim/mitoport/partners/aln/ATP5MF.afa
+4cfc1d6408a8de6d5e31b65bd40b70c3b03e918579d9999a5e285a82e65877cf  data/interim/mitoport/partners/aln/ATP5MJ.afa
+005155af7c7c904dfa60627a7ecfbe0ea9e18e235cb3b4984f62c9161ca7ee3e  data/interim/mitoport/partners/aln/ATP5PB.afa
+38aa8cd9cf1842531af61a651e339ae5f28cd2df90ad43b614670f8faab272d2  data/interim/mitoport/partners/aln/ATP5PD.afa
+4478b322006e6470e581fb953b9ae92099f0e55f744c6597558eb1cafcf485bd  data/interim/mitoport/partners/aln/ATP5PF.afa
+7e81956fc16761a7a2ef36077f939b3bc3f51cf23892d75a311c17a788853cb2  data/interim/mitoport/partners/aln/COX4I1.afa
+ae20680061de4056ef765e0dcda86019bcd60f1241b95e60e4de390c61753e5f  data/interim/mitoport/partners/aln/COX5A.afa
+9ce9a6f59ad50a76b829dba54b780aa8a048319cf7ea94c91fdbb71ca53526b9  data/interim/mitoport/partners/aln/COX5B.afa
+03e166c499ce36ab59918cd88ee3017b572cce24e8436a1feb31db2d5c94937b  data/interim/mitoport/partners/aln/COX6A1.afa
+5558ba288072ed71f84b28219469875f1d04732ba0dece2d4a428bdbf2097d95  data/interim/mitoport/partners/aln/COX6B1.afa
+0f1d29d6d25d829b45c4ed81022cacf0bb7f4183ed6e1d8da02e091233e6555c  data/interim/mitoport/partners/aln/COX6C.afa
+60f49d31f23530da50da8a0db41a1c8927acd3d0c596bbd275f139386009c151  data/interim/mitoport/partners/aln/COX7A2.afa
+d47f09616b1cc39168f5b59bc4a05b16701306583cba283311ccdc620f1092a1  data/interim/mitoport/partners/aln/COX7B.afa
+edd5c7da118058e856995b33f5554fe18684197aa35c1f2b5802c54ab9c61e3d  data/interim/mitoport/partners/aln/COX7C.afa
+e2530fd8fea702bb022bfc61d0a455ab84b3855ef4eb41f2b3de30f4f87db7d4  data/interim/mitoport/partners/aln/COX8A.afa
+d3ab582b1bfb4c8cc55fe48072f55869b556cd799d19e1486e548f6886389c5f  data/interim/mitoport/partners/aln/CYC1.afa
+904679b8dc743ff8c3b61778478ca637703b5de15e8169a9305569de8e8b62a5  data/interim/mitoport/partners/aln/NDUFA10.afa
+53807d5a6f21c70ca0da0a83dc37960af579bfca02ab4c0661eb8a58229f7fba  data/interim/mitoport/partners/aln/NDUFA11.afa
+3ddaa84218566019e3028972bfd33412f0fddf29e394244e602fa2f5e6d48c82  data/interim/mitoport/partners/aln/NDUFA12.afa
+592d52a48137284ab718e31cc12c39b98779ee46cac4f90e8cdfdcda2c48e424  data/interim/mitoport/partners/aln/NDUFA13.afa
+5edb1c7a21e22e83e81f1fc316d1d47779bdb8e019aa64e4a859146c83107e60  data/interim/mitoport/partners/aln/NDUFA1.afa
+f6bb1d7e30ebed3f5cf1062ae438ff007063b155f9e439fd0d41f698bde9a3ee  data/interim/mitoport/partners/aln/NDUFA3.afa
+fe3d74e3fe5efe4007d4cd6a3a507d02488c79d200bbcd6a96dff689dde0a613  data/interim/mitoport/partners/aln/NDUFA4.afa
+7f65cebfa224da234c286df1f53642f377d875b7eb6e1ae5c15bd95e468778f7  data/interim/mitoport/partners/aln/NDUFA6.afa
+8d79d1a46524493b56ab00c6b5623b5f8be6f9519345d92e44c8d4e9c9482a8b  data/interim/mitoport/partners/aln/NDUFA8.afa
+85ee2b66fe8c94fb0f3a026de0d5843f3ff176a9d24346f70835d1527fb0b295  data/interim/mitoport/partners/aln/NDUFA9.afa
+07528fe0a2371ff92293331c2f5d38935a4b2d5cd930b1e828aefffe62f56260  data/interim/mitoport/partners/aln/NDUFAB1.afa
+062d522ea684d2e24fc7415ad2baf75c769b4fdbb3c4df501fd87964bfc85245  data/interim/mitoport/partners/aln/NDUFB10.afa
+ea5b6a13d5a1016ebe812517dd31cad77a27c08c961621392443ecd87f67a36f  data/interim/mitoport/partners/aln/NDUFB11.afa
+ff562ee8b3405eb2e28edc5a4228a1909fc9a20a985e5f9039ad03a2fdec1041  data/interim/mitoport/partners/aln/NDUFB1.afa
+bcbdf453507f6321628dec76e303a660bb446f58443e3bbfde1c240fabb16a73  data/interim/mitoport/partners/aln/NDUFB2.afa
+9dbce02b1872ea54bfa0b3b48f6ff678afc2211fd40773ea6c86232c18405f88  data/interim/mitoport/partners/aln/NDUFB3.afa
+af257ca25319bea934ac263817d7b2394043df8f4fe907a499a4940e34a68fd0  data/interim/mitoport/partners/aln/NDUFB4.afa
+3cac92292961da25e117b442c1e3a341de494355e208a92c24372e5da6625941  data/interim/mitoport/partners/aln/NDUFB5.afa
+dfbf424cbac95b6691d39868702aa62b210a84cb74b73275518c0748035a0639  data/interim/mitoport/partners/aln/NDUFB6.afa
+914c7c6e86945bbbccbd41f5ceedf5635eab7c000908f314a5e2dbf86d777959  data/interim/mitoport/partners/aln/NDUFB7.afa
+5980bff9a046c62f7d644ed5a3c90f058b986b62c4d89a88149ec87f495f0246  data/interim/mitoport/partners/aln/NDUFB8.afa
+cd8f7c6a6cfa7bb2db56f476c4f2ed26db0682e352369f8b40828cfa715a9331  data/interim/mitoport/partners/aln/NDUFB9.afa
+d9283649132506c22df56e37b5b3868d78f62d188544b014b8e468b55135a171  data/interim/mitoport/partners/aln/NDUFC2.afa
+e61629c2d76e0e1507d1fcc6b536ec5d8f90883c658a3e61b3249396adf318f2  data/interim/mitoport/partners/aln/NDUFS2.afa
+3f14700127d91df18dc12c17f474622cc709803a0d04d474288417d456db0622  data/interim/mitoport/partners/aln/NDUFS3.afa
+63c9a2695129084766b615ccf224b9aa0bd6830a3d5e834ba3ae5f79c0882e56  data/interim/mitoport/partners/aln/NDUFS5.afa
+9e1e7fea5817c755d8a22d8024574eb930cc74b0dd27eb10afbf4314fe5c060f  data/interim/mitoport/partners/aln/NDUFS7.afa
+0088682acd91c80dbca7c28e584abf5d0b8d7702a9783a3456afd989c3bceb90  data/interim/mitoport/partners/aln/NDUFS8.afa
+4640ecfd9f5d57c3fc02ef4efed52c1a3b5d546cb45ac38d86ceed5928db8f3b  data/interim/mitoport/partners/aln/UQCR11.afa
+77e75c9571934a1088b027110329320d1333216ee8f8531a6092665ca08ef14e  data/interim/mitoport/partners/aln/UQCRB.afa
+b518bf042b5a04d38f41f2c89940ee1725f60a23d642aaa26a6c3253f591a8b0  data/interim/mitoport/partners/aln/UQCRC1.afa
+8c5f712d0907d20526fa72b009c0d75d28b5e530d95fb2786f7a6fd0ccb149d1  data/interim/mitoport/partners/aln/UQCRFS1.afa
+7350569010e760afae50edeeb3e00b39fe7e0119044cb53da2adb5a245ace625  data/interim/mitoport/partners/aln/UQCRQ.afa
+complex IV contacts.tsv, before and after the generalisation: identical bytes
+complex IV sites.tsv, before and after the generalisation: identical bytes
+complex IV control_pairs.tsv, before and after the generalisation: identical bytes
+complex IV chains.tsv, before and after the generalisation: identical bytes
+complex IV species.txt, before and after the generalisation: identical bytes
+complex IV coupling.tsv on H5's 62 alignments, before and after: identical bytes
+complex IV lifespan.tsv on H5's 62 alignments, before and after: identical bytes
+........s...............................................                 [100%]
+=============================== warnings summary ===============================
+tests/test_complexes.py::TestCoupling::test_complex_v_runs_on_its_own_mitochondrial_genes
+tests/test_complexes.py::TestCoupling::test_complex_v_runs_on_its_own_mitochondrial_genes
+tests/test_complexes.py::TestCoupling::test_complex_v_runs_on_its_own_mitochondrial_genes
+  /data/uq2347/runs/mitoage/job1-contacts/src/mitoage_pipelines/mitoport/iface.py:360: SmallSampleWarning: One or more sample arguments is too small; all returned values will be NaN. See documentation for sample size requirements.
+    p = stats.mannwhitneyu(d[col].dropna(), ctrl[col].dropna())[1] if grp != "cytosolic control" and len(d) > 1 else float("nan")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+55 passed, 1 skipped, 3 warnings in 91.80s (0:01:31)
+caught: an entity the table does not name is guessed: tests/test_complexes.py::TestEntries::test_an_entity_the_table_does_not_name_is_refused
+caught: a reference chain is not checked against its gene: tests/test_complexes.py::TestEntries::test_a_reference_chain_of_another_gene_is_refused
+caught: only the reference chains are mitochondrial partners: tests/test_complexes.py::TestContactMaps::test_the_other_copy_of_cytochrome_b_is_a_mitochondrial_partner
+caught: chains.tsv marks only the reference chains as mitochondrial: tests/test_complexes.py::TestContactMaps::test_the_other_copy_of_cytochrome_b_is_a_mitochondrial_partner
+caught: species from the first alignment only: ERROR tests/test_complexes.py::TestContactMaps::test_the_other_copy_of_cytochrome_b_is_a_mitochondrial_partner
+caught: contacts counted against mitochondrial partners too: tests/test_complexes.py::TestContactMaps::test_contacts_count_nuclear_partners_only
+caught: pair species from COX1, as the complex-IV-only code had them: tests/test_complexes.py::TestCoupling::test_complex_v_runs_on_its_own_mitochondrial_genes
+caught: pair species from the first mitochondrial alignment only: tests/test_complexes.py::TestCoupling::test_pair_species_hold_every_mitochondrial_alignment
+caught: a gene in several chains keeps the last chain's interface: tests/test_complexes.py::TestNuclearSide::test_a_gene_in_several_chains_takes_the_union_of_their_interfaces[III]
+caught: a contact without a column is read as the last column: tests/test_complexes.py::TestCoupling::test_a_contact_without_a_column_is_refused
+caught: every alignment outside the named groups is a cytosolic control: tests/test_complexes.py::TestCoupling::test_alignments_of_other_complexes_are_no_cytosolic_controls
+caught: subunits that touch nothing set the usual interface size: tests/test_complexes.py::TestNuclearSide::test_the_usual_size_leaves_out_subunits_that_touch_nothing
+caught: a contact without a control is refused again: tests/test_complexes.py::TestContactMaps::test_a_gene_that_runs_out_of_controls_keeps_its_contacts
+caught: one-sided group test: tests/test_complexes.py::TestReadouts::test_group_test_is_two_sided_mann_whitney_and_drops_unknowns
+caught: R1b on every subunit, with an interface or not: tests/test_complexes.py::TestReadouts::test_r1b_and_r2_take_subunits_with_an_interface_r0_takes_all
+caught: normal instead of t interval of the intercept: tests/test_complexes.py::TestReadouts::test_the_intercept_on_independent_tips_is_the_mean
+caught: lambda fixed at zero in the intercept: tests/test_complexes.py::TestReadouts::test_shared_history_widens_the_interval
+caught: Holm over every class of R3: tests/test_complexes.py::TestReadouts::test_holm_covers_r1b_r2_and_mammalian_r3_only
+caught: a contact paired with the wrong control: tests/test_complexes.py::TestReadouts::test_conservation_pairs_each_contact_with_its_own_control
+caught: too few proteins scored anyway: tests/test_complexes.py::TestReadouts::test_too_few_proteins_is_not_assessed_not_negative
+20 of 20 mutations caught; sources restored: True
+caught: genes not weighted by their columns: tests/test_structure_pgls.py::TestContactMismatch::test_mismatch_is_counted_against_the_classes_own_consensus
+caught: contact plus control instead of minus: tests/test_structure_pgls.py::TestContactMismatch::test_the_test_variable_is_contact_minus_control
+caught: retired records kept: tests/test_structure_pgls.py::TestHydropathy::test_one_column_per_region_and_no_retired_record
+caught: another region read as total_pc: tests/test_structure_pgls.py::TestHydropathy::test_total_gravy_is_the_kyte_doolittle_mean_of_the_amino_acid_content, tests/test_structure_pgls.py::TestHydropathy::test_one_column_per_region_and_no_retired_record
+caught: feature not standardised: tests/test_structure_pgls.py::TestFits::test_a_slope_is_per_standard_deviation_whatever_the_unit
+caught: normal instead of t interval: tests/test_structure_pgls.py::TestFits::test_the_interval_is_the_slope_plus_minus_t_times_se, tests/test_structure_pgls.py::TestFits::test_every_model_of_a_feature_is_fitted_on_the_same_species
+caught: fitted on fewer than MIN_SPECIES values: tests/test_structure_pgls.py::TestFits::test_too_few_values_is_not_assessed_never_dropped
+caught: q over the whole class, not within family and model: tests/test_structure_pgls.py::TestRun::test_q_is_benjamini_hochberg_within_class_family_and_model
+caught: a class too small is dropped: tests/test_structure_pgls.py::TestRun::test_a_class_too_small_is_written_as_not_assessed
+caught: one model reports the class size as its n: tests/test_structure_pgls.py::TestFits::test_every_model_of_a_feature_is_fitted_on_the_same_species
+caught: a missing contact map not refused: tests/test_structure_pgls.py::TestRun::test_a_missing_contact_map_is_refused
+caught: own composition read from the 12-gene covariate: tests/test_structure_pgls.py::TestOwnComposition::test_the_own_model_is_the_regression_on_the_raw_counts
+caught: U share taken from G: tests/test_structure_pgls.py::TestOwnComposition::test_the_shares_are_the_regions_own_fourfold_counts, tests/test_structure_pgls.py::TestOwnComposition::test_the_own_model_has_mass_and_three_shares, tests/test_structure_pgls.py::TestOwnComposition::test_the_own_model_is_the_regression_on_the_raw_counts, ERROR tests/test_structure_pgls.py::TestRun::test_q_is_benjamini_hochberg_within_class_family_and_model, ERROR tests/test_structure_pgls.py::TestRun::test_a_class_too_small_is_written_as_not_assessed, ERROR tests/test_structure_pgls.py::TestRun::test_every_family_and_variable_is_in_the_table
+caught: either side off its consensus instead of exactly one: tests/test_partners.py::TestDiscordance::test_discordance_by_hand
+caught: consensus over every species, not the class: tests/test_partners.py::TestDiscordance::test_discordance_by_hand
+caught: species filling few pairs kept: tests/test_partners.py::TestDiscordance::test_a_species_filling_under_half_the_pairs_is_not_scored
+caught: a pairing that disagrees with sites.tsv accepted: tests/test_partners.py::TestControlPairs::test_a_sites_table_that_disagrees_with_the_pairing_is_refused
+caught: control pair is the contact itself: tests/test_partners.py::TestPairs::test_pairs_are_contacts_on_the_mito_side_and_controls_are_not
+caught: residue index off by one: tests/test_structure_pgls.py::TestEmbedHelpers::test_residue_index_points_at_the_residue_of_each_column
+19 of 19 mutations caught; sources restored: True
+NOTE: no per-residue embeddings: every esm_ column of coupling.tsv is left empty, NOT ASSESSED
+COX4I1 chain D: 144 residues, identity to the ortholog set's human protein 1.000; interface columns 42
+COX5A chain E: 109 residues, identity to the ortholog set's human protein 1.000; interface columns 9
+COX5B chain F: 98 residues, identity to the ortholog set's human protein 1.000; interface columns 47
+COX6A1 chain G: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 31
+COX6B1 chain H: 82 residues, identity to the ortholog set's human protein 1.000; interface columns 24
+COX6C chain I: 73 residues, identity to the ortholog set's human protein 1.000; interface columns 26
+COX7A2 chain J: 56 residues, identity to the ortholog set's human protein 1.000; interface columns 26
+COX7B chain K: 49 residues, identity to the ortholog set's human protein 1.000; interface columns 8
+COX7C chain L: 47 residues, identity to the ortholog set's human protein 1.000; interface columns 30
+COX8A chain M: 43 residues, identity to the ortholog set's human protein 1.000; interface columns 18
+NDUFA4 chain N: 79 residues, identity to the ortholog set's human protein 1.000; interface columns 27
+  done complex IV partner COX4I1
+  done complex IV partner COX5A
+  done complex IV partner COX5B
+  done complex IV partner COX6A1
+  done complex IV partner COX6B1
+  done complex IV partner COX6C
+  done complex IV partner COX7A2
+  done complex IV partner COX7B
+  done complex IV partner COX7C
+  done complex IV partner COX8A
+  done complex IV partner NDUFA4
+  done complex III nuclear UQCRC1
+  done complex III nuclear UQCRC2
+  done complex III nuclear CYC1
+  done complex III nuclear UQCRFS1
+  done complex III nuclear UQCRB
+  done complex III nuclear UQCRQ
+  done complex III nuclear UQCRH
+  done complex III nuclear UQCR10
+  done complex III nuclear UQCR11
+  done complex II (no mt subunit) SDHA
+  done complex II (no mt subunit) SDHB
+  done complex II (no mt subunit) SDHC
+  done complex II (no mt subunit) SDHD
+  done matrix, not respiratory CS
+  done matrix, not respiratory MDH2
+  done matrix, not respiratory SOD2
+  done matrix, not respiratory HSPD1
+  done matrix, not respiratory ACO2
+  done matrix, not respiratory IDH2
+  done matrix, not respiratory FH
+  done cytochrome c CYCS
+  done cytosolic control B2M
+  done cytosolic control CA2
+  done cytosolic control CD59
+  done cytosolic control CFL1
+  done cytosolic control CRYAB
+  done cytosolic control CSTB
+  done cytosolic control FABP3
+  done cytosolic control FKBP1A
+  done cytosolic control GAPDH
+  done cytosolic control GSTP1
+  done cytosolic control HSPB1
+  done cytosolic control LDHA
+  done cytosolic control LGALS1
+  done cytosolic control LYZ
+  done cytosolic control MB
+  done cytosolic control NME1
+  done cytosolic control PEBP1
+  done cytosolic control PFN1
+  done cytosolic control PGAM1
+  done cytosolic control PGK1
+  done cytosolic control PPIA
+  done cytosolic control PRDX1
+  done cytosolic control PRDX2
+  done cytosolic control RBP4
+  done cytosolic control SOD1
+  done cytosolic control TPI1
+  done cytosolic control TPT1
+  done cytosolic control TTR
+  done cytosolic control TXN
+
+Test 1 - median over the proteins of a group; Mann-Whitney p against the cytosolic controls
+  complex IV partner           n=11  s:contact_iface +0.581 (p 6.4e-05)  s:excess_mt +0.049 (p 0.36)  s:excess_nuc -0.021 (p 0.72)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex III nuclear          n= 9  s:contact_iface +0.430 (p 0.00068)  s:excess_mt +0.064 (p 0.018)  s:excess_nuc -0.058 (p 0.13)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex II (no mt subunit)   n= 4  s:contact_iface +0.048 (p 1)  s:excess_mt +0.024 (p 0.85)  s:excess_nuc -0.053 (p 0.12)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  matrix, not respiratory      n= 7  s:contact_iface +0.028 (p 0.46)  s:excess_mt +0.071 (p 0.18)  s:excess_nuc -0.158 (p 0.014)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytochrome c                 n= 1  s:contact_iface +0.185 (p nan)  s:excess_mt -0.085 (p nan)  s:excess_nuc -0.333 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytosolic control            n=29  s:contact_iface +0.063 (p nan)  s:excess_mt +0.014 (p nan)  s:excess_nuc +0.030 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  all species: 1375 species, Pagel's lambda 0.963, mean contact mismatch 0.1676, control 0.1199
+  Mammalia: 604 species, Pagel's lambda 0.991, mean contact mismatch 0.0888, control 0.0789
+  with nuclear partners: 176 species, Pagel's lambda 0.984, mean contact mismatch 0.0882, control 0.0772
+
+Test 2 - phylogenetic regression of log10 maximum lifespan on the standardised mismatch, mass controlled
+                  set  species   lam              variable  slope_log10_years       t      p     se  ci95_low  ci95_high
+          all species     1375 0.963 contact minus control            -0.0241   -1.81 0.0697 0.0133     -0.05    0.00194
+          all species     1375 0.963               contact            -0.0279   -1.53  0.126 0.0182   -0.0636    0.00786
+          all species     1375 0.963               control           -0.00137 -0.0778  0.938 0.0177    -0.036     0.0333
+             Mammalia      604 0.991 contact minus control           -0.00589  -0.516  0.606 0.0114   -0.0283     0.0165
+             Mammalia      604 0.991               contact             0.0108   0.402  0.688  0.027   -0.0421     0.0638
+             Mammalia      604 0.991               control               0.03    1.04  0.297 0.0288   -0.0265     0.0866
+with nuclear partners      176 0.984 contact minus control           -0.00722  -0.342  0.733 0.0211   -0.0489     0.0345
+with nuclear partners      176 0.984               contact             0.0287   0.863  0.389 0.0332   -0.0369     0.0942
+with nuclear partners      176 0.984               control             0.0423    1.25  0.214  0.034   -0.0247      0.109
+
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/iface/coupling.tsv /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/iface/lifespan.tsv
+687 contact pairs over 3 mitochondrial and 11 nuclear genes: COX4I1 95, COX5A 15, COX5B 113, COX6A1 86, COX6B1 70, COX6C 59, COX7A2 66, COX7B 15, COX7C 79, COX8A 42, NDUFA4 47
+Mammalia: 604 species in H12's set, 177 with a partner sequence
+Mammalia: 177 species fill half the contact pairs; mean discordance contact 0.1347, control 0.1348
+Aves: 382 species in H12's set, 78 with a partner sequence
+Aves: 78 species fill half the contact pairs; mean discordance contact 0.1014, control 0.1081
+Actinopterygii: 235 species in H12's set, 61 with a partner sequence
+Actinopterygii: 41 species fill half the contact pairs; mean discordance contact 0.1163, control 0.1023
+Reptilia: 97 species in H12's set, 14 with a partner sequence
+         class               feature            model   n                                           status   lambda  slope_per_sd  ci95_low  ci95_high      p      q
+      Mammalia contact minus control mass+composition 177                                           tested    0.936       -0.0213    -0.056     0.0135  0.228  0.342
+      Mammalia contact minus control             mass 177                                           tested    0.937       -0.0223    -0.058     0.0134  0.219  0.394
+      Mammalia               contact mass+composition 177                                           tested    0.937        0.0139   -0.0573     0.0851    0.7    0.7
+      Mammalia               contact             mass 177                                           tested    0.937       0.00739   -0.0652       0.08  0.841  0.841
+      Mammalia               control mass+composition 177                                           tested    0.937        0.0439   -0.0236      0.111  0.201  0.342
+      Mammalia               control             mass 177                                           tested    0.938        0.0395   -0.0299      0.109  0.263  0.394
+          Aves contact minus control mass+composition  78                                           tested    0.291      -0.00633   -0.0556      0.043  0.799  0.799
+          Aves contact minus control             mass  78                                           tested    0.333      -0.00219    -0.049     0.0446  0.926  0.926
+          Aves               contact mass+composition  78                                           tested 3.84e-06       -0.0585     -0.11   -0.00669 0.0275 0.0824
+          Aves               contact             mass  78                                           tested    0.242       -0.0478    -0.104    0.00813 0.0928  0.139
+          Aves               control mass+composition  78                                           tested    0.322       -0.0514    -0.107    0.00398 0.0684  0.103
+          Aves               control             mass  78                                           tested    0.357       -0.0507    -0.104    0.00272 0.0625  0.139
+Actinopterygii contact minus control mass+composition  41                                           tested    0.838        0.0262   -0.0613      0.114  0.547  0.547
+Actinopterygii contact minus control             mass  41                                           tested    0.856      -0.00271   -0.0929     0.0875  0.952  0.952
+Actinopterygii               contact mass+composition  41                                           tested    0.796        0.0678  -0.00617      0.142 0.0712  0.214
+Actinopterygii               contact             mass  41                                           tested    0.773        0.0762   0.00509      0.147 0.0364 0.0767
+Actinopterygii               control mass+composition  41                                           tested    0.844        0.0536   -0.0225       0.13  0.162  0.243
+Actinopterygii               control             mass  41                                           tested    0.838        0.0688 -0.000362      0.138 0.0512 0.0767
+      Reptilia                     * mass+composition  14 not assessed: 14 species with a partner sequence      NaN           NaN       NaN        NaN    NaN    NaN
+      Reptilia                     *             mass  14 not assessed: 14 species with a partner sequence      NaN           NaN       NaN        NaN    NaN    NaN
+NOTE: no per-residue embeddings: every esm_ column of coupling.tsv is left empty, NOT ASSESSED
+NDUFV1 chain A: 431 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFS8 chain B: 176 residues, identity to the ortholog set's human protein 1.000; interface columns 14
+NDUFS7 chain C: 156 residues, identity to the ortholog set's human protein 0.795; interface columns 32
+NDUFA6 chain E: 113 residues, identity to the ortholog set's human protein 1.000; interface columns 6
+NDUFA2 chain F: 83 residues, identity to the ortholog set's human protein 0.699; interface columns 0
+NDUFAB1 chain G: 85 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFAB1 chain X: 85 residues, identity to the ortholog set's human protein 1.000; interface columns 4
+NDUFAB1: 2 chains, interface columns 4, other 152
+NDUFA5 chain H: 112 residues, identity to the ortholog set's human protein 0.839; interface columns 0
+NDUFA7 chain I: 95 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFA9 chain J: 337 residues, identity to the ortholog set's human protein 1.000; interface columns 11
+NDUFV3 chain K: 33 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFS4 chain L: 118 residues, identity to the ortholog set's human protein 0.093; interface columns 0
+NDUFS1 chain M: 687 residues, identity to the ortholog set's human protein 0.918; interface columns 0
+NDUFA12 chain N: 143 residues, identity to the ortholog set's human protein 0.399; interface columns 4
+NDUFV2 chain O: 212 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFS3 chain P: 208 residues, identity to the ortholog set's human protein 1.000; interface columns 1
+NDUFS2 chain Q: 430 residues, identity to the ortholog set's human protein 0.981; interface columns 68
+NDUFA1 chain S: 70 residues, identity to the ortholog set's human protein 1.000; interface columns 32
+NDUFS6 chain T: 95 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFA3 chain U: 83 residues, identity to the ortholog set's human protein 1.000; interface columns 22
+NDUFA11 chain V: 140 residues, identity to the ortholog set's human protein 0.764; interface columns 23
+NDUFA13 chain W: 138 residues, identity to the ortholog set's human protein 1.000; interface columns 27
+NDUFB2 chain Y: 59 residues, identity to the ortholog set's human protein 1.000; interface columns 27
+NDUFB3 chain Z: 80 residues, identity to the ortholog set's human protein 1.000; interface columns 14
+NDUFB5 chain a: 138 residues, identity to the ortholog set's human protein 0.710; interface columns 28
+NDUFB6 chain b: 124 residues, identity to the ortholog set's human protein 0.750; interface columns 9
+NDUFB8 chain c: 153 residues, identity to the ortholog set's human protein 0.830; interface columns 34
+NDUFB10 chain d: 171 residues, identity to the ortholog set's human protein 1.000; interface columns 29
+NDUFB11 chain e: 97 residues, identity to the ortholog set's human protein 1.000; interface columns 31
+NDUFC1 chain f: 47 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+NDUFC2 chain g: 119 residues, identity to the ortholog set's human protein 0.664; interface columns 21
+NDUFS5 chain h: 104 residues, identity to the ortholog set's human protein 1.000; interface columns 35
+NDUFB1 chain n: 56 residues, identity to the ortholog set's human protein 1.000; interface columns 16
+NDUFB4 chain o: 128 residues, identity to the ortholog set's human protein 0.844; interface columns 41
+NDUFB9 chain p: 172 residues, identity to the ortholog set's human protein 0.715; interface columns 25
+NDUFA8 chain u: 169 residues, identity to the ortholog set's human protein 0.734; interface columns 4
+NDUFB7 chain v: 111 residues, identity to the ortholog set's human protein 1.000; interface columns 14
+NDUFA10 chain w: 320 residues, identity to the ortholog set's human protein 0.934; interface columns 44
+  done complex I partner NDUFV1
+  done complex I partner NDUFV2
+  done complex I partner NDUFV3
+  done complex I partner NDUFS1
+  done complex I partner NDUFS2
+  done complex I partner NDUFS3
+  done complex I partner NDUFS4
+  done complex I partner NDUFS5
+  done complex I partner NDUFS6
+  done complex I partner NDUFS7
+  done complex I partner NDUFS8
+  done complex I partner NDUFA1
+  done complex I partner NDUFA2
+  done complex I partner NDUFA3
+  done complex I partner NDUFA5
+  done complex I partner NDUFA6
+  done complex I partner NDUFA7
+  done complex I partner NDUFA8
+  done complex I partner NDUFA9
+  done complex I partner NDUFA10
+  done complex I partner NDUFA11
+  done complex I partner NDUFA12
+  done complex I partner NDUFA13
+  done complex I partner NDUFAB1
+  done complex I partner NDUFB1
+  done complex I partner NDUFB2
+  done complex I partner NDUFB3
+  done complex I partner NDUFB4
+  done complex I partner NDUFB5
+  done complex I partner NDUFB6
+  done complex I partner NDUFB7
+  done complex I partner NDUFB8
+  done complex I partner NDUFB9
+  done complex I partner NDUFB10
+  done complex I partner NDUFB11
+  done complex I partner NDUFC1
+  done complex I partner NDUFC2
+  done complex IV nuclear COX4I1
+  done complex IV nuclear COX5A
+  done complex IV nuclear COX5B
+  done complex IV nuclear COX6A1
+  done complex IV nuclear COX6B1
+  done complex IV nuclear COX6C
+  done complex IV nuclear COX7A2
+  done complex IV nuclear COX7B
+  done complex IV nuclear COX7C
+  done complex IV nuclear COX8A
+  done complex IV nuclear NDUFA4
+  done complex III nuclear UQCRC1
+  done complex III nuclear UQCRC2
+  done complex III nuclear CYC1
+  done complex III nuclear UQCRFS1
+  done complex III nuclear UQCRB
+  done complex III nuclear UQCRQ
+  done complex III nuclear UQCRH
+  done complex III nuclear UQCR10
+  done complex III nuclear UQCR11
+  done complex II (no mt subunit) SDHA
+  done complex II (no mt subunit) SDHB
+  done complex II (no mt subunit) SDHC
+  done complex II (no mt subunit) SDHD
+  done matrix, not respiratory CS
+  done matrix, not respiratory MDH2
+  done matrix, not respiratory SOD2
+  done matrix, not respiratory HSPD1
+  done matrix, not respiratory ACO2
+  done matrix, not respiratory IDH2
+  done matrix, not respiratory FH
+  done cytochrome c CYCS
+  done cytosolic control B2M
+  done cytosolic control CA2
+  done cytosolic control CD59
+  done cytosolic control CFL1
+  done cytosolic control CRYAB
+  done cytosolic control CSTB
+  done cytosolic control FABP3
+  done cytosolic control FKBP1A
+  done cytosolic control GAPDH
+  done cytosolic control GSTP1
+  done cytosolic control HSPB1
+  done cytosolic control LDHA
+  done cytosolic control LGALS1
+  done cytosolic control LYZ
+  done cytosolic control MB
+  done cytosolic control NME1
+  done cytosolic control PEBP1
+  done cytosolic control PFN1
+  done cytosolic control PGAM1
+  done cytosolic control PGK1
+  done cytosolic control PPIA
+  done cytosolic control PRDX1
+  done cytosolic control PRDX2
+  done cytosolic control RBP4
+  done cytosolic control SOD1
+  done cytosolic control TPI1
+  done cytosolic control TPT1
+  done cytosolic control TTR
+  done cytosolic control TXN
+
+Test 1 - median over the proteins of a group; Mann-Whitney p against the cytosolic controls
+  complex I partner            n=37  s:contact_iface +0.471 (p 8.7e-07)  s:excess_mt +0.024 (p 0.45)  s:excess_nuc -0.017 (p 0.38)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex IV nuclear           n=11  s:contact_iface +0.356 (p 0.00014)  s:excess_mt -0.015 (p 0.037)  s:excess_nuc -0.149 (p 0.63)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex III nuclear          n= 9  s:contact_iface +0.338 (p 0.059)  s:excess_mt +0.002 (p 0.51)  s:excess_nuc -0.163 (p 0.17)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex II (no mt subunit)   n= 4  s:contact_iface +0.254 (p 0.25)  s:excess_mt -0.009 (p 0.35)  s:excess_nuc -0.047 (p 0.98)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  matrix, not respiratory      n= 7  s:contact_iface +0.114 (p 0.67)  s:excess_mt +0.054 (p 0.72)  s:excess_nuc -0.022 (p 0.75)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytochrome c                 n= 1  s:contact_iface +0.282 (p nan)  s:excess_mt -0.116 (p nan)  s:excess_nuc +0.145 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytosolic control            n=29  s:contact_iface +0.138 (p nan)  s:excess_mt +0.029 (p nan)  s:excess_nuc -0.087 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  all species: 1373 species, Pagel's lambda 0.962, mean contact mismatch 0.3446, control 0.3154
+  Mammalia: 604 species, Pagel's lambda 0.991, mean contact mismatch 0.2371, control 0.2253
+  with nuclear partners: 176 species, Pagel's lambda 0.985, mean contact mismatch 0.2404, control 0.2290
+
+Test 2 - phylogenetic regression of log10 maximum lifespan on the standardised mismatch, mass controlled
+                  set  species   lam              variable  slope_log10_years      t      p     se  ci95_low  ci95_high
+          all species     1373 0.962 contact minus control             0.0201   1.78 0.0759 0.0113  -0.00209     0.0422
+          all species     1373 0.962               contact             0.0079  0.331   0.74 0.0239   -0.0389     0.0547
+          all species     1373 0.962               control            -0.0268  -1.31  0.191 0.0204   -0.0669     0.0134
+             Mammalia      604 0.991 contact minus control            0.00187  0.161  0.872 0.0117    -0.021     0.0248
+             Mammalia      604 0.991               contact            0.00105 0.0288  0.977 0.0367   -0.0709     0.0731
+             Mammalia      604 0.991               control           -0.00451 -0.131  0.896 0.0344   -0.0721     0.0631
+with nuclear partners      176 0.985 contact minus control           -0.00335 -0.152  0.879 0.0221   -0.0469     0.0402
+with nuclear partners      176 0.985               contact             0.0301  0.617  0.538 0.0488   -0.0663      0.127
+with nuclear partners      176 0.985               control             0.0347  0.782  0.435 0.0444   -0.0529      0.122
+
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/complex-I/coupling.tsv /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/complex-I/lifespan.tsv
+NOTE: no alignment for NDUFV1 NDUFV2 NDUFV3 NDUFS1 NDUFS4 NDUFS6 NDUFA2 NDUFA5 NDUFA7 NDUFC1: their pairs are left out
+1347 contact pairs over 7 mitochondrial and 27 nuclear genes: NDUFA1 74, NDUFA10 90, NDUFA11 50, NDUFA12 6, NDUFA13 70, NDUFA3 48, NDUFA6 9, NDUFA8 6, NDUFA9 14, NDUFAB1 4, NDUFB1 35, NDUFB10 69, NDUFB11 71, NDUFB2 60, NDUFB3 35, NDUFB4 80, NDUFB5 63, NDUFB6 23, NDUFB7 28, NDUFB8 61, NDUFB9 62, NDUFC2 44, NDUFS2 150, NDUFS3 1, NDUFS5 87, NDUFS7 80, NDUFS8 27
+Mammalia: 604 species in H12's set, 177 with a partner sequence
+Mammalia: 177 species fill half the contact pairs; mean discordance contact 0.2505, control 0.2836
+Aves: 382 species in H12's set, 78 with a partner sequence
+Aves: 75 species fill half the contact pairs; mean discordance contact 0.2093, control 0.2216
+Actinopterygii: 235 species in H12's set, 63 with a partner sequence
+Actinopterygii: 51 species fill half the contact pairs; mean discordance contact 0.2412, control 0.2425
+Reptilia: 97 species in H12's set, 14 with a partner sequence
+         class               feature            model   n                                           status   lambda  slope_per_sd  ci95_low  ci95_high      p      q
+      Mammalia contact minus control mass+composition 177                                           tested    0.934        0.0249  -0.00315     0.0529 0.0815  0.122
+      Mammalia contact minus control             mass 177                                           tested    0.933        0.0277 -0.000955     0.0563 0.0581 0.0871
+      Mammalia               contact mass+composition 177                                           tested    0.933        0.0942    0.0103      0.178 0.0281 0.0842
+      Mammalia               contact             mass 177                                           tested    0.935        0.0848 -0.000993      0.171 0.0527 0.0871
+      Mammalia               control mass+composition 177                                           tested    0.936        0.0374    -0.051      0.126  0.405  0.405
+      Mammalia               control             mass 177                                           tested    0.937        0.0227   -0.0675      0.113   0.62   0.62
+          Aves contact minus control mass+composition  75                                           tested    0.258        0.0145   -0.0239     0.0529  0.453  0.453
+          Aves contact minus control             mass  75                                           tested    0.281        0.0155    -0.022     0.0529  0.413  0.413
+          Aves               contact mass+composition  75                                           tested  5.8e-06       -0.0497   -0.0994   3.55e-05 0.0502 0.0752
+          Aves               contact             mass  75                                           tested 6.49e-06       -0.0388   -0.0837    0.00613 0.0895  0.134
+          Aves               control mass+composition  75                                           tested 6.48e-06       -0.0589    -0.111     -0.007 0.0267 0.0752
+          Aves               control             mass  75                                           tested    0.145       -0.0479   -0.0999     0.0042  0.071  0.134
+Actinopterygii contact minus control mass+composition  51                                           tested    0.789        0.0861   0.00455      0.168  0.039  0.117
+Actinopterygii contact minus control             mass  51                                           tested    0.786        0.0681   -0.0119      0.148 0.0932   0.28
+Actinopterygii               contact mass+composition  51                                           tested    0.735        0.0152   -0.0606     0.0909  0.689  0.717
+Actinopterygii               contact             mass  51                                           tested    0.713        0.0246   -0.0492     0.0985  0.506  0.759
+Actinopterygii               control mass+composition  51                                           tested     0.76       -0.0143   -0.0931     0.0645  0.717  0.717
+Actinopterygii               control             mass  51                                           tested    0.726      0.000149   -0.0768     0.0771  0.997  0.997
+      Reptilia                     * mass+composition  14 not assessed: 14 species with a partner sequence      NaN           NaN       NaN        NaN    NaN    NaN
+      Reptilia                     *             mass  14 not assessed: 14 species with a partner sequence      NaN           NaN       NaN        NaN    NaN    NaN
+NOTE: no per-residue embeddings: every esm_ column of coupling.tsv is left empty, NOT ASSESSED
+UQCRQ chain A: 81 residues, identity to the ortholog set's human protein 1.000; interface columns 19
+UQCRQ chain N: 81 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCRQ: 2 chains, interface columns 19, other 63
+UQCRFS1 chain B: 57 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCRFS1 chain C: 196 residues, identity to the ortholog set's human protein 1.000; interface columns 9
+UQCRFS1 chain O: 57 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCRFS1 chain P: 196 residues, identity to the ortholog set's human protein 1.000; interface columns 15
+UQCRFS1: 4 chains, interface columns 21, other 253
+UQCR10 chain D: 62 residues, identity to the ortholog set's human protein 0.806; interface columns 0
+UQCR10 chain Q: 62 residues, identity to the ortholog set's human protein 0.806; interface columns 0
+UQCR10: 2 chains, interface columns 0, other 62
+UQCRH chain E: 74 residues, identity to the ortholog set's human protein 0.878; interface columns 0
+UQCRH chain R: 74 residues, identity to the ortholog set's human protein 0.878; interface columns 0
+UQCRH: 2 chains, interface columns 0, other 85
+UQCRB chain F: 106 residues, identity to the ortholog set's human protein 0.745; interface columns 16
+UQCRB chain S: 106 residues, identity to the ortholog set's human protein 0.745; interface columns 0
+UQCRB: 2 chains, interface columns 16, other 63
+UQCR11 chain G: 51 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCR11 chain T: 51 residues, identity to the ortholog set's human protein 1.000; interface columns 2
+UQCR11: 2 chains, interface columns 2, other 54
+CYC1 chain H: 241 residues, identity to the ortholog set's human protein 1.000; interface columns 35
+CYC1 chain U: 241 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+CYC1: 2 chains, interface columns 35, other 290
+UQCRC2 chain K: 419 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCRC2 chain W: 419 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCRC2: 2 chains, interface columns 0, other 453
+UQCRC1 chain L: 446 residues, identity to the ortholog set's human protein 1.000; interface columns 12
+UQCRC1 chain Y: 446 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+UQCRC1: 2 chains, interface columns 12, other 468
+  done complex III partner UQCRC1
+  done complex III partner UQCRC2
+  done complex III partner CYC1
+  done complex III partner UQCRFS1
+  done complex III partner UQCRB
+  done complex III partner UQCRQ
+  done complex III partner UQCRH
+  done complex III partner UQCR10
+  done complex III partner UQCR11
+  done complex IV nuclear COX4I1
+  done complex IV nuclear COX5A
+  done complex IV nuclear COX5B
+  done complex IV nuclear COX6A1
+  done complex IV nuclear COX6B1
+  done complex IV nuclear COX6C
+  done complex IV nuclear COX7A2
+  done complex IV nuclear COX7B
+  done complex IV nuclear COX7C
+  done complex IV nuclear COX8A
+  done complex IV nuclear NDUFA4
+  done complex II (no mt subunit) SDHA
+  done complex II (no mt subunit) SDHB
+  done complex II (no mt subunit) SDHC
+  done complex II (no mt subunit) SDHD
+  done matrix, not respiratory CS
+  done matrix, not respiratory MDH2
+  done matrix, not respiratory SOD2
+  done matrix, not respiratory HSPD1
+  done matrix, not respiratory ACO2
+  done matrix, not respiratory IDH2
+  done matrix, not respiratory FH
+  done cytochrome c CYCS
+  done cytosolic control B2M
+  done cytosolic control CA2
+  done cytosolic control CD59
+  done cytosolic control CFL1
+  done cytosolic control CRYAB
+  done cytosolic control CSTB
+  done cytosolic control FABP3
+  done cytosolic control FKBP1A
+  done cytosolic control GAPDH
+  done cytosolic control GSTP1
+  done cytosolic control HSPB1
+  done cytosolic control LDHA
+  done cytosolic control LGALS1
+  done cytosolic control LYZ
+  done cytosolic control MB
+  done cytosolic control NME1
+  done cytosolic control PEBP1
+  done cytosolic control PFN1
+  done cytosolic control PGAM1
+  done cytosolic control PGK1
+  done cytosolic control PPIA
+  done cytosolic control PRDX1
+  done cytosolic control PRDX2
+  done cytosolic control RBP4
+  done cytosolic control SOD1
+  done cytosolic control TPI1
+  done cytosolic control TPT1
+  done cytosolic control TTR
+  done cytosolic control TXN
+
+Test 1 - median over the proteins of a group; Mann-Whitney p against the cytosolic controls
+  complex III partner          n= 9  s:contact_iface +0.390 (p 0.00043)  s:excess_mt +0.048 (p 0.42)  s:excess_nuc -0.149 (p 0.34)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex IV nuclear           n=11  s:contact_iface +0.370 (p 0.0016)  s:excess_mt +0.011 (p 0.93)  s:excess_nuc -0.164 (p 0.17)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex II (no mt subunit)   n= 4  s:contact_iface +0.048 (p 0.65)  s:excess_mt +0.046 (p 0.47)  s:excess_nuc -0.070 (p 0.51)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  matrix, not respiratory      n= 7  s:contact_iface +0.018 (p 0.51)  s:excess_mt +0.022 (p 0.91)  s:excess_nuc -0.246 (p 0.14)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytochrome c                 n= 1  s:contact_iface +0.504 (p nan)  s:excess_mt +0.050 (p nan)  s:excess_nuc +0.043 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytosolic control            n=29  s:contact_iface +0.034 (p nan)  s:excess_mt +0.024 (p nan)  s:excess_nuc -0.035 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  all species: 1374 species, Pagel's lambda 0.963, mean contact mismatch 0.2074, control 0.2084
+  Mammalia: 604 species, Pagel's lambda 0.991, mean contact mismatch 0.1300, control 0.1400
+  with nuclear partners: 176 species, Pagel's lambda 0.984, mean contact mismatch 0.1324, control 0.1421
+
+Test 2 - phylogenetic regression of log10 maximum lifespan on the standardised mismatch, mass controlled
+                  set  species   lam              variable  slope_log10_years      t     p      se  ci95_low  ci95_high
+          all species     1374 0.963 contact minus control             0.0028  0.316 0.752 0.00886   -0.0146     0.0202
+          all species     1374 0.963               contact           -0.00479  -0.39 0.696  0.0123   -0.0289     0.0193
+          all species     1374 0.963               control            -0.0107 -0.737 0.461  0.0145   -0.0392     0.0178
+             Mammalia      604 0.991 contact minus control             0.0103    1.2 0.229 0.00854  -0.00649     0.0271
+             Mammalia      604 0.991               contact             0.0137  0.739  0.46  0.0185   -0.0227       0.05
+             Mammalia      604 0.991               control            -0.0131 -0.848 0.397  0.0154   -0.0434     0.0172
+with nuclear partners      176 0.984 contact minus control             0.0169   1.17 0.245  0.0145   -0.0117     0.0456
+with nuclear partners      176 0.984               contact             0.0416   1.52  0.13  0.0273   -0.0124     0.0955
+with nuclear partners      176 0.984               control            0.00379  0.167 0.868  0.0227   -0.0411     0.0487
+
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/complex-III/coupling.tsv /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/complex-III/lifespan.tsv
+NOTE: no alignment for UQCRC2 UQCRH UQCR10: their pairs are left out
+225 contact pairs over 1 mitochondrial and 6 nuclear genes: CYC1 80, UQCR11 2, UQCRB 34, UQCRC1 16, UQCRFS1 47, UQCRQ 46
+Mammalia: 604 species in H12's set, 177 with a partner sequence
+Mammalia: 177 species fill half the contact pairs; mean discordance contact 0.1381, control 0.1934
+Aves: 382 species in H12's set, 78 with a partner sequence
+Aves: 75 species fill half the contact pairs; mean discordance contact 0.1597, control 0.1679
+Actinopterygii: 235 species in H12's set, 63 with a partner sequence
+Actinopterygii: 51 species fill half the contact pairs; mean discordance contact 0.1372, control 0.2038
+Reptilia: 97 species in H12's set, 14 with a partner sequence
+         class               feature            model   n                                           status  lambda  slope_per_sd  ci95_low  ci95_high     p     q
+      Mammalia contact minus control mass+composition 177                                           tested   0.937       0.00527   -0.0227     0.0333 0.711 0.711
+      Mammalia contact minus control             mass 177                                           tested   0.936        0.0109   -0.0175     0.0393 0.449 0.674
+      Mammalia               contact mass+composition 177                                           tested   0.934         0.026   -0.0229      0.075 0.295 0.711
+      Mammalia               contact             mass 177                                           tested   0.933        0.0313   -0.0186     0.0811 0.217 0.652
+      Mammalia               control mass+composition 177                                           tested   0.937        0.0118   -0.0324      0.056 0.599 0.711
+      Mammalia               control             mass 177                                           tested   0.937       0.00578   -0.0396     0.0512 0.802 0.802
+          Aves contact minus control mass+composition  75                                           tested   0.313       -0.0128    -0.062     0.0363 0.603 0.701
+          Aves contact minus control             mass  75                                           tested   0.346      -0.00805   -0.0521      0.036 0.717 0.717
+          Aves               contact mass+composition  75                                           tested   0.266        -0.025   -0.0808     0.0308 0.375 0.701
+          Aves               contact             mass  75                                           tested   0.321       -0.0192   -0.0704      0.032 0.458 0.717
+          Aves               control mass+composition  75                                           tested   0.308       -0.0113     -0.07     0.0473 0.701 0.701
+          Aves               control             mass  75                                           tested   0.327       -0.0115    -0.066      0.043 0.676 0.717
+Actinopterygii contact minus control mass+composition  51                                           tested   0.533        0.0196   -0.0548     0.0941 0.598 0.638
+Actinopterygii contact minus control             mass  51                                           tested   0.488       0.00468   -0.0683     0.0777 0.898 0.898
+Actinopterygii               contact mass+composition  51                                           tested   0.521       -0.0166   -0.0873      0.054 0.638 0.638
+Actinopterygii               contact             mass  51                                           tested   0.468       -0.0233   -0.0924     0.0459 0.502 0.753
+Actinopterygii               control mass+composition  51                                           tested    0.52       -0.0303   -0.0984     0.0378 0.375 0.638
+Actinopterygii               control             mass  51                                           tested   0.467       -0.0283   -0.0962     0.0396 0.406 0.753
+      Reptilia                     * mass+composition  14 not assessed: 14 species with a partner sequence     NaN           NaN       NaN        NaN   NaN   NaN
+      Reptilia                     *             mass  14 not assessed: 14 species with a partner sequence     NaN           NaN       NaN        NaN   NaN   NaN
+NOTE: no per-residue embeddings: every esm_ column of coupling.tsv is left empty, NOT ASSESSED
+ATP5PB chain K: 198 residues, identity to the ortholog set's human protein 1.000; interface columns 37
+ATP5PF chain L: 67 residues, identity to the ortholog set's human protein 1.000; interface columns 1
+ATP5PD chain M: 156 residues, identity to the ortholog set's human protein 0.846; interface columns 26
+ATP5F1A chain A: 503 residues, identity to the ortholog set's human protein 0.972; interface columns 0
+ATP5F1A chain B: 477 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5F1A chain C: 487 residues, identity to the ortholog set's human protein 0.998; interface columns 0
+ATP5F1A: 3 chains, interface columns 0, other 503
+ATP5F1B chain E: 456 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5F1B chain F: 466 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5F1B chain D: 470 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5F1B: 3 chains, interface columns 0, other 529
+ATP5F1C chain G: 271 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5IF1 chain J: 35 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5PO chain O: 187 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5MC1 chain 1: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 6
+ATP5MC1 chain 2: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 10
+ATP5MC1 chain 3: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 12
+ATP5MC1 chain 4: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 6
+ATP5MC1 chain 5: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5MC1 chain 6: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5MC1 chain 7: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5MC1 chain 8: 75 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5MC1: 8 chains, interface columns 15, other 121
+ATP5F1D chain H: 132 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5F1E chain I: 45 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5MJ chain P: 41 residues, identity to the ortholog set's human protein 1.000; interface columns 20
+ATP5MF chain R: 78 residues, identity to the ortholog set's human protein 1.000; interface columns 21
+ATP5MG chain S: 77 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+ATP5ME chain T: 44 residues, identity to the ortholog set's human protein 1.000; interface columns 0
+  done complex V partner ATP5F1A
+  done complex V partner ATP5F1B
+  done complex V partner ATP5F1C
+  done complex V partner ATP5F1D
+  done complex V partner ATP5F1E
+  done complex V partner ATP5PB
+  done complex V partner ATP5PD
+  done complex V partner ATP5PF
+  done complex V partner ATP5PO
+  done complex V partner ATP5MC1
+  done complex V partner ATP5ME
+  done complex V partner ATP5MF
+  done complex V partner ATP5MG
+  done complex V partner ATP5MJ
+  done complex V partner ATP5IF1
+  done complex IV nuclear COX4I1
+  done complex IV nuclear COX5A
+  done complex IV nuclear COX5B
+  done complex IV nuclear COX6A1
+  done complex IV nuclear COX6B1
+  done complex IV nuclear COX6C
+  done complex IV nuclear COX7A2
+  done complex IV nuclear COX7B
+  done complex IV nuclear COX7C
+  done complex IV nuclear COX8A
+  done complex IV nuclear NDUFA4
+  done complex III nuclear UQCRC1
+  done complex III nuclear UQCRC2
+  done complex III nuclear CYC1
+  done complex III nuclear UQCRFS1
+  done complex III nuclear UQCRB
+  done complex III nuclear UQCRQ
+  done complex III nuclear UQCRH
+  done complex III nuclear UQCR10
+  done complex III nuclear UQCR11
+  done complex II (no mt subunit) SDHA
+  done complex II (no mt subunit) SDHB
+  done complex II (no mt subunit) SDHC
+  done complex II (no mt subunit) SDHD
+  done matrix, not respiratory CS
+  done matrix, not respiratory MDH2
+  done matrix, not respiratory SOD2
+  done matrix, not respiratory HSPD1
+  done matrix, not respiratory ACO2
+  done matrix, not respiratory IDH2
+  done matrix, not respiratory FH
+  done cytochrome c CYCS
+  done cytosolic control B2M
+  done cytosolic control CA2
+  done cytosolic control CD59
+  done cytosolic control CFL1
+  done cytosolic control CRYAB
+  done cytosolic control CSTB
+  done cytosolic control FABP3
+  done cytosolic control FKBP1A
+  done cytosolic control GAPDH
+  done cytosolic control GSTP1
+  done cytosolic control HSPB1
+  done cytosolic control LDHA
+  done cytosolic control LGALS1
+  done cytosolic control LYZ
+  done cytosolic control MB
+  done cytosolic control NME1
+  done cytosolic control PEBP1
+  done cytosolic control PFN1
+  done cytosolic control PGAM1
+  done cytosolic control PGK1
+  done cytosolic control PPIA
+  done cytosolic control PRDX1
+  done cytosolic control PRDX2
+  done cytosolic control RBP4
+  done cytosolic control SOD1
+  done cytosolic control TPI1
+  done cytosolic control TPT1
+  done cytosolic control TTR
+  done cytosolic control TXN
+
+Test 1 - median over the proteins of a group; Mann-Whitney p against the cytosolic controls
+  complex V partner            n=15  s:contact_iface +0.366 (p 0.044)  s:excess_mt +0.010 (p 0.71)  s:excess_nuc -0.133 (p 0.54)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex IV nuclear           n=11  s:contact_iface +0.203 (p 0.01)  s:excess_mt +0.027 (p 0.33)  s:excess_nuc -0.286 (p 0.0036)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex III nuclear          n= 9  s:contact_iface +0.348 (p 0.0054)  s:excess_mt +0.043 (p 0.039)  s:excess_nuc -0.045 (p 0.56)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  complex II (no mt subunit)   n= 4  s:contact_iface +0.008 (p 0.44)  s:excess_mt +0.036 (p 0.25)  s:excess_nuc -0.144 (p 0.38)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  matrix, not respiratory      n= 7  s:contact_iface +0.090 (p 0.51)  s:excess_mt -0.014 (p 0.43)  s:excess_nuc -0.102 (p 0.46)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytochrome c                 n= 1  s:contact_iface +0.379 (p nan)  s:excess_mt -0.030 (p nan)  s:excess_nuc +0.031 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  cytosolic control            n=29  s:contact_iface +0.001 (p nan)  s:excess_mt -0.006 (p nan)  s:excess_nuc -0.055 (p nan)  e:contact_iface not assessed  e:excess_mt not assessed  e:excess_nuc not assessed
+  all species: 1375 species, Pagel's lambda 0.963, mean contact mismatch 0.3180, control 0.2989
+  Mammalia: 604 species, Pagel's lambda 0.991, mean contact mismatch 0.2088, control 0.1754
+  with nuclear partners: 177 species, Pagel's lambda 0.984, mean contact mismatch 0.2085, control 0.1756
+
+Test 2 - phylogenetic regression of log10 maximum lifespan on the standardised mismatch, mass controlled
+                  set  species   lam              variable  slope_log10_years     t      p      se  ci95_low  ci95_high
+          all species     1375 0.963 contact minus control            0.00247 0.291  0.771 0.00851   -0.0142     0.0192
+          all species     1375 0.963               contact             0.0159  1.07  0.287   0.015   -0.0134     0.0453
+          all species     1375 0.963               control            0.00986 0.648  0.517  0.0152     -0.02     0.0397
+             Mammalia      604 0.991 contact minus control           -0.00107 -0.13  0.897 0.00828   -0.0173     0.0152
+             Mammalia      604 0.991               contact             0.0376  1.78 0.0756  0.0211  -0.00388     0.0791
+             Mammalia      604 0.991               control             0.0398  1.98 0.0478    0.02  0.000394     0.0791
+with nuclear partners      177 0.984 contact minus control            0.00627 0.388  0.699  0.0162   -0.0256     0.0382
+with nuclear partners      177 0.984               contact             0.0381  1.21  0.227  0.0314   -0.0239        0.1
+with nuclear partners      177 0.984               control             0.0243 0.832  0.407  0.0292   -0.0334      0.082
+
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/complex-V/coupling.tsv /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/complex-V/lifespan.tsv
+NOTE: no alignment for ATP5F1A ATP5F1B ATP5F1C ATP5F1D ATP5F1E ATP5PO ATP5ME ATP5MG ATP5IF1: their pairs are left out
+NOTE: ATP8: 17 of 34 contact residues have no control (`mitoport burial` ran out of candidates); their pairs are left out
+254 contact pairs over 2 mitochondrial and 5 nuclear genes: ATP5MC1 57, ATP5MF 44, ATP5MJ 51, ATP5PB 63, ATP5PD 39
+Mammalia: 604 species in H12's set, 177 with a partner sequence
+Mammalia: 176 species fill half the contact pairs; mean discordance contact 0.1966, control 0.2313
+Aves: 382 species in H12's set, 78 with a partner sequence
+Aves: 77 species fill half the contact pairs; mean discordance contact 0.1253, control 0.1677
+Actinopterygii: 235 species in H12's set, 63 with a partner sequence
+Actinopterygii: 52 species fill half the contact pairs; mean discordance contact 0.1623, control 0.1801
+Reptilia: 97 species in H12's set, 14 with a partner sequence
+         class               feature            model   n                                           status  lambda  slope_per_sd  ci95_low  ci95_high      p     q
+      Mammalia contact minus control mass+composition 176                                           tested   0.937       0.00641   -0.0265     0.0393  0.701 0.701
+      Mammalia contact minus control             mass 176                                           tested   0.935        0.0131   -0.0203     0.0465   0.44  0.44
+      Mammalia               contact mass+composition 176                                           tested   0.931         0.059  -0.00227       0.12  0.059 0.177
+      Mammalia               contact             mass 176                                           tested    0.93        0.0662   0.00366      0.129 0.0382 0.114
+      Mammalia               control mass+composition 176                                           tested   0.936        0.0348   -0.0187     0.0884  0.201 0.302
+      Mammalia               control             mass 176                                           tested   0.937        0.0307   -0.0245      0.086  0.274 0.411
+          Aves contact minus control mass+composition  77                                           tested   0.356      -2.5e-05   -0.0386     0.0386  0.999 0.999
+          Aves contact minus control             mass  77                                           tested   0.345      0.000405   -0.0371     0.0379  0.983 0.983
+          Aves               contact mass+composition  77                                           tested   0.284       -0.0152   -0.0613     0.0309  0.513 0.883
+          Aves               contact             mass  77                                           tested   0.295       -0.0145   -0.0587     0.0298  0.517 0.892
+          Aves               control mass+composition  77                                           tested   0.294       -0.0121   -0.0565     0.0323  0.589 0.883
+          Aves               control             mass  77                                           tested   0.304       -0.0113   -0.0534     0.0308  0.595 0.892
+Actinopterygii contact minus control mass+composition  52                                           tested   0.789       0.00242    -0.073     0.0779  0.949 0.949
+Actinopterygii contact minus control             mass  52                                           tested   0.784         0.014   -0.0585     0.0865    0.7 0.899
+Actinopterygii               contact mass+composition  52                                           tested   0.792       0.00734   -0.0766     0.0913  0.861 0.949
+Actinopterygii               contact             mass  52                                           tested   0.778       0.00494   -0.0732     0.0831  0.899 0.899
+Actinopterygii               control mass+composition  52                                           tested   0.789        0.0028   -0.0636     0.0692  0.933 0.949
+Actinopterygii               control             mass  52                                           tested   0.774      -0.00416   -0.0694     0.0611  0.899 0.899
+      Reptilia                     * mass+composition  14 not assessed: 14 species with a partner sequence     NaN           NaN       NaN        NaN    NaN   NaN
+      Reptilia                     *             mass  14 not assessed: 14 species with a partner sequence     NaN           NaN       NaN        NaN    NaN   NaN
+complex readout            set                                                             measure                                         status  n_a  n_b  median_a  median_b  estimate  ci95_low  ci95_high  lambda        p  p_holm   predicted
+      I      R0        mammals seq_contact_iface: subunits with an interface vs cytosolic controls                                         tested   23   29     0.471     0.138     0.333       NaN        NaN     NaN 8.69e-07     NaN    positive
+      I      R0        mammals              seq_control_other: every subunit vs cytosolic controls                                         tested   37   29     0.489    0.0923     0.397       NaN        NaN     NaN 7.01e-07     NaN    positive
+      I     R1a    all species                identity to human, contact minus its matched control                                         tested  621  NaN       NaN       NaN   -0.0285       NaN        NaN     NaN   0.0159     NaN descriptive
+      I     R1a    all species                      identity to human, contact vs control residues                                         tested  621  621     0.413     0.551    -0.137       NaN        NaN     NaN   0.0187     NaN descriptive
+      I     R1b        mammals     seq_excess_mt: subunits with an interface vs cytosolic controls                                         tested   23   29    0.0243    0.0289   -0.0046       NaN        NaN     NaN     0.45       1    positive
+      I      R2        mammals    seq_excess_nuc: subunits with an interface vs cytosolic controls                                         tested   23   29   -0.0173   -0.0871    0.0698       NaN        NaN     NaN    0.376       1    positive
+      I      R3 Actinopterygii        discordance, contact minus control pairs (phylogenetic mean)                                         tested   51  NaN     0.241     0.242  -0.00794   -0.0436     0.0277       1    0.656     NaN    negative
+      I      R3           Aves        discordance, contact minus control pairs (phylogenetic mean)                                         tested   75  NaN     0.209     0.222   -0.0115   -0.0182   -0.00484   0.097 0.000954     NaN    negative
+      I      R3       Mammalia        discordance, contact minus control pairs (phylogenetic mean)                                         tested  177  NaN     0.251     0.284   -0.0466   -0.0815    -0.0117   0.977   0.0092    0.11    negative
+      I      R3       Reptilia        discordance, contact minus control pairs (phylogenetic mean) not assessed: 0 species with both discordances  NaN  NaN       NaN       NaN       NaN       NaN        NaN     NaN      NaN     NaN         NaN
+    III      R0        mammals seq_contact_iface: subunits with an interface vs cytosolic controls                                         tested    5   29      0.39    0.0344     0.355       NaN        NaN     NaN 0.000431     NaN    positive
+    III      R0        mammals              seq_control_other: every subunit vs cytosolic controls                                         tested    9   29     0.404    0.0217     0.383       NaN        NaN     NaN 6.81e-05     NaN    positive
+    III     R1a    all species                identity to human, contact minus its matched control                                         tested  104  NaN       NaN       NaN  -0.00505       NaN        NaN     NaN    0.914     NaN descriptive
+    III     R1a    all species                      identity to human, contact vs control residues                                         tested  104  104     0.871     0.904   -0.0335       NaN        NaN     NaN     0.78     NaN descriptive
+    III     R1b        mammals     seq_excess_mt: subunits with an interface vs cytosolic controls                                         tested    5   29    0.0476    0.0241    0.0235       NaN        NaN     NaN    0.408       1    positive
+    III      R2        mammals    seq_excess_nuc: subunits with an interface vs cytosolic controls                                         tested    5   29    -0.149   -0.0353    -0.113       NaN        NaN     NaN    0.342       1    positive
+    III      R3 Actinopterygii        discordance, contact minus control pairs (phylogenetic mean)                                         tested   51  NaN     0.137     0.204   -0.0561     -0.11   -0.00199   0.976   0.0425     NaN    negative
+    III      R3           Aves        discordance, contact minus control pairs (phylogenetic mean)                                         tested   75  NaN      0.16     0.168    -0.013   -0.0449     0.0189   0.898     0.42     NaN    negative
+    III      R3       Mammalia        discordance, contact minus control pairs (phylogenetic mean)                                         tested  177  NaN     0.138     0.193   -0.0267   -0.0932     0.0399   0.907     0.43       1    negative
+    III      R3       Reptilia        discordance, contact minus control pairs (phylogenetic mean) not assessed: 0 species with both discordances  NaN  NaN       NaN       NaN       NaN       NaN        NaN     NaN      NaN     NaN         NaN
+     IV      R0        mammals seq_contact_iface: subunits with an interface vs cytosolic controls                                         tested   11   29     0.582    0.0633     0.518       NaN        NaN     NaN 6.38e-05     NaN    positive
+     IV      R0        mammals              seq_control_other: every subunit vs cytosolic controls                                         tested   11   29     0.422   -0.0221     0.444       NaN        NaN     NaN 6.38e-05     NaN    positive
+     IV     R1a    all species                identity to human, contact minus its matched control                                         tested  298  NaN       NaN       NaN   -0.0213       NaN        NaN     NaN   0.0103     NaN descriptive
+     IV     R1a    all species                      identity to human, contact vs control residues                                         tested  298  298     0.923     0.971   -0.0485       NaN        NaN     NaN 1.47e-05     NaN descriptive
+     IV     R1b        mammals     seq_excess_mt: subunits with an interface vs cytosolic controls                                         tested   11   29    0.0486    0.0136     0.035       NaN        NaN     NaN    0.363       1    positive
+     IV      R2        mammals    seq_excess_nuc: subunits with an interface vs cytosolic controls                                         tested   11   29   -0.0214    0.0295   -0.0509       NaN        NaN     NaN    0.716       1    positive
+     IV      R3 Actinopterygii        discordance, contact minus control pairs (phylogenetic mean)                                         tested   41  NaN     0.116     0.102    0.0157   -0.0115      0.043   0.993    0.251     NaN    negative
+     IV      R3           Aves        discordance, contact minus control pairs (phylogenetic mean)                                         tested   78  NaN     0.101     0.108   -0.0163   -0.0361    0.00359    0.91    0.107     NaN    negative
+     IV      R3       Mammalia        discordance, contact minus control pairs (phylogenetic mean)                                         tested  177  NaN     0.135     0.135    0.0282   -0.0119     0.0683   0.978    0.167       1    negative
+     IV      R3       Reptilia        discordance, contact minus control pairs (phylogenetic mean) not assessed: 0 species with both discordances  NaN  NaN       NaN       NaN       NaN       NaN        NaN     NaN      NaN     NaN         NaN
+      V      R0        mammals seq_contact_iface: subunits with an interface vs cytosolic controls                                         tested    5   29     0.366    0.0011     0.365       NaN        NaN     NaN   0.0462     NaN    positive
+      V      R0        mammals              seq_control_other: every subunit vs cytosolic controls                                         tested   15   29      0.21    0.0395      0.17       NaN        NaN     NaN 0.000907     NaN    positive
+      V     R1a    all species                identity to human, contact minus its matched control                                         tested  112  NaN       NaN       NaN     0.037       NaN        NaN     NaN   0.0823     NaN descriptive
+      V     R1a    all species                      identity to human, contact vs control residues                                         tested  129  112     0.443     0.349    0.0938       NaN        NaN     NaN    0.172     NaN descriptive
+      V     R1b        mammals     seq_excess_mt: subunits with an interface vs cytosolic controls                                         tested    5   29    0.0096   -0.0057    0.0153       NaN        NaN     NaN    0.706       1    positive
+      V      R2        mammals    seq_excess_nuc: subunits with an interface vs cytosolic controls                                         tested    5   29    -0.133   -0.0548   -0.0785       NaN        NaN     NaN    0.539       1    positive
+      V      R3 Actinopterygii        discordance, contact minus control pairs (phylogenetic mean)                                         tested   52  NaN     0.162      0.18   -0.0558     -0.14     0.0288   0.992    0.191     NaN    negative
+      V      R3           Aves        discordance, contact minus control pairs (phylogenetic mean)                                         tested   77  NaN     0.125     0.168   -0.0461   -0.0905   -0.00163       1   0.0424     NaN    negative
+      V      R3       Mammalia        discordance, contact minus control pairs (phylogenetic mean)                                         tested  176  NaN     0.197     0.231   -0.0232   -0.0799     0.0336   0.914    0.421       1    negative
+      V      R3       Reptilia        discordance, contact minus control pairs (phylogenetic mean) not assessed: 0 species with both discordances  NaN  NaN       NaN       NaN       NaN       NaN        NaN     NaN      NaN     NaN         NaN
+wrote /data/uq2347/runs/mitoage/job1-contacts/data/output/mitoport/contact_readouts.tsv
+complex IV coupling.tsv on every alignment against H5's 62 only: identical bytes
+complex IV lifespan.tsv on every alignment against H5's 62 only: identical bytes
+complex IV partners.tsv, before and after: identical bytes
+complex IV partners_species.tsv, before and after: identical bytes
+rerun data/output/mitoport/iface/coupling.tsv: identical bytes
+rerun data/output/mitoport/iface/lifespan.tsv: identical bytes
+rerun data/output/mitoport/partners.tsv: identical bytes
+rerun data/output/mitoport/partners_species.tsv: identical bytes
+rerun data/output/mitoport/complex-I/coupling.tsv: identical bytes
+rerun data/output/mitoport/complex-III/coupling.tsv: identical bytes
+rerun data/output/mitoport/complex-III/lifespan.tsv: identical bytes
+rerun data/output/mitoport/complex-III/partners_species.tsv: identical bytes
+rerun data/output/mitoport/complex-III/partners.tsv: identical bytes
+rerun data/output/mitoport/complex-I/lifespan.tsv: identical bytes
+rerun data/output/mitoport/complex-I/partners_species.tsv: identical bytes
+rerun data/output/mitoport/complex-I/partners.tsv: identical bytes
+rerun data/output/mitoport/complex-V/coupling.tsv: identical bytes
+rerun data/output/mitoport/complex-V/lifespan.tsv: identical bytes
+rerun data/output/mitoport/complex-V/partners_species.tsv: identical bytes
+rerun data/output/mitoport/complex-V/partners.tsv: identical bytes
+rerun data/output/mitoport/contact_readouts.tsv: identical bytes
+7e6fe27f2aee4a36d5abb2154f2ccf1e9387a430d470fb6f80c1335e396ed867  data/output/mitoport/iface/coupling.tsv
+165330e525df94b1bc0c6d734efb1352eca4f4ad1103e3b03d375d9f986babd2  data/output/mitoport/iface/lifespan.tsv
+3e9a203283b9ee165ee029dc9e4748bb906f8df25645332d360e155a5adb1185  data/output/mitoport/partners.tsv
+48e2ebaa892ee7011607a176f6b9ec539838aedde35ab64a3a9a5649ee59d610  data/output/mitoport/partners_species.tsv
+bda8981a10274475201718ed5fda2ccab93a53ee608e479bb70a56ef78e9454b  data/output/mitoport/complex-I/coupling.tsv
+11e1698aac3473467058034c12c98b1d324deec4ee0ff431d6487f007a4aa1d6  data/output/mitoport/complex-III/coupling.tsv
+6b9657ad6fc34e8b294420dcb42b29583769140cd23d29c330a9eacee45e2618  data/output/mitoport/complex-III/lifespan.tsv
+bf24adfea38c5c461d7b0041a6ee16cf25595f3b203d6392d65757681911f846  data/output/mitoport/complex-III/partners_species.tsv
+8668265585d4a8882572f1ecea5a43204ea6d9642e7bd1b887cb62837a421dc9  data/output/mitoport/complex-III/partners.tsv
+055c3ad3a090ae3e0a6eb99f8d8305607cfee3ba1c4738de633c2f7a9786fcc2  data/output/mitoport/complex-I/lifespan.tsv
+afae2b95447f2439f1bb460a11d8a96bb7c094ba69529fdcde31af2ddcdd1b3d  data/output/mitoport/complex-I/partners_species.tsv
+0d00ba3e3334d9f7454cd40bb300a17a04d52f7d2dddbd104de89e5a0d9d46de  data/output/mitoport/complex-I/partners.tsv
+15bb73c0bb1082b58d8f5a7120b8adbde2c090c95596de4aeb18104dcc0042cf  data/output/mitoport/complex-V/coupling.tsv
+6f143141f5337f9ef277c0c772ac6d972c97a0cedcd2f596cc7fcbc8e63f5beb  data/output/mitoport/complex-V/lifespan.tsv
+e39afe34d80375b085e9b0f4631c5a7d6176c0b7887fd9534ddecc8a3045f790  data/output/mitoport/complex-V/partners_species.tsv
+10232c346f851c5d2e4427bef76cf94605f6488d1566140dfd6fecb3d60c19f4  data/output/mitoport/complex-V/partners.tsv
+1c1b0d6ca1a8a065c5be7f950826f835f4b8780c9703801ba6121954d1690214  data/output/mitoport/contact_readouts.tsv
+checks failed: 0

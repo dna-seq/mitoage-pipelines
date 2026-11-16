@@ -993,6 +993,60 @@ rerun the build moves from c525adb (H12's) to 0f4e970, for consistency with the 
 slightly, so its tables are no longer byte-identical to H12's; the job still runs complex IV through the earlier code
 on the same inputs and compares the bytes, which is what shows that the generalisation changed nothing. The readouts,
 their sets and the reading above are unchanged.
+**Run.** Slurm job 6490344 on haumea, 2026-11-15, from commit 7ab48d2, build longevity-genie/mitoage 0f4e970 and the
+site's tree at 03c0949; tables and log in `results/job1-contacts/`. 55 tests pass (one skipped: the pinned digests of
+complex IV are of H12's build); 20 of 20 deliberate breaks of the new code and 19 of 19 of H12's are caught; every
+table is the same bytes on a second run. On the same inputs, complex IV's contact map, `coupling.tsv`, `lifespan.tsv`,
+`partners.tsv` and `partners_species.tsv` from this code are byte-identical to those of the code before the
+generalisation, and its coupling is the same bytes whether or not the alignments of complexes I and V sit in the
+folder. All numbers below are from `contact_readouts.tsv`; p values are two-sided, "Holm" is over the 12 interface tests.
+**Result, R0 (is there whole-protein coupling?): yes, in every complex.** `seq_control_other`, subunits against the 29
+cytosolic controls with a value, medians: complex I +0.49 against +0.09 (37 subunits,
+p = 7.0 x 10^-7), III +0.40 against +0.02 (9, p = 6.8 x 10^-5), IV +0.42 against -0.02 (11, p = 6.4 x 10^-5), V +0.21
+against +0.04 (15, p = 9.1 x 10^-4). H5's own contrast, `seq_contact_iface` of the subunits with an interface: I +0.47
+(23 subunits, p = 8.7 x 10^-7), III +0.39 (5, p = 4.3 x 10^-4), IV +0.58 (11, p = 6.4 x 10^-5), V +0.37 (5, p = 0.046).
+**Result, R1a (conservation, descriptive and not blind).** Identity to human, contact against matched control residues:
+I 0.41 against 0.55 (621 pairs; paired median difference -0.029, p = 0.016), III 0.87 against 0.90 (104; -0.005,
+p = 0.91), IV 0.92 against 0.97 (298; -0.021, p = 0.010), V 0.44 against 0.35 (112 pairs of 129 contacts; +0.037,
+p = 0.08). Contacts are less conserved than their controls in I and IV, as H5 found for IV; not in III; in V the
+difference leans the other way.
+**Result, R1b (mitochondrial side, coupling): nothing.** `seq_excess_mt`, medians of subunits with an interface against
+the controls: I +0.024 against +0.029 (p = 0.45), III +0.048 against +0.024 (p = 0.41), IV +0.049 against +0.014
+(p = 0.36), V +0.010 against -0.006 (p = 0.71); Holm 1 in every complex.
+**Result, R2 (nuclear side): nothing.** `seq_excess_nuc`: I -0.017 against -0.087 (p = 0.38), III -0.149 against -0.035
+(p = 0.34), IV -0.021 against +0.030 (p = 0.72), V -0.133 against -0.055 (p = 0.54); Holm 1 in every complex.
+**Result, R3 (pair concordance), mammals (primary).** Phylogenetic mean of contact minus control discordance per species:
+
+| Complex | Species | Contact / control (raw means) | Mean difference | 95% interval | p | Holm |
+|---|---|---|---|---|---|---|
+| I | 177 | 0.251 / 0.284 | -0.047 | [-0.081, -0.012] | 0.009 | 0.11 |
+| III | 177 | 0.138 / 0.193 | -0.027 | [-0.093, +0.040] | 0.43 | 1 |
+| IV | 177 | 0.135 / 0.135 | +0.028 | [-0.012, +0.068] | 0.17 | 1 |
+| V | 176 | 0.197 / 0.231 | -0.023 | [-0.080, +0.034] | 0.42 | 1 |
+
+Other classes, reported and outside the correction: complex I in birds -0.012 ([-0.018, -0.005], p = 0.001, 75 species)
+and fishes -0.008 ([-0.044, +0.028], p = 0.66, 51); III in fishes -0.056 ([-0.110, -0.002], p = 0.042) and birds -0.013
+(p = 0.42); IV in birds -0.016 (p = 0.11) and fishes +0.016 (p = 0.25); V in birds -0.046 ([-0.090, -0.002], p = 0.042)
+and fishes -0.056 (p = 0.19). Reptiles: not assessed in any complex (no species fills half the contact pairs with
+vertebrate partners).
+**Reading, as fixed.** R0 is positive in all four complexes, so each has whole-protein coupling to localise. No
+interface readout passes Holm in either direction (the smallest adjusted p is complex I's R3, 0.11). Under the rule
+written before the run, **H5's reading holds in complexes I, III, IV and V**: the nuclear subunits co-evolve with the
+mitochondrial genes of their complex as whole proteins, and the residues that touch carry no detectable extra coupling
+on the mitochondrial side, on the nuclear side, or as concordant pairs. Beyond the rule, and not counted: complex I's
+pairs lean the predicted way in mammals (p = 0.009 uncorrected) and in birds (p = 0.001), the one place where the
+contacts look more concordant than their controls; it is the lead to test again, not a finding. In complex IV the
+phylogenetic mean leans the other way (+0.028) while the raw means are equal; neither excludes zero.
+**Limits.** Complexes III and V have 5 subunits with an interface each, and the readouts compare them with 29 proteins:
+a null there bounds little. One human structure stands for every species. The sequence distance only: no `esm_` column
+is assessed. R1a was seen gene by gene before the entry was written. The pair test needs vertebrate partners, which
+cover 176 to 177 mammals, 75 to 78 birds and 41 to 52 ray-finned fishes.
+**Secondary, not read (lifespan).** `mitoport iface`'s lifespan model on contact minus control mismatch, mammals (604):
+I +0.002 ([-0.021, +0.025]), III +0.010 ([-0.006, +0.027]), V -0.001 ([-0.017, +0.015]) log10 years per standard
+deviation. `mitoport partners`, discordance contact minus control, mass and composition, mammals: I +0.025
+([-0.003, +0.053]), III +0.005 ([-0.023, +0.033]), V +0.006 ([-0.026, +0.039]). No row of the partners tables reaches
+q < 0.05 in any class; in the iface tables the only p < 0.05 is complex V's control mismatch alone in mammals (p = 0.048),
+not the test variable.
 
 ## H15. The published mtDNA-encoded peptides across the whole build, against nulls of the host gene (RM16)
 

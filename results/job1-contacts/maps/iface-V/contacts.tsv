@@ -1,0 +1,461 @@
+mt_gene	chain	pdb_resnum	pdb_res	human_pos	human_aa	partner_chain	partner	partner_is_mt	partner_resnum	partner_res
+ATP6	N	5	LEU	5	L	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	73	PHE
+ATP6	N	5	LEU	5	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	70	LEU
+ATP6	N	6	PHE	6	F	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	69	PHE
+ATP6	N	6	PHE	6	F	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	73	PHE
+ATP6	N	6	PHE	6	F	Q	ATP synthase protein 8	1	1	MET
+ATP6	N	6	PHE	6	F	Q	ATP synthase protein 8	1	2	PRO
+ATP6	N	7	ALA	7	A	R	ATP synthase subunit f, mitochondrial	0	83	HIS
+ATP6	N	8	SER	8	S	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	56	GLU
+ATP6	N	9	PHE	9	F	Q	ATP synthase protein 8	1	2	PRO
+ATP6	N	9	PHE	9	F	Q	ATP synthase protein 8	1	3	GLN
+ATP6	N	10	ILE	10	I	Q	ATP synthase protein 8	1	2	PRO
+ATP6	N	11	ALA	11	A	Q	ATP synthase protein 8	1	8	VAL
+ATP6	N	11	ALA	11	A	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	12	PRO	12	P	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	13	THR	13	T	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	13	THR	13	T	R	ATP synthase subunit f, mitochondrial	0	82	LYS
+ATP6	N	14	ILE	14	I	R	ATP synthase subunit f, mitochondrial	0	75	PHE
+ATP6	N	14	ILE	14	I	R	ATP synthase subunit f, mitochondrial	0	78	SER
+ATP6	N	14	ILE	14	I	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	18	PRO	18	P	Q	ATP synthase protein 8	1	11	THR
+ATP6	N	19	ALA	19	A	R	ATP synthase subunit f, mitochondrial	0	75	PHE
+ATP6	N	19	ALA	19	A	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	20	ALA	20	A	Q	ATP synthase protein 8	1	11	THR
+ATP6	N	20	ALA	20	A	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	21	VAL	21	V	Q	ATP synthase protein 8	1	11	THR
+ATP6	N	21	VAL	21	V	Q	ATP synthase protein 8	1	15	PRO
+ATP6	N	22	LEU	22	L	R	ATP synthase subunit f, mitochondrial	0	75	PHE
+ATP6	N	23	ILE	23	I	R	ATP synthase subunit f, mitochondrial	0	72	TYR
+ATP6	N	23	ILE	23	I	R	ATP synthase subunit f, mitochondrial	0	75	PHE
+ATP6	N	23	ILE	23	I	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	24	ILE	24	I	Q	ATP synthase protein 8	1	11	THR
+ATP6	N	24	ILE	24	I	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	24	ILE	24	I	Q	ATP synthase protein 8	1	15	PRO
+ATP6	N	24	ILE	24	I	Q	ATP synthase protein 8	1	16	MET
+ATP6	N	24	ILE	24	I	Q	ATP synthase protein 8	1	19	THR
+ATP6	N	25	LEU	25	L	Q	ATP synthase protein 8	1	15	PRO
+ATP6	N	25	LEU	25	L	Q	ATP synthase protein 8	1	19	THR
+ATP6	N	25	LEU	25	L	Q	ATP synthase protein 8	1	23	ILE
+ATP6	N	26	PHE	26	F	R	ATP synthase subunit f, mitochondrial	0	68	VAL
+ATP6	N	26	PHE	26	F	R	ATP synthase subunit f, mitochondrial	0	72	TYR
+ATP6	N	28	PRO	28	P	Q	ATP synthase protein 8	1	19	THR
+ATP6	N	28	PRO	28	P	Q	ATP synthase protein 8	1	23	ILE
+ATP6	N	28	PRO	28	P	Q	ATP synthase protein 8	1	24	THR
+ATP6	N	28	PRO	28	P	Q	ATP synthase protein 8	1	27	LYS
+ATP6	N	29	LEU	29	L	Q	ATP synthase protein 8	1	27	LYS
+ATP6	N	29	LEU	29	L	R	ATP synthase subunit f, mitochondrial	0	47	TYR
+ATP6	N	30	LEU	30	L	R	ATP synthase subunit f, mitochondrial	0	68	VAL
+ATP6	N	31	ILE	31	I	Q	ATP synthase protein 8	1	27	LYS
+ATP6	N	31	ILE	31	I	Q	ATP synthase protein 8	1	28	MET
+ATP6	N	32	PRO	32	P	Q	ATP synthase protein 8	1	27	LYS
+ATP6	N	32	PRO	32	P	R	ATP synthase subunit f, mitochondrial	0	47	TYR
+ATP6	N	32	PRO	32	P	R	ATP synthase subunit f, mitochondrial	0	51	TYR
+ATP6	N	33	THR	33	T	Q	ATP synthase protein 8	1	27	LYS
+ATP6	N	33	THR	33	T	Q	ATP synthase protein 8	1	30	ASN
+ATP6	N	33	THR	33	T	Q	ATP synthase protein 8	1	31	THR
+ATP6	N	34	SER	34	S	Q	ATP synthase protein 8	1	30	ASN
+ATP6	N	35	LYS	35	K	M	ATP synthase subunit d, mitochondrial	0	131	THR
+ATP6	N	35	LYS	35	K	M	ATP synthase subunit d, mitochondrial	0	132	ILE
+ATP6	N	35	LYS	35	K	Q	ATP synthase protein 8	1	30	ASN
+ATP6	N	36	TYR	36	Y	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	3	PRO
+ATP6	N	36	TYR	36	Y	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	5	LEU
+ATP6	N	36	TYR	36	Y	M	ATP synthase subunit d, mitochondrial	0	130	MET
+ATP6	N	36	TYR	36	Y	M	ATP synthase subunit d, mitochondrial	0	131	THR
+ATP6	N	36	TYR	36	Y	M	ATP synthase subunit d, mitochondrial	0	132	ILE
+ATP6	N	37	LEU	37	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	89	LYS
+ATP6	N	37	LEU	37	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	93	LEU
+ATP6	N	37	LEU	37	L	M	ATP synthase subunit d, mitochondrial	0	127	PHE
+ATP6	N	37	LEU	37	L	M	ATP synthase subunit d, mitochondrial	0	130	MET
+ATP6	N	37	LEU	37	L	M	ATP synthase subunit d, mitochondrial	0	131	THR
+ATP6	N	37	LEU	37	L	M	ATP synthase subunit d, mitochondrial	0	132	ILE
+ATP6	N	37	LEU	37	L	M	ATP synthase subunit d, mitochondrial	0	135	LEU
+ATP6	N	37	LEU	37	L	Q	ATP synthase protein 8	1	34	HIS
+ATP6	N	38	ILE	38	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	5	LEU
+ATP6	N	38	ILE	38	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	86	ASN
+ATP6	N	38	ILE	38	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	89	LYS
+ATP6	N	38	ILE	38	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	90	LEU
+ATP6	N	38	ILE	38	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	93	LEU
+ATP6	N	38	ILE	38	I	M	ATP synthase subunit d, mitochondrial	0	127	PHE
+ATP6	N	38	ILE	38	I	M	ATP synthase subunit d, mitochondrial	0	128	ASP
+ATP6	N	39	ASN	39	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	5	LEU
+ATP6	N	39	ASN	39	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	86	ASN
+ATP6	N	40	ASN	40	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	5	LEU
+ATP6	N	40	ASN	40	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	86	ASN
+ATP6	N	40	ASN	40	N	R	ATP synthase subunit f, mitochondrial	0	51	TYR
+ATP6	N	40	ASN	40	N	R	ATP synthase subunit f, mitochondrial	0	55	ILE
+ATP6	N	40	ASN	40	N	R	ATP synthase subunit f, mitochondrial	0	56	ASN
+ATP6	N	40	ASN	40	N	R	ATP synthase subunit f, mitochondrial	0	57	VAL
+ATP6	N	41	ARG	41	R	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	79	ALA
+ATP6	N	41	ARG	41	R	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	82	ALA
+ATP6	N	41	ARG	41	R	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	83	ASP
+ATP6	N	41	ARG	41	R	R	ATP synthase subunit f, mitochondrial	0	57	VAL
+ATP6	N	41	ARG	41	R	R	ATP synthase subunit f, mitochondrial	0	59	LYS
+ATP6	N	41	ARG	41	R	R	ATP synthase subunit f, mitochondrial	0	60	GLY
+ATP6	N	42	LEU	42	L	R	ATP synthase subunit f, mitochondrial	0	55	ILE
+ATP6	N	42	LEU	42	L	R	ATP synthase subunit f, mitochondrial	0	65	ILE
+ATP6	N	43	ILE	43	I	R	ATP synthase subunit f, mitochondrial	0	51	TYR
+ATP6	N	44	THR	44	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	82	ALA
+ATP6	N	44	THR	44	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	85	LEU
+ATP6	N	44	THR	44	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	86	ASN
+ATP6	N	45	THR	45	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	78	VAL
+ATP6	N	45	THR	45	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	82	ALA
+ATP6	N	47	GLN	47	Q	Q	ATP synthase protein 8	1	31	THR
+ATP6	N	47	GLN	47	Q	Q	ATP synthase protein 8	1	32	ASN
+ATP6	N	47	GLN	47	Q	Q	ATP synthase protein 8	1	33	TYR
+ATP6	N	48	TRP	48	W	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	81	PHE
+ATP6	N	48	TRP	48	W	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	85	LEU
+ATP6	N	50	ILE	50	I	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP6	N	50	ILE	50	I	Q	ATP synthase protein 8	1	28	MET
+ATP6	N	50	ILE	50	I	Q	ATP synthase protein 8	1	31	THR
+ATP6	N	50	ILE	50	I	Q	ATP synthase protein 8	1	33	TYR
+ATP6	N	51	LYS	51	K	M	ATP synthase subunit d, mitochondrial	0	160	LEU
+ATP6	N	51	LYS	51	K	Q	ATP synthase protein 8	1	33	TYR
+ATP6	N	54	SER	54	S	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP6	N	54	SER	54	S	M	ATP synthase subunit d, mitochondrial	0	157	ILE
+ATP6	N	54	SER	54	S	M	ATP synthase subunit d, mitochondrial	0	160	LEU
+ATP6	N	55	LYS	55	K	M	ATP synthase subunit d, mitochondrial	0	157	ILE
+ATP6	N	55	LYS	55	K	M	ATP synthase subunit d, mitochondrial	0	158	GLU
+ATP6	N	55	LYS	55	K	M	ATP synthase subunit d, mitochondrial	0	160	LEU
+ATP6	N	58	MET	58	M	M	ATP synthase subunit d, mitochondrial	0	157	ILE
+ATP6	N	59	THR	59	T	M	ATP synthase subunit d, mitochondrial	0	157	ILE
+ATP6	N	59	THR	59	T	M	ATP synthase subunit d, mitochondrial	0	158	GLU
+ATP6	N	66	ARG	66	R	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP6	N	66	ARG	66	R	M	ATP synthase subunit d, mitochondrial	0	156	PRO
+ATP6	N	66	ARG	66	R	M	ATP synthase subunit d, mitochondrial	0	157	ILE
+ATP6	N	66	ARG	66	R	M	ATP synthase subunit d, mitochondrial	0	158	GLU
+ATP6	N	67	THR	67	T	M	ATP synthase subunit d, mitochondrial	0	151	TYR
+ATP6	N	67	THR	67	T	P	ATP synthase subunit ATP5MJ, mitochondrial	0	16	TYR
+ATP6	N	67	THR	67	T	P	ATP synthase subunit ATP5MJ, mitochondrial	0	20	VAL
+ATP6	N	68	TRP	68	W	P	ATP synthase subunit ATP5MJ, mitochondrial	0	20	VAL
+ATP6	N	68	TRP	68	W	P	ATP synthase subunit ATP5MJ, mitochondrial	0	24	ILE
+ATP6	N	69	SER	69	S	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP6	N	69	SER	69	S	M	ATP synthase subunit d, mitochondrial	0	153	PRO
+ATP6	N	69	SER	69	S	M	ATP synthase subunit d, mitochondrial	0	157	ILE
+ATP6	N	70	LEU	70	L	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP6	N	70	LEU	70	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	13	MET
+ATP6	N	70	LEU	70	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	16	TYR
+ATP6	N	70	LEU	70	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	21	TYR
+ATP6	N	70	LEU	70	L	Q	ATP synthase protein 8	1	25	GLN
+ATP6	N	70	LEU	70	L	Q	ATP synthase protein 8	1	28	MET
+ATP6	N	70	LEU	70	L	Q	ATP synthase protein 8	1	29	LEU
+ATP6	N	71	MET	71	M	P	ATP synthase subunit ATP5MJ, mitochondrial	0	21	TYR
+ATP6	N	71	MET	71	M	Q	ATP synthase protein 8	1	20	LEU
+ATP6	N	71	MET	71	M	Q	ATP synthase protein 8	1	21	PHE
+ATP6	N	71	MET	71	M	Q	ATP synthase protein 8	1	25	GLN
+ATP6	N	73	VAL	73	V	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP6	N	73	VAL	73	V	Q	ATP synthase protein 8	1	28	MET
+ATP6	N	74	SER	74	S	Q	ATP synthase protein 8	1	20	LEU
+ATP6	N	74	SER	74	S	Q	ATP synthase protein 8	1	24	THR
+ATP6	N	74	SER	74	S	Q	ATP synthase protein 8	1	25	GLN
+ATP6	N	74	SER	74	S	Q	ATP synthase protein 8	1	28	MET
+ATP6	N	75	LEU	75	L	Q	ATP synthase protein 8	1	20	LEU
+ATP6	N	77	ILE	77	I	Q	ATP synthase protein 8	1	28	MET
+ATP6	N	78	PHE	78	F	Q	ATP synthase protein 8	1	16	MET
+ATP6	N	78	PHE	78	F	Q	ATP synthase protein 8	1	19	THR
+ATP6	N	78	PHE	78	F	Q	ATP synthase protein 8	1	20	LEU
+ATP6	N	78	PHE	78	F	Q	ATP synthase protein 8	1	24	THR
+ATP6	N	85	LEU	85	L	R	ATP synthase subunit f, mitochondrial	0	72	TYR
+ATP6	N	87	LEU	87	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	63	VAL
+ATP6	N	88	LEU	88	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	67	MET
+ATP6	N	88	LEU	88	L	R	ATP synthase subunit f, mitochondrial	0	69	LEU
+ATP6	N	88	LEU	88	L	R	ATP synthase subunit f, mitochondrial	0	72	TYR
+ATP6	N	88	LEU	88	L	R	ATP synthase subunit f, mitochondrial	0	73	VAL
+ATP6	N	89	PRO	89	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	60	ALA
+ATP6	N	89	PRO	89	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	63	VAL
+ATP6	N	89	PRO	89	P	R	ATP synthase subunit f, mitochondrial	0	73	VAL
+ATP6	N	89	PRO	89	P	R	ATP synthase subunit f, mitochondrial	0	76	SER
+ATP6	N	90	HIS	90	H	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	51	TYR
+ATP6	N	90	HIS	90	H	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	56	GLU
+ATP6	N	90	HIS	90	H	R	ATP synthase subunit f, mitochondrial	0	76	SER
+ATP6	N	90	HIS	90	H	R	ATP synthase subunit f, mitochondrial	0	77	TYR
+ATP6	N	90	HIS	90	H	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	90	HIS	90	H	R	ATP synthase subunit f, mitochondrial	0	80	SER
+ATP6	N	90	HIS	90	H	R	ATP synthase subunit f, mitochondrial	0	84	LEU
+ATP6	N	91	SER	91	S	R	ATP synthase subunit f, mitochondrial	0	72	TYR
+ATP6	N	91	SER	91	S	R	ATP synthase subunit f, mitochondrial	0	76	SER
+ATP6	N	92	PHE	92	F	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	92	PHE	92	F	R	ATP synthase subunit f, mitochondrial	0	72	TYR
+ATP6	N	92	PHE	92	F	R	ATP synthase subunit f, mitochondrial	0	79	PHE
+ATP6	N	96	THR	96	T	Q	ATP synthase protein 8	1	3	GLN
+ATP6	N	97	GLN	97	Q	Q	ATP synthase protein 8	1	3	GLN
+ATP6	N	97	GLN	97	Q	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	98	LEU	98	L	Q	ATP synthase protein 8	1	3	GLN
+ATP6	N	99	SER	99	S	Q	ATP synthase protein 8	1	9	TRP
+ATP6	N	99	SER	99	S	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	99	SER	99	S	Q	ATP synthase protein 8	1	13	ILE
+ATP6	N	100	MET	100	M	Q	ATP synthase protein 8	1	12	MET
+ATP6	N	100	MET	100	M	Q	ATP synthase protein 8	1	13	ILE
+ATP6	N	100	MET	100	M	Q	ATP synthase protein 8	1	16	MET
+ATP6	N	102	LEU	102	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	31	MET
+ATP6	N	102	LEU	102	L	Q	ATP synthase protein 8	1	9	TRP
+ATP6	N	103	ALA	103	A	P	ATP synthase subunit ATP5MJ, mitochondrial	0	31	MET
+ATP6	N	103	ALA	103	A	Q	ATP synthase protein 8	1	13	ILE
+ATP6	N	103	ALA	103	A	Q	ATP synthase protein 8	1	16	MET
+ATP6	N	104	MET	104	M	Q	ATP synthase protein 8	1	16	MET
+ATP6	N	104	MET	104	M	Q	ATP synthase protein 8	1	20	LEU
+ATP6	N	106	ILE	106	I	P	ATP synthase subunit ATP5MJ, mitochondrial	0	27	GLY
+ATP6	N	106	ILE	106	I	P	ATP synthase subunit ATP5MJ, mitochondrial	0	30	LEU
+ATP6	N	106	ILE	106	I	P	ATP synthase subunit ATP5MJ, mitochondrial	0	31	MET
+ATP6	N	107	PRO	107	P	P	ATP synthase subunit ATP5MJ, mitochondrial	0	24	ILE
+ATP6	N	107	PRO	107	P	P	ATP synthase subunit ATP5MJ, mitochondrial	0	27	GLY
+ATP6	N	107	PRO	107	P	P	ATP synthase subunit ATP5MJ, mitochondrial	0	28	MET
+ATP6	N	107	PRO	107	P	P	ATP synthase subunit ATP5MJ, mitochondrial	0	31	MET
+ATP6	N	108	LEU	108	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	24	ILE
+ATP6	N	108	LEU	108	L	Q	ATP synthase protein 8	1	21	PHE
+ATP6	N	110	ALA	110	A	P	ATP synthase subunit ATP5MJ, mitochondrial	0	27	GLY
+ATP6	N	110	ALA	110	A	P	ATP synthase subunit ATP5MJ, mitochondrial	0	30	LEU
+ATP6	N	111	GLY	111	G	P	ATP synthase subunit ATP5MJ, mitochondrial	0	23	GLU
+ATP6	N	111	GLY	111	G	P	ATP synthase subunit ATP5MJ, mitochondrial	0	24	ILE
+ATP6	N	114	ILE	114	I	P	ATP synthase subunit ATP5MJ, mitochondrial	0	23	GLU
+ATP6	N	114	ILE	114	I	P	ATP synthase subunit ATP5MJ, mitochondrial	0	26	ILE
+ATP6	N	115	MET	115	M	P	ATP synthase subunit ATP5MJ, mitochondrial	0	23	GLU
+ATP6	N	118	ARG	118	R	P	ATP synthase subunit ATP5MJ, mitochondrial	0	22	GLN
+ATP6	N	118	ARG	118	R	P	ATP synthase subunit ATP5MJ, mitochondrial	0	23	GLU
+ATP6	N	130	PRO	130	P	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	47	PHE
+ATP6	N	132	GLY	132	G	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	47	PHE
+ATP6	N	134	PRO	134	P	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	51	ILE
+ATP6	N	137	LEU	137	L	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	51	ILE
+ATP6	N	137	LEU	137	L	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	55	ALA
+ATP6	N	140	MET	140	M	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	58	GLU
+ATP6	N	140	MET	140	M	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	62	LEU
+ATP6	N	141	LEU	141	L	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	51	ILE
+ATP6	N	141	LEU	141	L	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	54	PHE
+ATP6	N	144	ILE	144	I	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	54	PHE
+ATP6	N	144	ILE	144	I	1	ATP synthase F(0) complex subunit C1, mitochondrial	0	58	GLU
+ATP6	N	144	ILE	144	I	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	56	LEU
+ATP6	N	144	ILE	144	I	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	59	ALA
+ATP6	N	147	ILE	147	I	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	147	ILE	147	I	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	66	MET
+ATP6	N	148	SER	148	S	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	55	ALA
+ATP6	N	148	SER	148	S	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	59	ALA
+ATP6	N	151	ILE	151	I	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	62	LEU
+ATP6	N	155	ALA	155	A	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	158	VAL	158	V	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	158	VAL	158	V	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	66	MET
+ATP6	N	159	ARG	159	R	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	54	PHE
+ATP6	N	159	ARG	159	R	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	58	GLU
+ATP6	N	159	ARG	159	R	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	55	ALA
+ATP6	N	159	ARG	159	R	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	56	LEU
+ATP6	N	159	ARG	159	R	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	59	ALA
+ATP6	N	159	ARG	159	R	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	162	ALA	162	A	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	62	LEU
+ATP6	N	163	ASN	163	N	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	58	GLU
+ATP6	N	163	ASN	163	N	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	62	LEU
+ATP6	N	165	THR	165	T	Q	ATP synthase protein 8	1	3	GLN
+ATP6	N	166	ALA	166	A	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	62	LEU
+ATP6	N	166	ALA	166	A	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	167	GLY	167	G	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	169	LEU	169	L	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	69	PHE
+ATP6	N	169	LEU	169	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	66	MET
+ATP6	N	170	LEU	170	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	62	LEU
+ATP6	N	170	LEU	170	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	63	PHE
+ATP6	N	170	LEU	170	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	66	MET
+ATP6	N	171	MET	171	M	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	59	THR
+ATP6	N	172	HIS	172	H	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	55	ALA
+ATP6	N	172	HIS	172	H	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	56	GLU
+ATP6	N	173	LEU	173	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	66	MET
+ATP6	N	173	LEU	173	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	70	LEU
+ATP6	N	175	GLY	175	G	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	55	ALA
+ATP6	N	175	GLY	175	G	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	58	PHE
+ATP6	N	175	GLY	175	G	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	59	THR
+ATP6	N	176	SER	176	S	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	55	ALA
+ATP6	N	178	THR	178	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	58	PHE
+ATP6	N	179	LEU	179	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	53	ILE
+ATP6	N	179	LEU	179	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	54	SER
+ATP6	N	179	LEU	179	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	55	ALA
+ATP6	N	179	LEU	179	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	58	PHE
+ATP6	N	193	PHE	193	F	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	58	PHE
+ATP6	N	193	PHE	193	F	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	61	LEU
+ATP6	N	193	PHE	193	F	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	62	SER
+ATP6	N	196	LEU	196	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	58	PHE
+ATP6	N	196	LEU	196	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	59	THR
+ATP6	N	196	LEU	196	L	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	62	SER
+ATP6	N	197	ILE	197	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	62	SER
+ATP6	N	197	ILE	197	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	66	VAL
+ATP6	N	200	THR	200	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	62	SER
+ATP6	N	200	THR	200	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	63	VAL
+ATP6	N	200	THR	200	T	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	66	VAL
+ATP6	N	201	ILE	201	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	66	VAL
+ATP6	N	202	LEU	202	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	56	LEU
+ATP6	N	202	LEU	202	L	4	ATP synthase F(0) complex subunit C1, mitochondrial	0	59	ALA
+ATP6	N	204	ILE	204	I	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	66	VAL
+ATP6	N	209	ILE	209	I	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	51	ILE
+ATP6	N	209	ILE	209	I	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	55	ALA
+ATP6	N	210	GLN	210	Q	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	55	ALA
+ATP6	N	210	GLN	210	Q	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	58	GLU
+ATP6	N	213	VAL	213	V	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	52	LEU
+ATP6	N	213	VAL	213	V	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	55	ALA
+ATP6	N	213	VAL	213	V	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	56	LEU
+ATP6	N	216	LEU	216	L	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	52	LEU
+ATP6	N	217	LEU	217	L	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	56	LEU
+ATP6	N	220	LEU	220	L	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	47	PHE
+ATP6	N	220	LEU	220	L	2	ATP synthase F(0) complex subunit C1, mitochondrial	0	51	ILE
+ATP8	Q	1	MET	1	M	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	69	PHE
+ATP8	Q	1	MET	1	M	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	73	PHE
+ATP8	Q	1	MET	1	M	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	74	ALA
+ATP8	Q	1	MET	1	M	N	ATP synthase subunit a	1	6	PHE
+ATP8	Q	2	PRO	2	P	N	ATP synthase subunit a	1	6	PHE
+ATP8	Q	2	PRO	2	P	N	ATP synthase subunit a	1	9	PHE
+ATP8	Q	2	PRO	2	P	N	ATP synthase subunit a	1	10	ILE
+ATP8	Q	3	GLN	3	Q	N	ATP synthase subunit a	1	9	PHE
+ATP8	Q	3	GLN	3	Q	N	ATP synthase subunit a	1	96	THR
+ATP8	Q	3	GLN	3	Q	N	ATP synthase subunit a	1	97	GLN
+ATP8	Q	3	GLN	3	Q	N	ATP synthase subunit a	1	98	LEU
+ATP8	Q	3	GLN	3	Q	N	ATP synthase subunit a	1	165	THR
+ATP8	Q	4	LEU	4	L	3	ATP synthase F(0) complex subunit C1, mitochondrial	0	74	ALA
+ATP8	Q	6	THR	6	T	P	ATP synthase subunit ATP5MJ, mitochondrial	0	38	ILE
+ATP8	Q	6	THR	6	T	P	ATP synthase subunit ATP5MJ, mitochondrial	0	39	ARG
+ATP8	Q	6	THR	6	T	P	ATP synthase subunit ATP5MJ, mitochondrial	0	42	ASP
+ATP8	Q	7	THR	7	T	P	ATP synthase subunit ATP5MJ, mitochondrial	0	39	ARG
+ATP8	Q	8	VAL	8	V	N	ATP synthase subunit a	1	11	ALA
+ATP8	Q	9	TRP	9	W	N	ATP synthase subunit a	1	99	SER
+ATP8	Q	9	TRP	9	W	N	ATP synthase subunit a	1	102	LEU
+ATP8	Q	9	TRP	9	W	P	ATP synthase subunit ATP5MJ, mitochondrial	0	35	VAL
+ATP8	Q	9	TRP	9	W	P	ATP synthase subunit ATP5MJ, mitochondrial	0	38	ILE
+ATP8	Q	10	PRO	10	P	P	ATP synthase subunit ATP5MJ, mitochondrial	0	39	ARG
+ATP8	Q	11	THR	11	T	N	ATP synthase subunit a	1	18	PRO
+ATP8	Q	11	THR	11	T	N	ATP synthase subunit a	1	20	ALA
+ATP8	Q	11	THR	11	T	N	ATP synthase subunit a	1	21	VAL
+ATP8	Q	11	THR	11	T	N	ATP synthase subunit a	1	24	ILE
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	11	ALA
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	20	ALA
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	24	ILE
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	92	PHE
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	97	GLN
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	99	SER
+ATP8	Q	12	MET	12	M	N	ATP synthase subunit a	1	100	MET
+ATP8	Q	13	ILE	13	I	N	ATP synthase subunit a	1	99	SER
+ATP8	Q	13	ILE	13	I	N	ATP synthase subunit a	1	100	MET
+ATP8	Q	13	ILE	13	I	N	ATP synthase subunit a	1	103	ALA
+ATP8	Q	13	ILE	13	I	P	ATP synthase subunit ATP5MJ, mitochondrial	0	35	VAL
+ATP8	Q	15	PRO	15	P	N	ATP synthase subunit a	1	21	VAL
+ATP8	Q	15	PRO	15	P	N	ATP synthase subunit a	1	24	ILE
+ATP8	Q	15	PRO	15	P	N	ATP synthase subunit a	1	25	LEU
+ATP8	Q	16	MET	16	M	N	ATP synthase subunit a	1	24	ILE
+ATP8	Q	16	MET	16	M	N	ATP synthase subunit a	1	78	PHE
+ATP8	Q	16	MET	16	M	N	ATP synthase subunit a	1	100	MET
+ATP8	Q	16	MET	16	M	N	ATP synthase subunit a	1	103	ALA
+ATP8	Q	16	MET	16	M	N	ATP synthase subunit a	1	104	MET
+ATP8	Q	17	LEU	17	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	28	MET
+ATP8	Q	19	THR	19	T	N	ATP synthase subunit a	1	24	ILE
+ATP8	Q	19	THR	19	T	N	ATP synthase subunit a	1	25	LEU
+ATP8	Q	19	THR	19	T	N	ATP synthase subunit a	1	28	PRO
+ATP8	Q	19	THR	19	T	N	ATP synthase subunit a	1	78	PHE
+ATP8	Q	20	LEU	20	L	N	ATP synthase subunit a	1	71	MET
+ATP8	Q	20	LEU	20	L	N	ATP synthase subunit a	1	74	SER
+ATP8	Q	20	LEU	20	L	N	ATP synthase subunit a	1	75	LEU
+ATP8	Q	20	LEU	20	L	N	ATP synthase subunit a	1	78	PHE
+ATP8	Q	20	LEU	20	L	N	ATP synthase subunit a	1	104	MET
+ATP8	Q	21	PHE	21	F	N	ATP synthase subunit a	1	71	MET
+ATP8	Q	21	PHE	21	F	N	ATP synthase subunit a	1	108	LEU
+ATP8	Q	21	PHE	21	F	P	ATP synthase subunit ATP5MJ, mitochondrial	0	13	MET
+ATP8	Q	21	PHE	21	F	P	ATP synthase subunit ATP5MJ, mitochondrial	0	17	TYR
+ATP8	Q	21	PHE	21	F	P	ATP synthase subunit ATP5MJ, mitochondrial	0	24	ILE
+ATP8	Q	21	PHE	21	F	P	ATP synthase subunit ATP5MJ, mitochondrial	0	28	MET
+ATP8	Q	22	LEU	22	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	9	ILE
+ATP8	Q	22	LEU	22	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	13	MET
+ATP8	Q	22	LEU	22	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	17	TYR
+ATP8	Q	23	ILE	23	I	N	ATP synthase subunit a	1	25	LEU
+ATP8	Q	23	ILE	23	I	N	ATP synthase subunit a	1	28	PRO
+ATP8	Q	24	THR	24	T	N	ATP synthase subunit a	1	28	PRO
+ATP8	Q	24	THR	24	T	N	ATP synthase subunit a	1	74	SER
+ATP8	Q	24	THR	24	T	N	ATP synthase subunit a	1	78	PHE
+ATP8	Q	25	GLN	25	Q	N	ATP synthase subunit a	1	70	LEU
+ATP8	Q	25	GLN	25	Q	N	ATP synthase subunit a	1	71	MET
+ATP8	Q	25	GLN	25	Q	N	ATP synthase subunit a	1	74	SER
+ATP8	Q	25	GLN	25	Q	P	ATP synthase subunit ATP5MJ, mitochondrial	0	13	MET
+ATP8	Q	25	GLN	25	Q	P	ATP synthase subunit ATP5MJ, mitochondrial	0	21	TYR
+ATP8	Q	26	LEU	26	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	8	ASN
+ATP8	Q	26	LEU	26	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	9	ILE
+ATP8	Q	26	LEU	26	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	12	PRO
+ATP8	Q	26	LEU	26	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	13	MET
+ATP8	Q	27	LYS	27	K	N	ATP synthase subunit a	1	28	PRO
+ATP8	Q	27	LYS	27	K	N	ATP synthase subunit a	1	29	LEU
+ATP8	Q	27	LYS	27	K	N	ATP synthase subunit a	1	31	ILE
+ATP8	Q	27	LYS	27	K	N	ATP synthase subunit a	1	32	PRO
+ATP8	Q	27	LYS	27	K	N	ATP synthase subunit a	1	33	THR
+ATP8	Q	28	MET	28	M	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP8	Q	28	MET	28	M	N	ATP synthase subunit a	1	31	ILE
+ATP8	Q	28	MET	28	M	N	ATP synthase subunit a	1	50	ILE
+ATP8	Q	28	MET	28	M	N	ATP synthase subunit a	1	70	LEU
+ATP8	Q	28	MET	28	M	N	ATP synthase subunit a	1	73	VAL
+ATP8	Q	28	MET	28	M	N	ATP synthase subunit a	1	74	SER
+ATP8	Q	28	MET	28	M	N	ATP synthase subunit a	1	77	ILE
+ATP8	Q	29	LEU	29	L	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP8	Q	29	LEU	29	L	N	ATP synthase subunit a	1	70	LEU
+ATP8	Q	29	LEU	29	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	12	PRO
+ATP8	Q	29	LEU	29	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	13	MET
+ATP8	Q	29	LEU	29	L	P	ATP synthase subunit ATP5MJ, mitochondrial	0	16	TYR
+ATP8	Q	30	ASN	30	N	N	ATP synthase subunit a	1	33	THR
+ATP8	Q	30	ASN	30	N	N	ATP synthase subunit a	1	34	SER
+ATP8	Q	30	ASN	30	N	N	ATP synthase subunit a	1	35	LYS
+ATP8	Q	31	THR	31	T	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP8	Q	31	THR	31	T	N	ATP synthase subunit a	1	33	THR
+ATP8	Q	31	THR	31	T	N	ATP synthase subunit a	1	47	GLN
+ATP8	Q	31	THR	31	T	N	ATP synthase subunit a	1	50	ILE
+ATP8	Q	32	ASN	32	N	M	ATP synthase subunit d, mitochondrial	0	132	ILE
+ATP8	Q	32	ASN	32	N	M	ATP synthase subunit d, mitochondrial	0	144	LEU
+ATP8	Q	32	ASN	32	N	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP8	Q	32	ASN	32	N	M	ATP synthase subunit d, mitochondrial	0	153	PRO
+ATP8	Q	32	ASN	32	N	M	ATP synthase subunit d, mitochondrial	0	154	HIS
+ATP8	Q	32	ASN	32	N	N	ATP synthase subunit a	1	47	GLN
+ATP8	Q	33	TYR	33	Y	M	ATP synthase subunit d, mitochondrial	0	144	LEU
+ATP8	Q	33	TYR	33	Y	M	ATP synthase subunit d, mitochondrial	0	152	TRP
+ATP8	Q	33	TYR	33	Y	M	ATP synthase subunit d, mitochondrial	0	155	GLN
+ATP8	Q	33	TYR	33	Y	M	ATP synthase subunit d, mitochondrial	0	160	LEU
+ATP8	Q	33	TYR	33	Y	N	ATP synthase subunit a	1	47	GLN
+ATP8	Q	33	TYR	33	Y	N	ATP synthase subunit a	1	50	ILE
+ATP8	Q	33	TYR	33	Y	N	ATP synthase subunit a	1	51	LYS
+ATP8	Q	34	HIS	34	H	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	89	LYS
+ATP8	Q	34	HIS	34	H	M	ATP synthase subunit d, mitochondrial	0	135	LEU
+ATP8	Q	34	HIS	34	H	M	ATP synthase subunit d, mitochondrial	0	142	THR
+ATP8	Q	34	HIS	34	H	M	ATP synthase subunit d, mitochondrial	0	144	LEU
+ATP8	Q	34	HIS	34	H	N	ATP synthase subunit a	1	37	LEU
+ATP8	Q	35	LEU	35	L	M	ATP synthase subunit d, mitochondrial	0	141	GLU
+ATP8	Q	35	LEU	35	L	M	ATP synthase subunit d, mitochondrial	0	142	THR
+ATP8	Q	35	LEU	35	L	M	ATP synthase subunit d, mitochondrial	0	143	LYS
+ATP8	Q	35	LEU	35	L	M	ATP synthase subunit d, mitochondrial	0	144	LEU
+ATP8	Q	35	LEU	35	L	M	ATP synthase subunit d, mitochondrial	0	155	GLN
+ATP8	Q	36	PRO	36	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	92	GLN
+ATP8	Q	36	PRO	36	P	M	ATP synthase subunit d, mitochondrial	0	141	GLU
+ATP8	Q	36	PRO	36	P	M	ATP synthase subunit d, mitochondrial	0	142	THR
+ATP8	Q	36	PRO	36	P	M	ATP synthase subunit d, mitochondrial	0	159	ASN
+ATP8	Q	37	PRO	37	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	92	GLN
+ATP8	Q	37	PRO	37	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	93	LEU
+ATP8	Q	37	PRO	37	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	96	ALA
+ATP8	Q	37	PRO	37	P	M	ATP synthase subunit d, mitochondrial	0	141	GLU
+ATP8	Q	37	PRO	37	P	M	ATP synthase subunit d, mitochondrial	0	142	THR
+ATP8	Q	38	SER	38	S	M	ATP synthase subunit d, mitochondrial	0	141	GLU
+ATP8	Q	39	PRO	39	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	96	ALA
+ATP8	Q	39	PRO	39	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	99	ALA
+ATP8	Q	39	PRO	39	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	100	SER
+ATP8	Q	39	PRO	39	P	M	ATP synthase subunit d, mitochondrial	0	141	GLU
+ATP8	Q	40	LYS	40	K	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	103	HIS
+ATP8	Q	41	PRO	41	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	103	HIS
+ATP8	Q	42	MET	42	M	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	103	HIS
+ATP8	Q	43	LYS	43	K	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	103	HIS
+ATP8	Q	44	MET	44	M	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	107	ALA
+ATP8	Q	44	MET	44	M	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	111	GLU
+ATP8	Q	44	MET	44	M	M	ATP synthase subunit d, mitochondrial	0	114	TYR
+ATP8	Q	46	ASN	46	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	110	THR
+ATP8	Q	46	ASN	46	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	111	GLU
+ATP8	Q	46	ASN	46	N	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	114	GLN
+ATP8	Q	47	TYR	47	Y	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	114	GLN
+ATP8	Q	47	TYR	47	Y	M	ATP synthase subunit d, mitochondrial	0	103	TRP
+ATP8	Q	48	ASN	48	N	M	ATP synthase subunit d, mitochondrial	0	103	TRP
+ATP8	Q	49	LYS	49	K	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	114	GLN
+ATP8	Q	49	LYS	49	K	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	117	LEU
+ATP8	Q	49	LYS	49	K	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	118	VAL
+ATP8	Q	50	PRO	50	P	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	118	VAL
+ATP8	Q	50	PRO	50	P	M	ATP synthase subunit d, mitochondrial	0	96	ASP
+ATP8	Q	50	PRO	50	P	M	ATP synthase subunit d, mitochondrial	0	99	SER
+ATP8	Q	50	PRO	50	P	M	ATP synthase subunit d, mitochondrial	0	100	CYS
+ATP8	Q	50	PRO	50	P	M	ATP synthase subunit d, mitochondrial	0	103	TRP
+ATP8	Q	51	TRP	51	W	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	117	LEU
+ATP8	Q	51	TRP	51	W	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	118	VAL
+ATP8	Q	51	TRP	51	W	K	ATP synthase F(0) complex subunit B1, mitochondrial	0	121	ARG
+ATP8	Q	51	TRP	51	W	L	ATP synthase-coupling factor 6, mitochondrial	0	105	LYS
+ATP8	Q	51	TRP	51	W	M	ATP synthase subunit d, mitochondrial	0	18	ILE
+ATP8	Q	51	TRP	51	W	M	ATP synthase subunit d, mitochondrial	0	20	PRO
+ATP8	Q	51	TRP	51	W	M	ATP synthase subunit d, mitochondrial	0	100	CYS

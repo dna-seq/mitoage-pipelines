@@ -1,0 +1,77 @@
+group	gene	species	iface_cols	other_cols	seq_contact_iface	seq_control_iface	seq_contact_other	seq_control_other	seq_excess_mt	seq_excess_nuc	seq_own_contacts_iface	esm_contact_iface	esm_control_iface	esm_contact_other	esm_control_other	esm_excess_mt	esm_excess_nuc	esm_own_contacts_iface
+complex V partner	ATP5F1A	182	0	503			0.2835	0.2272										
+complex V partner	ATP5F1B	181	0	529			0.1299	0.0841										
+complex V partner	ATP5F1C	177	0	298			0.1933	0.2098										
+complex V partner	ATP5F1D	174	0	168			0.1910	0.1763										
+complex V partner	ATP5F1E	167	0	51			-0.0025	-0.0699										
+complex V partner	ATP5PB	177	37	219	0.6763	0.6337	0.5912	0.5366	0.0426	0.0851	0.6427							
+complex V partner	ATP5PD	181	26	111	0.3969	0.4478	0.5302	0.4110	-0.0509	-0.1333	0.1295							
+complex V partner	ATP5PF	181	1	107			0.1755	0.1802										
+complex V partner	ATP5PO	182	0	213			0.2647	0.1968										
+complex V partner	ATP5MC1	181	15	121	-0.0386	-0.0483	0.3866	0.3614	0.0096	-0.4252	-0.0200							
+complex V partner	ATP5ME	155	0	69			0.3846	0.3381										
+complex V partner	ATP5MF	162	21	67	0.3662	0.2865	0.3758	0.3759	0.0797	-0.0096	0.2860							
+complex V partner	ATP5MG	180	0	103			0.4026	0.3562										
+complex V partner	ATP5MJ	167	20	55	-0.0214	0.0077	0.1209	0.1767	-0.0291	-0.1422	-0.0251							
+complex V partner	ATP5IF1	179	0	106			0.0181	-0.0137										
+complex IV nuclear	COX4I1	181	20	149	0.2930	0.3548	0.6198	0.5467	-0.0617	-0.3267								
+complex IV nuclear	COX5A	180	20	130	-0.0075	-0.0348	0.4816	0.4845	0.0273	-0.4891								
+complex IV nuclear	COX5B	180	20	109	-0.1447	-0.0550	0.4638	0.3874	-0.0897	-0.6085								
+complex IV nuclear	COX6A1	179	20	89	0.1188	0.0343	0.4359	0.3146	0.0845	-0.3171								
+complex IV nuclear	COX6B1	181	20	66	0.5146	0.5195	0.6220	0.5692	-0.0049	-0.1074								
+complex IV nuclear	COX6C	168	20	55	0.4497	0.4425	0.5307	0.5620	0.0072	-0.0809								
+complex IV nuclear	COX7A2	181	20	63	0.5394	0.5146	0.5194	0.4779	0.0249	0.0201								
+complex IV nuclear	COX7B	176	20	60	-0.0489	-0.1119	0.3193	0.3235	0.0630	-0.3683								
+complex IV nuclear	COX7C	170	20	43	0.4725	0.4384	0.5986	0.6177	0.0341	-0.1260								
+complex IV nuclear	COX8A	166	20	49	0.1353	0.0895	0.4214	0.3709	0.0459	-0.2861								
+complex IV nuclear	NDUFA4	179	20	61	0.2029	0.1725	0.4541	0.4902	0.0304	-0.2512								
+complex III nuclear	UQCRC1	181	20	460	0.0469	0.0290	0.4173	0.3309	0.0178	-0.3704								
+complex III nuclear	UQCRC2	181	20	433	-0.1322	-0.1569	0.3071	0.1883	0.0246	-0.4393								
+complex III nuclear	CYC1	180	20	305	0.4837	0.4351	0.5284	0.4952	0.0486	-0.0447								
+complex III nuclear	UQCRFS1	176	20	254	0.5718	0.5708	0.3574	0.3812	0.0011	0.2144								
+complex III nuclear	UQCRB	179	20	59	0.3480	0.2404	0.5279	0.5156	0.1076	-0.1799								
+complex III nuclear	UQCRQ	179	20	62	0.4626	0.4187	0.5043	0.4389	0.0439	-0.0417								
+complex III nuclear	UQCRH	181	20	65	0.3291	0.2442	0.1631	0.1033	0.0849	0.1660								
+complex III nuclear	UQCR10	176	20	42	0.3925	0.3490	0.4365	0.4117	0.0435	-0.0440								
+complex III nuclear	UQCR11	174	20	36	0.0485	0.0568	0.4308	0.4645	-0.0084	-0.3824								
+complex II (no mt subunit)	SDHA	181	20	596	-0.0042	0.0248	0.1283	0.0954	-0.0290	-0.1326								
+complex II (no mt subunit)	SDHB	179	20	242	0.0018	-0.1084	0.1584	0.0814	0.1102	-0.1566								
+complex II (no mt subunit)	SDHC	182	20	130	0.2952	0.2253	0.4497	0.4033	0.0699	-0.1545								
+complex II (no mt subunit)	SDHD	177	20	65	0.0136	0.0106	0.0481	0.0285	0.0030	-0.0345								
+matrix, not respiratory	CS	172	20	446	-0.0218	-0.1042	0.2400	0.2512	0.0824	-0.2618								
+matrix, not respiratory	MDH2	180	20	276	0.1577	0.2042	0.2541	0.1420	-0.0466	-0.0964								
+matrix, not respiratory	SOD2	180	20	202	0.0940	0.0945	0.0456	0.0150	-0.0005	0.0484								
+matrix, not respiratory	HSPD1	181	20	553	-0.0265	-0.0386	0.2398	0.2062	0.0121	-0.2663								
+matrix, not respiratory	ACO2	181	20	760	0.1378	0.2274	0.2669	0.2744	-0.0896	-0.1291								
+matrix, not respiratory	IDH2	181	20	380	-0.1026	-0.0886	-0.0007	0.0035	-0.0139	-0.1018								
+matrix, not respiratory	FH	180	20	490	0.0897	0.1467	-0.1137	-0.2040	-0.0570	0.2034								
+cytochrome c	CYCS	178	20	85	0.3785	0.4085	0.3479	0.3445	-0.0300	0.0306								
+cytosolic control	B2M	158	20	99	-0.1148	-0.1729	0.0507	0.0395	0.0581	-0.1655								
+cytosolic control	CA2	148	20	240	-0.1479	-0.0761	-0.2021	-0.2210	-0.0718	0.0542								
+cytosolic control	CD59	169	20	108	-0.2816	-0.2527	0.1988	0.1638	-0.0289	-0.4804								
+cytosolic control	CFL1	175	20	146	0.1046	0.0922	-0.0214	-0.0068	0.0124	0.1260								
+cytosolic control	CRYAB	180	20	155	0.3367	0.2279	0.1727	0.1275	0.1089	0.1640								
+cytosolic control	CSTB	160	20	78	-0.0388	-0.0703	-0.0385	-0.1398	0.0315	-0.0003								
+cytosolic control	FABP3	182	20	124	0.0843	0.0542	0.2388	0.1805	0.0301	-0.1545								
+cytosolic control	FKBP1A	178	20	88	-0.1035	-0.0941	0.0824	0.0556	-0.0095	-0.1859								
+cytosolic control	GAPDH	177	20	273	-0.0853	-0.1150	0.4874	0.4087	0.0298	-0.5727								
+cytosolic control	GSTP1	110	20	190	0.1127	0.0784	-0.0225	-0.0083	0.0343	0.1352								
+cytosolic control	HSPB1	180	20	185	0.1542	0.1858	0.2491	0.2524	-0.0316	-0.0949								
+cytosolic control	LDHA	87	20	254	0.0050	0.0122	0.1207	0.0744	-0.0072	-0.1157								
+cytosolic control	LGALS1	176	20	115	-0.2025	-0.1361	-0.2640	-0.2599	-0.0663	0.0616								
+cytosolic control	LYZ	124	20	128	-0.0605	-0.0017	-0.1143	-0.1030	-0.0587	0.0538								
+cytosolic control	MB	182	20	134	0.1433	0.1126	0.0278	0.1224	0.0307	0.1155								
+cytosolic control	NME1	105	20	132	0.1979	0.1915	-0.1501	-0.1676	0.0065	0.3481								
+cytosolic control	PEBP1	179	20	167	0.0011	-0.0507	0.0121	-0.0562	0.0518	-0.0110								
+cytosolic control	PFN1	181	20	161	0.2464	0.2007	0.4490	0.4497	0.0457	-0.2026								
+cytosolic control	PGAM1	176	20	219	-0.0845	-0.0375	0.1146	0.1070	-0.0470	-0.1991								
+cytosolic control	PGK1	176	20	397	-0.2369	-0.2285	-0.1659	-0.2073	-0.0084	-0.0710								
+cytosolic control	PPIA	178	20	85	0.1930	0.1570	0.0573	0.0466	0.0360	0.1357								
+cytosolic control	PRDX1	177	20	179	-0.2259	-0.1401	-0.0103	0.0213	-0.0858	-0.2156								
+cytosolic control	PRDX2	176	20	178	-0.2426	-0.1928	-0.1265	-0.1127	-0.0498	-0.1161								
+cytosolic control	RBP4	180	20	181	0.0554	0.0351	0.0366	-0.0143	0.0203	0.0188								
+cytosolic control	SOD1	180	20	134	-0.1522	-0.1170	0.0173	0.0640	-0.0352	-0.1696								
+cytosolic control	TPI1	178	20	229	-0.0292	-0.0098	0.0256	-0.0484	-0.0194	-0.0548								
+cytosolic control	TPT1	177	20	177	0.0503	0.0560	0.1335	0.0609	-0.0057	-0.0833								
+cytosolic control	TTR	175	20	127	0.2540	0.3222	0.2672	0.1970	-0.0682	-0.0133								
+cytosolic control	TXN	151	20	65	0.1979	0.1113	0.0482	-0.0293	0.0865	0.1497								

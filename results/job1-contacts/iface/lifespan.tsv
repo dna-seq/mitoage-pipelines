@@ -1,0 +1,10 @@
+set	species	lam	variable	slope_log10_years	t	p	se	ci95_low	ci95_high
+all species	1375	0.9627	contact minus control	-0.02405	-1.815	0.06975	0.01325	-0.05005	0.001944
+all species	1375	0.9627	contact	-0.02789	-1.53	0.1262	0.01822	-0.06363	0.007859
+all species	1375	0.9627	control	-0.001375	-0.07783	0.938	0.01766	-0.03603	0.03328
+Mammalia	604	0.9908	contact minus control	-0.005891	-0.516	0.606	0.01142	-0.02831	0.01653
+Mammalia	604	0.9908	contact	0.01083	0.4018	0.688	0.02696	-0.04212	0.06378
+Mammalia	604	0.9908	control	0.03004	1.044	0.297	0.02878	-0.02647	0.08655
+with nuclear partners	176	0.984	contact minus control	-0.007221	-0.3416	0.7331	0.02114	-0.04894	0.0345
+with nuclear partners	176	0.984	contact	0.02867	0.8632	0.3892	0.03321	-0.03688	0.09422
+with nuclear partners	176	0.984	control	0.04235	1.246	0.2143	0.03398	-0.02472	0.1094

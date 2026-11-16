@@ -1,0 +1,21 @@
+class	family	feature	model	n	status	lambda	slope_per_sd	se	ci95_low	ci95_high	t	p	q
+Mammalia	partners	contact minus control	mass+composition	177	tested	0.93354	0.024891	0.014204	-0.0031476	0.052929	1.7523	0.081508	0.12226
+Mammalia	partners	contact minus control	mass	177	tested	0.93289	0.027688	0.014512	-0.00095486	0.056331	1.9079	0.058052	0.087077
+Mammalia	partners	contact	mass+composition	177	tested	0.93316	0.094152	0.0425	0.01026	0.17804	2.2153	0.028057	0.08417
+Mammalia	partners	contact	mass	177	tested	0.93501	0.084793	0.043465	-0.00099341	0.17058	1.9508	0.052683	0.087077
+Mammalia	partners	control	mass+composition	177	tested	0.93626	0.037433	0.044805	-0.05101	0.12588	0.83545	0.40463	0.40463
+Mammalia	partners	control	mass	177	tested	0.93711	0.022681	0.04567	-0.067457	0.11282	0.49663	0.62008	0.62008
+Aves	partners	contact minus control	mass+composition	75	tested	0.25773	0.01451	0.019246	-0.023885	0.052904	0.75391	0.45347	0.45347
+Aves	partners	contact minus control	mass	75	tested	0.28051	0.015475	0.018779	-0.021961	0.05291	0.82403	0.41265	0.41265
+Aves	partners	contact	mass+composition	75	tested	5.8043e-06	-0.0497	0.024931	-0.099435	3.5463e-05	-1.9935	0.050159	0.075239
+Aves	partners	contact	mass	75	tested	6.492e-06	-0.038786	0.022533	-0.083703	0.0061323	-1.7213	0.089489	0.13423
+Aves	partners	control	mass+composition	75	tested	6.4758e-06	-0.058927	0.026029	-0.11085	-0.0070008	-2.2639	0.026727	0.075239
+Aves	partners	control	mass	75	tested	0.14508	-0.047861	0.026114	-0.099918	0.0041955	-1.8328	0.070967	0.13423
+Actinopterygii	partners	contact minus control	mass+composition	51	tested	0.78884	0.086122	0.0405	0.0045501	0.16769	2.1265	0.038985	0.11695
+Actinopterygii	partners	contact minus control	mass	51	tested	0.7858	0.068131	0.039779	-0.011851	0.14811	1.7127	0.093216	0.27965
+Actinopterygii	partners	contact	mass+composition	51	tested	0.73511	0.015151	0.037613	-0.060605	0.090907	0.40281	0.689	0.71669
+Actinopterygii	partners	contact	mass	51	tested	0.71316	0.024635	0.036743	-0.049243	0.098512	0.67045	0.50578	0.75868
+Actinopterygii	partners	control	mass+composition	51	tested	0.75964	-0.014291	0.039135	-0.093113	0.064531	-0.36517	0.71669	0.71669
+Actinopterygii	partners	control	mass	51	tested	0.72625	0.00014935	0.038294	-0.076846	0.077145	0.0039	0.9969	0.9969
+Reptilia	partners	*	mass+composition	14	not assessed: 14 species with a partner sequence								
+Reptilia	partners	*	mass	14	not assessed: 14 species with a partner sequence								

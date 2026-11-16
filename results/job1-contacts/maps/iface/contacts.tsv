@@ -1,0 +1,1246 @@
+mt_gene	chain	pdb_resnum	pdb_res	human_pos	human_aa	partner_chain	partner	partner_is_mt	partner_resnum	partner_res
+COX1	A	1	MET	1	M	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	19	TYR
+COX1	A	2	PHE	2	F	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	28	PRO
+COX1	A	4	ASP	4	D	C	Cytochrome c oxidase subunit 3	1	13	PRO
+COX1	A	4	ASP	4	D	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	19	TYR
+COX1	A	5	ARG	5	R	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	19	TYR
+COX1	A	5	ARG	5	R	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	25	LYS
+COX1	A	5	ARG	5	R	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	26	ASN
+COX1	A	5	ARG	5	R	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	27	LEU
+COX1	A	6	TRP	6	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	26	ASN
+COX1	A	6	TRP	6	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	27	LEU
+COX1	A	6	TRP	6	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	28	PRO
+COX1	A	7	LEU	7	L	C	Cytochrome c oxidase subunit 3	1	18	LEU
+COX1	A	8	PHE	8	F	C	Cytochrome c oxidase subunit 3	1	13	PRO
+COX1	A	8	PHE	8	F	C	Cytochrome c oxidase subunit 3	1	14	SER
+COX1	A	8	PHE	8	F	C	Cytochrome c oxidase subunit 3	1	15	PRO
+COX1	A	8	PHE	8	F	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	44	TYR
+COX1	A	8	PHE	8	F	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	55	TYR
+COX1	A	10	THR	10	T	C	Cytochrome c oxidase subunit 3	1	11	VAL
+COX1	A	10	THR	10	T	C	Cytochrome c oxidase subunit 3	1	12	LYS
+COX1	A	10	THR	10	T	C	Cytochrome c oxidase subunit 3	1	13	PRO
+COX1	A	17	THR	17	T	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	26	ASN
+COX1	A	17	THR	17	T	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	27	LEU
+COX1	A	21	LEU	21	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	28	PRO
+COX1	A	21	LEU	21	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	44	TYR
+COX1	A	22	PHE	22	F	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	44	TYR
+COX1	A	24	ALA	24	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	45	PHE
+COX1	A	25	TRP	25	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	44	TYR
+COX1	A	25	TRP	25	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	45	PHE
+COX1	A	25	TRP	25	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	47	SER
+COX1	A	25	TRP	25	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	48	ALA
+COX1	A	28	VAL	28	V	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	45	PHE
+COX1	A	28	VAL	28	V	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	48	ALA
+COX1	A	28	VAL	28	V	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	49	PHE
+COX1	A	29	LEU	29	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	48	ALA
+COX1	A	29	LEU	29	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	51	THR
+COX1	A	29	LEU	29	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	52	PRO
+COX1	A	32	ALA	32	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	49	PHE
+COX1	A	32	ALA	32	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	52	PRO
+COX1	A	32	ALA	32	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	53	PHE
+COX1	A	33	LEU	33	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	52	PRO
+COX1	A	35	LEU	35	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	49	PHE
+COX1	A	35	LEU	35	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	53	PHE
+COX1	A	35	LEU	35	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	59	LEU
+COX1	A	36	LEU	36	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	52	PRO
+COX1	A	36	LEU	36	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	53	PHE
+COX1	A	36	LEU	36	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	56	VAL
+COX1	A	36	LEU	36	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	59	LEU
+COX1	A	38	ARG	38	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	126	TYR
+COX1	A	39	ALA	39	A	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	126	TYR
+COX1	A	42	GLY	42	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	126	TYR
+COX1	A	43	GLN	43	Q	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	122	LYS
+COX1	A	43	GLN	43	Q	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	126	TYR
+COX1	A	43	GLN	43	Q	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	129	LEU
+COX1	A	44	PRO	44	P	B	Cytochrome c oxidase subunit 2	1	134	ARG
+COX1	A	44	PRO	44	P	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	130	PRO
+COX1	A	44	PRO	44	P	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	133	PHE
+COX1	A	45	GLY	45	G	B	Cytochrome c oxidase subunit 2	1	134	ARG
+COX1	A	47	LEU	47	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	125	VAL
+COX1	A	47	LEU	47	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	126	TYR
+COX1	A	47	LEU	47	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	62	LEU
+COX1	A	47	LEU	47	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	66	ARG
+COX1	A	48	LEU	48	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	56	VAL
+COX1	A	48	LEU	48	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	66	ARG
+COX1	A	49	GLY	49	G	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	66	ARG
+COX1	A	50	ASN	50	N	B	Cytochrome c oxidase subunit 2	1	202	ALA
+COX1	A	51	ASP	51	D	B	Cytochrome c oxidase subunit 2	1	201	GLY
+COX1	A	51	ASP	51	D	B	Cytochrome c oxidase subunit 2	1	202	ALA
+COX1	A	51	ASP	51	D	B	Cytochrome c oxidase subunit 2	1	204	HIS
+COX1	A	51	ASP	51	D	B	Cytochrome c oxidase subunit 2	1	205	SER
+COX1	A	52	HIS	52	H	B	Cytochrome c oxidase subunit 2	1	202	ALA
+COX1	A	53	ILE	53	I	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	59	GLN
+COX1	A	53	ILE	53	I	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	60	LEU
+COX1	A	55	ASN	55	N	B	Cytochrome c oxidase subunit 2	1	199	ILE
+COX1	A	55	ASN	55	N	B	Cytochrome c oxidase subunit 2	1	201	GLY
+COX1	A	57	ILE	57	I	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	56	VAL
+COX1	A	90	PRO	90	P	C	Cytochrome c oxidase subunit 3	1	6	HIS
+COX1	A	90	PRO	90	P	C	Cytochrome c oxidase subunit 3	1	10	MET
+COX1	A	91	ASP	91	D	C	Cytochrome c oxidase subunit 3	1	10	MET
+COX1	A	94	PHE	94	F	C	Cytochrome c oxidase subunit 3	1	78	GLY
+COX1	A	94	PHE	94	F	C	Cytochrome c oxidase subunit 3	1	79	LEU
+COX1	A	94	PHE	94	F	C	Cytochrome c oxidase subunit 3	1	82	GLY
+COX1	A	95	PRO	95	P	C	Cytochrome c oxidase subunit 3	1	11	VAL
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	11	VAL
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	14	SER
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	17	PRO
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	57	TRP
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	60	ASP
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	61	VAL
+COX1	A	96	ARG	96	R	C	Cytochrome c oxidase subunit 3	1	64	GLU
+COX1	A	97	MET	97	M	C	Cytochrome c oxidase subunit 3	1	57	TRP
+COX1	A	99	ASN	99	N	C	Cytochrome c oxidase subunit 3	1	17	PRO
+COX1	A	100	MET	100	M	C	Cytochrome c oxidase subunit 3	1	17	PRO
+COX1	A	100	MET	100	M	C	Cytochrome c oxidase subunit 3	1	20	GLY
+COX1	A	100	MET	100	M	C	Cytochrome c oxidase subunit 3	1	21	ALA
+COX1	A	100	MET	100	M	C	Cytochrome c oxidase subunit 3	1	57	TRP
+COX1	A	103	TRP	103	W	C	Cytochrome c oxidase subunit 3	1	18	LEU
+COX1	A	103	TRP	103	W	C	Cytochrome c oxidase subunit 3	1	21	ALA
+COX1	A	104	LEU	104	L	C	Cytochrome c oxidase subunit 3	1	21	ALA
+COX1	A	104	LEU	104	L	C	Cytochrome c oxidase subunit 3	1	24	ALA
+COX1	A	107	PRO	107	P	C	Cytochrome c oxidase subunit 3	1	25	LEU
+COX1	A	110	LEU	110	L	C	Cytochrome c oxidase subunit 3	1	25	LEU
+COX1	A	110	LEU	110	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	70	ILE
+COX1	A	111	LEU	111	L	C	Cytochrome c oxidase subunit 3	1	25	LEU
+COX1	A	111	LEU	111	L	C	Cytochrome c oxidase subunit 3	1	28	THR
+COX1	A	111	LEU	111	L	C	Cytochrome c oxidase subunit 3	1	29	SER
+COX1	A	114	ALA	114	A	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	73	LEU
+COX1	A	116	ALA	116	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	55	VAL
+COX1	A	116	ALA	116	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	59	GLN
+COX1	A	117	MET	117	M	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	77	SER
+COX1	A	117	MET	117	M	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	55	VAL
+COX1	A	117	MET	117	M	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	58	HIS
+COX1	A	117	MET	117	M	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	59	GLN
+COX1	A	117	MET	117	M	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	62	LYS
+COX1	A	118	VAL	118	V	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	76	ALA
+COX1	A	118	VAL	118	V	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	77	SER
+COX1	A	118	VAL	118	V	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	62	LYS
+COX1	A	119	GLU	119	E	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	59	GLN
+COX1	A	119	GLU	119	E	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	62	LYS
+COX1	A	120	ALA	120	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	59	GLN
+COX1	A	123	GLY	123	G	B	Cytochrome c oxidase subunit 2	1	199	ILE
+COX1	A	124	THR	124	T	B	Cytochrome c oxidase subunit 2	1	199	ILE
+COX1	A	129	TYR	129	Y	B	Cytochrome c oxidase subunit 2	1	160	LEU
+COX1	A	129	TYR	129	Y	B	Cytochrome c oxidase subunit 2	1	198	GLU
+COX1	A	130	PRO	130	P	B	Cytochrome c oxidase subunit 2	1	160	LEU
+COX1	A	131	PRO	131	P	B	Cytochrome c oxidase subunit 2	1	158	ASP
+COX1	A	131	PRO	131	P	B	Cytochrome c oxidase subunit 2	1	159	VAL
+COX1	A	131	PRO	131	P	B	Cytochrome c oxidase subunit 2	1	160	LEU
+COX1	A	131	PRO	131	P	B	Cytochrome c oxidase subunit 2	1	176	PRO
+COX1	A	132	LEU	132	L	B	Cytochrome c oxidase subunit 2	1	159	VAL
+COX1	A	132	LEU	132	L	B	Cytochrome c oxidase subunit 2	1	199	ILE
+COX1	A	132	LEU	132	L	B	Cytochrome c oxidase subunit 2	1	200	CYS
+COX1	A	132	LEU	132	L	B	Cytochrome c oxidase subunit 2	1	201	GLY
+COX1	A	135	ASN	135	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	81	THR
+COX1	A	135	ASN	135	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	82	LYS
+COX1	A	137	SER	137	S	B	Cytochrome c oxidase subunit 2	1	103	GLN
+COX1	A	137	SER	137	S	B	Cytochrome c oxidase subunit 2	1	159	VAL
+COX1	A	140	GLY	140	G	C	Cytochrome c oxidase subunit 3	1	36	HIS
+COX1	A	141	ALA	141	A	C	Cytochrome c oxidase subunit 3	1	36	HIS
+COX1	A	144	ASP	144	D	C	Cytochrome c oxidase subunit 3	1	32	ALA
+COX1	A	144	ASP	144	D	C	Cytochrome c oxidase subunit 3	1	36	HIS
+COX1	A	145	LEU	145	L	C	Cytochrome c oxidase subunit 3	1	32	ALA
+COX1	A	148	PHE	148	F	C	Cytochrome c oxidase subunit 3	1	28	THR
+COX1	A	148	PHE	148	F	C	Cytochrome c oxidase subunit 3	1	31	LEU
+COX1	A	148	PHE	148	F	C	Cytochrome c oxidase subunit 3	1	32	ALA
+COX1	A	152	LEU	152	L	C	Cytochrome c oxidase subunit 3	1	24	ALA
+COX1	A	152	LEU	152	L	C	Cytochrome c oxidase subunit 3	1	28	THR
+COX1	A	158	ILE	158	I	C	Cytochrome c oxidase subunit 3	1	89	SER
+COX1	A	162	ILE	162	I	C	Cytochrome c oxidase subunit 3	1	82	GLY
+COX1	A	162	ILE	162	I	C	Cytochrome c oxidase subunit 3	1	85	LEU
+COX1	A	162	ILE	162	I	C	Cytochrome c oxidase subunit 3	1	86	PHE
+COX1	A	165	ILE	165	I	C	Cytochrome c oxidase subunit 3	1	85	LEU
+COX1	A	166	THR	166	T	C	Cytochrome c oxidase subunit 3	1	78	GLY
+COX1	A	166	THR	166	T	C	Cytochrome c oxidase subunit 3	1	81	TYR
+COX1	A	166	THR	166	T	C	Cytochrome c oxidase subunit 3	1	82	GLY
+COX1	A	166	THR	166	T	C	Cytochrome c oxidase subunit 3	1	85	LEU
+COX1	A	169	ILE	169	I	C	Cytochrome c oxidase subunit 3	1	81	TYR
+COX1	A	170	ASN	170	N	C	Cytochrome c oxidase subunit 3	1	8	TYR
+COX1	A	170	ASN	170	N	C	Cytochrome c oxidase subunit 3	1	77	LYS
+COX1	A	170	ASN	170	N	C	Cytochrome c oxidase subunit 3	1	78	GLY
+COX1	A	170	ASN	170	N	C	Cytochrome c oxidase subunit 3	1	81	TYR
+COX1	A	171	MET	171	M	C	Cytochrome c oxidase subunit 3	1	8	TYR
+COX1	A	174	PRO	174	P	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	64	VAL
+COX1	A	174	PRO	174	P	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	65	LEU
+COX1	A	174	PRO	174	P	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	66	ALA
+COX1	A	175	ALA	175	A	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	66	ALA
+COX1	A	179	TYR	179	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	98	THR
+COX1	A	180	GLN	180	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	92	ILE
+COX1	A	180	GLN	180	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	97	ASN
+COX1	A	180	GLN	180	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	98	THR
+COX1	A	180	GLN	180	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	100	VAL
+COX1	A	196	LEU	196	L	C	Cytochrome c oxidase subunit 3	1	85	LEU
+COX1	A	196	LEU	196	L	C	Cytochrome c oxidase subunit 3	1	88	THR
+COX1	A	196	LEU	196	L	C	Cytochrome c oxidase subunit 3	1	89	SER
+COX1	A	197	LEU	197	L	C	Cytochrome c oxidase subunit 3	1	92	PHE
+COX1	A	200	PRO	200	P	C	Cytochrome c oxidase subunit 3	1	89	SER
+COX1	A	200	PRO	200	P	C	Cytochrome c oxidase subunit 3	1	92	PHE
+COX1	A	200	PRO	200	P	C	Cytochrome c oxidase subunit 3	1	93	PHE
+COX1	A	201	VAL	201	V	C	Cytochrome c oxidase subunit 3	1	92	PHE
+COX1	A	203	ALA	203	A	C	Cytochrome c oxidase subunit 3	1	93	PHE
+COX1	A	204	ALA	204	A	C	Cytochrome c oxidase subunit 3	1	93	PHE
+COX1	A	204	ALA	204	A	C	Cytochrome c oxidase subunit 3	1	96	GLY
+COX1	A	204	ALA	204	A	C	Cytochrome c oxidase subunit 3	1	97	PHE
+COX1	A	207	THR	207	T	C	Cytochrome c oxidase subunit 3	1	203	PHE
+COX1	A	208	MET	208	M	C	Cytochrome c oxidase subunit 3	1	96	GLY
+COX1	A	208	MET	208	M	C	Cytochrome c oxidase subunit 3	1	97	PHE
+COX1	A	208	MET	208	M	C	Cytochrome c oxidase subunit 3	1	100	ALA
+COX1	A	213	ARG	213	R	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	82	LYS
+COX1	A	214	ASN	214	N	C	Cytochrome c oxidase subunit 3	1	35	PHE
+COX1	A	214	ASN	214	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	82	LYS
+COX1	A	215	LEU	215	L	C	Cytochrome c oxidase subunit 3	1	35	PHE
+COX1	A	215	LEU	215	L	C	Cytochrome c oxidase subunit 3	1	188	ILE
+COX1	A	215	LEU	215	L	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	84	PHE
+COX1	A	216	ASN	216	N	C	Cytochrome c oxidase subunit 3	1	188	ILE
+COX1	A	216	ASN	216	N	C	Cytochrome c oxidase subunit 3	1	189	SER
+COX1	A	216	ASN	216	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	79	ILE
+COX1	A	216	ASN	216	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	80	ARG
+COX1	A	216	ASN	216	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	81	THR
+COX1	A	216	ASN	216	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	82	LYS
+COX1	A	216	ASN	216	N	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	84	PHE
+COX1	A	217	THR	217	T	C	Cytochrome c oxidase subunit 3	1	188	ILE
+COX1	A	217	THR	217	T	C	Cytochrome c oxidase subunit 3	1	195	SER
+COX1	A	218	THR	218	T	C	Cytochrome c oxidase subunit 3	1	191	GLY
+COX1	A	218	THR	218	T	C	Cytochrome c oxidase subunit 3	1	192	ILE
+COX1	A	218	THR	218	T	C	Cytochrome c oxidase subunit 3	1	195	SER
+COX1	A	218	THR	218	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	79	ILE
+COX1	A	219	PHE	219	F	C	Cytochrome c oxidase subunit 3	1	100	ALA
+COX1	A	219	PHE	219	F	C	Cytochrome c oxidase subunit 3	1	192	ILE
+COX1	A	219	PHE	219	F	C	Cytochrome c oxidase subunit 3	1	195	SER
+COX1	A	219	PHE	219	F	C	Cytochrome c oxidase subunit 3	1	196	THR
+COX1	A	219	PHE	219	F	C	Cytochrome c oxidase subunit 3	1	199	VAL
+COX1	A	222	PRO	222	P	B	Cytochrome c oxidase subunit 2	1	176	PRO
+COX1	A	222	PRO	222	P	C	Cytochrome c oxidase subunit 3	1	111	GLN
+COX1	A	223	ALA	223	A	C	Cytochrome c oxidase subunit 3	1	111	GLN
+COX1	A	223	ALA	223	A	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	76	HIS
+COX1	A	224	GLY	224	G	C	Cytochrome c oxidase subunit 3	1	112	LEU
+COX1	A	224	GLY	224	G	C	Cytochrome c oxidase subunit 3	1	191	GLY
+COX1	A	224	GLY	224	G	C	Cytochrome c oxidase subunit 3	1	192	ILE
+COX1	A	224	GLY	224	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	76	HIS
+COX1	A	224	GLY	224	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	79	ILE
+COX1	A	225	GLY	225	G	C	Cytochrome c oxidase subunit 3	1	109	THR
+COX1	A	225	GLY	225	G	C	Cytochrome c oxidase subunit 3	1	111	GLN
+COX1	A	225	GLY	225	G	C	Cytochrome c oxidase subunit 3	1	112	LEU
+COX1	A	225	GLY	225	G	C	Cytochrome c oxidase subunit 3	1	192	ILE
+COX1	A	226	GLY	226	G	C	Cytochrome c oxidase subunit 3	1	192	ILE
+COX1	A	227	ASP	227	D	C	Cytochrome c oxidase subunit 3	1	103	HIS
+COX1	A	228	PRO	228	P	B	Cytochrome c oxidase subunit 2	1	175	ILE
+COX1	A	228	PRO	228	P	B	Cytochrome c oxidase subunit 2	1	176	PRO
+COX1	A	229	ILE	229	I	B	Cytochrome c oxidase subunit 2	1	175	ILE
+COX1	A	230	LEU	230	L	C	Cytochrome c oxidase subunit 3	1	99	TRP
+COX1	A	230	LEU	230	L	C	Cytochrome c oxidase subunit 3	1	100	ALA
+COX1	A	230	LEU	230	L	C	Cytochrome c oxidase subunit 3	1	103	HIS
+COX1	A	232	GLN	232	Q	B	Cytochrome c oxidase subunit 2	1	160	LEU
+COX1	A	233	HIS	233	H	C	Cytochrome c oxidase subunit 3	1	99	TRP
+COX1	A	233	HIS	233	H	C	Cytochrome c oxidase subunit 3	1	103	HIS
+COX1	A	234	LEU	234	L	C	Cytochrome c oxidase subunit 3	1	96	GLY
+COX1	A	234	LEU	234	L	C	Cytochrome c oxidase subunit 3	1	99	TRP
+COX1	A	263	GLY	263	G	B	Cytochrome c oxidase subunit 2	1	53	THR
+COX1	A	263	GLY	263	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	41	ARG
+COX1	A	263	GLY	263	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	43	ASP
+COX1	A	264	LYS	264	K	B	Cytochrome c oxidase subunit 2	1	52	ASN
+COX1	A	264	LYS	264	K	B	Cytochrome c oxidase subunit 2	1	53	THR
+COX1	A	266	GLU	266	E	B	Cytochrome c oxidase subunit 2	1	55	ILE
+COX1	A	266	GLU	266	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	98	THR
+COX1	A	266	GLU	266	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	99	SER
+COX1	A	268	PHE	268	F	B	Cytochrome c oxidase subunit 2	1	55	ILE
+COX1	A	268	PHE	268	F	B	Cytochrome c oxidase subunit 2	1	56	SER
+COX1	A	268	PHE	268	F	B	Cytochrome c oxidase subunit 2	1	57	ASP
+COX1	A	268	PHE	268	F	B	Cytochrome c oxidase subunit 2	1	62	GLU
+COX1	A	268	PHE	268	F	B	Cytochrome c oxidase subunit 2	1	65	TRP
+COX1	A	269	GLY	269	G	B	Cytochrome c oxidase subunit 2	1	57	ASP
+COX1	A	270	TYR	270	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	98	THR
+COX1	A	271	MET	271	M	N	Cytochrome c oxidase subunit NDUFA4	0	8	GLN
+COX1	A	271	MET	271	M	N	Cytochrome c oxidase subunit NDUFA4	0	12	HIS
+COX1	A	271	MET	271	M	N	Cytochrome c oxidase subunit NDUFA4	0	15	LEU
+COX1	A	272	GLY	272	G	N	Cytochrome c oxidase subunit NDUFA4	0	15	LEU
+COX1	A	275	TRP	275	W	N	Cytochrome c oxidase subunit NDUFA4	0	5	ILE
+COX1	A	275	TRP	275	W	N	Cytochrome c oxidase subunit NDUFA4	0	15	LEU
+COX1	A	275	TRP	275	W	N	Cytochrome c oxidase subunit NDUFA4	0	18	LEU
+COX1	A	275	TRP	275	W	N	Cytochrome c oxidase subunit NDUFA4	0	19	PHE
+COX1	A	279	SER	279	S	N	Cytochrome c oxidase subunit NDUFA4	0	22	ILE
+COX1	A	282	PHE	282	F	N	Cytochrome c oxidase subunit NDUFA4	0	22	ILE
+COX1	A	282	PHE	282	F	N	Cytochrome c oxidase subunit NDUFA4	0	26	ALA
+COX1	A	283	LEU	283	L	N	Cytochrome c oxidase subunit NDUFA4	0	21	PHE
+COX1	A	286	ILE	286	I	N	Cytochrome c oxidase subunit NDUFA4	0	25	GLY
+COX1	A	288	TRP	288	W	C	Cytochrome c oxidase subunit 3	1	99	TRP
+COX1	A	294	THR	294	T	B	Cytochrome c oxidase subunit 2	1	171	LYS
+COX1	A	294	THR	294	T	B	Cytochrome c oxidase subunit 2	1	172	THR
+COX1	A	294	THR	294	T	B	Cytochrome c oxidase subunit 2	1	173	ASP
+COX1	A	295	VAL	295	V	B	Cytochrome c oxidase subunit 2	1	173	ASP
+COX1	A	295	VAL	295	V	B	Cytochrome c oxidase subunit 2	1	175	ILE
+COX1	A	295	VAL	295	V	B	Cytochrome c oxidase subunit 2	1	178	ARG
+COX1	A	295	VAL	295	V	B	Cytochrome c oxidase subunit 2	1	180	ASN
+COX1	A	296	GLY	296	G	B	Cytochrome c oxidase subunit 2	1	178	ARG
+COX1	A	296	GLY	296	G	B	Cytochrome c oxidase subunit 2	1	180	ASN
+COX1	A	296	GLY	296	G	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX1	A	296	GLY	296	G	H	Cytochrome c oxidase subunit 6B1	0	25	ASN
+COX1	A	297	MET	297	M	B	Cytochrome c oxidase subunit 2	1	178	ARG
+COX1	A	297	MET	297	M	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX1	A	298	ASP	298	D	H	Cytochrome c oxidase subunit 6B1	0	23	ASN
+COX1	A	299	VAL	299	V	B	Cytochrome c oxidase subunit 2	1	84	LEU
+COX1	A	299	VAL	299	V	B	Cytochrome c oxidase subunit 2	1	85	TYR
+COX1	A	299	VAL	299	V	B	Cytochrome c oxidase subunit 2	1	88	ASP
+COX1	A	299	VAL	299	V	H	Cytochrome c oxidase subunit 6B1	0	23	ASN
+COX1	A	300	ASP	300	D	B	Cytochrome c oxidase subunit 2	1	85	TYR
+COX1	A	300	ASP	300	D	N	Cytochrome c oxidase subunit NDUFA4	0	32	TYR
+COX1	A	301	THR	301	T	N	Cytochrome c oxidase subunit NDUFA4	0	32	TYR
+COX1	A	301	THR	301	T	N	Cytochrome c oxidase subunit NDUFA4	0	36	LEU
+COX1	A	302	ARG	302	R	B	Cytochrome c oxidase subunit 2	1	84	LEU
+COX1	A	302	ARG	302	R	B	Cytochrome c oxidase subunit 2	1	88	ASP
+COX1	A	302	ARG	302	R	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX1	A	303	ALA	303	A	B	Cytochrome c oxidase subunit 2	1	81	LEU
+COX1	A	303	ALA	303	A	B	Cytochrome c oxidase subunit 2	1	84	LEU
+COX1	A	303	ALA	303	A	B	Cytochrome c oxidase subunit 2	1	85	TYR
+COX1	A	304	TYR	304	Y	N	Cytochrome c oxidase subunit NDUFA4	0	25	GLY
+COX1	A	304	TYR	304	Y	N	Cytochrome c oxidase subunit NDUFA4	0	28	GLY
+COX1	A	304	TYR	304	Y	N	Cytochrome c oxidase subunit NDUFA4	0	29	ALA
+COX1	A	304	TYR	304	Y	N	Cytochrome c oxidase subunit NDUFA4	0	32	TYR
+COX1	A	306	THR	306	T	B	Cytochrome c oxidase subunit 2	1	81	LEU
+COX1	A	310	MET	310	M	B	Cytochrome c oxidase subunit 2	1	73	LEU
+COX1	A	311	ILE	311	I	N	Cytochrome c oxidase subunit NDUFA4	0	21	PHE
+COX1	A	311	ILE	311	I	N	Cytochrome c oxidase subunit NDUFA4	0	25	GLY
+COX1	A	313	ALA	313	A	B	Cytochrome c oxidase subunit 2	1	73	LEU
+COX1	A	314	ILE	314	I	B	Cytochrome c oxidase subunit 2	1	66	THR
+COX1	A	314	ILE	314	I	B	Cytochrome c oxidase subunit 2	1	69	PRO
+COX1	A	314	ILE	314	I	B	Cytochrome c oxidase subunit 2	1	70	ALA
+COX1	A	314	ILE	314	I	B	Cytochrome c oxidase subunit 2	1	73	LEU
+COX1	A	318	VAL	318	V	B	Cytochrome c oxidase subunit 2	1	62	GLU
+COX1	A	318	VAL	318	V	B	Cytochrome c oxidase subunit 2	1	65	TRP
+COX1	A	318	VAL	318	V	B	Cytochrome c oxidase subunit 2	1	66	THR
+COX1	A	318	VAL	318	V	N	Cytochrome c oxidase subunit NDUFA4	0	18	LEU
+COX1	A	321	PHE	321	F	B	Cytochrome c oxidase subunit 2	1	65	TRP
+COX1	A	321	PHE	321	F	B	Cytochrome c oxidase subunit 2	1	69	PRO
+COX1	A	324	LEU	324	L	B	Cytochrome c oxidase subunit 2	1	41	ALA
+COX1	A	324	LEU	324	L	B	Cytochrome c oxidase subunit 2	1	45	THR
+COX1	A	325	ALA	325	A	B	Cytochrome c oxidase subunit 2	1	65	TRP
+COX1	A	327	LEU	327	L	B	Cytochrome c oxidase subunit 2	1	45	THR
+COX1	A	328	HIS	328	H	B	Cytochrome c oxidase subunit 2	1	45	THR
+COX1	A	328	HIS	328	H	I	Cytochrome c oxidase subunit 6C	0	15	LEU
+COX1	A	328	HIS	328	H	I	Cytochrome c oxidase subunit 6C	0	19	LEU
+COX1	A	329	GLY	329	G	B	Cytochrome c oxidase subunit 2	1	51	THR
+COX1	A	329	GLY	329	G	B	Cytochrome c oxidase subunit 2	1	52	ASN
+COX1	A	329	GLY	329	G	B	Cytochrome c oxidase subunit 2	1	53	THR
+COX1	A	329	GLY	329	G	I	Cytochrome c oxidase subunit 6C	0	15	LEU
+COX1	A	330	SER	330	S	B	Cytochrome c oxidase subunit 2	1	45	THR
+COX1	A	330	SER	330	S	B	Cytochrome c oxidase subunit 2	1	46	LEU
+COX1	A	331	ASN	331	N	B	Cytochrome c oxidase subunit 2	1	51	THR
+COX1	A	331	ASN	331	N	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	42	ARG
+COX1	A	331	ASN	331	N	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	43	ASP
+COX1	A	332	MET	332	M	B	Cytochrome c oxidase subunit 2	1	46	LEU
+COX1	A	333	LYS	333	K	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	26	ILE
+COX1	A	334	TRP	334	W	B	Cytochrome c oxidase subunit 2	1	46	LEU
+COX1	A	342	LEU	342	L	B	Cytochrome c oxidase subunit 2	1	42	LEU
+COX1	A	342	LEU	342	L	B	Cytochrome c oxidase subunit 2	1	46	LEU
+COX1	A	345	ILE	345	I	B	Cytochrome c oxidase subunit 2	1	38	VAL
+COX1	A	345	ILE	345	I	B	Cytochrome c oxidase subunit 2	1	42	LEU
+COX1	A	346	PHE	346	F	B	Cytochrome c oxidase subunit 2	1	35	CYS
+COX1	A	346	PHE	346	F	B	Cytochrome c oxidase subunit 2	1	39	LEU
+COX1	A	349	THR	349	T	B	Cytochrome c oxidase subunit 2	1	35	CYS
+COX1	A	349	THR	349	T	B	Cytochrome c oxidase subunit 2	1	38	VAL
+COX1	A	350	VAL	350	V	B	Cytochrome c oxidase subunit 2	1	35	CYS
+COX1	A	353	LEU	353	L	B	Cytochrome c oxidase subunit 2	1	31	ILE
+COX1	A	353	LEU	353	L	B	Cytochrome c oxidase subunit 2	1	34	ILE
+COX1	A	353	LEU	353	L	B	Cytochrome c oxidase subunit 2	1	35	CYS
+COX1	A	356	ILE	356	I	B	Cytochrome c oxidase subunit 2	1	73	LEU
+COX1	A	356	ILE	356	I	B	Cytochrome c oxidase subunit 2	1	76	ILE
+COX1	A	357	VAL	357	V	B	Cytochrome c oxidase subunit 2	1	31	ILE
+COX1	A	360	ASN	360	N	B	Cytochrome c oxidase subunit 2	1	23	PHE
+COX1	A	360	ASN	360	N	B	Cytochrome c oxidase subunit 2	1	76	ILE
+COX1	A	360	ASN	360	N	B	Cytochrome c oxidase subunit 2	1	80	SER
+COX1	A	361	SER	361	S	B	Cytochrome c oxidase subunit 2	1	80	SER
+COX1	A	361	SER	361	S	B	Cytochrome c oxidase subunit 2	1	84	LEU
+COX1	A	362	SER	362	S	B	Cytochrome c oxidase subunit 2	1	20	LEU
+COX1	A	362	SER	362	S	B	Cytochrome c oxidase subunit 2	1	80	SER
+COX1	A	362	SER	362	S	B	Cytochrome c oxidase subunit 2	1	83	ILE
+COX1	A	362	SER	362	S	B	Cytochrome c oxidase subunit 2	1	84	LEU
+COX1	A	363	LEU	363	L	B	Cytochrome c oxidase subunit 2	1	20	LEU
+COX1	A	363	LEU	363	L	B	Cytochrome c oxidase subunit 2	1	23	PHE
+COX1	A	365	ILE	365	I	B	Cytochrome c oxidase subunit 2	1	169	GLY
+COX1	A	365	ILE	365	I	B	Cytochrome c oxidase subunit 2	1	170	LEU
+COX1	A	365	ILE	365	I	B	Cytochrome c oxidase subunit 2	1	171	LYS
+COX1	A	366	VAL	366	V	B	Cytochrome c oxidase subunit 2	1	9	LEU
+COX1	A	366	VAL	366	V	B	Cytochrome c oxidase subunit 2	1	166	PRO
+COX1	A	366	VAL	366	V	B	Cytochrome c oxidase subunit 2	1	171	LYS
+COX1	A	367	LEU	367	L	B	Cytochrome c oxidase subunit 2	1	171	LYS
+COX1	A	368	HIS	368	H	B	Cytochrome c oxidase subunit 2	1	171	LYS
+COX1	A	369	ASP	369	D	B	Cytochrome c oxidase subunit 2	1	197	SER
+COX1	A	369	ASP	369	D	B	Cytochrome c oxidase subunit 2	1	198	GLU
+COX1	A	370	THR	370	T	B	Cytochrome c oxidase subunit 2	1	171	LYS
+COX1	A	400	PHE	400	F	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	26	ASN
+COX1	A	401	SER	401	S	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	23	PRO
+COX1	A	401	SER	401	S	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	24	GLY
+COX1	A	402	GLY	402	G	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	23	PRO
+COX1	A	403	TYR	403	Y	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	23	PRO
+COX1	A	403	TYR	403	Y	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	24	GLY
+COX1	A	403	TYR	403	Y	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	31	VAL
+COX1	A	404	THR	404	T	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	28	SER
+COX1	A	407	GLN	407	Q	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	99	GLU
+COX1	A	408	THR	408	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	99	GLU
+COX1	A	408	THR	408	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	102	THR
+COX1	A	408	THR	408	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	103	VAL
+COX1	A	408	THR	408	T	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	34	HIS
+COX1	A	409	TYR	409	Y	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	40	LEU
+COX1	A	411	LYS	411	K	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	99	GLU
+COX1	A	411	LYS	411	K	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	103	VAL
+COX1	A	412	ILE	412	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	103	VAL
+COX1	A	412	ILE	412	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	106	GLY
+COX1	A	412	ILE	412	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	107	ALA
+COX1	A	415	THR	415	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	103	VAL
+COX1	A	415	THR	415	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	107	ALA
+COX1	A	416	ILE	416	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	106	GLY
+COX1	A	416	ILE	416	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	107	ALA
+COX1	A	416	ILE	416	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	110	PHE
+COX1	A	419	ILE	419	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	111	ILE
+COX1	A	430	PHE	430	F	B	Cytochrome c oxidase subunit 2	1	6	GLN
+COX1	A	430	PHE	430	F	B	Cytochrome c oxidase subunit 2	1	7	VAL
+COX1	A	433	LEU	433	L	B	Cytochrome c oxidase subunit 2	1	7	VAL
+COX1	A	433	LEU	433	L	B	Cytochrome c oxidase subunit 2	1	8	GLY
+COX1	A	433	LEU	433	L	B	Cytochrome c oxidase subunit 2	1	9	LEU
+COX1	A	433	LEU	433	L	B	Cytochrome c oxidase subunit 2	1	10	GLN
+COX1	A	433	LEU	433	L	B	Cytochrome c oxidase subunit 2	1	24	HIS
+COX1	A	434	SER	434	S	B	Cytochrome c oxidase subunit 2	1	2	ALA
+COX1	A	434	SER	434	S	B	Cytochrome c oxidase subunit 2	1	6	GLN
+COX1	A	434	SER	434	S	B	Cytochrome c oxidase subunit 2	1	8	GLY
+COX1	A	434	SER	434	S	B	Cytochrome c oxidase subunit 2	1	10	GLN
+COX1	A	437	PRO	437	P	B	Cytochrome c oxidase subunit 2	1	195	GLN
+COX1	A	437	PRO	437	P	B	Cytochrome c oxidase subunit 2	1	196	CYS
+COX1	A	437	PRO	437	P	B	Cytochrome c oxidase subunit 2	1	197	SER
+COX1	A	438	ARG	438	R	B	Cytochrome c oxidase subunit 2	1	204	HIS
+COX1	A	439	ARG	439	R	B	Cytochrome c oxidase subunit 2	1	198	GLU
+COX1	A	439	ARG	439	R	B	Cytochrome c oxidase subunit 2	1	199	ILE
+COX1	A	439	ARG	439	R	B	Cytochrome c oxidase subunit 2	1	204	HIS
+COX1	A	440	TYR	440	Y	B	Cytochrome c oxidase subunit 2	1	195	GLN
+COX1	A	440	TYR	440	Y	B	Cytochrome c oxidase subunit 2	1	196	CYS
+COX1	A	440	TYR	440	Y	B	Cytochrome c oxidase subunit 2	1	204	HIS
+COX1	A	440	TYR	440	Y	B	Cytochrome c oxidase subunit 2	1	205	SER
+COX1	A	441	SER	441	S	B	Cytochrome c oxidase subunit 2	1	205	SER
+COX1	A	442	ASP	442	D	B	Cytochrome c oxidase subunit 2	1	134	ARG
+COX1	A	442	ASP	442	D	B	Cytochrome c oxidase subunit 2	1	135	LEU
+COX1	A	442	ASP	442	D	B	Cytochrome c oxidase subunit 2	1	205	SER
+COX1	A	443	TYR	443	Y	B	Cytochrome c oxidase subunit 2	1	134	ARG
+COX1	A	443	TYR	443	Y	B	Cytochrome c oxidase subunit 2	1	135	LEU
+COX1	A	444	PRO	444	P	B	Cytochrome c oxidase subunit 2	1	135	LEU
+COX1	A	444	PRO	444	P	B	Cytochrome c oxidase subunit 2	1	136	LEU
+COX1	A	444	PRO	444	P	B	Cytochrome c oxidase subunit 2	1	195	GLN
+COX1	A	445	ASP	445	D	B	Cytochrome c oxidase subunit 2	1	134	ARG
+COX1	A	445	ASP	445	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	132	SER
+COX1	A	445	ASP	445	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	133	PHE
+COX1	A	445	ASP	445	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	141	GLN
+COX1	A	445	ASP	445	D	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	65	ASN
+COX1	A	446	ALA	446	A	B	Cytochrome c oxidase subunit 2	1	2	ALA
+COX1	A	446	ALA	446	A	B	Cytochrome c oxidase subunit 2	1	3	HIS
+COX1	A	446	ALA	446	A	B	Cytochrome c oxidase subunit 2	1	4	ALA
+COX1	A	446	ALA	446	A	B	Cytochrome c oxidase subunit 2	1	5	ALA
+COX1	A	447	TYR	447	Y	B	Cytochrome c oxidase subunit 2	1	2	ALA
+COX1	A	448	THR	448	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	133	PHE
+COX1	A	448	THR	448	T	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	64	TRP
+COX1	A	448	THR	448	T	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	65	ASN
+COX1	A	449	THR	449	T	B	Cytochrome c oxidase subunit 2	1	5	ALA
+COX1	A	449	THR	449	T	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	64	TRP
+COX1	A	449	THR	449	T	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	65	ASN
+COX1	A	450	TRP	450	W	B	Cytochrome c oxidase subunit 2	1	5	ALA
+COX1	A	450	TRP	450	W	B	Cytochrome c oxidase subunit 2	1	6	GLN
+COX1	A	452	ILE	452	I	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	63	GLU
+COX1	A	452	ILE	452	I	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	64	TRP
+COX1	A	453	LEU	453	L	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	64	TRP
+COX1	A	456	VAL	456	V	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	118	ILE
+COX1	A	456	VAL	456	V	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	53	TRP
+COX1	A	459	PHE	459	F	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	114	THR
+COX1	A	459	PHE	459	F	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	118	ILE
+COX1	A	459	PHE	459	F	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	121	GLN
+COX1	A	460	ILE	460	I	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	114	THR
+COX1	A	462	LEU	462	L	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	49	PHE
+COX1	A	463	THR	463	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	110	PHE
+COX1	A	463	THR	463	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	114	THR
+COX1	A	463	THR	463	T	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	48	PHE
+COX1	A	466	MET	466	M	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	47	CYS
+COX1	A	466	MET	466	M	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	48	PHE
+COX1	A	466	MET	466	M	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	51	PHE
+COX1	A	467	LEU	467	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	110	PHE
+COX1	A	469	ILE	469	I	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	41	MET
+COX1	A	469	ILE	469	I	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	45	PHE
+COX1	A	469	ILE	469	I	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	47	CYS
+COX1	A	469	ILE	469	I	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	51	PHE
+COX1	A	470	PHE	470	F	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	40	LEU
+COX1	A	470	PHE	470	F	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	43	GLY
+COX1	A	470	PHE	470	F	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	44	LEU
+COX1	A	470	PHE	470	F	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	47	CYS
+COX1	A	472	ILE	472	I	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	41	MET
+COX1	A	473	TRP	473	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	34	LYS
+COX1	A	473	TRP	473	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	37	LEU
+COX1	A	473	TRP	473	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	38	LEU
+COX1	A	473	TRP	473	W	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	41	MET
+COX1	A	473	TRP	473	W	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	39	GLU
+COX1	A	473	TRP	473	W	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	40	LEU
+COX1	A	473	TRP	473	W	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	43	GLY
+COX1	A	474	GLU	474	E	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	35	LEU
+COX1	A	474	GLU	474	E	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	40	LEU
+COX1	A	476	PHE	476	F	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	31	VAL
+COX1	A	476	PHE	476	F	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	37	LEU
+COX1	A	477	ALA	477	A	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	34	LYS
+COX1	A	478	SER	478	S	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	31	PRO
+COX1	A	478	SER	478	S	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	32	GLU
+COX1	A	478	SER	478	S	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	33	GLY
+COX1	A	478	SER	478	S	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	35	LEU
+COX1	A	479	LYS	479	K	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	23	PRO
+COX1	A	479	LYS	479	K	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	32	GLU
+COX1	A	479	LYS	479	K	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	32	GLU
+COX1	A	480	ARG	480	R	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	28	SER
+COX1	A	480	ARG	480	R	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	29	LEU
+COX1	A	481	LYS	481	K	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	23	PRO
+COX1	A	481	LYS	481	K	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	28	SER
+COX1	A	481	LYS	481	K	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	29	LEU
+COX1	A	481	LYS	481	K	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	32	GLU
+COX1	A	482	VAL	482	V	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	30	SER
+COX1	A	482	VAL	482	V	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	26	ILE
+COX1	A	482	VAL	482	V	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	27	HIS
+COX1	A	483	LEU	483	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	28	VAL
+COX1	A	483	LEU	483	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	30	SER
+COX1	A	483	LEU	483	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	27	HIS
+COX1	A	483	LEU	483	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	28	SER
+COX1	A	483	LEU	483	L	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	29	LEU
+COX1	A	484	MET	484	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	28	VAL
+COX1	A	484	MET	484	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	32	ASP
+COX1	A	484	MET	484	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	33	PHE
+COX1	A	484	MET	484	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	35	LEU
+COX1	A	484	MET	484	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	37	ALA
+COX1	A	484	MET	484	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	39	MET
+COX1	A	484	MET	484	M	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	26	ILE
+COX1	A	484	MET	484	M	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	27	HIS
+COX1	A	486	GLU	486	E	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	39	MET
+COX1	A	486	GLU	486	E	M	Cytochrome c oxidase subunit 8A, mitochondrial	0	26	ILE
+COX1	A	487	GLU	487	E	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	41	ARG
+COX1	A	487	GLU	487	E	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	44	HIS
+COX1	A	489	SER	489	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	100	VAL
+COX1	A	489	SER	489	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	101	VAL
+COX1	A	489	SER	489	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	102	TRP
+COX1	A	490	MET	490	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	99	SER
+COX1	A	490	MET	490	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	100	VAL
+COX1	A	490	MET	490	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	101	VAL
+COX1	A	490	MET	490	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	102	TRP
+COX1	A	490	MET	490	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	115	ARG
+COX1	A	492	LEU	492	L	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	102	TRP
+COX1	A	495	LEU	495	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	33	PHE
+COX1	A	495	LEU	495	L	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	88	ILE
+COX1	A	495	LEU	495	L	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	102	TRP
+COX1	A	495	LEU	495	L	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	103	PHE
+COX1	A	495	LEU	495	L	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	104	TRP
+COX1	A	496	TYR	496	Y	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	33	PHE
+COX1	A	496	TYR	496	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	88	ILE
+COX1	A	496	TYR	496	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	104	TRP
+COX1	A	497	GLY	497	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	33	PHE
+COX1	A	499	PRO	499	P	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	22	GLY
+COX1	A	499	PRO	499	P	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	23	PRO
+COX1	A	499	PRO	499	P	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	26	ASN
+COX1	A	501	PRO	501	P	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	21	GLU
+COX1	A	502	TYR	502	Y	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	17	SER
+COX1	A	502	TYR	502	Y	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	19	TYR
+COX1	A	502	TYR	502	Y	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	21	GLU
+COX1	A	503	HIS	503	H	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	17	SER
+COX1	A	505	PHE	505	F	C	Cytochrome c oxidase subunit 3	1	6	HIS
+COX1	A	505	PHE	505	F	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	88	ILE
+COX1	A	506	GLU	506	E	C	Cytochrome c oxidase subunit 3	1	4	GLN
+COX1	A	506	GLU	506	E	C	Cytochrome c oxidase subunit 3	1	5	SER
+COX1	A	506	GLU	506	E	C	Cytochrome c oxidase subunit 3	1	6	HIS
+COX1	A	507	GLU	507	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	82	SER
+COX1	A	507	GLU	507	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	83	ILE
+COX1	A	507	GLU	507	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	84	SER
+COX1	A	507	GLU	507	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	86	LYS
+COX1	A	507	GLU	507	E	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	87	ARG
+COX1	A	508	PRO	508	P	C	Cytochrome c oxidase subunit 3	1	5	SER
+COX1	A	508	PRO	508	P	C	Cytochrome c oxidase subunit 3	1	6	HIS
+COX1	A	508	PRO	508	P	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	63	ASN
+COX1	A	508	PRO	508	P	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	87	ARG
+COX1	A	509	VAL	509	V	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	87	ARG
+COX1	A	509	VAL	509	V	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	88	ILE
+COX1	A	509	VAL	509	V	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	90	GLY
+COX1	A	509	VAL	509	V	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	102	TRP
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	67	PRO
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	68	LYS
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	69	GLY
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	79	LEU
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	80	VAL
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	87	ARG
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	88	ILE
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	89	VAL
+COX1	A	510	TYR	510	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	90	GLY
+COX1	A	511	MET	511	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	67	PRO
+COX1	A	511	MET	511	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	90	GLY
+COX1	A	511	MET	511	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	92	ILE
+COX1	A	511	MET	511	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	100	VAL
+COX1	A	511	MET	511	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	102	TRP
+COX1	A	512	LYS	512	K	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	67	PRO
+COX1	A	512	LYS	512	K	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	69	GLY
+COX1	A	512	LYS	512	K	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	70	ALA
+COX1	A	512	LYS	512	K	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	78	ASN
+COX1	A	513	SER	513	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	66	ALA
+COX1	A	513	SER	513	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	67	PRO
+COX1	A	513	SER	513	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	68	LYS
+COX2	B	1	MET	1	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	145	MET
+COX2	B	1	MET	1	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	148	MET
+COX2	B	1	MET	1	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	150	VAL
+COX2	B	1	MET	1	M	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	151	ASN
+COX2	B	2	ALA	2	A	A	Cytochrome c oxidase subunit 1	1	434	SER
+COX2	B	2	ALA	2	A	A	Cytochrome c oxidase subunit 1	1	446	ALA
+COX2	B	2	ALA	2	A	A	Cytochrome c oxidase subunit 1	1	447	TYR
+COX2	B	2	ALA	2	A	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	145	MET
+COX2	B	3	HIS	3	H	A	Cytochrome c oxidase subunit 1	1	446	ALA
+COX2	B	3	HIS	3	H	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	145	MET
+COX2	B	3	HIS	3	H	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	151	ASN
+COX2	B	3	HIS	3	H	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	155	GLY
+COX2	B	3	HIS	3	H	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	156	LEU
+COX2	B	4	ALA	4	A	A	Cytochrome c oxidase subunit 1	1	446	ALA
+COX2	B	4	ALA	4	A	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	65	ASN
+COX2	B	4	ALA	4	A	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	66	LEU
+COX2	B	4	ALA	4	A	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	67	SER
+COX2	B	5	ALA	5	A	A	Cytochrome c oxidase subunit 1	1	446	ALA
+COX2	B	5	ALA	5	A	A	Cytochrome c oxidase subunit 1	1	449	THR
+COX2	B	5	ALA	5	A	A	Cytochrome c oxidase subunit 1	1	450	TRP
+COX2	B	5	ALA	5	A	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	67	SER
+COX2	B	6	GLN	6	Q	A	Cytochrome c oxidase subunit 1	1	430	PHE
+COX2	B	6	GLN	6	Q	A	Cytochrome c oxidase subunit 1	1	434	SER
+COX2	B	6	GLN	6	Q	A	Cytochrome c oxidase subunit 1	1	450	TRP
+COX2	B	6	GLN	6	Q	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	151	ASN
+COX2	B	7	VAL	7	V	A	Cytochrome c oxidase subunit 1	1	430	PHE
+COX2	B	7	VAL	7	V	A	Cytochrome c oxidase subunit 1	1	433	LEU
+COX2	B	8	GLY	8	G	A	Cytochrome c oxidase subunit 1	1	433	LEU
+COX2	B	8	GLY	8	G	A	Cytochrome c oxidase subunit 1	1	434	SER
+COX2	B	9	LEU	9	L	A	Cytochrome c oxidase subunit 1	1	366	VAL
+COX2	B	9	LEU	9	L	A	Cytochrome c oxidase subunit 1	1	433	LEU
+COX2	B	10	GLN	10	Q	A	Cytochrome c oxidase subunit 1	1	433	LEU
+COX2	B	10	GLN	10	Q	A	Cytochrome c oxidase subunit 1	1	434	SER
+COX2	B	10	GLN	10	Q	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	151	ASN
+COX2	B	11	ASP	11	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	151	ASN
+COX2	B	11	ASP	11	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	152	PRO
+COX2	B	11	ASP	11	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	153	ILE
+COX2	B	11	ASP	11	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	154	GLN
+COX2	B	11	ASP	11	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	155	GLY
+COX2	B	11	ASP	11	D	I	Cytochrome c oxidase subunit 6C	0	49	TYR
+COX2	B	12	ALA	12	A	I	Cytochrome c oxidase subunit 6C	0	49	TYR
+COX2	B	12	ALA	12	A	I	Cytochrome c oxidase subunit 6C	0	53	TYR
+COX2	B	18	GLU	18	E	I	Cytochrome c oxidase subunit 6C	0	49	TYR
+COX2	B	20	LEU	20	L	A	Cytochrome c oxidase subunit 1	1	362	SER
+COX2	B	20	LEU	20	L	A	Cytochrome c oxidase subunit 1	1	363	LEU
+COX2	B	21	ILE	21	I	I	Cytochrome c oxidase subunit 6C	0	45	ARG
+COX2	B	21	ILE	21	I	I	Cytochrome c oxidase subunit 6C	0	49	TYR
+COX2	B	23	PHE	23	F	A	Cytochrome c oxidase subunit 1	1	360	ASN
+COX2	B	23	PHE	23	F	A	Cytochrome c oxidase subunit 1	1	363	LEU
+COX2	B	24	HIS	24	H	A	Cytochrome c oxidase subunit 1	1	433	LEU
+COX2	B	25	ASP	25	D	I	Cytochrome c oxidase subunit 6C	0	37	TYR
+COX2	B	25	ASP	25	D	I	Cytochrome c oxidase subunit 6C	0	45	ARG
+COX2	B	28	LEU	28	L	I	Cytochrome c oxidase subunit 6C	0	37	TYR
+COX2	B	29	MET	29	M	I	Cytochrome c oxidase subunit 6C	0	37	TYR
+COX2	B	31	ILE	31	I	A	Cytochrome c oxidase subunit 1	1	353	LEU
+COX2	B	31	ILE	31	I	A	Cytochrome c oxidase subunit 1	1	357	VAL
+COX2	B	33	LEU	33	L	I	Cytochrome c oxidase subunit 6C	0	34	ALA
+COX2	B	34	ILE	34	I	A	Cytochrome c oxidase subunit 1	1	353	LEU
+COX2	B	35	CYS	35	C	A	Cytochrome c oxidase subunit 1	1	346	PHE
+COX2	B	35	CYS	35	C	A	Cytochrome c oxidase subunit 1	1	349	THR
+COX2	B	35	CYS	35	C	A	Cytochrome c oxidase subunit 1	1	350	VAL
+COX2	B	35	CYS	35	C	A	Cytochrome c oxidase subunit 1	1	353	LEU
+COX2	B	36	PHE	36	F	I	Cytochrome c oxidase subunit 6C	0	29	LEU
+COX2	B	36	PHE	36	F	I	Cytochrome c oxidase subunit 6C	0	33	VAL
+COX2	B	37	LEU	37	L	I	Cytochrome c oxidase subunit 6C	0	26	ALA
+COX2	B	38	VAL	38	V	A	Cytochrome c oxidase subunit 1	1	345	ILE
+COX2	B	38	VAL	38	V	A	Cytochrome c oxidase subunit 1	1	349	THR
+COX2	B	39	LEU	39	L	A	Cytochrome c oxidase subunit 1	1	346	PHE
+COX2	B	40	TYR	40	Y	I	Cytochrome c oxidase subunit 6C	0	22	HIS
+COX2	B	40	TYR	40	Y	I	Cytochrome c oxidase subunit 6C	0	25	VAL
+COX2	B	40	TYR	40	Y	I	Cytochrome c oxidase subunit 6C	0	26	ALA
+COX2	B	41	ALA	41	A	A	Cytochrome c oxidase subunit 1	1	324	LEU
+COX2	B	42	LEU	42	L	A	Cytochrome c oxidase subunit 1	1	342	LEU
+COX2	B	42	LEU	42	L	A	Cytochrome c oxidase subunit 1	1	345	ILE
+COX2	B	44	LEU	44	L	I	Cytochrome c oxidase subunit 6C	0	18	ARG
+COX2	B	44	LEU	44	L	I	Cytochrome c oxidase subunit 6C	0	19	LEU
+COX2	B	44	LEU	44	L	I	Cytochrome c oxidase subunit 6C	0	22	HIS
+COX2	B	45	THR	45	T	A	Cytochrome c oxidase subunit 1	1	324	LEU
+COX2	B	45	THR	45	T	A	Cytochrome c oxidase subunit 1	1	327	LEU
+COX2	B	45	THR	45	T	A	Cytochrome c oxidase subunit 1	1	328	HIS
+COX2	B	45	THR	45	T	A	Cytochrome c oxidase subunit 1	1	330	SER
+COX2	B	46	LEU	46	L	A	Cytochrome c oxidase subunit 1	1	330	SER
+COX2	B	46	LEU	46	L	A	Cytochrome c oxidase subunit 1	1	332	MET
+COX2	B	46	LEU	46	L	A	Cytochrome c oxidase subunit 1	1	334	TRP
+COX2	B	46	LEU	46	L	A	Cytochrome c oxidase subunit 1	1	342	LEU
+COX2	B	47	THR	47	T	I	Cytochrome c oxidase subunit 6C	0	18	ARG
+COX2	B	48	THR	48	T	I	Cytochrome c oxidase subunit 6C	0	15	LEU
+COX2	B	48	THR	48	T	I	Cytochrome c oxidase subunit 6C	0	18	ARG
+COX2	B	49	LYS	49	K	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	42	ARG
+COX2	B	49	LYS	49	K	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	117	GLY
+COX2	B	50	LEU	50	L	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	115	LYS
+COX2	B	50	LEU	50	L	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	116	ALA
+COX2	B	50	LEU	50	L	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	117	GLY
+COX2	B	50	LEU	50	L	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	118	PRO
+COX2	B	50	LEU	50	L	I	Cytochrome c oxidase subunit 6C	0	14	LEU
+COX2	B	50	LEU	50	L	I	Cytochrome c oxidase subunit 6C	0	15	LEU
+COX2	B	51	THR	51	T	A	Cytochrome c oxidase subunit 1	1	329	GLY
+COX2	B	51	THR	51	T	A	Cytochrome c oxidase subunit 1	1	331	ASN
+COX2	B	51	THR	51	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	42	ARG
+COX2	B	51	THR	51	T	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	78	VAL
+COX2	B	51	THR	51	T	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	80	TYR
+COX2	B	51	THR	51	T	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	115	LYS
+COX2	B	52	ASN	52	N	A	Cytochrome c oxidase subunit 1	1	264	LYS
+COX2	B	52	ASN	52	N	A	Cytochrome c oxidase subunit 1	1	329	GLY
+COX2	B	52	ASN	52	N	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	79	THR
+COX2	B	52	ASN	52	N	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	80	TYR
+COX2	B	52	ASN	52	N	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	81	ASP
+COX2	B	52	ASN	52	N	I	Cytochrome c oxidase subunit 6C	0	15	LEU
+COX2	B	53	THR	53	T	A	Cytochrome c oxidase subunit 1	1	263	GLY
+COX2	B	53	THR	53	T	A	Cytochrome c oxidase subunit 1	1	264	LYS
+COX2	B	53	THR	53	T	A	Cytochrome c oxidase subunit 1	1	329	GLY
+COX2	B	53	THR	53	T	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	43	ASP
+COX2	B	53	THR	53	T	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	79	THR
+COX2	B	54	ASN	54	N	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	76	THR
+COX2	B	54	ASN	54	N	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	79	THR
+COX2	B	54	ASN	54	N	E	Cytochrome c oxidase subunit 5A, mitochondrial	0	80	TYR
+COX2	B	55	ILE	55	I	A	Cytochrome c oxidase subunit 1	1	266	GLU
+COX2	B	55	ILE	55	I	A	Cytochrome c oxidase subunit 1	1	268	PHE
+COX2	B	56	SER	56	S	A	Cytochrome c oxidase subunit 1	1	268	PHE
+COX2	B	57	ASP	57	D	A	Cytochrome c oxidase subunit 1	1	268	PHE
+COX2	B	57	ASP	57	D	A	Cytochrome c oxidase subunit 1	1	269	GLY
+COX2	B	59	GLN	59	Q	N	Cytochrome c oxidase subunit NDUFA4	0	11	LYS
+COX2	B	59	GLN	59	Q	N	Cytochrome c oxidase subunit NDUFA4	0	12	HIS
+COX2	B	59	GLN	59	Q	N	Cytochrome c oxidase subunit NDUFA4	0	13	PRO
+COX2	B	59	GLN	59	Q	N	Cytochrome c oxidase subunit NDUFA4	0	14	SER
+COX2	B	62	GLU	62	E	A	Cytochrome c oxidase subunit 1	1	268	PHE
+COX2	B	62	GLU	62	E	A	Cytochrome c oxidase subunit 1	1	318	VAL
+COX2	B	62	GLU	62	E	N	Cytochrome c oxidase subunit NDUFA4	0	14	SER
+COX2	B	63	THR	63	T	N	Cytochrome c oxidase subunit NDUFA4	0	14	SER
+COX2	B	63	THR	63	T	N	Cytochrome c oxidase subunit NDUFA4	0	17	PRO
+COX2	B	65	TRP	65	W	A	Cytochrome c oxidase subunit 1	1	268	PHE
+COX2	B	65	TRP	65	W	A	Cytochrome c oxidase subunit 1	1	318	VAL
+COX2	B	65	TRP	65	W	A	Cytochrome c oxidase subunit 1	1	321	PHE
+COX2	B	65	TRP	65	W	A	Cytochrome c oxidase subunit 1	1	325	ALA
+COX2	B	66	THR	66	T	A	Cytochrome c oxidase subunit 1	1	314	ILE
+COX2	B	66	THR	66	T	A	Cytochrome c oxidase subunit 1	1	318	VAL
+COX2	B	66	THR	66	T	N	Cytochrome c oxidase subunit NDUFA4	0	14	SER
+COX2	B	66	THR	66	T	N	Cytochrome c oxidase subunit NDUFA4	0	17	PRO
+COX2	B	66	THR	66	T	N	Cytochrome c oxidase subunit NDUFA4	0	18	LEU
+COX2	B	66	THR	66	T	N	Cytochrome c oxidase subunit NDUFA4	0	21	PHE
+COX2	B	67	ILE	67	I	N	Cytochrome c oxidase subunit NDUFA4	0	17	PRO
+COX2	B	69	PRO	69	P	A	Cytochrome c oxidase subunit 1	1	314	ILE
+COX2	B	69	PRO	69	P	A	Cytochrome c oxidase subunit 1	1	321	PHE
+COX2	B	70	ALA	70	A	A	Cytochrome c oxidase subunit 1	1	314	ILE
+COX2	B	70	ALA	70	A	N	Cytochrome c oxidase subunit NDUFA4	0	21	PHE
+COX2	B	73	LEU	73	L	A	Cytochrome c oxidase subunit 1	1	310	MET
+COX2	B	73	LEU	73	L	A	Cytochrome c oxidase subunit 1	1	313	ALA
+COX2	B	73	LEU	73	L	A	Cytochrome c oxidase subunit 1	1	314	ILE
+COX2	B	73	LEU	73	L	A	Cytochrome c oxidase subunit 1	1	356	ILE
+COX2	B	76	ILE	76	I	A	Cytochrome c oxidase subunit 1	1	356	ILE
+COX2	B	76	ILE	76	I	A	Cytochrome c oxidase subunit 1	1	360	ASN
+COX2	B	80	SER	80	S	A	Cytochrome c oxidase subunit 1	1	360	ASN
+COX2	B	80	SER	80	S	A	Cytochrome c oxidase subunit 1	1	361	SER
+COX2	B	80	SER	80	S	A	Cytochrome c oxidase subunit 1	1	362	SER
+COX2	B	81	LEU	81	L	A	Cytochrome c oxidase subunit 1	1	303	ALA
+COX2	B	81	LEU	81	L	A	Cytochrome c oxidase subunit 1	1	306	THR
+COX2	B	83	ILE	83	I	A	Cytochrome c oxidase subunit 1	1	362	SER
+COX2	B	84	LEU	84	L	A	Cytochrome c oxidase subunit 1	1	299	VAL
+COX2	B	84	LEU	84	L	A	Cytochrome c oxidase subunit 1	1	302	ARG
+COX2	B	84	LEU	84	L	A	Cytochrome c oxidase subunit 1	1	303	ALA
+COX2	B	84	LEU	84	L	A	Cytochrome c oxidase subunit 1	1	361	SER
+COX2	B	84	LEU	84	L	A	Cytochrome c oxidase subunit 1	1	362	SER
+COX2	B	85	TYR	85	Y	A	Cytochrome c oxidase subunit 1	1	299	VAL
+COX2	B	85	TYR	85	Y	A	Cytochrome c oxidase subunit 1	1	300	ASP
+COX2	B	85	TYR	85	Y	A	Cytochrome c oxidase subunit 1	1	303	ALA
+COX2	B	85	TYR	85	Y	N	Cytochrome c oxidase subunit NDUFA4	0	67	VAL
+COX2	B	85	TYR	85	Y	N	Cytochrome c oxidase subunit NDUFA4	0	68	ASN
+COX2	B	88	ASP	88	D	A	Cytochrome c oxidase subunit 1	1	299	VAL
+COX2	B	88	ASP	88	D	A	Cytochrome c oxidase subunit 1	1	302	ARG
+COX2	B	89	GLU	89	E	N	Cytochrome c oxidase subunit NDUFA4	0	70	ASP
+COX2	B	90	VAL	90	V	N	Cytochrome c oxidase subunit NDUFA4	0	71	TYR
+COX2	B	90	VAL	90	V	N	Cytochrome c oxidase subunit NDUFA4	0	72	SER
+COX2	B	91	ASN	91	N	H	Cytochrome c oxidase subunit 6B1	0	17	PHE
+COX2	B	93	PRO	93	P	H	Cytochrome c oxidase subunit 6B1	0	14	THR
+COX2	B	93	PRO	93	P	H	Cytochrome c oxidase subunit 6B1	0	15	ALA
+COX2	B	94	SER	94	S	H	Cytochrome c oxidase subunit 6B1	0	13	LYS
+COX2	B	94	SER	94	S	H	Cytochrome c oxidase subunit 6B1	0	14	THR
+COX2	B	95	LEU	95	L	H	Cytochrome c oxidase subunit 6B1	0	14	THR
+COX2	B	96	THR	96	T	H	Cytochrome c oxidase subunit 6B1	0	14	THR
+COX2	B	96	THR	96	T	H	Cytochrome c oxidase subunit 6B1	0	15	ALA
+COX2	B	96	THR	96	T	H	Cytochrome c oxidase subunit 6B1	0	63	SER
+COX2	B	98	LYS	98	K	H	Cytochrome c oxidase subunit 6B1	0	62	GLN
+COX2	B	98	LYS	98	K	H	Cytochrome c oxidase subunit 6B1	0	63	SER
+COX2	B	98	LYS	98	K	H	Cytochrome c oxidase subunit 6B1	0	64	LEU
+COX2	B	98	LYS	98	K	H	Cytochrome c oxidase subunit 6B1	0	65	CYS
+COX2	B	98	LYS	98	K	H	Cytochrome c oxidase subunit 6B1	0	66	PRO
+COX2	B	98	LYS	98	K	H	Cytochrome c oxidase subunit 6B1	0	67	THR
+COX2	B	100	ILE	100	I	H	Cytochrome c oxidase subunit 6B1	0	66	PRO
+COX2	B	103	GLN	103	Q	A	Cytochrome c oxidase subunit 1	1	137	SER
+COX2	B	109	GLU	109	E	H	Cytochrome c oxidase subunit 6B1	0	66	PRO
+COX2	B	109	GLU	109	E	H	Cytochrome c oxidase subunit 6B1	0	67	THR
+COX2	B	111	THR	111	T	H	Cytochrome c oxidase subunit 6B1	0	62	GLN
+COX2	B	111	THR	111	T	H	Cytochrome c oxidase subunit 6B1	0	63	SER
+COX2	B	111	THR	111	T	H	Cytochrome c oxidase subunit 6B1	0	67	THR
+COX2	B	112	ASP	112	D	H	Cytochrome c oxidase subunit 6B1	0	13	LYS
+COX2	B	112	ASP	112	D	H	Cytochrome c oxidase subunit 6B1	0	14	THR
+COX2	B	112	ASP	112	D	H	Cytochrome c oxidase subunit 6B1	0	59	ARG
+COX2	B	112	ASP	112	D	H	Cytochrome c oxidase subunit 6B1	0	63	SER
+COX2	B	113	TYR	113	Y	H	Cytochrome c oxidase subunit 6B1	0	59	ARG
+COX2	B	129	GLU	129	E	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	137	TRP
+COX2	B	130	PRO	130	P	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	137	TRP
+COX2	B	130	PRO	130	P	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	140	LYS
+COX2	B	130	PRO	130	P	K	Cytochrome c oxidase subunit 7B, mitochondrial	0	77	TRP
+COX2	B	131	GLY	131	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	140	LYS
+COX2	B	131	GLY	131	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	141	GLN
+COX2	B	131	GLY	131	G	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	144	ARG
+COX2	B	132	ASP	132	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	141	GLN
+COX2	B	132	ASP	132	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	144	ARG
+COX2	B	133	LEU	133	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	141	GLN
+COX2	B	133	LEU	133	L	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	144	ARG
+COX2	B	134	ARG	134	R	A	Cytochrome c oxidase subunit 1	1	44	PRO
+COX2	B	134	ARG	134	R	A	Cytochrome c oxidase subunit 1	1	45	GLY
+COX2	B	134	ARG	134	R	A	Cytochrome c oxidase subunit 1	1	442	ASP
+COX2	B	134	ARG	134	R	A	Cytochrome c oxidase subunit 1	1	443	TYR
+COX2	B	134	ARG	134	R	A	Cytochrome c oxidase subunit 1	1	445	ASP
+COX2	B	134	ARG	134	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	130	PRO
+COX2	B	134	ARG	134	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	132	SER
+COX2	B	135	LEU	135	L	A	Cytochrome c oxidase subunit 1	1	442	ASP
+COX2	B	135	LEU	135	L	A	Cytochrome c oxidase subunit 1	1	443	TYR
+COX2	B	135	LEU	135	L	A	Cytochrome c oxidase subunit 1	1	444	PRO
+COX2	B	136	LEU	136	L	A	Cytochrome c oxidase subunit 1	1	444	PRO
+COX2	B	137	ASP	137	D	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	144	ARG
+COX2	B	141	ARG	141	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	144	ARG
+COX2	B	141	ARG	141	R	I	Cytochrome c oxidase subunit 6C	0	70	ILE
+COX2	B	141	ARG	141	R	I	Cytochrome c oxidase subunit 6C	0	71	PHE
+COX2	B	141	ARG	141	R	I	Cytochrome c oxidase subunit 6C	0	72	GLN
+COX2	B	143	VAL	143	V	I	Cytochrome c oxidase subunit 6C	0	73	SER
+COX2	B	147	GLU	147	E	I	Cytochrome c oxidase subunit 6C	0	58	VAL
+COX2	B	151	ARG	151	R	H	Cytochrome c oxidase subunit 6B1	0	14	THR
+COX2	B	151	ARG	151	R	H	Cytochrome c oxidase subunit 6B1	0	15	ALA
+COX2	B	151	ARG	151	R	H	Cytochrome c oxidase subunit 6B1	0	16	PRO
+COX2	B	151	ARG	151	R	H	Cytochrome c oxidase subunit 6B1	0	64	LEU
+COX2	B	153	MET	153	M	H	Cytochrome c oxidase subunit 6B1	0	26	GLN
+COX2	B	153	MET	153	M	H	Cytochrome c oxidase subunit 6B1	0	64	LEU
+COX2	B	155	THR	155	T	H	Cytochrome c oxidase subunit 6B1	0	69	TRP
+COX2	B	158	ASP	158	D	A	Cytochrome c oxidase subunit 1	1	131	PRO
+COX2	B	159	VAL	159	V	A	Cytochrome c oxidase subunit 1	1	131	PRO
+COX2	B	159	VAL	159	V	A	Cytochrome c oxidase subunit 1	1	132	LEU
+COX2	B	159	VAL	159	V	A	Cytochrome c oxidase subunit 1	1	137	SER
+COX2	B	160	LEU	160	L	A	Cytochrome c oxidase subunit 1	1	129	TYR
+COX2	B	160	LEU	160	L	A	Cytochrome c oxidase subunit 1	1	130	PRO
+COX2	B	160	LEU	160	L	A	Cytochrome c oxidase subunit 1	1	131	PRO
+COX2	B	160	LEU	160	L	A	Cytochrome c oxidase subunit 1	1	232	GLN
+COX2	B	166	PRO	166	P	A	Cytochrome c oxidase subunit 1	1	366	VAL
+COX2	B	169	GLY	169	G	A	Cytochrome c oxidase subunit 1	1	365	ILE
+COX2	B	170	LEU	170	L	A	Cytochrome c oxidase subunit 1	1	365	ILE
+COX2	B	171	LYS	171	K	A	Cytochrome c oxidase subunit 1	1	294	THR
+COX2	B	171	LYS	171	K	A	Cytochrome c oxidase subunit 1	1	365	ILE
+COX2	B	171	LYS	171	K	A	Cytochrome c oxidase subunit 1	1	366	VAL
+COX2	B	171	LYS	171	K	A	Cytochrome c oxidase subunit 1	1	367	LEU
+COX2	B	171	LYS	171	K	A	Cytochrome c oxidase subunit 1	1	368	HIS
+COX2	B	171	LYS	171	K	A	Cytochrome c oxidase subunit 1	1	370	THR
+COX2	B	172	THR	172	T	A	Cytochrome c oxidase subunit 1	1	294	THR
+COX2	B	172	THR	172	T	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX2	B	173	ASP	173	D	A	Cytochrome c oxidase subunit 1	1	294	THR
+COX2	B	173	ASP	173	D	A	Cytochrome c oxidase subunit 1	1	295	VAL
+COX2	B	175	ILE	175	I	A	Cytochrome c oxidase subunit 1	1	228	PRO
+COX2	B	175	ILE	175	I	A	Cytochrome c oxidase subunit 1	1	229	ILE
+COX2	B	175	ILE	175	I	A	Cytochrome c oxidase subunit 1	1	295	VAL
+COX2	B	176	PRO	176	P	A	Cytochrome c oxidase subunit 1	1	131	PRO
+COX2	B	176	PRO	176	P	A	Cytochrome c oxidase subunit 1	1	222	PRO
+COX2	B	176	PRO	176	P	A	Cytochrome c oxidase subunit 1	1	228	PRO
+COX2	B	177	GLY	177	G	H	Cytochrome c oxidase subunit 6B1	0	27	THR
+COX2	B	177	GLY	177	G	H	Cytochrome c oxidase subunit 6B1	0	69	TRP
+COX2	B	178	ARG	178	R	A	Cytochrome c oxidase subunit 1	1	295	VAL
+COX2	B	178	ARG	178	R	A	Cytochrome c oxidase subunit 1	1	296	GLY
+COX2	B	178	ARG	178	R	A	Cytochrome c oxidase subunit 1	1	297	MET
+COX2	B	178	ARG	178	R	H	Cytochrome c oxidase subunit 6B1	0	25	ASN
+COX2	B	178	ARG	178	R	H	Cytochrome c oxidase subunit 6B1	0	27	THR
+COX2	B	178	ARG	178	R	H	Cytochrome c oxidase subunit 6B1	0	69	TRP
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	25	ASN
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	26	GLN
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	27	THR
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	30	CYS
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	64	LEU
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	66	PRO
+COX2	B	179	LEU	179	L	H	Cytochrome c oxidase subunit 6B1	0	69	TRP
+COX2	B	180	ASN	180	N	A	Cytochrome c oxidase subunit 1	1	295	VAL
+COX2	B	180	ASN	180	N	A	Cytochrome c oxidase subunit 1	1	296	GLY
+COX2	B	180	ASN	180	N	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX2	B	181	GLN	181	Q	H	Cytochrome c oxidase subunit 6B1	0	23	ASN
+COX2	B	181	GLN	181	Q	H	Cytochrome c oxidase subunit 6B1	0	24	GLN
+COX2	B	181	GLN	181	Q	H	Cytochrome c oxidase subunit 6B1	0	26	GLN
+COX2	B	187	THR	187	T	I	Cytochrome c oxidase subunit 6C	0	53	TYR
+COX2	B	187	THR	187	T	I	Cytochrome c oxidase subunit 6C	0	56	TYR
+COX2	B	188	ARG	188	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	148	MET
+COX2	B	188	ARG	188	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	149	LYS
+COX2	B	188	ARG	188	R	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	152	PRO
+COX2	B	188	ARG	188	R	I	Cytochrome c oxidase subunit 6C	0	52	PHE
+COX2	B	188	ARG	188	R	I	Cytochrome c oxidase subunit 6C	0	56	TYR
+COX2	B	188	ARG	188	R	I	Cytochrome c oxidase subunit 6C	0	61	ASP
+COX2	B	189	PRO	189	P	I	Cytochrome c oxidase subunit 6C	0	56	TYR
+COX2	B	189	PRO	189	P	I	Cytochrome c oxidase subunit 6C	0	58	VAL
+COX2	B	189	PRO	189	P	I	Cytochrome c oxidase subunit 6C	0	61	ASP
+COX2	B	189	PRO	189	P	I	Cytochrome c oxidase subunit 6C	0	65	MET
+COX2	B	190	GLY	190	G	I	Cytochrome c oxidase subunit 6C	0	65	MET
+COX2	B	190	GLY	190	G	I	Cytochrome c oxidase subunit 6C	0	71	PHE
+COX2	B	191	VAL	191	V	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	148	MET
+COX2	B	191	VAL	191	V	I	Cytochrome c oxidase subunit 6C	0	70	ILE
+COX2	B	191	VAL	191	V	I	Cytochrome c oxidase subunit 6C	0	71	PHE
+COX2	B	193	TYR	193	Y	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	144	ARG
+COX2	B	193	TYR	193	Y	D	Cytochrome c oxidase subunit 4 isoform 1, mitochondrial	0	148	MET
+COX2	B	195	GLN	195	Q	A	Cytochrome c oxidase subunit 1	1	437	PRO
+COX2	B	195	GLN	195	Q	A	Cytochrome c oxidase subunit 1	1	440	TYR
+COX2	B	195	GLN	195	Q	A	Cytochrome c oxidase subunit 1	1	444	PRO
+COX2	B	196	CYS	196	C	A	Cytochrome c oxidase subunit 1	1	437	PRO
+COX2	B	196	CYS	196	C	A	Cytochrome c oxidase subunit 1	1	440	TYR
+COX2	B	197	SER	197	S	A	Cytochrome c oxidase subunit 1	1	369	ASP
+COX2	B	197	SER	197	S	A	Cytochrome c oxidase subunit 1	1	437	PRO
+COX2	B	198	GLU	198	E	A	Cytochrome c oxidase subunit 1	1	129	TYR
+COX2	B	198	GLU	198	E	A	Cytochrome c oxidase subunit 1	1	369	ASP
+COX2	B	198	GLU	198	E	A	Cytochrome c oxidase subunit 1	1	439	ARG
+COX2	B	199	ILE	199	I	A	Cytochrome c oxidase subunit 1	1	55	ASN
+COX2	B	199	ILE	199	I	A	Cytochrome c oxidase subunit 1	1	123	GLY
+COX2	B	199	ILE	199	I	A	Cytochrome c oxidase subunit 1	1	124	THR
+COX2	B	199	ILE	199	I	A	Cytochrome c oxidase subunit 1	1	132	LEU
+COX2	B	199	ILE	199	I	A	Cytochrome c oxidase subunit 1	1	439	ARG
+COX2	B	200	CYS	200	C	A	Cytochrome c oxidase subunit 1	1	132	LEU
+COX2	B	201	GLY	201	G	A	Cytochrome c oxidase subunit 1	1	51	ASP
+COX2	B	201	GLY	201	G	A	Cytochrome c oxidase subunit 1	1	55	ASN
+COX2	B	201	GLY	201	G	A	Cytochrome c oxidase subunit 1	1	132	LEU
+COX2	B	202	ALA	202	A	A	Cytochrome c oxidase subunit 1	1	50	ASN
+COX2	B	202	ALA	202	A	A	Cytochrome c oxidase subunit 1	1	51	ASP
+COX2	B	202	ALA	202	A	A	Cytochrome c oxidase subunit 1	1	52	HIS
+COX2	B	204	HIS	204	H	A	Cytochrome c oxidase subunit 1	1	51	ASP
+COX2	B	204	HIS	204	H	A	Cytochrome c oxidase subunit 1	1	438	ARG
+COX2	B	204	HIS	204	H	A	Cytochrome c oxidase subunit 1	1	439	ARG
+COX2	B	204	HIS	204	H	A	Cytochrome c oxidase subunit 1	1	440	TYR
+COX2	B	205	SER	205	S	A	Cytochrome c oxidase subunit 1	1	51	ASP
+COX2	B	205	SER	205	S	A	Cytochrome c oxidase subunit 1	1	440	TYR
+COX2	B	205	SER	205	S	A	Cytochrome c oxidase subunit 1	1	441	SER
+COX2	B	205	SER	205	S	A	Cytochrome c oxidase subunit 1	1	442	ASP
+COX2	B	212	GLU	212	E	I	Cytochrome c oxidase subunit 6C	0	71	PHE
+COX2	B	212	GLU	212	E	I	Cytochrome c oxidase subunit 6C	0	72	GLN
+COX2	B	212	GLU	212	E	I	Cytochrome c oxidase subunit 6C	0	73	SER
+COX2	B	213	LEU	213	L	I	Cytochrome c oxidase subunit 6C	0	71	PHE
+COX2	B	214	ILE	214	I	I	Cytochrome c oxidase subunit 6C	0	62	PHE
+COX2	B	214	ILE	214	I	I	Cytochrome c oxidase subunit 6C	0	71	PHE
+COX2	B	214	ILE	214	I	I	Cytochrome c oxidase subunit 6C	0	73	SER
+COX2	B	214	ILE	214	I	I	Cytochrome c oxidase subunit 6C	0	74	VAL
+COX2	B	215	PRO	215	P	I	Cytochrome c oxidase subunit 6C	0	62	PHE
+COX2	B	218	ILE	218	I	I	Cytochrome c oxidase subunit 6C	0	59	MET
+COX2	B	218	ILE	218	I	I	Cytochrome c oxidase subunit 6C	0	62	PHE
+COX2	B	218	ILE	218	I	I	Cytochrome c oxidase subunit 6C	0	74	VAL
+COX3	C	2	THR	2	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	83	ILE
+COX3	C	2	THR	2	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	128	ALA
+COX3	C	4	GLN	4	Q	A	Cytochrome c oxidase subunit 1	1	506	GLU
+COX3	C	4	GLN	4	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	47	LEU
+COX3	C	4	GLN	4	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	62	TYR
+COX3	C	5	SER	5	S	A	Cytochrome c oxidase subunit 1	1	506	GLU
+COX3	C	5	SER	5	S	A	Cytochrome c oxidase subunit 1	1	508	PRO
+COX3	C	5	SER	5	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	61	PRO
+COX3	C	5	SER	5	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	62	TYR
+COX3	C	5	SER	5	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	63	ASN
+COX3	C	5	SER	5	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	83	ILE
+COX3	C	6	HIS	6	H	A	Cytochrome c oxidase subunit 1	1	90	PRO
+COX3	C	6	HIS	6	H	A	Cytochrome c oxidase subunit 1	1	505	PHE
+COX3	C	6	HIS	6	H	A	Cytochrome c oxidase subunit 1	1	506	GLU
+COX3	C	6	HIS	6	H	A	Cytochrome c oxidase subunit 1	1	508	PRO
+COX3	C	6	HIS	6	H	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	47	LEU
+COX3	C	6	HIS	6	H	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	62	TYR
+COX3	C	7	ALA	7	A	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	47	LEU
+COX3	C	7	ALA	7	A	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	51	ILE
+COX3	C	7	ALA	7	A	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	62	TYR
+COX3	C	7	ALA	7	A	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	64	VAL
+COX3	C	8	TYR	8	Y	A	Cytochrome c oxidase subunit 1	1	170	ASN
+COX3	C	8	TYR	8	Y	A	Cytochrome c oxidase subunit 1	1	171	MET
+COX3	C	10	MET	10	M	A	Cytochrome c oxidase subunit 1	1	90	PRO
+COX3	C	10	MET	10	M	A	Cytochrome c oxidase subunit 1	1	91	ASP
+COX3	C	11	VAL	11	V	A	Cytochrome c oxidase subunit 1	1	10	THR
+COX3	C	11	VAL	11	V	A	Cytochrome c oxidase subunit 1	1	95	PRO
+COX3	C	11	VAL	11	V	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	12	LYS	12	K	A	Cytochrome c oxidase subunit 1	1	10	THR
+COX3	C	13	PRO	13	P	A	Cytochrome c oxidase subunit 1	1	4	ASP
+COX3	C	13	PRO	13	P	A	Cytochrome c oxidase subunit 1	1	8	PHE
+COX3	C	13	PRO	13	P	A	Cytochrome c oxidase subunit 1	1	10	THR
+COX3	C	13	PRO	13	P	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	44	TYR
+COX3	C	13	PRO	13	P	L	Cytochrome c oxidase subunit 7C, mitochondrial	0	19	TYR
+COX3	C	14	SER	14	S	A	Cytochrome c oxidase subunit 1	1	8	PHE
+COX3	C	14	SER	14	S	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	14	SER	14	S	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	44	TYR
+COX3	C	15	PRO	15	P	A	Cytochrome c oxidase subunit 1	1	8	PHE
+COX3	C	15	PRO	15	P	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	44	TYR
+COX3	C	15	PRO	15	P	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	55	TYR
+COX3	C	16	TRP	16	W	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	44	TYR
+COX3	C	16	TRP	16	W	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	54	LEU
+COX3	C	16	TRP	16	W	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	55	TYR
+COX3	C	16	TRP	16	W	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	58	THR
+COX3	C	17	PRO	17	P	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	17	PRO	17	P	A	Cytochrome c oxidase subunit 1	1	99	ASN
+COX3	C	17	PRO	17	P	A	Cytochrome c oxidase subunit 1	1	100	MET
+COX3	C	18	LEU	18	L	A	Cytochrome c oxidase subunit 1	1	7	LEU
+COX3	C	18	LEU	18	L	A	Cytochrome c oxidase subunit 1	1	103	TRP
+COX3	C	19	THR	19	T	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	58	THR
+COX3	C	19	THR	19	T	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	62	THR
+COX3	C	20	GLY	20	G	A	Cytochrome c oxidase subunit 1	1	100	MET
+COX3	C	21	ALA	21	A	A	Cytochrome c oxidase subunit 1	1	100	MET
+COX3	C	21	ALA	21	A	A	Cytochrome c oxidase subunit 1	1	103	TRP
+COX3	C	21	ALA	21	A	A	Cytochrome c oxidase subunit 1	1	104	LEU
+COX3	C	22	LEU	22	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	62	THR
+COX3	C	22	LEU	22	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	66	THR
+COX3	C	23	SER	23	S	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	62	THR
+COX3	C	24	ALA	24	A	A	Cytochrome c oxidase subunit 1	1	104	LEU
+COX3	C	24	ALA	24	A	A	Cytochrome c oxidase subunit 1	1	152	LEU
+COX3	C	25	LEU	25	L	A	Cytochrome c oxidase subunit 1	1	107	PRO
+COX3	C	25	LEU	25	L	A	Cytochrome c oxidase subunit 1	1	110	LEU
+COX3	C	25	LEU	25	L	A	Cytochrome c oxidase subunit 1	1	111	LEU
+COX3	C	25	LEU	25	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	66	THR
+COX3	C	26	LEU	26	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	65	GLY
+COX3	C	26	LEU	26	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	66	THR
+COX3	C	26	LEU	26	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	69	ALA
+COX3	C	28	THR	28	T	A	Cytochrome c oxidase subunit 1	1	111	LEU
+COX3	C	28	THR	28	T	A	Cytochrome c oxidase subunit 1	1	148	PHE
+COX3	C	28	THR	28	T	A	Cytochrome c oxidase subunit 1	1	152	LEU
+COX3	C	29	SER	29	S	A	Cytochrome c oxidase subunit 1	1	111	LEU
+COX3	C	29	SER	29	S	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	73	LEU
+COX3	C	31	LEU	31	L	A	Cytochrome c oxidase subunit 1	1	148	PHE
+COX3	C	32	ALA	32	A	A	Cytochrome c oxidase subunit 1	1	144	ASP
+COX3	C	32	ALA	32	A	A	Cytochrome c oxidase subunit 1	1	145	LEU
+COX3	C	32	ALA	32	A	A	Cytochrome c oxidase subunit 1	1	148	PHE
+COX3	C	33	MET	33	M	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	72	GLU
+COX3	C	33	MET	33	M	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	73	LEU
+COX3	C	34	TRP	34	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	85	PRO
+COX3	C	34	TRP	34	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	86	TRP
+COX3	C	35	PHE	35	F	A	Cytochrome c oxidase subunit 1	1	214	ASN
+COX3	C	35	PHE	35	F	A	Cytochrome c oxidase subunit 1	1	215	LEU
+COX3	C	35	PHE	35	F	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	82	LYS
+COX3	C	35	PHE	35	F	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	85	PRO
+COX3	C	36	HIS	36	H	A	Cytochrome c oxidase subunit 1	1	140	GLY
+COX3	C	36	HIS	36	H	A	Cytochrome c oxidase subunit 1	1	141	ALA
+COX3	C	36	HIS	36	H	A	Cytochrome c oxidase subunit 1	1	144	ASP
+COX3	C	36	HIS	36	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	82	LYS
+COX3	C	37	PHE	37	F	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	76	ALA
+COX3	C	38	HIS	38	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	84	PHE
+COX3	C	38	HIS	38	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	85	PRO
+COX3	C	38	HIS	38	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	86	TRP
+COX3	C	41	THR	41	T	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	68	TYR
+COX3	C	42	LEU	42	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	68	TYR
+COX3	C	42	LEU	42	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	69	ALA
+COX3	C	42	LEU	42	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	72	GLU
+COX3	C	45	LEU	45	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	61	LEU
+COX3	C	49	THR	49	T	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	61	LEU
+COX3	C	52	LEU	52	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	58	THR
+COX3	C	52	LEU	52	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	61	LEU
+COX3	C	53	THR	53	T	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	58	THR
+COX3	C	56	GLN	56	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	51	ASP
+COX3	C	56	GLN	56	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	54	LEU
+COX3	C	56	GLN	56	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	55	TYR
+COX3	C	56	GLN	56	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	58	THR
+COX3	C	57	TRP	57	W	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	57	TRP	57	W	A	Cytochrome c oxidase subunit 1	1	97	MET
+COX3	C	57	TRP	57	W	A	Cytochrome c oxidase subunit 1	1	100	MET
+COX3	C	59	ARG	59	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	51	ASP
+COX3	C	59	ARG	59	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	54	LEU
+COX3	C	60	ASP	60	D	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	60	ASP	60	D	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	43	LEU
+COX3	C	60	ASP	60	D	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	44	TYR
+COX3	C	61	VAL	61	V	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	63	ARG	63	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	35	PHE
+COX3	C	63	ARG	63	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	43	LEU
+COX3	C	63	ARG	63	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	47	GLY
+COX3	C	63	ARG	63	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	51	ASP
+COX3	C	64	GLU	64	E	A	Cytochrome c oxidase subunit 1	1	96	ARG
+COX3	C	64	GLU	64	E	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	43	LEU
+COX3	C	66	THR	66	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	45	THR
+COX3	C	66	THR	66	T	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	32	GLN
+COX3	C	67	TYR	67	Y	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	45	THR
+COX3	C	67	TYR	67	Y	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	31	LYS
+COX3	C	67	TYR	67	Y	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	32	GLN
+COX3	C	67	TYR	67	Y	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	35	PHE
+COX3	C	67	TYR	67	Y	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	36	GLN
+COX3	C	68	GLN	68	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	45	THR
+COX3	C	68	GLN	68	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	46	GLY
+COX3	C	68	GLN	68	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	35	PHE
+COX3	C	68	GLN	68	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	36	GLN
+COX3	C	68	GLN	68	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	43	LEU
+COX3	C	68	GLN	68	Q	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	46	LYS
+COX3	C	69	GLY	69	G	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	45	THR
+COX3	C	69	GLY	69	G	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	46	GLY
+COX3	C	69	GLY	69	G	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	47	LEU
+COX3	C	69	GLY	69	G	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	48	GLU
+COX3	C	71	HIS	71	H	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	48	GLU
+COX3	C	72	THR	72	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	47	LEU
+COX3	C	72	THR	72	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	51	ILE
+COX3	C	77	LYS	77	K	A	Cytochrome c oxidase subunit 1	1	170	ASN
+COX3	C	78	GLY	78	G	A	Cytochrome c oxidase subunit 1	1	94	PHE
+COX3	C	78	GLY	78	G	A	Cytochrome c oxidase subunit 1	1	166	THR
+COX3	C	78	GLY	78	G	A	Cytochrome c oxidase subunit 1	1	170	ASN
+COX3	C	79	LEU	79	L	A	Cytochrome c oxidase subunit 1	1	94	PHE
+COX3	C	81	TYR	81	Y	A	Cytochrome c oxidase subunit 1	1	166	THR
+COX3	C	81	TYR	81	Y	A	Cytochrome c oxidase subunit 1	1	169	ILE
+COX3	C	81	TYR	81	Y	A	Cytochrome c oxidase subunit 1	1	170	ASN
+COX3	C	82	GLY	82	G	A	Cytochrome c oxidase subunit 1	1	94	PHE
+COX3	C	82	GLY	82	G	A	Cytochrome c oxidase subunit 1	1	162	ILE
+COX3	C	82	GLY	82	G	A	Cytochrome c oxidase subunit 1	1	166	THR
+COX3	C	85	LEU	85	L	A	Cytochrome c oxidase subunit 1	1	162	ILE
+COX3	C	85	LEU	85	L	A	Cytochrome c oxidase subunit 1	1	165	ILE
+COX3	C	85	LEU	85	L	A	Cytochrome c oxidase subunit 1	1	166	THR
+COX3	C	85	LEU	85	L	A	Cytochrome c oxidase subunit 1	1	196	LEU
+COX3	C	86	PHE	86	F	A	Cytochrome c oxidase subunit 1	1	162	ILE
+COX3	C	88	THR	88	T	A	Cytochrome c oxidase subunit 1	1	196	LEU
+COX3	C	89	SER	89	S	A	Cytochrome c oxidase subunit 1	1	158	ILE
+COX3	C	89	SER	89	S	A	Cytochrome c oxidase subunit 1	1	196	LEU
+COX3	C	89	SER	89	S	A	Cytochrome c oxidase subunit 1	1	200	PRO
+COX3	C	92	PHE	92	F	A	Cytochrome c oxidase subunit 1	1	197	LEU
+COX3	C	92	PHE	92	F	A	Cytochrome c oxidase subunit 1	1	200	PRO
+COX3	C	92	PHE	92	F	A	Cytochrome c oxidase subunit 1	1	201	VAL
+COX3	C	93	PHE	93	F	A	Cytochrome c oxidase subunit 1	1	200	PRO
+COX3	C	93	PHE	93	F	A	Cytochrome c oxidase subunit 1	1	203	ALA
+COX3	C	93	PHE	93	F	A	Cytochrome c oxidase subunit 1	1	204	ALA
+COX3	C	96	GLY	96	G	A	Cytochrome c oxidase subunit 1	1	204	ALA
+COX3	C	96	GLY	96	G	A	Cytochrome c oxidase subunit 1	1	208	MET
+COX3	C	96	GLY	96	G	A	Cytochrome c oxidase subunit 1	1	234	LEU
+COX3	C	97	PHE	97	F	A	Cytochrome c oxidase subunit 1	1	204	ALA
+COX3	C	97	PHE	97	F	A	Cytochrome c oxidase subunit 1	1	208	MET
+COX3	C	99	TRP	99	W	A	Cytochrome c oxidase subunit 1	1	230	LEU
+COX3	C	99	TRP	99	W	A	Cytochrome c oxidase subunit 1	1	233	HIS
+COX3	C	99	TRP	99	W	A	Cytochrome c oxidase subunit 1	1	234	LEU
+COX3	C	99	TRP	99	W	A	Cytochrome c oxidase subunit 1	1	288	TRP
+COX3	C	100	ALA	100	A	A	Cytochrome c oxidase subunit 1	1	208	MET
+COX3	C	100	ALA	100	A	A	Cytochrome c oxidase subunit 1	1	219	PHE
+COX3	C	100	ALA	100	A	A	Cytochrome c oxidase subunit 1	1	230	LEU
+COX3	C	103	HIS	103	H	A	Cytochrome c oxidase subunit 1	1	227	ASP
+COX3	C	103	HIS	103	H	A	Cytochrome c oxidase subunit 1	1	230	LEU
+COX3	C	103	HIS	103	H	A	Cytochrome c oxidase subunit 1	1	233	HIS
+COX3	C	106	LEU	106	L	N	Cytochrome c oxidase subunit NDUFA4	0	42	ASP
+COX3	C	106	LEU	106	L	N	Cytochrome c oxidase subunit NDUFA4	0	43	VAL
+COX3	C	106	LEU	106	L	N	Cytochrome c oxidase subunit NDUFA4	0	44	CYS
+COX3	C	106	LEU	106	L	N	Cytochrome c oxidase subunit NDUFA4	0	45	TRP
+COX3	C	107	ALA	107	A	N	Cytochrome c oxidase subunit NDUFA4	0	42	ASP
+COX3	C	108	PRO	108	P	H	Cytochrome c oxidase subunit 6B1	0	28	ARG
+COX3	C	109	THR	109	T	A	Cytochrome c oxidase subunit 1	1	225	GLY
+COX3	C	110	PRO	110	P	H	Cytochrome c oxidase subunit 6B1	0	27	THR
+COX3	C	110	PRO	110	P	H	Cytochrome c oxidase subunit 6B1	0	31	TRP
+COX3	C	110	PRO	110	P	H	Cytochrome c oxidase subunit 6B1	0	83	PRO
+COX3	C	111	GLN	111	Q	A	Cytochrome c oxidase subunit 1	1	222	PRO
+COX3	C	111	GLN	111	Q	A	Cytochrome c oxidase subunit 1	1	223	ALA
+COX3	C	111	GLN	111	Q	A	Cytochrome c oxidase subunit 1	1	225	GLY
+COX3	C	111	GLN	111	Q	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	76	HIS
+COX3	C	111	GLN	111	Q	H	Cytochrome c oxidase subunit 6B1	0	83	PRO
+COX3	C	112	LEU	112	L	A	Cytochrome c oxidase subunit 1	1	224	GLY
+COX3	C	112	LEU	112	L	A	Cytochrome c oxidase subunit 1	1	225	GLY
+COX3	C	112	LEU	112	L	H	Cytochrome c oxidase subunit 6B1	0	83	PRO
+COX3	C	113	GLY	113	G	H	Cytochrome c oxidase subunit 6B1	0	31	TRP
+COX3	C	113	GLY	113	G	H	Cytochrome c oxidase subunit 6B1	0	83	PRO
+COX3	C	113	GLY	113	G	H	Cytochrome c oxidase subunit 6B1	0	84	GLY
+COX3	C	114	GLY	114	G	H	Cytochrome c oxidase subunit 6B1	0	28	ARG
+COX3	C	115	HIS	115	H	H	Cytochrome c oxidase subunit 6B1	0	85	LYS
+COX3	C	118	PRO	118	P	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	76	HIS
+COX3	C	119	THR	119	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	74	TYR
+COX3	C	119	THR	119	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	76	HIS
+COX3	C	119	THR	119	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	77	LEU
+COX3	C	119	THR	119	T	H	Cytochrome c oxidase subunit 6B1	0	83	PRO
+COX3	C	119	THR	119	T	H	Cytochrome c oxidase subunit 6B1	0	85	LYS
+COX3	C	120	GLY	120	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	74	TYR
+COX3	C	120	GLY	120	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	77	LEU
+COX3	C	128	GLU	128	E	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	57	VAL
+COX3	C	128	GLU	128	E	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	61	SER
+COX3	C	129	VAL	129	V	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	57	VAL
+COX3	C	129	VAL	129	V	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	58	TYR
+COX3	C	132	LEU	132	L	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	53	SER
+COX3	C	132	LEU	132	L	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	54	MET
+COX3	C	132	LEU	132	L	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	58	TYR
+COX3	C	135	SER	135	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	49	GLY
+COX3	C	135	SER	135	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	50	VAL
+COX3	C	135	SER	135	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	53	SER
+COX3	C	138	LEU	138	L	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	46	ALA
+COX3	C	139	ALA	139	A	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	46	ALA
+COX3	C	139	ALA	139	A	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	50	VAL
+COX3	C	142	VAL	142	V	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	38	TRP
+COX3	C	142	VAL	142	V	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	41	LEU
+COX3	C	142	VAL	142	V	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	42	THR
+COX3	C	142	VAL	142	V	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	46	ALA
+COX3	C	143	SER	143	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	42	THR
+COX3	C	145	THR	145	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	38	TRP
+COX3	C	146	TRP	146	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	35	ALA
+COX3	C	146	TRP	146	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	38	TRP
+COX3	C	146	TRP	146	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	39	LYS
+COX3	C	146	TRP	146	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	42	THR
+COX3	C	146	TRP	146	W	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	43	PHE
+COX3	C	149	HIS	149	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	34	SER
+COX3	C	149	HIS	149	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	35	ALA
+COX3	C	149	HIS	149	H	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	38	TRP
+COX3	C	150	SER	150	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	35	ALA
+COX3	C	151	LEU	151	L	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	153	GLU	153	E	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	35	ALA
+COX3	C	154	ASN	154	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	34	GLY
+COX3	C	154	ASN	154	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	35	GLY
+COX3	C	154	ASN	154	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	36	GLY
+COX3	C	154	ASN	154	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	155	ASN	155	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	33	SER
+COX3	C	155	ASN	155	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	34	GLY
+COX3	C	155	ASN	155	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	35	GLY
+COX3	C	155	ASN	155	N	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	156	ARG	156	R	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	35	GLY
+COX3	C	156	ARG	156	R	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	36	GLY
+COX3	C	156	ARG	156	R	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	156	ARG	156	R	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	26	ASN
+COX3	C	158	GLN	158	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	32	ALA
+COX3	C	158	GLN	158	Q	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	39	LYS
+COX3	C	159	MET	159	M	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	172	TYR	172	Y	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	54	MET
+COX3	C	172	TYR	172	Y	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	58	TYR
+COX3	C	176	LEU	176	L	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	58	TYR
+COX3	C	181	TYR	181	Y	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	94	PHE
+COX3	C	182	PHE	182	F	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	94	PHE
+COX3	C	182	PHE	182	F	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	96	ASN
+COX3	C	182	PHE	182	F	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	99	VAL
+COX3	C	184	SER	184	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	99	VAL
+COX3	C	184	SER	184	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	100	ASN
+COX3	C	185	PRO	185	P	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	99	VAL
+COX3	C	185	PRO	185	P	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	100	ASN
+COX3	C	186	PHE	186	F	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	100	ASN
+COX3	C	187	THR	187	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	92	THR
+COX3	C	187	THR	187	T	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	100	ASN
+COX3	C	188	ILE	188	I	A	Cytochrome c oxidase subunit 1	1	215	LEU
+COX3	C	188	ILE	188	I	A	Cytochrome c oxidase subunit 1	1	216	ASN
+COX3	C	188	ILE	188	I	A	Cytochrome c oxidase subunit 1	1	217	THR
+COX3	C	188	ILE	188	I	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	84	PHE
+COX3	C	188	ILE	188	I	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	92	THR
+COX3	C	189	SER	189	S	A	Cytochrome c oxidase subunit 1	1	216	ASN
+COX3	C	189	SER	189	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	77	LEU
+COX3	C	189	SER	189	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	78	ARG
+COX3	C	189	SER	189	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	79	ILE
+COX3	C	189	SER	189	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	80	ARG
+COX3	C	189	SER	189	S	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	84	PHE
+COX3	C	190	ASP	190	D	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	77	LEU
+COX3	C	190	ASP	190	D	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	78	ARG
+COX3	C	191	GLY	191	G	A	Cytochrome c oxidase subunit 1	1	218	THR
+COX3	C	191	GLY	191	G	A	Cytochrome c oxidase subunit 1	1	224	GLY
+COX3	C	191	GLY	191	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	76	HIS
+COX3	C	191	GLY	191	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	77	LEU
+COX3	C	191	GLY	191	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	78	ARG
+COX3	C	191	GLY	191	G	G	Cytochrome c oxidase subunit 6A1, mitochondrial	0	79	ILE
+COX3	C	192	ILE	192	I	A	Cytochrome c oxidase subunit 1	1	218	THR
+COX3	C	192	ILE	192	I	A	Cytochrome c oxidase subunit 1	1	219	PHE
+COX3	C	192	ILE	192	I	A	Cytochrome c oxidase subunit 1	1	224	GLY
+COX3	C	192	ILE	192	I	A	Cytochrome c oxidase subunit 1	1	225	GLY
+COX3	C	192	ILE	192	I	A	Cytochrome c oxidase subunit 1	1	226	GLY
+COX3	C	195	SER	195	S	A	Cytochrome c oxidase subunit 1	1	217	THR
+COX3	C	195	SER	195	S	A	Cytochrome c oxidase subunit 1	1	218	THR
+COX3	C	195	SER	195	S	A	Cytochrome c oxidase subunit 1	1	219	PHE
+COX3	C	196	THR	196	T	A	Cytochrome c oxidase subunit 1	1	219	PHE
+COX3	C	199	VAL	199	V	A	Cytochrome c oxidase subunit 1	1	219	PHE
+COX3	C	203	PHE	203	F	A	Cytochrome c oxidase subunit 1	1	207	THR
+COX3	C	222	GLN	222	Q	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	223	LEU	223	L	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	26	ASN
+COX3	C	224	MET	224	M	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	26	ASN
+COX3	C	224	MET	224	M	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	28	VAL
+COX3	C	225	PHE	225	F	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	38	PRO
+COX3	C	225	PHE	225	F	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	43	GLN
+COX3	C	225	PHE	225	F	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	26	ASN
+COX3	C	225	PHE	225	F	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	27	LYS
+COX3	C	225	PHE	225	F	J	Cytochrome c oxidase subunit 7A2, mitochondrial	0	28	VAL
+COX3	C	226	HIS	226	H	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	43	GLN
+COX3	C	227	PHE	227	F	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	37	VAL
+COX3	C	227	PHE	227	F	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	38	PRO
+COX3	C	228	THR	228	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	38	PRO
+COX3	C	228	THR	228	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	39	THR
+COX3	C	228	THR	228	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	40	ASP
+COX3	C	228	THR	228	T	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	43	GLN
+COX3	C	229	SER	229	S	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	38	PRO
+COX3	C	230	LYS	230	K	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	40	ASP
+COX3	C	231	HIS	231	H	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	40	ASP
+COX3	C	231	HIS	231	H	F	Cytochrome c oxidase subunit 5B, mitochondrial	0	48	GLU
+COX3	C	259	TRP	259	W	N	Cytochrome c oxidase subunit NDUFA4	0	45	TRP

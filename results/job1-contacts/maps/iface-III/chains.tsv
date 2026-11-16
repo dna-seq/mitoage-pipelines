@@ -1,0 +1,23 @@
+chain	description	gene	is_mt	residues
+A	Cytochrome b-c1 complex subunit 8	UQCRQ	0	81
+B	Cytochrome b-c1 complex subunit Rieske, mitochondrial	UQCRFS1	0	57
+C	Cytochrome b-c1 complex subunit Rieske, mitochondrial	UQCRFS1	0	196
+D	Cytochrome b-c1 complex subunit 9	UQCR10	0	62
+E	Cytochrome b-c1 complex subunit 6, mitochondrial	UQCRH	0	74
+F	Cytochrome b-c1 complex subunit 7	UQCRB	0	106
+G	Cytochrome b-c1 complex subunit 10	UQCR11	0	51
+H	Cytochrome c1, heme protein, mitochondrial	CYC1	0	241
+J	Cytochrome b	CYTB	1	378
+K	Cytochrome b-c1 complex subunit 2, mitochondrial	UQCRC2	0	419
+L	Cytochrome b-c1 complex subunit 1, mitochondrial	UQCRC1	0	446
+N	Cytochrome b-c1 complex subunit 8	UQCRQ	0	81
+O	Cytochrome b-c1 complex subunit Rieske, mitochondrial	UQCRFS1	0	57
+P	Cytochrome b-c1 complex subunit Rieske, mitochondrial	UQCRFS1	0	196
+Q	Cytochrome b-c1 complex subunit 9	UQCR10	0	62
+R	Cytochrome b-c1 complex subunit 6, mitochondrial	UQCRH	0	74
+S	Cytochrome b-c1 complex subunit 7	UQCRB	0	106
+T	Cytochrome b-c1 complex subunit 10	UQCR11	0	51
+U	Cytochrome c1, heme protein, mitochondrial	CYC1	0	241
+V	Cytochrome b	CYTB	1	378
+W	Cytochrome b-c1 complex subunit 2, mitochondrial	UQCRC2	0	419
+Y	Cytochrome b-c1 complex subunit 1, mitochondrial	UQCRC1	0	446
