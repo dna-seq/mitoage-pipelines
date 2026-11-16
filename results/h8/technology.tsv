@@ -1,0 +1,2345 @@
+slug	refseq	source	refseq_record	source_record	technology	stated_in	technology_class
+abbottina-rivularis	NC_023781.1	KF577979	true	true	Sanger dideoxy sequencing	source	sanger
+abramis-brama	NC_020356.1	AP009305	true	true			unstated
+abudefduf-saxatilis	NC_085738.1	MZ567019	true	true	Illumina	source	short_read
+acanthis-flammea	NC_027285.1	KR422696	true	true			unstated
+acanthocybium-solandri	NC_067731.1	OL628870	true	true	Illumina	source	short_read
+acanthogobius-hasta	NC_006131.1	AY486321	true	true			unstated
+acantholumpenus-mackayi	NC_082795.1	OR482551	true	true	Illumina	source	short_read
+acanthopagrus-latus	NC_056780.1	MN909968	true	true	Sanger dideoxy sequencing	source	sanger
+acanthopagrus-schlegelii	NC_018553.1	JQ746035	true	true			unstated
+acanthopsetta-nadeshnyi	NC_066465.1	OP028121	true	true	MGI-2000	source	short_read
+acanthorhynchus-tenuirostris	NC_051552.1	MT457824	true	true	Illumina	source	short_read
+acanthosepion-esculentum	NC_009690.1	AB266516	true	true			unstated
+acanthurus-bahianus	NC_087981.1	PP032950	true	true	Illumina	source	short_read
+acanthurus-lineatus	NC_010108.2	EU273284	true	true			unstated
+acanthurus-tractus	NC_082571.1	OR482458	true	true	Illumina	source	short_read
+accipiter-gentilis	NC_011818.1	AP010797	true	true			unstated
+accipiter-nisus	NC_025580.1	KM360148	true	true			unstated
+acentrogobius-pflaumii	NC_018064.1	JX029961	true	true	Sanger dideoxy sequencing	source	sanger
+acinonyx-jubatus	NC_005212.1	AF344830	true	true			unstated
+acipenser-baerii	NC_017603.1	JQ045341	true	true			unstated
+acipenser-brevirostrum	NC_032715.1	KX817302	true	true			unstated
+acipenser-dabryanus	NC_005451.1	AY510085	true	true			unstated
+acipenser-fulvescens	NC_030325.1	KU985070	true	true			unstated
+acipenser-gueldenstaedtii	NC_012576.1	FJ392605	true	true			unstated
+acipenser-medirostris	NC_028405.1	KM591217	true	true	Illumina	source	short_read
+acipenser-nudiventris	NC_030344.1	KU321568	true	true			unstated
+acipenser-oxyrinchus	NC_028290.1	KP013103	true	true	Illumina	source	short_read
+acipenser-ruthenus	NC_081187.1	OV754669	true	true			unstated
+acipenser-schrenckii	NC_021757.1	KC905169	true	true	Sanger dideoxy sequencing	source	sanger
+acipenser-sinensis	NC_012646.1	EU719645	true	true			unstated
+acipenser-stellatus	NC_005795.1	AJ585050	true	true			unstated
+acipenser-sturio	NC_027417.1	KP997216	true	true	Illumina	source	short_read
+acipenser-transmontanus	NC_004743.1	AB042837	true	true			unstated
+acomys-cahirinus	NC_020758.1	JN571155	true	true			unstated
+acridotheres-cristatellus	NC_015613.1	JF810423	true	true			unstated
+acrocephalus-scirpaceus	NC_010227.1	AM889139	true	true			unstated
+acroteriobatus-annulatus	NC_068897.1	ON557293	true	true			unstated
+addax-nasomaculatus	NC_020674.1	JN632591	true	true			unstated
+aegotheles-cristatus	NC_011718.2	EU344979	true	true			unstated
+aegypius-monachus	NC_022957.1	KF682364	true	true			unstated
+aepyceros-melampus	NC_020675.1	JN632592	true	true			unstated
+aethalodelphis-obliquidens	NC_035426.1	MF166863	true	true	Sanger dideoxy sequencing	source	sanger
+aethia-cristatella	NC_045517.1	MN337912	true	true	Sanger dideoxy sequencing	source	sanger
+aethotaxis-mitopteryx	NC_057662.1	MT232658	true	true	IonTorrent	source	short_read
+aetobatus-flagellum	NC_022837.1	KF482070	true	true			unstated
+agapornis-lilianae	NC_045369.1	MN481406	true	true	Sanger dideoxy sequencing	source	sanger
+agapornis-pullarius	NC_045368.1	MN481404	true	true			unstated
+agelaius-phoeniceus	NC_018801.1	JX516062	true	true			unstated
+agkistrodon-contortrix	NC_035638.1	KY747498	true	true	Illumina	source	short_read
+agkistrodon-piscivorus	NC_009768.1	DQ523161	true	true			unstated
+ailuropoda-melanoleuca	NC_009492.1	EF212882	true	true			unstated
+ailurus-fulgens	NC_011124.1	AM711897	true	true			unstated
+aix-galericulata	NC_023969.1	KJ169568	true	true			unstated
+akialoa-stejnegeri	NC_025624.1	KM078801	true	true			unstated
+alauda-arvensis	NC_020425.1	JQ322641	true	true			unstated
+albatrossia-pectoralis	NC_083061.1	OR546224	true	true	Illumina	source	short_read
+albula-vulpes	NC_082992.1	OR546140	true	true	Illumina	source	short_read
+alburnus-alburnus	NC_008659.1	AB239593	true	true			unstated
+alburnus-mossulensis	NC_031573.1	AP011281	true	true			unstated
+alcedo-atthis	NC_035868.1	KY964271	true	true	Sanger dideoxy sequencing	source	sanger
+alcelaphus-buselaphus	NC_020676.1	JN632594	true	true			unstated
+aldabrachelys-gigantea	NC_028438.1	KT613185	true	true	Illumina	source	short_read
+aldrichetta-forsteri	NC_017879.1	JF911703	true	true			unstated
+alectura-lathami	NC_007227.1	AY346091	true	true			unstated
+alepocephalus-bairdii	NC_013567.1	AP009572	true	true			unstated
+aliger-gigas	NC_024932.1	KM245630	true	true	454; Sanger dideoxy sequencing	source	short_read
+allenopithecus-nigroviridis	NC_023965.1	KJ434962	true	true			unstated
+alligator-mississippiensis	NC_001922.1	Y13113	true	true			unstated
+alligator-sinensis	NC_004448.1	AF511507	true	true			unstated
+allocyttus-niger	NC_004398.1	AP004435	true	true			unstated
+alopias-pelagicus	NC_022822.1	KF412639	true	true			unstated
+alopias-superciliosus	NC_021443.1	KC757415	true	true	Sanger dideoxy sequencing	source	sanger
+alopias-vulpinus	NC_049866.1	MT410939	true	true			unstated
+alosa-aestivalis	NC_037017.1	MG570463	true	true			unstated
+alosa-alabamae	NC_028275.1	KP013088	true	true	Illumina	source	short_read
+alosa-alosa	NC_009575.1	AP009131	true	true			unstated
+alosa-pseudoharengus	NC_009576.1	AP009132	true	true			unstated
+alosa-sapidissima	NC_014690.1	HQ331537	true	true			unstated
+alouatta-caraya	NC_064185.1	OM328861	true	true	Illumina NovaSeq	source	short_read
+alouatta-palliata	NC_064193.1	OM328926	true	true	Illumina NovaSeq	source	short_read
+alouatta-seniculus	NC_064188.1	OM328888	true	true	Illumina NovaSeq	source	short_read
+amazona-aestiva	NC_033336.1	KT361659	true	true	Illumina	source	short_read
+amazona-auropalliata	NC_063712.1	MW151697	true	true	Sanger dideoxy sequencing	source	sanger
+amazona-guildingii	NC_052783.1	MN356210	true	true			unstated
+amazona-ochrocephala	NC_027840.1	KM611467	true	true	Sanger dideoxy sequencing	source	sanger
+ambloplites-rupestris	NC_035659.1	KY660677	true	true	Illumina	source	short_read
+amblygaster-sirm	NC_035064.1	AP017948	true	true			unstated
+amblyraja-radiata	NC_000893.1	AF106038	true	true			unstated
+amblyrhynchus-cristatus	NC_028031.1	KT277937	true	true	Sanger dideoxy sequencing	source	sanger
+ambystoma-mexicanum	NC_005797.1	AJ584639	true	true			unstated
+ambystoma-talpoideum	NC_039182.1	MG822788	true	true			unstated
+ambystoma-texanum	NC_014571.1	GU078471	true	true			unstated
+ambystoma-tigrinum	NC_006887.1	AY659992	true	true			unstated
+ameiurus-catus	NC_037012.1	MG570433	true	true			unstated
+ameiurus-melas	NC_068674.1	OM736826	true	true			unstated
+ameiurus-natalis	NC_036391.1	MF621735	true	true			unstated
+ameiurus-nebulosus	NC_042499.1	MF621733	true	true			unstated
+amia-calva	NC_004742.1	AB042952	true	true			unstated
+ammodytes-americanus	NC_028530.1	KT723027	true	true	Illumina	source	short_read
+ammodytes-dubius	NC_028529.1	KT723026	true	true	Illumina	source	short_read
+ammodytes-hexapterus	NC_020461.1	KC422441	true	true			unstated
+ammodytes-personatus	NC_021374.1	JQ085861	true	true			unstated
+ammotragus-lervia	NC_009510.1	EF466060	true	true			unstated
+amphioctopus-fangsiao	NC_060722.1	MT180323	true	true	Sanger dideoxy sequencing	source	sanger
+amphiprion-clarkii	NC_023967.1	KJ174498	true	true			unstated
+amphiprion-ephippium	NC_030589.1	AB979272	true	true			unstated
+amphiprion-ocellaris	NC_009065.1	AP006017	true	true			unstated
+amusium-pleuronectes	NC_057147.1	MT419374	true	true			unstated
+anabas-testudineus	NC_024752.1	KJ808811	true	true			unstated
+anadara-kagoshimensis	NC_024927.1	KF667521	true	true	Sanger dideoxy sequencing	source	sanger
+anarhichas-lupus	NC_009773.1	EF427916	true	true			unstated
+anarhynchus-alexandrinus	NC_041118.1	MF565382	true	true	Sanger dideoxy sequencing	source	sanger
+anarhynchus-leschenaultii	NC_070231.1	ON950055	true	true	Illumina	source	short_read
+anarhynchus-mongolus	NC_059881.1	MW298528	true	true	Sanger dideoxy sequencing	source	sanger
+anarhynchus-montanus	NC_087758.1	OQ612618	true	true	PacBio	source	long_read
+anas-acuta	NC_024631.1	KF312717	true	true			unstated
+anas-crecca	NC_022452.1	KF203133	true	true			unstated
+anas-platyrhynchos	NC_009684.1	EU009397	true	true			unstated
+anaxyrus-americanus	NC_047224.1	MK855099	true	true			unstated
+anchoa-mitchilli	NC_082550.1	OR482454	true	true	Illumina	source	short_read
+andrias-davidianus	NC_004926.1	AJ492192	true	true			unstated
+andrias-japonicus	NC_007446.1	AB208679	true	true			unstated
+anguilla-anguilla	NC_006531.1	AP007233	true	true			unstated
+anguilla-australis	NC_006532.1	AP007234	true	true			unstated
+anguilla-bicolor	NC_006534.1	AP007236	true	true			unstated
+anguilla-dieffenbachii	NC_006538.1	AP007240	true	true			unstated
+anguilla-labiata	NC_006543.1	AP007245	true	true			unstated
+anguilla-marmorata	NC_006540.1	AP007242	true	true			unstated
+anguilla-mossambica	NC_006542.1	AP007244	true	true			unstated
+anguilla-nebulosa	NC_006544.1	AP007246	true	true			unstated
+anguilla-reinhardtii	NC_006546.1	AP007248	true	true			unstated
+anguilla-rostrata	NC_006547.2	AP007249	true	true			unstated
+anguis-fragilis	NC_012431.1	EU443256	true	true			unstated
+anhinga-melanogaster	NC_053867.1	MW042786	true	true	Illumina	source	short_read
+anodonta-anatina	NC_022803.1	KF030964	true	true			unstated
+anodorhynchus-hyacinthinus	NC_082165.1	OR209186	true	true	Illumina	source	short_read
+anolis-carolinensis	NC_010972.2	EU747728	true	true			unstated
+anoplopoma-fimbria	NC_018119.1	JX070112	true	true			unstated
+anoura-geoffroyi	NC_065676.1	ON310504	true	true	Illumina	source	short_read
+anser-albifrons	NC_004539.1	AF363031	true	true			unstated
+anser-anser	NC_011196.1	EU932689	true	true			unstated
+anser-fabalis	NC_016922.1	HQ890328	true	true			unstated
+anseranas-semipalmata	NC_005933.1	AY309455	true	true			unstated
+antechinus-flavipes	NC_056379.1	MN447797	true	true	BGISEQ500	source	short_read
+anthropoides-virgo	NC_020573.1	FJ769845	true	true			unstated
+antidorcas-marsupialis	NC_020678.1	JN632596	true	true			unstated
+antilocapra-americana	NC_020679.1	JN632597	true	true			unstated
+antilope-cervicapra	NC_012098.1	AP003422	true	true			unstated
+antimora-microlepis	NC_083048.1	OR546209	true	true	Illumina	source	short_read
+anyperodon-leucogrammicus	NC_012709.1	GQ131336	true	true			unstated
+aonyx-capensis	NC_046484.1	MK309841	true	true	Illumina	source	short_read
+aonyx-cinereus	NC_035814.1	KY117535	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+aotus-azarai	NC_018115.1	JN161099	true	true			unstated
+aotus-lemurinus	NC_019799.1	FJ785421	true	true			unstated
+aotus-trivirgatus	NC_064150.1	OM328869	true	true	Illumina NovaSeq	source	short_read
+aotus-vociferans	NC_064163.1	OM328942	true	true	Illumina NovaSeq	source	short_read
+apalone-ferox	NC_014054.1	FJ890514	true	true			unstated
+apalone-spinifera	NC_021371.1	JF966197	true	true			unstated
+apeltes-quadracus	NC_011580.1	AB445126	true	true			unstated
+aphanopus-carbo	NC_022506.1	AP012944	true	true			unstated
+aphareus-rutilans	NC_063973.1	ON152703	true	true	Illumina	source	short_read
+aphelocoma-coerulescens	NC_051467.1	MN356421	true	true			unstated
+aphredoderus-sayanus	NC_004372.1	AP004403	true	true			unstated
+aphyosemion-australe	NC_044451.1	MK784237	true	true			unstated
+apis-mellifera	NC_001566.1	L06178	true	true			unstated
+aplysia-californica	NC_005827.1	AY569552	true	true			unstated
+aplysia-dactylomela	NC_015088.1	DQ991927	true	true			unstated
+aplysia-kurodai	NC_024260.1	KF148053	true	true	Sanger dideoxy sequencing	source	sanger
+apodemus-peninsulae	NC_016060.1	JN546584	true	true			unstated
+apodemus-sylvaticus	NC_049122.1	MN964126	true	true			unstated
+apricaphanius-iberus	NC_072677.1	OP884090	true	true			unstated
+aptenodytes-patagonicus	NC_045377.1	MK801135	true	true			unstated
+apteronotus-albifrons	NC_004692.1	AB054132	true	true			unstated
+apus-apus	NC_008540.1	AM237310	true	true			unstated
+aquarana-catesbeiana	NC_022696.1	KF049927	true	true	Sanger dideoxy sequencing	source	sanger
+aquila-chrysaetos	NC_024087.1	KF905228	true	true	Illumina	source	short_read
+aquila-fasciata	NC_029188.1	KP329567	true	true			unstated
+aquila-heliaca	NC_035806.1	KU646835	true	true			unstated
+aquila-nipalensis	NC_045042.1	MK860035	true	true	Sanger dideoxy sequencing	source	sanger
+ara-ambiguus	NC_082166.1	OR209187	true	true	Illumina	source	short_read
+ara-ararauna	NC_029319.1	KF010315	true	true			unstated
+ara-chloropterus	NC_047199.1	MN604694	true	true	Sanger dideoxy sequencing	source	sanger
+ara-glaucogularis	NC_026029.1	JQ782215	true	true			unstated
+ara-macao	NC_045076.1	MK351783	true	true	Illumina	source	short_read
+ara-militaris	NC_027839.1	KM611466	true	true	Sanger dideoxy sequencing	source	sanger
+aratinga-acuticaudata	NC_020325.1	JQ782214	true	true			unstated
+aratinga-nenday	NC_045371.1	MK965540	true	true	Sanger dideoxy sequencing	source	sanger
+archilochus-colubris	NC_010094.1	EF532935	true	true			unstated
+architeuthis-dux	NC_011581.1	FJ429092	true	true			unstated
+archoplites-interruptus	NC_066917.1	OL339404	true	true	Illumina	source	short_read
+arctica-islandica	NC_022709.1	KF363951	true	true	Sanger dideoxy sequencing; 454	source	short_read
+arctictis-binturong	NC_053969.1	MW257218	true	true			unstated
+arctocephalus-australis	NC_063561.1	MK616240	true	true	Sanger dideoxy sequencing	source	sanger
+arctocephalus-pusillus	NC_008417.1	AM181018	true	true			unstated
+arctonyx-collaris	NC_020645.1	HM106329	true	true			unstated
+arctoscopus-japonicus	NC_002812.1	AP003090	true	true			unstated
+ardea-cinerea	NC_025900.1	KJ190947	true	true			unstated
+ardea-purpurea	NC_025919.1	KJ190948	true	true			unstated
+ardenna-carneipes	NC_057527.1	MT948200	true	true	Illumina	source	short_read
+ardenna-pacifica	NC_057528.1	MT948201	true	true	Illumina	source	short_read
+arenaria-interpres	NC_003712.2	AY074885	true	true			unstated
+arenaria-melanocephala	NC_088445.1	OR242826	true	true	Illumina	source	short_read
+argopecten-irradians	NC_012977.1	DQ665851	true	true			unstated
+argyrops-bleekeri	NC_066506.1	MZ892909	true	true	Illumina	source	short_read
+argyrosomus-japonicus	NC_017610.1	JQ728563	true	true			unstated
+aristaeomorpha-foliacea	NC_039153.1	MG582604	true	true			unstated
+arius-maculatus	NC_045222.1	MN604079	true	true			unstated
+arripis-trutta	NC_015787.1	AP006810	true	true			unstated
+artibeus-jamaicensis	NC_002009.1	AF061340	true	true			unstated
+asio-flammeus	NC_027606.1	KP889214	true	true	Sanger dideoxy sequencing	source	sanger
+asio-otus	NC_039736.1	MG916810	true	true	Illumina	source	short_read
+aspidoscelis-sexlineatus	NC_067824.1	OK104714	true	true	Illumina	source	short_read
+ateles-belzebuth	NC_019800.1	FJ785422	true	true			unstated
+ateles-chamek	NC_064190.1	OM328892	true	true	Illumina NovaSeq	source	short_read
+ateles-geoffroyi	NC_064194.1	OM328927	true	true	Illumina NovaSeq	source	short_read
+ateles-marginatus	NC_064192.1	OM328896	true	true	Illumina NovaSeq	source	short_read
+ateles-paniscus	NC_064191.1	OM328893	true	true	Illumina NovaSeq	source	short_read
+atheresthes-evermanni	NC_083172.1	OR581014	true	true	Illumina	source	short_read
+atheresthes-stomias	NC_083173.1	OR581015	true	true	Illumina	source	short_read
+atherinops-affinis	NC_066928.1	OL806589	true	true	Illumina	source	short_read
+atherinopsis-californiensis	NC_067733.1	ON310810	true	true	Illumina	source	short_read
+atilax-paludinosus	NC_053980.1	MW257238	true	true			unstated
+atractosteus-spatula	NC_008131.1	AP004355	true	true			unstated
+atrichornis-clamosus	NC_053102.1	MN356363	true	true			unstated
+aulorhynchus-flavidus	NC_010268.1	AP009196	true	true			unstated
+austroglanis-gilli	NC_061919.1	MZ930072	true	true			unstated
+auxis-rochei	NC_005313.1	AB103467	true	true			unstated
+auxis-thazard	NC_005318.1	AB105447	true	true			unstated
+axis-axis	NC_020680.1	JN632599	true	true			unstated
+axis-porcinus	NC_020681.1	JN632600	true	true			unstated
+aythya-americana	NC_000877.1	AF090337	true	true			unstated
+aythya-ferina	NC_024602.1	KJ710708	true	true			unstated
+aythya-fuligula	NC_024595.1	KJ722069	true	true	Sanger dideoxy sequencing	source	sanger
+aythya-marila	NC_068663.1	OP326610	true	true	Illumina	source	short_read
+aythya-nyroca	NC_059801.1	MW287344	true	true	Illumina	source	short_read
+bagrus-docmak	NC_061386.1	MZ930113	true	true			unstated
+balaena-mysticetus	NC_005268.1	AJ554051	true	true			unstated
+balaeniceps-rex	NC_083265.1	MZ337602	true	true	Illumina	source	short_read
+balaenoptera-acutorostrata	NC_005271.1	AJ554054	true	true			unstated
+balaenoptera-borealis	NC_006929.1	AP006470	true	true			unstated
+balaenoptera-edeni	NC_007938.1	AB201258	true	true			unstated
+balaenoptera-musculus	NC_001601.1	X72204	true	true			unstated
+balaenoptera-physalus	NC_001321.1	X61145	true	true			unstated
+balearica-regulorum	NC_020569.1	FJ769841	true	true			unstated
+balistes-vetula	NC_011948.1	AP009204	true	true			unstated
+barbatula-barbatula	NC_027192.1	KP715096	true	true	Illumina	source	short_read
+barbus-barbus	NC_008654.1	AB238965	true	true			unstated
+basiliscus-vittatus	NC_012829.1	AB218883	true	true			unstated
+bassaricyon-gabbii	NC_066722.1	ON704723	true	true	Illumina	source	short_read
+bathymaster-signatus	NC_083046.1	OR546207	true	true	Illumina	source	short_read
+bathyraja-albomaculata	NC_037964.1	MF278964	true	true	Illumina	source	short_read
+bathyraja-interrupta	NC_082809.1	OR482567	true	true	Illumina	source	short_read
+bathyraja-maculata	NC_082800.1	OR482556	true	true	Illumina	source	short_read
+bathyraja-parmifera	NC_082774.1	OR482528	true	true	Illumina	source	short_read
+bathyraja-taranetzi	NC_082801.1	OR482557	true	true	Illumina	source	short_read
+batillaria-attramentaria	NC_047187.1	MN557850	true	true	Illumina	source	short_read
+batrachuperus-mustersi	NC_008090.1	DQ333821	true	true			unstated
+bdeogale-nigripes	NC_053970.1	MW257221	true	true			unstated
+berardius-bairdii	NC_005274.1	AJ554057	true	true			unstated
+beringraja-binoculata	NC_082808.1	OR482566	true	true	Illumina	source	short_read
+beryx-decadactylus	NC_004393.1	AP004430	true	true			unstated
+beryx-splendens	NC_003188.1	AP002939	true	true			unstated
+betta-splendens	NC_026581.1	AB571120	true	true			unstated
+birgus-latro	NC_045091.1	MN480450	true	true	Illumina	source	short_read
+bison-bison	NC_012346.1	EU177871	true	true			unstated
+bison-bonasus	NC_014044.1	HM045017	true	true			unstated
+blanus-cinereus	NC_012433.1	EU443257	true	true			unstated
+blarina-brevicauda	NC_042734.1	MH801938	true	true			unstated
+blarina-hylophaga	NC_042694.1	MH801939	true	true			unstated
+boa-constrictor	NC_007398.1	AB177354	true	true			unstated
+bolbometopon-muricatum	NC_033901.1	KY235362	true	true	Sanger dideoxy sequencing	source	sanger
+boleophthalmus-pectinirostris	NC_016195.1	JN631352	true	true			unstated
+bombina-bombina	NC_042501.1	EU115993	true	true			unstated
+bombina-orientalis	NC_006689.1	AY585338	true	true			unstated
+bombina-variegata	NC_009258.1	AY971143	true	true			unstated
+bombus-terrestris	NC_045179.1	MK570129	true	true	Sanger dideoxy sequencing	source	sanger
+bombycilla-garrulus	NC_053057.1	MN356253	true	true			unstated
+boreogadus-saida	NC_010121.1	AM919428	true	true			unstated
+bos-frontalis	NC_036020.1	MF614103	true	true			unstated
+bos-grunniens	NC_006380.3	EF494179	true	true			unstated
+bos-javanicus	NC_012706.1	FJ997262	true	true			unstated
+bos-taurus	NC_006853.1	AY526085	true	true			unstated
+boselaphus-tragocamelus	NC_020614.1	EF536350	true	true			unstated
+bostockia-porosa	NC_024847.1	AP014529	true	true			unstated
+botaurus-sinensis	NC_025925.1	KJ190958	true	true			unstated
+botaurus-stellaris	NC_025923.1	KJ190955	true	true			unstated
+brachidontes-pharaonis	NC_064131.1	ON464163	true	true			unstated
+brachymystax-lenok	NC_018342.1	JQ686731	true	true			unstated
+branchiostegus-japonicus	NC_012904.1	EU861052	true	true			unstated
+branchiostoma-belcheri	NC_004537.1	AB078191	true	true			unstated
+branta-bernicla	NC_027066.1	KJ680301	true	true	Sanger dideoxy sequencing	source	sanger
+branta-canadensis	NC_007011.1	DQ019124	true	true			unstated
+brosme-brosme	NC_063523.1	MT483610	true	true			unstated
+bubalus-bubalis	NC_006295.1	AY702618	true	true			unstated
+bubalus-depressicornis	NC_020615.1	EF536351	true	true			unstated
+bubalus-quarlesi	NC_060307.1	MK995024	true	true	Sanger dideoxy sequencing	source	sanger
+bubo-bubo	NC_038219.1	MG681083	true	true	Sanger dideoxy sequencing	source	sanger
+bubo-scandiacus	NC_038220.1	MG681084	true	true	Sanger dideoxy sequencing	source	sanger
+bubulcus-ibis	NC_025917.1	KJ190945	true	true			unstated
+buceros-bicornis	NC_038201.1	MF325011	true	true	Illumina	source	short_read
+bucorvus-leadbeateri	NC_015199.1	HM640209	true	true			unstated
+budorcas-taxicolor	NC_013069.1	FJ006534	true	true			unstated
+bungarus-fasciatus	NC_011393.1	EU579523	true	true			unstated
+bungarus-multicinctus	NC_084338.1	MZ570267	true	true	Sanger dideoxy sequencing	source	sanger
+butastur-indicus	NC_032362.1	AB830616	true	true			unstated
+buteo-buteo	NC_003128.3	AF380305	true	true			unstated
+buteo-lagopus	NC_029189.1	KP337337	true	true			unstated
+cacajao-calvus	NC_021967.1	KC959985	true	true	454; Sanger dideoxy sequencing	source	short_read
+cacatua-alba	NC_059710.1	MT920475	true	true			unstated
+cacatua-galerita	NC_059711.1	MT920476	true	true	BGI	source	short_read
+cacatua-goffiniana	NC_059712.1	MT920477	true	true	BGI	source	short_read
+cacatua-moluccensis	NC_020592.1	JF414239	true	true			unstated
+cacatua-pastinator	NC_040142.1	MH133973	true	true			unstated
+caenorhabditis-elegans	NC_001328.1	X54252	true	true			unstated
+caiman-crocodilus	NC_002744.2	AJ404872	true	true			unstated
+calcarius-ornatus	NC_053083.1	MN356331	true	true			unstated
+calidris-alba	NC_060627.1	MW168384	true	true	Illumina	source	short_read
+calidris-alpina	NC_060626.1	MW168383	true	true	Illumina	source	short_read
+calidris-pugnax	NC_046877.1	MN956840	true	true	Illumina	source	short_read
+calidris-ruficollis	NC_040990.1	MG736926	true	true	Sanger dideoxy sequencing	source	sanger
+calidris-tenuirostris	NC_046764.1	MK341548	true	true	Illumina	source	short_read
+caliraja-stellulata	NC_082793.1	OR482549	true	true	Illumina	source	short_read
+callicebus-cupreus	NC_021965.1	KC959986	true	true	454	source	short_read
+callicebus-donacophilus	NC_019801.1	FJ785423	true	true			unstated
+callimico-goeldii	NC_024628.1	KC592391	true	true	Illumina	source	short_read
+callinectes-sapidus	NC_006281.1	AY363392	true	true			unstated
+callithrix-geoffroyi	NC_021941.1	KC757388	true	true	454; Sanger dideoxy sequencing	source	short_read
+callithrix-jacchus	NC_025586.1	KM588314	true	true	Illumina	source	short_read
+callithrix-kuhlii	NC_027658.1	KR869628	true	true			unstated
+callithrix-penicillata	NC_030788.1	KR817256	true	true	Sanger dideoxy sequencing	source	sanger
+callithrix-pygmaea	NC_021942.1	KC757389	true	true	454; Sanger dideoxy sequencing	source	short_read
+callorhinchus-capensis	NC_014284.1	HM147136	true	true			unstated
+callorhinchus-milii	NC_014285.1	HM147137	true	true			unstated
+callosciurus-erythraeus	NC_025550.1	KM502568	true	true	Sanger dideoxy sequencing	source	sanger
+callosciurus-finlaysonii	NC_035817.1	KY117539	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+callosciurus-notatus	NC_035815.1	KY117542	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+callosciurus-prevostii	NC_035816.1	KY117543	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+callospermophilus-lateralis	NC_031210.1	KP698975	true	true	Sanger dideoxy sequencing	source	sanger
+caloenas-nicobarica	NC_031869.1	KX902248	true	true			unstated
+calotes-versicolor	NC_009683.1	AB183287	true	true			unstated
+calotomus-japonicus	NC_035427.1	AP017568	true	true			unstated
+calyptorhynchus-baudinii	NC_020594.1	JF414242	true	true			unstated
+camelus-bactrianus	NC_009628.2	EF212037	true	true			unstated
+camelus-dromedarius	NC_009849.1	EU159113	true	true			unstated
+campostoma-oligolepis	NC_084088.1	OR552064	true	true			unstated
+campylorhynchus-brunneicapillus	NC_029482.1	KU057376	true	true			unstated
+cancer-pagurus	NC_051962.1	MN334534	true	true	Illumina	source	short_read
+canis-aureus	NC_067757.1	OP345200	true	true			unstated
+canis-latrans	NC_008093.1	DQ480509	true	true			unstated
+canis-lupus	NC_008092.1	DQ480505	true	true			unstated
+capoeta-damascina	NC_031522.1	AP011183	true	true			unstated
+capra-caucasica	NC_020683.1	JN632609	true	true			unstated
+capra-falconeri	NC_020622.1	FJ207525	true	true			unstated
+capra-hircus	NC_005044.2	GU295658	true	true			unstated
+capra-ibex	NC_020623.1	FJ207526	true	true			unstated
+capra-nubiana	NC_020624.1	FJ207527	true	true			unstated
+capra-sibirica	NC_020626.1	FJ207529	true	true			unstated
+capreolus-capreolus	NC_020684.1	JN632610	true	true			unstated
+capricornis-crispus	NC_012096.1	AP003429	true	true			unstated
+capricornis-sumatraensis	NC_020629.1	FJ207534	true	true			unstated
+capros-aper	NC_010958.1	AP009159	true	true			unstated
+caracal-auratus	NC_028299.1	KP202255	true	true	Illumina	source	short_read
+caracal-caracal	NC_028306.1	KP202272	true	true	Illumina	source	short_read
+caracara-plancus	NC_044673.1	MN231451	true	true			unstated
+caranx-crysos	NC_057648.1	MW435597	true	true	Illumina	source	short_read
+caranx-ignobilis	NC_022932.1	KF649842	true	true			unstated
+caranx-melampygus	NC_004406.1	AP004445	true	true			unstated
+caranx-tille	NC_029421.1	KT805946	true	true	Sanger dideoxy sequencing	source	sanger
+carassius-auratus	NC_002079.1	AB006953	true	true			unstated
+carassius-carassius	NC_006291.1	AY714387	true	true			unstated
+carassius-gibelio	NC_014177.1	GU170401	true	true			unstated
+carcharhinus-acronotus	NC_024055.1	KF728380	true	true	Sanger dideoxy sequencing	source	sanger
+carcharhinus-amblyrhynchos	NC_047238.1	MT093205	true	true	Illumina	source	short_read
+carcharhinus-brachyurus	NC_057525.1	MT995631	true	true	Sanger dideoxy sequencing	source	sanger
+carcharhinus-brevipinna	NC_027081.1	KM244770	true	true			unstated
+carcharhinus-falciformis	NC_042256.1	MK092088	true	true	Nanopore	source	long_read
+carcharhinus-leucas	NC_023522.1	KF646785	true	true			unstated
+carcharhinus-limbatus	NC_057057.1	MW026667	true	true			unstated
+carcharhinus-longimanus	NC_025520.1	KM434158	true	true			unstated
+carcharhinus-obscurus	NC_020611.1	KC470543	true	true	454	source	short_read
+carcharhinus-plumbeus	NC_024596.1	KJ740750	true	true			unstated
+carcharhinus-sorrah	NC_023521.1	KF612341	true	true			unstated
+carcharias-taurus	NC_023520.1	KF569943	true	true	Sanger dideoxy sequencing	source	sanger
+carcharodon-carcharias	NC_022415.1	KC914387	true	true	Sanger dideoxy sequencing	source	sanger
+cardellina-canadensis	NC_041111.1	MK033135	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+cardinalis-cardinalis	NC_025618.1	KM078795	true	true			unstated
+carduelis-pinus	NC_025619.1	KM078796	true	true			unstated
+carduelis-psaltria	NC_025627.1	KM078806	true	true			unstated
+carduelis-spinus	NC_015198.1	HQ915866	true	true			unstated
+caretta-caretta	NC_016923.1	FR694649	true	true			unstated
+carettochelys-insculpta	NC_014048.1	FJ862792	true	true			unstated
+carollia-perspicillata	NC_022422.1	HG003309	true	true			unstated
+carpiodes-carpio	NC_005257.1	AY366087	true	true			unstated
+carpiodes-cyprinus	NC_056404.1	MW856858	true	true			unstated
+carpodacus-erythrinus	NC_025597.1	KM078766	true	true			unstated
+castor-canadensis	NC_033912.1	KY311838	true	true	Illumina; Pacific Biosciences	source	long_read
+casuarius-casuarius	NC_002778.2	AF338713	true	true			unstated
+cathartes-aura	NC_007628.1	AY463690	true	true			unstated
+catharus-fuscescens	NC_051013.1	MN356183	true	true			unstated
+catopuma-temminckii	NC_027115.1	KP271500	true	true	Sanger dideoxy sequencing	source	sanger
+catostomus-catostomus	NC_037013.1	MG570441	true	true			unstated
+catostomus-commersonii	NC_008647.1	AB127394	true	true			unstated
+catostomus-macrocheilus	NC_066945.1	OK637253	true	true	Illumina	source	short_read
+catostomus-microps	NC_066938.1	OK393698	true	true	Illumina	source	short_read
+catostomus-occidentalis	NC_066956.1	OL547383	true	true	Illumina	source	short_read
+catostomus-rimiculus	NC_066944.1	OK623678	true	true	Illumina	source	short_read
+catostomus-tahoensis	NC_066950.1	OL457401	true	true	Illumina	source	short_read
+cavia-aperea	NC_046949.1	MT017566	true	true			unstated
+cavia-porcellus	NC_000884.1	AJ222767	true	true			unstated
+cebus-albifrons	NC_002763.1	AJ309866	true	true			unstated
+cebus-apella	NC_064184.1	OM329025	true	true	Illumina NovaSeq	source	short_read
+cebus-olivaceus	NC_064165.1	OM328870	true	true	Illumina NovaSeq	source	short_read
+cecropis-daurica	NC_024107.1	KJ499911	true	true	Sanger dideoxy sequencing	source	sanger
+centrarchus-macropterus	NC_084076.1	OR552039	true	true			unstated
+centrolabrus-exoletus	NC_052764.1	MT410926	true	true			unstated
+centropristis-striata	NC_083055.1	OR546218	true	true	Illumina	source	short_read
+centropyge-bispinosa	NC_028287.1	KP013100	true	true	Illumina	source	short_read
+centropyge-flavissima	NC_027970.1	KT275257	true	true	Illumina	source	short_read
+cephalopholis-argus	NC_022142.1	KC593377	true	true	Sanger dideoxy sequencing	source	sanger
+cephalopholis-boenak	NC_021134.1	KC537759	true	true			unstated
+cephalopholis-fulva	NC_087987.1	PP032959	true	true	Illumina	source	short_read
+cephalopholis-miniata	NC_060350.1	MW423580	true	true	Sanger dideoxy sequencing	source	sanger
+cephalopholis-sexmaculata	NC_024100.1	KJ469385	true	true	Sanger dideoxy sequencing	source	sanger
+cephalopholis-spiloparaea	NC_065828.1	MW560468	true	true			unstated
+cephalopholis-taeniops	NC_086959.1	OQ420715	true	true	Illumina	source	short_read
+cephalopholis-urodeta	NC_030057.1	KU891818	true	true	Sanger dideoxy sequencing	source	sanger
+cephalophus-dorsalis	NC_020687.1	JN632615	true	true			unstated
+cephalophus-jentinki	NC_020688.1	JN632616	true	true			unstated
+cephalophus-natalensis	NC_020690.1	JN632618	true	true			unstated
+cephalophus-nigrifrons	NC_020691.1	JN632619	true	true			unstated
+cephalophus-rufilatus	NC_020693.1	JN632621	true	true			unstated
+cephalophus-silvicultor	NC_020694.1	JN632622	true	true			unstated
+cerastoderma-edule	NC_035728.1	MF374632	true	true			unstated
+ceratitis-capitata	NC_000857.1	AJ242872	true	true			unstated
+ceratotherium-simum	NC_001808.1	Y07726	true	true			unstated
+cercocebus-torquatus	NC_023964.1	KJ434959	true	true			unstated
+cercopithecus-diana	NC_023963.1	KJ434958	true	true			unstated
+cercopithecus-lhoesti	NC_023962.1	KJ434957	true	true			unstated
+cercopithecus-mitis	NC_023961.1	KJ434956	true	true			unstated
+cercopithecus-neglectus	NC_056341.1	MW160353	true	true	Sanger dideoxy sequencing	source	sanger
+certhia-brachydactyla	NC_053055.1	MN356251	true	true			unstated
+cervus-elaphus	NC_007704.2	AB245427	true	true			unstated
+cervus-nippon	NC_016178.1	HQ832482	true	true			unstated
+ceryle-rudis	NC_024280.1	KJ461938	true	true			unstated
+cetorhinus-maximus	NC_023266.1	KF597303	true	true			unstated
+chaenocephalus-aceratus	NC_015654.1	JF933907	true	true			unstated
+chaetodipterus-faber	NC_087988.1	PP032960	true	true	Illumina	source	short_read
+chaetodon-melannotus	NC_084408.1	OR726653	true	true	Illumina	source	short_read
+chaetophractus-vellerosus	NC_028561.1	KT818533	true	true			unstated
+chaetophractus-villosus	NC_028562.1	KT818535	true	true			unstated
+chaetura-pelagica	NC_028545.1	KT809406	true	true			unstated
+chamaeleo-chamaeleon	NC_012427.1	EF222198	true	true			unstated
+chamaeleo-dilepis	NC_012436.1	EF222189	true	true			unstated
+champsocephalus-gunnari	NC_018340.1	GU217678	true	true			unstated
+chanodichthys-mongolicus	NC_008683.1	AP009060	true	true			unstated
+chanos-chanos	NC_004693.1	AB054133	true	true			unstated
+charadrius-vociferus	NC_052771.1	MN356113	true	true			unstated
+charybdis-feriata	NC_024632.1	KF386147	true	true			unstated
+charybdis-hellerii	NC_060621.1	MW228889	true	true	Sanger dideoxy sequencing	source	sanger
+chasmistes-brevirostris	NC_066948.1	OL339405	true	true	Illumina	source	short_read
+cheilinus-undulatus	NC_013842.1	GU296101	true	true			unstated
+cheirogaleus-major	NC_035655.1	KM112323	true	true	454; Illumina	source	short_read
+cheirogaleus-medius	NC_065434.1	KM112328	true	true	454; Illumina	source	short_read
+chelidonichthys-kumu	NC_035059.1	KY379222	true	true	Sanger dideoxy sequencing	source	sanger
+chelmon-rostratus	NC_025953.1	KM978959	true	true	Sanger dideoxy sequencing	source	sanger
+chelodina-longicollis	NC_024667.1	KJ713173	true	true			unstated
+chelon-labrosus	NC_017883.1	JF911706	true	true			unstated
+chelonia-mydas	NC_000886.1	AB012104	true	true			unstated
+chelonoidis-carbonarius	NC_080265.1	OQ789392	true	true	Illumina	source	short_read
+chelus-fimbriata	NC_015989.1	HQ172156	true	true			unstated
+chelydra-serpentina	NC_011198.1	EF122793	true	true			unstated
+cherax-quadricarinatus	NC_022937.1	KF649850	true	true	Illumina	source	short_read
+chiloscyllium-plagiosum	NC_012570.1	FJ853422	true	true			unstated
+chimaera-monstrosa	NC_003136.1	AJ310140	true	true			unstated
+chinchilla-lanigera	NC_021386.1	JX312692	true	true			unstated
+chionodraco-hamatus	NC_029737.1	KT921282	true	true	Sanger dideoxy sequencing	source	sanger
+chionodraco-myersi	NC_010689.1	DQ526430	true	true			unstated
+chionoecetes-bairdi	NC_068523.1	OP429109	true	true	MGI2000	source	short_read
+chiropodomys-gliroides	NC_049121.1	MN964124	true	true			unstated
+chiropotes-albinasus	NC_021946.1	KC757393	true	true	454; Sanger dideoxy sequencing	source	short_read
+chlamydosaurus-kingii	NC_009421.1	EF090421	true	true			unstated
+chloebia-gouldiae	NC_050680.1	MN814842	true	true			unstated
+chloris-chloris	NC_082148.1	OR220880	true	true			unstated
+chlorocebus-aethiops	NC_007009.1	AY863426	true	true			unstated
+chlorodrepanis-flava	NC_025608.1	KM078780	true	true			unstated
+chlorurus-sordidus	NC_006355.1	AP006567	true	true			unstated
+choerodon-schoenleinii	NC_025771.1	KM487697	true	true			unstated
+choloepus-didactylus	NC_006924.1	AY960980	true	true			unstated
+choloepus-hoffmanni	NC_027964.1	KT213697	true	true			unstated
+chroicocephalus-ridibundus	NC_025649.1	KM577662	true	true			unstated
+chrosomus-erythrogaster	NC_031570.1	AP011276	true	true			unstated
+chrysemys-picta	NC_002073.3	AF069423	true	true			unstated
+chrysocyon-brachyurus	NC_024172.1	KJ508409	true	true			unstated
+chrysolophus-amherstiae	NC_020590.1	FJ752434	true	true			unstated
+chrysolophus-pictus	NC_014576.1	HQ221859	true	true			unstated
+cichla-temensis	NC_084244.1	OR601301	true	true	Illumina	source	short_read
+ciconia-boyciana	NC_002196.1	AB026193	true	true			unstated
+ciconia-ciconia	NC_002197.1	AB026818	true	true			unstated
+ciconia-nigra	NC_023946.1	KF906246	true	true	Sanger dideoxy sequencing	source	sanger
+cinclus-mexicanus	NC_051037.1	MN356233	true	true			unstated
+ciona-intestinalis	NC_017929.1	AM292218	true	true			unstated
+cirrhinus-cirrhosus	NC_033964.1	AP012150	true	true			unstated
+cirrhinus-molitorella	NC_022182.1	KF160921	true	true	Sanger dideoxy sequencing	source	sanger
+civettictis-civetta	NC_033378.1	KX891743	true	true			unstated
+clangula-hyemalis	NC_088446.1	OR242860	true	true	Illumina	source	short_read
+clarias-gariepinus	NC_027661.1	KT001082	true	true			unstated
+clethrionomys-rutilus	NC_081589.1	MN487102	true	true	Illumina	source	short_read
+clinostomus-elongatus	NC_031572.1	AP011280	true	true			unstated
+clupanodon-thrissa	NC_018600.1	JX075099	true	true			unstated
+clupea-harengus	NC_009577.1	AP009133	true	true			unstated
+clupea-pallasii	NC_009578.1	AP009134	true	true			unstated
+clupeonella-abrau	NC_086922.1	PP328542	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+clupeonella-cultriventris	NC_015109.1	AP009615	true	true			unstated
+cnephaeus-nilssonii	NC_084105.1	OR162376	true	true	PacBio	source	long_read
+cobitis-elongatoides	NC_023947.1	KF926686	true	true	Illumina	source	short_read
+coccothraustes-coccothraustes	NC_025614.1	KM078789	true	true			unstated
+coelorinchus-caelorhincus	NC_082995.1	OR546143	true	true	Illumina	source	short_read
+coilia-mystus	NC_019644.1	JX534238	true	true	Sanger dideoxy sequencing	source	sanger
+coilia-nasus	NC_009579.1	AP009135	true	true			unstated
+coleonyx-variegatus	NC_008774.1	AB114446	true	true			unstated
+colinus-virginianus	NC_024620.1	KJ914548	true	true			unstated
+colistium-nudipinnis	NC_023447.1	JQ639063	true	true			unstated
+colius-striatus	NC_052772.1	MN356125	true	true			unstated
+colobus-guereza	NC_006901.1	AY863427	true	true			unstated
+cololabis-saira	NC_003183.1	AP002932	true	true			unstated
+coluber-constrictor	NC_071936.1	OQ354767	true	true	Illumina	source	short_read
+columba-livia	NC_013978.1	GU908131	true	true			unstated
+comephorus-baikalensis	NC_036148.1	MF346886	true	true	Illumina	source	short_read
+condylura-cristata	NC_029762.1	KU144678	true	true	Illumina	source	short_read
+conepatus-chinga	NC_042596.1	MH362797	true	true	Illumina	source	short_read
+conger-erebennus	NC_062373.1	OM691699	true	true	Illumina; PacBio	source	long_read
+conger-myriaster	NC_002761.2	AB038381	true	true			unstated
+connochaetes-gnou	NC_020698.1	JN632626	true	true			unstated
+connochaetes-taurinus	NC_020699.1	JN632628	true	true			unstated
+conomurex-luhuanus	NC_035726.1	KY853669	true	true	Illumina	source	short_read
+cookeolus-japonicus	NC_082750.1	OR482498	true	true	Illumina	source	short_read
+coptodon-zillii	NC_026110.1	KM658974	true	true			unstated
+coracopsis-vasa	NC_027841.1	KM611468	true	true	Sanger dideoxy sequencing	source	sanger
+coragyps-atratus	NC_063525.1	MN720440	true	true			unstated
+corbicula-fluminea	NC_046410.1	MK392334	true	true	Illumina	source	short_read
+corbicula-japonica	NC_060659.1	MZ895053	true	true	Sanger dideoxy sequencing	source	sanger
+coregonus-artedi	NC_036393.1	MF621765	true	true			unstated
+coregonus-autumnalis	NC_027277.1	KP452507	true	true	454	source	short_read
+coregonus-clupeaformis	NC_020762.1	JQ390060	true	true			unstated
+coregonus-hoyi	NC_054288.1	MT667235	true	true			unstated
+coregonus-lavaretus	NC_002646.1	AB034824	true	true			unstated
+coregonus-muksun	NC_028593.1	KT824877	true	true	454	source	short_read
+coregonus-nasus	NC_020760.1	JQ390058	true	true			unstated
+coregonus-peled	NC_025576.1	KM361633	true	true	454	source	short_read
+coregonus-ussuriensis	NC_025648.1	KM210289	true	true	454	source	short_read
+corvus-bennetti	NC_069920.1	ON585705	true	true	Illumina	source	short_read
+corvus-brachyrhynchos	NC_026461.1	KP403809	true	true	Illumina	source	short_read
+corvus-corax	NC_034838.1	KX245133	true	true			unstated
+corvus-cornix	NC_062298.1	MT371428	true	true	454; Illumina	source	short_read
+corvus-coronoides	NC_035877.1	MF370524	true	true			unstated
+corvus-cryptoleucus	NC_034839.1	KX245139	true	true			unstated
+corvus-frugilegus	NC_002069.2	Y18522	true	true			unstated
+corvus-hawaiiensis	NC_026783.1	KP161620	true	true	IonTorrent	source	short_read
+coryphaena-equiselis	NC_087992.1	PP032965	true	true	Illumina	source	short_read
+cottus-aleuticus	NC_066923.1	OL688778	true	true	Illumina	source	short_read
+cottus-asper	NC_036145.1	MF326939	true	true	Illumina	source	short_read
+cottus-bairdii	NC_028277.1	KP013090	true	true	Illumina	source	short_read
+cottus-cognatus	NC_068673.1	OM736823	true	true			unstated
+cottus-confusus	NC_066922.1	OL547390	true	true	Illumina	source	short_read
+cottus-klamathensis	NC_066916.1	OK637260	true	true	Illumina	source	short_read
+cottus-perifretum	NC_036146.1	MF326940	true	true	Illumina	source	short_read
+cottus-pitensis	NC_066934.1	OL825612	true	true	Illumina	source	short_read
+cottus-poecilopus	NC_014849.1	EU332750	true	true			unstated
+cottus-pollux	NC_082940.1	OR421279	true	true	MGI2000	source	short_read
+coturnicops-noveboracensis	NC_063128.1	OM992117	true	true			unstated
+coturnix-chinensis	NC_004575.1	AB073301	true	true			unstated
+coturnix-japonica	NC_003408.1	AP003195	true	true			unstated
+couesius-plumbeus	NC_031568.1	AP011274	true	true			unstated
+crax-rubra	NC_024618.1	KJ914545	true	true			unstated
+cricetiscus-sungorus	NC_042823.1	MH166880	true	true	Sanger dideoxy sequencing	source	sanger
+cricetulus-barabensis	NC_053822.1	MN056361	true	true	Sanger dideoxy sequencing	source	sanger
+cricetus-cricetus	NC_037888.1	MF034880	true	true	Sanger dideoxy sequencing	source	sanger
+crocidura-leucodon	NC_070048.1	ON682409	true	true			unstated
+crocidura-russula	NC_056768.1	AY769263	true	true			unstated
+crocodylus-acutus	NC_015647.1	HM636894	true	true			unstated
+crocodylus-intermedius	NC_015648.1	HM636895	true	true			unstated
+crocodylus-johnstoni	NC_015238.2	HM488008	true	true			unstated
+crocodylus-moreletii	NC_015235.1	HQ585889	true	true			unstated
+crocodylus-niloticus	NC_008142.1	AJ810452	true	true			unstated
+crocodylus-novaeguineae	NC_015651.1	HM636896	true	true			unstated
+crocodylus-palustris	NC_014706.1	GU144286	true	true			unstated
+crocodylus-porosus	NC_008143.1	AJ810453	true	true			unstated
+crocodylus-rhombifer	NC_024513.1	JX292787	true	true			unstated
+crocodylus-siamensis	NC_008795.1	DQ353946	true	true			unstated
+crocuta-crocuta	NC_020670.1	JF894378	true	true			unstated
+cromileptes-altivelis	NC_021614.1	KC845547	true	true			unstated
+crossaster-papposus	NC_053361.1	MW046047	true	true			unstated
+crotalus-adamanteus	NC_041524.1	MH626511	true	true	Illumina	source	short_read
+crotalus-horridus	NC_014400.1	HM641837	true	true			unstated
+crotophaga-sulcirostris	NC_052800.1	MN356290	true	true			unstated
+cryolaternula-elliptica	NC_022846.1	KF534717	true	true			unstated
+cryptoprocta-ferox	NC_053961.1	MW257203	true	true			unstated
+crystallaria-asprella	NC_084078.1	OR552042	true	true			unstated
+ctenolabrus-rupestris	NC_052762.1	MT410914	true	true			unstated
+ctenopharyngodon-idella	NC_010288.1	EU391390	true	true			unstated
+cubiceps-pauciradiatus	NC_013150.1	AP006038	true	true			unstated
+culaea-inconstans	NC_011577.1	AB445125	true	true			unstated
+cuniculus-paca	NC_079967.1	OQ759607	true	true			unstated
+cuon-alpinus	NC_013445.1	GU063864	true	true			unstated
+cuora-amboinensis	NC_014769.1	FJ763736	true	true			unstated
+cuora-flavomarginata	NC_012054.1	EU708434	true	true			unstated
+cuora-trifasciata	NC_022857.1	KF574821	true	true			unstated
+curruca-curruca	NC_046417.1	MG681102	true	true			unstated
+cyanopica-cyanus	NC_015824.1	JN108020	true	true			unstated
+cyclemys-dentata	NC_018793.1	JX455823	true	true			unstated
+cycleptus-elongatus	NC_008645.1	AB126082	true	true			unstated
+cyclopterus-lumpus	NC_069208.1	ON260847	true	true			unstated
+cygnus-atratus	NC_012843.1	FJ379295	true	true			unstated
+cygnus-columbianus	NC_007691.1	DQ083161	true	true			unstated
+cygnus-cygnus	NC_027095.1	KP981363	true	true	IonTorrent	source	short_read
+cygnus-olor	NC_027096.1	KP981364	true	true	IonTorrent	source	short_read
+cymatogaster-aggregata	NC_009059.1	AP009128	true	true			unstated
+cynictis-penicillata	NC_053965.1	MW257211	true	true			unstated
+cynoglossus-abbreviatus	NC_014881.1	GQ380410	true	true			unstated
+cynoglossus-joyneri	NC_030256.1	KU754054	true	true	Sanger dideoxy sequencing	source	sanger
+cynomys-ludovicianus	NC_026706.1	KP326310	true	true	Sanger dideoxy sequencing	source	sanger
+cynopterus-brachyotis	NC_026465.1	KM659865	true	true			unstated
+cynopterus-sphinx	NC_046902.1	MN816305	true	true	Illumina; IonTorrent; Sanger dideoxy sequencing	source	short_read
+cynoscion-jamaicensis	NC_087993.1	PP032966	true	true	Illumina	source	short_read
+cynoscion-striatus	NC_087995.1	PP032968	true	true	Illumina	source	short_read
+cyprinella-galactura	NC_033928.1	AP012087	true	true			unstated
+cyprinella-lutrensis	NC_008643.1	AB070206	true	true			unstated
+cyprinella-spiloptera	NC_008103.1	DQ536422	true	true			unstated
+cyprinodon-macularius	NC_056955.1	MW300330	true	true			unstated
+cyprinodon-tularosa	NC_028292.1	KP013105	true	true	Illumina	source	short_read
+cyprinus-carpio	NC_001606.1	X61010	true	true			unstated
+daboia-russellii	NC_011391.1	EU913478	true	true			unstated
+dactylopsila-trivirgata	NC_008134.1	AB241054	true	true			unstated
+dallia-pectoralis	NC_004592.1	AP004102	true	true			unstated
+dama-dama	NC_020700.1	JN632629	true	true			unstated
+damaliscus-lunatus	NC_023543.1	KF955546	true	true	Sanger dideoxy sequencing	source	sanger
+damaliscus-pygargus	NC_020627.1	FJ207530	true	true			unstated
+danio-rerio	NC_002333.2	AC024175	true	true			unstated
+daphoenositta-chrysoptera	NC_053096.1	MN356356	true	true			unstated
+daption-capense	NC_043899.1	MH924023	true	true			unstated
+dasyatis-pastinaca	NC_057976.1	MT702384	true	true	Illumina	source	short_read
+dasycercus-cristicauda	NC_057634.1	MT762173	true	true	Illumina	source	short_read
+dasycottus-setiger	NC_058017.1	MW420925	true	true	Sanger dideoxy sequencing	source	sanger
+dasypus-novemcinctus	NC_001821.1	Y11832	true	true			unstated
+dasypus-septemcinctus	NC_028569.1	KT818546	true	true			unstated
+dasyurus-hallucatus	NC_007630.1	AY795973	true	true			unstated
+daubentonia-madagascariensis	NC_010299.1	AM905039	true	true			unstated
+decapterus-macarellus	NC_026718.1	KM986880	true	true			unstated
+decapterus-maruadsi	NC_024556.1	KJ004518	true	true			unstated
+delichon-urbicum	NC_050298.1	MN832895	true	true	Illumina	source	short_read
+delphinapterus-leucas	NC_034236.1	KY444734	true	true	Illumina	source	short_read
+delphinus-delphis	NC_036415.1	MF669496	true	true	Illumina	source	short_read
+deltistes-luxatus	NC_054258.1	MT501373	true	true			unstated
+dendrocopos-leucotos	NC_029862.1	KU131555	true	true	Illumina	source	short_read
+dendrocopos-major	NC_028174.1	KT350609	true	true	IonTorrent	source	short_read
+dentex-angolensis	NC_044097.1	MH593823	true	true	Illumina	source	short_read
+dentex-dentex	NC_037755.1	MG727892	true	true	Illumina	source	short_read
+dentex-gibbosus	NC_037731.1	MG653593	true	true	Illumina	source	short_read
+dermophis-mexicanus	NC_020138.1	GQ244467	true	true			unstated
+desmodus-rotundus	NC_022423.1	HG003310	true	true			unstated
+diagramma-pictum	NC_009856.1	AP009167	true	true			unstated
+diaphus-theta	NC_068841.1	ON005612	true	true	Oxford Nanopore	source	long_read
+dicentrarchus-labrax	NC_026074.1	KJ168065	true	true			unstated
+dicerorhinus-sumatrensis	NC_012684.1	FJ905816	true	true			unstated
+diceros-bicornis	NC_012682.1	FJ905814	true	true			unstated
+dicrostonyx-groenlandicus	NC_034313.1	KX712239	true	true	Sanger dideoxy sequencing	source	sanger
+didelphis-aurita	NC_057516.1	MT892662	true	true			unstated
+didelphis-marsupialis	NC_057518.1	MT892664	true	true	Illumina	source	short_read
+didelphis-virginiana	NC_001610.1	Z29573	true	true			unstated
+diodon-hystrix	NC_034657.1	KY677758	true	true	Illumina	source	short_read
+diopsittaca-nobilis	NC_052711.1	MT740319	true	true	Sanger dideoxy sequencing	source	sanger
+diphylla-ecaudata	NC_037138.1	KU743911	true	true			unstated
+diplodus-cervinus	NC_064339.1	ON417691	true	true	Illumina	source	short_read
+diplodus-sargus	NC_057561.1	MW559786	true	true	Illumina	source	short_read
+dipodomys-merriami	NC_068807.1	OM963001	true	true	Illumina	source	short_read
+dipodomys-spectabilis	NC_068808.1	OM963002	true	true	Illumina	source	short_read
+dipturus-batis	NC_046684.1	MN820820	true	true	Illumina	source	short_read
+dipturus-innominatus	NC_037962.1	MF278961	true	true	Illumina	source	short_read
+dipturus-oxyrinchus	NC_037967.1	MF278968	true	true	Illumina	source	short_read
+dipturus-trachyderma	NC_027521.1	KR152643	true	true	Illumina	source	short_read
+dissostichus-eleginoides	NC_018135.1	AB723627	true	true			unstated
+dolloidraco-longedorsalis	NC_057667.1	MT559886	true	true	Illumina	source	short_read
+dorosoma-cepedianum	NC_008107.1	DQ536426	true	true			unstated
+dorosoma-petenense	NC_009580.1	AP009136	true	true			unstated
+dromaius-novaehollandiae	NC_002784.1	AF338711	true	true			unstated
+drosophila-melanogaster	NC_024511.2	KJ947872	true	true	Sanger dideoxy sequencing; PacBio	source	long_read
+drymodes-brunneopygia	NC_053105.1	MN356369	true	true			unstated
+dryobates-minor	NC_061952.1	OL597538	true	true	Illumina	source	short_read
+dryobates-pubescens	NC_027936.1	KT119343	true	true			unstated
+dryocopus-pileatus	NC_008546.1	DQ780879	true	true			unstated
+dryophytes-versicolor	NC_045917.1	MH087467	true	true	Sanger dideoxy sequencing	source	sanger
+dugong-dugon	NC_003314.1	AJ421723	true	true			unstated
+echinops-telfairi	NC_002631.2	AJ400734	true	true			unstated
+echis-carinatus	NC_060591.1	MW242821	true	true	IonTorrent	source	short_read
+echis-coloratus	NC_060592.1	MW242822	true	true	IonTorrent	source	short_read
+echymipera-rufescens	NC_007632.1	AY795975	true	true			unstated
+eclectus-roratus	NC_027842.1	KM611469	true	true	Sanger dideoxy sequencing	source	sanger
+egretta-garzetta	NC_023981.1	KJ192197	true	true	Sanger dideoxy sequencing	source	sanger
+egretta-sacra	NC_025920.1	KJ190951	true	true			unstated
+eidolon-helvum	NC_046903.1	MN816307	true	true	Illumina; IonTorrent; Sanger dideoxy sequencing	source	short_read
+elagatis-bipinnulata	NC_029880.1	KT824759	true	true	Sanger dideoxy sequencing	source	sanger
+elaphe-moellendorffi	NC_063502.1	MK408450	true	true	Sanger dideoxy sequencing	source	sanger
+elaphe-schrenckii	NC_027605.1	KP888955	true	true			unstated
+elaphe-taeniura	NC_025275.1	KC990021	true	true	Sanger dideoxy sequencing	source	sanger
+elaphodus-cephalophus	NC_008749.1	DQ873526	true	true			unstated
+elaphurus-davidianus	NC_018358.1	JN399997	true	true			unstated
+elassoma-alabamae	NC_072173.1	OP690159	true	true	Oxford Nanopore Minion	source	long_read
+elassoma-zonatum	NC_011388.1	AP006813	true	true			unstated
+electrona-carlsbergi	NC_036348.1	MF596172	true	true	Sanger dideoxy sequencing	source	sanger
+eledone-cirrhosa	NC_069997.1	ON367818	true	true	Illumina	source	short_read
+eleginops-maclovinus	NC_033386.1	KY038381	true	true	Illumina	source	short_read
+eleginus-gracilis	NC_045206.1	MH061044	true	true			unstated
+elephantulus-intufi	NC_073533.1	ON675570	true	true	Illumina	source	short_read
+elephas-maximus	NC_005129.2	DQ316068	true	true			unstated
+eliomys-quercinus	NC_059783.1	MN935777	true	true	Illumina	source	short_read
+ellobius-talpinus	NC_054160.1	MT483993	true	true			unstated
+elseya-dentata	NC_041288.1	KY776454	true	true			unstated
+emberiza-aureola	NC_022150.1	KF111713	true	true			unstated
+emberiza-schoeniclus	NC_062087.1	MT081419	true	true	Sanger dideoxy sequencing	source	sanger
+embiotoca-jacksoni	NC_029362.1	KU530212	true	true	Illumina	source	short_read
+embiotoca-lateralis	NC_066926.1	OL806587	true	true	Illumina	source	short_read
+emmelichthys-nitidus	NC_088577.1	OR974330	true	true	Illumina	source	short_read
+emydura-macquarii	NC_041302.1	KY776441	true	true			unstated
+engraulis-encrasicolus	NC_009581.1	AP009137	true	true			unstated
+engraulis-japonicus	NC_003097.1	AB040676	true	true			unstated
+engraulis-mordax	NC_041097.1	MH613715	true	true	Sanger dideoxy sequencing	source	sanger
+engraulis-ringens	NC_042728.1	MH732975	true	true	Sanger dideoxy sequencing	source	sanger
+enhydra-lutris	NC_009692.1	AB291077	true	true			unstated
+entosphenus-minimus	NC_066903.1	OK583898	true	true	Illumina	source	short_read
+entosphenus-tridentatus	NC_066902.1	OK583897	true	true	Illumina	source	short_read
+eolophus-roseicapilla	NC_040154.1	MH133971	true	true			unstated
+eopsaltria-australis	NC_019665.1	JX901073	true	true	454	source	short_read
+eopsaltria-georgiana	NC_027230.1	KM374635	true	true			unstated
+eopsetta-jordani	NC_083049.1	OR546211	true	true	Illumina	source	short_read
+epinephelus-adscensionis	NC_087997.1	PP032971	true	true	Illumina	source	short_read
+epinephelus-areolatus	NC_020785.1	KC466080	true	true			unstated
+epinephelus-bleekeri	NC_022848.1	KF556648	true	true			unstated
+epinephelus-chlorostigma	NC_032086.1	KR872887	true	true			unstated
+epinephelus-coioides	NC_011111.1	EU043376	true	true			unstated
+epinephelus-fuscoguttatus	NC_020046.1	JX119192	true	true			unstated
+epinephelus-latifasciatus	NC_020784.1	KC480177	true	true			unstated
+epinephelus-marginatus	NC_087998.1	PP032972	true	true	Illumina	source	short_read
+epinephelus-merra	NC_022509.1	AP005991	true	true			unstated
+epinephelus-morio	NC_087999.1	PP032973	true	true	Illumina	source	short_read
+epinephelus-multinotatus	NC_068846.1	ON000909	true	true	Illumina	source	short_read
+epinephelus-polyphekadion	NC_072956.1	OP980557	true	true	Illumina	source	short_read
+epinephelus-quoyans	NC_021450.1	KC790539	true	true			unstated
+epinephelus-tukula	NC_024039.1	KJ414470	true	true			unstated
+epomophorus-gambianus	NC_029375.1	KT963027	true	true			unstated
+epomophorus-wahlbergi	NC_046907.1	MN816317	true	true	Illumina; IonTorrent; Sanger dideoxy sequencing	source	short_read
+eptesicus-serotinus	NC_022474.1	KF111725	true	true			unstated
+equus-asinus	NC_001788.1	X97337	true	true			unstated
+equus-caballus	NC_091244.1	CM084063	true	true	Illumina; Oxford Nanopore PromethION; PacBio Sequel	source	long_read
+equus-grevyi	NC_020432.2	JX312722	true	true	Sanger dideoxy sequencing; 454; Illumina	source	short_read
+equus-hemionus	NC_016061.1	HM118851	true	true			unstated
+equus-kiang	NC_020433.1	JX312731	true	true	Sanger dideoxy sequencing; 454; Illumina	source	short_read
+equus-quagga	NC_044858.1	JX312733	true	true			unstated
+equus-zebra	NC_020476.1	JX312724	true	true	Sanger dideoxy sequencing; 454; Illumina	source	short_read
+eremophila-alpestris	NC_048470.1	MH061202	true	true	Sanger dideoxy sequencing	source	sanger
+erilepis-zonifer	NC_026889.1	KP682335	true	true	Sanger dideoxy sequencing	source	sanger
+erimyzon-oblongus	NC_013064.1	AP011228	true	true			unstated
+erinaceus-concolor	NC_087902.1	OQ928158	true	true			unstated
+erinaceus-europaeus	NC_002080.2	X88898	true	true			unstated
+eriocheir-sinensis	NC_006992.1	AY274302	true	true			unstated
+erpetoichthys-calabaricus	NC_005251.1	AY442348	true	true			unstated
+erythrocebus-patas	NC_021947.1	KC757394	true	true	454; Sanger dideoxy sequencing	source	short_read
+erythrocles-schlegelii	NC_088579.1	OR974333	true	true	Illumina	source	short_read
+eschrichtius-robustus	NC_005270.1	AJ554053	true	true			unstated
+escualosa-thoracata	NC_016706.1	AP011601	true	true			unstated
+esox-lucius	NC_004593.1	AP004103	true	true			unstated
+esox-masquinongy	NC_054291.1	MT667256	true	true			unstated
+esox-niger	NC_054289.1	MT667244	true	true			unstated
+etelis-coruscans	NC_086877.1	PP265274	true	true	Illumina	source	short_read
+etheostoma-blennioides	NC_056396.1	MW856844	true	true			unstated
+etheostoma-caeruleum	NC_035660.1	KY660678	true	true	Illumina	source	short_read
+etheostoma-flabellare	NC_042248.1	MH301059	true	true			unstated
+etheostoma-gracile	NC_084081.1	OR552048	true	true			unstated
+etheostoma-microperca	NC_086507.1	OR492265	true	true	Illumina	source	short_read
+etheostoma-okaloosae	NC_035493.1	KY747492	true	true	454	source	short_read
+etheostoma-olmstedi	NC_042389.1	MH301061	true	true			unstated
+etheostoma-radiosum	NC_005254.2	AY341348	true	true			unstated
+etheostoma-zonale	NC_056397.1	MW856845	true	true			unstated
+etrumeus-teres	NC_009583.1	AP009139	true	true			unstated
+eubalaena-australis	NC_006930.1	AP006473	true	true			unstated
+eubalaena-glacialis	NC_037444.1	MF409247	true	true	Illumina	source	short_read
+eublepharis-macularius	NC_033383.1	AB738955	true	true			unstated
+eucyclogobius-newberryi	NC_028288.1	KP013101	true	true	Illumina	source	short_read
+eudocimus-ruber	NC_027504.1	KR862292	true	true			unstated
+eudorcas-rufifrons	NC_020702.1	JN632634	true	true			unstated
+eudorcas-thomsonii	NC_039669.1	MG603682	true	true	Illumina	source	short_read
+eudyptula-minor	NC_004538.1	AF362763	true	true			unstated
+eulemur-fulvus	NC_012766.1	AB371086	true	true			unstated
+eulemur-macaco	NC_012771.1	AB371088	true	true			unstated
+eulemur-mongoz	NC_010300.1	AM905040	true	true			unstated
+eulemur-rubriventer	NC_026098.1	KJ944244	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+eumetopias-jubatus	NC_004030.2	AJ428578	true	true			unstated
+euphagus-cyanocephalus	NC_018827.1	JX516072	true	true			unstated
+euphausia-pacifica	NC_016184.1	EU587005	true	true			unstated
+euphractus-sexcinctus	NC_028571.1	KT818548	true	true			unstated
+euthynnus-affinis	NC_025934.1	KM651783	true	true			unstated
+euthynnus-alletteratus	NC_004530.1	AB099716	true	true			unstated
+eviota-epiphanes	NC_083186.1	OR575556	true	true	Illumina	source	short_read
+evynnis-tumifrons	NC_029479.1	KT724963	true	true	Sanger dideoxy sequencing	source	sanger
+exoglossum-maxillingua	NC_037015.1	MG570453	true	true			unstated
+falco-cherrug	NC_026715.1	KP337902	true	true	Illumina	source	short_read
+falco-columbarius	NC_025579.1	KM264304	true	true			unstated
+falco-naumanni	NC_054728.1	CM030192	true	true	PacBio Sequel I CLR; Illumina NovaSeq; Arima Genomics Hi-C; Bionano Genomics DLS	source	long_read
+falco-peregrinus	NC_000878.1	AF090338	true	true			unstated
+falco-rusticolus	NC_029359.1	KT989235	true	true	Illumina	source	short_read
+falco-sparverius	NC_008547.1	DQ780880	true	true			unstated
+falco-subbuteo	NC_057089.1	MW266990	true	true	Sanger dideoxy sequencing	source	sanger
+falco-tinnunculus	NC_011307.1	EU196361	true	true			unstated
+falcunculus-frontatus	NC_053104.1	MN356367	true	true			unstated
+felis-catus	NC_001700.1	U20753	true	true			unstated
+felis-chaus	NC_028307.1	KP202274	true	true	Illumina	source	short_read
+felis-margarita	NC_028308.1	KP202276	true	true			unstated
+felis-nigripes	NC_028309.1	KP202277	true	true	Illumina	source	short_read
+felis-silvestris	NC_028310.1	KP202278	true	true	Illumina	source	short_read
+ficedula-albicollis	NC_021621.1	KF293721	true	true			unstated
+forcipiger-flavissimus	NC_063495.1	MZ329988	true	true	Illumina	source	short_read
+forpus-passerinus	NC_027843.1	KM611470	true	true	Sanger dideoxy sequencing	source	sanger
+fossa-fossana	NC_053959.1	MW257201	true	true			unstated
+fregata-magnificens	NC_052797.1	MN356268	true	true			unstated
+fringilla-coelebs	NC_025599.1	KM078769	true	true			unstated
+fringilla-montifringilla	NC_024048.1	JQ922259	true	true			unstated
+fukomys-damarensis	NC_027742.1	KR861699	true	true	Illumina	source	short_read
+fulica-atra	NC_025500.1	KF644582	true	true			unstated
+fundulus-catenatus	NC_084079.1	OR552045	true	true			unstated
+fundulus-grandis	NC_012377.1	FJ445396	true	true			unstated
+fundulus-heteroclitus	NC_012312.1	FJ445402	true	true			unstated
+fundulus-zebrinus	NC_056698.1	MW300328	true	true			unstated
+gadus-chalcogrammus	NC_004449.1	AB094061	true	true			unstated
+gadus-macrocephalus	NC_036931.1	KY296294	true	true			unstated
+gadus-morhua	NC_002081.1	X99772	true	true			unstated
+gadus-ogac	NC_012323.1	DQ356941	true	true			unstated
+galago-moholi	NC_021949.1	KC757396	true	true	454; Sanger dideoxy sequencing	source	short_read
+galago-senegalensis	NC_012761.1	AB371092	true	true			unstated
+galaxias-fuscus	NC_081026.1	OP882639	true	true	Illumina	source	short_read
+galaxias-olidus	NC_081027.1	OP882640	true	true	Illumina	source	short_read
+galaxiella-nigrostriata	NC_008448.1	AP006853	true	true			unstated
+galegeeska-rufescens	NC_073532.1	ON675567	true	true	Illumina	source	short_read
+galeocerdo-cuvier	NC_022193.1	KF111728	true	true			unstated
+galeorhinus-galeus	NC_084376.1	OR702582	true	true	Nanopore	source	long_read
+galeus-melastomus	NC_049881.1	MT410907	true	true			unstated
+galictis-vittata	NC_053973.1	MW257225	true	true			unstated
+galidia-elegans	NC_053958.1	MW257200	true	true			unstated
+gallinago-delicata	NC_088447.1	OR242906	true	true	Illumina	source	short_read
+gallinago-gallinago	NC_060467.1	MZ157405	true	true	Illumina	source	short_read
+gallinula-chloropus	NC_015236.1	HQ896036	true	true			unstated
+gallus-gallus	NC_053523.1	CM028585	true	true	PacBio Sequel I CLR; Illumina NovaSeq; Arima Genomics Hi-C; Bionano Genomics DLS	source	long_read
+gambusia-affinis	NC_004388.1	AP004422	true	true			unstated
+gambusia-holbrooki	NC_028274.1	KP013085	true	true	Illumina	source	short_read
+gari-elongata	NC_042422.1	MG978992	true	true			unstated
+garra-rufa	NC_022941.1	AP011197	true	true			unstated
+garrulus-glandarius	NC_015810.1	JN018413	true	true			unstated
+gasterosteus-aculeatus	NC_041244.1	MH205729	true	true	Illumina	source	short_read
+gasterosteus-wheatlandi	NC_011570.1	AB445129	true	true			unstated
+gavia-arctica	NC_041165.1	MH064399	true	true	NGS; Sanger dideoxy sequencing	source	sanger
+gavia-stellata	NC_007007.1	AY293618	true	true			unstated
+gavialis-gangeticus	NC_008241.1	AB079596	true	true			unstated
+gazella-cuvieri	NC_020704.1	JN632636	true	true			unstated
+gazella-dorcas	NC_020705.1	JN632638	true	true			unstated
+gazella-gazella	NC_020707.1	JN632640	true	true			unstated
+gazella-leptoceros	NC_020708.1	JN632641	true	true			unstated
+gazella-subgutturosa	NC_020710.1	JN632644	true	true			unstated
+gekko-gecko	NC_007627.1	AY282753	true	true			unstated
+gelochelidon-nilotica	NC_036344.1	MF582631	true	true	Sanger dideoxy sequencing	source	sanger
+genetta-genetta	NC_053968.1	MW257215	true	true			unstated
+genidens-barbus	NC_088000.1	PP032974	true	true	Illumina	source	short_read
+geochelone-elegans	NC_041096.1	MH459393	true	true			unstated
+geoclemys-hamiltonii	NC_065016.1	ON243873	true	true			unstated
+geococcyx-californianus	NC_011711.1	EU410488	true	true			unstated
+gerres-filamentosus	NC_037846.1	MG386479	true	true			unstated
+geukensia-demissa	NC_061903.1	MW727511	true	true	Illumina	source	short_read
+gila-alutacea	NC_033927.1	AP012086	true	true			unstated
+gila-robusta	NC_008105.1	DQ536424	true	true			unstated
+gillichthys-mirabilis	NC_012906.1	FJ211845	true	true			unstated
+ginglymostoma-cirratum	NC_030189.1	KU904394	true	true			unstated
+giraffa-camelopardalis	NC_024820.1	JN632645	true	true			unstated
+girella-punctata	NC_013137.1	AP011060	true	true			unstated
+glaucomys-volans	NC_050026.1	MT259089	true	true	Illumina	source	short_read
+glis-glis	NC_001892.1	AJ001562	true	true			unstated
+globicephala-macrorhynchus	NC_019578.2	HM060333	true	true			unstated
+globicephala-melas	NC_083222.1	OY734062	true	true			unstated
+glossanodon-semifasciatus	NC_004595.1	AP004105	true	true			unstated
+glossophaga-soricina	NC_065682.1	ON321893	true	true	Illumina	source	short_read
+glyptocephalus-stelleri	NC_060723.1	MT258402	true	true	Illumina	source	short_read
+glyptosternon-maculatum	NC_021597.1	JQ026251	true	true			unstated
+gnathanodon-speciosus	NC_054367.1	MT922005	true	true	Illumina	source	short_read
+gnathopogon-strigatus	NC_022189.1	AP011361	true	true			unstated
+gobio-gobio	NC_008662.1	AB239596	true	true			unstated
+gobiobotia-pappenheimi	NC_032293.1	KU314697	true	true			unstated
+gobionotothen-gibberifrons	NC_070195.1	OP804623	true	true			unstated
+gobiusculus-flavescens	NC_052761.1	MT410909	true	true			unstated
+gonatodes-albogularis	NC_035153.1	AB612271	true	true			unstated
+gorilla-gorilla	NC_011120.1	X93347	true	true			unstated
+gracilinanus-agilis	NC_054268.1	MT219489	true	true	BGISEQ-500	source	short_read
+grallina-cyanoleuca	NC_059916.1	MW133233	true	true	Illumina	source	short_read
+grammomys-dolichurus	NC_053797.1	MN807581	true	true			unstated
+grampus-griseus	NC_012062.1	EU557095	true	true			unstated
+grus-americana	NC_020576.1	FJ769848	true	true			unstated
+grus-antigone	NC_020581.1	FJ769854	true	true			unstated
+grus-canadensis	NC_020582.1	FJ769855	true	true			unstated
+grus-grus	NC_020577.1	FJ769849	true	true			unstated
+grus-japonensis	NC_020575.1	FJ769847	true	true			unstated
+grus-leucogeranus	NC_020574.1	FJ769846	true	true			unstated
+grus-monacha	NC_020578.1	FJ769850	true	true			unstated
+grus-rubicunda	NC_020580.1	FJ769853	true	true			unstated
+grus-vipio	NC_021368.1	FJ769852	true	true			unstated
+guaruba-guarouba	NC_026031.1	JQ782217	true	true			unstated
+gulo-gulo	NC_009685.1	AM711901	true	true			unstated
+gymnobelideus-leadbeateri	NC_053898.1	MW042388	true	true	Illumina	source	short_read
+gymnocanthus-detrisus	NC_082787.1	OR482543	true	true	Illumina	source	short_read
+gymnocanthus-herzensteini	NC_034651.1	KX148474	true	true	Illumina	source	short_read
+gymnocanthus-pistilliger	NC_082786.1	OR482542	true	true	Illumina	source	short_read
+gymnocanthus-tricuspis	NC_045927.1	MK204282	true	true			unstated
+gymnocephalus-cernua	NC_025785.1	KM978956	true	true	Sanger dideoxy sequencing	source	sanger
+gymnocypris-eckloni	NC_061707.1	MN871986	true	true	Illumina	source	short_read
+gymnocypris-firmispinatus	NC_056384.1	MW222391	true	true	Sanger dideoxy sequencing	source	sanger
+gymnocypris-przewalskii	NC_019604.1	JQ004278	true	true			unstated
+gymnothorax-fimbriatus	NC_063493.1	MZ297479	true	true	Illumina	source	short_read
+gyps-fulvus	NC_036050.1	KX893247	true	true	Sanger dideoxy sequencing	source	sanger
+gyrinophilus-palleucus	NC_028297.1	KP013111	true	true	Illumina	source	short_read
+gyrinophilus-porphyriticus	NC_006341.1	AY728230	true	true			unstated
+haematopus-ostralegus	NC_034237.1	KY419886	true	true	Sanger dideoxy sequencing	source	sanger
+haemorhous-cassinii	NC_025613.1	KM078786	true	true			unstated
+haemorhous-mexicanus	NC_025610.1	KM078782	true	true			unstated
+halcyon-smyrnensis	NC_035746.1	KY940559	true	true	Sanger dideoxy sequencing	source	sanger
+haliaeetus-albicilla	NC_040858.1	MK043028	true	true	Sanger dideoxy sequencing	source	sanger
+haliastur-indus	NC_066800.1	OP133375	true	true	Illumina; Oxford Nanopore	source	long_read
+halichoerus-grypus	NC_001602.1	X72004	true	true			unstated
+haliotis-rufescens	NC_036928.1	KX260956	true	true	Illumina	source	short_read
+haliotis-tuberculata	NC_013708.1	FJ599667	true	true			unstated
+halosauropsis-macrochir	NC_035885.1	AP018130	true	true			unstated
+hapalemur-griseus	NC_021950.1	KC757397	true	true	454; Sanger dideoxy sequencing	source	short_read
+harengula-jaguana	NC_016667.1	AP011592	true	true			unstated
+harpadon-microchir	NC_003161.1	AP002919	true	true			unstated
+harpiosquilla-harpax	NC_006916.1	AY699271	true	true			unstated
+helarctos-malayanus	NC_009968.1	EF196664	true	true			unstated
+heliocidaris-crassispina	NC_023774.1	KC479025	true	true			unstated
+heloderma-suspectum	NC_008776.1	AB167711	true	true			unstated
+helogale-parvula	NC_071972.1	OP485294	true	true	Illumina	source	short_read
+hemibarbus-labeo	NC_007785.2	DQ347953	true	true			unstated
+hemiculter-leucisculus	NC_022929.1	KF647872	true	true	Sanger dideoxy sequencing	source	sanger
+hemidactylium-scutatum	NC_006342.1	AY728231	true	true			unstated
+hemiechinus-auritus	NC_005033.1	AB099481	true	true			unstated
+hemignathus-munroi	NC_025603.1	KM078774	true	true			unstated
+hemignathus-parvus	NC_025622.1	KM078799	true	true			unstated
+hemilepidotus-gilberti	NC_034653.1	KX156764	true	true	Illumina	source	short_read
+hemilepidotus-jordani	NC_082782.1	OR482537	true	true	Illumina	source	short_read
+hemiramphus-brasiliensis	NC_088002.1	PP032977	true	true	Illumina	source	short_read
+hemitheconyx-caudicinctus	NC_018368.1	AB610502	true	true			unstated
+hemitragus-jemlahicus	NC_020628.1	FJ207531	true	true			unstated
+hemitriakis-japanica	NC_026774.1	KJ617039	true	true			unstated
+hemitripterus-bolini	NC_082784.1	OR482539	true	true	Illumina	source	short_read
+heosemys-annandalii	NC_020668.1	JF742646	true	true			unstated
+heosemys-grandis	NC_032297.1	KX816868	true	true			unstated
+hepsetus-odoe	NC_015819.1	AP011991	true	true			unstated
+herichthys-cyanoguttatus	NC_033546.1	KR150867	true	true			unstated
+herpailurus-yagouaroundi	NC_028311.1	KP202279	true	true	Illumina	source	short_read
+herpestes-javanicus	NC_006835.1	AY873843	true	true			unstated
+herpestes-sanguineus	NC_053972.1	MW257224	true	true			unstated
+hesperiphona-vespertina	NC_025600.1	KM078770	true	true			unstated
+hesperoleucus-symmetricus	NC_066955.1	OL477724	true	true	Illumina	source	short_read
+heterocephalus-glaber	NC_015112.1	HQ689652	true	true			unstated
+heterodontus-francisci	NC_003137.1	AJ310141	true	true			unstated
+heterololigo-bleekeri	NC_002507.1	AB029616	true	true			unstated
+heteronotia-binoei	NC_010292.1	EF626816	true	true			unstated
+heteropneustes-fossilis	NC_015827.1	AP012013	true	true			unstated
+hexagrammos-agrammus	NC_021459.1	AB763992	true	true			unstated
+hexagrammos-decagrammus	NC_082811.1	OR482569	true	true	Illumina	source	short_read
+hexagrammos-otakii	NC_028630.1	KR362879	true	true			unstated
+hexaprotodon-liberiensis	NC_020697.1	JN632625	true	true			unstated
+himantopus-himantopus	NC_035423.1	KY623656	true	true	Sanger dideoxy sequencing	source	sanger
+himatione-sanguinea	NC_025602.1	KM078773	true	true			unstated
+hiodon-alosoides	NC_005145.1	AP004356	true	true			unstated
+hiodon-tergisus	NC_015082.1	AP009499	true	true			unstated
+hippocampus-capensis	NC_042791.1	MF592797	true	true	Sanger dideoxy sequencing	source	sanger
+hippocampus-erectus	NC_022722.1	KF557652	true	true			unstated
+hippocampus-hippocampus	NC_045033.1	MF541546	true	true			unstated
+hippocampus-kuda	NC_010272.1	AP005985	true	true			unstated
+hippocampus-zosterae	NC_065494.1	MZ709302	true	true	Sanger dideoxy sequencing	source	sanger
+hippoglossoides-elassodon	NC_082804.1	OR482562	true	true	Illumina	source	short_read
+hippoglossoides-robustus	NC_082769.1	OR482523	true	true	Illumina	source	short_read
+hippoglossus-hippoglossus	NC_009709.1	AM749122	true	true			unstated
+hippoglossus-stenolepis	NC_009710.1	AM749126	true	true			unstated
+hippopotamus-amphibius	NC_000889.1	AJ010957	true	true			unstated
+hippospongia-lachne	NC_010215.1	EU237484	true	true			unstated
+hippotragus-equinus	NC_020712.1	JN632647	true	true			unstated
+hippotragus-niger	NC_020713.1	JN632648	true	true			unstated
+hirundo-neoxena	NC_050290.1	MN844886	true	true	Illumina	source	short_read
+hirundo-rustica	NC_050297.1	MN843972	true	true	Illumina	source	short_read
+histrionicus-histrionicus	NC_088448.1	OR242926	true	true	Illumina	source	short_read
+homarus-americanus	NC_015607.1	HQ402925	true	true			unstated
+homarus-gammarus	NC_020020.1	KC107810	true	true	Sanger dideoxy sequencing	source	sanger
+homo-sapiens	NC_012920.1	J01415	true	true			unstated
+hoolock-hoolock	NC_033885.1	KY250073	true	true	Ion Torrent	source	short_read
+hoplodactylus-duvaucelii	NC_062789.1	OM910891	true	true	Illumina	source	short_read
+hucho-hucho	NC_025589.1	KM588351	true	true			unstated
+hucho-taimen	NC_016426.1	HQ897271	true	true			unstated
+huso-dauricus	NC_023837.1	KJ402277	true	true	Sanger dideoxy sequencing	source	sanger
+huso-huso	NC_005252.1	AY442351	true	true			unstated
+hyaena-hyaena	NC_020669.1	JF894376	true	true			unstated
+hybognathus-nuchalis	NC_031567.1	AP011273	true	true			unstated
+hydrictis-maculicollis	NC_046485.1	MK309842	true	true	Illumina	source	short_read
+hydrobates-castro	NC_041251.1	MH433599	true	true	Illumina	source	short_read
+hydropotes-inermis	NC_011821.1	EU315254	true	true			unstated
+hydrosaurus-amboinensis	NC_014178.1	AB475096	true	true			unstated
+hyla-japonica	NC_010232.1	AB303949	true	true			unstated
+hylobates-agilis	NC_014042.1	AB504748	true	true			unstated
+hylobates-lar	NC_002082.1	X99256	true	true			unstated
+hylobates-pileatus	NC_014045.1	AB504749	true	true			unstated
+hynobius-leechii	NC_008079.1	DQ333811	true	true			unstated
+hynobius-nebulosus	NC_020650.1	HM036356	true	true			unstated
+hypentelium-nigricans	NC_008676.1	AB242169	true	true			unstated
+hyperoodon-ampullatus	NC_005273.1	AJ554056	true	true			unstated
+hypomesus-olidus	NC_026566.1	KP281293	true	true	Sanger dideoxy sequencing	source	sanger
+hypomesus-pretiosus	NC_066905.1	OL806595	true	true	Illumina	source	short_read
+hypomesus-transpacificus	NC_072210.1	OP690150	true	true			unstated
+hypophthalmichthys-molitrix	NC_010156.1	EU315941	true	true			unstated
+hypophthalmichthys-nobilis	NC_010194.1	EU343733	true	true			unstated
+hypoptychus-dybowskii	NC_004400.1	AP004437	true	true			unstated
+hyporthodus-niveatus	NC_088003.1	PP032978	true	true	Illumina	source	short_read
+hyporthodus-octofasciatus	NC_020047.1	JX135579	true	true			unstated
+hypsiglena-torquata	NC_013992.1	EU728591	true	true			unstated
+hystrix-brachyura	NC_050263.1	MT240946	true	true	Sanger dideoxy sequencing	source	sanger
+hystrix-indica	NC_069637.1	ON408241	true	true	Illumina	source	short_read
+iberochondrostoma-almacai	NC_084352.1	OR687620	true	true	Nanopore	source	long_read
+icelus-spatula	NC_027587.1	KT004432	true	true	Illumina	source	short_read
+ichneumia-albicauda	NC_053967.1	MW257213	true	true			unstated
+ichthyomyzon-fossor	NC_025552.1	KM267716	true	true	Sanger dideoxy sequencing	source	sanger
+ichthyomyzon-unicuspis	NC_025553.1	KM267717	true	true	Sanger dideoxy sequencing	source	sanger
+ictalurus-furcatus	NC_028151.1	KM576102	true	true	Illumina	source	short_read
+ictalurus-punctatus	NC_003489.1	AF482987	true	true			unstated
+ictidomys-tridecemlineatus	NC_027278.1	KP698974	true	true	Sanger dideoxy sequencing	source	sanger
+ictiobus-bubalus	NC_013071.1	AP009316	true	true			unstated
+ictiobus-cyprinellus	NC_026528.1	KP306894	true	true	Sanger dideoxy sequencing	source	sanger
+ictonyx-striatus	NC_053979.1	MW257237	true	true			unstated
+iguana-iguana	NC_002793.1	AJ278511	true	true			unstated
+ilisha-elongata	NC_009585.1	AP009141	true	true			unstated
+indotestudo-forstenii	NC_007696.1	DQ080044	true	true			unstated
+inia-geoffrensis	NC_005276.1	AJ554059	true	true			unstated
+inimicus-japonicus	NC_050964.1	MT375601	true	true	MGI2000	source	short_read
+isoodon-macrourus	NC_002746.1	AF358864	true	true			unstated
+istiompax-indica	NC_012675.1	AB470305	true	true			unstated
+istiophorus-platypterus	NC_012676.1	AB470306	true	true			unstated
+isurus-oxyrinchus	NC_022691.1	KF361861	true	true	Sanger dideoxy sequencing	source	sanger
+jacana-spinosa	NC_024068.1	KJ631048	true	true	Illumina	source	short_read
+jaculus-jaculus	NC_005314.1	AJ416890	true	true			unstated
+jaydia-lineata	NC_041647.1	MH244441	true	true	Sanger dideoxy sequencing	source	sanger
+jynx-torquilla	NC_056091.1	MT106619	true	true	Illumina	source	short_read
+kajikia-audax	NC_012678.1	AB470302	true	true			unstated
+kaloula-pulchra	NC_006405.1	AY458595	true	true			unstated
+kareius-bicoloratus	NC_003176.1	AP002951	true	true			unstated
+katsuwonus-pelamis	NC_005316.1	AB101290	true	true			unstated
+kinosternon-leucostomum	NC_014577.1	FJ915117	true	true			unstated
+kobus-ellipsiprymnus	NC_020715.1	JN632651	true	true			unstated
+kobus-leche	NC_018603.1	JX446401	true	true			unstated
+kogia-breviceps	NC_005272.1	AJ554055	true	true			unstated
+konosirus-punctatus	NC_016694.1	AP011612	true	true			unstated
+kryptolebias-marmoratus	NC_003290.1	AF283503	true	true			unstated
+labeo-altivelis	NC_029444.1	AP013322	true	true			unstated
+labeo-boggut	NC_029450.1	AP013338	true	true			unstated
+labeo-coubie	NC_033963.1	AP012149	true	true			unstated
+labeo-rohita	NC_017608.1	JQ231111	true	true			unstated
+labeo-senegalensis	NC_008657.1	AB238968	true	true			unstated
+lacerta-viridis	NC_008328.1	AM176577	true	true			unstated
+lachesis-muta	NC_081003.1	OP773877	true	true	Illumina	source	short_read
+lagocephalus-sceleratus	NC_015340.1	AP011932	true	true			unstated
+lagopus-lagopus	NC_035568.1	KX609784	true	true	Illumina	source	short_read
+lagopus-muta	NC_034002.1	KY411593	true	true	Illumina	source	short_read
+lagorchestes-hirsutus	NC_008136.1	AB241056	true	true			unstated
+lagothrix-lagotricha	NC_021951.1	KC757398	true	true	454; Sanger dideoxy sequencing	source	short_read
+lama-glama	NC_012102.1	AP003426	true	true			unstated
+lama-guanicoe	NC_011822.1	EU681954	true	true			unstated
+lama-pacos	NC_002504.1	Y19184	true	true			unstated
+lamellibrachia-luymesi	NC_026858.1	KJ789163	true	true	Illumina HiSeq 2000	source	short_read
+lamna-ditropis	NC_024269.1	KF962053	true	true			unstated
+lamna-nasus	NC_033911.1	KX610464	true	true	Illumina	source	short_read
+lampetra-aepyptera	NC_026917.1	KP742974	true	true	Sanger dideoxy sequencing	source	sanger
+lampetra-fluviatilis	NC_001131.1	Y18683	true	true			unstated
+lampris-guttatus	NC_003165.1	AP002924	true	true			unstated
+lanius-ludovicianus	NC_051030.1	MN356223	true	true			unstated
+larimichthys-crocea	NC_011710.1	EU339149	true	true			unstated
+larimichthys-polyactis	NC_013754.1	FJ618559	true	true			unstated
+larus-dominicanus	NC_007006.1	AY293619	true	true			unstated
+lasionycteris-noctivagans	NC_050995.1	MT774149	true	true	Illumina	source	short_read
+lasiopodomys-brandtii	NC_057534.1	MT614214	true	true	Illumina	source	short_read
+lates-calcarifer	NC_007439.1	DQ010541	true	true			unstated
+lates-niloticus	NC_035736.1	KY213963	true	true	Illumina MiSeq	source	short_read
+latimeria-chalumnae	NC_001804.1	U82228	true	true			unstated
+lavinia-exilicauda	NC_033930.1	AP012089	true	true			unstated
+leiothrix-lutea	NC_020427.1	JQ423933	true	true			unstated
+lemniscomys-barbarus	NC_053800.1	MN807585	true	true			unstated
+lemur-catta	NC_059325.1	CM036502	true	true	Pacbio Sequel II CCS; 10X Genomics linked reads; Bionano Genomics DLS; Arima Genomics v1 Hi-C	source	long_read
+leontocebus-fuscicollis	NC_064177.1	OM328997	true	true	Illumina NovaSeq	source	short_read
+leontocebus-nigricollis	NC_064171.1	OM328879	true	true	Illumina NovaSeq	source	short_read
+leontopithecus-chrysopygus	NC_037878.1	MG933868	true	true	Illumina	source	short_read
+leontopithecus-rosalia	NC_021952.1	KC757399	true	true	454; Sanger dideoxy sequencing	source	short_read
+leopardus-geoffroyi	NC_028320.1	KP202292	true	true	Illumina	source	short_read
+leopardus-pardalis	NC_028315.1	KP202284	true	true	Illumina	source	short_read
+leopardus-tigrinus	NC_028317.1	KP202287	true	true	Illumina	source	short_read
+leopardus-wiedii	NC_028318.1	KP202289	true	true	Illumina	source	short_read
+lepidophyma-flavimaculatum	NC_008775.1	AB162908	true	true			unstated
+lepidopsetta-bilineata	NC_082755.1	OR482508	true	true	Illumina	source	short_read
+lepidopsetta-polyxystra	NC_082812.1	OR482570	true	true	Illumina	source	short_read
+lepidosiren-paradoxa	NC_003342.1	AF302934	true	true			unstated
+lepisosteus-oculatus	NC_004744.1	AB042861	true	true			unstated
+lepisosteus-osseus	NC_008104.1	DQ536423	true	true			unstated
+lepisosteus-platyrhincus	NC_029715.1	KU199002	true	true	Sanger dideoxy sequencing	source	sanger
+lepomis-auritus	NC_036385.1	MF621723	true	true			unstated
+lepomis-cyanellus	NC_020359.1	KC427094	true	true			unstated
+lepomis-gibbosus	NC_028284.1	KP013097	true	true	Illumina	source	short_read
+lepomis-humilis	NC_084074.1	OR552036	true	true			unstated
+lepomis-macrochirus	NC_015984.2	JN389795	true	true			unstated
+lepomis-megalotis	NC_084073.1	OR552032	true	true			unstated
+lepomis-microlophus	NC_066920.1	OL471030	true	true	Illumina	source	short_read
+lepomis-symmetricus	NC_084075.1	OR552037	true	true			unstated
+leptailurus-serval	NC_028316.1	KP202286	true	true	Illumina	source	short_read
+leptoclinus-maculatus	NC_027588.1	KT004433	true	true			unstated
+leptonycteris-curasoae	NC_066832.1	OP081758	true	true	Illumina	source	short_read
+leptotila-verreauxi	NC_015190.1	HM640214	true	true			unstated
+lepus-europaeus	NC_004028.1	AJ421471	true	true			unstated
+lepus-timidus	NC_024040.1	KJ397605	true	true	Sanger dideoxy sequencing	source	sanger
+lesueurigobius-friesii	NC_052760.1	MT410904	true	true			unstated
+lethenteron-appendix	NC_025583.1	KM267719	true	true	Sanger dideoxy sequencing	source	sanger
+lethenteron-camtschaticum	NC_020465.1	KC353468	true	true			unstated
+lethenteron-reissneri	NC_014270.1	AB565771	true	true			unstated
+lethrinus-obsoletus	NC_009855.1	AP009165	true	true			unstated
+leucaspius-delineatus	NC_020357.1	AP009307	true	true			unstated
+leuciscus-baicalensis	NC_024528.1	KF673863	true	true	Sanger dideoxy sequencing	source	sanger
+leuciscus-idus	NC_063524.1	MT584106	true	true			unstated
+leucopleurus-acutus	NC_050265.1	MT410900	true	true			unstated
+leucopsar-rothschildi	NC_053050.1	MN356237	true	true			unstated
+leucoraja-erinacea	NC_016429.1	JQ034406	true	true			unstated
+leucoraja-naevus	NC_037968.1	MF278969	true	true	Illumina	source	short_read
+leuresthes-tenuis	NC_044649.1	MN181432	true	true	Illumina; Global Biologics	source	short_read
+limanda-aspera	NC_028281.1	KP013094	true	true	Illumina	source	short_read
+limanda-sakhalinensis	NC_082768.1	OR482522	true	true	Illumina	source	short_read
+limosa-lapponica	NC_046765.1	MK341549	true	true	Illumina	source	short_read
+limulus-polyphemus	NC_003057.1	AF216203	true	true			unstated
+liopsetta-glacialis	NC_082783.1	OR482538	true	true	Illumina	source	short_read
+lipotes-vexillifer	NC_007629.1	AY789529	true	true			unstated
+lissemys-punctata	NC_012414.1	EF050073	true	true			unstated
+lithobates-sylvaticus	NC_027236.1	KP222281	true	true	Sanger dideoxy sequencing	source	sanger
+litocranius-walleri	NC_020716.1	JN632653	true	true			unstated
+littorina-saxatilis	NC_030595.1	KU952094	true	true	Illumina; PacBio	source	long_read
+lobotes-surinamensis	NC_026233.1	AB355912	true	true			unstated
+lonchura-punctulata	NC_028036.1	KR184724	true	true			unstated
+lonchura-striata	NC_029475.1	KR080134	true	true			unstated
+lontra-canadensis	NC_071788.1	OP056177	true	true	Illumina	source	short_read
+lophius-americanus	NC_004380.1	AP004414	true	true			unstated
+lophius-piscatorius	NC_036988.1	MF994812	true	true	Illumina; SOLiD	source	short_read
+loris-tardigradus	NC_012763.1	AB371094	true	true			unstated
+lota-lota	NC_004379.1	AP004412	true	true			unstated
+loxia-curvirostra	NC_025623.1	KM078800	true	true			unstated
+loxia-leucoptera	NC_051015.1	MN356185	true	true			unstated
+loxodon-macrorhinus	NC_029843.1	KT347599	true	true			unstated
+loxodonta-africana	NC_000934.1	AJ224821	true	true			unstated
+loxops-coccineus	NC_025612.1	KM078785	true	true			unstated
+loxops-mana	NC_025598.1	KM078768	true	true			unstated
+luciobarbus-sclateri	NC_031532.1	AP011196	true	true			unstated
+lumpenus-sagitta	NC_082807.1	OR482565	true	true	Illumina	source	short_read
+lutjanus-analis	NC_088007.1	PP032983	true	true	Illumina	source	short_read
+lutjanus-argentimaculatus	NC_016661.1	JN182927	true	true			unstated
+lutjanus-carponotatus	NC_044104.1	MK092066	true	true	Illumina	source	short_read
+lutjanus-ehrenbergii	NC_081963.1	OR123973	true	true	Sanger dideoxy sequencing	source	sanger
+lutjanus-erythropterus	NC_031331.1	KP939271	true	true			unstated
+lutjanus-fulviflamma	NC_043916.1	MH995530	true	true	Illumina	source	short_read
+lutjanus-johnii	NC_024572.1	KJ643926	true	true	IonTorrent	source	short_read
+lutjanus-kasmira	NC_011578.1	FJ416614	true	true			unstated
+lutjanus-malabaricus	NC_012736.1	FJ824741	true	true			unstated
+lutjanus-peru	NC_027950.1	KR362299	true	true			unstated
+lutjanus-rivulatus	NC_009869.1	AP006000	true	true			unstated
+lutjanus-sebae	NC_012737.1	FJ824742	true	true			unstated
+lutjanus-synagris	NC_082572.1	OR482460	true	true	Illumina	source	short_read
+lutjanus-vitta	NC_042930.1	MH675887	true	true	Illumina	source	short_read
+lutra-lutra	NC_062277.1	LR822067	true	true			unstated
+lutreolina-crassicaudata	NC_057520.1	MT892667	true	true	Illumina	source	short_read
+luxilus-chrysocephalus	NC_033923.1	AP012079	true	true			unstated
+luxilus-cornutus	NC_033931.1	AP012090	true	true			unstated
+luxilus-zonatus	NC_080909.1	OR002153	true	true	Illumina	source	short_read
+lycaon-pictus	NC_028427.1	KT598692	true	true			unstated
+lycodon-rufozonatus	NC_024559.1	KJ179950	true	true			unstated
+lynx-canadensis	NC_028313.1	KP202281	true	true	Illumina	source	short_read
+lynx-lynx	NC_027083.1	KM982549	true	true	Sanger dideoxy sequencing	source	sanger
+lynx-rufus	NC_014456.1	GQ979707	true	true			unstated
+lyopsetta-exilis	NC_082803.1	OR482561	true	true	Illumina	source	short_read
+lyrurus-tetrix	NC_024554.1	KF955638	true	true	Illumina	source	short_read
+lythrurus-umbratilis	NC_033935.1	AP012094	true	true			unstated
+macaca-arctoides	NC_025201.1	KJ567055	true	true			unstated
+macaca-assamensis	NC_023795.1	KF990122	true	true	Sanger dideoxy sequencing	source	sanger
+macaca-fascicularis	NC_012670.1	FJ906803	true	true			unstated
+macaca-fuscata	NC_025513.1	KM401548	true	true	Illumina	source	short_read
+macaca-mulatta	NC_005943.1	AY612638	true	true			unstated
+macaca-nemestrina	NC_026976.1	KP765688	true	true	Illumina	source	short_read
+macaca-nigra	NC_026120.1	KP072068	true	true			unstated
+macaca-radiata	NC_036508.1	LC225392	true	true			unstated
+macaca-silenus	NC_025221.1	KJ567057	true	true			unstated
+macaca-sinica	NC_037437.1	MG870385	true	true	Sanger dideoxy sequencing	source	sanger
+macaca-sylvanus	NC_002764.1	AJ309865	true	true			unstated
+macaca-thibetana	NC_011519.1	EU294187	true	true			unstated
+macaca-tonkeana	NC_025222.1	KJ567058	true	true			unstated
+maccullochella-peeli	NC_023807.1	HG942171	true	true			unstated
+macoma-balthica	NC_046519.1	MN528028	true	true			unstated
+macquaria-ambigua	NC_024849.1	AP014533	true	true			unstated
+macrhybopsis-aestivalis	NC_088499.1	PP577916	true	true	Illumina; Oxford Nanopore	source	long_read
+macrhybopsis-storeriana	NC_030485.1	KX139438	true	true	Illumina	source	short_read
+macrochelys-temminckii	NC_009260.1	EF071948	true	true			unstated
+macroderma-gigas	NC_057635.1	MW006543	true	true	Illumina	source	short_read
+macrodon-ancylodon	NC_088008.1	PP032984	true	true	Illumina	source	short_read
+macronectes-giganteus	NC_085213.1	OR731193	true	true	Illumina	source	short_read
+macropodus-opercularis	NC_025932.1	KM588227	true	true			unstated
+macropus-fuliginosus	NC_039717.1	MH717106	true	true	Illumina	source	short_read
+macropus-giganteus	NC_027424.1	LK995454	true	true			unstated
+macropus-robustus	NC_001794.1	Y10524	true	true			unstated
+macroramphosus-scolopax	NC_010265.1	AP005988	true	true			unstated
+macroscelides-proboscideus	NC_004026.1	AJ421452	true	true			unstated
+macrostomum-lignano	NC_035255.1	MF078637	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+macrotis-lagotis	NC_006520.1	AJ639871	true	true			unstated
+macrotus-californicus	NC_037136.1	KU743909	true	true			unstated
+macrotus-waterhousii	NC_072169.1	OP205373	true	true	Illumina	source	short_read
+mactra-chinensis	NC_025510.1	KJ754823	true	true			unstated
+madoqua-kirkii	NC_020717.1	JN632654	true	true			unstated
+magallana-ariakensis	NC_012650.1	EU672835	true	true			unstated
+magallana-bilineata	NC_013997.1	FJ841967	true	true			unstated
+magallana-gigas	NC_001276.1	AF177226	true	true			unstated
+makaira-mazara	NC_012680.1	AB470304	true	true			unstated
+makaira-nigricans	NC_030006.1	KU315120	true	true	Illumina	source	short_read
+malacochersus-tornieri	NC_007700.1	DQ080042	true	true			unstated
+malapterurus-electricus	NC_015833.1	AP012016	true	true			unstated
+malayopython-reticulatus	NC_042397.1	MH410033	true	true	Sanger dideoxy sequencing	source	sanger
+mallotus-villosus	NC_015244.1	HM106491	true	true			unstated
+malurus-elegans	NC_053095.1	MN356354	true	true			unstated
+malurus-melanocephalus	NC_024873.1	KJ909199	true	true			unstated
+mandrillus-leucophaeus	NC_028442.1	KT696596	true	true	Sanger dideoxy sequencing	source	sanger
+mandrillus-sphinx	NC_021956.1	KC757403	true	true	454; Sanger dideoxy sequencing	source	short_read
+manouria-emys	NC_007693.1	DQ080040	true	true			unstated
+mareca-americana	NC_088449.1	OR243000	true	true	Illumina	source	short_read
+mareca-penelope	NC_050973.1	MT304825	true	true			unstated
+mareca-strepera	NC_045373.1	MN186586	true	true	Sanger dideoxy sequencing	source	sanger
+marmota-flaviventris	NC_042243.1	MH987778	true	true	Illumina HiSeq X Ten	source	short_read
+marmota-monax	NC_080739.1	CM037776	true	true	Illumina HiSeq; PacBio Sequel	source	long_read
+marmota-vancouverensis	NC_048490.1	MK859897	true	true			unstated
+martes-americana	NC_020642.1	HM106324	true	true			unstated
+martes-flavigula	NC_012141.1	FJ719367	true	true			unstated
+martes-foina	NC_020643.1	HM106325	true	true			unstated
+martes-martes	NC_021749.1	KC660129	true	true	Illumina	source	short_read
+martes-pennanti	NC_020664.1	HQ705180	true	true			unstated
+martes-zibellina	NC_011579.1	FJ429093	true	true			unstated
+masturus-lanceolatus	NC_005837.1	AP006239	true	true			unstated
+mauremys-annamensis	NC_017875.1	HM131942	true	true			unstated
+mauremys-caspica	NC_027826.1	KC692465	true	true			unstated
+mauremys-japonica	NC_016951.1	GU938833	true	true			unstated
+mauremys-leprosa	NC_031432.1	KP100055	true	true	Sanger dideoxy sequencing	source	sanger
+mauremys-mutica	NC_009330.1	DQ453753	true	true			unstated
+mauremys-nigricans	NC_029369.1	KT951839	true	true			unstated
+mauremys-sinensis	NC_016685.1	FJ871126	true	true			unstated
+mazama-americana	NC_020719.1	JN632656	true	true			unstated
+mecistops-cataphractus	NC_010639.1	EF551000	true	true			unstated
+megalaspis-cordyla	NC_025565.1	KM522836	true	true			unstated
+megaleporinus-obtusidens	NC_034945.1	KY825191	true	true	Illumina	source	short_read
+megalobrama-pellegrini	NC_026458.1	KP262030	true	true	Sanger dideoxy sequencing	source	sanger
+megalops-atlanticus	NC_005804.1	AP004808	true	true			unstated
+megalops-cyprinoides	NC_005799.1	AB051110	true	true			unstated
+megaptera-novaeangliae	NC_006927.1	AP006467	true	true			unstated
+melamprosops-phaeosoma	NC_025617.1	KM078793	true	true			unstated
+melanitta-americana	NC_088450.1	OR243016	true	true	Illumina	source	short_read
+melanogrammus-aeglefinus	NC_007396.1	DQ020497	true	true			unstated
+melanotaenia-fluviatilis	NC_081030.1	OP882658	true	true	Illumina	source	short_read
+melanotaenia-splendida	NC_028280.1	KP013093	true	true	Illumina	source	short_read
+meleagris-gallopavo	NC_010195.2	JF275060	true	true			unstated
+meles-meles	NC_011125.1	AM711900	true	true			unstated
+mellivora-capensis	NC_053981.1	MW257239	true	true			unstated
+melogale-moschata	NC_020644.1	HM106328	true	true			unstated
+melopsittacus-undulatus	NC_009134.1	EF450826	true	true			unstated
+melursus-ursinus	NC_009970.1	EF196662	true	true			unstated
+menidia-menidia	NC_011174.1	AB370893	true	true			unstated
+menticirrhus-americanus	NC_088009.1	PP032985	true	true	Illumina	source	short_read
+menura-novaehollandiae	NC_007883.1	AY542313	true	true			unstated
+mephitis-mephitis	NC_020648.1	HM106332	true	true			unstated
+mercenaria-mercenaria	NC_048487.1	MN233789	true	true	Illumina	source	short_read
+mergus-merganser	NC_040986.1	KU140667	true	true			unstated
+meriones-libycus	NC_027683.1	KR013226	true	true	Sanger dideoxy sequencing	source	sanger
+meriones-meridianus	NC_027684.1	KR013227	true	true	Sanger dideoxy sequencing	source	sanger
+meriones-unguiculatus	NC_023263.1	KF425526	true	true			unstated
+merlangius-merlangus	NC_007395.1	DQ020496	true	true			unstated
+merluccius-hubbsi	NC_088010.1	PP032986	true	true	Illumina	source	short_read
+merluccius-merluccius	NC_015120.1	FR751402	true	true			unstated
+merluccius-productus	NC_068842.1	ON005613	true	true	Oxford Nanopore	source	long_read
+mesocentrotus-franciscanus	NC_024177.1	KJ526170	true	true	Illumina	source	short_read
+mesocricetus-auratus	NC_013276.1	EU660218	true	true			unstated
+mesoplodon-europaeus	NC_021434.2	KC776688	true	true	Illumina	source	short_read
+metacarcinus-magister	NC_050675.1	MN371144	true	true	Illumina	source	short_read
+metachirus-nudicaudatus	NC_006516.1	AJ639866	true	true			unstated
+micaelamys-namaquensis	NC_053816.1	MN807615	true	true			unstated
+mico-argentatus	NC_064175.1	OM328938	true	true	Illumina NovaSeq	source	short_read
+mico-humeralifer	NC_064174.1	OM328937	true	true	Illumina NovaSeq	source	short_read
+microcebus-murinus	NC_028718.1	KR911908	true	true	Illumina	source	short_read
+microhyla-ornata	NC_009422.1	DQ512876	true	true			unstated
+micromesistius-poutassou	NC_015102.1	FR751401	true	true			unstated
+micromys-minutus	NC_027932.1	KP399599	true	true	Sanger dideoxy sequencing	source	sanger
+microphysogobio-amurensis	NC_033965.1	AP012155	true	true			unstated
+micropogonias-furnieri	NC_088011.1	PP032987	true	true	Illumina	source	short_read
+micropogonias-undulatus	NC_082746.1	OR482493	true	true	Illumina	source	short_read
+micropterus-dolomieu	NC_011361.1	AB378749	true	true			unstated
+micropterus-salmoides	NC_008106.1	DQ536425	true	true			unstated
+microstomus-pacificus	NC_082805.1	OR482563	true	true	Illumina	source	short_read
+microtus-arvalis	NC_038176.1	MG948434	true	true	Illumina	source	short_read
+microtus-ochrogaster	NC_027945.1	KT166982	true	true	Illumina	source	short_read
+micrurus-fulvius	NC_013481.1	GU045453	true	true			unstated
+miichthys-miiuy	NC_014351.1	HM447240	true	true			unstated
+milvus-migrans	NC_038195.1	MG930481	true	true	Sanger dideoxy sequencing	source	sanger
+mimachlamys-varia	NC_061741.1	MZ520326	true	true	Illumina	source	short_read
+miniellus-nubilus	NC_084096.1	OR552084	true	true			unstated
+minytrema-melanops	NC_008113.1	DQ536432	true	true			unstated
+mirza-coquereli	NC_035656.1	KM112337	true	true	454; Illumina	source	short_read
+misgurnus-anguillicaudatus	NC_011209.1	DQ026434	true	true			unstated
+mobula-alfredi	NC_068734.1	OP562409	true	true			unstated
+modiolus-modiolus	NC_033537.1	KX821782	true	true	FLX sequencing	source	short_read
+mogera-wogura	NC_005035.1	AB099482	true	true			unstated
+mola-mola	NC_005836.1	AP006238	true	true			unstated
+molossus-molossus	NC_065689.1	ON357729	true	true	Illumina	source	short_read
+molothrus-aeneus	NC_018806.1	JX516067	true	true			unstated
+molothrus-ater	NC_051468.1	MN356438	true	true			unstated
+molva-dypterygia	NC_050740.1	AP018423	true	true			unstated
+monodelphis-domestica	NC_006299.1	AJ508398	true	true			unstated
+monodon-monoceros	NC_005279.1	AJ554062	true	true			unstated
+monopterus-albus	NC_003192.1	AP002945	true	true			unstated
+monotaxis-grandoculis	NC_010957.1	AP009166	true	true			unstated
+montifringilla-nivalis	NC_025911.1	KJ148628	true	true			unstated
+moolgarda-cunnesius	NC_017902.2	JF911717	true	true			unstated
+morone-americana	NC_030281.1	KU641485	true	true			unstated
+morone-saxatilis	NC_014353.1	HM447585	true	true			unstated
+motacilla-alba	NC_029229.1	KT736087	true	true			unstated
+motacilla-cinerea	NC_027933.1	KR092187	true	true			unstated
+motacilla-flava	NC_060466.1	MW929090	true	true	Illumina	source	short_read
+moxostoma-duquesnii	NC_084084.1	OR552056	true	true			unstated
+moxostoma-erythrurum	NC_084082.1	OR552053	true	true			unstated
+mugil-cephalus	NC_003182.1	AP002930	true	true			unstated
+mulloidichthys-vanicolensis	NC_024188.1	AP012310	true	true			unstated
+mullus-surmuletus	NC_052759.1	MT410885	true	true			unstated
+mungos-mungo	NC_053963.1	MW257205	true	true			unstated
+muntiacus-muntjak	NC_004563.1	AY225986	true	true			unstated
+muntiacus-reevesi	NC_004069.1	AF527537	true	true			unstated
+muraenesox-cinereus	NC_057492.1	MT571331	true	true	Sanger dideoxy sequencing	source	sanger
+mus-minutoides	NC_072557.1	OP764675	true	true	Illumina	source	short_read
+mus-musculus	NC_005089.1	AY172335	true	true			unstated
+mus-spicilegus	NC_085425.1	OR840817	true	true	Illumina	source	short_read
+muscardinus-avellanarius	NC_050264.1	MT410887	true	true			unstated
+mustela-erminea	NC_025516.1	KM091450	true	true	Illumina	source	short_read
+mustela-frenata	NC_020640.1	HM106321	true	true			unstated
+mustela-lutreola	NC_056132.1	MW148603	true	true	Illumina	source	short_read
+mustela-nigripes	NC_024942.1	KM272752	true	true	Illumina	source	short_read
+mustela-nivalis	NC_020639.1	HM106319	true	true			unstated
+mustela-putorius	NC_020638.1	HM106318	true	true			unstated
+mustela-sibirica	NC_020637.1	HM106317	true	true			unstated
+mustelus-griseus	NC_023527.1	KF889325	true	true			unstated
+mustelus-manazo	NC_000890.1	AB015962	true	true			unstated
+mustelus-mustelus	NC_039629.1	MH559351	true	true	Illumina	source	short_read
+mya-arenaria	NC_024738.1	KJ755996	true	true	Illumina	source	short_read
+myiopsitta-monachus	NC_027844.1	KM611471	true	true	Sanger dideoxy sequencing	source	sanger
+mylopharyngodon-piceus	NC_011141.1	EU979305	true	true			unstated
+myocastor-coypus	NC_035866.1	MF325938	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+myodes-glareolus	NC_024538.1	KF918859	true	true	Sanger dideoxy sequencing	source	sanger
+myotis-bechsteinii	NC_034227.1	KX757757	true	true	Illumina	source	short_read
+myotis-brandtii	NC_025308.1	KM199849	true	true	Illumina	source	short_read
+myotis-evotis	NC_036313.1	MF143468	true	true	Illumina	source	short_read
+myotis-leibii	NC_036321.1	MF143488	true	true	Illumina	source	short_read
+myotis-lucifugus	NC_029849.1	KP273591	true	true	Sanger dideoxy sequencing	source	sanger
+myotis-myotis	NC_029346.1	KT901455	true	true			unstated
+myotis-nigricans	NC_036318.1	MF143481	true	true	Illumina	source	short_read
+myotis-thysanodes	NC_036323.1	MF143492	true	true	Illumina	source	short_read
+myotis-volans	NC_036326.1	MF143496	true	true	Illumina	source	short_read
+myotis-yumanensis	NC_036319.1	MF143485	true	true	Illumina	source	short_read
+myoxocephalus-jaok	NC_045875.1	MN162694	true	true	IonTorrent	source	short_read
+myoxocephalus-quadricornis	NC_053359.1	MT789711	true	true			unstated
+myoxocephalus-scorpius	NC_042186.1	MK321578	true	true			unstated
+myrmecobius-fasciatus	NC_011949.1	FJ515782	true	true			unstated
+myrmecophaga-tridactyla	NC_028572.1	KT818549	true	true			unstated
+myrrophis-chinensis	NC_072633.1	OP974098	true	true	Illumina	source	short_read
+mystacina-tuberculata	NC_006925.1	AY960981	true	true			unstated
+mytilus-californianus	NC_015993.1	GQ527172	true	true			unstated
+mytilus-galloprovincialis	NC_006886.2	AY497292	true	true			unstated
+mytilus-trossulus	NC_007687.1	AY823625	true	true			unstated
+myuchelys-latisternum	NC_042475.1	KY857556	true	true			unstated
+naemorhedus-baileyi	NC_020722.1	JN632663	true	true			unstated
+naemorhedus-caudatus	NC_013751.1	FJ469673	true	true			unstated
+naemorhedus-goral	NC_021381.1	JX188255	true	true			unstated
+naja-atra	NC_011389.1	EU913475	true	true			unstated
+naja-naja	NC_010225.1	DQ343648	true	true			unstated
+nandinia-binotata	NC_024567.1	KJ619487	true	true	Sanger dideoxy sequencing	source	sanger
+nanger-dama	NC_020724.1	JN632665	true	true			unstated
+nanger-granti	NC_020725.1	JN632666	true	true			unstated
+nanger-soemmerringii	NC_020726.1	JN632667	true	true			unstated
+nannatherina-balstoni	NC_086571.1	PP059117	true	true			unstated
+nannoperca-australis	NC_081031.1	OP882663	true	true	Illumina	source	short_read
+nannoperca-variegata	NC_024851.1	AP014535	true	true			unstated
+nannoperca-vittata	NC_086570.1	PP059116	true	true			unstated
+nannospalax-ehrenbergi	NC_005315.1	AJ416891	true	true			unstated
+nasalis-larvatus	NC_008216.1	DQ355298	true	true			unstated
+naso-brevirostris	NC_082850.1	OR499750	true	true	Illumina	source	short_read
+naso-hexacanthus	NC_062886.1	OM494539	true	true			unstated
+nasua-nasua	NC_020647.1	HM106331	true	true			unstated
+naucrates-ductor	NC_083043.1	OR546204	true	true	Illumina	source	short_read
+negaprion-brevirostris	NC_072260.1	OQ274915	true	true	Illumina	source	short_read
+nelusetta-ayraudi	NC_011921.1	AP009220	true	true			unstated
+nematalosa-erebi	NC_043853.1	MK029349	true	true	Illumina	source	short_read
+nemipterus-bathybius	NC_029938.1	KT375565	true	true			unstated
+nemipterus-japonicus	NC_023972.1	KJ473717	true	true			unstated
+nemipterus-randalli	NC_062624.1	MT795184	true	true	Sanger dideoxy sequencing	source	sanger
+nemipterus-virgatus	NC_027734.1	KR701906	true	true			unstated
+nemopilema-nomurai	NC_035740.1	KY454767	true	true	Illumina	source	short_read
+neoceratodus-forsteri	NC_003127.1	AF302933	true	true			unstated
+neocyttus-rhomboidalis	NC_004399.1	AP004436	true	true			unstated
+neofelis-nebulosa	NC_008450.1	DQ257669	true	true			unstated
+neogobius-melanostomus	NC_052757.1	MT410878	true	true			unstated
+neomys-fodiens	NC_025559.1	KM092492	true	true			unstated
+neoniphon-sammara	NC_063501.1	MZ329995	true	true	Illumina	source	short_read
+neophoca-cinerea	NC_008419.1	AM181020	true	true			unstated
+neophocaena-phocaenoides	NC_021461.1	KC777291	true	true	Sanger dideoxy sequencing	source	sanger
+neosalanx-taihuensis	NC_019629.1	JX524196	true	true			unstated
+neotoma-albigula	NC_068809.1	OM963003	true	true	Illumina	source	short_read
+neotragus-moschatus	NC_020728.1	JN632669	true	true			unstated
+neotrygon-kuhlii	NC_021767.1	KC992792	true	true			unstated
+neovison-vison	NC_020641.1	HM106322	true	true			unstated
+nereis-pelagica	NC_086457.1	OL782598	true	true	Illumina	source	short_read
+nerodia-sipedon	NC_015793.1	JF964960	true	true			unstated
+nestor-notabilis	NC_027845.1	KM611472	true	true	Sanger dideoxy sequencing	source	sanger
+netta-rufina	NC_024922.1	KC466568	true	true			unstated
+netuma-thalassina	NC_030323.1	KU986659	true	true			unstated
+nibea-albiflora	NC_015205.1	HQ890947	true	true			unstated
+ninox-novaeseelandiae	NC_005932.1	AY309457	true	true			unstated
+ninox-strenua	NC_033967.1	KX529654	true	true			unstated
+nipponia-nippon	NC_008132.1	AB104902	true	true			unstated
+nocomis-biguttatus	NC_033924.1	AP012082	true	true			unstated
+nocomis-micropogon	NC_042391.1	MH324421	true	true			unstated
+noctilio-leporinus	NC_037137.1	KU743910	true	true			unstated
+nomascus-leucogenys	NC_021957.1	KC757404	true	true	454; Sanger dideoxy sequencing	source	short_read
+notemigonus-crysoleucas	NC_008646.1	AB127393	true	true			unstated
+nothobranchius-furzeri	NC_011814.1	EU650204	true	true			unstated
+nothobranchius-kuhntae	NC_044445.1	MK784230	true	true			unstated
+notochelys-platynota	NC_020665.1	HQ853256	true	true			unstated
+notophthalmus-perstriatus	NC_028278.1	KP013091	true	true	Illumina	source	short_read
+notorynchus-cepedianus	NC_022731.1	AB560489	true	true			unstated
+notothenia-coriiceps	NC_015653.1	JF933906	true	true			unstated
+notothenia-rossii	NC_050685.1	MN893242	true	true	Illumina	source	short_read
+notropis-atherinoides	NC_033925.1	AP012083	true	true			unstated
+notropis-buccata	NC_084094.1	OR552079	true	true			unstated
+notropis-heterolepis	NC_037009.1	MG570413	true	true			unstated
+notropis-hudsonius	NC_037014.1	MG570443	true	true			unstated
+notropis-maculatus	NC_084091.1	OR552071	true	true			unstated
+notropis-stramineus	NC_008110.1	DQ536429	true	true			unstated
+notropis-texanus	NC_084092.1	OR552072	true	true			unstated
+noturus-albater	NC_086506.1	OR492264	true	true	Illumina	source	short_read
+noturus-exilis	NC_080908.1	OR002151	true	true	Illumina	source	short_read
+noturus-gyrinus	NC_066957.1	OL806601	true	true	Illumina	source	short_read
+noturus-leptacanthus	NC_068676.1	OM736863	true	true			unstated
+nucifraga-caryocatactes	NC_051558.1	MT506195	true	true	Sanger dideoxy sequencing	source	sanger
+nucifraga-columbiana	NC_022839.1	KF509923	true	true			unstated
+numenius-madagascariensis	NC_059854.1	KY230384	true	true	Sanger dideoxy sequencing	source	sanger
+numenius-phaeopus	NC_030507.1	KP308149	true	true	Sanger dideoxy sequencing	source	sanger
+nyctalus-noctula	NC_027237.1	KP273590	true	true	Sanger dideoxy sequencing	source	sanger
+nyctereutes-procyonoides	NC_013700.1	GU256221	true	true			unstated
+nycticebus-coucang	NC_002765.1	AJ309867	true	true			unstated
+nycticorax-nycticorax	NC_015807.1	JN018412	true	true			unstated
+nymphicus-hollandicus	NC_015192.1	HM640215	true	true			unstated
+oceanites-oceanicus	NC_052777.1	MN356163	true	true			unstated
+ochotona-hyperborea	NC_057103.1	MW270995	true	true	Sanger dideoxy sequencing	source	sanger
+ochotona-princeps	NC_005358.1	AJ537415	true	true			unstated
+octodon-degus	NC_020661.1	HM544134	true	true			unstated
+ocyurus-chrysurus	NC_088015.1	PP032991	true	true	Illumina	source	short_read
+odocoileus-hemionus	NC_020729.1	JN632670	true	true			unstated
+odocoileus-virginianus	NC_015247.1	HQ332445	true	true			unstated
+oedalechilus-labeo	NC_017893.1	JF911712	true	true			unstated
+oenanthe-oenanthe	NC_051036.1	MN356231	true	true			unstated
+okamejei-kenojei	NC_007173.1	AY525783	true	true			unstated
+okapia-johnstoni	NC_020730.1	JN632674	true	true			unstated
+ommastrephes-bartramii	NC_020348.1	AB715401	true	true			unstated
+oncorhynchus-clarkii	NC_006897.1	AY886762	true	true			unstated
+oncorhynchus-gorbuscha	NC_010959.1	EF455489	true	true			unstated
+oncorhynchus-keta	NC_017838.1	AP010773	true	true			unstated
+oncorhynchus-kisutch	NC_009263.1	EF126369	true	true			unstated
+oncorhynchus-masou	NC_009262.1	EF105342	true	true			unstated
+oncorhynchus-mykiss	NC_001717.1	L29771	true	true			unstated
+oncorhynchus-nerka	NC_008615.1	EF055889	true	true			unstated
+oncorhynchus-tshawytscha	NC_002980.1	AF392054	true	true			unstated
+onychodactylus-fischeri	NC_008089.1	DQ333820	true	true			unstated
+onychomys-leucogaster	NC_029760.1	KU168563	true	true	Illumina	source	short_read
+onychoprion-fuscatus	NC_068833.1	OP209991	true	true	Illumina	source	short_read
+onychostoma-barbatulum	NC_021644.1	KC896762	true	true	Sanger dideoxy sequencing	source	sanger
+ophiodon-elongatus	NC_026887.1	KP682333	true	true	Sanger dideoxy sequencing	source	sanger
+ophiophagus-hannah	NC_011394.1	EU921899	true	true			unstated
+opisthonema-oglinum	NC_082745.1	OR482492	true	true	Illumina	source	short_read
+oratosquilla-oratoria	NC_014342.1	GQ292769	true	true			unstated
+orcaella-brevirostris	NC_019590.1	JF289177	true	true			unstated
+orcinus-orca	NC_064558.1	OW443382	true	true			unstated
+oreamnos-americanus	NC_020630.1	FJ207535	true	true			unstated
+oreochromis-andersonii	NC_037019.1	MG603674	true	true	ABI 3730 x l capillary sequencer	source	sanger
+oreochromis-esculentus	NC_025555.1	KM654981	true	true	Sanger dideoxy sequencing	source	sanger
+oreochromis-mossambicus	NC_007231.1	AY597335	true	true			unstated
+oreochromis-niloticus	NC_013663.1	GU238433	true	true			unstated
+oreoleuciscus-potanini	NC_018817.1	AB626851	true	true			unstated
+oreotragus-oreotragus	NC_020731.1	JN632675	true	true			unstated
+origma-solitaria	NC_053100.1	MN356360	true	true			unstated
+oriolus-chinensis	NC_020424.1	JQ083495	true	true			unstated
+oriolus-oriolus	NC_053058.1	MN356254	true	true			unstated
+ornithorhynchus-anatinus	NC_000891.1	X83427	true	true			unstated
+orthonyx-spaldingii	NC_053086.1	MN356344	true	true			unstated
+orycteropus-afer	NC_002078.1	Y18475	true	true			unstated
+oryctolagus-cuniculus	NC_001913.1	AJ001588	true	true			unstated
+oryx-dammah	NC_058019.1	JN632677	true	true			unstated
+oryx-gazella	NC_016422.1	JN869312	true	true			unstated
+oryx-leucoryx	NC_020732.1	JN632679	true	true			unstated
+oryzias-latipes	NC_004387.1	AP004421	true	true			unstated
+oryzias-sinensis	NC_013434.1	GU013788	true	true			unstated
+osmerus-eperlanus	NC_052758.1	MT410880	true	true			unstated
+osmerus-mordax	NC_015246.1	HM106493	true	true			unstated
+osteoglossum-bicirrhosum	NC_003095.1	AB043025	true	true			unstated
+osteolaemus-tetraspis	NC_009728.1	AM493868	true	true			unstated
+ostrea-edulis	NC_016180.1	JF274008	true	true			unstated
+otaria-flavescens	NC_049152.1	MK654904	true	true	Sanger dideoxy sequencing	source	sanger
+otis-tarda	NC_014046.1	FJ751803	true	true			unstated
+otocolobus-manul	NC_028323.1	KP202295	true	true	Illumina	source	short_read
+otocyon-megalotis	NC_036369.1	KY776502	true	true	Illumina	source	short_read
+otolemur-crassicaudatus	NC_012762.1	AB371093	true	true			unstated
+otolithes-ruber	NC_033909.1	KX929060	true	true	Sanger dideoxy sequencing	source	sanger
+otus-scops	NC_028162.1	KT340630	true	true	IonTorrent	source	short_read
+ourebia-ourebi	NC_020733.1	JN632680	true	true			unstated
+ovibos-moschatus	NC_020631.1	FJ207536	true	true			unstated
+ovis-ammon	NC_020656.1	HM236188	true	true			unstated
+ovis-aries	NC_001941.1	AF010406	true	true			unstated
+ovis-canadensis	NC_015889.1	JN181255	true	true	SOLiD	source	short_read
+ovis-dalli	NC_039432.1	MH779627	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+ovophis-okinavensis	NC_007397.1	AB175670	true	true			unstated
+oxyeleotris-marmorata	NC_031669.1	KF711995	true	true	Sanger dideoxy sequencing	source	sanger
+oxygymnocypris-stewartii	NC_022718.1	KF528985	true	true	Sanger dideoxy sequencing	source	sanger
+ozotoceros-bezoarticus	NC_020766.1	JN632681	true	true			unstated
+pachytriton-brevipes	NC_053711.1	MT993830	true	true	Illumina	source	short_read
+pagellus-acarne	NC_037505.1	MG736083	true	true	Illumina	source	short_read
+pagellus-bogaraveo	NC_009502.1	AB305023	true	true			unstated
+pagellus-erythrinus	NC_037732.1	MG653592	true	true	Illumina	source	short_read
+pagodroma-nivea	NC_050393.1	MT726204	true	true	Illumina	source	short_read
+pagothenia-borchgrevinki	NC_030320.1	KU951144	true	true	Sanger dideoxy sequencing	source	sanger
+pagrus-auratus	NC_088427.1	MK978156	true	true			unstated
+pagrus-major	NC_003196.1	AP002949	true	true			unstated
+pagrus-pagrus	NC_072936.1	OQ190459	true	true	Sanger dideoxy sequencing	source	sanger
+paguma-larvata	NC_029403.1	KT191130	true	true	Sanger dideoxy sequencing	source	sanger
+palaemon-adspersus	NC_050168.1	MT340092	true	true			unstated
+palea-steindachneri	NC_013841.1	FJ541030	true	true			unstated
+paleosuchus-palpebrosus	NC_009729.1	AM493870	true	true			unstated
+paleosuchus-trigonatus	NC_009732.1	AM493869	true	true			unstated
+pama-pama	NC_080231.1	OQ784575	true	true	Illumina	source	short_read
+pampus-argenteus	NC_023466.1	KF873612	true	true			unstated
+pan-paniscus	NC_001644.1	D38116	true	true			unstated
+pan-troglodytes	NC_001643.1	D38113	true	true			unstated
+pandion-haliaetus	NC_008550.1	DQ780884	true	true			unstated
+pangasianodon-gigas	NC_006381.1	AY762971	true	true			unstated
+panopea-abrupta	NC_033538.1	KX494111	true	true	Illumina	source	short_read
+panopea-generosa	NC_025635.1	KM580067	true	true	Illumina	source	short_read
+panthera-leo	NC_018053.1	JQ904290	true	true	IonTorrent	source	short_read
+panthera-onca	NC_022842.1	KF483864	true	true	Sanger dideoxy sequencing	source	sanger
+panthera-pardus	NC_010641.1	EF551002	true	true			unstated
+panthera-tigris	NC_010642.1	EF551003	true	true			unstated
+panulirus-argus	NC_039671.1	MH068821	true	true	Illumina	source	short_read
+panurus-biarmicus	NC_053106.1	MN356370	true	true			unstated
+papio-hamadryas	NC_001992.1	Y18001	true	true			unstated
+parabramis-pekinensis	NC_022678.1	JX242531	true	true			unstated
+paradoxurus-hermaphroditus	NC_039591.1	MG200264	true	true	Illumina	source	short_read
+parahucho-perryi	NC_021651.1	KC897653	true	true	454	source	short_read
+parahyaena-brunnea	NC_038159.1	MF593938	true	true	Illumina	source	short_read
+paralaubuca-typus	NC_015194.1	AP011211	true	true			unstated
+paralichthys-dentatus	NC_029476.1	KU053334	true	true	Sanger dideoxy sequencing	source	sanger
+paralichthys-lethostigma	NC_029223.1	KT896534	true	true	Sanger dideoxy sequencing	source	sanger
+parambassis-ranga	NC_053943.1	MW322824	true	true	Sanger dideoxy sequencing	source	sanger
+paramesotriton-chinensis	NC_035008.1	KY609177	true	true	Sanger dideoxy sequencing	source	sanger
+paranotropis-volucellus	NC_080906.1	OR002146	true	true	Illumina	source	short_read
+parargyrops-edita	NC_008616.1	EF107158	true	true			unstated
+pardalotus-punctatus	NC_053099.1	MN356359	true	true			unstated
+parophrys-vetulus	NC_066930.1	OL806591	true	true	Illumina	source	short_read
+paroreomyza-montana	NC_025601.1	KM078771	true	true			unstated
+parupeneus-chrysopleuron	NC_029247.1	KT944284	true	true			unstated
+parupeneus-heptacantha	NC_062603.1	OL890693	true	true	Illumina	source	short_read
+parus-major	NC_040875.1	MH638304	true	true	Illumina	source	short_read
+passer-domesticus	NC_025611.1	KM078784	true	true			unstated
+passer-montanus	NC_024821.1	JX486030	true	true			unstated
+pavo-cristatus	NC_024533.1	KF444060	true	true			unstated
+pecari-tajacu	NC_012103.1	AP003427	true	true			unstated
+pelecus-cultratus	NC_008663.1	AB239597	true	true			unstated
+pelobates-fuscus	NC_051953.1	MT410942	true	true			unstated
+pelomedusa-subrufa	NC_001947.1	AF039066	true	true			unstated
+pelotretis-flavilatus	NC_026284.1	KC554065	true	true			unstated
+pelusios-castaneus	NC_026049.1	KC692463	true	true			unstated
+penaeus-duorarum	NC_068255.1	OM364079	true	true	Illumina	source	short_read
+penaeus-indicus	NC_031366.1	KX462904	true	true	Illumina	source	short_read
+penaeus-merguiensis	NC_026884.1	KP637168	true	true			unstated
+pennahia-argentata	NC_015202.1	HQ890946	true	true			unstated
+pennahia-macrocephala	NC_031409.1	KX576460	true	true	Sanger dideoxy sequencing	source	sanger
+pentaceros-wheeleri	NC_021453.1	AB741956	true	true			unstated
+peponocephala-electra	NC_019589.1	JF289175	true	true			unstated
+perameles-gunnii	NC_006521.1	AJ639872	true	true			unstated
+perca-flavescens	NC_019572.1	JX629442	true	true	454	source	short_read
+perca-fluviatilis	NC_026313.1	KM410088	true	true	Sanger dideoxy sequencing	source	sanger
+percalates-colonorum	NC_087904.1	PP405425	true	true	Illumina	source	short_read
+percalates-novemaculeata	NC_024850.1	AP014534	true	true			unstated
+perccottus-glenii	NC_020350.1	KC292213	true	true	Sanger dideoxy sequencing	source	sanger
+percilia-irwini	NC_024846.1	AP014528	true	true			unstated
+percina-evides	NC_056399.1	MW856848	true	true			unstated
+percina-macrocephala	NC_056400.1	MW856849	true	true			unstated
+percina-maculata	NC_084083.1	OR552054	true	true			unstated
+percina-sciera	NC_084085.1	OR552057	true	true			unstated
+percina-shumardi	NC_084087.1	OR552061	true	true			unstated
+percina-vigil	NC_084086.1	OR552058	true	true			unstated
+percopsis-omiscomaycus	NC_068672.1	OM736807	true	true			unstated
+percopsis-transmontana	NC_003168.1	AP002928	true	true			unstated
+perdix-perdix	NC_039843.1	KX838508	true	true			unstated
+periophthalmus-barbarus	NC_063130.1	OM312054	true	true			unstated
+periparus-ater	NC_026223.1	KM588075	true	true			unstated
+perna-perna	NC_026288.1	KM655841	true	true			unstated
+perodicticus-potto	NC_012764.1	AB371095	true	true			unstated
+peromyscus-crinitus	NC_035614.1	KY707308	true	true	Illumina	source	short_read
+peromyscus-eremicus	NC_047188.1	MT078819	true	true	Illumina	source	short_read
+peromyscus-leucopus	NC_037180.1	MG674646	true	true	Illumina HiSeq 4000 PE100	source	short_read
+peromyscus-maniculatus	NC_039921.1	MH260579	true	true	Illumina HiSeq 4000 PE100	source	short_read
+peromyscus-polionotus	NC_035571.1	KY707301	true	true	Illumina	source	short_read
+petaurista-alborufus	NC_023922.1	JQ743657	true	true			unstated
+petaurus-breviceps	NC_008135.1	AB241055	true	true			unstated
+petroica-goodenovii	NC_019667.1	JX901075	true	true	454	source	short_read
+petroica-phoenicea	NC_019668.1	JX901076	true	true	454	source	short_read
+petromyzon-marinus	NC_001626.1	U11880	true	true			unstated
+petrosaltator-rozeti	NC_073526.1	ON675558	true	true	Illumina	source	short_read
+phacochoerus-africanus	NC_008830.1	DQ409327	true	true			unstated
+phaeognathus-hubrichti	NC_006344.1	AY728233	true	true			unstated
+phaethon-lepturus	NC_027275.1	KR349465	true	true	Illumina	source	short_read
+phaethon-rubricauda	NC_007979.1	AP009043	true	true			unstated
+phainopepla-nitens	NC_053061.1	MN356259	true	true			unstated
+phalacrocorax-auritus	NC_052822.1	MN356400	true	true			unstated
+phalacrocorax-brasilianus	NC_029758.1	KT626611	true	true	Illumina	source	short_read
+phalacrocorax-carbo	NC_027267.1	KR215630	true	true			unstated
+phanerodon-furcatus	NC_066927.1	OL806588	true	true	Illumina	source	short_read
+phascogale-tapoatafa	NC_006523.1	AJ639869	true	true			unstated
+phascolarctos-cinereus	NC_008133.1	AB241053	true	true			unstated
+phasianus-colchicus	NC_015526.1	JF739859	true	true			unstated
+phelsuma-guimbeaui	NC_025781.1	AB661664	true	true			unstated
+phenacobius-mirabilis	NC_008112.1	DQ536431	true	true			unstated
+philantomba-maxwellii	NC_020735.1	JN632685	true	true			unstated
+philantomba-monticola	NC_020736.1	JN632687	true	true			unstated
+phoca-vitulina	NC_001325.1	X63726	true	true			unstated
+phocoena-phocoena	NC_005280.1	AJ554063	true	true			unstated
+phocoenoides-dalli	NC_053753.1	MT948081	true	true	Illumina	source	short_read
+phodopus-roborovskii	NC_031809.1	KU885975	true	true	Sanger dideoxy sequencing	source	sanger
+phoebastria-albatrus	NC_026190.1	KJ735514	true	true	Illumina	source	short_read
+phoebastria-immutabilis	NC_026189.1	KJ735513	true	true	Illumina	source	short_read
+phoebastria-nigripes	NC_026188.1	KJ735512	true	true	Illumina	source	short_read
+phoenicopterus-roseus	NC_010089.1	EF532932	true	true			unstated
+phoenicopterus-ruber	NC_027934.1	KT159835	true	true	Illumina	source	short_read
+pholis-gunnellus	NC_052755.1	MT410872	true	true			unstated
+phoxinus-eos	NC_015364.1	AP009151	true	true			unstated
+phoxinus-phoxinus	NC_020358.1	AP009309	true	true			unstated
+phyllopteryx-taeniolatus	NC_065496.1	MZ709304	true	true	Sanger dideoxy sequencing	source	sanger
+phylloscopus-borealis	NC_045526.1	MK390476	true	true	Sanger dideoxy sequencing	source	sanger
+phylloscopus-canariensis	NC_071941.1	OP380512	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+phylloscopus-collybita	NC_060852.1	MW885969	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+phylloscopus-ibericus	NC_071943.1	OP380529	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+phylloscopus-trochilus	NC_060851.1	MW984540	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+phyllostomus-discolor	NC_065690.1	ON357733	true	true	Illumina	source	short_read
+physeter-macrocephalus	NC_002503.2	AJ277029	true	true			unstated
+piaractus-brachypomus	NC_025315.2	KJ993871	true	true			unstated
+pica-hudsonia	NC_072703.1	OQ076672	true	true	Illumina	source	short_read
+pica-nuttalli	NC_072704.1	OQ076681	true	true	Illumina	source	short_read
+pica-pica	NC_015200.1	HQ915867	true	true			unstated
+picoides-tridactylus	NC_088452.1	OR243092	true	true	Illumina	source	short_read
+picus-canus	NC_045372.1	MK348064	true	true	Sanger dideoxy sequencing	source	sanger
+pimephales-notatus	NC_033941.1	AP012101	true	true			unstated
+pimephales-promelas	NC_028087.1	KT278765	true	true	Illumina	source	short_read
+pinicola-enucleator	NC_025609.1	KM078781	true	true			unstated
+pinna-rudis	NC_060781.1	LC634517	true	true			unstated
+pionites-leucogaster	NC_044184.1	MK759905	true	true			unstated
+pipa-pipa	NC_061389.1	OL809654	true	true	Illumina	source	short_read
+pipistrellus-pipistrellus	NC_088543.1	PP596837	true	true			unstated
+piranga-flava	NC_041661.1	MH700637	true	true	Illumina	source	short_read
+piranga-ludoviciana	NC_041664.1	MH700644	true	true	Illumina	source	short_read
+piranga-olivacea	NC_041663.1	MH700642	true	true	Illumina	source	short_read
+piranga-rubra	NC_041659.1	MH700634	true	true	Illumina	source	short_read
+placopecten-magellanicus	NC_007234.1	DQ088274	true	true			unstated
+plagiogeneion-rubiginosum	NC_088582.1	OR974337	true	true	Illumina	source	short_read
+planiliza-lauvergnii	NC_017887.1	JF911709	true	true			unstated
+planiliza-macrolepis	NC_027239.1	KP793919	true	true	Illumina	source	short_read
+platalea-leucorodia	NC_012772.1	GQ199608	true	true			unstated
+platalea-minor	NC_010962.1	EF455490	true	true			unstated
+platax-orbicularis	NC_013136.1	AP006825	true	true			unstated
+platemys-platycephala	NC_026050.1	KC692464	true	true			unstated
+platichthys-stellatus	NC_010966.1	EF424428	true	true			unstated
+platycephalus-indicus	NC_022481.1	AP006783	true	true			unstated
+platysternon-megacephalum	NC_007970.1	DQ256377	true	true			unstated
+plecoglossus-altivelis	NC_002734.2	AB047553	true	true			unstated
+plecotus-auritus	NC_015484.1	HM164052	true	true			unstated
+plectropomus-areolatus	NC_021405.1	KC262636	true	true	Sanger dideoxy sequencing	source	sanger
+plectropomus-laevis	NC_057260.1	MN688375	true	true			unstated
+plectropomus-leopardus	NC_008449.1	DQ101270	true	true			unstated
+plecturocebus-moloch	NC_064208.1	OM328994	true	true	Illumina NovaSeq	source	short_read
+pleoticus-muelleri	NC_039964.1	MH500232	true	true	Sanger dideoxy sequencing	source	sanger
+plethodon-cinereus	NC_006343.1	AY728232	true	true			unstated
+plethodon-elongatus	NC_006335.1	AY728223	true	true			unstated
+pleuragramma-antarctica	NC_015652.1	JF933905	true	true			unstated
+pleurogrammus-azonus	NC_023129.1	AB744047	true	true			unstated
+pleurogrammus-monopterygius	NC_023475.1	AB753026	true	true			unstated
+plotosus-lineatus	NC_029714.1	KU213641	true	true	Illumina	source	short_read
+pluvialis-fulva	NC_033966.1	KX639757	true	true	Sanger dideoxy sequencing	source	sanger
+pluvialis-squatarola	NC_056257.1	MT561267	true	true	Illumina	source	short_read
+podarcis-muralis	NC_011607.1	FJ460597	true	true			unstated
+podiceps-cristatus	NC_008140.1	AP009194	true	true			unstated
+podomys-floridanus	NC_035595.1	KY707302	true	true	Illumina	source	short_read
+poecile-atricapillus	NC_024867.1	KJ909190	true	true			unstated
+poecile-palustris	NC_026911.1	KP184518	true	true	Illumina	source	short_read
+poecilia-reticulata	NC_024238.1	KJ460033	true	true	Illumina	source	short_read
+poecilia-sphenops	NC_026579.1	LC026151	true	true			unstated
+poeciliopsis-occidentalis	NC_028294.1	KP013108	true	true	Illumina	source	short_read
+pogona-vitticeps	NC_006922.1	AB166795	true	true			unstated
+pogonichthys-macrolepidotus	NC_033942.1	AP012103	true	true			unstated
+poicephalus-senegalus	NC_044083.1	MK749396	true	true	Sanger dideoxy sequencing	source	sanger
+polioptila-caerulea	NC_051031.1	MN356224	true	true			unstated
+pollachius-pollachius	NC_015097.1	FR751400	true	true			unstated
+pollachius-virens	NC_015094.1	FR751399	true	true			unstated
+polydactylus-sextarius	NC_027088.1	KP259870	true	true	Sanger dideoxy sequencing	source	sanger
+polyodon-spathula	NC_004419.1	AP004353	true	true			unstated
+polyplectron-napoleonis	NC_024615.1	KJ939353	true	true	Sanger dideoxy sequencing	source	sanger
+polyprion-americanus	NC_088018.1	PP032997	true	true	Illumina	source	short_read
+polypterus-senegalus	NC_004418.1	AP004352	true	true			unstated
+polysteganus-undulosus	NC_084230.1	OR609365	true	true	Illumina	source	short_read
+pomacanthus-imperator	NC_026304.1	KP218259	true	true	Illumina	source	short_read
+pomatomus-saltatrix	NC_022507.1	AB355904	true	true			unstated
+pomatoschistus-minutus	NC_060619.1	MW092827	true	true	Illumina	source	short_read
+pomatostomus-ruficeps	NC_051464.1	MN356282	true	true			unstated
+pomoxis-annularis	NC_066918.1	OL339410	true	true	Illumina	source	short_read
+pomoxis-nigromaculatus	NC_028298.1	KP013112	true	true	Illumina	source	short_read
+pongo-pygmaeus	NC_001646.1	D38115	true	true			unstated
+porcula-salvania	NC_043879.1	MN095549	true	true	Sanger dideoxy sequencing	source	sanger
+porphyrio-porphyrio	NC_025508.1	KF701062	true	true			unstated
+portunus-pelagicus	NC_026209.1	KM977882	true	true	Sanger dideoxy sequencing	source	sanger
+portunus-sanguinolentus	NC_028225.1	KT438509	true	true	Sanger dideoxy sequencing	source	sanger
+portunus-trituberculatus	NC_005037.1	AB093006	true	true			unstated
+potamalosa-richmondia	NC_016674.1	AP011594	true	true			unstated
+potamochoerus-porcus	NC_020737.1	JN632688	true	true			unstated
+potorous-tridactylus	NC_006524.1	AJ639873	true	true			unstated
+potos-flavus	NC_053977.1	MW257234	true	true			unstated
+presbytis-melalophos	NC_008217.1	DQ355299	true	true			unstated
+priacanthus-macracanthus	NC_029222.1	KT897925	true	true			unstated
+primolius-maracana	NC_029322.1	KJ562357	true	true			unstated
+priodontes-maximus	NC_028573.1	KT818550	true	true			unstated
+prionace-glauca	NC_022819.1	KF356249	true	true			unstated
+prionailurus-bengalensis	NC_016189.1	JN392459	true	true			unstated
+prionailurus-planiceps	NC_028312.1	KP202280	true	true	Illumina	source	short_read
+prionailurus-rubiginosus	NC_028304.1	KP202266	true	true	Illumina	source	short_read
+prionailurus-viverrinus	NC_028305.1	KP202270	true	true	Illumina	source	short_read
+prionotus-evolans	NC_083024.1	OR546174	true	true	Illumina	source	short_read
+pristipomoides-multidens	NC_022177.1	KF430626	true	true			unstated
+pristis-clavata	NC_022821.1	KF381507	true	true			unstated
+pristis-pristis	NC_039438.1	MH005928	true	true	Sanger dideoxy sequencing	source	sanger
+procapra-gutturosa	NC_020738.1	JN632689	true	true			unstated
+procavia-capensis	NC_004919.1	AB096865	true	true			unstated
+prochilodus-lineatus	NC_024939.1	KM245045	true	true	Illumina	source	short_read
+procyon-lotor	NC_009126.1	AB297804	true	true			unstated
+procypris-rabaudi	NC_011192.1	EU082030	true	true			unstated
+proechimys-brevicauda	NC_039100.1	KX688183	true	true			unstated
+proechimys-semispinosus	NC_039103.1	KX688188	true	true			unstated
+prolasmidonta-heterodon	NC_037431.1	MG905826	true	true	Illumina	source	short_read
+prolemur-simus	NC_021959.1	KC757408	true	true	454; Sanger dideoxy sequencing	source	short_read
+promethichthys-prometheus	NC_022491.1	AP012504	true	true			unstated
+propithecus-diadema	NC_026084.1	KJ944173	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+propithecus-tattersalli	NC_027740.1	KR827465	true	true			unstated
+propithecus-verreauxi	NC_028210.1	KT445269	true	true			unstated
+prosopium-cylindraceum	NC_020764.1	JQ390062	true	true			unstated
+prosopium-williamsoni	NC_020763.1	JQ390061	true	true			unstated
+proteles-cristata	NC_053964.1	MW257209	true	true			unstated
+proteus-anguinus	NC_023342.1	GQ368659	true	true			unstated
+protobothrops-flavoviridis	NC_030181.1	LC073706	true	true			unstated
+protonibea-diacanthus	NC_024573.1	KJ643927	true	true	IonTorrent	source	short_read
+protopterus-annectens	NC_018822.1	JX568887	true	true	Illumina	source	short_read
+prototroctes-maraena	NC_069223.1	ON220597	true	true	Illumina	source	short_read
+prunella-collaris	NC_082321.1	OR337894	true	true	Illumina	source	short_read
+prunella-modularis	NC_082322.1	OR337900	true	true	Illumina	source	short_read
+psalidodon-fasciatus	NC_053758.1	MT428071	true	true	Illumina	source	short_read
+psammomys-obesus	NC_037509.1	MG558461	true	true			unstated
+psenopsis-anomala	NC_021460.1	KC777290	true	true	Sanger dideoxy sequencing	source	sanger
+psetta-maxima	NC_013183.1	EU419747	true	true			unstated
+pseudaspius-brandtii	NC_018819.1	AB626854	true	true			unstated
+pseudaspius-hakonensis	NC_018820.1	AB626855	true	true			unstated
+pseudaspius-leptocephalus	NC_008681.1	AP009058	true	true			unstated
+pseudemys-concinna	NC_063095.1	OM935747	true	true	Illumina	source	short_read
+pseudocaranx-dentex	NC_058961.1	MZ359280	true	true	Sanger dideoxy sequencing	source	sanger
+pseudocarcharias-kamoharai	NC_026216.1	KM575726	true	true	Sanger dideoxy sequencing	source	sanger
+pseudocheirus-peregrinus	NC_006519.1	AJ639870	true	true			unstated
+pseudochondrostoma-polylepis	NC_031574.1	AP011282	true	true			unstated
+pseudois-nayaur	NC_020632.1	FJ207537	true	true			unstated
+pseudomys-chapmani	NC_014698.1	EU305669	true	true			unstated
+pseudonestor-xanthophrys	NC_025630.1	KM078809	true	true			unstated
+pseudopentaceros-richardsoni	NC_020016.1	AB734122	true	true			unstated
+pseudopleuronectes-americanus	NC_082555.1	OR482463	true	true	Illumina	source	short_read
+pseudopleuronectes-herzensteini	NC_063673.1	ON127848	true	true	MGI-2000	source	short_read
+pseudopleuronectes-yokohamae	NC_028014.1	KT224485	true	true			unstated
+pseudopus-apodus	NC_071252.1	OP493524	true	true	Illumina	source	short_read
+pseudorasbora-parva	NC_015614.1	JF802126	true	true			unstated
+pseudorca-crassidens	NC_019577.1	HM060332	true	true			unstated
+pseudorhombus-cinnamoneus	NC_022447.1	JQ639069	true	true			unstated
+pseudorhombus-pentophthalmus	NC_065813.1	ON843636	true	true	Illumina	source	short_read
+pseudoscaphirhynchus-hermanni	NC_058992.1	MT259182	true	true	Illumina	source	short_read
+pseudoscaphirhynchus-kaufmanni	NC_050885.1	MN746333	true	true	Illumina	source	short_read
+pseudotolithus-elongatus	NC_044717.1	MN251863	true	true	Illumina	source	short_read
+pseudotolithus-typus	NC_056258.1	MN973879	true	true			unstated
+pseudotriton-ruber	NC_006332.1	AY728220	true	true			unstated
+psittacara-holochlorus	NC_082168.1	OR209189	true	true	Illumina	source	short_read
+psittacula-alexandri	NC_045378.1	MK986660	true	true	Illumina	source	short_read
+psittacula-cyanocephala	NC_054153.1	MT433093	true	true			unstated
+psittacula-eupatria	NC_042765.1	MK343134	true	true	Sanger dideoxy sequencing	source	sanger
+psittacus-erithacus	NC_027847.1	KM611474	true	true	Sanger dideoxy sequencing	source	sanger
+psittrichas-fulgidus	NC_027848.1	KM611475	true	true	Sanger dideoxy sequencing	source	sanger
+pteraclis-aesticola	NC_022487.1	AP012499	true	true			unstated
+pterapogon-kauderni	NC_022511.1	AP005997	true	true			unstated
+pterois-volitans	NC_025290.1	KJ739816	true	true	Illumina	source	short_read
+pteromys-volans	NC_019612.1	JQ230001	true	true			unstated
+pteronura-brasiliensis	NC_071787.1	OP056176	true	true			unstated
+pteroplatytrygon-violacea	NC_024570.1	KJ641617	true	true			unstated
+pteropus-alecto	NC_023122.1	KF726143	true	true	Illumina	source	short_read
+pteropus-dasymallus	NC_002612.1	AB042770	true	true			unstated
+pteropus-scapulatus	NC_002619.1	AF321050	true	true			unstated
+pteropus-vampyrus	NC_026542.1	KP214033	true	true	Illumina	source	short_read
+ptyas-mucosa	NC_030041.1	KT982276	true	true	Sanger dideoxy sequencing	source	sanger
+ptychobarbus-dipogon	NC_024537.1	KF597526	true	true	454	source	short_read
+ptychocheilus-lucius	NC_054086.1	MT501361	true	true			unstated
+ptychocheilus-oregonensis	NC_066937.1	OK376045	true	true	Illumina	source	short_read
+pudu-puda	NC_020740.1	JN632692	true	true			unstated
+puma-concolor	NC_016470.1	JN999997	true	true			unstated
+pungitius-hellenicus	NC_029471.1	KU236383	true	true	Illumina	source	short_read
+pungitius-pungitius	NC_011571.1	AB445130	true	true			unstated
+pusa-hispida	NC_008433.1	AM181036	true	true			unstated
+pusa-sibirica	NC_008432.1	AM181034	true	true			unstated
+pycnonotus-jocosus	NC_053063.1	MN356264	true	true			unstated
+pygathrix-nemaeus	NC_008220.1	DQ355302	true	true			unstated
+pygoplites-diacanthus	NC_026545.1	KP033453	true	true			unstated
+pygoscelis-adeliae	NC_021137.1	KC875855	true	true			unstated
+pygoscelis-papua	NC_037702.1	KU356677	true	true	SOLiD	source	short_read
+pylodictis-olivaris	NC_036386.1	MF621727	true	true			unstated
+pyrrhocorax-graculus	NC_025927.1	KJ598623	true	true	IonTorrent	source	short_read
+pyrrhocorax-pyrrhocorax	NC_025926.1	KJ598622	true	true	IonTorrent	source	short_read
+pyrrhula-pyrrhula	NC_025625.1	KM078804	true	true			unstated
+pyrrhura-perlata	NC_068904.1	ON098136	true	true	Illumina	source	short_read
+python-molurus	NC_015812.1	HM581978	true	true			unstated
+python-regius	NC_007399.1	AB177878	true	true			unstated
+pyxicephalus-adspersus	NC_044480.1	MK460224	true	true			unstated
+quiscalus-mexicanus	NC_051021.1	MN356197	true	true			unstated
+quiscalus-quiscula	NC_018803.1	JX516064	true	true			unstated
+rachycentron-canadum	NC_011219.1	FJ154956	true	true			unstated
+raja-asterias	NC_037970.1	MF278971	true	true	Illumina	source	short_read
+raja-brachyura	NC_049865.1	MT410876	true	true			unstated
+raja-clavata	NC_037972.1	MF278973	true	true	Illumina	source	short_read
+raja-miraletus	NC_037973.1	MF278974	true	true	Illumina	source	short_read
+raja-polystigma	NC_037971.1	MF278972	true	true	Illumina	source	short_read
+raja-rhina	NC_021964.1	KC914434	true	true	Sanger dideoxy sequencing	source	sanger
+raja-undulata	NC_059939.1	MT274574	true	true	Illumina	source	short_read
+rallus-aquaticus	NC_041578.1	MH229988	true	true			unstated
+rana-amurensis	NC_030042.1	KU343216	true	true	Sanger dideoxy sequencing	source	sanger
+rana-nigromaculata	NC_002805.1	AB043889	true	true			unstated
+rana-temporaria	NC_042226.1	MH536744	true	true	Illumina	source	short_read
+rangifer-tarandus	NC_007703.1	AB245426	true	true			unstated
+raphicerus-campestris	NC_020741.1	JN632693	true	true			unstated
+rasbora-trilineata	NC_025336.1	KM200714	true	true			unstated
+rastrelliger-brachysoma	NC_013485.1	EU555283	true	true			unstated
+rastrelliger-kanagurta	NC_019624.1	JX524134	true	true			unstated
+rattus-fuscipes	NC_014867.1	GU570664	true	true			unstated
+rattus-lutreolus	NC_014858.1	GU570661	true	true			unstated
+rattus-norvegicus	NC_001665.2	AY172581	true	true			unstated
+rattus-rattus	NC_012374.1	EU273707	true	true			unstated
+ratufa-bicolor	NC_023780.1	KF575124	true	true	Sanger dideoxy sequencing	source	sanger
+recurvirostra-avosetta	NC_027420.1	KP757766	true	true			unstated
+redunca-arundinum	NC_020794.1	JN632694	true	true			unstated
+redunca-fulvorufula	NC_020742.1	JN632695	true	true			unstated
+regulus-calendula	NC_024866.1	KJ909188	true	true			unstated
+regulus-regulus	NC_029837.1	KT934324	true	true	IonTorrent	source	short_read
+regulus-satrapa	NC_051014.1	MN356184	true	true			unstated
+reinhardtius-hippoglossoides	NC_009711.1	AM749130	true	true			unstated
+retropinna-semoni	NC_031372.1	KX421784	true	true	Illumina	source	short_read
+rexea-solandri	NC_023952.1	KJ408216	true	true			unstated
+rhabdosargus-sarba	NC_025301.1	KM272585	true	true			unstated
+rhincodon-typus	NC_023455.1	KF679782	true	true			unstated
+rhinella-marina	NC_066225.1	MZ675575	true	true	Illumina; PacBio	source	long_read
+rhinichthys-atratulus	NC_033943.1	AP012104	true	true			unstated
+rhinichthys-cataractae	NC_033944.1	AP012105	true	true			unstated
+rhinoceros-unicornis	NC_001779.1	X97336	true	true			unstated
+rhinogobius-cliffordpopei	NC_029252.1	KT357638	true	true	Sanger dideoxy sequencing	source	sanger
+rhinogobius-similis	NC_022692.1	KF371534	true	true	Sanger dideoxy sequencing	source	sanger
+rhinolophus-ferrumequinum	NC_020326.1	JX084273	true	true	Complete Genomics	source	short_read
+rhinopithecus-roxellana	NC_008218.1	DQ355300	true	true			unstated
+rhinoptera-bonasus	NC_082999.1	OR546147	true	true	Illumina	source	short_read
+rhizoprionodon-acutus	NC_046016.1	MN602076	true	true			unstated
+rhodeus-amarus	NC_031538.1	AP011209	true	true			unstated
+rhodeus-sericeus	NC_025326.1	KM052222	true	true			unstated
+rhomboplites-aurorubens	NC_082561.1	OR482469	true	true	Illumina	source	short_read
+rhynchobatus-djiddensis	NC_066688.1	ON065568	true	true	IonTorrent	source	short_read
+rhynchocyon-chrysopygus	NC_073534.1	ON675571	true	true	Illumina	source	short_read
+rhynchocypris-percnurus	NC_015362.1	AP009150	true	true			unstated
+rhynchopsitta-pachyrhyncha	NC_082171.1	OR209192	true	true	Illumina	source	short_read
+richardsonius-egregius	NC_066951.1	OL457406	true	true	Illumina	source	short_read
+riparia-riparia	NC_060992.1	OK537984	true	true	Sanger dideoxy sequencing	source	sanger
+rissa-tridactyla	NC_082066.1	OR187459	true	true	Illumina	source	short_read
+romanogobio-ciscaucasicus	NC_031558.1	AP011259	true	true			unstated
+rousettus-aegyptiacus	NC_007393.1	AB205183	true	true			unstated
+rousettus-leschenaultii	NC_046927.1	MN816354	true	true	Illumina; IonTorrent; Sanger dideoxy sequencing	source	short_read
+rucervus-duvaucelii	NC_020743.1	JN632696	true	true			unstated
+rucervus-eldi	NC_014701.1	HM138200	true	true			unstated
+ruditapes-philippinarum	NC_031332.1	KT001084	true	true	Sanger dideoxy sequencing	source	sanger
+rupicapra-rupicapra	NC_020633.1	FJ207539	true	true			unstated
+rusa-alfredi	NC_020744.1	JN632698	true	true			unstated
+rusa-timorensis	NC_020745.1	JN632699	true	true			unstated
+rusa-unicolor	NC_008414.3	DQ989636	true	true			unstated
+rutilus-rutilus	NC_068671.1	OM736797	true	true			unstated
+sacalia-bealei	NC_016691.1	GU183364	true	true			unstated
+saguinus-bicolor	NC_064176.1	OM328996	true	true	Illumina NovaSeq	source	short_read
+saguinus-geoffroyi	NC_064172.1	OM328925	true	true	Illumina NovaSeq	source	short_read
+saguinus-labiatus	NC_064178.1	OM328998	true	true	Illumina NovaSeq	source	short_read
+saguinus-midas	NC_064179.1	OM328999	true	true	Illumina NovaSeq	source	short_read
+saguinus-mystax	NC_064180.1	OM329001	true	true	Illumina NovaSeq	source	short_read
+saguinus-oedipus	NC_021960.1	KC757409	true	true	454; Sanger dideoxy sequencing	source	short_read
+saimiri-boliviensis	NC_018096.1	HQ644339	true	true			unstated
+saimiri-sciureus	NC_012775.1	AB371091	true	true			unstated
+salamandrella-keyserlingii	NC_008082.1	DQ333814	true	true			unstated
+salminus-brasiliensis	NC_024941.1	KM245047	true	true	Illumina	source	short_read
+salmo-salar	NC_001960.1	U12143	true	true			unstated
+salmo-trutta	NC_024032.1	JQ390057	true	true			unstated
+salvelinus-alpinus	NC_000861.1	AF154851	true	true			unstated
+salvelinus-fontinalis	NC_000860.1	AF154850	true	true			unstated
+salvelinus-leucomaenis	NC_022844.1	KF513161	true	true	Sanger dideoxy sequencing	source	sanger
+salvelinus-malma	NC_068271.1	OM362907	true	true	Sanger dideoxy sequencing	source	sanger
+salvelinus-namaycush	NC_036392.1	MF621742	true	true			unstated
+sander-canadensis	NC_021444.1	KC663435	true	true	Sanger dideoxy sequencing	source	sanger
+sander-lucioperca	NC_026533.1	KP125333	true	true	Sanger dideoxy sequencing	source	sanger
+sander-vitreus	NC_028285.1	KP013098	true	true	Illumina	source	short_read
+sarcocheilichthys-lacustris	NC_022934.1	KF669394	true	true	Sanger dideoxy sequencing	source	sanger
+sarcophilus-harrisii	NC_018788.1	JX475455	true	true			unstated
+sarcoramphus-papa	NC_063527.1	MN720442	true	true			unstated
+sarda-sarda	NC_052756.1	MT410877	true	true			unstated
+sardina-pilchardus	NC_009592.1	AP009233	true	true			unstated
+sardinella-aurita	NC_088023.1	PP033006	true	true	Illumina	source	short_read
+sardinella-gibbosa	NC_037131.1	KU665488	true	true	Sanger dideoxy sequencing	source	sanger
+sardinella-lemuru	NC_039553.1	MF536754	true	true	Sanger dideoxy sequencing	source	sanger
+sardinella-longiceps	NC_033407.1	KR000002	true	true	Sanger dideoxy sequencing	source	sanger
+sardinella-maderensis	NC_009587.1	AP009143	true	true			unstated
+sardinops-sagax	NC_057117.1	MW338734	true	true	Illumina	source	short_read
+sargocentron-spiniferum	NC_030597.1	KX254549	true	true			unstated
+saurida-elongata	NC_025940.1	KP027408	true	true	Sanger dideoxy sequencing	source	sanger
+saurida-undosquamis	NC_003162.1	AP002920	true	true			unstated
+saurogobio-dabryi	NC_022845.1	KF534790	true	true	Sanger dideoxy sequencing	source	sanger
+scaphiopus-holbrookii	NC_037377.1	KY962390	true	true	Illumina	source	short_read
+scaphirhynchus-albus	NC_030324.1	KU985069	true	true			unstated
+scaphirhynchus-platorynchus	NC_030326.1	KU985071	true	true			unstated
+scardinius-erythrophthalmus	NC_031561.1	AP011263	true	true			unstated
+scarus-forsteni	NC_011928.1	FJ619271	true	true			unstated
+scarus-ghobban	NC_011599.1	FJ449707	true	true			unstated
+scarus-rubroviolaceus	NC_011343.1	FJ227899	true	true			unstated
+scarus-schlegeli	NC_011936.1	FJ595020	true	true			unstated
+scatophagus-argus	NC_059324.1	CM035598	true	true	PacBio Sequel I CLR; Illumina NovaSeq; Arima Genomics Hi-C; Bionano Genomics DLS	source	long_read
+schizopygopsis-younghusbandi	NC_021409.1	KC351895	true	true			unstated
+sciaenops-ocellatus	NC_016867.1	JQ286004	true	true			unstated
+sciurus-carolinensis	NC_050012.1	MT240881	true	true	Illumina	source	short_read
+sciurus-granatensis	NC_050018.1	MT240887	true	true	Illumina	source	short_read
+sciurus-variegatoides	NC_050015.1	MT240884	true	true	Illumina	source	short_read
+sciurus-vulgaris	NC_002369.1	AJ238588	true	true			unstated
+scoliodon-laticaudus	NC_042504.1	KP336547	true	true			unstated
+scolopax-rusticola	NC_025521.1	KM434134	true	true	Sanger dideoxy sequencing	source	sanger
+scomber-colias	NC_013724.1	AB488406	true	true			unstated
+scomber-japonicus	NC_013723.1	AB488405	true	true			unstated
+scomber-scombrus	NC_006398.1	AB120717	true	true			unstated
+scomberomorus-cavalla	NC_008109.1	DQ536428	true	true			unstated
+scomberomorus-munroi	NC_021390.1	JX559739	true	true	Sanger dideoxy sequencing	source	sanger
+scomberomorus-semifasciatus	NC_021391.1	JX559745	true	true	Sanger dideoxy sequencing	source	sanger
+scomberomorus-sierra	NC_033887.1	KX925517	true	true	Illumina	source	short_read
+scyliorhinus-canicula	NC_001950.1	Y16067	true	true			unstated
+scyliorhinus-stellaris	NC_066805.1	LC723525	true	true			unstated
+scylla-olivacea	NC_012569.1	FJ827760	true	true			unstated
+sebastes-aleutianus	NC_039779.1	MH378780	true	true	Illumina	source	short_read
+sebastes-alutus	NC_082757.1	OR482510	true	true	Illumina	source	short_read
+sebastes-auriculatus	NC_082772.1	OR482526	true	true	Illumina	source	short_read
+sebastes-babcocki	NC_085187.1	OR641503	true	true	Illumina	source	short_read
+sebastes-brevispinis	NC_082776.1	OR482530	true	true	Illumina	source	short_read
+sebastes-caurinus	NC_066933.1	OL806594	true	true	Illumina	source	short_read
+sebastes-ciliatus	NC_060709.1	MZ420215	true	true	Illumina	source	short_read
+sebastes-constellatus	NC_082758.1	OR482511	true	true	Illumina	source	short_read
+sebastes-crameri	NC_082778.1	OR482532	true	true	Illumina	source	short_read
+sebastes-diploproa	NC_082821.1	OR482579	true	true	Illumina	source	short_read
+sebastes-elongatus	NC_082818.1	OR482576	true	true	Illumina	source	short_read
+sebastes-emphaeus	NC_082816.1	OR482574	true	true	Illumina	source	short_read
+sebastes-entomelas	NC_082761.1	OR482515	true	true	Illumina	source	short_read
+sebastes-fasciatus	NC_036048.1	KX897946	true	true	Illumina	source	short_read
+sebastes-flavidus	NC_082767.1	OR482521	true	true	Illumina	source	short_read
+sebastes-goodei	NC_082764.1	OR482518	true	true	Illumina	source	short_read
+sebastes-helvomaculatus	NC_082775.1	OR482529	true	true	Illumina	source	short_read
+sebastes-jordani	NC_085188.1	OR641530	true	true	Illumina	source	short_read
+sebastes-maliger	NC_056782.1	MW846222	true	true	Illumina	source	short_read
+sebastes-melanops	NC_060710.1	OK048741	true	true	Illumina	source	short_read
+sebastes-melanostomus	NC_082790.1	OR482546	true	true	Illumina	source	short_read
+sebastes-miniatus	NC_082765.1	OR482519	true	true	Illumina	source	short_read
+sebastes-minor	NC_027444.1	KJ834059	true	true	Sanger dideoxy sequencing	source	sanger
+sebastes-mystinus	NC_082760.1	OR482514	true	true	Illumina	source	short_read
+sebastes-nebulosus	NC_082756.1	OR482509	true	true	Illumina	source	short_read
+sebastes-nigrocinctus	NC_039778.1	MH378778	true	true	Illumina	source	short_read
+sebastes-norvegicus	NC_056783.1	MW846223	true	true	Illumina	source	short_read
+sebastes-paucispinis	NC_082779.1	OR482533	true	true	Illumina	source	short_read
+sebastes-pinniger	NC_082766.1	OR482520	true	true	Illumina	source	short_read
+sebastes-polyspinis	NC_083047.1	OR546208	true	true	Illumina	source	short_read
+sebastes-proriger	NC_082771.1	OR482525	true	true	Illumina	source	short_read
+sebastes-reedi	NC_082802.1	OR482558	true	true	Illumina	source	short_read
+sebastes-rosaceus	NC_082791.1	OR482547	true	true	Illumina	source	short_read
+sebastes-rosenblatti	NC_082792.1	OR482548	true	true	Illumina	source	short_read
+sebastes-ruberrimus	NC_085186.1	OR641496	true	true	Illumina	source	short_read
+sebastes-rubrivinctus	NC_039777.1	MH378776	true	true	Illumina	source	short_read
+sebastes-saxicola	NC_082759.1	OR482513	true	true	Illumina	source	short_read
+sebastes-schlegelii	NC_005450.1	AY491978	true	true			unstated
+sebastes-steindachneri	NC_027445.1	KJ834060	true	true	Sanger dideoxy sequencing	source	sanger
+sebastes-variabilis	NC_060711.1	OK048742	true	true	Illumina	source	short_read
+sebastes-variegatus	NC_082788.1	OR482544	true	true	Illumina	source	short_read
+sebastes-viviparus	NC_052754.1	MT410865	true	true			unstated
+sebastes-wilsoni	NC_082762.1	OR482516	true	true	Illumina	source	short_read
+sebastes-zacentrus	NC_082763.1	OR482517	true	true	Illumina	source	short_read
+sebastolobus-alascanus	NC_082820.1	OR482578	true	true	Illumina	source	short_read
+seepiophila-jonesi	NC_026861.1	KJ789168	true	true	Illumina Hiseq 2000	source	short_read
+selar-crumenophthalmus	NC_023954.1	KJ148633	true	true			unstated
+selene-vomer	NC_088027.1	PP033011	true	true	Illumina	source	short_read
+semnopithecus-entellus	NC_008215.1	DQ355297	true	true			unstated
+semotilus-atromaculatus	NC_033946.1	AP012107	true	true			unstated
+semotilus-corporalis	NC_054290.1	MT667255	true	true			unstated
+sepia-officinalis	NC_007895.1	AB240155	true	true			unstated
+sepioteuthis-lessoniana	NC_007894.1	AB240154	true	true			unstated
+serinus-canaria	NC_037521.1	KM078794	true	true			unstated
+seriola-dumerili	NC_016870.1	AB517558	true	true			unstated
+seriola-lalandi	NC_016869.1	AB517557	true	true			unstated
+seriola-zonata	NC_082753.1	OR482504	true	true	Illumina	source	short_read
+seriolella-porosa	NC_025665.1	KM435146	true	true			unstated
+serranus-scriba	NC_063619.1	OK054501	true	true	Illumina	source	short_read
+setophaga-kirtlandii	NC_051027.1	MN356209	true	true			unstated
+siganus-canaliculatus	NC_024881.1	KJ872545	true	true			unstated
+sigmodon-hispidus	NC_035572.1	KY707311	true	true	Illumina	source	short_read
+sillago-aeolus	NC_025935.1	KM234972	true	true			unstated
+sillago-sihama	NC_016672.1	JQ048935	true	true			unstated
+silurus-glanis	NC_014261.1	AM398435	true	true			unstated
+silurus-soldatovi	NC_022723.1	AB860299	true	true			unstated
+sinanodonta-woodiana	NC_024943.1	KM272949	true	true			unstated
+siniperca-chuatsi	NC_015822.1	JF972568	true	true			unstated
+siniperca-knerii	NC_015987.1	JN378751	true	true			unstated
+siren-lacertina	NC_036927.1	KU904488	true	true	Sanger dideoxy sequencing	source	sanger
+sistrurus-catenatus	NC_071935.1	OQ354766	true	true	Illumina	source	short_read
+sitta-carolinensis	NC_024870.1	KJ909195	true	true			unstated
+sitta-europaea	NC_053059.1	MN356255	true	true			unstated
+smaug-warreni	NC_005962.1	AB079613	true	true			unstated
+sminthopsis-crassicaudata	NC_007631.1	AY795974	true	true			unstated
+solenocera-crassicornis	NC_030280.1	KU899137	true	true			unstated
+solenocera-melantho	NC_069041.1	ON243750	true	true	Illumina	source	short_read
+somateria-spectabilis	NC_088453.1	OR243134	true	true	Illumina	source	short_read
+somniosus-microcephalus	NC_049864.1	MT410866	true	true			unstated
+sorex-araneus	NC_027963.1	KT210896	true	true			unstated
+spalacopus-cyanus	NC_020660.1	HM544133	true	true			unstated
+sparus-aurata	NC_024236.1	LK022698	true	true			unstated
+spatula-clypeata	NC_028346.1	KT345702	true	true			unstated
+speothos-venaticus	NC_053974.1	MW257226	true	true			unstated
+spermophilus-citellus	NC_059784.1	MN935779	true	true	Illumina	source	short_read
+spheniscus-demersus	NC_022817.1	KC914350	true	true	Sanger dideoxy sequencing	source	sanger
+spheniscus-magellanicus	NC_036264.1	KU361803	true	true	SOLiD	source	short_read
+spheniscus-mendiculus	NC_036297.1	KU361807	true	true	SOLiD	source	short_read
+sphenodon-punctatus	NC_004815.1	AF534390	true	true			unstated
+sphyraena-barracuda	NC_022484.1	AP006828	true	true			unstated
+sphyraena-pinguis	NC_050164.1	MN967008	true	true	Illumina	source	short_read
+sphyraena-sphyraena	NC_086960.1	OQ434241	true	true	Illumina	source	short_read
+sphyrna-lewini	NC_022679.1	JX827259	true	true			unstated
+sphyrna-mokarran	NC_035491.1	KY464952	true	true	Illumina	source	short_read
+sphyrna-tiburo	NC_028508.1	KM453976	true	true			unstated
+sphyrna-zygaena	NC_025778.1	KM489157	true	true			unstated
+spicara-maena	NC_009854.1	AP009164	true	true			unstated
+spilogale-putorius	NC_010497.1	AM711898	true	true			unstated
+spinachia-spinachia	NC_011582.1	AB445128	true	true			unstated
+spirinchus-thaleichthys	NC_072211.1	OP690151	true	true			unstated
+spizella-passerina	NC_053084.1	MN356337	true	true			unstated
+spratelloides-gracilis	NC_009589.1	AP009145	true	true			unstated
+sprattus-sprattus	NC_009593.1	AP009234	true	true			unstated
+squalidus-chankaensis	NC_050647.1	MT767746	true	true	Sanger dideoxy sequencing	source	sanger
+squaliobarbus-curriculus	NC_019652.1	JX910141	true	true			unstated
+squalius-cephalus	NC_031540.1	AP011214	true	true			unstated
+squalus-acanthias	NC_002012.1	Y18134	true	true			unstated
+squalus-blainville	NC_059940.1	MT274575	true	true	Illumina	source	short_read
+squilla-mantis	NC_006081.1	AY639936	true	true			unstated
+stenella-attenuata	NC_012051.1	EU557096	true	true			unstated
+stenella-coeruleoalba	NC_012053.1	EU557097	true	true			unstated
+steno-bredanensis	NC_042761.1	MH910343	true	true	Sanger dideoxy sequencing	source	sanger
+stenobrachius-leucopsarus	NC_068843.1	ON005617	true	true	Oxford Nanopore	source	long_read
+stenodus-leucichthys	NC_020761.1	JQ390059	true	true			unstated
+stenonycteris-lanosa	NC_046934.1	MN816365	true	true	Illumina; IonTorrent; Sanger dideoxy sequencing	source	short_read
+stercorarius-longicaudus	NC_071238.1	OP936977	true	true	Illumina	source	short_read
+stercorarius-maccormicki	NC_026125.1	KM401546	true	true	Sanger dideoxy sequencing	source	sanger
+stercorarius-parasiticus	NC_052780.1	MN356186	true	true			unstated
+stercorarius-skua	NC_071236.1	OP936968	true	true	Illumina	source	short_read
+sterna-hirundo	NC_036345.1	MF582632	true	true	Sanger dideoxy sequencing	source	sanger
+sterna-paradisaea	NC_045282.1	MK946458	true	true	Illumina	source	short_read
+sternotherus-carinatus	NC_017607.1	HQ114563	true	true			unstated
+sternula-albifrons	NC_028176.1	KT350612	true	true	IonTorrent	source	short_read
+stigmatogobius-pleurostigma	NC_045524.1	KU376498	true	true	Sanger dideoxy sequencing	source	sanger
+stigmochelys-pardalis	NC_007694.1	DQ080041	true	true			unstated
+streptopelia-chinensis	NC_026459.1	KP273832	true	true			unstated
+streptopelia-decaocto	NC_037513.1	KY827036	true	true	Illumina	source	short_read
+strigops-habroptila	NC_005931.1	AY309456	true	true			unstated
+strix-aluco	NC_072569.1	OP850567	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+strix-uralensis	NC_038218.1	MG681081	true	true	Sanger dideoxy sequencing	source	sanger
+strongylocentrotus-droebachiensis	NC_009940.1	AM900391	true	true			unstated
+strongylocentrotus-purpuratus	NC_001453.1	X12631	true	true			unstated
+strongyloides-ratti	NC_028623.1	LC050211	true	true			unstated
+struthidea-cinerea	NC_053087.1	MN356345	true	true			unstated
+struthio-camelus	NC_002785.1	AF338715	true	true			unstated
+sturnus-vulgaris	NC_029360.1	KT946691	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+sula-dactylatra	NC_062945.1	OL940935	true	true			unstated
+suncus-murinus	NC_024604.1	KJ920198	true	true	Sanger dideoxy sequencing	source	sanger
+sundasciurus-hippurus	NC_049034.1	MT157216	true	true	Illumina	source	short_read
+sundasciurus-lowii	NC_035813.1	KY117587	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+suricata-suricatta	NC_045900.1	MN854374	true	true			unstated
+sus-barbatus	NC_026992.1	KP789021	true	true	Illumina	source	short_read
+sus-scrofa	NC_000845.1	AF034253	true	true			unstated
+sus-verrucosus	NC_023536.1	KF926379	true	true	Illumina	source	short_read
+sylvia-atricapilla	NC_010228.1	AM889140	true	true			unstated
+sylvia-borin	NC_053054.1	MN356250	true	true			unstated
+sylvicapra-grimmia	NC_020747.1	JN632701	true	true			unstated
+symphalangus-syndactylus	NC_014047.1	AB504750	true	true			unstated
+symphurus-plagiusa	NC_083036.1	OR546190	true	true	Illumina	source	short_read
+syncerus-caffer	NC_020617.1	EF536353	true	true			unstated
+syngnathus-leptorhynchus	NC_063777.1	OL334980	true	true	Illumina	source	short_read
+syngnathus-scovelli	NC_065499.1	MZ709307	true	true	Sanger dideoxy sequencing	source	sanger
+synthliboramphus-antiquus	NC_007978.1	AP009042	true	true			unstated
+syrmaticus-reevesii	NC_010770.1	AB164623	true	true			unstated
+tachybaptus-ruficollis	NC_024594.1	KJ913674	true	true			unstated
+tachycineta-bicolor	NC_020596.1	JQ071614	true	true			unstated
+tachycineta-thalassina	NC_020597.1	JQ071615	true	true			unstated
+tachyglossus-aculeatus	NC_003321.1	AJ303116	true	true			unstated
+tadarida-teniotis	NC_036330.1	KY581661	true	true			unstated
+tadorna-ferruginea	NC_024640.1	KF684946	true	true			unstated
+tadorna-tadorna	NC_024750.1	KJ794187	true	true			unstated
+taeniopygia-guttata	NC_007897.1	DQ422742	true	true			unstated
+takifugu-rubripes	NC_004299.1	AJ421455	true	true			unstated
+tamandua-mexicana	NC_028574.1	KT818551	true	true			unstated
+tamandua-tetradactyla	NC_004032.1	AJ421450	true	true			unstated
+tamias-dorsalis	NC_032373.1	KY070145	true	true			unstated
+tamias-sibiricus	NC_025277.1	KF668525	true	true			unstated
+tamias-striatus	NC_032375.1	KY070151	true	true			unstated
+tandanus-tandanus	NC_081038.1	OP882680	true	true	Illumina	source	short_read
+tapirus-terrestris	NC_053962.1	MW257204	true	true			unstated
+taractichthys-steindachneri	NC_027858.1	KT153629	true	true			unstated
+tarentola-mauritanica	NC_012366.1	EU443255	true	true			unstated
+tarsius-bancanus	NC_002811.1	AF348159	true	true			unstated
+tarsius-syrichta	NC_012774.1	AB371090	true	true			unstated
+taurotragus-derbianus	NC_020618.1	EF536354	true	true			unstated
+taxidea-taxus	NC_020646.1	HM106330	true	true			unstated
+tegillarca-granosa	NC_026081.1	KJ607173	true	true			unstated
+tentoriceps-cristatus	NC_071975.1	OP724235	true	true	Illumina	source	short_read
+tenualosa-ilisha	NC_016682.1	AP011610	true	true			unstated
+tenualosa-toli	NC_016700.1	AP011600	true	true			unstated
+terapon-jarbua	NC_027281.1	KP455734	true	true			unstated
+terebellides-stroemii	NC_011014.1	EU236701	true	true			unstated
+terrapene-carolina	NC_069631.1	ON402807	true	true	Illumina	source	short_read
+testudo-graeca	NC_007692.1	DQ080049	true	true			unstated
+testudo-kleinmanni	NC_007699.1	DQ080048	true	true			unstated
+testudo-marginata	NC_007698.1	DQ080047	true	true			unstated
+tetracerus-quadricornis	NC_020788.1	EF536355	true	true			unstated
+tetraodon-lineatus	NC_028551.1	KT715694	true	true	Sanger dideoxy sequencing	source	sanger
+tetrastes-bonasia	NC_020591.1	FJ752435	true	true			unstated
+thalassarche-melanophris	NC_007172.2	AY158677	true	true			unstated
+thaleichthys-pacificus	NC_066906.1	OL806604	true	true	Illumina	source	short_read
+thamnaconus-modestus	NC_011327.1	AP009185	true	true			unstated
+theropithecus-gelada	NC_019802.1	FJ785426	true	true			unstated
+thinornis-dubius	NC_061228.1	OM063155	true	true	Illumina	source	short_read
+thoburnia-rhothoeca	NC_031633.1	AP011435	true	true			unstated
+thraupis-episcopus	NC_025596.1	KM078765	true	true			unstated
+threskiornis-aethiopicus	NC_013146.1	GQ358927	true	true			unstated
+thryonomys-swinderianus	NC_002658.1	AJ301644	true	true			unstated
+thryothorus-ludovicianus	NC_051032.1	MN356226	true	true			unstated
+thryssa-hamiltonii	NC_036672.1	KX096870	true	true	Illumina	source	short_read
+thryssa-kammalensis	NC_029940.1	KT985048	true	true	Sanger dideoxy sequencing	source	sanger
+thryssa-setirostris	NC_038196.1	MG755269	true	true			unstated
+thunnus-alalunga	NC_005317.1	AB101291	true	true			unstated
+thunnus-albacares	NC_014061.1	GU256528	true	true			unstated
+thunnus-atlanticus	NC_025519.1	KM405517	true	true	454	source	short_read
+thunnus-maccoyii	NC_014101.1	GU256523	true	true			unstated
+thunnus-obesus	NC_014059.1	GU256525	true	true			unstated
+thunnus-orientalis	NC_008455.1	AB185022	true	true			unstated
+thunnus-thynnus	NC_004901.2	AY302574	true	true			unstated
+thunnus-tonggol	NC_020673.1	HQ425780	true	true			unstated
+thymallus-arcticus	NC_056305.1	MT063010	true	true	Illumina	source	short_read
+thymallus-baicalensis	NC_056306.1	MT063022	true	true	Illumina	source	short_read
+thymallus-nigrescens	NC_056307.1	MT063028	true	true	Illumina	source	short_read
+thymallus-thymallus	NC_012928.1	FJ853655	true	true			unstated
+thymallus-tugarinae	NC_027409.1	KJ866483	true	true	Sanger dideoxy sequencing	source	sanger
+thyrsites-atun	NC_066972.1	OP133162	true	true	IonTorrent	source	short_read
+thysanoteuthis-rhombus	NC_058301.1	MT733875	true	true	Sanger dideoxy sequencing	source	sanger
+tichodroma-muraria	NC_053081.1	MN356321	true	true			unstated
+tinca-tinca	NC_008648.1	AB218686	true	true			unstated
+todus-mexicanus	NC_052799.1	MN356280	true	true			unstated
+tolypeutes-matacus	NC_028575.1	KT818553	true	true			unstated
+tomistoma-schlegelii	NC_011074.1	AJ810455	true	true			unstated
+tor-tor	NC_027498.1	KP795444	true	true	Sanger dideoxy sequencing	source	sanger
+torpedo-marmorata	NC_059941.1	MT274576	true	true	Illumina	source	short_read
+totoaba-macdonaldi	NC_082752.1	OR482501	true	true	Illumina	source	short_read
+toxostoma-redivivum	NC_053053.1	MN356247	true	true			unstated
+trachemys-scripta	NC_011573.1	FJ392294	true	true			unstated
+trachinocephalus-myops	NC_083027.1	OR546179	true	true	Illumina	source	short_read
+trachinotus-carolinus	NC_024184.1	KJ556976	true	true			unstated
+trachinotus-ovatus	NC_022707.1	KF356397	true	true			unstated
+trachurus-japonicus	NC_002813.1	AP003091	true	true			unstated
+trachurus-symmetricus	NC_082545.1	OR482443	true	true	Illumina	source	short_read
+trachurus-trachurus	NC_006818.1	AB108498	true	true			unstated
+trachypenaeus-curvirostris	NC_050695.1	KY021068	true	true			unstated
+trachypithecus-cristatus	NC_023971.1	KJ174503	true	true	Sanger dideoxy sequencing	source	sanger
+trachypithecus-francoisi	NC_023970.1	KJ174502	true	true	Sanger dideoxy sequencing	source	sanger
+trachypithecus-johnii	NC_019583.1	HQ149050	true	true			unstated
+trachypithecus-obscurus	NC_006900.1	AY863425	true	true			unstated
+trachypithecus-phayrei	NC_056326.1	MT806034	true	true	Illumina; Sanger dideoxy sequencing	source	short_read
+trachypithecus-pileatus	NC_024529.1	KF680163	true	true	Sanger dideoxy sequencing	source	sanger
+trachypithecus-vetulus	NC_019582.1	HQ149049	true	true			unstated
+tragelaphus-angasii	NC_020748.1	JN632702	true	true			unstated
+tragelaphus-eurycerus	NC_020749.1	JN632703	true	true			unstated
+tragelaphus-imberbis	NC_020619.1	EF536356	true	true			unstated
+tragelaphus-oryx	NC_020750.1	JN632704	true	true			unstated
+tragelaphus-scriptus	NC_020751.1	JN632707	true	true			unstated
+tragelaphus-spekii	NC_020620.1	EF536357	true	true			unstated
+tragelaphus-strepsiceros	NC_020752.1	JN632708	true	true			unstated
+tragulus-napu	NC_035821.1	KY117549	true	true	Sanger dideoxy sequencing; Illumina	source	short_read
+tregellasia-capito	NC_027231.1	KM374637	true	true			unstated
+tregellasia-leucops	NC_024871.1	KJ909197	true	true			unstated
+tremarctos-ornatus	NC_009969.1	EF196665	true	true			unstated
+trematomus-bernacchii	NC_053364.1	MN841276	true	true	Illumina	source	short_read
+trematomus-eulepidotus	NC_057674.1	MT559895	true	true	Illumina	source	short_read
+trematomus-hansoni	NC_086619.1	PP084641	true	true	Illumina	source	short_read
+trematomus-loennbergii	NC_048965.1	MT447073	true	true	PacBio	source	long_read
+trematomus-newnesi	NC_068275.1	OP432732	true	true	Illumina	source	short_read
+trematomus-nicolai	NC_065826.1	MZ779013	true	true	Illumina	source	short_read
+triaenodon-obesus	NC_026287.1	KJ748376	true	true			unstated
+triakis-semifasciata	NC_077588.1	OQ612633	true	true	Illumina	source	short_read
+trichechus-manatus	NC_010302.1	AM904728	true	true			unstated
+trichiurus-japonicus	NC_011719.1	EU339148	true	true			unstated
+trichiurus-lepturus	NC_018791.1	JX477078	true	true			unstated
+trichoglossus-euteles	NC_082172.1	OR209193	true	true	Illumina	source	short_read
+trichoglossus-haematodus	NC_064933.1	MN652920	true	true	Illumina	source	short_read
+trichosurus-vulpecula	NC_003039.1	AF357238	true	true			unstated
+triglops-forficatus	NC_082794.1	OR482550	true	true	Illumina	source	short_read
+triglops-pingelii	NC_082814.1	OR482572	true	true	Illumina	source	short_read
+triglops-scepticus	NC_082789.1	OR482545	true	true	Illumina	source	short_read
+trimeresurus-albolabris	NC_022820.1	KF311102	true	true			unstated
+trinectes-maculatus	NC_023769.1	JQ639070	true	true			unstated
+tringa-brevipes	NC_088454.1	OR243150	true	true	Illumina	source	short_read
+tringa-erythropus	NC_030585.1	KX230491	true	true			unstated
+tringa-glareola	NC_039096.1	KY128485	true	true			unstated
+tringa-incana	NC_088455.1	OR243158	true	true	Illumina	source	short_read
+tringa-melanoleuca	NC_088456.1	OR243166	true	true	Illumina	source	short_read
+tringa-nebularia	NC_044651.1	MK460251	true	true	Illumina	source	short_read
+tringa-ochropus	NC_033974.1	KX668223	true	true	Sanger dideoxy sequencing	source	sanger
+tringa-semipalmata	NC_036016.1	MF036175	true	true			unstated
+tringa-stagnatilis	NC_056273.1	MT572847	true	true	Illumina	source	short_read
+tringa-totanus	NC_044648.1	MK922124	true	true	Sanger dideoxy sequencing	source	sanger
+trionyx-triunguis	NC_012833.1	AB477345	true	true			unstated
+triphoturus-mexicanus	NC_037249.1	MG321596	true	true	Illumina	source	short_read
+triplophysa-yarkandensis	NC_027517.1	KP050360	true	true	Sanger dideoxy sequencing	source	sanger
+triso-dermopterus	NC_022140.1	KC593371	true	true	Sanger dideoxy sequencing	source	sanger
+triturus-carnifex	NC_015788.1	HQ697272	true	true			unstated
+triturus-cristatus	NC_015790.1	HQ697273	true	true			unstated
+triturus-marmoratus	NC_015795.1	HQ697279	true	true			unstated
+tropheus-moorii	NC_018815.1	HE961975	true	true			unstated
+tropidophis-haetianus	NC_012573.1	FJ755181	true	true			unstated
+trypaea-australiensis	NC_026225.2	KM501040	true	true			unstated
+tupaia-belangeri	NC_002521.1	AF217811	true	true			unstated
+tupaia-glis	NC_068695.1	ON746673	true	true			unstated
+tupaia-minor	NC_050993.1	MT442050	true	true	Illumina	source	short_read
+tupaia-tana	NC_050992.1	MT442045	true	true	Illumina	source	short_read
+turdus-merula	NC_028188.1	KT373849	true	true			unstated
+turdus-migratorius	NC_024872.1	KJ909198	true	true			unstated
+turdus-philomelos	NC_029147.1	KC545406	true	true			unstated
+tursiops-truncatus	NC_012059.1	EU557093	true	true			unstated
+tylosurus-crocodilus	NC_063499.1	MZ329993	true	true	Illumina	source	short_read
+tylototriton-verrucosus	NC_017871.1	AB689009	true	true			unstated
+umbra-limi	NC_028282.1	KP013095	true	true	Illumina	source	short_read
+umbrina-canosai	NC_088030.1	PP033014	true	true	Illumina	source	short_read
+uncia-uncia	NC_010638.1	EF551004	true	true			unstated
+upeneus-japonicus	NC_063704.1	ON116346	true	true	MGISEQ-T7	source	short_read
+upeneus-sulphureus	NC_063690.1	MW036248	true	true	454	source	short_read
+upupa-epops	NC_028178.1	KT356220	true	true	IonTorrent	source	short_read
+urocyon-cinereoargenteus	NC_026723.1	KP129096	true	true	454; Illumina	source	short_read
+uroteuthis-duvaucelii	NC_027729.1	KR051264	true	true	Sanger dideoxy sequencing	source	sanger
+uroteuthis-edulis	NC_017746.1	AB675080	true	true			unstated
+ursus-americanus	NC_003426.1	AF303109	true	true			unstated
+ursus-arctos	NC_003427.1	AF303110	true	true			unstated
+ursus-maritimus	NC_003428.1	AF303111	true	true			unstated
+ursus-thibetanus	NC_009971.1	EF196661	true	true			unstated
+vanellus-vanellus	NC_025637.1	KM577158	true	true	Sanger dideoxy sequencing	source	sanger
+varanus-niloticus	NC_008778.1	AB185327	true	true			unstated
+varanus-salvator	NC_010974.1	EU747731	true	true			unstated
+varecia-rubra	NC_084385.1	OR711366	true	true	Illumina	source	short_read
+varecia-variegata	NC_012773.1	AB371089	true	true			unstated
+variola-albimarginata	NC_022139.1	KC593370	true	true	Sanger dideoxy sequencing	source	sanger
+variola-louti	NC_022138.1	KC593369	true	true	Sanger dideoxy sequencing	source	sanger
+verasper-moseri	NC_008461.1	EF025506	true	true			unstated
+vespertilio-murinus	NC_033347.1	KU161588	true	true	Illumina	source	short_read
+vestiaria-coccinea	NC_025620.1	KM078797	true	true			unstated
+vicugna-vicugna	NC_013558.1	FJ456892	true	true			unstated
+vipera-berus	NC_036956.1	MF945570	true	true	Illumina	source	short_read
+vireo-altiloquus	NC_051016.1	MN356188	true	true			unstated
+vireo-olivaceus	NC_024869.1	KJ909193	true	true			unstated
+viverra-zibetha	NC_053976.1	MW257233	true	true			unstated
+vombatus-ursinus	NC_003322.1	AJ304826	true	true			unstated
+vormela-peregusna	NC_054246.1	MW013133	true	true	Illumina	source	short_read
+vulpes-corsac	NC_023958.1	KJ140137	true	true			unstated
+vulpes-lagopus	NC_026529.1	KP200876	true	true			unstated
+vulpes-rueppellii	NC_087722.1	OQ274912	true	true			unstated
+vulpes-vulpes	NC_008434.1	AM181037	true	true			unstated
+vulpes-zerda	NC_023459.1	KF826488	true	true			unstated
+vultur-gryphus	NC_058600.1	MZ223429	true	true	Illumina; Oxford Nanopore	source	long_read
+xanthonycticebus-pygmaeus	NC_033381.1	KX397281	true	true	Sanger dideoxy sequencing	source	sanger
+xenomystus-nigri	NC_012715.1	AP008927	true	true			unstated
+xenopeltis-unicolor	NC_007402.1	AB179620	true	true			unstated
+xenopus-laevis	NC_001573.1	M10217	true	true			unstated
+xenus-cinereus	NC_033973.1	KX644890	true	true			unstated
+xiphias-gladius	NC_012677.1	AB470301	true	true			unstated
+xiphophorus-hellerii	NC_013089.1	FJ226476	true	true			unstated
+xyrichtys-novacula	NC_083028.1	OR546180	true	true	Illumina	source	short_read
+yasuhikotakia-modesta	NC_035145.1	KY131962	true	true	Illumina	source	short_read
+ylistrum-balloti	NC_068847.1	ON041136	true	true	Illumina	source	short_read
+zaedyus-pichiy	NC_028577.1	KT818555	true	true			unstated
+zaglossus-bruijni	NC_006364.1	AJ639865	true	true			unstated
+zalophus-californianus	NC_008416.1	AM181017	true	true			unstated
+zanda-latirostris	NC_020595.1	JF414243	true	true			unstated
+zearaja-chilensis	NC_023944.1	KF648508	true	true	Sanger dideoxy sequencing	source	sanger
+zearaja-nasuta	NC_037961.1	MF278960	true	true	Illumina	source	short_read
+zebrasoma-flavescens	NC_009874.1	AP006032	true	true			unstated
+zebrasoma-scopas	NC_060860.1	MZ292655	true	true	Illumina	source	short_read
+zenaida-macroura	NC_031863.1	KX902235	true	true			unstated
+zenopsis-nebulosus	NC_003173.1	AP002942	true	true			unstated
+zeus-faber	NC_003190.1	AP002941	true	true			unstated
+ziphius-cavirostris	NC_021435.1	KC776696	true	true	Illumina	source	short_read
+zoarces-americanus	NC_086796.1	OP133231	true	true	Illumina	source	short_read
+zoarces-viviparus	NC_088490.1	PP556339	true	true	PacBio	source	long_read
+zonotrichia-albicollis	NC_053110.1	MN356386	true	true			unstated
+zootoca-vivipara	NC_026867.1	KM401599	true	true	Sanger dideoxy sequencing	source	sanger
+zosterops-japonicus	NC_059932.1	MW574481	true	true	Illumina	source	short_read
+zosterops-lateralis	NC_029146.1	KC545407	true	true			unstated

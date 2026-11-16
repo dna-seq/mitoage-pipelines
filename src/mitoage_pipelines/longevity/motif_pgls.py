@@ -44,8 +44,12 @@ def feature_columns(structure: pd.DataFrame) -> list[str]:
             if c not in NOT_FEATURES and pd.api.types.is_numeric_dtype(structure[c])]
 
 
-def long_read_slugs(structure: pd.DataFrame) -> set[str]:
-    """Species whose record names a long-read technology; empty when the build carries no such column."""
+def long_read_slugs(structure: pd.DataFrame, technology: Path | None = None) -> set[str]:
+    """Species whose record names a long-read technology: from technology.tsv (`longevity technology`)
+    when given, else from the build's own column; empty when neither exists."""
+    if technology is not None:
+        t = pd.read_csv(technology, sep="\t")
+        return set(t.slug[t.technology_class == "long_read"])
     if "sequencing_technology" not in structure.columns:
         return set()
     tech = structure.sequencing_technology.fillna("").str.lower()
@@ -94,7 +98,7 @@ def test_features(sp: pd.DataFrame, structure: pd.DataFrame, features: list[str]
 
 
 def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, out: Path,
-         structure_path: Path | None = None,
+         structure_path: Path | None = None, technology: Path | None = None,
          classes: tuple[str, ...] = ("Mammalia", "Aves", "Actinopterygii", "Reptilia")) -> pd.DataFrame:
     """Writes motif_pgls.tsv: class, subset, feature, n, lambda, Spearman, PGLS slope per SD, p, q.
 
@@ -112,7 +116,10 @@ def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, out: Pa
             "mtdna-features work; point --build at a build that contains them.")
     structure = pd.read_parquet(path)
     features = feature_columns(structure)
-    long_read = long_read_slugs(structure)
+    if technology is None and (out / "technology.tsv").is_file():
+        technology = out / "technology.tsv"
+    long_read = long_read_slugs(structure, technology)
+    print(f"sequencing technology read from: {technology or 'the build (no technology.tsv)'}")
     print(f"{path}: {len(structure)} species, {len(features)} numeric features")
     if structure_path is not None:
         build_slugs = set(pd.read_parquet(data / "species.parquet", columns=["slug"]).slug)

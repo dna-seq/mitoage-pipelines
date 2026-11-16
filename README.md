@@ -87,6 +87,7 @@ uv run mitoage longevity pgls --class Mammalia --alignments-dir data/interim/ali
 
 # H3: selection in long-lived against short-lived lines (HyPhy)
 uv run mitoage longevity rates
+uv run mitoage download technology && uv run mitoage longevity technology   # H8's control: each record's sequencing technology, from NCBI
 uv run mitoage longevity motif-pgls      # H8: the build's motif, repeat and contact-zone features, four classes
 uv run mitoage longevity structure-pgls  # H12: complex IV contact mismatch (after `mitoport burial`) and GRAVY, four classes
 # H12, second round: the partners of complex IV in four classes, and ESM-2 at its contacts (GPU, `uv sync --group fold`)

@@ -5,7 +5,8 @@ Order of a full run:
   mitoage longevity controls && mitoage longevity fourfold && mitoage longevity composition
   mitoage longevity sites
   mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls && mitoage longevity pgls-power
-  mitoage longevity rates && mitoage longevity motif-pgls && mitoage longevity generation-time
+  mitoage longevity rates && mitoage longevity generation-time
+  mitoage download technology && mitoage longevity technology && mitoage longevity motif-pgls
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
   mitoage peptides pilot
@@ -106,6 +107,14 @@ def download_pdb(ids: Annotated[list[str], typer.Argument(help="PDB entry ids, e
     """Solved structures as mmCIF from RCSB into data/input/pdb, with each file's SHA-256 in the manifest."""
     from . import download
     download.pdb([i.upper() for i in ids], paths.PDB, paths.MANIFEST)
+
+
+@download_app.command("technology")
+def download_technology(data: Build = paths.BUILD) -> None:
+    """H8's control: the RefSeq record of every species of the build and the INSDC record each names, from NCBI
+    into data/input/technology (refseq/, source/). Records already there are not fetched again."""
+    from .longevity import technology
+    technology.fetch(data, paths.TECH_GB)
 
 
 @download_app.command("cybrid")
@@ -322,16 +331,25 @@ def longevity_rates(
     rates.main(data, composition, fourfold, tree, out)
 
 
+@longevity_app.command("technology")
+def longevity_technology(data: Build = paths.BUILD, out: Out = paths.LONGEVITY_OUT) -> None:
+    """H8's control: the sequencing technology each mitogenome's record states, into technology.tsv
+    (long_read, short_read, sanger or unstated; never guessed). After `download technology`."""
+    from .longevity import technology
+    technology.main(data, paths.TECH_GB, out)
+
+
 @longevity_app.command("motif-pgls")
 def longevity_motif_pgls(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
     tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
     out: Out = paths.LONGEVITY_OUT,
     structure: Annotated[Optional[Path], typer.Option("--structure", help="mtdna_structure.parquet from another build, while the motif features are not yet in a released one")] = None,
+    technology: Annotated[Optional[Path], typer.Option("--technology", help="technology.tsv from `longevity technology`; default: the one in --out when it exists")] = None,
 ) -> None:
     """H8: the build's mtDNA motif, repeat and contact-zone features against lifespan (H1's model)."""
     from .longevity import motif_pgls
-    motif_pgls.main(data, composition, fourfold, tree, out, structure)
+    motif_pgls.main(data, composition, fourfold, tree, out, structure, technology)
 
 
 @longevity_app.command("structure-pgls")
