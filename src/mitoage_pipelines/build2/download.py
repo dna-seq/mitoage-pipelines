@@ -285,11 +285,13 @@ def anage(dest: Path, manifest: Path) -> Path:
     return dest
 
 
-def fishbase(db: str, dest_root: Path, manifest: Path, version: str = pins.FISHBASE_VERSION) -> Path:
-    """The tables the rules read, from source.coop, each checked against build 2's md5 when the version is pinned."""
+def fishbase(db: str, dest_root: Path, manifest: Path, version: str = pins.FISHBASE_VERSION,
+             tables: tuple[str, ...] = pins.FISHBASE_TABLES) -> Path:
+    """The tables the rules read (or `tables`), from source.coop, each checked against its pinned md5 when the
+    version is pinned."""
     dest = dest_root / version
     md5s = {}
-    for t in pins.FISHBASE_TABLES:
+    for t in tables:
         url = pins.SOURCECOOP_URL.format(db=db, version=version, table=t)
         p = dest / f"{t}.parquet"
         fetch_to(url, p)

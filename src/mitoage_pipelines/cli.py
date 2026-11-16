@@ -6,6 +6,7 @@ Order of a full run:
   mitoage longevity sites
   mitoage download tree && mitoage longevity dated-tree && mitoage longevity aa-pgls && mitoage longevity pgls && mitoage longevity pgls-power
   mitoage longevity rates && mitoage longevity generation-time
+  mitoage download fishbase-temperature && mitoage longevity thermal   (H20)
   mitoage download technology && mitoage longevity technology && mitoage longevity motif-pgls
   mitoage longevity relax-prep && mitoage longevity relax
   mitoage longevity coevol-prep
@@ -205,6 +206,14 @@ def download_taxonomy(
         download.taxdump_archive(archive or "2026-11-01", paths.B2_TAXDUMP, manifest)
 
 
+@download_app.command("fishbase-temperature")
+def download_fishbase_temperature(manifest: Manifest = paths.MANIFEST,
+                                  fishbase_version: Annotated[str, typer.Option(help="FishBase snapshot on source.coop")] = "v26.06") -> None:
+    """FishBase's species, synonyms and stocks tables (source.coop), md5-checked, for H20's water temperatures."""
+    from .build2 import download, pins
+    download.fishbase("fb", paths.B2_FISHBASE, manifest, fishbase_version, pins.FISHBASE_TEMPERATURE_TABLES)
+
+
 @download_app.command("lifespan")
 def download_lifespan(manifest: Manifest = paths.MANIFEST,
                       fishbase_version: Annotated[str, typer.Option(help="FishBase/SeaLifeBase snapshot on source.coop")] = "v26.06",
@@ -379,6 +388,18 @@ def longevity_generation_time(
     """H11: lifespan or another life-history trait? mtDNA composition against lifespan and age at maturity, gestation or birth weight in one model."""
     from .longevity import generation_time
     generation_time.main(data, fourfold, tree, out, tuple(classes or ("Mammalia", "Aves")), maturity)
+
+
+@longevity_app.command("thermal")
+def longevity_thermal(
+    data: Build = paths.BUILD, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    fishbase: Annotated[Path, typer.Option("--fishbase", help="FishBase tables species, synonyms and stocks, from `download fishbase-temperature`")] = paths.B2_FISHBASE / "v26.06",
+    out: Out = paths.THERMAL_OUT,
+) -> None:
+    """H20: temperature, size and metabolic rate against the mtDNA substitution rate of cherries and its composition."""
+    from .longevity import thermal
+    thermal.main(data, fourfold, tree, fishbase, out)
 
 
 @longevity_app.command("concat")

@@ -1,7 +1,7 @@
 # The pipeline in pictures
 
 What is downloaded, which command reads and writes what, and which table each finding is read from.
-Hypotheses (H0 to H12, H14 to H19), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
+Hypotheses (H0 to H12, H14 to H20), the audit of the records (H13), their tests and results are in [HYPOTHESES.md](HYPOTHESES.md).
 
 ## Where the data comes from
 
@@ -194,3 +194,24 @@ flowchart TD
 ```
 
 A description of the records and a list of candidates for a person to check, not a test about longevity.
+
+## Temperature, size and metabolic rate (H20)
+
+```mermaid
+flowchart TD
+  B[build: species, alignments,<br/>region_stats, codon_usage] --> TR[traits: 1/kT, size, metabolic rate]
+  FB[(FishBase v26.06: species,<br/>synonyms, stocks; md5-checked)] --> TR
+  T[dated tree] --> P[sister pairs with no shared branch<br/>and the plain cherries]
+  TR --> P --> F[pairs.tsv, pair_fits.tsv]
+  TR --> C[composition.tsv]
+  TR --> L[lehmann.tsv]
+  F --> R[readout.tsv]
+  L --> R
+```
+
+`longevity thermal` reads AnAge's body temperature and metabolic rate from the build and, for fishes, FishBase's
+preferred water temperature and maximum length (`download fishbase-temperature`), and writes into
+`data/output/longevity/thermal`: `traits.tsv` and `fishbase_match.tsv` (how each fish's name was matched), the sister
+pairs and their rates (`pairs.tsv`), the regressions over pairs (`pair_fits.tsv`), the composition screen
+(`composition.tsv`), Lehmann et al.'s model on the tree (`lehmann.tsv`), and the pre-registered tests with their
+reading (`readout.tsv`).

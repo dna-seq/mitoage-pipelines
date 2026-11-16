@@ -100,6 +100,8 @@ uv run mitoage mitoport partners          # discordance of the mito-nuclear cont
 uv run mitoage structure embed            # ESM-2 650M means at the contact and control residues (a CUDA GPU)
 uv run mitoage longevity structure-pgls --family embedding --out data/output/longevity/embedding
 uv run mitoage longevity generation-time   # H11: lifespan, maturity, gestation, birth weight and the slow-fast axis; mammals and birds (on haumea: slurm/generation-time.sbatch)
+uv run mitoage download fishbase-temperature   # FishBase's species, synonyms and stocks tables, md5-checked
+uv run mitoage longevity thermal   # H20: temperature, size and metabolic rate against sister-pair rates and composition; Lehmann et al. retested (on haumea: slurm/h20-thermal.sbatch)
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 

@@ -1542,3 +1542,90 @@ transversion distance had not been computed for any species.
 (`slurm/h19-classes-mutations.py`), the contact maps, the selections and alignments (the 50 of H14's job are compared
 with its own, byte for byte), `mitoport classes`, and a second run to check that the tables come out the same bytes.
 **Result.** Not yet run.
+
+## H20. Temperature, size and metabolic rate against the mitochondrial substitution rate and composition
+
+**Question.** Does the mitochondrial genome evolve faster in warmer animals and in animals with a faster metabolism,
+as metabolic theory predicts? Gillooly, Allen, West & Brown 2005 (PNAS 102:140, doi:10.1073/pnas.0407735101)
+combined metabolic theory with the neutral theory: substitution rates should scale with mass-specific metabolic
+rate, so rise with temperature as exp(-E/kT) and fall with body size. The build has body temperatures for 253
+mammals (AnAge), FishBase's preferred water temperature for 256 ray-finned and 40 cartilaginous fishes, and metabolic
+rates for 206 mammals and 75 birds; none had been tested. Fishes are the strong case: a fish's body is at the
+water's temperature, which ranges here from -2 to 28 C, against 31 to 40 C for mammals. Beside it, a published
+relationship retested on the tree: Lehmann, Segal, Muradian & Fraifeld 2008 (Rejuvenation Res 11:409,
+doi:10.1089/rej.2008.0676), from MitoAge's first authors, found that mtDNA GC content and resting metabolic rate
+together explain 77% of the variance of mammalian maximum lifespan over 140 species, without the tree; Lehmann,
+Muradian & Fraifeld 2013 (Front Genet 4:111, doi:10.3389/fgene.2013.00111) took body temperature in as well.
+
+**Seen before this entry was written, and therefore not blind.** While the code was written, on the laptop's copy
+of build 0f4e970 (species.parquet 267a16311cca) and its dated tree, 2026-11-16:
+- the matching of the 980 fishes to FishBase (955 by exact name, 25 by synonym, none ambiguous, none in conflict
+  with the build's FishBase record), and how many species have each trait (above);
+- a first version of the rate test on the plain cherries of the whole tree, whose log10 dS per Myr fits were printed
+  in full: mammals, size -0.056 (p = 0.067, 152 cherries), temperature and size: 1/kT -0.53 (p = 0.071, 29
+  cherries; E = 1.2 eV); ray-finned fishes, size -0.12 (p = 0.13, 198), temperature and size: 1/kT +0.029
+  (p = 0.28, 40; E = -0.07 eV), the midpoint of the temperature range and size: 1/kT +0.12 (p = 0.15) and size
+  -0.41 (p = 0.0006, 35); birds, size -0.099 (p = 0.026, 110); cartilaginous fishes, size +0.29 (p = 0.41, 27);
+  metabolic rate had fewer than 20 cherries in mammals (19) and birds (11), and temperature in cartilaginous
+  fishes (7). dN per Myr and dN/dS were computed and not looked at;
+- then, before any further fit was looked at, the pairing below, chosen because plain cherries use 40 of 256 fishes
+  with a temperature: its counts of pairs per model only.
+- The composition screen and the Lehmann model were run for their species counts only (mammals: 250 with a
+  temperature, 203 with a metabolic rate and mass, 185 with both and a lifespan; Lehmann's model 201 and 183); no
+  slope or p was printed.
+So the pairing was changed after the first fits were seen. The plain cherries are therefore kept and reported
+beside every test, and a result that holds under one pairing and not the other is said to be so.
+
+**Fixed before the job ran.** This entry was committed with the code, before the job ran (`longevity/thermal.py`; the
+definitions are in its docstring).
+- *Data.* Build 0f4e970 and the site's tree at 03c0949, the default dataset's filters not applied (lifespan is not
+  part of the rate or composition tests), retired records out. FishBase v26.06 from source.coop, the `species`,
+  `synonyms` and `stocks` tables, each md5-checked (`download fishbase-temperature`).
+- *Traits.* 1/kT, with T the body temperature in kelvin: AnAge's for mammals (270-320 K kept); for fishes, the median
+  over a species' stocks of FishBase's `TempPref50` (-3 to 40 C kept), and as a sensitivity the median of the
+  midpoints of `TempMin` and `TempMax`. Size: log10 adult mass, or log10 FishBase maximum length for fishes. Metabolic
+  rate: log10 AnAge W, always with log10 mass in the model. A fish's FishBase record is found by exact name or by
+  synonym (status accepted, provisionally accepted or synonym); a name with two codes, or one that disagrees with the
+  build's own FishBase record, stays unmatched.
+- *Pairs.* Per class and model, the species with every trait of the model, a tip and all 13 protein alignments, and
+  the largest set of pairs of them whose paths on the dated tree share no branch (Maddison 2000, J Theor Biol 202:195, doi:10.1006/jtbi.1999.1050): walking up from the
+  tips, members left unpaired below a node are paired there two by two in order of name. Per pair, dS and dN between
+  the sisters over the 13 concatenated genes (Nei-Gojobori, Jukes-Cantor, as H7), divided by twice the age of their
+  common ancestor; traits are the mean of the two sisters', missing when either lacks one. Pairs with dS above 1 or
+  with dS or dN of 0 are left out and counted. Regression over pairs by GLS, each pair at its first species' tip,
+  Pagel's lambda by maximum likelihood; at least 20 pairs. The same fits on the plain cherries, reported beside.
+- *Tests* (`readout.tsv`), all on log10 dS per Myr under the primary pairing; E = -ln(10) x the slope on 1/kT, in eV:
+  - controls: P1 mammals and P2 ray-finned fishes, the slope on size alone, predicted negative (rates fall with body
+    mass across mammals: Nabholz, Glemin & Galtier 2008, MBE 25:120, doi:10.1093/molbev/msm248);
+  - primary: T1 ray-finned fishes, T2 cartilaginous fishes, T3 mammals, the slope on 1/kT with size in the model,
+    predicted negative (E > 0); M1 mammals and M2 birds, the slope on log10 metabolic rate with log10 mass, predicted
+    positive;
+  - retests of Lehmann et al.: L1, mammals of the default dataset, log10 lifespan on the GC content of the whole
+    record and log10 metabolic rate, the GC slope on the tree, predicted positive; L2, the same with log10 mass and
+    1/kT added. The OLS R^2 of the published kind is reported beside.
+- *Correction.* Holm over the primary tests that could be assessed. The controls and L1, L2 are read at p < 0.05.
+  Everything else (dN per Myr, dN/dS, the temperature range, the models with several traits, the composition screen)
+  is reported with Benjamini-Hochberg q and read as exploratory.
+- *Reading.*
+  - A class's control must pass (negative, p < 0.05), or its primary tests are "not read": the rates of that class
+    are then too noisy to show the known effect of size.
+  - A primary test with Holm p < 0.05 in the predicted direction is "as predicted"; in the other direction,
+    "opposite to the prediction"; else "not detected", which says no more than that this many pairs did not show
+    it, with E's 95% interval saying how large an effect is left open. A test with fewer than 20 pairs is "not
+    assessed".
+  - Metabolic theory's value of E is not a test here: E is reported with its interval, and compared with the
+    published value in the text only.
+  - L1 "as published" when the GC slope is positive with p < 0.05 on the tree; the OLS R^2 is reported for comparison
+    with the published 77%, and the difference between the two is what the tree takes out.
+  - The composition screen counts features at q < 0.05 per class, model and term; no direction was predicted, and no
+    single feature is read as a finding.
+- *Known weaknesses, said in advance.* FishBase's `TempPref50` comes from AquaMaps, modelled from where a species is
+  recorded, not measured in the animal; maximum length mixes total and standard length. AnAge's body temperatures and
+  metabolic rates come from many studies of uneven quality and measure different states. Pairs with deep common
+  ancestors saturate, which costs most in fishes (46 of 126 pairs in the temperature model); dN, which saturates
+  later, is reported beside. Mammalian body temperatures span less than 10 K, so E is weakly bounded there. Nei-
+  Gojobori distances are strained at the depth of many fish pairs, as H7 says.
+**Test.** `slurm/h20-thermal.sbatch` on haumea: the tests and the breaks of each guard first
+(`slurm/h20-thermal-mutations.py`), `longevity thermal`, and a second run to check that the tables come out the
+same bytes.
+**Result.** Not yet run.

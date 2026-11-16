@@ -97,6 +97,7 @@ STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, stru
 AUDIT_OUT = OUTPUT / "audit"              # inputs, strand, order, code, pairs, nearest (.tsv): the audit of the records (H13)
 COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol
 COEVOL_FIXED_OUT = LONGEVITY_OUT / "coevol-fixed"   # the chains run with the ages held (-fixtimes)
+THERMAL_OUT = LONGEVITY_OUT / "thermal"      # H20: traits, pairs, pair_fits, composition, lehmann, readout
 BRANCH_RATES_OUT = LONGEVITY_OUT / "branch_rates"   # H3's two-step check: fit.json, branches.tsv, pgls.tsv
 
 

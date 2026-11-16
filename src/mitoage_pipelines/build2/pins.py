@@ -42,9 +42,11 @@ ANAGE_MD5 = "7ec4d19f6c8f57b22595a9ffd50ea66b"
 SOURCECOOP_URL = "https://data.source.coop/cboettig/fishbase/{db}/{version}/parquet/{table}.parquet"
 FISHBASE_VERSION = "v26.06"
 FISHBASE_TABLES = ("species", "popchar", "popgrowth", "synonyms")   # the tables the lifespan rules read
+FISHBASE_TEMPERATURE_TABLES = ("species", "synonyms", "stocks")    # the tables H20 reads (longevity thermal)
 FISHBASE_MD5 = {   # md5 of the files build 2 read (its audit's md5sums.txt)
     "fb": {"species": "0208d896c3a75868c1650c04a2eb4330", "popchar": "ad782577a255e428d3b4b57210dd0092",
-           "popgrowth": "953a4110973c30b56472cc3ed4b9ce22", "synonyms": "42d92d32ee7e71d8b2dd899b7eb69f9e"},
+           "popgrowth": "953a4110973c30b56472cc3ed4b9ce22", "synonyms": "42d92d32ee7e71d8b2dd899b7eb69f9e",
+           "stocks": "d6eddaf7d6c4726c50c6afdc29f50c43"},   # stocks: H20's temperatures, not read by build 2
     "slb": {"species": "f176abbbc62ee9e22451be155f75f06a", "popchar": "dcb288862abd87945f314b9a3df409f8",
             "popgrowth": "9f08f077586a1ce9417e90c3aa61a6bb", "synonyms": "31c5089e191915f881d687322251e9a1"},
 }
