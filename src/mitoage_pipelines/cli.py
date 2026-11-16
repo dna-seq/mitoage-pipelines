@@ -56,6 +56,8 @@ app.add_typer(mitoport_app, name="mitoport")
 app.add_typer(structure_app, name="structure")
 app.add_typer(build2_app, name="build2")
 app.add_typer(audit_app, name="audit")
+adapt_app = typer.Typer(no_args_is_help=True, help="Adaptations that load mitochondria: H21-H25 (docs/MITO_LOAD_ADAPTATIONS.md).")
+app.add_typer(adapt_app, name="adapt")
 app.add_typer(snapshot_app, name="snapshot")
 
 Build = Annotated[Path, typer.Option("--build", help="the MitoAge build (species.parquet, alignments/)")]
@@ -1121,6 +1123,99 @@ def snapshot_upload(staging: Staging = paths.B2_INTERIM / "snapshot") -> None:
     from .build2 import snapshot
     print(f"{snapshot.REPO}: commit {snapshot.upload(staging)}")
 
+
+
+# --- H21-H25: adaptations that load mitochondria -----------------------------------------------------------------
+AdaptOut = Annotated[Path, typer.Option("--out", help="folder of H21-H25's tables")]
+AdaptTraits = Annotated[Optional[Path], typer.Option("--traits", help="traits.tsv, written by `adapt traits` (default: in --out)")]
+DatedTree = Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")]
+FishBaseDir = Annotated[Path, typer.Option("--fishbase", help="FishBase species, synonyms and stocks, from `download fishbase-temperature`")]
+AdaptTrait = Annotated[str, typer.Option("--trait", help="diadromy, deep_habitat, marine, hibernation or bat_hibernation")]
+
+
+@adapt_app.command("traits")
+def adapt_traits(data: Build = paths.BUILD, fishbase: FishBaseDir = paths.B2_FISHBASE / "v26.06",
+                 hib: Annotated[Path, typer.Option("--hibernation", help="folder of `download hibernation`")] = paths.HIBERNATION,
+                 names: Annotated[Path, typer.Option("--names-dmp", help="NCBI's names.dmp (synonyms for the hibernation tables)")] = paths.B2_TAXDUMP / "2026-11-13" / "names.dmp",
+                 out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """The trait states of H21-H25 for every species in each trait's scope: traits.tsv (unknown stays unknown)."""
+    from .adaptations import traits
+    traits.main(data, fishbase, hib, names if names.is_file() else None, out / "traits.tsv")
+
+
+@adapt_app.command("pairs")
+def adapt_pairs(data: Build = paths.BUILD, fishbase: FishBaseDir = paths.B2_FISHBASE / "v26.06", tree: DatedTree = paths.DATED_TREE,
+                traits_file: AdaptTraits = None, out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """R2 of H21-H23 and L3 of H24: one pair per origin, each sister against one outgroup (pairs.tsv, pair_tests.tsv)."""
+    from .adaptations import run
+    traits_file = traits_file or out / "traits.tsv"
+    run.run_pairs(data, fishbase, tree, traits_file, out)
+
+
+@adapt_app.command("fits")
+def adapt_fits(data: Build = paths.BUILD, fishbase: FishBaseDir = paths.B2_FISHBASE / "v26.06", tree: DatedTree = paths.DATED_TREE,
+               traits_file: AdaptTraits = None, fourfold: Fourfold = paths.LONGEVITY_OUT / "fourfold.tsv",
+               out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """R3 (composition), H24's P, L1, L2 and H25's B1, B2, B3 (composition.tsv, lifespan.tsv, l2.tsv, bat_pairs.tsv)."""
+    from .adaptations import run
+    traits_file = traits_file or out / "traits.tsv"
+    run.run_fits(data, fishbase, tree, traits_file, fourfold, out)
+
+
+@adapt_app.command("selection-prep")
+def adapt_selection_prep(trait: AdaptTrait, data: Build = paths.BUILD, fishbase: FishBaseDir = paths.B2_FISHBASE / "v26.06",
+                         tree: DatedTree = paths.DATED_TREE, traits_file: AdaptTraits = None,
+                         out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """RELAX and aBSREL inputs for one trait: draw00 (the trait clades) and draw01..draw20 (matched controls)."""
+    from .adaptations import run
+    traits_file = traits_file or out / "traits.tsv"
+    print(run.selection_prep(data, fishbase, tree, traits_file, out, trait).to_string(index=False))
+
+
+@adapt_app.command("relax")
+def adapt_relax(trait: AdaptTrait, draw: Annotated[int, typer.Option(help="0 = the trait; 1-20 = control draws")],
+                cpus: Annotated[int, typer.Option(help="HyPhy CPU=")] = 1, out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """HyPhy RELAX (--models Minimal) on one draw of `adapt selection-prep`."""
+    from .adaptations import selection
+    print(selection.read_relax(selection.run_relax(out / "selection" / trait / f"draw{draw:02d}", cpus)))
+
+
+@adapt_app.command("absrel")
+def adapt_absrel(trait: AdaptTrait, draw: Annotated[int, typer.Option(help="0 = the trait's stems; 1 = the first control draw's")],
+                 cpus: Annotated[int, typer.Option(help="HyPhy CPU=")] = 1, out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """HyPhy aBSREL on the stems of one draw (R4, exploratory)."""
+    from .adaptations import selection
+    d = out / "selection" / trait / f"draw{draw:02d}"
+    t = selection.read_absrel(selection.run_absrel(d, cpus))
+    t.to_csv(d / "absrel.tsv", sep="\t", index=False)
+    print(f"{(t.p_corrected < 0.05).sum()} of {len(t)} stems with corrected p < 0.05")
+
+
+@adapt_app.command("coupling-prep")
+def adapt_coupling_prep(cls: Annotated[str, typer.Option("--class", help="Mammalia or Actinopterygii")],
+                        nucaln: Annotated[Path, typer.Option("--nucaln", help="H19's vertebrate alignments (`mitoport iface-align`)")] = paths.PARTNERS / "aln",
+                        data: Build = paths.BUILD, tree: DatedTree = paths.DATED_TREE,
+                        traits_file: AdaptTraits = None, out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """The per-protein alignments and pruned topology of C for one class; then `mitoport branch-lengths` on them."""
+    from .adaptations import run
+    traits_file = traits_file or out / "traits.tsv"
+    print(run.coupling_prep(data, nucaln, tree, traits_file, out, cls))
+
+
+@adapt_app.command("coupling")
+def adapt_coupling(cls: Annotated[str, typer.Option("--class", help="Mammalia or Actinopterygii")],
+                   traits_file: AdaptTraits = None, out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """C1, C2 (and H23's positive control P in mammals) from the branch lengths under coupling/<class>/bl."""
+    from .adaptations import run
+    traits_file = traits_file or out / "traits.tsv"
+    run.run_coupling(traits_file, out, cls)
+
+
+@adapt_app.command("readout")
+def adapt_readout(out: AdaptOut = paths.ADAPT_OUT) -> None:
+    """Every pre-registered readout of H21-H25 with Holm within hypothesis and the reading fixed in docs/HYPOTHESES.md."""
+    from .adaptations import run
+    run.readout(out)
 
 def main() -> None:
     """The console script: a missing input or program is one line and exit status 1, not a traceback."""

@@ -107,6 +107,9 @@ uv run mitoage download fishbase-temperature   # FishBase's species, synonyms an
 uv run mitoage longevity thermal   # H20: temperature, size and metabolic rate against sister-pair rates and composition; Lehmann et al. retested (on haumea: slurm/h20-thermal.sbatch)
 uv run mitoage download hibernation   # H23-H25: bat hibernation (Wilkinson & Adams 2019, DRUM, SHA-256 pinned); the mammal table
                                       # (Heldstab et al. 2018, Dryad) is saved by hand first, as the command says, and md5-checked
+uv run mitoage adapt traits && uv run mitoage adapt pairs && uv run mitoage adapt fits   # H21-H25: trait states, one pair per origin, the phylogenetic fits
+uv run mitoage adapt selection-prep --trait diadromy && uv run mitoage adapt relax --trait diadromy --draw 0   # RELAX on draw 0 and 20 control draws (on haumea: slurm/adapt-*.sbatch)
+uv run mitoage adapt coupling-prep --class Mammalia   # then `mitoport branch-lengths` on its folder, `adapt coupling`, and `adapt readout`
 mitoage longevity relax-prep        # needs `longevity dated-tree`, like every step that takes a tree
 uv run mitoage longevity relax
 

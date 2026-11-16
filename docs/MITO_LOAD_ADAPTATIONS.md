@@ -8,8 +8,9 @@ This document ranks the candidates by what the MitoAge build can test, with five
 adaptation should load mitochondria, how species are classified, how many species of the build it covers, how many
 independent origins it has on the tree, and what signal to expect with which tool. The shortlist agreed with the
 maintainer the same day ("Fish ecology + mammals") is written as H21, H22 and H23 in `docs/HYPOTHESES.md`; his follow-up
-("check for hibernation idea as it is connected with longevity", "bats look interesting") as H24 and H25. Nothing
-here has been run. Every citation was taken from a search result and its title checked; none is from memory.
+("check for hibernation idea as it is connected with longevity", "bats look interesting") as H24 and H25. Their code is
+`mitoage adapt` (`src/mitoage_pipelines/adaptations/`), run on haumea by `slurm/adapt-*.sbatch`; nothing has been run
+on the cluster yet. Every citation was taken from a search result and its title checked; none is from memory.
 
 Temperature, size and metabolic rate as continuous traits are H20 and are not repeated here.
 

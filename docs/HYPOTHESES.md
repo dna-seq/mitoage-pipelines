@@ -1764,8 +1764,41 @@ The design below is shared by H21, H22 and H23, which refer to it as "H21's desi
   Twelve genes are one linked molecule, so per-gene results are not independent. Fish pairs are deep and saturate,
   which costs dS first. Ray-finned fishes carry duplicated nuclear genes, and `mitoport select` keeps one copy (H19).
   The positive control is a mammal branch, so it shows that the method can see a known shift, not that it can in fishes.
-**Test.** To be written: one command per readout, and a Slurm job on haumea, with the tests and the breaks of each
-guard first, as H19 and H20 do.
+**Code, and what it decided where the text above leaves room** (2026-11-16, written before any job ran). The code is
+`src/mitoage_pipelines/adaptations/` (`traits`, `clades`, `pairs`, `selection`, `coupling`, `fits`, `run`), one command
+per step under `mitoage adapt`; its docstrings hold every definition. Where this entry left a choice open, the code took:
+- *Control clades.* "Matched on species count (within a factor of 2) and on stem age (nearest), without replacement"
+  cannot give 20 different draws if "nearest" means one clade. Read as: each trait clade's candidates are the all-0
+  clades within a factor of 2 in size; its pool is the 10 of them nearest in stem age; a draw takes one pool member at
+  random for each trait clade (largest first) that shares no tip with a clade already in the draw; draw k uses a
+  generator seeded with (0, k). A trait clade whose pool runs out in a draw is left out of that draw and counted. C2's
+  1,000 draws use the same rule.
+- *RELAX.* `--models Minimal` (the test alone); the codon columns of each gene filled in at least half of the tips, stop,
+  partial and ambiguous codons written as gaps, as H3's inputs were made; every tip in the vertebrate mitochondrial code.
+- *Which definitions get which readouts.* R1 (RELAX) runs on each hypothesis's primary definition only; the secondary
+  and sensitivity definitions (H21's any migration, H22's depth) get R2 and R3.
+- *The positive control's foreground.* In the species set of C, a branch is foreground when its tips of known state
+  are not empty and all lie in one trait clade; a tip of unknown state neither joins nor breaks a clade.
+- *Readout.* `adapt readout` writes every readout with its status, Holm within the hypothesis over the primary readouts
+  that were assessed, and the reading fixed above (`run.reading`).
+**Seen before the run, while the code was debugged** (2026-11-16, on the laptop's copy of build 0f4e970, species.parquet
+267a16311cca; the dated tree of `longevity dated-tree`). One debugging run of `adapt pairs` printed its test table, and its
+last 30 lines were read: for H22, deep_habitat's d_dN with saturated pairs and d_omega given size, and every row of
+deep_depth; for H23, the marine rows (1 unsaturated pair and 4 with saturated ones, so not assessed) and hibernation's
+rows (3 unsaturated pairs of 15, so not assessed; with saturated pairs, d_omega median -0.011, p 0.14; d_dS +0.021,
+p 0.15); for H24's L3 the same pairs (d_dS with saturated pairs +0.015, p 0.15). H21's rows and H22's primary rows were
+above those lines and were not seen. After it, local runs printed statuses only: `adapt fits` runs on every model, H25's
+B2 has 11 bat pairs (fewer than its 12, so not assessed). The outputs were deleted unread. No definition above was
+changed after these were seen; the counts (3 of 15 hibernation pairs unsaturated, 11 bat pairs) mean that H23's R2,
+H24's L3 and H25's B2 will be "not assessed" by the rules as fixed, and they stay as fixed.
+**Test.** On haumea, from a clone of main (each job's header gives the login-node steps):
+- `slurm/adapt-main.sbatch`: the tests (`tests/test_adapt.py`, `tests/test_hibernation.py`), the breaks of each guard
+  (`slurm/adapt-mutations.py`), `adapt traits`, `adapt pairs`, `adapt fits`, `adapt selection-prep` for the five traits
+  of R1, all again into a second folder and compared byte for byte;
+- `slurm/adapt-selection.sbatch`: RELAX on 5 traits x 21 draws and aBSREL on draws 0 and 1, one array task each;
+- `slurm/adapt-coupling.sbatch`: H19's vertebrate alignments (made there if H19's job has not), `adapt coupling-prep`,
+  `mitoport branch-lengths`, `adapt coupling` for mammals and ray-finned fishes;
+- then `mitoage adapt readout`.
 **Result.** Not yet run.
 
 ## H22. Deep-sea fishes: relaxed or adapted mitochondria where the deep sea was entered
@@ -1916,7 +1949,7 @@ read when H11 was written.
   time. In bats, Wilkinson & South found every hibernator's longevity record came from the field, so record type and
   hibernation go together. Latitude predicts longevity among hibernating bats (Wilkinson & Adams 2019) and is not in
   the build. Torpor's gains and losses are hard to tell apart, so L3's pairs may count a loss as an origin.
-**Test.** To be written, with H21-H23's.
+**Test.** As H21 (`adapt fits` writes P, L1 and L2; `adapt pairs` writes L3).
 **Result.** Not yet run.
 
 ## H25. Inside bats: lifespan, hibernation and the mitochondrial genome where flight is held constant
@@ -1961,5 +1994,10 @@ family-by-family counts of bats with a lifespan record of high or acceptable qua
   the field. Bats' small size puts them at one end of the mammalian mass range, so nothing here is compared with other
   orders as a test. The bat mitogenomes in RefSeq are not a random draw of bats (Vespertilionidae, Pteropodidae and
   Phyllostomidae are 38 of the 44).
-**Test.** To be written, with H21-H24's.
+**Changed before the run** (2026-11-16, while the code was written, before any job ran). B2 as written above cannot be
+computed: in H20's design a pair's dS is measured between its two sisters, so a pair has one rate and no "Δ log10 dS"
+between them. B2 is therefore H20's design as H20 fits it: log10 dS per million years of each pair on the pair's mean
+log10 lifespan and mean log10 mass, GLS with Pagel's lambda, each pair at its first species' tip (`fits.bat_pairs`). Its
+minimum of 12 pairs, its two-sided reading and its place in the correction are unchanged.
+**Test.** As H21 (`adapt fits` writes B1, B2 and B3; B4 is RELAX on `bat_hibernation` in `slurm/adapt-selection.sbatch`).
 **Result.** Not yet run.
