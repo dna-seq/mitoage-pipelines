@@ -139,6 +139,12 @@ uv run mitoage download pdb 5XTD 5XTE 5Z62 8H9S
 uv run mitoage download cybrid                    # 15 RefSeq mitogenomes at fixed versions and 3 cell-line cytb records
 uv run mitoage mitoport cybrid                    # positions, scores, calibration and summary tables
 
+# H17: the cybrids with scores that weigh substitutions (on haumea: slurm/h17-cybrid.sbatch, then h17-cybrid-esm.sbatch)
+uv run mitoage mitoport contacts --complex I && uv run mitoage mitoport burial --complex I   # and III, IV, V (as H14)
+uv run mitoage mitoport cybrid-coev               # co-evolved residue pairs the chimera loses, contact against control
+uv sync --group fold && uv run mitoage mitoport cybrid-esm   # ESM-2 masked marginals, alone and with the partner (GPU)
+uv run mitoage mitoport cybrid-readout            # H16's readouts for these scores, beside H16's baselines
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -306,6 +312,12 @@ sequence's ends are unknown, not deleted), the counts and the ROC area by hand, 
 measurement table, and that the contact residues of all four complexes are the set `mitoport contacts` finds; each
 test was checked to fail when the code it guards was broken (the cutoff, the second copy of cytochrome b, the
 partial ends, the disagreement of sources, the radical substitutions).
+
+`tests/test_cybrid_h17.py` (H17) works the sequence weights, the joint distribution, the mutual information and the loss
+of a pair out by hand, checks that host and donor are left out of their own counts and that unknown or thin pairs are
+unscored and never zero, and tests the ESM-2 bookkeeping on a table of log-probabilities in place of the model (which
+positions are masked, pairs over the model's length, the partner's effect); `slurm/h17-cybrid-mutations.py` breaks 11
+guards one at a time.
 
 ## Licence
 

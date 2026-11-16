@@ -26,6 +26,7 @@ The tests, fixed before the scores were computed:
       in the same host?
 Every comparison has a handful of points; the output says how many, and nothing here is a significance test.
 T2b (T2 within each complex) was added after the first run had been read, and is labelled exploratory.
+In H17's readout (`readout`) T2b is fixed in advance like the rest; its rows keep the wording of H16's table.
 
 Genomes: RefSeq records at fixed versions (`GENOMES`). Where a paper deposited the sequence of the cell line it
 used, that sequence replaces the RefSeq one for its gene (`OWN_LINE`); such records are partial at their ends,
@@ -249,37 +250,49 @@ def auc(score: pd.Series, reduced: pd.Series) -> float:
     return float(sum((p > n) + 0.5 * (p == n) for p in pos for n in neg) / (len(pos) * len(neg)))
 
 
-def summarise(scores: pd.DataFrame, meas: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """(calibration: one row per measured (host, donor, complex) with its status and scores; summary: T1-T4)."""
+T2B_SCORES = ("d_contact", "f_contact", "d_noncontact", "d_all", "f_all")
+T3_SCORES = ("f_contact", "d_contact", "f_all", "d_all")
+T4_SCORES = ("d_contact", "d_all")
+
+
+def summarise(scores: pd.DataFrame, meas: pd.DataFrame, names: tuple[str, ...] = SCORES,
+              t2b: tuple[str, ...] = T2B_SCORES, t3: tuple[str, ...] = T3_SCORES,
+              t4: tuple[str, ...] = T4_SCORES) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """(calibration: one row per measured (host, donor, complex) with its status and scores; summary: T1-T4).
+    The defaults are H16's scores; H17 passes its own. A score that is missing for a point is left out of the
+    readouts it enters, and each row's `n` says how many points it had."""
     key = ["host", "donor", "complex"]
     measured = meas[meas.outcome == "measured"]
     cal = (measured.groupby(key, sort=False)
            .apply(lambda g: pd.Series({"status": status(g), "pct": g.pct.mean(), "n_sources": g.source_doi.nunique(),
                                        "sources": ";".join(sorted(set(g.source_doi)))}), include_groups=False)
            .reset_index().merge(scores, on=key, how="left"))
-    if cal[list(SCORES)].isna().all(axis=1).any():
+    if cal[list(names)].isna().all(axis=1).any():
         raise ValueError("a measured pair has no score")
     out = []
     stated = cal[cal.pct.notna()]
-    for s in SCORES:
-        if len(stated) >= 3:
-            rho, _ = stats.spearmanr(stated.pct, stated[s])
+    for s in names:
+        st = stated[stated[s].notna()]
+        if len(st) >= 3:
+            rho, _ = stats.spearmanr(st.pct, st[s])
         else:
             rho = np.nan
-        out.append({"test": "T1", "score": s, "n": len(stated), "value": rho,
+        out.append({"test": "T1", "score": s, "n": len(st), "value": rho,
                     "reads": "Spearman of activity (% of control) against the score; negative is the prediction"})
     use = cal[cal.status != "disagree"]
     red = use.status == "reduced"
-    for s in SCORES:
-        out.append({"test": "T2", "score": s, "n": f"{int(red.sum())} reduced, {int((~red).sum())} not",
-                    "value": auc(use[s], red), "reads": "area under the ROC curve for reduced against not reduced"})
+    for s in names:
+        ok = use[s].notna()
+        out.append({"test": "T2", "score": s, "n": f"{int((red & ok).sum())} reduced, {int((~red & ok).sum())} not",
+                    "value": auc(use[s][ok], red[ok]), "reads": "area under the ROC curve for reduced against not reduced"})
     # T2b, added after the first run had been read: T2 within one complex at a time, where complex size cannot
     # carry the score. Exploratory, and labelled so in the table.
     for cx, g in use.groupby("complex", sort=False):
         r = g.status == "reduced"
-        for s in ("d_contact", "f_contact", "d_noncontact", "d_all", "f_all"):
-            out.append({"test": "T2b", "score": f"{s} (complex {cx})", "n": f"{int(r.sum())} reduced, {int((~r).sum())} not",
-                        "value": auc(g[s], r), "reads": "T2 within one complex; added after the first run (exploratory)"})
+        for s in t2b:
+            ok = g[s].notna()
+            out.append({"test": "T2b", "score": f"{s} (complex {cx})", "n": f"{int((r & ok).sum())} reduced, {int((~r & ok).sum())} not",
+                        "value": auc(g[s][ok], r[ok]), "reads": "T2 within one complex; added after the first run (exploratory)"})
     for r in cal[cal.status == "disagree"].itertuples():
         out.append({"test": "T2", "score": "left out", "n": "", "value": np.nan,
                     "reads": f"{r.host} / {r.donor} complex {r.complex}: the sources disagree ({r.sources})"})
@@ -290,21 +303,64 @@ def summarise(scores: pd.DataFrame, meas: pd.DataFrame) -> tuple[pd.DataFrame, p
         # most reduced: the lowest stated activity among the reduced complexes, else the only reduced one
         r = g[g.status == "reduced"]
         worst = r.loc[r.pct.idxmin(), "complex"] if r.pct.notna().any() else (r.complex.iloc[0] if len(r) == 1 else None)
-        for s in ("f_contact", "d_contact", "f_all", "d_all"):
+        for s in t3:
+            if g[s].isna().any():
+                out.append({"test": "T3", "score": s, "n": len(g), "value": np.nan,
+                            "reads": f"{h} / {d}: not assessed, the score is missing for a complex"})
+                continue
             top = g.loc[g[s].idxmax(), "complex"]
             out.append({"test": "T3", "score": s, "n": len(g), "value": float(top == worst) if worst else np.nan,
                         "reads": f"{h} / {d}: most reduced {worst or 'unknown'}, highest {s} in complex {top}"})
-    total = scores.groupby(["host", "donor"])[["d_contact", "d_all"]].sum().reset_index()
+    total = scores.groupby(["host", "donor"])[list(t4)].sum(min_count=1).reset_index()
     failed = meas[meas.outcome == "no_respiring_cybrid"][["host", "donor"]].drop_duplicates()
     respiring = measured[["host", "donor"]].drop_duplicates()
     for r in failed.itertuples():
-        for s in ("d_contact", "d_all"):
+        for s in t4:
             mine = total[(total.host == r.host) & (total.donor == r.donor)][s].iloc[0]
             others = total.merge(respiring[respiring.host == r.host], on=["host", "donor"])[s]
-            out.append({"test": "T4", "score": s, "n": len(others), "value": float(mine > others.max()),
-                        "reads": f"{r.host} / {r.donor}: total {s} {mine} against at most {others.max()} "
-                                 f"for a donor that respired"})
+            known = pd.notna(mine) and others.notna().all()
+            out.append({"test": "T4", "score": s, "n": len(others), "value": float(mine > others.max()) if known else np.nan,
+                        "reads": f"{r.host} / {r.donor}: total {s} {mine:g} against at most {others.max():g} "
+                                 f"for a donor that respired" + ("" if known else " (not assessed: a total is missing)")})
     return cal, pd.DataFrame(out)
+
+
+# --- H17: the same readouts for the co-evolution and language-model scores --------------------------------
+H17_PRIMARY = ("coev_excess", "coev_excess_mean", "esm_contact", "esm_contact_mean", "esm_partner_excess")
+H17_OTHER = ("coev_contact", "coev_control", "coev_excess_t50", "coev_excess_noorder", "esm_control", "esm_all",
+             "esm_partner_effect", "esm_partner_effect_control")
+H17_BASELINE = ("d_contact", "d_all", "f_all")
+
+
+def readout(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame:
+    """H16's readouts T1 to T4 for H17's scores, beside H16's baselines on the same points. Reads scores.tsv
+    (`mitoport cybrid`), coev_scores.tsv (`mitoport cybrid-coev`) and esm_scores.tsv (`mitoport cybrid-esm`) in
+    `out`; a table that is missing is said loudly and its scores are absent from the summary, never zero.
+    Writes h17_calibration.tsv and h17_summary.tsv."""
+    key = ["host", "donor", "complex"]
+    if not (out / "scores.tsv").is_file():
+        raise SystemExit(f"{out / 'scores.tsv'} is missing: run `mitoage mitoport cybrid` first")
+    scores = pd.read_csv(out / "scores.tsv", sep="\t")[key + list(H17_BASELINE)]
+    have = []
+    for f in ("coev_scores.tsv", "esm_scores.tsv"):
+        if not (out / f).is_file():
+            print(f"NOT ASSESSED: {out / f} is missing; its scores are left out of the summary")
+            continue
+        t = pd.read_csv(out / f, sep="\t")
+        cols = [c for c in H17_PRIMARY + H17_OTHER if c in t.columns]
+        scores = scores.merge(t[key + cols], on=key, how="left"); have += cols
+    if not have:
+        raise SystemExit("neither coev_scores.tsv nor esm_scores.tsv is there: nothing to read out")
+    primary = tuple(c for c in H17_PRIMARY if c in have)
+    names = primary + tuple(c for c in H17_OTHER if c in have) + H17_BASELINE
+    cal, summary = summarise(scores, read_measurements(measurements), names, t2b=primary + H17_BASELINE,
+                             t3=primary + H17_BASELINE, t4=primary + ("d_contact", "d_all"))
+    cal.to_csv(out / "h17_calibration.tsv", sep="\t", index=False, float_format="%.4f")
+    summary.to_csv(out / "h17_summary.tsv", sep="\t", index=False, float_format="%.3f")
+    with pd.option_context("display.width", 220, "display.max_colwidth", 110, "display.max_rows", 400):
+        print(summary.to_string(index=False))
+    print("wrote", out / "h17_calibration.tsv", out / "h17_summary.tsv")
+    return summary
 
 
 def main(gb: Path, pdb_dir: Path, out: Path, measurements: Path = MEASUREMENTS) -> None:

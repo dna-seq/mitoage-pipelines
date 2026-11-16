@@ -740,6 +740,35 @@ def mitoport_cybrid(
     cybrid.main(gb, pdb_dir, out)
 
 
+CybridGb = Annotated[Path, typer.Option("--gb", help="the GenBank records of `download cybrid`")]
+PartnerAln = Annotated[Path, typer.Option("--nucaln", help="the vertebrate alignments of the nuclear subunits (`iface-align` on the partners' selections)")]
+
+
+@mitoport_app.command("cybrid-coev")
+def mitoport_cybrid_coev(data: Build = paths.BUILD, gb: CybridGb = paths.CYBRID_GB / "records.gb",
+                         nucaln: PartnerAln = paths.PARTNERS / "aln", out: Out = paths.CYBRID_OUT) -> None:
+    """H17: what each published cybrid loses in co-evolved residue pairs at the mito-nuclear contacts, against the
+    control pairs (after `mitoport contacts` and `burial` for the four complexes, and the vertebrate alignments)."""
+    from .mitoport import cybrid_coev
+    cybrid_coev.main(data, gb, nucaln, out)
+
+
+@mitoport_app.command("cybrid-esm")
+def mitoport_cybrid_esm(data: Build = paths.BUILD, gb: CybridGb = paths.CYBRID_GB / "records.gb",
+                        nucaln: PartnerAln = paths.PARTNERS / "aln", out: Out = paths.CYBRID_OUT) -> None:
+    """H17: ESM-2 masked marginals of the donor's residues in the host's proteins, alone and beside the host's
+    nuclear partner (a CUDA GPU and `uv sync --group fold`)."""
+    from .mitoport import cybrid_esm
+    cybrid_esm.main(data, gb, nucaln, out)
+
+
+@mitoport_app.command("cybrid-readout")
+def mitoport_cybrid_readout(out: Out = paths.CYBRID_OUT) -> None:
+    """H17: H16's readouts T1 to T4 for the co-evolution and ESM-2 scores, beside H16's baselines."""
+    from .mitoport import cybrid
+    cybrid.readout(out)
+
+
 @mitoport_app.command("partners")
 def mitoport_partners(
     cif: CifOpt = None, data: Build = paths.BUILD, work: IfaceDir = None,
