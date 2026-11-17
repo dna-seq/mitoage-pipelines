@@ -1,0 +1,71 @@
+class	readout	set	measure	status	n_a	n_b	median_a	median_b	estimate	p	p_holm	predicted
+Mammalia	C1	complex I	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	37	29	0.48956	0.17038	0.31918	2.4088e-06	2.1679e-05	positive
+Mammalia	S1	complex I	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	37	29	0.36015	0.10267	0.25748	1.4424e-06	1.4424e-05	positive
+Mammalia	S2	complex I	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	37	29	-0.048463	-0.060426	0.011963	0.82616		positive
+Mammalia	C1	complex III	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	9	29	0.40429	0.011594	0.39269	0.00018218	0.0012753	positive
+Mammalia	S1	complex III	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	9	29	0.0068955	-0.040422	0.047317	0.20394	0.61183	positive
+Mammalia	S2	complex III	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	9	29	0.33521	0.070779	0.26443	0.00023892		positive
+Mammalia	C1	complex IV	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	11	29	0.44702	-0.00026898	0.44729	9.3277e-05	0.00074621	positive
+Mammalia	S1	complex IV	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	11	29	0.11298	-0.031518	0.1445	0.033979	0.13592	positive
+Mammalia	S2	complex IV	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	11	29	0.29843	0.070809	0.22762	0.0018091		positive
+Mammalia	C1	complex V	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	15	29	0.20982	0.0070693	0.20276	0.0014034	0.0070168	positive
+Mammalia	S1	complex V	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	15	29	0.0039127	-0.019822	0.023735	0.28703	0.61183	positive
+Mammalia	S2	complex V	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	15	29	0.2615	0.050631	0.21087	0.0064588		positive
+Mammalia	G1	subunits of I, III, IV, V	coupling against distance from the mtDNA-encoded core, ranked within complex	tested	72	4			-0.39227	0.00089991	0.0053995	negative
+Mammalia	G2	subunits of I, III, IV, V	the same, the subunit's own divergence partialled out	tested	72	4			-0.40492	0.00089991		negative
+Mammalia	G3	subunits of I, III, IV, V	coupling of subunits with 5 or more interface columns vs subunits with none, ranked within complex	tested	33	22	0.49065	0.20333	0.36544	9.999e-05		positive
+Mammalia	M1	all 13 mitochondrial genes	inner-membrane proteins without a mitochondrial partner vs cytosolic controls	tested	15	29	0.15097	0.046121	0.10485	0.48814		none
+Mammalia	M2	all 13 mitochondrial genes	subunits that touch a mitochondrial one vs inner-membrane proteins without a partner	tested	44	15	0.49373	0.15097	0.34277	3.5473e-07		positive
+Mammalia	O1	all 13 mitochondrial genes	complex II vs cytosolic controls	not assessed: 4 and 29 proteins with a value								
+Mammalia	O2	all 13 mitochondrial genes	matrix enzymes vs cytosolic controls	tested	7	29	0.27779	0.046121	0.23167	0.14179		none
+Mammalia	O3	all 13 mitochondrial genes	subunits that touch no mitochondrial one vs cytosolic controls	tested	22	29	0.16954	0.046121	0.12342	0.063694		none
+Mammalia	T1	all 13 mitochondrial genes	coupling with the fourfold transversion distance: all subunits vs cytosolic controls	tested	72	29	0.30384	0.1592	0.14465	0.00089524		positive
+Mammalia	T2	all 13 mitochondrial genes	coupling with the mitochondrial proteins given the fourfold transversion distance: all subunits vs cytosolic controls	tested	72	29	0.34614	-0.014451	0.36059	1.1857e-07	1.3043e-06	positive
+Mammalia	T3	all 13 mitochondrial genes	coupling with the fourfold transversion distance given the mitochondrial proteins: all subunits vs cytosolic controls	tested	72	29	0.14507	0.13588	0.009186	0.7841	0.7841	positive
+Aves	C1	complex I	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	36	19	0.30306	0.19201	0.11105	0.026329	0.21063	positive
+Aves	S1	complex I	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	36	19	-0.0046753	-0.043529	0.038854	0.33473	1	positive
+Aves	S2	complex I	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	36	19	0.31966	0.25604	0.06362	0.22535		positive
+Aves	C1	complex III	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	9	19	0.56183	0.31111	0.25072	0.0037041	0.040745	positive
+Aves	S1	complex III	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	9	19	0.42215	0.19793	0.22423	0.0037041	0.040745	positive
+Aves	S2	complex III	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	9	19	0.24236	0.054762	0.1876	0.026854		positive
+Aves	C1	complex IV	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	10	19	0.57051	0.33854	0.23197	0.032878	0.23015	positive
+Aves	S1	complex IV	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	10	19	0.48363	0.20065	0.28298	0.08532	0.4266	positive
+Aves	S2	complex IV	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	10	19	-0.0065467	-0.030769	0.024222	0.59774		positive
+Aves	C1	complex V	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	15	19	0.13262	0.013821	0.1188	0.037428	0.23015	positive
+Aves	S1	complex V	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	15	19	-0.081248	-0.087158	0.0059096	0.36717	1	positive
+Aves	S2	complex V	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	15	19	0.36293	0.32604	0.036881	0.65206		positive
+Aves	G1	subunits of I, III, IV, V	coupling against distance from the mtDNA-encoded core, ranked within complex	tested	70	4			0.008896	0.93991	1	negative
+Aves	G2	subunits of I, III, IV, V	the same, the subunit's own divergence partialled out	tested	70	4			0.13656	0.26197		negative
+Aves	G3	subunits of I, III, IV, V	coupling of subunits with 5 or more interface columns vs subunits with none, ranked within complex	tested	32	22	0.31509	0.26197	-0.014382	0.86281		positive
+Aves	M1	all 13 mitochondrial genes	inner-membrane proteins without a mitochondrial partner vs cytosolic controls	tested	13	19	0.37081	0.27301	0.097803	0.10707		none
+Aves	M2	all 13 mitochondrial genes	subunits that touch a mitochondrial one vs inner-membrane proteins without a partner	tested	42	13	0.44528	0.37081	0.074469	0.68465		positive
+Aves	O1	all 13 mitochondrial genes	complex II vs cytosolic controls	not assessed: 4 and 19 proteins with a value								
+Aves	O2	all 13 mitochondrial genes	matrix enzymes vs cytosolic controls	tested	7	19	0.35954	0.27301	0.08653	0.33388		none
+Aves	O3	all 13 mitochondrial genes	subunits that touch no mitochondrial one vs cytosolic controls	tested	22	19	0.36716	0.27301	0.094152	0.12615		none
+Aves	T1	all 13 mitochondrial genes	coupling with the fourfold transversion distance: all subunits vs cytosolic controls	tested	70	19	0.44752	0.28481	0.16271	0.0069679		positive
+Aves	T2	all 13 mitochondrial genes	coupling with the mitochondrial proteins given the fourfold transversion distance: all subunits vs cytosolic controls	tested	70	19	0.17979	0.11046	0.069327	0.085952	0.4266	positive
+Aves	T3	all 13 mitochondrial genes	coupling with the fourfold transversion distance given the mitochondrial proteins: all subunits vs cytosolic controls	tested	70	19	0.28853	0.1925	0.096024	0.010222	0.092002	positive
+Actinopterygii	C1	complex I	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	34	14	0.30611	0.12336	0.18275	0.0013294	0.013294	positive
+Actinopterygii	S1	complex I	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	34	14	0.2638	0.069202	0.1946	0.00013238	0.0014562	positive
+Actinopterygii	S2	complex I	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	34	14	-0.0032487	0.08197	-0.085218	0.02132		positive
+Actinopterygii	C1	complex III	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	9	14	0.28371	0.19423	0.089474	0.025333	0.17733	positive
+Actinopterygii	S1	complex III	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	9	14	0.18526	0.093101	0.092163	0.034832	0.17733	positive
+Actinopterygii	S2	complex III	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	9	14	0.1417	0.10251	0.039194	0.13878		positive
+Actinopterygii	C1	complex IV	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	7	14	0.2438	0.1	0.1438	0.0016168	0.014551	positive
+Actinopterygii	S1	complex IV	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	7	14	0.16254	0.0046923	0.15785	0.0022704	0.018163	positive
+Actinopterygii	S2	complex IV	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	7	14	0.16996	0.1415	0.028458	0.85574		positive
+Actinopterygii	C1	complex V	coupling with the complex's mitochondrial genes: the complex's subunits vs cytosolic controls	tested	14	14	0.2144	0.1687	0.045699	0.39531	0.67035	positive
+Actinopterygii	S1	complex V	the same, the other complexes' mitochondrial genes partialled out: the complex's subunits vs cytosolic controls	tested	14	14	0.11982	0.074422	0.045401	0.26028	0.67035	positive
+Actinopterygii	S2	complex V	coupling with the other complexes' mitochondrial genes, this complex's partialled out: the complex's subunits vs cytosolic controls	tested	14	14	0.042461	0.074018	-0.031557	0.20639		positive
+Actinopterygii	G1	subunits of I, III, IV, V	coupling against distance from the mtDNA-encoded core, ranked within complex	tested	64	4			-0.28259	0.030597	0.17733	negative
+Actinopterygii	G2	subunits of I, III, IV, V	the same, the subunit's own divergence partialled out	tested	64	4			-0.22913	0.075692		negative
+Actinopterygii	G3	subunits of I, III, IV, V	coupling of subunits with 5 or more interface columns vs subunits with none, ranked within complex	tested	31	21	0.40217	0.15813	0.28719	0.00049995		positive
+Actinopterygii	M1	all 13 mitochondrial genes	inner-membrane proteins without a mitochondrial partner vs cytosolic controls	tested	12	14	0.043972	0.1899	-0.14593	0.18966		none
+Actinopterygii	M2	all 13 mitochondrial genes	subunits that touch a mitochondrial one vs inner-membrane proteins without a partner	tested	38	12	0.31785	0.043972	0.27387	6.0901e-05		positive
+Actinopterygii	O1	all 13 mitochondrial genes	complex II vs cytosolic controls	not assessed: 4 and 14 proteins with a value								
+Actinopterygii	O2	all 13 mitochondrial genes	matrix enzymes vs cytosolic controls	tested	7	14	0.10504	0.1899	-0.084861	0.44297		none
+Actinopterygii	O3	all 13 mitochondrial genes	subunits that touch no mitochondrial one vs cytosolic controls	tested	21	14	0.16928	0.1899	-0.020623	0.93291		none
+Actinopterygii	T1	all 13 mitochondrial genes	coupling with the fourfold transversion distance: all subunits vs cytosolic controls	tested	64	14	0.15694	0.21331	-0.056373	0.32559		positive
+Actinopterygii	T2	all 13 mitochondrial genes	coupling with the mitochondrial proteins given the fourfold transversion distance: all subunits vs cytosolic controls	tested	64	14	0.23279	0.16184	0.070952	0.027317	0.17733	positive
+Actinopterygii	T3	all 13 mitochondrial genes	coupling with the fourfold transversion distance given the mitochondrial proteins: all subunits vs cytosolic controls	tested	64	14	0.11184	0.18129	-0.069454	0.22345	0.67035	positive
+Reptilia	*	*	every readout	not assessed: 17 species of the class with the mitochondrial genes, a tip and a nuclear sequence								
