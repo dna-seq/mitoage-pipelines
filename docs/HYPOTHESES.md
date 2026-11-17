@@ -1541,7 +1541,67 @@ transversion distance had not been computed for any species.
 **Test.** `slurm/h19-classes.sbatch` on haumea: the tests and the breaks of each guard first
 (`slurm/h19-classes-mutations.py`), the contact maps, the selections and alignments (the 50 of H14's job are compared
 with its own, byte for byte), `mitoport classes`, and a second run to check that the tables come out the same bytes.
-**Result.** Not yet run.
+**Result** (haumea job 6493878, run from c63661b on 2026-11-16 and read on 2026-11-17; tables and log in
+`results/h19/`, bd23aca). The 26 tests passed and 33 of 33 breaks were caught; the 50 alignments of H14's job came
+out identical; the rerun gave the same bytes for all four tables. Species with the 13 mitochondrial genes, a tip and
+a nuclear sequence: 182 mammals, 82 birds, 137 ray-finned fishes and 17 reptiles, so every reptile readout is not
+assessed. Of the 30 cytosolic controls, 29 have a value in mammals, 19 in birds and 14 in fishes; of the 15
+inner-membrane proteins, 15, 13 and 12. Complex II has 4 proteins with a value in every class, so O1 is not assessed.
+Each cell: the medians of the two groups, then p (Holm p for the readouts in the correction).
+
+| Readout | Mammals | Birds | Ray-finned fishes |
+| --- | --- | --- | --- |
+| C1, complex I | 0.49 / 0.17, 2.4e-6 (2.2e-5) | 0.30 / 0.19, 0.026 (0.21) | 0.31 / 0.12, 0.0013 (0.013) |
+| C1, complex III | 0.40 / 0.01, 1.8e-4 (0.0013) | 0.56 / 0.31, 0.0037 (0.041) | 0.28 / 0.19, 0.025 (0.18) |
+| C1, complex IV | 0.45 / 0.00, 9.3e-5 (7.5e-4) | 0.57 / 0.34, 0.033 (0.23) | 0.24 / 0.10, 0.0016 (0.015) |
+| C1, complex V | 0.21 / 0.01, 0.0014 (0.0070) | 0.13 / 0.01, 0.037 (0.23) | 0.21 / 0.17, 0.40 (0.67) |
+| G1, rank correlation | -0.39, 9.0e-4 (0.0054), seen before | +0.009, 0.94 (1) | -0.28, 0.031 (0.18) |
+| G2, divergence partialled out | -0.40, 9.0e-4 | +0.14, 0.26 | -0.23, 0.076 |
+| G3, 5+ interface columns / none | 0.49 / 0.20, 1.0e-4 | 0.32 / 0.26, 0.86 | 0.40 / 0.16, 5.0e-4 |
+| M1, inner membrane / cytosolic | 0.15 / 0.05, 0.49 | 0.37 / 0.27, 0.11 | 0.04 / 0.19, 0.19 |
+| M2, touching / inner membrane | 0.49 / 0.15, 3.5e-7 | 0.45 / 0.37, 0.68 | 0.32 / 0.04, 6.1e-5 |
+| O2, matrix enzymes | 0.28 / 0.05, 0.14 | 0.36 / 0.27, 0.33 | 0.11 / 0.19, 0.44 |
+| O3, touching nothing | 0.17 / 0.05, 0.064 | 0.37 / 0.27, 0.13 | 0.17 / 0.19, 0.93 |
+| S1, complex I | 0.36 / 0.10, 1.4e-6 (1.4e-5) | -0.005 / -0.04, 0.33 (1) | 0.26 / 0.07, 1.3e-4 (0.0015) |
+| S1, complex III | 0.007 / -0.04, 0.20 (0.61) | 0.42 / 0.20, 0.0037 (0.041) | 0.19 / 0.09, 0.035 (0.18) |
+| S1, complex IV | 0.11 / -0.03, 0.034 (0.14) | 0.48 / 0.20, 0.085 (0.43) | 0.16 / 0.005, 0.0023 (0.018) |
+| S1, complex V | 0.004 / -0.02, 0.29 (0.61) | -0.08 / -0.09, 0.37 (1) | 0.12 / 0.07, 0.26 (0.67) |
+| S2, complexes I, III, IV, V | p 0.83, 2.4e-4, 0.0018, 0.0065 | p 0.23, 0.027, 0.60, 0.65 | p 0.021 (subunits below), 0.14, 0.86, 0.21 |
+| T1, neutral distance | 0.30 / 0.16, 9.0e-4 | 0.45 / 0.28, 0.0070 | 0.16 / 0.21, 0.33 |
+| T2, proteins given neutral | 0.35 / -0.01, 1.2e-7 (1.3e-6) | 0.18 / 0.11, 0.086 (0.43) | 0.23 / 0.16, 0.027 (0.18) |
+| T3, neutral given proteins | 0.15 / 0.14, 0.78 (0.78) | 0.29 / 0.19, 0.010 (0.092) | 0.11 / 0.18, 0.22 (0.67) |
+
+- *Positive control.* In mammals C1 puts the subunits above the cytosolic controls in all four complexes (Holm p
+  2.2e-5 to 0.0070; medians 0.49, 0.40, 0.45, 0.21 against H14's 0.49, 0.40, 0.42, 0.21). The rest is read.
+- *Question 1, classes.* The coupling holds in birds in complex III (Holm p = 0.041) and in ray-finned fishes in
+  complexes I and IV (0.013, 0.015). Elsewhere in those classes it is not shown: birds' complexes I, IV and V have
+  their subunits above the controls at nominal p 0.026 to 0.037 and do not pass Holm; fishes' complex III does not
+  pass Holm (0.18), and complex V's subunits are not above the controls (p = 0.40). Reptiles: not assessed.
+- *Question 2, distance.* Not replicated. In birds there is no gradient (+0.009, p = 0.94); in fishes it has the
+  predicted sign (-0.28) and does not pass Holm (0.18). The mammalian -0.39, which holds with each subunit's
+  divergence partialled out (G2 -0.40), was seen before this entry and is not a test. In mammals and in fishes the
+  touching subunits couple more than inner-membrane proteins without a mitochondrial partner (M2 p = 3.5e-7 and
+  6.1e-5), and those proteins couple no more than the cytosolic controls (M1 p = 0.49 and 0.19): there, touching can
+  be told from sitting in the inner membrane. In birds it cannot (M2 p = 0.68).
+- *Question 3, specificity.* In mammals only complex I's subunits follow their own complex's mitochondrial genes
+  beyond those of the others (S1, Holm p = 1.4e-5). Complexes III, IV and V do not (0.61, 0.14, 0.61), and they follow
+  the other complexes' genes given their own (S2 p = 2.4e-4, 0.0018, 0.0065): their subunits follow the mitochondrial
+  genome, not their own partners more than the rest. In fishes complexes I and IV are specific (0.0015, 0.018), in
+  birds complex III (0.041), the complexes where C1 passes in each.
+- *Question 3, rate.* In mammals T2 passes (Holm p = 1.3e-6) and T3 does not (0.78): the subunits follow the change
+  of the mitochondrial proteins beyond the genome's neutral rate, and the neutral rate adds nothing once the proteins
+  are in. In birds and fishes neither passes, so the two are not separated there.
+
+**Reading.** Outside mammals the whole-protein coupling is found in some complexes and not shown in the others: one
+of four in birds, two of four in ray-finned fishes, with no complex common to both. Not shown is not absent: birds'
+subunits sit above the controls in every complex at nominal p < 0.05. That a subunit
+couples more the nearer it sits to the mtDNA-encoded core was not replicated in either class. In mammals the coupling
+is with the change of the mitochondrial proteins, not with the neutral rate of the mitochondrial genome, so a lineage's
+shared mutation rate or generation time does not account for it; and only complex I's subunits follow their own
+complex more than the rest of the mitochondrial genome.
+**Limits.** Those said in advance, and: birds and fishes have fewer controls with a value (19 and 14 of 30), which
+widens their tests; birds' cytosolic controls couple more than mammals' in complexes I, III and IV (medians 0.19 to
+0.34 against 0.00 to 0.17), which narrows the margin their subunits have to clear. G3 and the M and O readouts are outside the correction and reported only.
 
 ## H20. Temperature, size and metabolic rate against the mitochondrial substitution rate and composition
 
