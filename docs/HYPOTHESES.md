@@ -2084,4 +2084,16 @@ the 15 breaks of `slurm/adapt-longevity-mutations.py`, `adapt longevity-traits`,
 `longevity-selection-prep` for both classes, all again into a second folder and compared byte for byte); then
 `slurm/adapt-longevity-selection.sbatch` (RELAX on 2 classes x 21 draws, aBSREL on draws 0 and 1); `adapt
 longevity-coupling` on H23's prepared mammal set; `adapt longevity-readout`.
-**Result.** Not yet run.
+**Result, R2 only** (2026-11-17, Slurm job 6497484 from f9a914a; 9 tests passed, 15 of 15 breaks caught, every table
+and selection input the same bytes on the rerun; tables in `results/h26/`). R1, R4 and C have not run.
+- *Birds, `long_lived`:* 72 origins, 41 unsaturated pairs. Median Δω +0.009 (95% interval −0.014 to +0.018), Wilcoxon
+  p = 0.67; 24 of 41 positive. **Not detected**; the interval excludes a shift of dN/dS larger than about 4% either
+  way. ΔdS median −0.0005 (−0.011 to +0.003), p = 0.49. Given the pair's difference in mass, the intercept is +0.003
+  (p = 0.71). On `long_lived_in_order`: 49 pairs, median +0.006, p = 0.61.
+- *Mammals, `long_lived`:* 39 origins, 6 unsaturated pairs: **not assessed**, as the counts said in advance. With the
+  19 saturated pairs added (a sensitivity, outside the reading): median Δω −0.025 (−0.044 to +0.016), p = 0.22. On
+  `long_lived_in_order`: 26 unsaturated pairs, median +0.004 (−0.022 to +0.017), p = 0.94.
+- Holm waits for R1: R2 is one of each class's primary readouts, and no p here is below 0.05 before any correction.
+So far: where birds became long-lived for their mass, the ratio dN/dS of the 12 protein genes did not move against the
+nearest relative that did not, and neither did dS; in mammals the pairs are too saturated to say on the main
+definition, and show nothing on the one within orders.

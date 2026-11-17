@@ -1,0 +1,147 @@
+clade	clade_size	stem_age	sp_trait	sp_other	outgroup	sister_distance	taken	reason	dS_trait	dN_trait	dS_other	dN_other	usable	saturated	d_dS	d_dN	d_omega	trait
+mareca-penelope	1	2.04	mareca-penelope	mareca-americana	spatula-clypeata	4.08	True		0.388472	0.00954341	0.398264	0.00941928	True	False	-0.0108111	0.00568626	0.0164973	long_lived
+zosterops-lateralis	1	2.28224	zosterops-lateralis	zosterops-japonicus	curruca-curruca	4.56448	True		0.864507	0.0481106	0.901475	0.0481294	True	False	-0.0181851	-0.000169999	0.0180151	long_lived
+corvus-corax	1	2.31038	corvus-corax	corvus-cryptoleucus	corvus-bennetti	4.62076	True		0.352319	0.0106662	0.353917	0.0117927	True	False	-0.00196452	-0.043604	-0.0416395	long_lived
+phoebastria-immutabilis..phoebastria-nigripes (2)	2	2.76237	phoebastria-immutabilis	phoebastria-albatrus	thalassarche-melanophris	5.52474	True		0.490044	0.0218584	0.490631	0.0214287	True	False	-0.000520112	0.00862365	0.00914376	long_lived
+quiscalus-quiscula	1	3.09553	quiscalus-quiscula	euphagus-cyanocephalus	molothrus-aeneus	6.19106	True		0.372626	0.0115356	0.403965	0.0132233	True	False	-0.0350703	-0.0593005	-0.0242302	long_lived
+oriolus-chinensis	1	3.41815	oriolus-chinensis	oriolus-oriolus	vireo-olivaceus	6.8363	True		0.845956	0.0594214	0.869969	0.0580988	True	False	-0.012156	0.00977604	0.021932	long_lived
+aythya-fuligula	1	4.83294	aythya-fuligula	aythya-marila	aythya-americana	9.66588	True		0.153372	0.00450971	0.129522	0.0035191	True	False	0.073402	0.107717	0.0343147	long_lived
+agelaius-phoeniceus	1	5.36172	agelaius-phoeniceus	euphagus-cyanocephalus	cardellina-canadensis	10.7234	False	path shares a branch with a pair already taken										long_lived
+tringa-totanus	1	5.90969	tringa-totanus	tringa-glareola	tringa-stagnatilis	11.8194	True		0.30248	0.00917631	0.313903	0.00639414	True	False	-0.0160987	0.156886	0.172985	long_lived
+ardea-cinerea	1	6.01863	ardea-cinerea	ardea-purpurea	egretta-sacra	12.0373	True		0.582477	0.029354	0.558714	0.0302514	True	False	0.0180894	-0.0130771	-0.0311665	long_lived
+delichon-urbicum	1	6.39105	delichon-urbicum	cecropis-daurica	hirundo-rustica	12.7821	True		0.690534	0.0354412	0.693636	0.0341783	True	False	-0.00194647	0.0157568	0.0177032	long_lived
+serinus-canaria	1	6.57769	serinus-canaria	carduelis-psaltria	haemorhous-cassinii	13.1554	True		0.581987	0.0191145	0.572596	0.0210229	True	False	0.00706532	-0.0413296	-0.048395	long_lived
+ara-ararauna	1	6.57847	ara-ararauna	ara-glaucogularis	ara-chloropterus	13.1569	True		0.299849	0.018984	0.296736	0.0179731	True	False	0.00453193	0.0237647	0.0192327	long_lived
+tringa-nebularia	1	7.52629	tringa-nebularia	tringa-erythropus	tringa-semipalmata	15.0526	True		0.386091	0.00883253	0.416594	0.00957966	True	False	-0.0330228	-0.0352649	-0.00224211	long_lived
+sterna-hirundo..sterna-paradisaea (2)	2	8.08239	sterna-hirundo	gelochelidon-nilotica	sternula-albifrons	16.1648	True		0.590912	0.0162005	0.586554	0.0159423	True	False	0.00321525	0.0069774	0.00376215	long_lived
+aquila-chrysaetos	1	8.13586	aquila-chrysaetos	aquila-fasciata	aquila-heliaca	16.2717	True		0.0170157	0.00074039	0.205447	0.0103011	True	False	-1.08185	-1.14342	-0.0615735	long_lived
+aquila-heliaca	1	8.13586	aquila-heliaca	aquila-fasciata	accipiter-gentilis	16.2717	False	path shares a branch with a pair already taken										long_lived
+ara-chloropterus..ara-militaris (2)	2	8.90206	ara-chloropterus	ara-glaucogularis	primolius-maracana	17.8041	False	path shares a branch with a pair already taken										long_lived
+anser-albifrons	1	8.994	anser-albifrons	anser-anser	cygnus-atratus	17.988	True		0.4775	0.0178899	0.477154	0.0184579	True	False	0.000314826	-0.0135736	-0.0138884	long_lived
+cardinalis-cardinalis	1	10.0826	cardinalis-cardinalis	piranga-olivacea	thraupis-episcopus	20.1651	True		0.694274	0.0269408	0.577508	0.0255418	True	False	0.0799733	0.0231575	-0.0568158	long_lived
+leucopsar-rothschildi	1	10.2727	leucopsar-rothschildi	acridotheres-cristatellus	sturnus-vulgaris	20.5454	True		0.504394	0.0213255	0.518555	0.0193339	True	False	-0.0120245	0.0425802	0.0546047	long_lived
+sturnus-vulgaris	1	10.2727	sturnus-vulgaris	acridotheres-cristatellus	toxostoma-redivivum	20.5454	False	path shares a branch with a pair already taken										long_lived
+primolius-maracana	1	10.7345	primolius-maracana	ara-glaucogularis	aratinga-acuticaudata	21.4689	False	path shares a branch with a pair already taken										long_lived
+pyrrhula-pyrrhula	1	10.9474	pyrrhula-pyrrhula	pinicola-enucleator	carduelis-psaltria	21.8949	True		0.598809	0.0242078	0.639123	0.0238664	True	False	-0.0282958	0.00616704	0.0344629	long_lived
+recurvirostra-avosetta	1	11.2131	recurvirostra-avosetta	himantopus-himantopus	haematopus-ostralegus	22.4262	True		0.51565	0.0221721	0.515948	0.0213494	True	False	-0.000250885	0.0164197	0.0166706	long_lived
+hirundo-rustica	1	12.7821	hirundo-rustica	cecropis-daurica	riparia-riparia	25.5642	False	path shares a branch with a pair already taken										long_lived
+stercorarius-parasiticus	1	12.9376	stercorarius-parasiticus	stercorarius-longicaudus	stercorarius-maccormicki	25.8752	True		0.401164	0.0157324	0.400496	0.0132282	True	False	0.000723568	0.0752935	0.0745699	long_lived
+onychoprion-fuscatus	1	13.388	onychoprion-fuscatus	gelochelidon-nilotica	chroicocephalus-ridibundus	26.776	False	path shares a branch with a pair already taken										long_lived
+sternula-albifrons	1	13.388	sternula-albifrons	gelochelidon-nilotica	onychoprion-fuscatus	26.776	False	path shares a branch with a pair already taken										long_lived
+turdus-merula	1	13.5907	turdus-merula	catharus-fuscescens	ficedula-albicollis	27.1814	True		0.720793	0.0417246	0.728883	0.037521	True	False	-0.00484755	0.0461185	0.050966	long_lived
+parus-major	1	13.8431	parus-major	periparus-ater	acrocephalus-scirpaceus	27.6862	True		0.806577	0.0536581	0.80526	0.0544009	True	False	0.00070938	-0.00597066	-0.00668004	long_lived
+fringilla-coelebs	1	13.9793	fringilla-coelebs	akialoa-stejnegeri	agelaius-phoeniceus	27.9586	True		0.697284	0.0297181	0.716523	0.0322461	True	False	-0.0118207	-0.0354573	-0.0236366	long_lived
+sylvia-borin	1	15.1183	sylvia-borin	curruca-curruca	zosterops-japonicus	30.2366	True		0.913288	0.0555203	0.901475	0.0481294	True	False	0.00565396	0.0620409	0.0563869	long_lived
+zenaida-macroura	1	16.4468	zenaida-macroura	leptotila-verreauxi	columba-livia	32.8936	True		0.768603	0.0335308	0.734805	0.0351984	True	False	0.0195302	-0.0210792	-0.0406094	long_lived
+ciconia-boyciana	1	16.4737	ciconia-boyciana	ciconia-nigra	anhinga-melanogaster	32.9474	True		0.846801	0.0591309	0.843749	0.0626915	True	False	0.00156833	-0.0253941	-0.0269624	long_lived
+vultur-gryphus	1	17.3258	vultur-gryphus	cathartes-aura	accipiter-gentilis	34.6516	True		0.775667	0.0653187	0.880892	0.0651452	True	False	-0.0552469	0.00115505	0.056402	long_lived
+bubo-bubo	1	18.2814	bubo-bubo	bubo-scandiacus	strix-aluco	36.5628	True		0.608027	0.0437569	0.619728	0.044018	True	False	-0.00827791	-0.00258416	0.00569376	long_lived
+columba-livia	1	19.7164	columba-livia	streptopelia-chinensis	leptotila-verreauxi	39.4328	True		0.734805	0.0351984	0.721226	0.033591	True	False	0.00810073	0.0202998	0.012199	long_lived
+chroicocephalus-ridibundus..rissa-tridactyla (2)	2	20.0904	chroicocephalus-ridibundus	gelochelidon-nilotica	aethia-cristatella	40.1808	False	path shares a branch with a pair already taken										long_lived
+aratinga-acuticaudata	1	20.1891	aratinga-acuticaudata	ara-glaucogularis	anodorhynchus-hyacinthinus	40.3781	False	path shares a branch with a pair already taken										long_lived
+eudyptula-minor	1	21.0533	eudyptula-minor	spheniscus-demersus	aptenodytes-patagonicus	42.1066	True		0.490253	0.0327109	0.451692	0.0293503	True	False	0.0355786	0.0470799	0.0115013	long_lived
+haematopus-ostralegus	1	22.4262	haematopus-ostralegus	himantopus-himantopus	anarhynchus-alexandrinus	44.8525	False	path shares a branch with a pair already taken										long_lived
+calidris-alpina..calidris-ruficollis (2)	2	22.6501	calidris-alpina	calidris-pugnax	tringa-erythropus	45.3002	True		0.704451	0.0210117	0.721332	0.0202252	True	False	-0.0102843	0.0165672	0.0268515	long_lived
+anodorhynchus-hyacinthinus	1	23.0593	anodorhynchus-hyacinthinus	ara-glaucogularis	pyrrhura-perlata	46.1187	False	path shares a branch with a pair already taken										long_lived
+coracopsis-vasa	1	23.0593	coracopsis-vasa	psittrichas-fulgidus	agapornis-lilianae	46.1187	True		0.739104	0.0609075	0.602407	0.0603897	True	False	0.0888158	0.00370755	-0.0851083	long_lived
+rhynchopsitta-pachyrhyncha	1	23.0593	rhynchopsitta-pachyrhyncha	ara-glaucogularis	pionites-leucogaster	46.1187	False	path shares a branch with a pair already taken										long_lived
+eopsaltria-georgiana..tregellasia-leucops (2)	2	23.0762	eopsaltria-georgiana	drymodes-brunneopygia	petroica-goodenovii	46.1524	True		0.880248	0.0623133	0.904034	0.0670596	True	False	-0.0115799	-0.0318805	-0.0203006	long_lived
+struthidea-cinerea	1	23.8528	struthidea-cinerea	aphelocoma-coerulescens	falcunculus-frontatus	47.7056	True		0.738154	0.0487034	0.857524	0.0501825	True	False	-0.0650995	-0.0129936	0.0521059	long_lived
+caracara-plancus	1	25.5988	caracara-plancus	falco-columbarius	acanthorhynchus-tenuirostris	51.1976	True		1.11092	0.104142	1.16849	0.11764	True	True	-0.0219402	-0.0529314	-0.0309912	long_lived
+acrocephalus-scirpaceus	1	25.7093	acrocephalus-scirpaceus	cecropis-daurica	alauda-arvensis	51.4185	False	path shares a branch with a pair already taken										long_lived
+acanthorhynchus-tenuirostris	1	27.6458	acanthorhynchus-tenuirostris	origma-solitaria	malurus-elegans	55.2916	True		1.03771	0.0587576	0.912136	0.0483293	True	True	0.0560157	0.084853	0.0288372	long_lived
+amazona-aestiva..myiopsitta-monachus (4)	4	27.994	amazona-aestiva	ara-glaucogularis	forpus-passerinus	55.9881	False	path shares a branch with a pair already taken										long_lived
+pionites-leucogaster	1	27.994	pionites-leucogaster	ara-glaucogularis	amazona-aestiva	55.9881	False	path shares a branch with a pair already taken										long_lived
+poicephalus-senegalus..psittacus-erithacus (2)	2	27.994	poicephalus-senegalus	ara-glaucogularis	agapornis-lilianae	55.9881	False	path shares a branch with a pair already taken										long_lived
+thalassarche-melanophris	1	28.954	thalassarche-melanophris	phoebastria-albatrus	ardenna-pacifica	57.908	False	path shares a branch with a pair already taken										long_lived
+passer-domesticus	1	30.606	passer-domesticus	akialoa-stejnegeri	prunella-modularis	61.212	False	path shares a branch with a pair already taken										long_lived
+prunella-modularis	1	30.606	prunella-modularis	akialoa-stejnegeri	chloebia-gouldiae	61.212	False	path shares a branch with a pair already taken										long_lived
+anarhynchus-alexandrinus..anarhynchus-leschenaultii (2)	2	32.3483	anarhynchus-alexandrinus	charadrius-vociferus	pluvialis-squatarola	64.6966	True		0.697354	0.0296086	0.679249	0.030475	True	False	0.0114246	-0.0125269	-0.0239514	long_lived
+bucorvus-leadbeateri	1	32.8201	bucorvus-leadbeateri	upupa-epops	alcedo-atthis	65.6403	True		1.13431	0.0815505	1.28071	0.101884	True	True	-0.0527175	-0.0966773	-0.0439598	long_lived
+eudocimus-ruber	1	34.0333	eudocimus-ruber	nipponia-nippon	ardea-cinerea	68.0666	True		0.914869	0.0486157	0.883326	0.0492891	True	False	0.0152381	-0.00597487	-0.0212129	long_lived
+agapornis-lilianae..psittacula-eupatria (4)	4	36.2131	agapornis-lilianae	psittrichas-fulgidus	amazona-aestiva	72.4262	False	path shares a branch with a pair already taken										long_lived
+cacatua-galerita..nymphicus-hollandicus (5)	5	36.2131	cacatua-galerita	ara-glaucogularis	nestor-notabilis	72.4262	False	path shares a branch with a pair already taken										long_lived
+nestor-notabilis..strigops-habroptila (2)	2	36.2131	nestor-notabilis	ara-glaucogularis	acanthorhynchus-tenuirostris	72.4262	False	path shares a branch with a pair already taken										long_lived
+limosa-lapponica	1	38.804	limosa-lapponica	calidris-pugnax	numenius-madagascariensis	77.6081	False	path shares a branch with a pair already taken										long_lived
+phoenicopterus-roseus..phoenicopterus-ruber (2)	2	39.0352	phoenicopterus-roseus	tachybaptus-ruficollis	aptenodytes-patagonicus	78.0705	True		0.622572	0.0439423	0.690541	0.0746208	True	False	-0.0449996	-0.229977	-0.184977	long_lived
+asio-otus	1	39.2835	asio-otus	strix-aluco	otus-scops	78.5671	True		0.741134	0.0609209	0.72312	0.0554523	True	False	0.0106867	0.0408465	0.0301598	long_lived
+pluvialis-squatarola	1	51.5086	pluvialis-squatarola	charadrius-vociferus	haematopus-ostralegus	103.017	False	path shares a branch with a pair already taken										long_lived
+alcedo-atthis	1	53.5689	alcedo-atthis	ceryle-rudis	todus-mexicanus	107.138	True		1.19796	0.0755659	1.00526	0.0733649	True	True	0.0761605	0.0128374	-0.0633231	long_lived
+todus-mexicanus	1	53.5689	todus-mexicanus	ceryle-rudis	dendrocopos-leucotos	107.138	False	path shares a branch with a pair already taken										long_lived
+ardenna-pacifica..pagodroma-nivea (5)	5	59.8898	ardenna-pacifica	phoebastria-albatrus	aptenodytes-patagonicus	119.78	False	path shares a branch with a pair already taken										long_lived
+phaethon-rubricauda	1	68.7292	phaethon-rubricauda	aptenodytes-patagonicus	aegotheles-cristatus	137.458	True		0.971644	0.0712022	0.875898	0.0624309	True	False	0.0450535	0.0570937	0.0120401	long_lived
+apus-apus	1	70.6492	apus-apus	aegotheles-cristatus	aptenodytes-patagonicus	141.298	True		0.842092	0.0606491	0.875898	0.0624309	True	False	-0.0170941	-0.0125754	0.00451865	long_lived
+molothrus-ater	1	0.8782	molothrus-ater	molothrus-aeneus	euphagus-cyanocephalus	1.7564	True		0.412943	0.0127166	0.403965	0.0132233	True	False	0.00954616	-0.016968	-0.0265141	long_lived_in_order
+phoebastria-immutabilis	1	1.38981	phoebastria-immutabilis	phoebastria-nigripes	phoebastria-albatrus	2.77962	True		0.107169	0.00505426	0.112667	0.00443715	True	False	-0.0217274	0.0565531	0.0782806	long_lived_in_order
+mareca-penelope	1	2.04	mareca-penelope	mareca-americana	anas-crecca	4.08	True		0.316204	0.00705145	0.311129	0.00630645	True	False	0.00702651	0.0484933	0.0414668	long_lived_in_order
+zosterops-lateralis	1	2.28224	zosterops-lateralis	zosterops-japonicus	leiothrix-lutea	4.56448	True		0.839398	0.0454175	0.862013	0.0448268	True	False	-0.0115458	0.00568578	0.0172316	long_lived_in_order
+corvus-corax	1	2.31038	corvus-corax	corvus-cryptoleucus	corvus-bennetti	4.62076	True		0.352319	0.0106662	0.353917	0.0117927	True	False	-0.00196452	-0.043604	-0.0416395	long_lived_in_order
+threskiornis-aethiopicus	1	2.52341	threskiornis-aethiopicus	platalea-minor	nipponia-nippon	5.04682	True		0.574678	0.0205913	0.570205	0.0203165	True	False	0.00339342	0.00583486	0.00244144	long_lived_in_order
+grus-grus	1	2.96174	grus-grus	grus-monacha	grus-japonensis	5.92348	True		0.191142	0.00937551	0.187231	0.00851406	True	False	0.00897776	0.0418583	0.0328806	long_lived_in_order
+quiscalus-quiscula	1	3.09553	quiscalus-quiscula	euphagus-cyanocephalus	molothrus-aeneus	6.19106	True		0.372626	0.0115356	0.403965	0.0132233	True	False	-0.0350703	-0.0593005	-0.0242302	long_lived_in_order
+oriolus-chinensis	1	3.41815	oriolus-chinensis	oriolus-oriolus	vireo-olivaceus	6.8363	True		0.845956	0.0594214	0.869969	0.0580988	True	False	-0.012156	0.00977604	0.021932	long_lived_in_order
+carduelis-spinus	1	3.84601	carduelis-spinus	carduelis-psaltria	serinus-canaria	7.69202	True		0.303362	0.00872139	0.324721	0.00899992	True	False	-0.02955	-0.0136532	0.0158968	long_lived_in_order
+falco-tinnunculus	1	4.01719	falco-tinnunculus	falco-naumanni	falco-columbarius	8.03438	True		0.429442	0.0300046	0.471261	0.031361	True	False	-0.0403565	-0.0192013	0.0211552	long_lived_in_order
+aythya-fuligula	1	4.83294	aythya-fuligula	aythya-marila	aythya-americana	9.66588	True		0.153372	0.00450971	0.129522	0.0035191	True	False	0.073402	0.107717	0.0343147	long_lived_in_order
+cacatua-galerita..cacatua-moluccensis (2)	2	4.98775	cacatua-galerita	cacatua-alba	cacatua-pastinator	9.97549	True		0.356356	0.0210917	0.348578	0.0234449	True	False	0.00958415	-0.045938	-0.0555221	long_lived_in_order
+agelaius-phoeniceus	1	5.36172	agelaius-phoeniceus	euphagus-cyanocephalus	cardellina-canadensis	10.7234	False	path shares a branch with a pair already taken										long_lived_in_order
+tringa-totanus	1	5.90969	tringa-totanus	tringa-glareola	tringa-stagnatilis	11.8194	True		0.30248	0.00917631	0.313903	0.00639414	True	False	-0.0160987	0.156886	0.172985	long_lived_in_order
+chroicocephalus-ridibundus	1	6.13067	chroicocephalus-ridibundus	larus-dominicanus	gelochelidon-nilotica	12.2613	True		0.727209	0.023187	0.726626	0.0236465	True	False	0.00034779	-0.00852266	-0.00887045	long_lived_in_order
+delichon-urbicum	1	6.39105	delichon-urbicum	cecropis-daurica	hirundo-rustica	12.7821	True		0.690534	0.0354412	0.693636	0.0341783	True	False	-0.00194647	0.0157568	0.0177032	long_lived_in_order
+serinus-canaria	1	6.57769	serinus-canaria	carduelis-psaltria	haemorhous-cassinii	13.1554	False	path shares a branch with a pair already taken										long_lived_in_order
+phylloscopus-trochilus	1	6.78065	phylloscopus-trochilus	phylloscopus-collybita	phylloscopus-borealis	13.5613	True		0.732465	0.0335316	0.71242	0.0351193	True	False	0.0120512	-0.0200904	-0.0321416	long_lived_in_order
+amazona-aestiva..amazona-ochrocephala (3)	3	6.8507	amazona-aestiva	amazona-guildingii	myiopsitta-monachus	13.7014	True		0.642668	0.0464273	0.627129	0.046911	True	False	0.01063	-0.00450145	-0.0151314	long_lived_in_order
+sterna-hirundo..sterna-paradisaea (2)	2	8.08239	sterna-hirundo	gelochelidon-nilotica	sternula-albifrons	16.1648	True		0.590912	0.0162005	0.586554	0.0159423	True	False	0.00321525	0.0069774	0.00376215	long_lived_in_order
+aquila-chrysaetos	1	8.13586	aquila-chrysaetos	aquila-fasciata	aquila-heliaca	16.2717	True		0.0170157	0.00074039	0.205447	0.0103011	True	False	-1.08185	-1.14342	-0.0615735	long_lived_in_order
+aquila-heliaca	1	8.13586	aquila-heliaca	aquila-fasciata	accipiter-gentilis	16.2717	False	path shares a branch with a pair already taken										long_lived_in_order
+anser-albifrons	1	8.994	anser-albifrons	anser-anser	branta-canadensis	17.988	True		0.353761	0.01235	0.345571	0.0127256	True	False	0.0101722	-0.0130092	-0.0231814	long_lived_in_order
+grus-canadensis..grus-vipio (2)	2	9.40303	grus-canadensis	grus-japonensis	balearica-regulorum	18.8061	True		0.532872	0.0252575	0.53411	0.0264009	True	False	-0.00100768	-0.0192274	-0.0182197	long_lived_in_order
+cardinalis-cardinalis	1	10.0826	cardinalis-cardinalis	piranga-olivacea	thraupis-episcopus	20.1651	True		0.694274	0.0269408	0.577508	0.0255418	True	False	0.0799733	0.0231575	-0.0568158	long_lived_in_order
+leucopsar-rothschildi	1	10.2727	leucopsar-rothschildi	acridotheres-cristatellus	sturnus-vulgaris	20.5454	True		0.504394	0.0213255	0.518555	0.0193339	True	False	-0.0120245	0.0425802	0.0546047	long_lived_in_order
+sturnus-vulgaris	1	10.2727	sturnus-vulgaris	acridotheres-cristatellus	toxostoma-redivivum	20.5454	False	path shares a branch with a pair already taken										long_lived_in_order
+pyrrhula-pyrrhula	1	10.9474	pyrrhula-pyrrhula	pinicola-enucleator	carduelis-psaltria	21.8949	True		0.598809	0.0242078	0.639123	0.0238664	True	False	-0.0282958	0.00616704	0.0344629	long_lived_in_order
+anarhynchus-alexandrinus	1	12.0145	anarhynchus-alexandrinus	anarhynchus-mongolus	anarhynchus-leschenaultii	24.0291	True		0.424761	0.0127164	0.202568	0.0076313	True	False	0.321575	0.221764	-0.0998107	long_lived_in_order
+anarhynchus-leschenaultii	1	12.0145	anarhynchus-leschenaultii	anarhynchus-mongolus	charadrius-vociferus	24.0291	False	path shares a branch with a pair already taken										long_lived_in_order
+hirundo-rustica	1	12.7821	hirundo-rustica	cecropis-daurica	tachycineta-thalassina	25.5642	False	path shares a branch with a pair already taken										long_lived_in_order
+onychoprion-fuscatus	1	13.388	onychoprion-fuscatus	gelochelidon-nilotica	chroicocephalus-ridibundus	26.776	False	path shares a branch with a pair already taken										long_lived_in_order
+sternula-albifrons	1	13.388	sternula-albifrons	gelochelidon-nilotica	onychoprion-fuscatus	26.776	False	path shares a branch with a pair already taken										long_lived_in_order
+turdus-merula	1	13.5907	turdus-merula	catharus-fuscescens	ficedula-albicollis	27.1814	True		0.720793	0.0417246	0.728883	0.037521	True	False	-0.00484755	0.0461185	0.050966	long_lived_in_order
+fringilla-coelebs..fringilla-montifringilla (2)	2	13.9793	fringilla-coelebs	akialoa-stejnegeri	agelaius-phoeniceus	27.9586	True		0.697284	0.0297181	0.716523	0.0322461	True	False	-0.0118207	-0.0354573	-0.0236366	long_lived_in_order
+anas-crecca	1	14.4002	anas-crecca	mareca-americana	aythya-americana	28.8003	False	path shares a branch with a pair already taken										long_lived_in_order
+chrysolophus-amherstiae..phasianus-colchicus (2)	2	14.6224	chrysolophus-amherstiae	syrmaticus-reevesii	perdix-perdix	29.2448	True		0.778155	0.0361624	0.761782	0.039664	True	False	0.00923498	-0.0401393	-0.0493742	long_lived_in_order
+eolophus-roseicapilla	1	14.6746	eolophus-roseicapilla	cacatua-alba	nymphicus-hollandicus	29.3492	False	path shares a branch with a pair already taken										long_lived_in_order
+sylvia-atricapilla..sylvia-borin (2)	2	15.1183	sylvia-atricapilla	curruca-curruca	leiothrix-lutea	30.2366	True		0.963615	0.0608018	0.831613	0.0522176	True	False	0.0639822	0.066099	0.00211682	long_lived_in_order
+dryobates-pubescens	1	15.5486	dryobates-pubescens	picoides-tridactylus	dryocopus-pileatus	31.0972	True		0.760344	0.034958	0.741933	0.036119	True	False	0.0106453	-0.0141884	-0.0248336	long_lived_in_order
+zenaida-macroura	1	16.4468	zenaida-macroura	leptotila-verreauxi	columba-livia	32.8936	True		0.768603	0.0335308	0.734805	0.0351984	True	False	0.0195302	-0.0210792	-0.0406094	long_lived_in_order
+vultur-gryphus	1	17.3258	vultur-gryphus	cathartes-aura	accipiter-gentilis	34.6516	True		0.775667	0.0653187	0.880892	0.0651452	True	False	-0.0552469	0.00115505	0.056402	long_lived_in_order
+branta-canadensis	1	17.988	branta-canadensis	anser-anser	cygnus-atratus	35.976	False	path shares a branch with a pair already taken										long_lived_in_order
+bubo-bubo	1	18.2814	bubo-bubo	bubo-scandiacus	strix-aluco	36.5628	True		0.608027	0.0437569	0.619728	0.044018	True	False	-0.00827791	-0.00258416	0.00569376	long_lived_in_order
+columba-livia	1	19.7164	columba-livia	streptopelia-chinensis	leptotila-verreauxi	39.4328	True		0.734805	0.0351984	0.721226	0.033591	True	False	0.00810073	0.0202998	0.012199	long_lived_in_order
+eudyptula-minor	1	21.0533	eudyptula-minor	spheniscus-demersus	aptenodytes-patagonicus	42.1066	True		0.490253	0.0327109	0.451692	0.0293503	True	False	0.0355786	0.0470799	0.0115013	long_lived_in_order
+nymphicus-hollandicus	1	22.373	nymphicus-hollandicus	cacatua-alba	calyptorhynchus-baudinii	44.7461	False	path shares a branch with a pair already taken										long_lived_in_order
+haematopus-ostralegus	1	22.4262	haematopus-ostralegus	himantopus-himantopus	anarhynchus-alexandrinus	44.8525	True		0.649287	0.0338418	0.658729	0.0303493	True	False	-0.00626978	0.0473054	0.0535752	long_lived_in_order
+calidris-alpina..calidris-ruficollis (2)	2	22.6501	calidris-alpina	calidris-pugnax	tringa-erythropus	45.3002	True		0.704451	0.0210117	0.721332	0.0202252	True	False	-0.0102843	0.0165672	0.0268515	long_lived_in_order
+coracopsis-vasa	1	23.0593	coracopsis-vasa	psittrichas-fulgidus	agapornis-pullarius	46.1187	True		0.739104	0.0609075	0.602407	0.0603897	True	False	0.0888158	0.00370755	-0.0851083	long_lived_in_order
+eopsaltria-australis..tregellasia-leucops (4)	4	23.0762	eopsaltria-australis	drymodes-brunneopygia	petroica-goodenovii	46.1524	True		0.889168	0.0584886	0.904034	0.0670596	True	False	-0.00720113	-0.0593898	-0.0521887	long_lived_in_order
+calyptorhynchus-baudinii	1	23.8177	calyptorhynchus-baudinii	cacatua-alba	agapornis-pullarius	47.6353	False	path shares a branch with a pair already taken										long_lived_in_order
+struthidea-cinerea	1	23.8528	struthidea-cinerea	aphelocoma-coerulescens	falcunculus-frontatus	47.7056	True		0.738154	0.0487034	0.857524	0.0501825	True	False	-0.0650995	-0.0129936	0.0521059	long_lived_in_order
+leiothrix-lutea	1	23.8528	leiothrix-lutea	zosterops-japonicus	curruca-curruca	47.7056	False	path shares a branch with a pair already taken										long_lived_in_order
+zonotrichia-albicollis	1	23.872	zonotrichia-albicollis	cardellina-canadensis	cardinalis-cardinalis	47.744	True		0.631552	0.0291962	0.729456	0.0242809	True	False	-0.0625899	0.0800626	0.142652	long_lived_in_order
+caracara-plancus	1	25.5988	caracara-plancus	falco-columbarius	acanthorhynchus-tenuirostris	51.1976	True		1.11092	0.104142	1.16849	0.11764	True	True	-0.0219402	-0.0529314	-0.0309912	long_lived_in_order
+acrocephalus-scirpaceus	1	25.7093	acrocephalus-scirpaceus	cecropis-daurica	alauda-arvensis	51.4185	False	path shares a branch with a pair already taken										long_lived_in_order
+acanthorhynchus-tenuirostris	1	27.6458	acanthorhynchus-tenuirostris	origma-solitaria	malurus-melanocephalus	55.2916	True		1.06966	0.0562055	0.945245	0.0476377	True	True	0.0537031	0.071828	0.0181249	long_lived_in_order
+poicephalus-senegalus..psittacus-erithacus (2)	2	27.994	poicephalus-senegalus	amazona-guildingii	agapornis-pullarius	55.9881	False	path shares a branch with a pair already taken										long_lived_in_order
+pagodroma-nivea	1	28.4844	pagodroma-nivea	daption-capense	ardenna-carneipes	56.9689	True		0.6664	0.0255988	0.690502	0.0260311	True	False	-0.0154304	-0.00727279	0.00815759	long_lived_in_order
+parus-major..poecile-palustris (3)	3	30.606	parus-major	alauda-arvensis	acridotheres-cristatellus	61.212	True		0.69455	0.0567161	0.828625	0.0597163	True	False	-0.0766543	-0.0223864	0.0542679	long_lived_in_order
+passer-domesticus	1	30.606	passer-domesticus	akialoa-stejnegeri	prunella-modularis	61.212	False	path shares a branch with a pair already taken										long_lived_in_order
+prunella-modularis	1	30.606	prunella-modularis	akialoa-stejnegeri	chloebia-gouldiae	61.212	False	path shares a branch with a pair already taken										long_lived_in_order
+ardea-cinerea	1	31.1567	ardea-cinerea	egretta-sacra	botaurus-stellaris	62.3134	True		0.68126	0.0387903	0.618013	0.0360112	True	False	0.042315	0.0322851	-0.0100299	long_lived_in_order
+gallus-gallus	1	32.0754	gallus-gallus	coturnix-japonica	pavo-cristatus	64.1509	True		0.651929	0.032127	0.761244	0.0433673	True	False	-0.0673236	-0.130293	-0.062969	long_lived_in_order
+pavo-cristatus..polyplectron-napoleonis (2)	2	32.0754	pavo-cristatus	coturnix-japonica	chrysolophus-amherstiae	64.1509	False	path shares a branch with a pair already taken										long_lived_in_order
+eudocimus-ruber	1	34.0333	eudocimus-ruber	nipponia-nippon	ardea-cinerea	68.0666	True		0.914869	0.0486157	0.883326	0.0492891	True	False	0.0152381	-0.00597487	-0.0212129	long_lived_in_order
+strigops-habroptila	1	36.2131	strigops-habroptila	agapornis-pullarius	acanthorhynchus-tenuirostris	72.4262	True		1.37142	0.109773	1.19868	0.122723	True	True	0.0584652	-0.0484299	-0.106895	long_lived_in_order
+limosa-lapponica	1	38.804	limosa-lapponica	calidris-pugnax	numenius-madagascariensis	77.6081	False	path shares a branch with a pair already taken										long_lived_in_order
+asio-otus	1	39.2835	asio-otus	strix-aluco	otus-scops	78.5671	True		0.741134	0.0609209	0.72312	0.0554523	True	False	0.0106867	0.0408465	0.0301598	long_lived_in_order
+fregata-magnificens	1	44.3906	fregata-magnificens	anhinga-melanogaster	ardea-cinerea	88.7811	True		0.840097	0.0560296	1.00276	0.0665173	True	True	-0.0768678	-0.0745175	0.00235027	long_lived_in_order
+hydrobates-castro	1	59.8898	hydrobates-castro	ardenna-carneipes	phoebastria-albatrus	119.78	True		0.877051	0.0496885	0.823121	0.0344445	True	False	0.0275609	0.159136	0.131575	long_lived_in_order
+crax-rubra	1	65.8901	crax-rubra	colinus-virginianus	alectura-lathami	131.78	True		1.02632	0.0694817	1.12936	0.0781886	True	True	-0.0415508	-0.0512729	-0.00972212	long_lived_in_order

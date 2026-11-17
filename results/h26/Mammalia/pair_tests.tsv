@@ -1,0 +1,15 @@
+class	trait	measure	with_saturated	n_pairs	status	median	ci_low	ci_high	p	positive	sign_p	intercept	se	size_slope
+Mammalia	long_lived	d_omega	False	6	not assessed: 6 pairs, fewer than 8									
+Mammalia	long_lived	d_omega	True	25	assessed	-0.0245526	-0.0437411	0.016202	0.219986	10	0.424356			
+Mammalia	long_lived	d_dS	False	6	not assessed: 6 pairs, fewer than 8									
+Mammalia	long_lived	d_dS	True	25	assessed	0.00527092	-0.0143455	0.0269203	0.338788	14	0.690038			
+Mammalia	long_lived	d_dN	False	6	not assessed: 6 pairs, fewer than 8									
+Mammalia	long_lived	d_dN	True	25	assessed	-0.00352907	-0.0279273	0.0221286	0.652841	11	0.690038			
+Mammalia	long_lived	d_omega given size		6	not assessed: 6 pairs with both sizes									
+Mammalia	long_lived_in_order	d_omega	False	26	assessed	0.00441056	-0.0220922	0.0167872	0.9403	14	0.845019			
+Mammalia	long_lived_in_order	d_omega	True	58	assessed	0.00780745	-0.0114506	0.0217374	0.454981	33	0.358143			
+Mammalia	long_lived_in_order	d_dS	False	26	assessed	0.00818763	-0.0114474	0.0140135	0.565132	16	0.32694			
+Mammalia	long_lived_in_order	d_dS	True	58	assessed	0.00391719	-0.0130219	0.0123941	0.789384	31	0.694004			
+Mammalia	long_lived_in_order	d_dN	False	26	assessed	0.0132335	-0.0193306	0.0373408	0.515301	16	0.32694			
+Mammalia	long_lived_in_order	d_dN	True	58	assessed	0.00087045	-0.0164717	0.0148227	0.996911	30	0.895683			
+Mammalia	long_lived_in_order	d_omega given size		26	assessed				0.65352			0.00491418	0.0108112	0.0192672
