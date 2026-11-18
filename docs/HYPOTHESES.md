@@ -204,6 +204,29 @@ compute nodes, against 90 to 96 s serial; `docs/COEVOL_SPEED.md` compares the op
   6490205 and 6490206 to 6490209.
 Nothing from them is read until tracecomp gives effective sample sizes above 100 and small relative
 differences.
+**Coevol, intermediate (2026-11-18, the first legs still running; provisional, not to be quoted).** Read from
+copies of the traces as they stood, burn-in 1,000, with tracecomp and, per sampled covariance matrix, the
+correlation and the partial correlation given the other three variables (order dS, dN/dS, lifespan, mass).
+- *Resumed chains (ages sampled), 4,329 and 4,281 points.* The covariances with the traits have effective sample
+  sizes of 950 to 2,037 and relative differences between the chains below 0.08. Tree length is not there yet
+  (effective size 46), and the variance of dS (137) and the covariance of dS with dN/dS (146) barely are. dS
+  against lifespan −0.49 and −0.49 (posterior probability of a positive value 0.00); dN/dS against lifespan +0.44
+  and +0.43 (0.99, 0.98); dS against mass −0.38 and −0.37 (0.00); dN/dS against mass +0.22 and +0.20 (0.87,
+  0.84). As partial correlations: dS with lifespan −0.12 and −0.12 (0.15, 0.14); dN/dS with lifespan +0.29 and
+  +0.28 (0.91, 0.92); dS with mass −0.16 and −0.16 (0.07); dN/dS with mass −0.22 and −0.23 (0.12, 0.11). These
+  are the numbers of the first 1,100 cycles again, now from chains that agree: the raw fall of dS with lifespan
+  goes with body mass, and the rise of dN/dS with lifespan weakens with mass held and stays short of a posterior
+  probability of 0.975.
+- *Chains with the dated ages held, 3,449 and 3,299 points.* Not mixed, against what was expected of them: the
+  covariances with the traits have effective sample sizes of 15 to 141 and the chains differ by 0.30 to 0.59 in
+  relative terms. Nothing is read from them. Seen, and said so that it is not found later as a surprise: both
+  chains at this point have a partial correlation of dS with lifespan of −0.57 and −0.53 (0.00), which is not
+  what the resumed chains say. With the ages held, dS is a rate per unit of the dated tree's time; with the ages
+  sampled and no calibration, rate and time are not told apart. If the difference holds once these chains mix,
+  it is the fixed-ages reading that answers the question as stated, and the sentence above about body mass
+  would not stand. The two-step test's lifespan slope of dS per Myr given mass (−0.129, p 0.016), not read
+  because its control failed, points the same way; neither counts.
+- At about 47 points an hour the four legs end short of 15,000 points; a fifth is submitted when the fourth ends.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 
