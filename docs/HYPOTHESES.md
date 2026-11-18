@@ -227,6 +227,11 @@ correlation and the partial correlation given the other three variables (order d
   would not stand. The two-step test's lifespan slope of dS per Myr given mass (−0.129, p 0.016), not read
   because its control failed, points the same way; neither counts.
 - At about 47 points an hour the four legs end short of 15,000 points; a fifth is submitted when the fourth ends.
+- *After the first leg* (it ended on 2026-11-18, all four jobs completed; 4,528 and 4,480 points resumed, 3,643
+  and 3,510 with the ages held; burn-in 1,000). Resumed: effective sample sizes of the covariances with the
+  traits 603 to 1,963, relative differences below 0.08; tree length 48, variance of dS 147; the correlations and
+  partial correlations as above to the second decimal. Ages held: effective sample sizes of the covariances with
+  the traits 20 to 86, relative differences 0.37 to 0.66: still not read.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 
