@@ -324,6 +324,19 @@ q < 0.05, all single genes, the same four on both builds, and their signs disagr
 q = 0.011) go one way, mammalian ND5 (+0.220, q = 0.010) the other, and mammalian ND2
 on dN (-0.017, q = 0.039) is a fourth direction. Four of 655 at a 5% false discovery rate is what the
 correction is designed to allow.
+**Corrected, 2026-11-18** (`docs/ANALYSIS_CORRECTIONS.md`; tables in `results/review-20261118/longevity/`, run on
+build 0f4e970 from the corrected source, commit 4c3f9fc). Two things changed in the calculation: the two sisters'
+distances to their outgroup now use one set of codon columns, resolved in all three species, and a pair with a
+zero rate difference leaves the sign test. All 655 rows were computed again. The result stands: nothing passes
+q < 0.05 on the concatenated genes (closest: mammals with body mass in the model, slope +0.112, p = 0.022,
+q = 0.16, 115 pairs; birds per million years, p = 0.054, q = 0.25, 102 pairs with saturated ones, and p = 0.073,
+q = 0.27, 96 without), and the same four single-gene tests pass: ND6 across all species (-0.196, q = 0.0086),
+avian CYTB per million years (-0.022, q = 0.0089), mammalian ND5 with body mass (+0.219, q = 0.011) and
+mammalian ND2 on dN (-0.017, q = 0.036). No regression changes side at q < 0.05; two rows change side at nominal
+p < 0.05. The sign tests moved more: 32 rows change side at nominal p < 0.05
+(`results/review-20261118/sign_test_changes.tsv`), mostly on dN, where many pairs have no difference at all and
+used to be counted as if they had a sign. The numbers in the paragraph above are those of the runs before the
+correction.
 **Reading.** In these data lifespan does not predict the mitochondrial substitution rate, and that answer is
 the same under all four normalisations. This does not refute the bivalve and fish reports, which are within
 clades this build barely covers; it says the effect is not general across vertebrates.
@@ -2157,3 +2170,15 @@ and selection input the same bytes on the rerun; tables in `results/h26/`). R1, 
 So far: where birds became long-lived for their mass, the ratio dN/dS of the 12 protein genes did not move against the
 nearest relative that did not, and neither did dS; in mammals the pairs are too saturated to say on the main
 definition, and show nothing on the one within orders.
+**R2 corrected, 2026-11-18** (`docs/ANALYSIS_CORRECTIONS.md`; tables in `results/review-20261118/adapt-longevity/`,
+from the corrected source, commit 4c3f9fc). The two sisters' distances to their outgroup now use one set of codon
+columns, resolved in all three species; the pairs and their counts are the same. The readings stand.
+- *Birds, `long_lived`:* 41 unsaturated pairs, median Δω +0.009 (−0.014 to +0.018), Wilcoxon p = 0.66; 24 of 41
+  positive: **not detected**. ΔdS median −0.0005 (−0.011 to +0.003), p = 0.50. Given the difference in mass, the
+  intercept is +0.003 (p = 0.68). On `long_lived_in_order`: 49 pairs, median +0.004 (−0.018 to +0.021), p = 0.58.
+- *Mammals, `long_lived`:* 6 unsaturated pairs: **not assessed**. With the 19 saturated pairs added: median Δω
+  −0.023 (−0.046 to +0.016), p = 0.21. On `long_lived_in_order`: 26 unsaturated pairs, median +0.004 (−0.024 to
+  +0.018), p = 0.88.
+The numbers of 2026-11-17 above and the tables in `results/h26/` are those of the run before the correction. R1
+and R4 (RELAX, aBSREL) take their species from the pair table and do not use these distances, so the running array
+is not affected; the readout and C run from a clone at the corrected commit or later.
