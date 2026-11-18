@@ -215,7 +215,8 @@ def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, work: P
     rows = []
     for cls in classes:
         rows += run_class(data, composition, fourfold, tree_file, cls, families, sites, alns, emb)
-    res = pd.DataFrame(rows)
+    res = pd.DataFrame(rows).reindex(columns=["class", "family", "feature", "model", "n", "status", "lambda",
+                                            "slope_per_sd", "se", "ci95_low", "ci95_high", "t", "p"])
     tested = res.status.eq("tested")
     res["q"] = np.nan
     for _, idx in res[tested].groupby(["class", "family", "model"]).groups.items():
@@ -230,7 +231,7 @@ def main(data: Path, composition: Path, fourfold: Path, tree_file: Path, work: P
                                                               smallest_p=("p", "min"), smallest_q=("q", "min")).reset_index())
     with pd.option_context("display.width", 220):
         print(summary.to_string(index=False, float_format=lambda v: f"{v:.3g}"))
-        na = res[~tested]
+        na = res[res.status.ne("tested")]
         if len(na):
             print("\nnot assessed:\n" + na[["class", "family", "feature", "model", "status"]].to_string(index=False))
     return res

@@ -4,6 +4,7 @@ Per pair (`clades.origin_pairs`): dN and dS of the trait sister and of the other
 heavy-strand genes concatenated (Nei-Gojobori with the Jukes-Cantor correction, in the species' mitochondrial code, as
 H7 counts them). Both sisters have had the same time since they split from the outgroup's line, so a difference of
 log10 dS between them is also a difference of log10 dS per million years, and needs no dating.
+The two distances use the same codon columns, resolved and non-stop in all three species.
 
     d_omega = log10(dN/dS of the trait sister) - log10(dN/dS of the other)
     d_dS    = log10 dS(trait, outgroup) - log10 dS(other, outgroup);  d_dN likewise
@@ -19,7 +20,7 @@ from Bio.Data import CodonTable
 from scipy import stats
 
 from ..genes import MT_HEAVY_STRAND
-from ..longevity.rates import SATURATED_DS, distance
+from ..longevity.rates import SATURATED_DS, distance, outgroup_distances
 from ..seqio import read_fasta
 from . import clades
 
@@ -35,9 +36,10 @@ class Distances:
         self.aligned = set.intersection(*[set(a) for a in self.aln.values()])
         self.table = species.set_index("slug").transl_table
         self.cache: dict[tuple[str, str], dict] = {}
+        self.triplet_cache: dict[tuple[str, str, str], tuple[dict, dict]] = {}
 
-    def code(self, a: str, b: str) -> int:
-        tables = {int(self.table[s]) for s in (a, b) if not pd.isna(self.table.get(s))}
+    def code(self, *slugs: str) -> int:
+        tables = {int(self.table[s]) for s in slugs if not pd.isna(self.table.get(s))}
         t = tables.pop() if len(tables) == 1 else 2
         return t if t in CodonTable.unambiguous_dna_by_id else 2
 
@@ -48,6 +50,16 @@ class Distances:
             self.cache[key] = distance(sa, sb, self.code(*key))
         return self.cache[key]
 
+    def to_outgroup(self, a: str, b: str, outgroup: str) -> tuple[dict, dict]:
+        """Sisters against their outgroup on one shared mask, cached in sister-name order."""
+        x, y = sorted((a, b))
+        key = (x, y, outgroup)
+        if key not in self.triplet_cache:
+            seqs = ["".join(self.aln[g][s] for g in self.genes) for s in key]
+            self.triplet_cache[key] = outgroup_distances(*seqs, self.code(*key))
+        first, second = self.triplet_cache[key]
+        return (first, second) if a == x else (second, first)
+
 
 def pair_rates(rows: list[dict], dist: Distances) -> pd.DataFrame:
     out = []
@@ -55,7 +67,7 @@ def pair_rates(rows: list[dict], dist: Distances) -> pd.DataFrame:
         if not r["taken"]:
             out.append(r); continue
         t, o, g = r["sp_trait"], r["sp_other"], r["outgroup"]
-        dt, do = dist(t, g), dist(o, g)
+        dt, do = dist.to_outgroup(t, o, g)
         vals = {"dS_trait": dt["dS"], "dN_trait": dt["dN"], "dS_other": do["dS"], "dN_other": do["dN"]}
         ok = all(np.isfinite(v) and v > 0 for v in vals.values())
         row = {**r, **vals, "usable": ok, "saturated": bool(ok and max(vals["dS_trait"], vals["dS_other"]) > SATURATED_DS)}

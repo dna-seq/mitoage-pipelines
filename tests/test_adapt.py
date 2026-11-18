@@ -226,7 +226,10 @@ def test_pair_rates(species, tr, tree):
     assert np.allclose(ok.d_dS, np.log10(ok.dS_trait) - np.log10(ok.dS_other))
     assert (ok.saturated == (ok[["dS_trait", "dS_other"]].max(axis=1) > 1.0)).all()
     r = ok.iloc[0]
-    assert dist(r.sp_trait, r.outgroup)["dS"] == pytest.approx(r.dS_trait)
+    dt, do = dist.to_outgroup(r.sp_trait, r.sp_other, r.outgroup)
+    assert dt["dS"] == pytest.approx(r.dS_trait)
+    assert do["dS"] == pytest.approx(r.dS_other)
+    assert dt["codons"] == do["codons"]
     assert dist(r.outgroup, r.sp_trait) == dist(r.sp_trait, r.outgroup)
 
 

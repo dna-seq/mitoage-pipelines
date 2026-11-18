@@ -1,0 +1,134 @@
+...ssssssssss.s.s.s...........sssssssssssssssssssssssssssss............. [ 15%]
+............ssssssssssssssssssssssssss...................sssssssssssssss [ 30%]
+sssssss.......s..........ssss......ssss..................sss.....sss.... [ 45%]
+..........ssssssssssssssss.............................................. [ 60%]
+........................................................................ [ 76%]
+........................................................................ [ 91%]
+....................sssssssssssssssssssss                                [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_adapt.py:48: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_adapt.py:62: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [3] tests/test_adapt.py:79: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [2] tests/test_adapt.py:91: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_adapt.py:121: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_adapt.py:146: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_adapt.py:173: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_adapt.py:200: the aBSREL fixture is not in tests/data
+SKIPPED [1] tests/test_adapt.py:219: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_adapt.py:256: needs `download build`, `longevity dated-tree` and `download fishbase-temperature`
+SKIPPED [1] tests/test_audit.py:49: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:63: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:91: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:110: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:117: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:125: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:138: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:158: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:172: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:204: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:208: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [5] tests/test_audit.py:214: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:239: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:258: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:283: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:293: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:310: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:324: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:341: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:348: needs `mitoage download taxonomy --from-snapshot`
+SKIPPED [1] tests/test_audit.py:364: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:376: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:394: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:412: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_audit.py:422: needs `mitoage download build` and `mitoage download refseq --from-snapshot`
+SKIPPED [1] tests/test_classes.py:170: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:175: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:183: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:187: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:196: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:207: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:211: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:228: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:241: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [2] tests/test_classes.py:253: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:278: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:285: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:298: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:305: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:311: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:322: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:339: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:348: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:369: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:416: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:436: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:451: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:497: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:505: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_classes.py:510: needs `download build`, `download pdb 5Z62 5XTE` and `longevity dated-tree`
+SKIPPED [1] tests/test_complexes.py:68: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [4] tests/test_complexes.py:75: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:86: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:92: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:98: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:121: the pinned digests are of build c525adb and the site's tree at 6fe8e72; on other inputs the job compares complex IV with the earlier code instead
+SKIPPED [1] tests/test_complexes.py:126: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:136: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:143: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:151: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [2] tests/test_complexes.py:191: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:210: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [2] tests/test_complexes.py:215: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:242: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:251: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:261: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_complexes.py:274: needs `mitoport iface-align`
+SKIPPED [1] tests/test_complexes.py:359: needs `download pdb 5XTD 5Z62 8H9S 5XTE`
+SKIPPED [1] tests/test_cybrid.py:108: needs `mitoage download pdb 5XTD`
+SKIPPED [1] tests/test_cybrid.py:108: needs `mitoage download pdb 5XTE`
+SKIPPED [1] tests/test_cybrid.py:110: needs `mitoage download cybrid`
+SKIPPED [1] tests/test_cybrid.py:108: needs `mitoage download pdb 8H9S`
+SKIPPED [1] tests/test_cybrid_energy.py:87: needs `uv sync --group energy`
+SKIPPED [1] tests/test_cybrid_energy.py:96: needs `uv sync --group energy`
+SKIPPED [1] tests/test_cybrid_energy.py:105: needs `uv sync --group energy`
+SKIPPED [1] tests/test_cybrid_energy.py:111: needs `uv sync --group energy`
+SKIPPED [1] tests/test_euring.py:60: the EURING PDF is not in the data folder (mitoage download lifespan)
+SKIPPED [1] tests/test_euring.py:67: the EURING PDF is not in the data folder (mitoage download lifespan)
+SKIPPED [1] tests/test_euring.py:76: the EURING PDF is not in the data folder (mitoage download lifespan)
+SKIPPED [1] tests/test_gene_patch.py:52: RefSeq release 237 is not in the data folder
+SKIPPED [1] tests/test_gene_patch.py:63: RefSeq release 237 is not in the data folder
+SKIPPED [1] tests/test_gene_patch.py:72: RefSeq release 237 is not in the data folder
+SKIPPED [1] tests/test_hibernation.py:37: needs `download hibernation`
+SKIPPED [3] tests/test_hibernation.py:49: needs `download hibernation`
+SKIPPED [1] tests/test_hibernation.py:69: needs `download hibernation`, `download build` and NCBI's names.dmp
+SKIPPED [1] tests/test_hibernation.py:90: needs `download hibernation`, `download build` and NCBI's names.dmp
+SKIPPED [1] tests/test_hibernation.py:102: needs `download hibernation`, `download build` and NCBI's names.dmp
+SKIPPED [1] tests/test_hibernation.py:123: needs `download hibernation`
+SKIPPED [1] tests/test_hibernation.py:138: needs `download hibernation`, `download build` and NCBI's names.dmp
+SKIPPED [1] tests/test_hibernation.py:160: needs the Dryad file saved by hand, then `download hibernation`
+SKIPPED [3] tests/test_hibernation.py:172: needs the Dryad file saved by hand, then `download hibernation`
+SKIPPED [1] tests/test_hibernation.py:189: needs `download hibernation`, `download build` and NCBI's names.dmp
+SKIPPED [1] tests/test_hibernation.py:203: needs the Dryad file saved by hand, then `download hibernation`
+SKIPPED [1] tests/test_hibernation.py:210: needs `download hibernation`, `download build` and NCBI's names.dmp
+SKIPPED [1] tests/test_thermal.py:60: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:65: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:74: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:96: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:104: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:110: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:119: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:138: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:146: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:153: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:168: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:188: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:196: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:208: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:217: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:226: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:237: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:249: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:256: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:263: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+SKIPPED [1] tests/test_thermal.py:276: needs `download build`, `longevity dated-tree`, `longevity fourfold` and `download fishbase-temperature`
+331 passed, 142 skipped in 192.88s (0:03:12)

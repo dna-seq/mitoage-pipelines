@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-18",
+  "host": "remote Linux host",
+  "base_commit": "1708f8eb9e1ee4009da0e33d983ac5348ffa36c9",
+  "python": "3.14.10",
+  "data_root": "$MITOAGE_PIPELINES_DATA (isolated review data root)",
+  "species_sha256": "267a16311cca579af2ca1cd004e99befe66e53e1ae7696d71ffb9f6b7be5dbed",
+  "fixed_source_sha256": {
+    "src/mitoage_pipelines/longevity/rates.py": "93a07e7bad3cedb22e57b03e12eb525608c3ebf628105d6f1606290879ebc528",
+    "src/mitoage_pipelines/longevity/structure_pgls.py": "8c2075eb029cb8d4d7509f1b74a9861ec7c1fec3ae5ccf16076b534895b7ea74",
+    "src/mitoage_pipelines/adaptations/pairs.py": "ca8d6be22f6ecc577bc8df6f1f59c2a2ef020257c72963eb87ff4534be131a98",
+    "src/mitoage_pipelines/adaptations/coupling.py": "1a4f08577c1f70b6f6b13499138a1776c2149d9e4a997f833edd75fc5953b1fd",
+    "src/mitoage_pipelines/mitoport/cybrid.py": "bdb7bb3a52f010a276b93635f82bd6c00eca6e742d12f54408b02be96f99b723"
+  },
+  "codon_alignment_sha256": {
+    "ATP6.codon.fasta.gz": "5b12f00c9e473adb1a1c9999fff1e6a8dfcadcea023b9b8c45ba6134126e8973",
+    "ATP8.codon.fasta.gz": "a804ed1da455fa5c4dad60a4faac704f8823d9b145ad9e5682f747caed0e7dbb",
+    "COX1.codon.fasta.gz": "595e21d86d3595ab91d3d51011677a2f31c6719317762c30801c731195ef8422",
+    "COX2.codon.fasta.gz": "352df5b4ba7e16e8342be4589c0d310342fe493f709db202798595738aecc334",
+    "COX3.codon.fasta.gz": "4374fbbdd23a48a03d2103eab55746ef09c90e8d678abd45b5125c936bbbd10e",
+    "CYTB.codon.fasta.gz": "ef634adc49b7429d3cdfe3a79fe3b07f82e42675a636b42a80f4ccdddc8ba34a",
+    "ND1.codon.fasta.gz": "a53009073219386e36873ba307c0df31157f75646f1d15b34ef761dc6002469d",
+    "ND2.codon.fasta.gz": "e3123ac6bbad3069758493edf8784bbd67f3e2be3e3261b07c76dde4a3761653",
+    "ND3.codon.fasta.gz": "bfdb6a8d929f2bbebdaa4b1835e8fabdf9fa7f08fb6bda5b755d52c96124f5ce",
+    "ND4.codon.fasta.gz": "66ed316b3bb57f1e3dedd9b493d9b14a0f64494626e30253fb9f371ac5b92e41",
+    "ND4L.codon.fasta.gz": "556dfd75043729931e9a7f3cebce56931c103859f7d5b54467013a7031b0868a",
+    "ND5.codon.fasta.gz": "a7d9ed3ab65411a86ecada52f7338d952bbdc854971ede0abb575d62fb11819c",
+    "ND6.codon.fasta.gz": "2b09ffe81c7e0db82543cd16bea0163f6c8f3622af27098feaa1a2137ba019c5"
+  },
+  "tests": {
+    "focused_passed": 61,
+    "full_passed": 331,
+    "full_skipped": 142,
+    "full_seconds": 192.88
+  },
+  "h7": {
+    "shared_result_rows": 655,
+    "sign_test_nominal_005_flips": 32,
+    "regression_p_nominal_005_flips": 2,
+    "regression_q_005_flips": 0
+  },
+  "h12": {
+    "rows": 192,
+    "max_p_difference": 0.0
+  },
+  "h17": {
+    "t4_rows": 28,
+    "changed_t4_values": 0
+  },
+  "h18": {
+    "available_tasks": 4,
+    "expected_tasks": 44,
+    "energy_t4": "not assessed: incomplete totals"
+  },
+  "not_rerun": [
+    "H21-H25 adaptation rates and C2 readouts: no prepared traits/coupling branch lengths in this checkout; guards covered by regression tests",
+    "Unfinished H18 energy calculations: existing cluster array continues independently"
+  ]
+}

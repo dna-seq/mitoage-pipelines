@@ -23,6 +23,8 @@ dN and dS are Nei-Gojobori counts with the Jukes-Cantor correction, in each spec
 mitochondrial genetic code (table 2 where the three species disagree). Codon pairs differing at more
 than one position are averaged over every mutational pathway that avoids a stop. A pair whose dS
 exceeds 1 is flagged `saturated`, and every test is reported with and without those pairs.
+Both sister-to-outgroup distances use the same codon columns, resolved and non-stop in all three species.
+Pairs with a tied lifespan or rate difference do not enter the sign test.
 
 Species: the default dataset of H1, so this test and the amino-acid tests see the same animals.
 """
@@ -154,6 +156,21 @@ def distance(s1: str, s2: str, table: int) -> dict:
     return {"dN": jukes_cantor(Nd / N), "dS": jukes_cantor(Sd / S), "codons": codons}
 
 
+def outgroup_distances(s1: str, s2: str, outgroup: str, table: int) -> tuple[dict, dict]:
+    """Both sisters' distances to one outgroup, on the same resolved sense-codon columns.
+
+    Independent pairwise deletion would let missing sequence alone change a rate contrast.
+    """
+    if len({len(s1), len(s2), len(outgroup)}) != 1 or len(s1) % 3:
+        raise ValueError("the three codon rows must have equal lengths divisible by three")
+    aa, _ = code_tables(table)
+    sense = {c for c, a in aa.items() if a != "*"}
+    rows = (s1.upper(), s2.upper(), outgroup.upper())
+    keep = [i for i in range(0, len(s1), 3) if all(s[i:i + 3] in sense for s in rows)]
+    a, b, o = ("".join(s[i:i + 3] for i in keep) for s in rows)
+    return distance(a, o, table), distance(b, o, table)
+
+
 # --- cherries -----------------------------------------------------------------------------------
 def cherries(tree, usable: set[str]):
     """Every pair of tips that share a parent and are both usable, with that parent."""
@@ -205,7 +222,7 @@ def build_contrasts(data: Path, species: pd.DataFrame, tree_file: Path) -> pd.Da
                 sa, sb, so = ("".join(alignments[g][s] for g in MT_GENES) for s in (a, b, o))
             else:
                 sa, sb, so = alignments[gene][a], alignments[gene][b], alignments[gene][o]
-            ra, rb = distance(sa, so, table), distance(sb, so, table)
+            ra, rb = outgroup_distances(sa, sb, so, table)
             rows.append({"class": info.loc[a, "class"], "gene": gene, "sp_a": a, "sp_b": b, "outgroup": o,
                          "transl_table": table, "time_my": time_my, "codons": ra["codons"],
                          "dS_a": ra["dS"], "dS_b": rb["dS"], "dN_a": ra["dN"], "dN_b": rb["dN"],
@@ -242,7 +259,7 @@ def test_contrasts(df: pd.DataFrame, y: str, per_time: bool = False, covariates:
     # A fit with no residual leaves the slope with no standard error: that is a degenerate test, not a
     # certain one, so t and p are reported as unknown rather than as infinity and zero.
     t = beta[0] / se[0] if se[0] > 0 else np.nan
-    signed = d[d.d_ll != 0]
+    signed = d[(d.d_ll != 0) & (d[y] != 0)]
     lower = int(((signed.d_ll > 0) & (signed[y] < 0)).sum() + ((signed.d_ll < 0) & (signed[y] > 0)).sum())
     return {"n": len(d), "slope": beta[0], "se": se[0], "t": t,
             "p": 2 * stats.t.sf(abs(t), dof) if np.isfinite(t) else np.nan,

@@ -255,9 +255,26 @@ T3_SCORES = ("f_contact", "d_contact", "f_all", "d_all")
 T4_SCORES = ("d_contact", "d_all")
 
 
+def complete_totals(scores: pd.DataFrame, names: tuple[str, ...],
+                    complexes_by_host: dict[str, tuple[str, ...]] | None = None) -> pd.DataFrame:
+    """Sum a score only when every required complex has a finite value for that donor.
+
+    H16/H17 require I, III, IV and V. H18 explicitly supplies its host-specific structure sets.
+    """
+    rows = []
+    for (host, donor), group in scores.groupby(["host", "donor"], sort=False):
+        required = (complexes_by_host or {}).get(host, tuple(STRUCTURES))
+        values = group.set_index("complex")[list(names)].reindex(required)
+        values = values.where(np.isfinite(values))
+        total = values.sum(min_count=len(required))
+        rows.append({"host": host, "donor": donor, **total.to_dict()})
+    return pd.DataFrame(rows, columns=["host", "donor", *names])
+
+
 def summarise(scores: pd.DataFrame, meas: pd.DataFrame, names: tuple[str, ...] = SCORES,
               t2b: tuple[str, ...] = T2B_SCORES, t3: tuple[str, ...] = T3_SCORES,
-              t4: tuple[str, ...] = T4_SCORES) -> tuple[pd.DataFrame, pd.DataFrame]:
+              t4: tuple[str, ...] = T4_SCORES,
+              t4_complexes: dict[str, tuple[str, ...]] | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
     """(calibration: one row per measured (host, donor, complex) with its status and scores; summary: T1-T4).
     The defaults are H16's scores; H17 passes its own. A score that is missing for a point is left out of the
     readouts it enters, and each row's `n` says how many points it had."""
@@ -311,14 +328,14 @@ def summarise(scores: pd.DataFrame, meas: pd.DataFrame, names: tuple[str, ...] =
             top = g.loc[g[s].idxmax(), "complex"]
             out.append({"test": "T3", "score": s, "n": len(g), "value": float(top == worst) if worst else np.nan,
                         "reads": f"{h} / {d}: most reduced {worst or 'unknown'}, highest {s} in complex {top}"})
-    total = scores.groupby(["host", "donor"])[list(t4)].sum(min_count=1).reset_index()
+    total = complete_totals(scores, t4, t4_complexes)
     failed = meas[meas.outcome == "no_respiring_cybrid"][["host", "donor"]].drop_duplicates()
     respiring = measured[["host", "donor"]].drop_duplicates()
     for r in failed.itertuples():
         for s in t4:
-            mine = total[(total.host == r.host) & (total.donor == r.donor)][s].iloc[0]
-            others = total.merge(respiring[respiring.host == r.host], on=["host", "donor"])[s]
-            known = pd.notna(mine) and others.notna().all()
+            mine = total.set_index(["host", "donor"])[s].get((r.host, r.donor), np.nan)
+            others = respiring[respiring.host == r.host].merge(total, on=["host", "donor"], how="left")[s]
+            known = pd.notna(mine) and len(others) > 0 and others.notna().all()
             out.append({"test": "T4", "score": s, "n": len(others), "value": float(mine > others.max()) if known else np.nan,
                         "reads": f"{r.host} / {r.donor}: total {s} {mine:g} against at most {others.max():g} "
                                  f"for a donor that respired" + ("" if known else " (not assessed: a total is missing)")})
@@ -410,6 +427,7 @@ def readout_energy(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame
     (`mitoport cybrid`) and energy_scores.tsv (`mitoport cybrid-energy-collect`). Only rows whose status is `computed`
     or `no substitution to model` carry a score; a point without one is left out of the readouts it would enter.
     Writes h18_calibration.tsv and h18_summary.tsv."""
+    from .cybrid_energy import STRUCTURES as ENERGY_STRUCTURES
     key = ["host", "donor", "complex"]
     for f in ("scores.tsv", "energy_scores.tsv"):
         if not (out / f).is_file():
@@ -418,7 +436,8 @@ def readout_energy(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame
     scores = pd.read_csv(out / "scores.tsv", sep="\t")[key + list(H17_BASELINE)].merge(e[key + list(H18_PRIMARY)], on=key, how="left")
     names = H18_PRIMARY + H17_BASELINE
     cal, summary = summarise(scores, read_measurements(measurements), names, t2b=names, t3=names,
-                             t4=("ddE", "d_contact", "d_all"))
+                             t4=("ddE", "d_contact", "d_all"),
+                             t4_complexes={h: tuple(cs) for h, cs in ENERGY_STRUCTURES.items()})
     cal = cal.merge(e[key + [c for c in ("ddE_sd", "substituted", "interface_substituted", "unmodelled", "status") if c in e]], on=key, how="left")
     cal.to_csv(out / "h18_calibration.tsv", sep="\t", index=False, float_format="%.4f")
     summary.to_csv(out / "h18_summary.tsv", sep="\t", index=False, float_format="%.3f")

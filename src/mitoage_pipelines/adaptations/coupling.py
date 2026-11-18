@@ -134,10 +134,15 @@ def c1(logr: pd.DataFrame, fg: np.ndarray, readout: str) -> dict:
 
 
 def c2(logm: pd.Series, fg: np.ndarray, null_fgs: list[np.ndarray]) -> dict:
+    logm = logm.where(np.isfinite(logm))
     stat = lambda f: logm[f].median() - logm[~f].median()
     obs = stat(fg)
     null = np.array([stat(f) for f in null_fgs if f.any()])
-    base = {"readout": "C2", "foreground_branches": int(fg.sum()), "null_draws": len(null)}
+    null = null[np.isfinite(null)]
+    base = {"readout": "C2", "foreground_branches": int(fg.sum()), "null_draws": len(null),
+            "invalid_null_draws": len(null_fgs) - len(null)}
+    if not np.isfinite(obs):
+        return {**base, "status": "not assessed: no finite foreground/background contrast"}
     if len(null) < 100 or not fg.any():
         return {**base, "status": "not assessed: too few control draws or no foreground branch"}
     mid = np.median(null)

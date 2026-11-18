@@ -1,0 +1,15 @@
+class	trait	measure	with_saturated	n_pairs	status	median	ci_low	ci_high	p	positive	sign_p	intercept	se	size_slope
+Aves	long_lived	d_omega	False	41	assessed	0.00914376	-0.0138884	0.0177032	0.662777	24	0.348889			
+Aves	long_lived	d_omega	True	45	assessed	0.0047112	-0.0203006	0.0166706	0.991083	25	0.551484			
+Aves	long_lived	d_dS	False	41	assessed	-0.000520112	-0.0108111	0.00321525	0.496223	19	0.755229			
+Aves	long_lived	d_dS	True	45	assessed	-0.000520112	-0.0108111	0.00321525	0.606891	21	0.765992			
+Aves	long_lived	d_dN	False	41	assessed	0.00360527	-0.0125269	0.0157568	0.572343	22	0.755229			
+Aves	long_lived	d_dN	True	45	assessed	0.00360527	-0.012687	0.0128374	0.687295	24	0.765992			
+Aves	long_lived	d_omega given size		41	assessed				0.684915			0.00347214	0.00849325	-0.0222575
+Aves	long_lived_in_order	d_omega	False	49	assessed	0.00376215	-0.0182197	0.0212279	0.580624	28	0.391603			
+Aves	long_lived_in_order	d_omega	True	54	assessed	0.00227913	-0.0166756	0.0174674	0.79285	30	0.496617			
+Aves	long_lived_in_order	d_dS	False	49	assessed	-0.00100768	-0.00989703	0.00897776	0.767404	24	1			
+Aves	long_lived_in_order	d_dS	True	54	assessed	-0.00147708	-0.0101188	0.00877731	0.669958	26	0.891923			
+Aves	long_lived_in_order	d_dN	False	49	assessed	0.00360527	-0.0128833	0.0171799	0.37389	26	0.77545			
+Aves	long_lived_in_order	d_dN	True	54	assessed	-0.0016732	-0.0133312	0.0128408	0.733779	27	1			
+Aves	long_lived_in_order	d_omega given size		49	assessed				0.352607			0.00739893	0.00788083	-0.000959562

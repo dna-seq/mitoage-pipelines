@@ -9,6 +9,8 @@ command of this repository, every step is one command, and every table a finding
 under `data/output`.
 
 - **The pipeline in pictures**: [docs/PIPELINE.md](docs/PIPELINE.md).
+- **Analysis corrections from the 2026-11-18 review**, affected outputs and reruns:
+  [docs/ANALYSIS_CORRECTIONS.md](docs/ANALYSIS_CORRECTIONS.md).
 - **Adaptations that load mitochondria** (flight, diving, hibernation, migration, the deep sea and others), ranked by
   what the build can test, with each one's independent origins on the tree:
   [docs/MITO_LOAD_ADAPTATIONS.md](docs/MITO_LOAD_ADAPTATIONS.md). H21 to H23 are its shortlist.
