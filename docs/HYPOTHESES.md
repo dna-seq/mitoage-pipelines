@@ -2210,3 +2210,55 @@ columns, resolved in all three species; the pairs and their counts are the same.
 The numbers of 2026-11-17 above and the tables in `results/h26/` are those of the run before the correction. R1
 and R4 (RELAX, aBSREL) take their species from the pair table and do not use these distances, so the running array
 is not affected; the readout and C run from a clone at the corrected commit or later.
+
+## H27. Do the results hold on records of high confidence, and on well-sampled lifespans?
+
+**Question.** The maintainer, 2026-11-18, after the first author of the 2015 database reported mistakes in its
+curation: "we should give all, but give confidence level (like classiciation) and for fast to compute things we have
+to provide extra recomputed with high quality data only"; and, the same day, on maximum lifespan: "for non-popular
+wild species we probably have dicreases MLS as we know only very small number of animals while for domestic and
+popular zoo animals we know wayy more long-livers". The site's build now gives every species a confidence level with
+its reasons (`data_confidence` in the species table of `dna-seq/mitoage`: high, caveat, low, unreliable). Do the
+results of the earlier hypotheses change when the species set is restricted by that level, or by how well the
+lifespan is sampled?
+**Seen before this entry was written, and therefore not blind.** The counts of the levels (high 1,896, caveat 275,
+low 111, unreliable 62 of 2,344) and the two audit reports behind them (`docs/analyses/curation-audit-2026-11-18/`
+in `dna-seq/mitoage`). One look at the bias, unadjusted for phylogeny, on the default dataset: the residual of log10
+lifespan on log10 mass within a class has a median 1.26 times the expectation in birds with a large AnAge sample
+and 0.93 with a small one, 1.24 in captive and 0.95 in wild bird records; in mammals 0.86 (small), 1.03 (medium),
+0.95 (large). No result of H1 to H26 was recomputed on any restricted set before this entry.
+**Fixed before any code was written.**
+- *Species sets.* For each analysis below, the species it used, restricted four ways:
+  `not_unreliable`: the confidence level is not unreliable (the site's default dataset from 2026-11-19);
+  `high`: the level is high;
+  `well_sampled`: `not_unreliable`, and the lifespan is from AnAge with a sample size of medium, large or huge;
+  `captive` and `wild`: `not_unreliable`, and the lifespan record is of that kind (mammals and birds only, each
+  only where at least 50 species remain).
+- *Analyses, the fast ones only.* H1 (amino-acid content against lifespan, phylogenetic regression with mass and
+  with mass and composition, mammals and birds); H11 (composition against the life-history traits, mammals); H7
+  (substitution rate against lifespan on sister pairs, the concatenated genes and the four genes that passed); H8
+  (repeats and motifs, mammals); H20 (temperature, size and metabolic rate against the substitution rate). Each with
+  the command, model, covariates and correction of its own entry, changed in nothing but the species.
+- *Not rerun.* RELAX, aBSREL, Coevol and the co-evolution tables (H3, H5, H6, H9, H12 to H19, H21 to H26): for each,
+  the species it used that are not of the level high are counted and named; a rerun is proposed only where a
+  species of the level unreliable is in a foreground set or is one of fewer than 30 species of a test.
+- *Sample size as a covariate.* For H1 and H11 in mammals and in birds, one more model on `not_unreliable`: the
+  entry's model with AnAge's sample size added as an ordered term (tiny 0, small 1, medium 2, large 3, huge 4), on
+  the species that have one. Reported: the lifespan slope with and without it.
+- *Reading, per result that passed its entry's threshold on the original set.* On each restricted set: **holds**
+  when the estimate has the original sign and passes the entry's threshold there; **holds, less precise** when it
+  has the original sign, fails the threshold, and its 95% interval contains the original estimate (fewer species,
+  the same effect); **moves** when its 95% interval excludes the original estimate, whichever way; **reverses**
+  when the sign differs and the entry's threshold is passed. A result that did not pass on the original set and
+  passes on a restricted one is reported as **new on the restricted set** and is not claimed: these sets were
+  chosen after the results were known.
+- *Predicted.* Most results hold or hold less precisely on `not_unreliable` and `high`, since 62 and 448 of 2,344
+  species leave. The lifespan slopes of birds are the ones expected to move on `well_sampled`, `captive` and `wild`,
+  by the bias above.
+- *Known weaknesses, said in advance.* A level of high says no rule found a reason, not that the record was checked
+  in every respect: 2,265 records were not compared with independent sequences. The level's lifespan reasons and
+  the `well_sampled` set overlap. AnAge's sample size is five coarse classes, and FishBase, SeaLifeBase and the
+  ringing schemes give none, so `well_sampled` drops every species whose lifespan is theirs. Captive and wild
+  records differ by clade as well as by kind.
+**Code and result.** Not written yet. The code reads `data_confidence` from the species table and refuses a
+restricted set when the table has no such column; it never treats a missing level as high.
