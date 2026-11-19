@@ -22,6 +22,8 @@ from scipy import optimize, stats
 from statsmodels.stats.multitest import multipletests
 
 from .pgls import gls, nll, shared_path_covariance
+from . import species_sets
+from .. import paths
 
 AAS = "ACDEFGHIKLMNPQRSTVWY"
 QUALITY_OK = ("high", "acceptable")
@@ -30,9 +32,17 @@ MODELS = {"mass": ["lm"], "mass+composition": ["lm", "A4", "C4", "T4"]}
 
 def default_dataset(species: pd.DataFrame) -> pd.Series:
     """True for the species of the manuscript's default dataset: not retired, lifespan quality high or
-    acceptable, lifespan record not estimated."""
-    return (species.record_status.ne("retired") & species.lifespan_quality.isin(QUALITY_OK)
+    acceptable, lifespan record not estimated. When MITOAGE_SPECIES_SET names a species set (H27), only the
+    species of that set, by their slug, which `species` must then carry."""
+    keep = (species.record_status.ne("retired") & species.lifespan_quality.isin(QUALITY_OK)
             & species.lifespan_record_type.ne("estimated"))
+    name = species_sets.active()
+    if name is None:
+        return keep
+    if "slug" not in species.columns:
+        raise SystemExit(f"{species_sets.ENV}={name}: this analysis selects its species without their slug, "
+                         "so the set cannot be applied to it")
+    return keep & species.slug.isin(species_sets.slugs(paths.BUILD, name))
 
 
 def fit(C: np.ndarray, y: np.ndarray, X: np.ndarray, lam: float | None = None) -> dict:

@@ -2260,5 +2260,12 @@ and 0.93 with a small one, 1.24 in captive and 0.95 in wild bird records; in mam
   the `well_sampled` set overlap. AnAge's sample size is five coarse classes, and FishBase, SeaLifeBase and the
   ringing schemes give none, so `well_sampled` drops every species whose lifespan is theirs. Captive and wild
   records differ by clade as well as by kind.
-**Code and result.** Not written yet. The code reads `data_confidence` from the species table and refuses a
-restricted set when the table has no such column; it never treats a missing level as high.
+**Code** (2026-11-19, before any run). `src/mitoage_pipelines/longevity/species_sets.py` defines the five sets from the
+build's species table. A run is restricted by the environment variable `MITOAGE_SPECIES_SET`: `aa_pgls.default_dataset`,
+which every analysis of lifespan calls for its species, then keeps only the species of the named set, so an analysis
+changes in nothing but its species; unset, every analysis is that of its own entry. Each restricted run writes into a
+data root of its own (`MITOAGE_PIPELINES_DATA`), so no earlier table is overwritten. A species table without
+`data_confidence` is refused, a species with no level is in no set, and an analysis that selects its species without
+their slug is refused. `tests/test_species_sets.py`: 5 tests, each of 13 deliberate breaks of the code caught. The
+sample-size covariate and the readout that sets each result beside its original are not written yet.
+**Result.** None yet: the species table with the level is not in the Hugging Face dataset the analyses read.
