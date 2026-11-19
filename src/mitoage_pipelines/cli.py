@@ -445,6 +445,16 @@ def longevity_dated_tree(data: Build = paths.BUILD,
     dated_tree.main(data, site_tree, paths.DATED_TREE, paths.QUALITY_OK)
 
 
+@longevity_app.command("highest-observed")
+def longevity_highest_observed(
+    dest: Annotated[Path, typer.Option(help="the build folder to write: a copy of --build with the highest observed lifespan")],
+    data: Build = paths.BUILD,
+    table: Annotated[Path, typer.Option(help="the species whose lifespan changes")] = paths.LONGEVITY_OUT / "highest_observed.tsv") -> None:
+    """H27: a copy of the build whose lifespan is the highest observed value across its lifespan sources."""
+    from .longevity import highest_observed
+    highest_observed.main(data, dest, table)
+
+
 @longevity_app.command("aa-pgls")
 def longevity_aa_pgls(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,

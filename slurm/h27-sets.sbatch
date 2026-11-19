@@ -11,8 +11,11 @@
 #   uv run --frozen mitoage download tree --ref <the dna-seq/mitoage commit of that build>
 #   uv run --frozen mitoage download fishbase-temperature
 #   for s in not_unreliable high well_sampled captive wild; do mkdir -p <base>/$s && ln -s ../all/input <base>/$s/input; done
-#   mkdir -p slurm/logs && sbatch --account=<account> --array=0-5%2 --export=ALL,H27_BASE=<base> slurm/h27-sets.sbatch
-# Task 0 is the unrestricted run on this build, the one every set is read against.
+#   mkdir -p <base>/highest_observed/input && for d in mitoage-site build2; do ln -s ../../all/input/$d <base>/highest_observed/input/$d; done
+#   uv run --frozen mitoage longevity highest-observed --dest <base>/highest_observed/input/mitoage --table <base>/highest_observed/changed.tsv
+#   mkdir -p slurm/logs && sbatch --account=<account> --array=0-6%2 --export=ALL,H27_BASE=<base> slurm/h27-sets.sbatch
+# Task 0 is the unrestricted run on this build, the one every set is read against. Task 6 is `not_unreliable` on
+# a copy of the build whose lifespan is the highest observed value across its sources (`longevity highest-observed`).
 #SBATCH --job-name=mitoage-h27-sets
 #SBATCH --partition=compute
 #SBATCH --ntasks=1
@@ -22,17 +25,21 @@
 set -eo pipefail
 cd "$SLURM_SUBMIT_DIR"
 : "${H27_BASE:?set H27_BASE to the folder that holds the data roots of this run}"
-SETS=(all not_unreliable high well_sampled captive wild)
+SETS=(all not_unreliable high well_sampled captive wild highest_observed)
 S=${SETS[$SLURM_ARRAY_TASK_ID]:?no species set for array task $SLURM_ARRAY_TASK_ID}
 export MITOAGE_PIPELINES_DATA="$H27_BASE/$S"
-if [ "$S" = all ]; then unset MITOAGE_SPECIES_SET; else export MITOAGE_SPECIES_SET="$S"; fi
+case "$S" in
+  all) unset MITOAGE_SPECIES_SET ;;
+  highest_observed) export MITOAGE_SPECIES_SET=not_unreliable ;;
+  *) export MITOAGE_SPECIES_SET="$S" ;;
+esac
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK POLARS_MAX_THREADS=$SLURM_CPUS_PER_TASK
 UV=${UV:-uv}
 M="$UV run --frozen mitoage"
 R="$MITOAGE_PIPELINES_DATA"
 # git is not installed on the compute nodes: read the commit from .git directly.
 echo "commit $(cat .git/refs/heads/main 2>/dev/null || cat .git/HEAD)"
-echo "species set: ${MITOAGE_SPECIES_SET:-none (all species of each analysis)}"
+echo "species set: ${MITOAGE_SPECIES_SET:-none (all species of each analysis)}; lifespan: $([ "$S" = highest_observed ] && echo "the highest observed across sources" || echo "the build's")"
 echo "data root $R"
 sha256sum "$R/input/mitoage/species.parquet" "$R/input/mitoage-site/phylogeny.json"
 FAIL=0

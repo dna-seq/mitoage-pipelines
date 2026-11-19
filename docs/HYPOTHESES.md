@@ -2275,6 +2275,16 @@ itself wrong (FishBase's 54 years under *Sparus aurata*). Fixed now:
   the ratio's distribution.
 - *What it decides.* Nothing by itself. If results move, the choice of rule for the build (AnAge first, as now;
   the highest observed; a source per class) goes to the maintainer with these numbers.
+**Code for `highest_observed`, and what it decided** (2026-11-20, before any analysis ran on it).
+`longevity/highest_observed.py` writes a copy of the build with the replaced lifespan, so an analysis run on the copy
+changes in nothing else; `tests/test_highest_observed.py`, 3 tests, each of 14 deliberate breaks caught. Decided where
+the text above leaves room: a qualifying observation is of record type captive, wild or observed and of quality high
+or acceptable, so the 2015 database's own compiled values (an older AnAge, no quality) never replace a value; a tie
+keeps the build's value; AnAge's sample size is dropped where the new value is another source's. Seen when the
+command was tried on the build, before any analysis: 289 of 2,344 species get a higher value (125 ray-finned fishes
+and 27 sharks and rays from FishBase; 126 birds from the ringing schemes; 6 others from SeaLifeBase), the ratio's
+median 1.24 and largest 5.25 (*Lutjanus erythropterus*, 8 against 42 years). The audit read one of the top values as
+an error (*Sparus aurata*, 11 against 54), and it is in this set: the run is a sensitivity, as said.
 **Code** (2026-11-19, before any run). `src/mitoage_pipelines/longevity/species_sets.py` defines the five sets from the
 build's species table. A run is restricted by the environment variable `MITOAGE_SPECIES_SET`: `aa_pgls.default_dataset`,
 which every analysis of lifespan calls for its species, then keeps only the species of the named set, so an analysis
