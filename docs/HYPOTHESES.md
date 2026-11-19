@@ -2260,6 +2260,21 @@ and 0.93 with a small one, 1.24 in captive and 0.95 in wild bird records; in mam
   the `well_sampled` set overlap. AnAge's sample size is five coarse classes, and FishBase, SeaLifeBase and the
   ringing schemes give none, so `well_sampled` drops every species whose lifespan is theirs. Captive and wild
   records differ by clade as well as by kind.
+**Added on 2026-11-19, before any run: which source gives the lifespan.** The maintainer, on the bias above: "maybe
+for 3 we switch to more reliable sources than anage". The build takes AnAge's value whenever AnAge has one. Seen
+before this addition, from the curation audit: another source reports an observed value at least 1.5 times higher
+for 87 species; of 254 birds with both an AnAge value and a ringing record the ringing record is more than 10%
+higher in 68, and of 496 fishes with both FishBase's value is more than 10% higher in 129; one such higher value is
+itself wrong (FishBase's 54 years under *Sparus aurata*). Fixed now:
+- *A second lifespan, `highest_observed`.* Per species, the largest value among the build's lifespan observations
+  (`lifespan_observations`) that are not estimated and not rated low or questionable, from any source; the chosen
+  value when no other qualifies. A maximum lifespan is a record, so a documented higher value is the better
+  estimate unless it is an error; errors are the reason this is a sensitivity run and not a new default.
+- *Run.* The analyses above on `not_unreliable`, once more with `highest_observed` in place of the build's lifespan,
+  and read by the same four words. Reported beside it: how many species change value, by class and by source, and
+  the ratio's distribution.
+- *What it decides.* Nothing by itself. If results move, the choice of rule for the build (AnAge first, as now;
+  the highest observed; a source per class) goes to the maintainer with these numbers.
 **Code** (2026-11-19, before any run). `src/mitoage_pipelines/longevity/species_sets.py` defines the five sets from the
 build's species table. A run is restricted by the environment variable `MITOAGE_SPECIES_SET`: `aa_pgls.default_dataset`,
 which every analysis of lifespan calls for its species, then keeps only the species of the named set, so an analysis
