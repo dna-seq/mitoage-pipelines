@@ -2411,8 +2411,8 @@ reverses.
 | H11 | birds | 11 | 6 | 5 | 0 | 1.05 (0.95 to 1.16) |
 
 The term itself has p < 0.05 in 87 of the 1,972 fits that report it, against 99 expected at that level by chance,
-with both signs (57 negative, 37 positive counting each fit once per class and analysis: mammals 29 and 27, birds
-8 and 23). 53 results pass only with the term (52 in H11's mammals, 1 in H1's birds); they are counted, not claimed.
+with both signs (37 positive and 50 negative: mammals 29 and 27, birds 8 and 23). 53 results pass only with the
+term (52 in H11's mammals, 1 in H1's birds); they are counted, not claimed.
 *Reading.* The lifespan slopes of H1 and H11 do not carry AnAge's sample size: adding it leaves them where they
 were, and where they change they grow slightly more often than they shrink. What was said before the run, that the
 slopes would shrink more in birds, is not what came out: in birds few results pass at all (none in H1, 11 in H11,
