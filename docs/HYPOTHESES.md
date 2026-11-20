@@ -2353,3 +2353,13 @@ any caveat, or on which source gives the lifespan: nothing that passed moves on 
 `highest_observed`. The one set on which they do not stand is mammals with wild lifespan records, 53 species
 against 545 captive. That is a different sample of mammals as much as a different kind of record, and the two
 cannot be told apart here; the entry said so in advance.
+**Extension: the two analyses the set did not reach** (2026-11-20, fixed before the code; no table of H2 or H20 on
+a restricted set exists yet). Seen before: everything in the result above.
+- *H2's column screen.* `longevity dated-tree` writes the list of species with a usable lifespan record, which
+  `longevity pgls` (and the Coevol inputs) take their species from. With a set active, that list holds only the
+  species of the set as well. Read on every set, mammals and birds, with H27's reading rule.
+- *H20's sister-pair fits.* With a set active, `longevity thermal` forms its pairs from the species of the set only.
+  H20 does not use lifespan, so only the two sets defined by the level are read for it, `not_unreliable` and
+  `high`; on the sets defined by the lifespan record it is "not applicable", not "not assessed".
+- *Not rerun.* The other analyses' tables on each set must come out the same bytes as in the result above, since
+  their species do not change; the job says so or fails.
