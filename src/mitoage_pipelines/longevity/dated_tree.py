@@ -7,6 +7,8 @@ from pathlib import Path
 
 import polars as pl
 
+from . import species_sets
+
 QUALITY_OK = ("high", "acceptable")
 
 
@@ -28,5 +30,10 @@ def main(data: Path, site_tree: Path, tree_out: Path, quality_out: Path) -> None
     tree_out.parent.mkdir(parents=True, exist_ok=True)
     tree_out.write_text(newick + ";\n")
     ok = sp.filter(pl.col("lifespan_quality").is_in(QUALITY_OK))
+    name = species_sets.active()
+    if name is not None:        # H27: the analyses that take their species from this list keep the set's only
+        n0 = len(ok)
+        ok = ok.filter(pl.col("slug").is_in(sorted(species_sets.slugs(data, name))))
+        print(f"species set {name}: {len(ok)} of the {n0} species with a usable lifespan record")
     quality_out.write_text("\n".join(ok["slug"]) + "\n")
     print(f"dated tree {doc['version']}: {newick.count(',') + 1} species; lifespan quality high or acceptable: {len(ok)} of {len(sp)}")

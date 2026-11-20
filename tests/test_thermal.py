@@ -285,3 +285,17 @@ class TestFits:
         assert row.n == len(d)
         assert row.ols_r2 == pytest.approx(ols.rsquared)
         assert row.ols_slope == pytest.approx(ols.params[th.GC])
+
+
+def test_pairs_come_from_the_species_set_only(species, traits, dist, fitted, monkeypatch):
+    """H27's extension: with a species set active, no pair holds a species outside it; unset, nothing changes."""
+    from mitoage_pipelines.longevity import species_sets as ss
+    if "data_confidence" not in species.columns:
+        pytest.skip("this build gives no confidence level")
+    inside = set(species.slug[ss.members(species, "high")])
+    all_pairs = fitted[1]
+    assert not set(all_pairs.sp_a) | set(all_pairs.sp_b) <= inside          # the unrestricted pairs do leave the set
+    monkeypatch.setenv(ss.ENV, "high")
+    pairs = th.fit_pairs(species, traits[0], dist, paths.DATED_TREE)[1]
+    assert len(pairs) and set(pairs.sp_a) | set(pairs.sp_b) <= inside
+    assert len(pairs) < len(all_pairs)

@@ -61,6 +61,7 @@ from statsmodels.stats.multitest import multipletests
 
 from ..genes import MT_GENES
 from ..seqio import read_fasta
+from . import species_sets
 from .aa_pgls import class_covariance, default_dataset
 from .generation_time import features
 from .pgls import gls, nll
@@ -259,6 +260,9 @@ def fit_pairs(species: pd.DataFrame, tr: pd.DataFrame, dist: Distances, tree_fil
     the 13 alignments; GLS of each response on the terms. -> (fits, the pairs of every model)."""
     tree = Phylo.read(tree_file, "newick")
     tips = {t.name for t in tree.get_terminals()}
+    name = species_sets.active()
+    if name is not None:        # H27: pairs are formed from the species of the set only
+        tips &= set(species.slug[species_sets.members(species, name)])
     rows, tables = [], []
     for cls, models in PAIR_MODELS.items():
         cl = tr[tr["class"].eq(cls) & tr.slug.isin(tips & dist.aligned)]

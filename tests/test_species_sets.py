@@ -84,3 +84,29 @@ def test_default_dataset_follows_the_set_and_is_unchanged_without_one(tmp_path, 
     # a frame that carries only the columns an analysis reads is restricted from the build's table, not from itself
     narrow = sp[["slug", "record_status", "lifespan_quality", "lifespan_record_type"]]
     assert narrow.slug[aa_pgls.default_dataset(narrow)].tolist() == ["a", "b"]
+
+
+def test_the_dated_trees_quality_list_follows_the_set(tmp_path, monkeypatch):
+    """H2's column screen and the Coevol inputs take their species from this list (H27's extension)."""
+    import json
+
+    from mitoage_pipelines.longevity import dated_tree
+
+    sp = table().assign(id=range(1, 9))
+    sp.to_parquet(tmp_path / "species.parquet")
+    leaves = [{"species": i, "length": 1.0} for i in sp.id]
+    (tmp_path / "phylogeny.json").write_text(json.dumps({"version": "test", "root": {"length": 0, "children": leaves}}))
+
+    def listed(name):
+        if name is None:
+            monkeypatch.delenv(ss.ENV, raising=False)
+        else:
+            monkeypatch.setenv(ss.ENV, name)
+        dated_tree.main(tmp_path, tmp_path / "phylogeny.json", tmp_path / "t.nwk", tmp_path / "q.txt")
+        return (tmp_path / "q.txt").read_text().split()
+
+    usable = sp.slug[sp.lifespan_quality.isin(["high", "acceptable"])].tolist()
+    assert listed(None) == usable == ["a", "b", "c", "d", "f", "g", "h"]        # e's lifespan quality is low
+    for name in ss.SETS:
+        assert listed(name) == [s for s in usable if s in in_set(name)]
+    assert listed("high") == ["a", "b"] and "f" not in listed("not_unreliable")
