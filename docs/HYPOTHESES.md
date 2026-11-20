@@ -2299,20 +2299,20 @@ b44a66c, 4 tests, each of 12 deliberate breaks caught; tables in `results/h27/`)
 written and not run.
 - *Not assessed, said first.* The set did not reach two of the analyses, whose tables are the same bytes on every
   set: H2's column screen (`longevity pgls`, which takes its species from the dated tree's quality list) and H20's
-  sister-pair fits (`longevity thermal`, which calls the default dataset for one comparison only). Their rows in
-  `readout.tsv` say "holds" and mean nothing; H2 and H20 are **not assessed** on any set. `captive` and `wild` were
+  sister-pair fits (`longevity thermal`, which calls the default dataset for one comparison only). Their 57 passing rows in
+  `readout.tsv` say "holds" and mean nothing, and are left out of every count below; H2 and H20 are **not assessed** on any set. `captive` and `wild` were
   fixed for mammals and birds with at least 50 species: captive fishes (8 species) and wild reptiles (4) are in the
   tables and are not read; the three "reverses" of the readout are all captive fishes.
 - *Species.* Mammals 604 on all, 599 not unreliable, 527 high, 400 well sampled, 545 captive, 53 wild. Birds 382,
   369, 332, 291, 104, 241. Ray-finned fishes 235, 232, 184, 226. Reptiles 97, 95, 85, 65.
-- *`not_unreliable`.* Of the 1,425 results that passed on all species (H1, H7 and H11 together), 1,366 hold and 59
+- *`not_unreliable`.* Of the 1,368 results of H1, H7 and H11 that passed on all species, 1,309 hold and 59
   hold less precisely; none moves. All four gene results of H7 hold.
-- *`high`.* 1,088 hold, 337 hold less precisely, none moves. H1 in mammals: 15 of 20 passing rows hold, 5 less
+- *`high`.* 1,031 hold, 337 hold less precisely, none moves. H1 in mammals: 15 of 20 passing rows hold, 5 less
   precisely; the isoleucine slope is -0.242 against -0.257 on all. H7: mammalian ND5 and ND2 hold; ND6 across all
   species (-0.087 against -0.196, q 0.54) and avian CYTB (q 0.64) hold less precisely.
-- *`highest_observed`.* 1,358 hold, 67 hold less precisely, none moves: taking the highest observed lifespan for
+- *`highest_observed`.* 1,302 hold, 66 hold less precisely, none moves: taking the highest observed lifespan for
   289 species changes no reading that passed.
-- *`well_sampled`.* 743 hold, 681 hold less precisely, 1 moves (alanine in the mammals' mixed model with
+- *`well_sampled`.* 686 hold, 681 hold less precisely, 1 moves (alanine in the mammals' mixed model with
   composition, -0.041 against -0.174). On a third fewer species the estimates stay within their intervals of the
   originals and half lose their threshold.
 - *`captive` (mammals and birds).* H1 in mammals: 19 of 20 hold. H7's mammalian ND2 moves (-0.004 against -0.017).
