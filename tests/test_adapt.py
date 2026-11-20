@@ -197,6 +197,17 @@ def test_read_relax_real_output(tmp_path):
         selection.read_relax(tmp_path / "b.json")
 
 
+def test_summarise_reads_the_draw_folders_beside_the_draws_table(tmp_path):
+    """The folder `selection-prep` writes holds draws.tsv beside draw00..draw20: only the folders are draws."""
+    (tmp_path / "draws.tsv").write_text("trait\tdraw\n")
+    for k in (0, 3):
+        (tmp_path / f"draw{k:02d}").mkdir()
+    (tmp_path / "draw00" / "relax.json").write_bytes((DATA / "relax_ATP8_h3.json").read_bytes())
+    res = selection.summarise(tmp_path)
+    assert res.draw.tolist() == [0, 3]
+    assert res.status.tolist()[1] == "missing" and res.K[0] == selection.read_relax(DATA / "relax_ATP8_h3.json")["K"]
+
+
 @pytest.mark.skipif(not (DATA / "absrel_nd3_fixture.json").is_file(), reason="the aBSREL fixture is not in tests/data")
 def test_read_absrel_real_output(tmp_path):
     t = selection.read_absrel(DATA / "absrel_nd3_fixture.json")

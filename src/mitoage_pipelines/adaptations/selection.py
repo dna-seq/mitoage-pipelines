@@ -163,7 +163,7 @@ def read_absrel(path: Path) -> pd.DataFrame:
 def summarise(out: Path) -> pd.DataFrame:
     """relax.tsv: K, LRT, p of every draw found; the trait's LRT against the controls'."""
     rows = []
-    for d in sorted(out.glob("draw*")):
+    for d in sorted(p for p in out.glob("draw[0-9]*") if p.is_dir()):
         f = d / "relax.json"
         rows.append({"draw": int(d.name[4:]), **(read_relax(f) if f.is_file() else {"status": "missing"})})
     res = pd.DataFrame(rows)
