@@ -3,8 +3,8 @@
 # checked against the committed corrected tables, then the finished RELAX and aBSREL runs of
 # slurm/adapt-longevity-selection.sbatch taken from the clone they ran in, then `adapt longevity-readout`.
 #   sbatch --account=... --export=ALL,SEL=<that clone>/data/output/adapt-longevity slurm/adapt-longevity-readout.sbatch
-# R1 and R4 take their species from the pair table and not from the corrected distances; the job refuses when the
-# pair table here differs from the one the selection runs were prepared from. C is not run: it waits for H23's set.
+# R1 and R4 do not use the corrected distances: the job prepares their inputs again and refuses when any differs from
+# what the selection runs read. C is not run: it waits for H23's set.
 #SBATCH --job-name=mitoage-adapt-longevity-readout
 #SBATCH --partition=compute
 #SBATCH --ntasks=1
@@ -24,13 +24,19 @@ O=data/output/adapt-longevity
 $M adapt longevity-traits --out $O
 $M adapt longevity-pairs --out $O
 for c in Mammalia Aves; do
-  cmp $O/$c/pairs.tsv "$SEL/$c/pairs.tsv" || { echo "pairs of $c differ from the selection runs' clone"; exit 1; }
   for f in pairs.tsv pair_tests.tsv; do
     cmp $O/$c/$f results/review-20261118/adapt-longevity/$c/$f || { echo "$c/$f differs from the committed corrected table"; exit 1; }
   done
-  rm -rf $O/$c/selection
-  cp -r "$SEL/$c/selection" $O/$c/selection
+  $M adapt longevity-selection-prep --class $c --out $O
+  S=$O/$c/selection; T="$SEL/$c/selection"
+  # every input HyPhy read there is the same bytes as the one prepared here; only its outputs may be extra
+  extra=$(diff -rq $S "$T" | grep -vE "^Only in $T[^ ]*: (relax\.json|absrel\.(json|nwk|tsv))$" || true)
+  [ -z "$extra" ] || { echo "selection inputs of $c differ from the runs' clone:"; echo "$extra"; exit 1; }
+  for d in "$T"/*/draw*/; do
+    r=${d#"$T"/}
+    for f in relax.json absrel.json absrel.nwk absrel.tsv; do [ -f "$d$f" ] && cp "$d$f" $S/$r$f; done
+  done
 done
-echo "pairs: the same bytes as the selection runs' and as the committed corrected tables"
+echo "pairs: the committed corrected tables' bytes; selection inputs: the same bytes as the ones the runs read"
 $M adapt longevity-readout --out $O
 sha256sum $O/readout.tsv $O/*/pair_tests.tsv
