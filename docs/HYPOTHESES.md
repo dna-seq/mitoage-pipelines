@@ -2293,4 +2293,38 @@ data root of its own (`MITOAGE_PIPELINES_DATA`), so no earlier table is overwrit
 `data_confidence` is refused, a species with no level is in no set, and an analysis that selects its species without
 their slug is refused. `tests/test_species_sets.py`: 5 tests, each of 13 deliberate breaks of the code caught. The
 sample-size covariate and the readout that sets each result beside its original are not written yet.
-**Result.** None yet: the species table with the level is not in the Hugging Face dataset the analyses read.
+**Result** (2026-11-20; Slurm jobs 6538985, tasks 0 to 5, from 88b06f7, and 6540805 from 2650b4b, on the build at
+Hugging Face revision 446dad6; every step of every task ended without an error; read by `longevity set-readout` at
+b44a66c, 4 tests, each of 12 deliberate breaks caught; tables in `results/h27/`). The sample-size covariate is not
+written and not run.
+- *Not assessed, said first.* The set did not reach two of the analyses, whose tables are the same bytes on every
+  set: H2's column screen (`longevity pgls`, which takes its species from the dated tree's quality list) and H20's
+  sister-pair fits (`longevity thermal`, which calls the default dataset for one comparison only). Their rows in
+  `readout.tsv` say "holds" and mean nothing; H2 and H20 are **not assessed** on any set. `captive` and `wild` were
+  fixed for mammals and birds with at least 50 species: captive fishes (8 species) and wild reptiles (4) are in the
+  tables and are not read; the three "reverses" of the readout are all captive fishes.
+- *Species.* Mammals 604 on all, 599 not unreliable, 527 high, 400 well sampled, 545 captive, 53 wild. Birds 382,
+  369, 332, 291, 104, 241. Ray-finned fishes 235, 232, 184, 226. Reptiles 97, 95, 85, 65.
+- *`not_unreliable`.* Of the 1,425 results that passed on all species (H1, H7 and H11 together), 1,366 hold and 59
+  hold less precisely; none moves. All four gene results of H7 hold.
+- *`high`.* 1,088 hold, 337 hold less precisely, none moves. H1 in mammals: 15 of 20 passing rows hold, 5 less
+  precisely; the isoleucine slope is -0.242 against -0.257 on all. H7: mammalian ND5 and ND2 hold; ND6 across all
+  species (-0.087 against -0.196, q 0.54) and avian CYTB (q 0.64) hold less precisely.
+- *`highest_observed`.* 1,358 hold, 67 hold less precisely, none moves: taking the highest observed lifespan for
+  289 species changes no reading that passed.
+- *`well_sampled`.* 743 hold, 681 hold less precisely, 1 moves (alanine in the mammals' mixed model with
+  composition, -0.041 against -0.174). On a third fewer species the estimates stay within their intervals of the
+  originals and half lose their threshold.
+- *`captive` (mammals and birds).* H1 in mammals: 19 of 20 hold. H7's mammalian ND2 moves (-0.004 against -0.017).
+- *`wild` (mammals and birds).* In mammals, 53 species: none of H1's 20 passing rows holds, 8 move and 4 are
+  unclear; the phylogenetic slopes of isoleucine (+0.160 against -0.257) and threonine (-0.073 against +0.183) have
+  the other sign without passing. H11: of 1,327 passing rows about 90 hold, 1,099 hold less precisely, 112 move.
+  The entry predicted that the birds' lifespan slopes would move on these sets; in birds nothing passed on all
+  species, so that prediction could not be tested, and it is the mammals' results that move on wild records.
+- *New on a restricted set, not claimed:* 2 amino acids in reptiles on `high`; 7 to 99 rows of H11 per set; 1 to 5
+  rows of H7.
+**Reading.** The results of H1, H7 and H11 do not depend on the records the audit found wrong, on the records with
+any caveat, or on which source gives the lifespan: nothing that passed moves on `not_unreliable`, `high` or
+`highest_observed`. The one set on which they do not stand is mammals with wild lifespan records, 53 species
+against 545 captive. That is a different sample of mammals as much as a different kind of record, and the two
+cannot be told apart here; the entry said so in advance.
