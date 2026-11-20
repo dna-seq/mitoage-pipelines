@@ -2363,3 +2363,22 @@ a restricted set exists yet). Seen before: everything in the result above.
   `high`; on the sets defined by the lifespan record it is "not applicable", not "not assessed".
 - *Not rerun.* The other analyses' tables on each set must come out the same bytes as in the result above, since
   their species do not change; the job says so or fails.
+**Extension's result** (2026-11-20; Slurm array 6555962 from 1e65117, seven tasks into run folders of their own,
+none with a failed step; check job 6559666: the pair-fit test passes on the build and fails on a copy with the
+restriction removed; tables in `results/h27-extension/`).
+- *Nothing else moved.* The unrestricted run is the same bytes as the earlier one in every table; on every set only
+  `pgls.<class>.tsv` and the three pair tables of `longevity thermal` differ, as said in advance.
+- *H2's column screen.* Two columns passed in mammals on all species (COX1 499 isoleucine, +0.146, q = 0.049; ND5
+  316 glutamine, -0.213, q = 0.005). `not_unreliable`: ND5 holds (-0.219, q = 0.003), COX1 holds less precisely
+  (+0.146, q = 0.050). `high`: both hold less precisely (+0.123, q = 0.21; -0.156, q = 0.45). `highest_observed`:
+  ND5 holds, COX1 less precisely (q = 0.057). `well_sampled`: COX1 less precisely, ND5 not assessed; `captive`: both
+  hold; `wild`: not assessed. None moves. In birds no column passes on all species or on any set. Four columns pass
+  on a restricted set only (one on `well_sampled`, three on `captive`); found on subsets after the fact, they are
+  listed and not read.
+- *H20's pair fits.* Of the 17 rows that passed on all species: `not_unreliable` 12 hold and 5 hold less
+  precisely; `high` 12 hold, 4 hold less precisely, 1 is not assessed; none moves. The other sets are defined by
+  the lifespan record, which H20 does not use: not applicable.
+- *Counts with the two analyses in.* Of 1,425 passing results: `not_unreliable` 1,360 hold, 65 less precisely, none
+  moves; `high` 1,081, 343, none moves, 1 not assessed; `highest_observed` 1,353, 72, none moves.
+So the reading above stands for H2 and H20 as well: no result changes direction without the unreliable records or
+on high-confidence records; H2's two columns, already at the threshold, lose it on the 527 high-confidence mammals.
