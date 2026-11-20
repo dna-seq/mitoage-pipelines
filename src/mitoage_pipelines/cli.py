@@ -467,6 +467,18 @@ def longevity_set_readout(
     print(passed.groupby(["set", "reading"]).size().unstack(fill_value=0).to_string())
 
 
+@longevity_app.command("sample-size-covariate")
+def longevity_sample_size_covariate(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: Out = paths.LONGEVITY_OUT,
+    classes: Annotated[Optional[list[str]], typer.Option("--class", help="taxonomic class; repeat for several (default: Mammalia and Aves)")] = None,
+) -> None:
+    """H27: the lifespan slopes of H1 and H11 without and with AnAge's sample size in the model (needs MITOAGE_SPECIES_SET=not_unreliable)."""
+    from .longevity import sample_size
+    sample_size.main(data, composition, fourfold, tree, out, tuple(classes or ("Mammalia", "Aves")))
+
+
 @longevity_app.command("aa-pgls")
 def longevity_aa_pgls(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,

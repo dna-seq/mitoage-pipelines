@@ -2382,3 +2382,16 @@ restriction removed; tables in `results/h27-extension/`).
   moves; `high` 1,081, 343, none moves, 1 not assessed; `highest_observed` 1,353, 72, none moves.
 So the reading above stands for H2 and H20 as well: no result changes direction without the unreliable records or
 on high-confidence records; H2's two columns, already at the threshold, lose it on the 527 high-confidence mammals.
+
+**Sample size as a covariate: what the entry left open, fixed on 2026-11-21 before the run.** `mitoage longevity
+sample-size-covariate` (`longevity/sample_size.py`). Each model is fitted twice on the same species, those of
+`not_unreliable` whose lifespan is AnAge's with a sample size: without the term and with it, so the two slopes differ
+by the term alone. H1: both models (mass; mass and fourfold composition), by phylogenetic regression and by the mixed
+model. H11: every model of the entry that holds a lifespan term (lifespan; lifespan and mass; lifespan, a competitor
+and mass; all five), on Pagel's lambda and with lambda fixed at 1; the two slow-fast axes are not refitted, since
+lifespan is inside the axis and not a term beside it. q is taken within the entries' own groups, separately without
+and with the term. A result that passes without the term is read by the rule above, the fit without the term as the
+original: holds, holds less precisely, moves, reverses. Also reported: the median of slope with over slope without
+among the passing results, and how often the term itself has p < 0.05. A result that passes only with the term is
+counted and not claimed. Not predicted in the entry; said here before the run: the slopes are expected to shrink
+little in mammals, and more in birds, where the excess of lifespan over mass with sample size was seen.
