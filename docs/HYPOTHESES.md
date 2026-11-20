@@ -2211,6 +2211,31 @@ The numbers of 2026-11-17 above and the tables in `results/h26/` are those of th
 and R4 (RELAX, aBSREL) take their species from the pair table and do not use these distances, so the running array
 is not affected; the readout and C run from a clone at the corrected commit or later.
 
+**Result, R1 and R4, and the readout** (2026-11-20; RELAX and aBSREL: Slurm array 6500930 from f9a914a, 46 of 46
+tasks; readout: job 6553573 from d20393f, which made the trait and pairs again, found them the bytes of the corrected
+tables, prepared the selection inputs again and found every one the bytes the runs read; tables in
+`results/h26-readout/`). A first readout job (6553170) stopped in H21's `selection.summarise`, which took `draws.tsv`
+for a draw folder; fixed in d20393f with a test that fails on the code before it. No rule changed.
+- *Mammals, R1:* K = 0.74, likelihood ratio 563 (p below machine precision), above all 20 control draws (their
+  largest 74.7; their K from 0.89 to 1.10). **Relaxed: opposite to the prediction.** 39 trait clades, 202 tips, 262
+  test branches.
+- *Birds, R1:* K = 0.94, likelihood ratio 18.7 (p = 1.5e-5, Holm 3.1e-5), above 19 of 20 control draws (one control
+  draw reaches 19.9 with K = 0.94). **Relaxed: opposite to the prediction**, by the rule as fixed, at its edge: one
+  more control above it and the reading is "not separated from the control clades".
+- *R2 after Holm:* birds p = 0.66, **not detected**; mammals **not assessed** (6 pairs).
+- *R4, aBSREL (exploratory):* no stem of a long-lived clade with episodic positive selection in either class (0 of
+  39 in mammals, 0 of 72 in birds, before and after correction); in the first control draw 1 of 39 and 2 of 72.
+- *C:* **not assessed**: H23's mammal set does not exist yet.
+**Reading.** Where mammals are long-lived for their mass, selection on the 12 protein genes is weaker, not stronger,
+than on the rest of the tree, and far more so than on matched control clades; birds show the same direction, a small
+effect barely apart from the controls. No sign of positive selection at the origins. This is the direction H3's Coevol
+chains lean to (dN/dS rising with lifespan, mass given) and the opposite of the published prediction kept here.
+Two things limit it, both said in advance: of the 151 long-lived mammals 87 are primates and 25 bats, so R1 in mammals
+is largely primates against other mammals, a few deep origins and not 39 independent ones, and the definition within
+orders, which answers that, exists for R2 only (where it shows nothing); and RELAX's K < 1 does not separate relaxed
+purifying selection (as a smaller population gives) from weaker selection of any other cause. R1 on
+`long_lived_in_order` was not fixed in this entry and would be a new hypothesis.
+
 ## H27. Do the results hold on records of high confidence, and on well-sampled lifespans?
 
 **Question.** The maintainer, 2026-11-18, after the first author of the 2015 database reported mistakes in its
