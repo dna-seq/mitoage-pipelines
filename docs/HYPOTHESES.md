@@ -2395,3 +2395,28 @@ original: holds, holds less precisely, moves, reverses. Also reported: the media
 among the passing results, and how often the term itself has p < 0.05. A result that passes only with the term is
 counted and not claimed. Not predicted in the entry; said here before the run: the slopes are expected to shrink
 little in mammals, and more in birds, where the excess of lifespan over mass with sample size was seen.
+
+**Sample size as a covariate: result** (2026-11-21; Slurm job 6564454 from 7dac172, on the data root of
+`not_unreliable` of the extension's run; tables in `results/h27-sample-size/`). Species with an AnAge sample size:
+mammals 599 of 599 in H1's test (tiny 43, small 156, medium 269, large 130, huge 1), birds 361 of 369 (4, 66, 218,
+73, 0); H11's models 437 to 554 mammals and 103 to 265 birds. Of 2,052 fits, 206 pass their threshold without the
+term: with it 187 hold and 19 hold less precisely (each with q between 0.050 and 0.091); none moves and none
+reverses.
+
+| Analysis | Class | Pass without | Hold | Less precise | Moves | Slope with / without, median (range) |
+|---|---|---|---|---|---|---|
+| H1 | mammals | 19 | 16 | 3 | 0 | 1.00 (0.84 to 1.19) |
+| H1 | birds | 0 | | | | |
+| H11 | mammals | 176 | 165 | 11 | 0 | 1.06 (0.88 to 1.43) |
+| H11 | birds | 11 | 6 | 5 | 0 | 1.05 (0.95 to 1.16) |
+
+The term itself has p < 0.05 in 87 of the 1,972 fits that report it, against 99 expected at that level by chance,
+with both signs (57 negative, 37 positive counting each fit once per class and analysis: mammals 29 and 27, birds
+8 and 23). 53 results pass only with the term (52 in H11's mammals, 1 in H1's birds); they are counted, not claimed.
+*Reading.* The lifespan slopes of H1 and H11 do not carry AnAge's sample size: adding it leaves them where they
+were, and where they change they grow slightly more often than they shrink. What was said before the run, that the
+slopes would shrink more in birds, is not what came out: in birds few results pass at all (none in H1, 11 in H11,
+all with lambda fixed at 1), and those keep their size. *Limits.* The sample size is five coarse classes, entered as
+equally spaced; almost no species is "huge" and few birds are "tiny", so the term is estimated from the middle
+classes. It says nothing of lifespans from other sources, which have no sample size, and nothing of fishes or
+reptiles, which the entry did not include.
