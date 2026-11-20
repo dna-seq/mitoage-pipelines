@@ -455,6 +455,18 @@ def longevity_highest_observed(
     highest_observed.main(data, dest, table)
 
 
+@longevity_app.command("set-readout")
+def longevity_set_readout(
+    base: Annotated[Path, typer.Option(help="the folder that holds the data roots of an H27 run: all/ and one per set")],
+    out: Out,
+    sets: Annotated[str, typer.Option(help="the sets to read, comma separated")] = "not_unreliable,high,well_sampled,captive,wild,highest_observed") -> None:
+    """H27: every result on each species set beside the same result on all species, with its reading."""
+    from .longevity import set_readout
+    d = set_readout.main(base, out, [s for s in sets.split(",") if s])
+    passed = d[d.q_all < set_readout.ALPHA]
+    print(passed.groupby(["set", "reading"]).size().unstack(fill_value=0).to_string())
+
+
 @longevity_app.command("aa-pgls")
 def longevity_aa_pgls(
     data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
