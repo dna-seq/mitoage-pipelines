@@ -1,0 +1,31 @@
+host	donor	complex	status_x	pct	n_sources	sources	d_contact	d_all	f_all	ddE	ddE_per_change	ddE_sd	substituted	interface_substituted	unmodelled	status_y
+homo-sapiens	pan-troglodytes	I	reduced	59.0000	1	10.1074/jbc.273.23.14210	42	108	0.0511	-190.1380	-4.7530	36.2450	103	40	0	computed
+homo-sapiens	pan-troglodytes	III	not_reduced		1	10.1074/jbc.273.23.14210	6	25	0.0658	84.3780	7.6710	2.8260	48	11	2	computed
+homo-sapiens	pan-troglodytes	IV	not_reduced		1	10.1074/jbc.273.23.14210	6	18	0.0180	-21.5520	-3.5920	11.8950	18	6	0	computed
+homo-sapiens	pan-troglodytes	V	not_reduced		1	10.1074/jbc.273.23.14210	5	17	0.0578	-11.5090	-2.3020	1.2600	16	5	1	computed
+homo-sapiens	pan-paniscus	I	reduced	57.0000	1	10.1074/jbc.273.23.14210	49	109	0.0516	-190.0060	-4.0430	34.6120	103	47	0	computed
+homo-sapiens	pan-paniscus	III	not_reduced		1	10.1074/jbc.273.23.14210	9	25	0.0658	3.8450	0.2260	15.1820	50	17	0	computed
+homo-sapiens	pan-paniscus	IV	not_reduced		1	10.1074/jbc.273.23.14210	8	17	0.0170	-7.1410	-0.8930	1.3680	17	8	0	computed
+homo-sapiens	pan-paniscus	V	not_reduced		1	10.1074/jbc.273.23.14210	6	15	0.0510	88.4270	14.7380	1.2400	15	6	0	computed
+homo-sapiens	gorilla-gorilla	I	reduced	55.0000	1	10.1074/jbc.273.23.14210	53	134	0.0634	12.5250	0.2410	59.7030	130	52	0	computed
+homo-sapiens	gorilla-gorilla	III	not_reduced		1	10.1074/jbc.273.23.14210	7	28	0.0737	2.6920	0.1790	11.2220	54	15	2	computed
+homo-sapiens	gorilla-gorilla	IV	not_reduced		1	10.1074/jbc.273.23.14210	8	24	0.0240	51.0170	7.2880	2.7950	23	7	1	computed
+homo-sapiens	gorilla-gorilla	V	not_reduced		1	10.1074/jbc.273.23.14210	12	23	0.0782	33.9200	2.8270	4.1220	21	12	2	computed
+mus-musculus	mus-spretus	I	not_reduced	78.0000	1	10.1074/jbc.M004070200	28	71	0.0336	-0.1640	-0.0070	54.7470	64	25	0	computed
+mus-musculus	mus-spretus	III	not_reduced	114.0000	1	10.1074/jbc.M004070200	0	4	0.0105	-27.4800		5.8760	8	0	0	computed
+mus-musculus	mus-spretus	IV	not_reduced	85.0000	1	10.1074/jbc.M004070200	3	4	0.0040	-19.5780	-6.5260	42.9260	4	3	0	computed
+mus-musculus	rattus-norvegicus	I	reduced	46.0000	2	10.1074/jbc.M004053200;10.1074/jbc.M004070200	128	346	0.1637	185.6460	1.3750	46.5050	345	135	5	computed
+mus-musculus	rattus-norvegicus	III	disagree	37.0000	2	10.1074/jbc.M004053200;10.1074/jbc.M004070200	5	23	0.0605	60.9970	4.3570	6.8420	44	14	4	computed
+mus-musculus	rattus-norvegicus	IV	reduced	64.7500	2	10.1074/jbc.M004053200;10.1074/jbc.M004070200	9	20	0.0200	806.4850	80.6480	1320.4390	20	10	0	computed
+mus-musculus	mus-caroli	I	not_reduced		1	10.1093/molbev/msg132	74	194	0.0918	95.1170	1.2190	50.1160	187	78	4	computed
+mus-musculus	mus-caroli	III	not_reduced		1	10.1093/molbev/msg132	4	11	0.0289	54.3200	13.5800	4.4630	22	4	0	computed
+mus-musculus	mus-caroli	IV	not_reduced		1	10.1093/molbev/msg132	4	8	0.0080	99.9390	24.9850	4.4340	8	4	0	computed
+mus-musculus	mus-terricolor	I	not_reduced		1	10.1093/molbev/msg132	51	140	0.0662	108.0850	2.2060	51.0310	130	49	3	computed
+mus-musculus	mus-terricolor	III	not_reduced		1	10.1093/molbev/msg132	0	7	0.0184	-21.3030		0.3530	14	0	0	computed
+mus-musculus	mus-terricolor	IV	not_reduced		1	10.1093/molbev/msg132	4	8	0.0080	65.9010	16.4750	3.4770	8	4	0	computed
+mus-musculus	mus-pahari	I	not_reduced		1	10.1093/molbev/msg132	100	237	0.1121	123.6400	1.2120	18.7330	225	102	2	computed
+mus-musculus	mus-pahari	III	not_reduced		1	10.1093/molbev/msg132	4	11	0.0289	23.6740	2.9590	5.1110	22	8	0	computed
+mus-musculus	mus-pahari	IV	reduced	59.0000	1	10.1093/molbev/msg132	6	14	0.0140	10.3540	1.7260	5.9240	14	6	0	computed
+mus-musculus	otomys-irroratus	I	reduced	72.0000	1	10.1093/molbev/msg132	137	325	0.1537	168.7310	1.1720	50.1970	315	144	1	computed
+mus-musculus	otomys-irroratus	III	reduced	2.0000	1	10.1093/molbev/msg132	8	25	0.0658	134.5130	7.4730	27.4930	50	18	2	computed
+mus-musculus	otomys-irroratus	IV	reduced	44.0000	1	10.1093/molbev/msg132	11	22	0.0220	61.3880	5.5810	5.1620	22	11	0	computed

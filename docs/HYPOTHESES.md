@@ -1497,7 +1497,33 @@ readout's table was seen at that point (`ddE` below `d_all` in T2); what follows
   the difference seen between builds; the readouts T1 to T4 are entered as they are either way, since they use
   `ddE`'s value and not its sd. Ten tasks of two complexes say nothing certain about complexes I and III, which
   are larger.
-**Result.** Not yet run.
+**Result (2026-11-21; energies job 6500884 from 313f3e3, readout, tests and breaks job 6575325 from d2c3646; tables in
+`results/h18/`).** **The interface energy adds nothing to divergence: one of the rule's three conditions holds for
+each score, and one of three is claimed as nothing.** All 44 tasks were computed; 38 tests pass and 16 of 16 breaks
+are caught.
+
+| readout | `ddE` | `ddE_per_change` | `d_all` (divergence) | `d_contact` |
+| --- | --- | --- | --- | --- |
+| T1, Spearman with activity (13 points; 12 for per change) | -0.371 | -0.546 | -0.355 | -0.195 |
+| T2, area for reduced against not reduced (9 against 20; 18 for per change) | 0.617 | 0.475 | 0.744 | 0.800 |
+| T3, names the most reduced complex, of 6 pairs | 0 | 1 | 4 | 4 |
+
+- *Against the rule.* T2 had to exceed divergence's by 0.10: both scores are below it. T1 had to be more negative:
+  it is for both, by 0.02 for `ddE`. T3 had to reach 5 of 6: 0 and 1, where plain divergence names 4.
+- *T4, the donors that do not respire.* The two orangutans have a higher total `ddE` than any human donor that
+  respired (610 and 152 against at most 100 kJ/mol). The two hamsters do not (423 and 435 against 1,053 for rat,
+  whose complex IV chimera has one start that did not settle: `ddE` 807 with a spread of 1,320).
+- *The energies themselves.* `ddE` is positive, a weaker interface in the chimera, in 33 of 44 tasks, and beyond
+  twice its spread over the starts in 31 (25 positive, 6 negative). It rises with the number of substitutions
+  (Spearman 0.48 over the 44 tasks; 0.89 in complex I, 0.68 in III, 0.15 in IV, 5 tasks in V), so in the large
+  complexes it mostly repeats divergence. 70 positions over all tasks were
+  not modelled (deletions, insertions, unresolved residues).
+- *Not yet in:* the ten tasks run from a second build (above). They can change what is said of single energies,
+  not the three readouts' verdict, which the rule reads from `ddE`'s value.
+- *What this does not say.* That the interfaces of cybrids are not weaker: the weaknesses named in advance stand
+  (no cofactors, no membrane, a fixed backbone, no entropy), and a score that misses for those reasons looks the
+  same as one that misses because there is nothing to find. With H16 and H17 it says that no score tried here, from
+  counts to a force field, ranks the published defects better than the number of differing residues.
 
 ## H19. The coupling in birds and fishes, its fall with distance from the mtDNA-encoded core, and what its mitochondrial side is
 

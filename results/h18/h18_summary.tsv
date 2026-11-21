@@ -1,0 +1,74 @@
+test	score	n	value	reads
+T1	ddE	13	-0.371	Spearman of activity (% of control) against the score; negative is the prediction
+T1	ddE_per_change	12	-0.546	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_contact	13	-0.195	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_all	13	-0.355	Spearman of activity (% of control) against the score; negative is the prediction
+T1	f_all	13	-0.594	Spearman of activity (% of control) against the score; negative is the prediction
+T2	ddE	9 reduced, 20 not	0.617	area under the ROC curve for reduced against not reduced
+T2	ddE_per_change	9 reduced, 18 not	0.475	area under the ROC curve for reduced against not reduced
+T2	d_contact	9 reduced, 20 not	0.800	area under the ROC curve for reduced against not reduced
+T2	d_all	9 reduced, 20 not	0.744	area under the ROC curve for reduced against not reduced
+T2	f_all	9 reduced, 20 not	0.606	area under the ROC curve for reduced against not reduced
+T2b	ddE (complex I)	5 reduced, 4 not	0.450	T2 within one complex; added after the first run (exploratory)
+T2b	ddE_per_change (complex I)	5 reduced, 4 not	0.250	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex I)	5 reduced, 4 not	0.600	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	ddE (complex III)	1 reduced, 7 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	ddE_per_change (complex III)	1 reduced, 5 not	0.600	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex III)	1 reduced, 7 not	0.857	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	ddE (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	ddE_per_change (complex IV)	3 reduced, 6 not	0.667	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex IV)	3 reduced, 6 not	0.861	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	ddE (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	ddE_per_change (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2	left out			mus-musculus / rattus-norvegicus complex III: the sources disagree (10.1074/jbc.M004053200;10.1074/jbc.M004070200)
+T3	ddE	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest ddE in complex III
+T3	ddE_per_change	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest ddE_per_change in complex III
+T3	d_contact	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_contact in complex I
+T3	d_all	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest f_all in complex III
+T3	ddE	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest ddE in complex V
+T3	ddE_per_change	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest ddE_per_change in complex V
+T3	d_contact	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_contact in complex I
+T3	d_all	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest f_all in complex III
+T3	ddE	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest ddE in complex IV
+T3	ddE_per_change	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest ddE_per_change in complex IV
+T3	d_contact	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_contact in complex I
+T3	d_all	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest f_all in complex V
+T3	ddE	2	0.000	mus-musculus / rattus-norvegicus: most reduced I, highest ddE in complex IV
+T3	ddE_per_change	2	0.000	mus-musculus / rattus-norvegicus: most reduced I, highest ddE_per_change in complex IV
+T3	d_contact	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_contact in complex I
+T3	d_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_all in complex I
+T3	f_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest f_all in complex I
+T3	ddE	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest ddE in complex I
+T3	ddE_per_change	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest ddE_per_change in complex III
+T3	d_contact	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_contact in complex I
+T3	d_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_all in complex I
+T3	f_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest f_all in complex I
+T3	ddE	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest ddE in complex I
+T3	ddE_per_change	3	1.000	mus-musculus / otomys-irroratus: most reduced III, highest ddE_per_change in complex III
+T3	d_contact	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_contact in complex I
+T3	d_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_all in complex I
+T3	f_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest f_all in complex I
+T4	ddE	3	1.000	homo-sapiens / pongo-pygmaeus: total ddE 610.161 against at most 100.154 for a donor that respired
+T4	d_contact	3	1.000	homo-sapiens / pongo-pygmaeus: total d_contact 161 against at most 80 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-pygmaeus: total d_all 443 against at most 209 for a donor that respired
+T4	ddE	3	1.000	homo-sapiens / pongo-abelii: total ddE 152.077 against at most 100.154 for a donor that respired
+T4	d_contact	3	1.000	homo-sapiens / pongo-abelii: total d_contact 165 against at most 80 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-abelii: total d_all 426 against at most 209 for a donor that respired
+T4	ddE	6	0.000	mus-musculus / cricetulus-griseus: total ddE 423.149 against at most 1053.13 for a donor that respired
+T4	d_contact	6	1.000	mus-musculus / cricetulus-griseus: total d_contact 244 against at most 156 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / cricetulus-griseus: total d_all 679 against at most 389 for a donor that respired
+T4	ddE	6	0.000	mus-musculus / mesocricetus-auratus: total ddE 435.082 against at most 1053.13 for a donor that respired
+T4	d_contact	6	1.000	mus-musculus / mesocricetus-auratus: total d_contact 235 against at most 156 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / mesocricetus-auratus: total d_all 655 against at most 389 for a donor that respired
