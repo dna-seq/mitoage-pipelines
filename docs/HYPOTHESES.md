@@ -2479,3 +2479,42 @@ all with lambda fixed at 1), and those keep their size. *Limits.* The sample siz
 equally spaced; almost no species is "huge" and few birds are "tiny", so the term is estimated from the middle
 classes. It says nothing of lifespans from other sources, which have no sample size, and nothing of fishes or
 reptiles, which the entry did not include.
+
+## H28. The cybrids by a structure-conditioned sequence model: ProteinMPNN on the hosts' complexes (proposed; H16's to H18's open item)
+
+**State: proposed on 2026-11-21, not run, no code yet.** The maintainer asked whether a fast learned model could stand
+in for molecular dynamics; this is the cheapest candidate, written down before anything is computed. It runs only on
+his yes. The protocol below is then fixed with the code, before the first score, and any change after this date is
+said as a change.
+**Question.** Counts (H16), co-evolved pairs and ESM-2 (H17) and a force-field energy (H18) do not find the cybrids'
+defects better than divergence. ESM-2 never saw the partner in space, and the energy does not repeat between builds
+of one structure. Does a model that reads each residue in its three-dimensional surroundings, the host's nuclear
+subunits included, find the donor's residues unlikely where the measured complexes fail?
+- *Model.* ProteinMPNN (github.com/dauparas/ProteinMPNN at commit 8907e66, MIT licence), the full-backbone weights
+  `v_48_020`, no backbone noise, `--conditional_probs_only`: for each position, the probability of each amino acid
+  given the backbone of every chain and the amino acids at every other position.
+- *Structures.* H18's: human 5XTD (I), 5XTE (III), 5Z62 (IV), 8H9S (V); mouse 8OM1 (I), 7O3H (III), 7O37 (IV). The
+  backbone as deposited, every protein chain of the entry, the host's own sequence as the context. Nothing is built
+  or relaxed, so the step that made H18's energies differ between builds is absent.
+- *Scores,* per (host, donor, complex), named as in H17. At each resolved position where donor and host differ,
+  LLR = log p(donor's residue) − log p(host's residue). `mpnn_contact`, `mpnn_control` and `mpnn_all`: minus the sum
+  of LLR over the contact residues (H18's contact definition on the host's structure), over their burial-matched
+  controls, and over every mtDNA-encoded position of the complex. With the nuclear chains taken out of the structure
+  the same sums give what the mitochondrial chains alone say; `mpnn_partner_excess` is (with the partners − without)
+  at the contacts minus the same at the controls: what the partner's presence adds at the interface.
+- *Readouts and rule: H16's and H17's, unchanged* (`mitoport cybrid-readout`). The two scores read are
+  `mpnn_contact` and `mpnn_partner_excess`. A score counts if it beats divergence (`d_all`) on all three: T1 a more
+  negative Spearman than −0.36 over the 13 stated activities; T2 an area above 0.74 for 9 reduced against 20 not; T3
+  the most reduced complex named in at least 5 of the 6 pairs. Two of three is reported as partial and claimed as
+  nothing. No significance is claimed: the points are few and not independent.
+- *Controls.* `mpnn_control` and `mpnn_all` beside the scores (a score that only repeats them is divergence again);
+  the weights `v_48_010` and `v_48_030` as sensitivities; the whole run twice, the two tables compared byte for byte,
+  and if they differ the spread is reported beside every score.
+- *Known weaknesses, said in advance.* The model was trained on the Protein Data Bank, which holds these complexes
+  or close relatives: it may simply prefer the host's residue everywhere, and then the score is a count of
+  substitutions. Membrane proteins are a small part of its training. It sees no cofactor, lipid or water. One
+  substitution is scored at a time in the host's context, so two donor residues that compensate each other count as
+  two faults. It scores how well a residue fits a fixed backbone, not an energy and not a rate of electron transfer.
+- *If it fails:* with H16 to H18, four kinds of score would then agree that the published cybrids cannot be told from
+  divergence with 30 points, and what remains is dynamics at a few named sites (cytochrome b near the Rieske protein),
+  not another score over all contacts.
