@@ -235,9 +235,10 @@ def forcefield():
 
 
 def potential(topology, positions, restrained: np.ndarray | None = None, minimise: bool = False,
-              jitter: np.ndarray | None = None, seed: int = 0, threads: int | None = None):
+              jitter: np.ndarray | None = None, seed: int = 0, threads: int | None = None, platform: str = "CPU"):
     """(energy in kJ/mol without the restraint term, positions). With `minimise`, the heavy atoms flagged in
-    `restrained` are held to their starting places and the atoms flagged in `jitter` start displaced."""
+    `restrained` are held to their starting places and the atoms flagged in `jitter` start displaced. `platform` is
+    OpenMM's: "CPU" computes in single precision, "Reference" in double (slow; for checks)."""
     import openmm
     from openmm import app, unit
     system = forcefield().createSystem(topology, nonbondedMethod=app.CutoffNonPeriodic,
@@ -252,8 +253,8 @@ def potential(topology, positions, restrained: np.ndarray | None = None, minimis
         for i in np.flatnonzero(restrained):
             f.addParticle(int(i), pos[i].tolist())
         f.setForceGroup(1); system.addForce(f)
-    props = {"Threads": str(threads)} if threads else {}
-    ctx = openmm.Context(system, openmm.VerletIntegrator(0.001), openmm.Platform.getPlatformByName("CPU"), props)
+    props = {"Threads": str(threads)} if threads and platform == "CPU" else {}
+    ctx = openmm.Context(system, openmm.VerletIntegrator(0.001), openmm.Platform.getPlatformByName(platform), props)
     start = pos.copy()
     if minimise and jitter is not None:
         start[jitter] += np.random.default_rng(seed).normal(0, JITTER_NM, (int(jitter.sum()), 3))
@@ -264,15 +265,15 @@ def potential(topology, positions, restrained: np.ndarray | None = None, minimis
     return st.getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole), st.getPositions()
 
 
-def interaction(topology, positions, mt_chains: set[int], threads: int | None = None) -> float:
+def interaction(topology, positions, mt_chains: set[int], threads: int | None = None, platform: str = "CPU") -> float:
     """E(complex) - E(mtDNA-encoded chains alone) - E(the other chains alone) at the given coordinates, kJ/mol."""
     from openmm import app
-    total, _ = potential(topology, positions, threads=threads)
+    total, _ = potential(topology, positions, threads=threads, platform=platform)
     parts = []
     for drop_mt in (False, True):
         m = app.Modeller(topology, positions)
         m.delete([c for c in topology.chains() if (c.index in mt_chains) == drop_mt])
-        parts.append(potential(m.topology, m.positions, threads=threads)[0])
+        parts.append(potential(m.topology, m.positions, threads=threads, platform=platform)[0])
     return total - parts[0] - parts[1]
 
 
@@ -376,4 +377,36 @@ def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS) -> pd.DataFrame
     res = pd.concat(rows, ignore_index=True)
     res.to_csv(out / "energy_scores.tsv", sep="\t", index=False, float_format="%.3f")
     print(res.to_string(index=False)); print("wrote", out / "energy_scores.tsv")
+    return res
+
+
+def repeat_build(first: Path, second: Path) -> pd.DataFrame:
+    """The tasks computed in both folders, each from its own build: ddE of each, and their difference beside the
+    spread of the starts. A build places the hydrogens anew, and the starts of one task share a build, so `ddE_sd`
+    leaves the build out; this table says how much that is. A task that is not "computed" in both is not compared.
+    Writes h18_repeat_build.tsv under `second`."""
+    rows = []
+    for f in sorted((second / "energy").glob("*.tsv")):
+        g = first / "energy" / f.name
+        if not g.is_file():
+            continue
+        a, b = pd.read_csv(g, sep="\t").iloc[0], pd.read_csv(f, sep="\t").iloc[0]
+        if a.status != "computed" or b.status != "computed":
+            continue
+        if (a.host, a.donor, a.complex, a.substituted) != (b.host, b.donor, b.complex, b.substituted):
+            raise SystemExit(f"{f.name}: the two folders hold different tasks under one name")
+        rows.append({"host": a.host, "donor": a.donor, "complex": a.complex, "substituted": a.substituted,
+                     "ddE_first": a.ddE, "ddE_sd_first": a.ddE_sd, "ddE_second": b.ddE, "ddE_sd_second": b.ddE_sd,
+                     "difference": b.ddE - a.ddE, "sd_of_difference_by_the_starts": float(np.hypot(a.ddE_sd, b.ddE_sd)),
+                     "e_int_reference_first": a.e_int_reference, "e_int_reference_second": b.e_int_reference,
+                     "same_sign": bool(np.sign(a.ddE) == np.sign(b.ddE))})
+    if not rows:
+        raise SystemExit("no task is computed in both folders")
+    res = pd.DataFrame(rows)
+    res.to_csv(second / "h18_repeat_build.tsv", sep="\t", index=False, float_format="%.3f")
+    d = res.difference.abs()
+    print(res.to_string(index=False))
+    print(f"{len(res)} tasks built twice: |difference of ddE| median {d.median():.1f}, largest {d.max():.1f} kJ/mol; "
+          f"the starts alone give a median sd of {res.sd_of_difference_by_the_starts.median():.1f}; "
+          f"{int(res.same_sign.sum())} of {len(res)} keep their sign")
     return res

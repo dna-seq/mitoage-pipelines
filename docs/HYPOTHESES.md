@@ -1476,6 +1476,27 @@ numbers are in the docstring of `mitoport/cybrid_energy.py`. One trial was made 
   differences sought. Mouse complex V is not scored.
 **Test.** `slurm/h18-energy.sbatch`, an array over the 44 (host, donor, complex) tasks on haumea's CPU nodes (no GPU),
 then `slurm/h18-energy-check.sbatch`: the collection, the readout, the tests and the breaks of each guard.
+**After the array, 2026-11-21, before the result was written.** The array (job 6500884, 44 tasks) ended; the check job
+(6500885) collected and made the readout, then stopped at one failed test, so the breaks did not run. The first
+readout's table was seen at that point (`ddE` below `d_all` in T2); what follows changes no readout and no rule.
+- *The failed test, and what it was.* The test parts the mtDNA-encoded chain from the others by 30 nm and asks that
+  the interaction energy be zero; it gave 102 kJ/mol. Three small jobs (6572017, 6573071, 6574125) on the same
+  structure: in double precision (OpenMM's Reference platform) the interaction of the parted groups is 0.000 in every
+  term, so the function is right. In single precision (the CPU platform, which the tasks use) it was -2.7, 102 or
+  -3,608 kJ/mol from one build to the next: the structure as built is not relaxed, each build places the hydrogens
+  anew, and its energy ranged from 1.3e5 to 1.6e8 kJ/mol, where single precision is off by up to thousands. The
+  test now asks its question in double precision. On a structure of ordinary energy the two platforms agree to
+  under 1 kJ/mol in the interaction energy (23,370.5 against 23,370.7).
+- *What that showed about the noise.* Each task builds its chimera and its reference once, and its three starts
+  share the build. So `ddE_sd` holds the starts and not the build. Hydrogens are free in the minimisation, which is
+  capped at 2,000 iterations on up to 100,000 atoms; whether two builds end at the same energy was not measured.
+- *Control added: the same task from a second build.* The ten human tasks of complexes IV and V (the shortest) run a
+  second time into another folder; `mitoage mitoport cybrid-energy-repeat` writes both `ddE`, their difference and
+  the spread the starts alone would give. Reading, fixed now: if the median |difference| is above twice the median
+  spread by the starts, `ddE_sd` understates the noise and a `ddE` is said to be distinguished from zero only beyond
+  the difference seen between builds; the readouts T1 to T4 are entered as they are either way, since they use
+  `ddE`'s value and not its sd. Ten tasks of two complexes say nothing certain about complexes I and III, which
+  are larger.
 **Result.** Not yet run.
 
 ## H19. The coupling in birds and fishes, its fall with distance from the mtDNA-encoded core, and what its mitochondrial side is

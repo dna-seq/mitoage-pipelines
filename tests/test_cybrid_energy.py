@@ -54,6 +54,30 @@ class TestBookkeeping:
         res = ce.collect(tmp_path)
         assert len(res) == 1 and "NOT ASSESSED: 43 of 44" in capsys.readouterr().out
 
+    def test_repeat_build_compares_only_tasks_computed_in_both_folders(self, tmp_path):
+        a, b = tmp_path / "a", tmp_path / "b"
+        base = {"host": "homo-sapiens", "donor": "pan-paniscus", "substituted": 17, "e_int_reference": -100.0, "status": "computed"}
+        with pytest.raises(SystemExit):
+            ce.repeat_build(a, b)
+        ce.write({**base, "complex": "IV", "ddE": -7.0, "ddE_sd": 3.0}, a)
+        ce.write({**base, "complex": "IV", "ddE": 5.0, "ddE_sd": 4.0, "e_int_reference": -90.0}, b)
+        ce.write({**base, "complex": "V", "ddE": 88.0, "ddE_sd": 1.0}, a)
+        ce.write({**base, "complex": "V", "ddE": 80.5, "ddE_sd": 2.0}, b)
+        ce.write({**base, "complex": "III", "ddE": 1.0, "ddE_sd": 1.0}, a)                       # not run a second time
+        ce.write({**base, "complex": "I", "ddE": 1.0, "ddE_sd": 1.0}, a)
+        ce.write({**base, "complex": "I", "ddE": 0.0, "ddE_sd": 0.0, "status": "no substitution to model"}, b)
+        res = ce.repeat_build(a, b).set_index("complex")
+        assert sorted(res.index) == ["IV", "V"]
+        assert res.loc["IV", "difference"] == 12.0 and res.loc["V", "difference"] == -7.5
+        assert res.loc["IV", "sd_of_difference_by_the_starts"] == 5.0
+        assert not res.loc["IV", "same_sign"] and res.loc["V", "same_sign"]
+        assert (res.loc["IV", "e_int_reference_first"], res.loc["IV", "e_int_reference_second"]) == (-100.0, -90.0)
+        assert (b / "h18_repeat_build.tsv").is_file() and not (a / "h18_repeat_build.tsv").exists()
+        # one name, two tasks: refused
+        ce.write({**base, "complex": "V", "ddE": 80.5, "ddE_sd": 2.0, "substituted": 18}, b)
+        with pytest.raises(SystemExit):
+            ce.repeat_build(a, b)
+
 
 try:
     import openmm
@@ -129,8 +153,10 @@ def test_on_cox2_of_5z62_the_system_the_substitutions_and_the_energy_of_parted_c
     t, p = ce.build(top, pos, {(0, k): aa for k, aa in subs.items()})
     got = ce.chain_sequence(list(t.chains())[0])[1]
     assert got == dp["COX2"][0] and [ce.chain_sequence(c)[1] for c in t.chains()][1:] == seqs[1:]
-    # the two groups parted by 30 nm do not interact (to within single precision on an unrelaxed system)
+    # the two groups parted by 30 nm do not interact. In double precision: the structure as built is not relaxed and
+    # its hydrogens are placed anew at each build, so its energy can reach 1e8 kJ/mol, where single precision is off
+    # by thousands (the check of 2026-11-21: 102 kJ/mol in one build, -3,608 in another, 0.000 in double precision)
     xyz = np.array(p.value_in_unit(unit.nanometer))
     first = np.array([a.residue.chain.index == 0 for a in t.atoms()])
     xyz[first] += np.array([30.0, 0, 0])
-    assert abs(ce.interaction(t, unit.Quantity(xyz, unit.nanometer), {0})) < 2.0
+    assert abs(ce.interaction(t, unit.Quantity(xyz, unit.nanometer), {0}, platform="Reference")) < 0.01

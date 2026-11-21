@@ -886,6 +886,16 @@ def mitoport_cybrid_energy(
     cybrid_energy.run(host, donor, complex_, gb, pdb_dir, out, threads)
 
 
+@mitoport_app.command("cybrid-energy-repeat")
+def mitoport_cybrid_energy_repeat(
+    second: Annotated[Path, typer.Option("--second", help="folder of the tasks run a second time (`cybrid-energy --out`)")],
+    out: Out = paths.CYBRID_OUT,
+) -> None:
+    """H18: the tasks computed twice, each from its own build: how far ddE moves between two builds."""
+    from .mitoport import cybrid_energy
+    cybrid_energy.repeat_build(out, second)
+
+
 @mitoport_app.command("cybrid-energy-collect")
 def mitoport_cybrid_energy_collect(out: Out = paths.CYBRID_OUT) -> None:
     """H18: energy_scores.tsv from the tables of the `cybrid-energy` tasks; a task without a table is said."""

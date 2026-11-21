@@ -26,6 +26,10 @@ MUTATIONS = [
     (F, "an mtDNA-encoded chain of another complex kept", "            drop.add(c.index)", "            pass"),
     (F, "the parts' energies not taken off", "    return total - parts[0] - parts[1]", "    return total - parts[0]"),
     (F, "substitutions not made", "        fx.applyMutations(muts, chains[c].id)", "        pass"),
+    (F, "a task that was not computed compared", '        if a.status != "computed" or b.status != "computed":', '        if False:'),
+    (F, "two tasks under one name compared", "        if (a.host, a.donor, a.complex, a.substituted) != (b.host, b.donor, b.complex, b.substituted):", "        if False:"),
+    (F, "the difference of two builds taken the other way", '"difference": b.ddE - a.ddE,', '"difference": a.ddE - b.ddE,'),
+    (F, "the starts' spreads added, not combined", '"sd_of_difference_by_the_starts": float(np.hypot(a.ddE_sd, b.ddE_sd)),', '"sd_of_difference_by_the_starts": float(a.ddE_sd + b.ddE_sd),'),
 ]
 
 

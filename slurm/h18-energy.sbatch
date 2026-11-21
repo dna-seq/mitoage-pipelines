@@ -7,6 +7,8 @@
 #   UV_PROJECT_ENVIRONMENT=.venv-energy uv run --frozen --group energy mitoage download cybrid
 #   mkdir -p slurm/logs && sbatch slurm/h18-energy.sbatch      # tasks: `mitoage mitoport cybrid-energy --list`
 #   sbatch --dependency=afterany:<array job> slurm/h18-energy-check.sbatch
+# Tasks a second time, each from a new build, into another folder (then `mitoage mitoport cybrid-energy-repeat`):
+#   sbatch --array=<tasks> --export=ALL,H18_OUT=<folder> slurm/h18-energy.sbatch
 #SBATCH --job-name=mitoage-h18-energy
 #SBATCH --partition=compute
 #SBATCH --account=itmz
@@ -22,4 +24,4 @@ UV=${UV:-uv}
 export UV_PROJECT_ENVIRONMENT=.venv-energy
 echo "commit $(cat .git/refs/heads/main 2>/dev/null || cat .git/HEAD); task $SLURM_ARRAY_TASK_ID on $(hostname)"
 sha256sum data/input/cybrid/records.gb data/input/pdb/{5XTD,5XTE,5Z62,8H9S,8OM1,7O3H,7O37}.cif
-$UV run --frozen --group energy mitoage mitoport cybrid-energy --task "$SLURM_ARRAY_TASK_ID" --threads "$SLURM_CPUS_PER_TASK"
+$UV run --frozen --group energy mitoage mitoport cybrid-energy --task "$SLURM_ARRAY_TASK_ID" --threads "$SLURM_CPUS_PER_TASK" ${H18_OUT:+--out "$H18_OUT"}
