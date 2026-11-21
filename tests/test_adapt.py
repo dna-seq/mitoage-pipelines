@@ -296,6 +296,18 @@ def test_coupling_statistics_find_a_planted_shift(tree, tr):
     assert np.allclose(logr[g0], np.log(sc[g0] / bg))
 
 
+def test_coupling_with_no_species_is_not_assessed(tmp_path):
+    """What `prepare` leaves when no species has every protein kept: `run` says so for each readout and fits nothing."""
+    (tmp_path / "genes.txt").write_text("MT-COX1\n")
+    (tmp_path / "species.txt").write_text("\n")
+    (tmp_path / "topology.nwk").write_text("")
+    tr = pd.DataFrame({"slug": ["a", "b"], "trait": ["marine", "bats"], "state": pd.array([1, 1], dtype="Int64")})
+    for trait, pc, want in (("marine", False, ["C1", "C2"]), ("bats", True, ["P"])):
+        rows = coupling.run(tmp_path, tmp_path / "bl", tr, trait, positive_control=pc)
+        assert [r["readout"] for r in rows] == want
+        assert all(r["status"].startswith("not assessed: no species") and r["trait"] == trait for r in rows)
+
+
 def test_l2_reading():
     feats = [f"f{i}" for i in range(8)]
     def tab(slopes, q):

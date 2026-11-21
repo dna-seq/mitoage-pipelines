@@ -36,6 +36,7 @@ MUTATIONS = [
     (CO, "a control's background keeps its own length", "        bg = (tot - scaled[g]) / (len(ctl) - 1) if g in ctl else tot / len(ctl)", "        bg = tot / len(ctl)"),
     (CO, "every branch of a clade counts as its stem", "        if stems_only and inside[id(n.parent)]:", "        if False:"),
     (CO, "C1 compares the foreground with itself", "    s = {g: logr[g][fg].median() - logr[g][~fg].median() for g in logr}", "    s = {g: logr[g][fg].median() - logr[g][fg].median() for g in logr}"),
+    (CO, "an empty species set is run", "    if not sp:      # `prepare` kept no species", "    if False:      # `prepare` kept no species"),
     (FI, "L2 calls it hibernation's without the count halved", "    reading = (\"largely hibernation's\" if ratio < L2_LARGELY and halved", "    reading = (\"largely hibernation's\" if ratio < L2_LARGELY"),
     (FI, "L2 compares models on different species", "    if set(a.n) != set(b.n) or not a.index.equals(b.index):", "    if False:"),
     (RU, "R1 is read without beating the controls", "        if ctl < 19:", "        if ctl < 0:"),

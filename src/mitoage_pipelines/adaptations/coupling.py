@@ -3,7 +3,8 @@
 Species: the class's species that are tips of the dated tree and have the 13 mitochondrial proteins and every protein
 of H19's vertebrate alignments of the nuclear subunits of complexes I, III, IV and V and of the 30 cytosolic controls.
 If fewer than 5 trait-bearing species remain, the proteins kept are those present in at least 90% of the class's
-species with the 13, and the species those that have all of them; `prepare` says which rule it used.
+species with the 13, and the species those that have all of them; `prepare` says which rule it used. When no species
+is left (the nuclear alignments cover fewer than 90% of the class), `run` answers "not assessed" and no tree is fitted.
 
 `prepare` writes, per class, one alignment per protein restricted to those species (columns left all-gap dropped),
 the dated topology pruned to them, genes.txt and species.txt; `mitoport branch-lengths` (IQ-TREE, H5's models) then
@@ -72,7 +73,9 @@ def prepare(data: Path, nucaln: Path, tree_file: Path, species: pd.DataFrame, cl
     (out / "topology.nwk").write_text(clades.newick(root, raw_names=True) if root else "")
     (out / "genes.txt").write_text("\n".join(allg) + "\n")
     (out / "species.txt").write_text("\n".join(order) + "\n")
-    info = {"class": cls, "rule": rule, "species": len(order), "trait_species": len(sp & trait_species),
+    info = {"class": cls, "rule": rule, "class_species": len(base),
+            "with_a_nuclear_protein": len(set().union(*has.values())) if has else 0,
+            "species": len(order), "trait_species": len(sp & trait_species),
             "nuclear_proteins": len(genes), "subunits": sum(g in SUBUNITS for g in genes),
             "controls": sum(g in CYTOSOLIC_CONTROLS for g in genes), "no_alignment": " ".join(missing)}
     pd.DataFrame([info]).to_csv(out / "prepare.tsv", sep="\t", index=False)
@@ -154,6 +157,9 @@ def run(work: Path, bl_dir: Path, traits: pd.DataFrame, trait: str, positive_con
         n_null: int = N_NULL) -> list[dict]:
     genes = (work / "genes.txt").read_text().split()
     sp = set((work / "species.txt").read_text().split())
+    if not sp:      # `prepare` kept no species: said as such, never run on empty alignments
+        return [{"readout": r, "trait": trait, "status": "not assessed: no species has every protein the rule keeps"}
+                for r in (("P",) if positive_control else ("C1", "C2"))]
     bl = {}
     for g in genes:
         f = bl_dir / f"{g}.treefile"

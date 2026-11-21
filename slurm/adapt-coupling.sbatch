@@ -38,6 +38,10 @@ for cls in Mammalia Actinopterygii; do
   W=$O/coupling/$cls
   $M adapt coupling-prep --class $cls --nucaln $ALN
   cat $W/prepare.tsv
-  $M mitoport branch-lengths --aln-dir $W --topology $W/topology.nwk --genes $W/genes.txt --bl-dir $W/bl --threads 16 --seed 1
+  if [ "$(wc -w < $W/species.txt)" -gt 0 ]; then
+    $M mitoport branch-lengths --aln-dir $W --topology $W/topology.nwk --genes $W/genes.txt --bl-dir $W/bl --threads 16 --seed 1
+  else
+    echo "$cls: no species in the set, no branch lengths fitted"
+  fi
   $M adapt coupling --class $cls
 done
