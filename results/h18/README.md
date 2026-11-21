@@ -13,4 +13,7 @@ structure, not to the energy function. What was fixed in advance, what was added
 | `h18_calibration.tsv` | one (host, donor, complex) with a published measurement: the measurement beside H16's baselines and the energy scores |
 | `h18_summary.tsv` | the readouts T1 to T4 for the energy scores and H16's baselines (T2b, within one complex, was added after the first run and is exploratory) |
 
-The ten tasks run a second time from a new build (the control of 2026-11-21) are not here yet.
+`h18_repeat_build.tsv` is the control of 2026-11-21: the ten human tasks of complexes IV and V run a second time, each
+from a new build (array job 6575326 from d2c3646), with both `ddE`, their difference and the spread the starts alone
+would give. The difference between two builds (median 60 kJ/mol, 4 of 10 change sign) is larger than the spread
+over the starts, so `ddE_sd` in `energy_scores.tsv` understates the noise of an energy.

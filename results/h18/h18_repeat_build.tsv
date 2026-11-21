@@ -1,0 +1,11 @@
+host	donor	complex	substituted	ddE_first	ddE_sd_first	ddE_second	ddE_sd_second	difference	sd_of_difference_by_the_starts	e_int_reference_first	e_int_reference_second	same_sign
+homo-sapiens	gorilla-gorilla	IV	23	51.017	2.795	107.896	12.893	56.879	13.192	-4931.677	-4981.055	True
+homo-sapiens	gorilla-gorilla	V	21	33.920	4.122	47.710	5.056	13.790	6.523	-2347.747	-2343.044	True
+homo-sapiens	pan-paniscus	IV	17	-7.141	1.368	88.448	29.525	95.589	29.557	-4794.496	-4822.375	False
+homo-sapiens	pan-paniscus	V	15	88.427	1.240	61.829	26.634	-26.598	26.663	-2330.203	-2310.218	True
+homo-sapiens	pan-troglodytes	IV	18	-21.552	11.895	121.006	12.494	142.558	17.251	-4869.924	-4927.301	False
+homo-sapiens	pan-troglodytes	V	16	-11.509	1.260	52.345	10.239	63.854	10.316	-2294.821	-2360.159	False
+homo-sapiens	pongo-abelii	IV	48	-36.872	22.385	125.612	10.776	162.484	24.844	-4958.886	-5015.347	False
+homo-sapiens	pongo-abelii	V	57	-20.472	17.125	-1.546	6.325	18.926	18.256	-2412.913	-2425.527	True
+homo-sapiens	pongo-pygmaeus	IV	55	182.196	15.906	273.580	23.378	91.384	28.276	-5063.084	-5132.756	True
+homo-sapiens	pongo-pygmaeus	V	55	53.816	26.985	66.364	10.483	12.548	28.950	-2392.819	-2431.047	True

@@ -1518,8 +1518,20 @@ are caught.
   (Spearman 0.48 over the 44 tasks; 0.89 in complex I, 0.68 in III, 0.15 in IV, 5 tasks in V), so in the large
   complexes it mostly repeats divergence. 70 positions over all tasks were
   not modelled (deletions, insertions, unresolved residues).
-- *Not yet in:* the ten tasks run from a second build (above). They can change what is said of single energies,
-  not the three readouts' verdict, which the rule reads from `ddE`'s value.
+- *The control: ten tasks from a second build (array job 6575326 from d2c3646; `results/h18/h18_repeat_build.tsv`).*
+  **`ddE` does not repeat between two builds of the same task.** The median |difference| is 60 kJ/mol and the largest
+  162, against a median spread by the starts of 21; 4 of the 10 change sign. By the reading fixed above (more than
+  twice the starts' spread), `ddE_sd` understates the noise. Complex V repeats better (median 19, 4 of 5 keep their
+  sign) than complex IV (median 96, 2 of 5), where all five moved up and the reference's own interaction energy
+  came out 28 to 70 kJ/mol lower in the second build: the two runs differ by more than chance there, and what in
+  (the nodes were different ones; the energy code was the same) was not found.
+- *What that does to the bullet above.* The median |`ddE`| over the 44 tasks is 67 kJ/mol, the size of the
+  difference between two builds. 25 tasks exceed the median difference and 9 the largest (7 of them in complex I,
+  which was not built twice). So "beyond twice its spread in 31 tasks" is withdrawn: most single energies are not
+  distinguished from the noise of the build. The readouts' verdict stands as the rule reads it, from `ddE`'s value,
+  and it now has a second reason: the score is too noisy at this protocol to rank 13 points.
+- *What a better run would need.* Several builds per task with `ddE` averaged over them, or one build shared by
+  chimera and reference (substitute after the hydrogens are placed), and a minimisation that converges.
 - *What this does not say.* That the interfaces of cybrids are not weaker: the weaknesses named in advance stand
   (no cofactors, no membrane, a fixed backbone, no entropy), and a score that misses for those reasons looks the
   same as one that misses because there is nothing to find. With H16 and H17 it says that no score tried here, from
