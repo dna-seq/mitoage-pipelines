@@ -2563,6 +2563,16 @@ measured complexes fail?
   of the rRNA gene. They go through H16's readouts beside `d_all` and `f_all`. No rule: they were chosen after the
   results were known, so nothing here passes or fails, and a pair-level score cannot say which complex is reduced
   (it is left out of T2b and T3). The control region is not scored. Written before the first of these numbers.
+  *Added the same day, on the maintainer's question which regions matter most, after the first of these numbers:*
+  the complex's differences split into silent and amino-acid-changing, the control region as the records annotate
+  it, the mouse record's conserved sequence blocks, and the rank correlations between the scores.
+  **Read, 2026-11-22** (commit 495c30c, tables in `results/cybrid-dna/`): T1 and T2 for `nt_cds_f` −0.63 and 0.76,
+  `nt_cds_d` −0.04 and 0.83, rRNA −0.65 and 0.80, tRNA −0.64 and 0.82, MOTS-c −0.62 and 0.87, humanin −0.40 and
+  0.73, the control region −0.67 and 0.75, against `d_all` −0.36 and 0.74 and `f_all` −0.59 and 0.61. Silent
+  differences do as well as changing ones (T2 0.82 and 0.81). The coding, rRNA and tRNA scores correlate 0.84 to
+  0.98 across the 13 donors. Reading: the points carry the donor's distance, nucleotides measure it more finely
+  than amino acid counts, and no region is ranked above another. The conserved blocks stood out (0.98 on the mouse
+  host) and were checked as H32, which found them to be distance too.
 
 ## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (code written, not run; H28's check)
 
@@ -2701,7 +2711,7 @@ change.**
   *If it fails both,* the reading is that sequence models of either kind, protein or DNA, rank these cybrids no
   better than distance, and the variant test says whether that is the cybrid data or the model.
 
-## H32. Are the conserved sequence blocks of the control region special, or one more ruler of distance? (proposed; no code)
+## H32. Are the conserved sequence blocks of the control region special, or one more ruler of distance? (run: does not count, the blocks are distance)
 
 **State: proposed on 2026-11-22. The lead was found the same day, after looking: among the exploratory nucleotide
 baselines (`mitoport cybrid-dna`), the differences within the mouse record's conserved sequence blocks 1 to 3
@@ -2735,3 +2745,14 @@ rule below is written before any of its numbers.**
 - *If check 1 holds:* which block and which places carry it, and a test on data that had no part in finding it
   (H31's variant test covers the control region; H30's mouse strains differ there or do not). *If it fails:* the
   blocks are distance, and the entry says so.
+- **Result, 2026-11-22** (`mitoport cybrid-blocks` at 7407801, tables in `results/h32/`). *Check 1: does not
+  count.* On the mouse host (6 donors, 6 reduced points against 11, 10 stated activities) the blocks' area is 0.98
+  and their Spearman −0.69; 16.2% of the 10,000 random window sets in the control region reach that area and 58.8%
+  that Spearman, against the 5% the rule allowed. Windows in the rRNA genes: 13.3% and 46.9%; in the protein genes:
+  11.2% and 52.1%. *Check 2, claimed as nothing:* on the human host the blocks do not order the donors by outcome.
+  The bonobo differs from human in 0 of the 58 places, the chimpanzee in 3, the gorilla in 22 (all three respired,
+  with complex I reduced alike); Pongo abelii, which did not respire, in 20, and Pongo pygmaeus in 27. The golden
+  hamster (25) is above every mouse-host donor that respired, as it is in 59% of random window sets. *Reading:*
+  the lead was the order of six donors; the blocks are one more ruler of distance. A slip in the message that
+  proposed the checks: it called the human half "the real test", which three measured donors cannot be; the entry
+  above had it right.
