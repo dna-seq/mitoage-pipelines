@@ -3013,3 +3013,11 @@ better than the site's variability among mammals, and better than the same model
   with label 0, `proteinmpnn_v_48_020` and `solublempnn_v_48_020`; the scored position decoded last and the other
   residues in the order the seed gives, seeds 0, 1 and 2, the score the mean of the three; the system and the
   copies of a chain as in H29.
+- *Settled on 2026-11-22, on the repository's example 1BC8 (93 residues) with `proteinmpnn_v_48_020`, its own
+  `score.py`, three draws, no variant involved:* with `--use_sequence 1` the scored position is first in its
+  decoding order in every draw, the three draws are identical, and the native residue has a mean log-probability
+  of -1.656 (recovery 0.49); with `--use_sequence 0` it is last, the draws differ, and the native residue has
+  -1.545 (0.55). The switch does the opposite of its name, as read. Our reading is the one that sees the other
+  residues (the repository's `--use_sequence 0`), and it is checked against that output before any variant is
+  scored. Also seen: the file the model's repository calls `solublempnn_v_48_020` has the SHA-256 of the
+  `proteinmpnn.pt` that StaB-ddG ships (7af52d09...), which confirms that H28 and H29 ran on soluble weights.
