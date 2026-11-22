@@ -2928,5 +2928,11 @@ as first computed.
   shows them (`cybrid_dna.RECORD_FIXES`); a tRNA gene on different strands in the two records of a pair is now
   refused. Mouse against it: `nt_trna_d` 220 from 280, `kron_trna` 20.7 from 254.7; its control region scores 279
   differences, 17 in the blocks. T1 and T2 of every nucleotide score are unchanged; H31's and H32's verdicts stand.
-- *Still to correct:* H17's ESM and co-evolution sums (the model has to run again), H31's shuffled genome, the
-  start-codon and stop variants of H29 and H31, and the sentence on soluble weights in H28's entry.
+- *Corrected on 2026-11-22 (commits 72a5745 and 498780b, job 6592885, same folder):* a change in a gene's first
+  codon is named a change of the start and is no missense variant; a lost stop is named apart from a gained one.
+  H29 loses five variants (two harmful): the model's area 0.629 from 0.637, the site's variability 0.915, the
+  verdict as it was. H31 among amino acid changes: 0.922 against 0.865 (was 0.925 against 0.871), interval of the
+  difference -0.009 to 0.130; its rule over all variants as it was. m.7445A>G stays "synonymous" in the table: its
+  harm is through a tRNA precursor, which no consequence in a protein gene can say.
+- *Still to correct:* H17's ESM and co-evolution sums (the model has to run again), H31's shuffled genome, and the
+  sentence on soluble weights in H28's entry.

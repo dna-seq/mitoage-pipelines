@@ -40,3 +40,20 @@ With the corrected count, `d_all` within one complex separates reduced from not 
 | `dna_scores.tsv`, `dna_summary.tsv`, `dna_calibration.tsv`, `dna_correlations.tsv` | the nucleotide baselines, remade |
 | `kron_scores.tsv`, `h31_summary.tsv`, `h31_verdict.tsv`, `h31_calibration.tsv` | H31's cybrid readout, remade |
 | `h32_summary.tsv`, `h32_blocks.tsv` | H32, remade |
+
+## Changes of a start codon are no amino acid changes (job 6592885, commit 498780b)
+
+From a fresh clone, on the tasks' tables of H29's run and KronGenome's likelihood tables (no model run again):
+`variant-stab-collect`, `variant-stab-readout`, `kron-variants`, the tests (29 passed) and the breaks (24 of 24,
+22 of 22).
+
+H29: five variants in a first codon leave (two harmful, three harmless); 38 harmful and 314 harmless are scored
+with both baselines. The model's area is 0.629 (was 0.637), BLOSUM62 0.635, the site's variability 0.915; the
+verdict stands. H31: among amino acid changes KronGenome is 0.922 against the baseline's 0.865 on 38 and 321
+variants (was 0.925 against 0.871 on 40 and 323), the interval of the difference -0.009 to 0.130; the rule over
+all variants is as it was.
+
+| file | what |
+| --- | --- |
+| `variant_scores.tsv`, `h29_summary.tsv` | H29, collected and read out again |
+| `kron_variants.tsv`, `h31_variants_summary.tsv` | H31's variant test, remade |
