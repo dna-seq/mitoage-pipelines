@@ -2998,3 +2998,18 @@ better than the site's variability among mammals, and better than the same model
   against 0.919 (-0.058 to 0.072); PhyloP 0.838; gnomAD's local constraint 0.735; H29's StaB-ddG 0.629 against
   0.915. *Reading:* the two scores without labels that read sequence alone are level with the baseline; only the
   two fitted to labels like ours are above it. The bar for part B stays the baseline's 0.92.
+- *Part B, read from the repository's code on 2026-11-22, before any code of ours and any score* (LigandMPNN at
+  commit 26ec57a). Its `score.py` has a single-residue reading (`single_aa_score`), but two things keep it from
+  being used as it stands. It builds an L by L by L product for every one of the L positions, which a system of
+  thousands of residues cannot afford, so the reading has to be written here for the variants' positions only,
+  with the model's own encoder and decoder layers. And by my reading of `model_utils.single_aa_score` its switch
+  `use_sequence` does the opposite of its name: set to 1 it puts the scored position first in the decoding order,
+  where it sees no other residue's identity, and set to 0 last, where it sees them all. This is a reading of
+  the code, not yet a fact: before any variant is scored it is settled on a small protein of the repository's
+  examples, where the reading that sees the sequence must give the native residue a higher probability than the
+  one that does not, and both must equal the repository's own output for the matching switch. Choices fixed now:
+  the checkpoint with the global membrane label (`global_label_membrane_mpnn_v_48_020`), label 1, since the
+  per-residue checkpoint would need our own judgement of which residues are buried; controls the same checkpoint
+  with label 0, `proteinmpnn_v_48_020` and `solublempnn_v_48_020`; the scored position decoded last and the other
+  residues in the order the seed gives, seeds 0, 1 and 2, the score the mean of the three; the system and the
+  copies of a chain as in H29.
