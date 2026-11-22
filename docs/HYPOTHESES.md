@@ -2948,3 +2948,46 @@ as first computed.
   harm is through a tRNA precursor, which no consequence in a protein gene can say.
 - *Still to correct:* H17's ESM and co-evolution sums (the model has to run again) and H31's shuffled genome.
   The sentence on soluble weights is added to H28's entry.
+
+## H34. A membrane-aware model on the human variants, beside the predictors that already exist (proposed; no code, no score of ours)
+
+**State: proposed on 2026-11-22. The maintainer asked for it the same day ("let's see if membrane aware models show
+any signals ... and then think about possibility of proper MD"). Written before any code and before any score of
+the membrane model. One thing was seen before this entry and is said here: a survey agent, looking for where the
+existing predictors can be downloaded, computed rough areas from MitImpact 4's file on a set like H29's
+(AlphaMissense 0.98, ESM1b 0.94, PhyloP 0.85, MLC 0.74, APOGEE 2 1.00). Those are not this entry's numbers: its
+set and its counting are below, and nothing here was chosen to move them.**
+
+**Background.** H29's model sits on ProteinMPNN weights trained on soluble proteins, and all 13 proteins are membrane
+proteins. The survey found no stability or structure model, membrane-aware or not, with published evidence of
+beating conservation at telling harmful from harmless variants of membrane proteins (the one comparison found, on
+15 human transmembrane proteins: Rosetta's membrane energy 0.64 against an evolutionary model's 0.82; Tiemann et
+al. 2023), and that APOGEE 2's feature selection dropped a computed stability change as uninformative. The one
+membrane-trained structure model with open code and weights is ProteinMPNN's membrane variant in the LigandMPNN
+repository.
+**Question.** On H29's variants, does a structure model trained on membrane proteins separate harmful from harmless
+better than the site's variability among mammals, and better than the same model with soluble weights?
+- *Variants.* H29's, as corrected on 2026-11-22 (no changes of a start codon): the same sources, files and rule
+  of what is harmful and harmless, the same structures and systems.
+- *Part A, the predictors that exist (reported, claimed as nothing).* From MitImpact 4's table (file and SHA-256
+  pinned with the code), joined by position and bases: AlphaMissense, ESM1b, APOGEE 2, PhyloP and gnomAD's
+  constraint score, each with its area on the variants it covers, beside the site's variability and KronGenome
+  on the same variants. Said with each: whether it was trained or calibrated on labels like ours. APOGEE 2 was
+  trained on disease and population variants of these very genes, so its area here is not a test; AlphaMissense
+  was calibrated with population frequency, which overlaps our harmless set; ESM1b saw no labels.
+- *Part B, the model.* The membrane ProteinMPNN: for each variant, the log-probability of the reference residue
+  minus that of the new one at the position, given the backbone of H28's whole system and all other residues
+  (the choice between the repository's two membrane checkpoints, how its membrane labels are set for our chains,
+  and the decoding order are made exact with the code, before any score, and said). Controls: the same reading
+  with the soluble ProteinMPNN weights; the run twice.
+- *Rule.* H29's: the area is at least 0.70 and above the site's variability on the same variants, the difference's
+  95% bootstrap interval above 0. Reported beside it and deciding nothing: the difference to the soluble weights
+  (does membrane training help at all), the split by contact with nuclear subunits (H29's 0.87 at contacts was
+  nine harmful variants seen after the fact; this is its first test on another model), and each complex alone.
+- *Known weaknesses, said in advance.* The survey's own estimate is that this model lands below the baseline. A
+  likelihood from an inverse-folding model is not a stability. The harmful variants are 38, so an interval is
+  wide. And a pass on single human variants does not show the model ranks cybrid donors: that is only tried if
+  this passes.
+- *What follows.* Pass: the model is run on the cybrids' substitutions with H28's rule. Fail: structure models
+  are put down for this question, and the maintainer's second step (molecular dynamics) is weighed on its own
+  merits, for single contacts with a measured effect, not as a screen.
