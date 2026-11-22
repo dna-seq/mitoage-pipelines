@@ -39,6 +39,7 @@ NCBI_VERT = INPUT / "ncbi-vertebrata"     # the same for complex IV's nuclear su
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
 CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the cybrid hosts and donors (H16)
+STABDDG = INPUT / "stabddg"              # the three weight files of StaB-ddG at its pinned commit (H28)
 TECH_GB = INPUT / "technology"            # refseq/ and source/: GenBank records the sequencing technology is read from (H8's control)
 HIBERNATION = INPUT / "hibernation"        # the bat table of Wilkinson & Adams 2019 (DRUM) and Heldstab et al. 2018 (Dryad, placed by hand)
 

@@ -113,6 +113,14 @@ def download_pdb(ids: Annotated[list[str], typer.Argument(help="PDB entry ids, e
     download.pdb([i.upper() for i in ids], paths.PDB, paths.MANIFEST)
 
 
+@download_app.command("stabddg")
+def download_stabddg() -> None:
+    """H28: the weights of StaB-ddG (its own, plain ProteinMPNN's and the stability-only ones) from its repository at
+    the pinned commit into data/input/stabddg; a file whose SHA-256 is not the pinned one is refused."""
+    from . import download
+    download.stabddg(paths.STABDDG, paths.MANIFEST)
+
+
 @download_app.command("hibernation")
 def download_hibernation() -> None:
     """H23-H25: the bat hibernation table of Wilkinson & Adams 2019 from DRUM (SHA-256 pinned), and the mammal table of
@@ -901,6 +909,49 @@ def mitoport_cybrid_energy_collect(out: Out = paths.CYBRID_OUT) -> None:
     """H18: energy_scores.tsv from the tables of the `cybrid-energy` tasks; a task without a table is said."""
     from .mitoport import cybrid_energy
     cybrid_energy.collect(out)
+
+
+@mitoport_app.command("cybrid-stab")
+def mitoport_cybrid_stab(
+    host: Annotated[Optional[str], typer.Option(help="host species slug (with --donor and --complex)")] = None,
+    donor: Annotated[Optional[str], typer.Option(help="donor species slug")] = None,
+    complex_: Annotated[Optional[str], typer.Option("--complex", help="I, III, IV or V")] = None,
+    task: Annotated[Optional[int], typer.Option(help="instead of the three: the 0-based index of the task, as --list prints them (for a Slurm array)")] = None,
+    list_: Annotated[bool, typer.Option("--list", help="print the tasks and stop")] = False,
+    gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+    weights: Annotated[Path, typer.Option("--weights", help="folder of the weights of `download stabddg`")] = paths.STABDDG,
+    out: Out = paths.CYBRID_OUT,
+    device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
+) -> None:
+    """H28: StaB-ddG's predicted change of binding energy between the donor's mitochondrial subunits and the host's
+    nuclear ones, for one cybrid and complex (`uv sync --group stab`; after `download stabddg` and `mitoport burial`)."""
+    from .mitoport import cybrid, cybrid_stab
+    from .mitoport.complexes import COMPLEXES
+    tasks = cybrid_stab.triples(cybrid.read_measurements())
+    if list_:
+        for i, t in enumerate(tasks):
+            print(i, *t)
+        return
+    if task is not None:
+        host, donor, complex_ = tasks[task]
+    if not (host and donor and complex_):
+        raise SystemExit("give --task, or --host, --donor and --complex")
+    cybrid_stab.run(host, donor, complex_, gb, pdb_dir, lambda c: COMPLEXES[c].work, weights, out, device)
+
+
+@mitoport_app.command("cybrid-stab-collect")
+def mitoport_cybrid_stab_collect(out: Out = paths.CYBRID_OUT) -> None:
+    """H28: stab_scores.tsv and stab_by_seed.tsv from the tables of the `cybrid-stab` tasks; a task without a table is said."""
+    from .mitoport import cybrid_stab
+    cybrid_stab.collect(out)
+
+
+@mitoport_app.command("cybrid-stab-readout")
+def mitoport_cybrid_stab_readout(out: Out = paths.CYBRID_OUT) -> None:
+    """H28: H16's readouts for StaB-ddG's scores beside divergence, and the rule's verdict for the mean and each seed."""
+    from .mitoport import cybrid
+    cybrid.readout_stab(out)
 
 
 @mitoport_app.command("partners")

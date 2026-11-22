@@ -156,6 +156,25 @@ def pdb(ids: list[str], dest: Path, manifest: Path) -> list[Path]:
     return got
 
 
+def stabddg(dest: Path, manifest: Path) -> list[Path]:
+    """StaB-ddG's three weight files (H28) from its repository at the pinned commit into `dest`. Each is kept only
+    when its SHA-256 is the pinned one; a file already there with that digest is not fetched again."""
+    import hashlib
+    from .mitoport.cybrid_stab import COMMIT, REPO, WEIGHTS
+    dest.mkdir(parents=True, exist_ok=True); got = []
+    raw = REPO.replace("https://github.com/", "https://raw.githubusercontent.com/")
+    for name, (file, digest) in WEIGHTS.items():
+        p = dest / file
+        if not (p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest() == digest):
+            body = _request(f"{raw}/{COMMIT}/model_ckpts/{file}", accept="*/*")
+            if hashlib.sha256(body).hexdigest() != digest:
+                raise SystemExit(f"{file} at {COMMIT[:7]} is not the pinned file (SHA-256 differs): nothing written")
+            p.write_bytes(body)
+        got.append(p); print(f"{file}  sha256 {digest}")
+    append_manifest(manifest, "github", f"{REPO}@{COMMIT}", dest, sha256={f: d for f, d in WEIGHTS.values()})
+    return got
+
+
 # --- NCBI ortholog sets -----------------------------------------------------------------------
 def _request(url: str, body: dict | None = None, accept: str = "application/json", tries: int = 5) -> bytes:
     headers = {"accept": accept, "user-agent": "mitoage-pipelines"}

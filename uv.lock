@@ -1512,6 +1512,10 @@ fold = [
     { name = "esm", marker = "python_full_version >= '3.12'" },
     { name = "torch", marker = "python_full_version >= '3.12'" },
 ]
+stab = [
+    { name = "stab-ddg" },
+    { name = "torch", marker = "python_full_version >= '3.12'" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -1535,6 +1539,10 @@ energy = [
 ]
 fold = [
     { name = "esm", marker = "python_full_version >= '3.12'", specifier = ">=3.4.3" },
+    { name = "torch", marker = "python_full_version >= '3.12'", specifier = ">=2.15" },
+]
+stab = [
+    { name = "stab-ddg", git = "https://github.com/LDeng0205/StaB-ddG?rev=b19a5d72637a6b581b16f38af39383658e5ae1a5" },
     { name = "torch", marker = "python_full_version >= '3.12'", specifier = ">=2.15" },
 ]
 
@@ -3168,6 +3176,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
 ]
+
+[[package]]
+name = "stab-ddg"
+version = "0.0.0"
+source = { git = "https://github.com/LDeng0205/StaB-ddG?rev=b19a5d72637a6b581b16f38af39383658e5ae1a5#b19a5d72637a6b581b16f38af39383658e5ae1a5" }
 
 [[package]]
 name = "stack-data"

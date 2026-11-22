@@ -445,3 +445,72 @@ def readout_energy(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame
         print(summary.to_string(index=False))
     print("wrote", out / "h18_calibration.tsv", out / "h18_summary.tsv")
     return summary
+
+
+# --- H28: the same readouts for StaB-ddG's predicted binding energy -----------------------------------------
+H28_PRIMARY = ("stab_all", "stab_contact")
+H28_OTHER = ("stab_control", "mpnn_all", "mpnn_contact", "mpnn_control", "stabfold_all", "stabfold_contact", "stabfold_control")
+H28_T3_MIN = 5
+
+
+def verdict(summary: pd.DataFrame, names: tuple[str, ...], baseline: str = "d_all", label: str = "mean") -> pd.DataFrame:
+    """The rule fixed in H28's entry, per score: T1 more negative than the baseline's, T2 above the baseline's, T3
+    naming the most reduced complex in at least H28_T3_MIN pairs. A readout that is missing is not assessed, and the
+    score then does not count."""
+    def value(test, s):
+        v = summary[(summary.test == test) & (summary.score == s)].value
+        return (float(v.iloc[0]) if len(v) == 1 and pd.notna(v.iloc[0]) else np.nan) if test != "T3" else v
+    rows = []
+    for s in names:
+        t1, b1, t2, b2 = value("T1", s), value("T1", baseline), value("T2", s), value("T2", baseline)
+        t3 = value("T3", s)
+        ok1 = bool(t1 < b1) if np.isfinite(t1) and np.isfinite(b1) else None
+        ok2 = bool(t2 > b2) if np.isfinite(t2) and np.isfinite(b2) else None
+        ok3 = bool(t3.sum() >= H28_T3_MIN) if len(t3) and t3.notna().all() else None
+        passed = [k for k in (ok1, ok2, ok3) if k]
+        rows.append({"draws": label, "score": s, "T1": t1, "T1_baseline": b1, "T1_beats": ok1, "T2": t2, "T2_baseline": b2,
+                     "T2_beats": ok2, "T3_named": int(t3.sum()) if len(t3) and t3.notna().all() else np.nan, "T3_pairs": len(t3),
+                     "T3_beats": ok3, "verdict": "not assessed" if None in (ok1, ok2, ok3) else
+                     {3: "counts", 2: "partial"}.get(len(passed), "does not count")})
+    return pd.DataFrame(rows)
+
+
+def readout_stab(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame:
+    """H16's readouts T1 to T4 for H28's scores, beside H16's baselines on the same points, and the rule's verdict
+    for the mean over the seeds and for each seed. Reads scores.tsv (`mitoport cybrid`), stab_scores.tsv and
+    stab_by_seed.tsv (`mitoport cybrid-stab-collect`). Writes h28_calibration.tsv, h28_summary.tsv, h28_verdict.tsv."""
+    from .cybrid_energy import STRUCTURES as HOST_STRUCTURES
+    key = ["host", "donor", "complex"]
+    for f in ("scores.tsv", "stab_scores.tsv", "stab_by_seed.tsv"):
+        if not (out / f).is_file():
+            raise SystemExit(f"{out / f} is missing")
+    base = pd.read_csv(out / "scores.tsv", sep="\t")[key + list(H17_BASELINE)]
+    meas = read_measurements(measurements)
+    t4c = {h: tuple(cs) for h, cs in HOST_STRUCTURES.items()}
+
+    def read(table: pd.DataFrame):
+        cols = [c for c in H28_PRIMARY + H28_OTHER if c in table.columns]
+        missing = [c for c in H28_PRIMARY if c not in cols]
+        if missing:
+            raise SystemExit(f"the scores {missing} are not in the table")
+        names = tuple(cols) + H17_BASELINE
+        return summarise(base.merge(table[key + cols], on=key, how="left"), meas, names, t2b=H28_PRIMARY + H17_BASELINE,
+                         t3=H28_PRIMARY + H17_BASELINE, t4=H28_PRIMARY + ("d_contact", "d_all"), t4_complexes=t4c)
+
+    s = pd.read_csv(out / "stab_scores.tsv", sep="\t")
+    cal, summary = read(s)
+    cal = cal.merge(s[key + [c for c in s.columns if c.endswith("_sd") or c.startswith("n_") or c in ("unmodelled", "seeds")]], on=key, how="left")
+    verdicts = [verdict(summary, H28_PRIMARY)]
+    by_seed = pd.read_csv(out / "stab_by_seed.tsv", sep="\t")
+    for seed, t in by_seed.groupby("seed", sort=True):
+        verdicts.append(verdict(read(t.drop(columns="seed"))[1], H28_PRIMARY, label=f"seed {seed}"))
+    v = pd.concat(verdicts, ignore_index=True)
+    settled = v.groupby("score").verdict.nunique().eq(1)
+    v["settled_over_the_seeds"] = v.score.map(settled)
+    cal.to_csv(out / "h28_calibration.tsv", sep="\t", index=False, float_format="%.4f")
+    summary.to_csv(out / "h28_summary.tsv", sep="\t", index=False, float_format="%.3f")
+    v.to_csv(out / "h28_verdict.tsv", sep="\t", index=False, float_format="%.3f")
+    with pd.option_context("display.width", 220, "display.max_colwidth", 110, "display.max_rows", 400):
+        print(summary.to_string(index=False)); print(v.to_string(index=False))
+    print("wrote", out / "h28_calibration.tsv", out / "h28_summary.tsv", out / "h28_verdict.tsv")
+    return v

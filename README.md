@@ -173,6 +173,12 @@ uv run mitoage download pdb 5XTD 5XTE 5Z62 8H9S 8OM1 7O3H 7O37
 uv run mitoage mitoport cybrid-energy --list      # the 44 tasks; one with --task N, or --host, --donor and --complex
 uv run mitoage mitoport cybrid-energy-collect && uv run mitoage mitoport cybrid-energy-readout
 
+# H28: the cybrids by a learned binding energy, StaB-ddG (on a cluster: slurm/h28-stab.sbatch, CPU nodes)
+uv sync --group stab                              # StaB-ddG at its pinned commit, and torch
+uv run mitoage download stabddg                   # its three weight files, each kept only with its pinned SHA-256
+uv run mitoage mitoport cybrid-stab --list        # the 44 tasks; one with --task N, or --host, --donor and --complex
+uv run mitoage mitoport cybrid-stab-collect && uv run mitoage mitoport cybrid-stab-readout
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -351,6 +357,12 @@ guards one at a time.
 counted as not modelled, the tasks and the collection; with OpenMM installed, the cutting of a chain at a break, the
 free and restrained atoms, and on COX2 of 5Z62 the system, the substitutions made and that two groups moved apart do
 not interact; `slurm/h18-energy-mutations.py` breaks 12 guards one at a time.
+
+`tests/test_cybrid_stab.py` (H28) checks by hand which chains make the system, how a break in a chain is kept, where a
+substitution lands in the complex and in each partner, the sets, the collection (a missing task, an empty set that is
+not 0) and the rule's verdict; on 5Z62 one task with a counting stand-in for the model; and with the model installed,
+that no substitution gives exactly 0 and that a seed repeats. `slurm/h28-stab-mutations.py` breaks 21 guards one at a
+time.
 
 ## Licence
 

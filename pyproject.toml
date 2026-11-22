@@ -27,6 +27,8 @@ dev = ["pytest"]
 fold = ["esm>=3.4.3; python_version >= '3.12'", "torch>=2.15; python_version >= '3.12'"]
 # `mitoage mitoport cybrid-energy` only (H18): OpenMM on its CPU platform, PDBFixer to build the chimeric complexes
 energy = ["openmm>=8.6", "pdbfixer>=1.12"]
+# `mitoage mitoport cybrid-stab` only (H28): StaB-ddG at its pinned commit (the weights come by `mitoage download stabddg`)
+stab = ["torch>=2.15; python_version >= '3.12'", "stab-ddg @ git+https://github.com/LDeng0205/StaB-ddG@b19a5d72637a6b581b16f38af39383658e5ae1a5"]
 
 [build-system]
 requires = ["uv_build>=0.9,<0.14"]

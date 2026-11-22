@@ -2480,12 +2480,16 @@ equally spaced; almost no species is "huge" and few birds are "tiny", so the ter
 classes. It says nothing of lifespans from other sources, which have no sample size, and nothing of fishes or
 reptiles, which the entry did not include.
 
-## H28. The cybrids by a learned binding-energy model: StaB-ddG on the hosts' complexes (agreed, not run; H16's to H18's open item)
+## H28. The cybrids by a learned binding-energy model: StaB-ddG on the hosts' complexes (code written, not run; H16's to H18's open item)
 
 **State: proposed on 2026-11-21 with ProteinMPNN; the maintainer agreed on 2026-11-22 and asked for a check of the
 2026 literature for a better model first. The check changed the model to StaB-ddG, on 2026-11-22, before any code
-and any score. Not run.** The protocol below is fixed with the code, before the first score; any change after this
-date is said as a change.
+and any score. The code followed the same day (`mitoport cybrid-stab`); not run.** The protocol below is fixed with
+the code, before the first score; any change after this date is said as a change.
+*Made exact with the code, 2026-11-22, before any score:* the system is H18's (not every chain of the entry); the
+contacts and controls are H17's (the human structures' sites, not a new map on the host's structure); a break in a
+chain is kept as masked places (chains are not renumbered); the score is the mean over the three seeds; the whole
+run, not seed 0 alone, is repeated for the byte comparison.
 **Question.** Counts (H16), co-evolved pairs and ESM-2 (H17) and a force-field energy (H18) do not find the cybrids'
 defects better than divergence. ESM-2 never saw the partner in space, and the energy does not repeat between builds
 of one structure. Does a model trained to predict how substitutions change the binding energy of two partners, given
@@ -2504,17 +2508,21 @@ measured complexes fail?
   trained on the same measured set of soluble complexes and were not shown to be better outside it. No work was found
   that scores cybrids or mitonuclear mismatch with any such model. What a wider search would find is not known.
 - *Model.* StaB-ddG (github.com/LDeng0205/StaB-ddG at commit b19a5d7, MIT licence), its final weights `stabddg.pt`,
-  the defaults of its prediction script: backbone noise 0.1, 20 Monte Carlo samples, seed 0. The prediction is the
-  model's folding-energy change of the whole complex minus those of the two partners taken alone, in kcal/mol,
-  positive for weaker binding.
+  the defaults of its prediction script: backbone noise 0.1, 20 Monte Carlo samples. The prediction is the model's
+  folding-energy change of the whole complex minus those of the two partners taken alone, in kcal/mol, positive for
+  weaker binding. Each set of substitutions is scored on its own, with seeds 0, 1 and 2; a score is the mean over
+  the three.
 - *Structures.* H18's: human 5XTD (I), 5XTE (III), 5Z62 (IV), 8H9S (V); mouse 8OM1 (I), 7O3H (III), 7O37 (IV). The
-  backbone as deposited, every protein chain of the entry, chains renumbered from 1 as the model expects. Partner
-  one is the complex's mtDNA-encoded chains, partner two every other protein chain. Nothing is built or relaxed, so
-  the step that made H18's energies differ between builds is absent.
+  backbone as deposited (N, CA, C, O); the system is H18's: the complex's mtDNA-encoded chains, every copy, and each
+  protein chain with a heavy atom within 4.5 Å of one of them, without the mtDNA-encoded chains of another complex.
+  Partner one is the mtDNA-encoded chains, partner two the other chains of the system. A break in a chain's
+  numbering is kept as that many masked places, at most 33 (the model does not tell longer distances apart).
+  Nothing is built or relaxed, so the step that made H18's energies differ between builds is absent.
 - *Scores,* per (host, donor, complex), named as in H17. `stab_all`: the predicted change of binding energy for all
   of the donor's substitutions at resolved positions of the mtDNA-encoded chains, given together. `stab_contact` and
-  `stab_control`: the same for the substitutions at the contact residues only (H18's contact definition on the
-  host's structure) and at their burial-matched controls only.
+  `stab_control`: the same for the substitutions at the contact residues only and at their burial-matched controls
+  only; contacts and controls are H17's, the sites of the human structures carried to the host's protein by
+  alignment. Deletions, insertions and unresolved positions are counted and not modelled, as in H18.
 - *Readouts and rule: H16's and H17's, unchanged* (`mitoport cybrid-readout`). The two scores read are `stab_all`
   and `stab_contact`. A score counts if it beats divergence (`d_all`) on all three: T1 a more negative Spearman than
   −0.36 over the 13 stated activities; T2 an area above 0.74 for 9 reduced against 20 not; T3 the most reduced
@@ -2523,8 +2531,9 @@ measured complexes fail?
 - *Controls.* `stab_control` beside the scores (a score that only repeats it is divergence again). The same run with
   the repository's two earlier weights: `proteinmpnn.pt`, plain ProteinMPNN (the first proposal), and
   `stability_finetuned.pt`. The model draws random noise: seeds 0, 1 and 2, and the spread over them reported beside
-  every score; a readout whose verdict changes with the seed is said as not settled. The run with seed 0 twice, the
-  two tables compared byte for byte. An empty set of substitutions must give exactly 0.
+  every score; a readout whose verdict changes with the seed is said as not settled. The whole run twice, the two
+  sets of tables compared byte for byte. An empty set of substitutions must give exactly 0, and a table where it
+  does not is refused.
 - *Known weaknesses, said in advance.* The model learned from small soluble domains and from measured soluble
   complexes, mostly with one to a few substitutions; here it scores membrane complexes of up to 45 chains with
   tens to hundreds of substitutions at once, far outside what it was tested on. Its "partners alone" are the same
