@@ -2852,3 +2852,50 @@ to work worse, does a score of the differing alleles name the worse genome more 
   cell lines) could not be opened. Found while collecting, said before any score: the build holds 4 insects, so
   `cons` is not assessed for flies; and a further case, a lethal incompatibility mapped to three proteins of
   complex I in swordtail hybrids (Moran et al. 2024), is not read yet.
+
+## Review of the cybrid comparisons, 2026-11-22: errors found, not yet corrected
+
+The maintainer asked for an independent check of every cybrid comparison after H28 and H29 failed ("maybe there was
+some mistake on data processing or setup"). Two reviewers read the code and recomputed tables by hand, without
+running any model. Neither found an error that changes a verdict. What they found wrong stands here until each is
+corrected in code, with a test, and the tables it touches are made again; the entries above still hold the numbers
+as first computed.
+
+- *H16's counts for mouse hosts are too high in places* (`cybrid.on_human`). Host and donor are each aligned to the
+  human protein and compared on human positions; where one of the two has a gap against human and the other does
+  not, residues that are equal are counted as different. M. caroli's ATP8 differs from the mouse's at 5 residues
+  and is counted as 13; complex V for that donor is 23 where the direct count is 15. Complex I: M. spretus 71
+  against 64 direct, M. terricolor 140 against 133, M. pahari 237 against 227, Otomys 325 against 316. This is the
+  baseline `d_all` (and `d_contact`, `f_*`) that H17, H28 and H31 were held against, and H17's ESM sums use the
+  same columns. The donors' order in complex I does not change; complex V is not measured in mouse hosts.
+- *A false first substitution in chimpanzee and bonobo ND1.* Both records give ND1 as partial at its start; the
+  first residue present is aligned to the human methionine and counted as a change. One of about 103 for those
+  donors, in `d_all` and in H28's sets.
+- *Two tRNA genes of the Chinese hamster are compared on the wrong strand.* Its record gives tRNA-Asn and tRNA-Cys
+  on the plus strand; every other record has them on the minus strand. `nt_trna_d` for mouse against it is 280
+  where about 220 is right, and `kron_trna` 254.7 against the golden hamster's 94.9. The donor has no measured
+  activity, so only its totals in T4 move, and no T4 outcome does.
+- *The Chinese hamster's control region is left out* because its record has no such feature, though the 881 bases
+  after tRNA-Pro are there. Its `nt_dloop`, `nt_csb`, `kron_dloop` and H32's second check say "not assessed" where
+  they could be scored.
+- *H31's shuffled genome was never scored as the protocol says.* Only the rate at which the model's likeliest base
+  is the genome's own (about 30%) was reported for it.
+- *H29 and H31 treat changes of a start codon as ordinary amino acid changes* (m.7587T>C, harmful; m.3308T>C,
+  harmless), and H31's table calls m.7444G>A, a lost stop, nonsense, and m.7445A>G, harmful through a tRNA
+  precursor, synonymous. Too few to move an area.
+- *Said too little in H28's entry:* the model's base weights are ProteinMPNN's for soluble proteins, and all 13
+  proteins scored are membrane proteins.
+- *What the baseline's 0.74 is.* Within one complex `d_all` separates reduced from not reduced with an area of 0.55
+  (I), 0.71 (III) and 0.72 (IV); pooled, part of its 0.74 is that complex I is the largest complex and the one
+  most often reduced. The model's `stab_all` within complexes: 0.35, 0.57, 0.17. No score here ranks donors well.
+- *Possibly missing measurements.* The 2003 paper on mouse cells with other murids' mtDNA may give activities in a
+  figure for donors the table holds as "no value in the text"; seen from its abstract only. To be read in full.
+- *Checked and found right:* every mtDNA-encoded chain's residues against the structures (no offset, no internal
+  gap), the accessions' species, the pairing of genes between records, strands, the genetic code and codon phase,
+  the placement of the conserved blocks, KronGenome's coordinates and sums, the direction and arithmetic of T1 to
+  T4, the labels and directions of the variant tests, and that no pair is dropped or doubled in any table.
+- *Not checked by the reviewers:* any model inference; H17's co-evolution scores and nuclear partner sequences;
+  the figures and tables behind the cybrid papers' abstracts.
+- *H28's positive control* (`slurm/h28-stab-control.py`, added after the result): the pipeline's reading of a
+  structure and its call of the model on complexes of the model's own benchmark, beside the authors' predictions.
+  Its result is added here when the job ends.
