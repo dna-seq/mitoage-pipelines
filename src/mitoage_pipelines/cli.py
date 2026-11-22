@@ -121,6 +121,14 @@ def download_stabddg() -> None:
     download.stabddg(paths.STABDDG, paths.MANIFEST)
 
 
+@download_app.command("variants")
+def download_variants() -> None:
+    """H29: gnomAD v3.1's table of mitochondrial sites and ClinVar's mitochondrial records into data/input/variants,
+    with each file's SHA-256 in the manifest."""
+    from .mitoport import variant_stab
+    variant_stab.fetch(paths.VARIANTS, paths.MANIFEST)
+
+
 @download_app.command("hibernation")
 def download_hibernation() -> None:
     """H23-H25: the bat hibernation table of Wilkinson & Adams 2019 from DRUM (SHA-256 pinned), and the mammal table of
@@ -952,6 +960,54 @@ def mitoport_cybrid_stab_readout(out: Out = paths.CYBRID_OUT) -> None:
     """H28: H16's readouts for StaB-ddG's scores beside divergence, and the rule's verdict for the mean and each seed."""
     from .mitoport import cybrid
     cybrid.readout_stab(out)
+
+
+@mitoport_app.command("variant-stab")
+def mitoport_variant_stab(
+    complex_: Annotated[Optional[str], typer.Option("--complex", help="I, III, IV or V (with --chunk)")] = None,
+    chunk: Annotated[Optional[int], typer.Option(help="which share of the complex's variants, 0-based")] = None,
+    task: Annotated[Optional[int], typer.Option(help="instead of the two: the 0-based index of the task, as --list prints them (for a Slurm array)")] = None,
+    list_: Annotated[bool, typer.Option("--list", help="print the tasks and the variants kept, and stop")] = False,
+    gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+    source: Annotated[Path, typer.Option("--source", help="folder of `download variants`")] = paths.VARIANTS,
+    weights: Annotated[Path, typer.Option("--weights", help="folder of the weights of `download stabddg`")] = paths.STABDDG,
+    out: Annotated[Path, typer.Option("--out", help="folder the tables are written to")] = paths.VARIANT_OUT,
+    device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
+) -> None:
+    """H29: StaB-ddG's predicted change of stability for a share of a complex's human missense variants, harmful
+    (ClinVar's expert panel) and harmless (common in gnomAD), each alone on the human structure."""
+    from .mitoport import variant_stab
+    tasks = variant_stab.tasks()
+    if list_:
+        v, counts = variant_stab.variants(gb, source / "clinvar_mt.json", source / "gnomad.chrM.tsv")
+        print(v.groupby(["gene", "label"]).size().unstack(fill_value=0).to_string())
+        for k, n in counts.items():
+            print(f"{k}: {n}")
+        for i, (c, k) in enumerate(tasks):
+            print(i, c, k, len(variant_stab.share(v, c, k)))
+        return
+    if task is not None:
+        complex_, chunk = tasks[task]
+    if complex_ is None or chunk is None:
+        raise SystemExit("give --task, or --complex and --chunk")
+    variant_stab.run(complex_, chunk, gb, pdb_dir, source, weights, out, device)
+
+
+@mitoport_app.command("variant-stab-collect")
+def mitoport_variant_stab_collect(data: Build = paths.BUILD,
+                                  out: Annotated[Path, typer.Option("--out", help="folder of the tasks' tables")] = paths.VARIANT_OUT) -> None:
+    """H29: variant_scores.tsv from the tasks' tables, with the two baselines; a task without a table is said."""
+    from .mitoport import variant_stab
+    from .mitoport.complexes import COMPLEXES
+    variant_stab.collect(out, data, lambda c: COMPLEXES[c].work)
+
+
+@mitoport_app.command("variant-stab-readout")
+def mitoport_variant_stab_readout(out: Annotated[Path, typer.Option("--out", help="folder of variant_scores.tsv")] = paths.VARIANT_OUT) -> None:
+    """H29: the rule (the area for harmful against harmless, and against the two baselines) and what is reported beside it."""
+    from .mitoport import variant_stab
+    variant_stab.readout(out)
 
 
 @mitoport_app.command("partners")

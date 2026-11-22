@@ -179,6 +179,11 @@ uv run mitoage download stabddg                   # its three weight files, each
 uv run mitoage mitoport cybrid-stab --list        # the 44 tasks; one with --task N, or --host, --donor and --complex
 uv run mitoage mitoport cybrid-stab-collect && uv run mitoage mitoport cybrid-stab-readout
 
+# H29: does the same model tell harmful from harmless human variants within a protein (slurm/h29-variants.sbatch)
+uv run mitoage download variants                  # gnomAD v3.1's mitochondrial sites and ClinVar's mitochondrial records
+uv run mitoage mitoport variant-stab --list       # the variants kept per gene and the 19 tasks; one with --task N
+uv run mitoage mitoport variant-stab-collect && uv run mitoage mitoport variant-stab-readout
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -361,8 +366,13 @@ not interact; `slurm/h18-energy-mutations.py` breaks 12 guards one at a time.
 `tests/test_cybrid_stab.py` (H28) checks by hand which chains make the system, how a break in a chain is kept, where a
 substitution lands in the complex and in each partner, the sets, the collection (a missing task, an empty set that is
 not 0) and the rule's verdict; on 5Z62 one task with a counting stand-in for the model; and with the model installed,
-that no substitution gives exactly 0 and that a seed repeats. `slurm/h28-stab-mutations.py` breaks 26 guards one at a
+that no substitution gives exactly 0, that a seed repeats, and that the three terms give the model's own number. `slurm/h28-stab-mutations.py` breaks 26 guards one at a
 time.
+
+`tests/test_variant_stab.py` (H29) checks on a small made-up genome what a base change does to a protein on either
+strand in the mitochondrial code, which variants are kept and which left out, how they are dealt out to the tasks and
+placed on every copy of a chain, the scoring's arithmetic, and the rule's readout on made-up tables;
+`slurm/h29-variants-mutations.py` breaks 19 guards one at a time.
 
 ## Licence
 

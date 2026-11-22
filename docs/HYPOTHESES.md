@@ -2554,11 +2554,17 @@ measured complexes fail?
   divergence with 30 points, and what remains is dynamics at a few named sites (cytochrome b near the Rieske protein),
   not another score over all contacts.
 
-## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (proposed; H28's check)
+## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (code written, not run; H28's check)
 
-**State: proposed on 2026-11-22, no code, not run.** The maintainer asked whether published work can validate the
-method; told of this check, he had not answered when it was written. It is written before any score, and runs after
-H28 unless he says no.
+**State: proposed on 2026-11-22; the code followed the same day (`mitoport variant-stab`), not run.** The maintainer
+asked whether published work can validate the method; told of this check, he had not answered when it was written.
+It is written before any score, and runs after H28 unless he says no.
+*Made exact with the code, before any score:* the control weights run with seed 0 only; the nuclear partner alone
+holds no substitution, so its term is exactly 0 and is not computed; variants scored in one call (four at a time)
+share their draws, as in the model's own script; the site's variability is counted among the build's Mammalia.
+Counted from the sources as fetched on 2026-11-22, with no score involved: 41 harmful and 331 harmless
+variant-and-gene rows; none harmful in COX1, COX3, CYTB or ND2, one in COX2, so the test speaks for complexes I
+and V and says nothing for III and almost nothing for IV. Only ATP6 and ND6 have 10 harmful variants.
 **Question.** H28 gives a number per ported protein, and the cybrids cannot test it protein by protein. The one data
 set that is per protein and not about contacts is human variation: does StaB-ddG's stability term separate
 confirmed disease variants of the 13 mtDNA-encoded proteins from variants common in healthy people?

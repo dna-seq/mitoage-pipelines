@@ -40,6 +40,7 @@ MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and 
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
 CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the cybrid hosts and donors (H16)
 STABDDG = INPUT / "stabddg"              # the three weight files of StaB-ddG at its pinned commit (H28)
+VARIANTS = INPUT / "variants"            # gnomad.chrM.tsv and clinvar_mt.json: human mitochondrial variants (H29)
 TECH_GB = INPUT / "technology"            # refseq/ and source/: GenBank records the sequencing technology is read from (H8's control)
 HIBERNATION = INPUT / "hibernation"        # the bat table of Wilkinson & Adams 2019 (DRUM) and Heldstab et al. 2018 (Dryad, placed by hand)
 
@@ -94,6 +95,7 @@ RELAX_OUT = LONGEVITY_OUT / "relax"       # <GENE>.relax.json, as HyPhy writes t
 PEPTIDES_OUT = OUTPUT / "peptides"        # <peptide>.tsv, summary.txt
 MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv, coembed.tsv
 IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
+VARIANT_OUT = MITOPORT_OUT / "variants"   # variants/<complex>.<task>.tsv, variant_scores.tsv, h29_summary.tsv (H29)
 CYBRID_OUT = MITOPORT_OUT / "cybrid"      # positions.tsv, scores.tsv, calibration.tsv, summary.tsv (H16); coev_*, esm_*, h17_* (H17)
 STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
 ADAPT_OUT = OUTPUT / "adaptations"        # traits, pairs, fits, selection/, coupling/, readout (H21-H25)
