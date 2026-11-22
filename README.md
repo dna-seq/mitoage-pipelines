@@ -178,6 +178,7 @@ uv sync --group stab                              # StaB-ddG at its pinned commi
 uv run mitoage download stabddg                   # its three weight files, each kept only with its pinned SHA-256
 uv run mitoage mitoport cybrid-stab --list        # the 44 tasks; one with --task N, or --host, --donor and --complex
 uv run mitoage mitoport cybrid-stab-collect && uv run mitoage mitoport cybrid-stab-readout
+uv run mitoage mitoport cybrid-dna                # exploratory: nucleotide divergence (genes, rRNA, tRNA, humanin, MOTS-c) through H16's readouts
 
 # H29: does the same model tell harmful from harmless human variants within a protein (slurm/h29-variants.sbatch)
 uv run mitoage download variants                  # gnomAD v3.1's mitochondrial sites and ClinVar's mitochondrial records

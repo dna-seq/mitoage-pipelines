@@ -2553,6 +2553,16 @@ measured complexes fail?
 - *If it fails:* with H16 to H18, four kinds of score would then agree that the published cybrids cannot be told from
   divergence with 30 points, and what remains is dynamics at a few named sites (cytochrome b near the Rieske protein),
   not another score over all contacts.
+- *Exploratory baselines, added on 2026-11-22 after H28's readout had been computed and read (the readout itself is
+  written up below once the second run is compared).* The maintainer asked whether DNA or amino acid divergence
+  matters more for a score, and whether the peptides read from the rRNA genes could add to the proteins. Every score
+  of H16 to H28 counts or rates amino acid changes. `mitoport cybrid-dna` adds, from the same records: the nucleotide
+  differences between host and donor in the complex's genes (`nt_cds_d`, `nt_cds_f`), in the two rRNA genes and in
+  the 22 tRNA genes (per pair, the same on each complex), and within the reading frames of humanin (16S rRNA gene,
+  places 2633 to 2707 of NC_012920.1) and MOTS-c (12S rRNA gene, 1343 to 1393), carried to each species by alignment
+  of the rRNA gene. They go through H16's readouts beside `d_all` and `f_all`. No rule: they were chosen after the
+  results were known, so nothing here passes or fails, and a pair-level score cannot say which complex is reduced
+  (it is left out of T2b and T3). The control region is not scored. Written before the first of these numbers.
 
 ## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (code written, not run; H28's check)
 

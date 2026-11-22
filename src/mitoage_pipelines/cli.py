@@ -841,6 +841,14 @@ def mitoport_cybrid(
 
 
 CybridGb = Annotated[Path, typer.Option("--gb", help="the GenBank records of `download cybrid`")]
+
+
+@mitoport_app.command("cybrid-dna")
+def mitoport_cybrid_dna(gb: "CybridGb" = paths.CYBRID_GB / "records.gb", out: Out = paths.CYBRID_OUT) -> None:
+    """Exploratory, beside H16: nucleotide divergence between each cybrid's host and donor in the complex's genes,
+    the rRNA and tRNA genes and the reading frames of humanin and MOTS-c, through H16's readouts (after `mitoport cybrid`)."""
+    from .mitoport import cybrid_dna
+    cybrid_dna.main(gb, out)
 PartnerAln = Annotated[Path, typer.Option("--nucaln", help="the vertebrate alignments of the nuclear subunits (`iface-align` on the partners' selections)")]
 
 
