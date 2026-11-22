@@ -843,6 +843,14 @@ def mitoport_cybrid(
 CybridGb = Annotated[Path, typer.Option("--gb", help="the GenBank records of `download cybrid`")]
 
 
+@mitoport_app.command("cybrid-blocks")
+def mitoport_cybrid_blocks(gb: "CybridGb" = paths.CYBRID_GB / "records.gb", out: Out = paths.CYBRID_OUT) -> None:
+    """H32: the differences within the control region's conserved sequence blocks against random sets of windows of
+    the same lengths, on the cybrids' measured activities."""
+    from .mitoport import cybrid_blocks
+    cybrid_blocks.main(gb, out)
+
+
 @mitoport_app.command("cybrid-dna")
 def mitoport_cybrid_dna(gb: "CybridGb" = paths.CYBRID_GB / "records.gb", out: Out = paths.CYBRID_OUT) -> None:
     """Exploratory, beside H16: nucleotide divergence between each cybrid's host and donor in the complex's genes,
