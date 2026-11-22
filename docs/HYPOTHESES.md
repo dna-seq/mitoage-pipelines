@@ -2691,8 +2691,8 @@ change.**
   of the baseline: the number of different bases the mammals of the build hold at the place (fewer is the
   prediction of harm), read from the build's codon and rRNA alignments. The build has no tRNA alignment: for tRNA
   variants the baseline is not assessed, their area is reported against 0.70 alone and enters no comparison. A
-  second baseline, said in advance to be unfair to the model in the other direction: harmless variants are by
-  definition frequent in people, and the model saw one human reference, not human variation.
+  weakness of this test, said in advance: the harmless variants are by definition frequent in people, and the
+  model saw reference genomes of species, not human variation.
 - *Controls.* The table computed twice and compared byte for byte (the model draws nothing at inference; a
   difference means the hardware). The host's own base must get a difference of exactly 0 against itself. A genome
   with the bases shuffled within each gene, scored the same way, as the floor of what composition alone gives.
