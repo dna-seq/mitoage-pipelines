@@ -2562,10 +2562,14 @@ H28 unless he says no.
 **Question.** H28 gives a number per ported protein, and the cybrids cannot test it protein by protein. The one data
 set that is per protein and not about contacts is human variation: does StaB-ddG's stability term separate
 confirmed disease variants of the 13 mtDNA-encoded proteins from variants common in healthy people?
-- *Variants.* Missense variants only. Harmful: MITOMAP's confirmed pathogenic. Harmless: variants common in the
-  population (a frequency threshold on MITOMAP's GenBank frequencies or gnomAD's homoplasmic frequencies). The exact
-  files, their dates and the threshold are fixed with the code, before any score; a variant in both lists is left out
-  and counted.
+- *Variants.* Single-nucleotide missense variants of the 13 protein genes, the amino-acid change worked out here
+  from the human reference (NC_012920.1) and not taken from either source. Harmful: ClinVar's mitochondrial records
+  classified pathogenic or likely pathogenic and reviewed by its expert panel. Harmless: gnomAD v3.1's variants that
+  pass its filters and are homoplasmic in at least 1 of 1,000 people (`AF_hom` of 0.001 or more). A variant in both
+  lists, or pathogenic in ClinVar at any review level, is left out of the harmless ones and counted. The fetched
+  files' SHA-256 go into the manifest. (Changed on 2026-11-22, before any code: MITOMAP's confirmed list was the
+  first choice, but MITOMAP serves its pages to a browser only. ClinVar holds 93 such single-nucleotide records
+  over the whole genome, tRNA genes included; how many are missense is counted by the code and may be few.)
 - *Score.* Each variant alone on the human structures of H28 (5XTD, 5XTE, 5Z62, 8H9S), every copy of the chain, the
   weights `stabddg`, seeds 0, 1 and 2: `fold`, the predicted change in the stability of the whole system, and beside
   it the change of binding. A variant at an unresolved position is not assessed and counted.
