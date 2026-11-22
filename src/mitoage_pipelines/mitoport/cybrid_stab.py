@@ -24,12 +24,17 @@ Fixed here, before any score was computed:
   `control`, those at the contact residues and at their burial-matched controls. Contacts and controls are H17's
   (`mitoport burial`, sites.tsv of the human structures), carried to the host's protein by a global alignment with
   the human one. `none`, no substitution, must give exactly 0.
+- Added on 2026-11-22, after two tasks had started and before any readout (the maintainer asked for a verdict per
+  ported protein): `gene:<GENE>`, the substitutions of one mtDNA-encoded protein alone, every copy, with the weights
+  `stabddg` only; and beside every prediction its three terms, of which `fold` is the predicted change in the
+  stability of the whole system (positive for less stable), substitutions anywhere and not only at contacts. The
+  terms are computed in the order the model's own code computes them, so the binding prediction is the same number.
 - Weights: `stabddg` (the score), and as controls `proteinmpnn` (plain ProteinMPNN) and `stability_finetuned`. Seeds
   SEEDS; the model's defaults otherwise (backbone noise 0.1, 20 samples, antithetic variates).
 
 `cybrid-stab` runs one (host, donor, complex) and writes stab/<host>.<donor>.<complex>.tsv, one row per weights, seed
-and set; `cybrid-stab-collect` joins them into stab_scores.tsv (the mean over the seeds and its spread) and
-stab_by_seed.tsv. Needs `uv sync --group stab` and the weights (`mitoage download stabddg`).
+and set; `cybrid-stab-collect` joins them into stab_scores.tsv (the mean over the seeds and its spread),
+stab_by_seed.tsv and stab_genes.tsv (one row per host, donor, complex and protein). Needs `uv sync --group stab` and the weights (`mitoage download stabddg`).
 """
 from pathlib import Path
 
@@ -53,6 +58,7 @@ NOISE = 0.1
 CONTACT_A = 4.5
 GAP_CAP = 33
 SETS = ("all", "contact", "control", "none")
+GENE = "gene:"            # a set of one protein's substitutions is named gene:<GENE>
 ALPHABET = "ACDEFGHIKLMNPQRSTVWYX"
 BACKBONE = ("N", "CA", "C", "O")
 
@@ -161,11 +167,14 @@ def plan(chains: list[dict], mt_chain: dict[int, tuple[str, dict[int, int]]], ho
     """({set: {(chain index, residue index): the donor's residue}}, positions not modelled) for one (host, donor,
     complex); every copy of a chain carries its substitutions."""
     sets = {s: {} for s in SETS}; unmodelled = 0
+    for g in sorted({g for g, _ in mt_chain.values()}):
+        sets[GENE + g] = {}
     for c, (g, to_protein) in sorted(mt_chain.items()):
         subs, u = substitutions(chains[c]["seq"], to_protein, host[g], donor_on[g])
         unmodelled += u
         for i, aa in subs.items():
             sets["all"][(c, i)] = aa
+            sets[GENE + g][(c, i)] = aa
             grp = groups[g].get(to_protein[i])
             if grp:
                 sets[grp][(c, i)] = aa
@@ -183,16 +192,19 @@ def load_model(weights: Path, device: str, noise: float = NOISE):
     return StaBddG(pmpnn=pm, use_antithetic_variates=True, noise_level=noise, device=device).to(device).eval()
 
 
-def predict(model, structs: tuple[dict, dict, dict], seqs: tuple[np.ndarray, np.ndarray, np.ndarray], samples: int = MC_SAMPLES) -> float:
-    """The predicted change of binding energy for one set of substitutions, as the repository's own script computes
-    it: the mean over `samples` draws, sign turned so that positive is weaker binding."""
+def predict(model, structs: tuple[dict, dict, dict], seqs: tuple[np.ndarray, np.ndarray, np.ndarray], samples: int = MC_SAMPLES) -> dict:
+    """One set of substitutions: {ddG, fold, fold_one, fold_two}, each the mean over `samples` draws with the sign
+    turned so that positive is worse. `ddG` is the predicted change of binding energy as the repository's own script
+    computes it, fold - fold_one - fold_two; `fold` is the model's folding term for the whole system and the other
+    two those of the partners alone. The three terms are asked in the model's own order, each with its own draw."""
     import torch
     vals = []
     with torch.no_grad():
         t = [torch.from_numpy(s)[None, :].to(model.device) for s in seqs]
         for _ in range(samples):
-            vals.append(float(model(*structs, *t).squeeze().cpu()))
-    return -float(np.mean(vals))
+            vals.append([float(model.folding_ddG(d, s).squeeze().cpu()) for d, s in zip(structs, t)])
+    whole, one, two = (-np.mean(vals, axis=0)).tolist()
+    return {"ddG": whole - (one + two), "fold": whole, "fold_one": one, "fold_two": two}
 
 
 def sha256(path: Path) -> str:
@@ -238,11 +250,12 @@ def run(host: str, donor: str, complex_: str, gb: Path, pdb_dir: Path, sites_dir
             if model_for is None:
                 import torch
                 torch.manual_seed(seed)
-            for s in SETS:
+            for s in [*SETS, *(k for k in sorted(sets) if k.startswith(GENE) and sets[k] and name == "stabddg")]:
                 seqs = tuple(encode(d["seq"], {at[k]: aa for k, aa in sets[s].items() if k in at}) for d, at in parts)
                 v = predict(model, tuple(d for d, _ in parts), seqs, samples)
-                rows.append({**base, "weights": name, "seed": seed, "set": s, "substituted": len(sets[s]), "ddG": v})
-                print(f"{host} {donor} {complex_} {name} seed {seed} {s}: {len(sets[s])} substitutions, ddG {v:.4f}", flush=True)
+                rows.append({**base, "weights": name, "seed": seed, "set": s, "substituted": len(sets[s]), **v})
+                print(f"{host} {donor} {complex_} {name} seed {seed} {s}: {len(sets[s])} substitutions, "
+                      f"ddG {v['ddG']:.4f}, fold {v['fold']:.4f}", flush=True)
     res = pd.DataFrame(rows)
     d = out / "stab"; d.mkdir(parents=True, exist_ok=True)
     f = d / f"{host}.{donor}.{complex_}.tsv"
@@ -268,17 +281,25 @@ def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS) -> pd.DataFrame
     if not tabs:
         raise SystemExit("no table to collect")
     long = pd.concat(tabs, ignore_index=True)
-    bad = long[(long.set == "none") & (long.ddG != 0)]
+    bad = long[(long.set == "none") & ((long.ddG != 0) | (long.fold != 0))]
     if len(bad):
         raise SystemExit(f"the empty set is not 0 in {len(bad)} rows: the two sides of a prediction do not share their draws")
-    long = long[long.set != "none"]
-    long["score"] = long.weights.map(PREFIX) + "_" + long.set
     key = ["host", "donor", "complex"]
+    genes = long[long.set.str.startswith(GENE)].assign(gene=lambda t: t.set.str[len(GENE):])
+    gg = genes.groupby(key + ["gene"], sort=False)
+    per_gene = pd.concat([gg.substituted.first(), gg.seed.nunique().rename("seeds"), gg.fold.mean().rename("stab_fold"),
+                          gg.fold.std(ddof=1).rename("stab_fold_sd"), gg.ddG.mean().rename("stab_bind"),
+                          gg.ddG.std(ddof=1).rename("stab_bind_sd")], axis=1).reset_index()
+    per_gene.to_csv(out / "stab_genes.tsv", sep="\t", index=False, float_format="%.5f")
+    long = long[(long.set != "none") & ~long.set.str.startswith(GENE)]
+    fold = long[long.set == "all"].assign(set="fold_all", ddG=lambda t: t.fold)     # the whole system's stability, every substitution
+    long = pd.concat([long, fold], ignore_index=True)
+    long["score"] = long.weights.map(PREFIX) + "_" + long.set
     by_seed = long.pivot_table(index=key + ["seed"], columns="score", values="ddG", sort=False).reset_index()
     by_seed.columns.name = None
     g = long.groupby(key + ["score"], sort=False).ddG
     mean = g.mean().unstack("score"); sd = g.std(ddof=1).unstack("score").add_suffix("_sd")
-    n = long[long.weights == "stabddg"].pivot_table(index=key, columns="set", values="substituted", aggfunc="first", sort=False).add_prefix("n_")
+    n = long[(long.weights == "stabddg") & (long.set != "fold_all")].pivot_table(index=key, columns="set", values="substituted", aggfunc="first", sort=False).add_prefix("n_")
     info = long.groupby(key, sort=False)[["pdb", "chains", "mt_chains", "places", "unmodelled", "device", "samples"]].first()
     seeds = long.groupby(key, sort=False).seed.nunique().rename("seeds")
     res = pd.concat([info, seeds, n, mean, sd], axis=1).reset_index()
@@ -287,5 +308,6 @@ def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS) -> pd.DataFrame
     by_seed.to_csv(out / "stab_by_seed.tsv", sep="\t", index=False, float_format="%.5f")
     with pd.option_context("display.width", 250, "display.max_rows", 200, "display.max_columns", 40):
         print(res.to_string(index=False, float_format=lambda v: f"{v:.3f}"))
-    print("wrote", out / "stab_scores.tsv", out / "stab_by_seed.tsv")
+        print(per_gene.to_string(index=False, float_format=lambda v: f"{v:.3f}"))
+    print("wrote", out / "stab_scores.tsv", out / "stab_by_seed.tsv", out / "stab_genes.tsv")
     return res

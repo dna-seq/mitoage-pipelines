@@ -449,7 +449,7 @@ def readout_energy(out: Path, measurements: Path = MEASUREMENTS) -> pd.DataFrame
 
 # --- H28: the same readouts for StaB-ddG's predicted binding energy -----------------------------------------
 H28_PRIMARY = ("stab_all", "stab_contact")
-H28_OTHER = ("stab_control", "mpnn_all", "mpnn_contact", "mpnn_control", "stabfold_all", "stabfold_contact", "stabfold_control")
+H28_OTHER = ("stab_control", "stab_fold_all", "mpnn_all", "mpnn_contact", "mpnn_control", "stabfold_all", "stabfold_contact", "stabfold_control")
 H28_T3_MIN = 5
 
 

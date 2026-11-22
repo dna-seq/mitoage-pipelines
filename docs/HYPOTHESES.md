@@ -2490,6 +2490,16 @@ the code, before the first score; any change after this date is said as a change
 contacts and controls are H17's (the human structures' sites, not a new map on the host's structure); a break in a
 chain is kept as masked places (chains are not renumbered); the score is the mean over the three seeds; the whole
 run, not seed 0 alone, is repeated for the byte comparison.
+*Added on 2026-11-22, after two tasks had started (their first lines of output were seen, no readout was computed)
+and restarted from the beginning:* the maintainer asked for a verdict per ported protein, not a statement about
+contacts ("porting this protein will have no effect but this one will break efficiency"). Two outputs are added and
+the two scores read by the rule stay as fixed. (1) Per protein: for each donor and each mtDNA-encoded protein ported
+alone, `stab_fold`, the model's predicted change in the stability of the whole system (substitutions anywhere in the
+protein), and `stab_bind`, its change of binding to the rest (stab_genes.tsv). No rule is fixed for them: the
+measurements are per complex, so only cytochrome b, one protein and one complex, is tested directly; for the other
+twelve the numbers are predictions the cybrids can neither confirm nor refute one by one. (2) Per complex,
+`stab_fold_all`, the same stability term for all substitutions, reported beside the scores and claimed as nothing.
+What ground a per-protein number has is H29's question.
 **Question.** Counts (H16), co-evolved pairs and ESM-2 (H17) and a force-field energy (H18) do not find the cybrids'
 defects better than divergence. ESM-2 never saw the partner in space, and the energy does not repeat between builds
 of one structure. Does a model trained to predict how substitutions change the binding energy of two partners, given
@@ -2543,3 +2553,35 @@ measured complexes fail?
 - *If it fails:* with H16 to H18, four kinds of score would then agree that the published cybrids cannot be told from
   divergence with 30 points, and what remains is dynamics at a few named sites (cytochrome b near the Rieske protein),
   not another score over all contacts.
+
+## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (proposed; H28's check)
+
+**State: proposed on 2026-11-22, no code, not run.** The maintainer asked whether published work can validate the
+method; told of this check, he had not answered when it was written. It is written before any score, and runs after
+H28 unless he says no.
+**Question.** H28 gives a number per ported protein, and the cybrids cannot test it protein by protein. The one data
+set that is per protein and not about contacts is human variation: does StaB-ddG's stability term separate
+confirmed disease variants of the 13 mtDNA-encoded proteins from variants common in healthy people?
+- *Variants.* Missense variants only. Harmful: MITOMAP's confirmed pathogenic. Harmless: variants common in the
+  population (a frequency threshold on MITOMAP's GenBank frequencies or gnomAD's homoplasmic frequencies). The exact
+  files, their dates and the threshold are fixed with the code, before any score; a variant in both lists is left out
+  and counted.
+- *Score.* Each variant alone on the human structures of H28 (5XTD, 5XTE, 5Z62, 8H9S), every copy of the chain, the
+  weights `stabddg`, seeds 0, 1 and 2: `fold`, the predicted change in the stability of the whole system, and beside
+  it the change of binding. A variant at an unresolved position is not assessed and counted.
+- *Baselines the model must beat.* The BLOSUM62 score of the substitution, and the variability of the site among the
+  build's mammals (how many different amino acids its alignment column holds). A model that only says "conserved
+  sites matter" adds nothing to these.
+- *Rule.* Over all proteins together, the area under the ROC curve for harmful against harmless is at least 0.70,
+  and above each baseline's on the same variants, the difference's 95% bootstrap interval (resampling variants)
+  lying above 0. Both, or the model does not count for per-protein verdicts. Per protein, the area is reported where
+  the protein has at least 10 variants of each kind, and claimed as nothing.
+- *Controls.* The weights `proteinmpnn` and `stability_finetuned`; the split by contact and not contact, reported;
+  the run twice, compared byte for byte.
+- *Known weaknesses, said in advance.* Disease variants were found partly because they sit at conserved sites, which
+  favours every score, baselines included. Common variants are a human's own, so the structure's sequence is close
+  to them. The model's parent saw these structures in training and may simply prefer the deposited residue. And the
+  test is of one substitution at a time, while a donor carries tens to hundreds: passing here does not show the
+  model adds them up rightly.
+- *What follows.* Pass: H28's per-protein numbers may be shown as predictions with this evidence named. Fail: no
+  per-protein verdict is printed from this model, whatever H28's complex-level result.

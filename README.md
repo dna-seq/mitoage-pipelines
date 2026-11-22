@@ -361,7 +361,7 @@ not interact; `slurm/h18-energy-mutations.py` breaks 12 guards one at a time.
 `tests/test_cybrid_stab.py` (H28) checks by hand which chains make the system, how a break in a chain is kept, where a
 substitution lands in the complex and in each partner, the sets, the collection (a missing task, an empty set that is
 not 0) and the rule's verdict; on 5Z62 one task with a counting stand-in for the model; and with the model installed,
-that no substitution gives exactly 0 and that a seed repeats. `slurm/h28-stab-mutations.py` breaks 21 guards one at a
+that no substitution gives exactly 0 and that a seed repeats. `slurm/h28-stab-mutations.py` breaks 26 guards one at a
 time.
 
 ## Licence

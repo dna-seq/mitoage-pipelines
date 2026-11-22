@@ -86,18 +86,26 @@ class TestSets:
         assert sets["all"] == {(c, i): aa for c in (0, 2) for i, aa in ((0, "R"), (2, "I"), (6, "K"))}
         assert sets["contact"] == {(0, 0): "R", (2, 0): "R"} and sets["control"] == {(0, 2): "I", (2, 2): "I"}
         assert sets["none"] == {} and unmodelled == 4      # the deletion and the unresolved change, in each copy
+        assert sets["gene:X"] == sets["all"] and set(sets) == {*cs.SETS, "gene:X"}
+
+    def test_a_protein_alone_holds_its_own_substitutions_only(self):
+        chains = [chain("A", "KVLAWYRT", (0, 0, 0)), chain("B", "GSTNDEQK", (0, 4, 0))]
+        mt_chain = {0: ("X", {i: i + 1 for i in range(8)}), 1: ("Y", {i: i for i in range(8)})}
+        sets, _ = cs.plan(chains, mt_chain, {"X": "MKVLAWYRTE", "Y": "GSTNDEQK"}, {"X": list("MRVLAWYRTE"), "Y": list("GSTNDEQR")}, {"X": {}, "Y": {}})
+        assert sets["gene:X"] == {(0, 0): "R"} and sets["gene:Y"] == {(1, 7): "R"} and len(sets["all"]) == 2
 
 
 class TestCollect:
-    def table(self, tmp_path, host="homo-sapiens", donor="pan-paniscus", cx="IV", none=0.0, shift=0.0):
+    def table(self, tmp_path, host="homo-sapiens", donor="pan-paniscus", cx="IV", none=0.0, shift=0.0, fold_none=0.0):
         rows = []
         for w in cs.WEIGHTS:
             for seed in cs.SEEDS:
-                for k, s in enumerate(cs.SETS):
+                for k, s in enumerate([*cs.SETS, *(("gene:COX1", "gene:COX2") if w == "stabddg" else ())]):
                     v = none if s == "none" else 1.0 + k + seed + shift + (10 if w != "stabddg" else 0)
                     rows.append({"host": host, "donor": donor, "complex": cx, "pdb": "5Z62", "chains": 9, "mt_chains": 3, "places": 900,
                                  "unmodelled": 2, "device": "cpu", "samples": 20, "weights": w, "seed": seed, "set": s,
-                                 "substituted": 3 - k, "ddG": v})
+                                 "substituted": max(3 - k, 0), "ddG": v, "fold": fold_none if s == "none" else 3 * v,
+                                 "fold_one": v, "fold_two": v})
         d = tmp_path / "stab"; d.mkdir(exist_ok=True)
         pd.DataFrame(rows).to_csv(d / f"{host}.{donor}.{cx}.tsv", sep="\t", index=False)
 
@@ -116,9 +124,17 @@ class TestCollect:
         assert r.stab_all_sd == pytest.approx(1.0)
         by = pd.read_csv(tmp_path / "stab_by_seed.tsv", sep="\t")
         assert list(by.seed) == [0, 1, 2] and list(by.stab_contact) == [2.0, 3.0, 4.0] and "stab_none" not in by.columns
+        assert r.stab_fold_all == pytest.approx(6.0) and r.mpnn_fold_all == pytest.approx(36.0) and list(by.stab_fold_all) == [3.0, 6.0, 9.0]
+        assert not [c for c in res.columns if "gene" in c or "COX" in c]
+        g = pd.read_csv(tmp_path / "stab_genes.tsv", sep="\t")
+        assert list(g.gene) == ["COX1", "COX2"] and list(g.seeds) == [3, 3]
+        assert list(g.stab_bind) == [6.0, 7.0] and list(g.stab_fold) == [18.0, 21.0] and list(g.stab_bind_sd) == [1.0, 1.0]
 
     def test_an_empty_set_that_is_not_zero_is_refused(self, tmp_path):
         self.table(tmp_path, none=1e-6)
+        with pytest.raises(SystemExit):
+            cs.collect(tmp_path)
+        self.table(tmp_path, fold_none=1e-6)
         with pytest.raises(SystemExit):
             cs.collect(tmp_path)
 
@@ -149,30 +165,30 @@ def test_the_prediction_is_the_mean_of_the_draws_with_the_sign_turned():
 
     class Fixed:
         device = "cpu"
-        draws = iter([1.0, -4.0, -3.0])
+        draws = iter([-5.0, -1.0, -2.0, -9.0, -3.0, -2.0])       # whole, one, two; twice. The model's sign: negative is worse
 
-        def __call__(self, *a):
+        def folding_ddG(self, d, s):
             return torch.tensor([next(self.draws)])
 
     s = np.zeros(3, dtype=np.int64)
-    assert cs.predict(Fixed(), ({}, {}, {}), (s, s, s), samples=3) == pytest.approx(2.0)      # the model's own sign: negative is weaker
+    v = cs.predict(Fixed(), ({}, {}, {}), (s, s, s), samples=2)
+    assert v == pytest.approx({"fold": 7.0, "fold_one": 2.0, "fold_two": 2.0, "ddG": 3.0})
 
 
 class Counting:
-    """Stands in for the model. It answers in the model's own sign (negative is weaker binding): minus (twice the
-    places changed in the complex, less those changed in each partner). A substitution in an mtDNA-encoded chain is
-    seen in the complex and in partner one, so each counts once."""
+    """Stands in for the model, in the model's own sign (negative is worse): for the whole system minus twice the
+    places changed, for a partner alone minus the places changed. A substitution in an mtDNA-encoded chain is seen in
+    the system and in partner one, so it counts 2 in `fold` and 1 in the binding prediction."""
     device = "cpu"
 
     def __init__(self):
         self.calls = []
 
-    def __call__(self, whole, one, two, s_whole, s_one, s_two):
+    def folding_ddG(self, d, s):
         import torch
-        def changed(d, s):
-            return int((torch.from_numpy(cs.encode(d["seq"], {})) != s[0]).sum())
-        self.calls.append((changed(whole, s_whole), changed(one, s_one), changed(two, s_two)))
-        return torch.tensor([-(2.0 * changed(whole, s_whole) - changed(one, s_one) - changed(two, s_two))])
+        n = int((torch.from_numpy(cs.encode(d["seq"], {})) != s[0]).sum())
+        self.calls.append((d["name"], n))
+        return torch.tensor([-(1.0 if d["name"].endswith(("_mt", "_nuc")) else 2.0) * n])
 
 
 def test_one_task_on_the_real_structure_with_a_counting_model(tmp_path):
@@ -184,12 +200,17 @@ def test_one_task_on_the_real_structure_with_a_counting_model(tmp_path):
     models = {}
     res = cs.run("homo-sapiens", "pan-paniscus", "IV", gb, paths.PDB, lambda c: COMPLEXES[c].work, tmp_path, tmp_path,
                  seeds=(0, 1), samples=2, model_for=lambda name: models.setdefault(name, Counting()))
-    assert len(res) == len(cs.WEIGHTS) * 2 * len(cs.SETS) and set(res.weights) == set(cs.WEIGHTS)
+    genes = sorted(s for s in set(res.set) if s.startswith("gene:"))
+    assert genes and set(genes) <= {"gene:COX1", "gene:COX2", "gene:COX3"}
+    assert len(res) == 2 * (len(cs.WEIGHTS) * len(cs.SETS) + len(genes)) and set(res.weights) == set(cs.WEIGHTS)
+    assert set(res.set[res.weights != "stabddg"]) == set(cs.SETS)
     one = res[(res.weights == "stabddg") & (res.seed == 0)].set_index("set")
-    # every substitution sits in an mtDNA-encoded chain: counted twice in the complex, once in partner one, never in two
-    assert (one.ddG == one.substituted).all() and one.ddG["none"] == 0 and one.substituted["all"] > 0
+    # every substitution sits in an mtDNA-encoded chain: seen in the system and in partner one, never in partner two
+    assert (one.ddG == one.substituted).all() and (one.fold == 2 * one.substituted).all() and (one.fold_two == 0).all()
+    assert one.ddG["none"] == 0 and one.substituted["all"] > 0
     assert one.substituted["contact"] + one.substituted["control"] <= one.substituted["all"]
-    assert all(c[2] == 0 and c[0] == c[1] for m in models.values() for c in m.calls)
+    assert one.substituted[genes].sum() == one.substituted["all"]
+    assert all(n == 0 for m in models.values() for name, n in m.calls if name.endswith("_nuc"))
     assert res.mt_chains.iloc[0] == 3 and res.chains.iloc[0] > 3
     again = pd.read_csv(tmp_path / "stab" / "homo-sapiens.pan-paniscus.IV.tsv", sep="\t")
     assert len(again) == len(res)
@@ -228,8 +249,14 @@ def test_the_model_gives_zero_for_no_substitution_and_repeats_with_its_seed():
         torch.manual_seed(seed)
         return cs.predict(model, structs, tuple(cs.encode(d["seq"], {at[k]: aa for k, aa in subs.items() if k in at}) for d, at in parts), samples=3)
 
-    assert score({}, 0) == 0.0
+    assert score({}, 0) == {"ddG": 0.0, "fold": 0.0, "fold_one": 0.0, "fold_two": 0.0}
     a = score({(0, 5): "D", (0, 9): "G"}, 0)
-    assert math.isfinite(a) and a != 0.0
+    assert math.isfinite(a["ddG"]) and a["ddG"] != 0.0 and a["fold"] != 0.0 and a["fold_two"] == 0.0
     assert score({(0, 5): "D", (0, 9): "G"}, 0) == a
     assert score({(0, 5): "D", (0, 9): "G"}, 1) != a
+    # the three terms asked in the model's own order give the model's own binding prediction, draw for draw
+    torch.manual_seed(0)
+    seqs = [torch.from_numpy(cs.encode(d["seq"], {at[k]: aa for k, aa in {(0, 5): "D", (0, 9): "G"}.items() if k in at}))[None, :] for d, at in parts]
+    with torch.no_grad():
+        own = -float(np.mean([float(model(*structs, *seqs).squeeze()) for _ in range(3)]))
+    assert own == pytest.approx(a["ddG"], abs=1e-5)
