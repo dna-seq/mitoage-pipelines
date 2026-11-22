@@ -2582,7 +2582,8 @@ T3 3 of 6; `stab_contact` -0.24, 0.65, 3 of 6; the baseline `d_all` -0.36, 0.74,
 of amino acid differences on no test, with the mean of the seeds and on each seed. T4 holds for every score, the
 counts included (the donors that did not respire are the most distant). The controls say the same: plain
 ProteinMPNN and the stability-only weights are within 0.03 of the model on T2 (0.59 and 0.57 for all positions).
-Within single complexes, added after the first run and exploratory, the model is at or below chance for I and IV.
+Within single complexes, added after the first run and exploratory, `stab_all` is below chance for I (0.35) and
+IV (0.17), and `stab_contact` is 0.60 and 0.33.
 *Reading:* a learned energy of the ported proteins on the host's structure does not rank these donors better than
 counting what differs; H29 then showed the model does not tell harmful single substitutions either. No per-protein
 number of this model is shown as a verdict. Tables and their README: `results/h28/`.
