@@ -2480,7 +2480,7 @@ equally spaced; almost no species is "huge" and few birds are "tiny", so the ter
 classes. It says nothing of lifespans from other sources, which have no sample size, and nothing of fishes or
 reptiles, which the entry did not include.
 
-## H28. The cybrids by a learned binding-energy model: StaB-ddG on the hosts' complexes (code written, not run; H16's to H18's open item)
+## H28. The cybrids by a learned binding-energy model: StaB-ddG on the hosts' complexes (run: does not count, the model loses to the count of differences)
 
 **State: proposed on 2026-11-21 with ProteinMPNN; the maintainer agreed on 2026-11-22 and asked for a check of the
 2026 literature for a better model first. The check changed the model to StaB-ddG, on 2026-11-22, before any code
@@ -2573,6 +2573,19 @@ measured complexes fail?
   0.98 across the 13 donors. Reading: the points carry the donor's distance, nucleotides measure it more finely
   than amino acid counts, and no region is ranked above another. The conserved blocks stood out (0.98 on the mouse
   host) and were checked as H32, which found them to be distance too.
+
+**Result, 2026-11-22: does not count.** Run at commit 644323f on RTX 2080 Ti cards of idle nodes (first run: jobs
+6591264, 6591265, 6591267 to 6591272, 9.6 card-hours; second run: 6591783, 6591785, 6591792, 6591793, 6591800,
+6591807, 6591808, 6591810; readout, comparison, tests and breaks: 6592268). The two runs' 44 tables are identical
+byte for byte; 50 tests passed, 4 skipped; 26 of 26 breaks caught. Against the rule: `stab_all` T1 -0.10, T2 0.56,
+T3 3 of 6; `stab_contact` -0.24, 0.65, 3 of 6; the baseline `d_all` -0.36, 0.74, 4 of 6. The model beats the count
+of amino acid differences on no test, with the mean of the seeds and on each seed. T4 holds for every score, the
+counts included (the donors that did not respire are the most distant). The controls say the same: plain
+ProteinMPNN and the stability-only weights are within 0.03 of the model on T2 (0.59 and 0.57 for all positions).
+Within single complexes, added after the first run and exploratory, the model is at or below chance for I and IV.
+*Reading:* a learned energy of the ported proteins on the host's structure does not rank these donors better than
+counting what differs; H29 then showed the model does not tell harmful single substitutions either. No per-protein
+number of this model is shown as a verdict. Tables and their README: `results/h28/`.
 
 ## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (code written, not run; H28's check)
 
