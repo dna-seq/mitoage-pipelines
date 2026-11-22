@@ -2700,3 +2700,38 @@ change.**
 - *If it passes the cybrid rule,* the gene-level sums become a per-gene statement to check on H30's mouse strains.
   *If it fails both,* the reading is that sequence models of either kind, protein or DNA, rank these cybrids no
   better than distance, and the variant test says whether that is the cybrid data or the model.
+
+## H32. Are the conserved sequence blocks of the control region special, or one more ruler of distance? (proposed; no code)
+
+**State: proposed on 2026-11-22. The lead was found the same day, after looking: among the exploratory nucleotide
+baselines (`mitoport cybrid-dna`), the differences within the mouse record's conserved sequence blocks 1 to 3
+(`nt_csb_d`, 58 bases) separated reduced from not reduced complexes of the mouse-host cybrids almost completely
+(area 0.98 for 6 against 11, Spearman −0.69 over 10 stated activities). The maintainer asked to investigate it. The
+rule below is written before any of its numbers.**
+
+- *Why it could be real.* The blocks lie where the nuclear-encoded machinery starts replication and transcription
+  of the mitochondrial genome; a donor genome the host's polymerase and factors read badly would lower every
+  mtDNA-encoded subunit with no protein mismatch at all.
+- *Why it is probably not, said in advance.* The score is one number per donor, repeated on each of its complexes.
+  The mouse host has six donors with measurements and the human host three, so the area of 0.98 rests on the order
+  of six donors, and any stretch of the genome that grows with distance orders them alike. It was the best of some
+  fifteen scores looked at.
+- *Check 1, the rule: the blocks against random windows.* For each (host, donor), a vector over the host's control
+  region: 1 where the donor differs at that place in the alignment of the two control regions (a gap in the donor
+  counts at its place; an insertion in the donor at the place before it). The blocks' score is the sum over their
+  places; a random set is three windows of the blocks' lengths, not overlapping, placed uniformly in the same
+  control region, 10,000 sets, seed 0. The same with windows placed in the rRNA genes and in the 13 protein genes
+  (their own vectors). Statistic: the area for reduced against not reduced over the mouse-host points, and the
+  Spearman with the stated activities. **The lead counts only if fewer than 5% of the control-region sets reach
+  the blocks' area and fewer than 5% reach its Spearman**; the shares for the other two kinds of window are
+  reported beside.
+- *Check 2, reported and claimed as nothing: the human host.* The human record annotates no blocks; the mouse
+  blocks are placed in the human control region by local alignment (the three land at places 210 to 234, 299 to
+  314 and 346 to 363, seen while writing this entry, before any score on them). With three measured donors, each
+  reduced in complex I only, a per-donor score cannot separate anything among them. What can be read: whether the
+  two orangutans, whose cybrids did not respire, differ in the blocks more than the three African apes, and in
+  what share of random window sets that is also so. The same for the golden hamster among the mouse host's donors
+  (the Chinese hamster's record annotates no control region: not assessed).
+- *If check 1 holds:* which block and which places carry it, and a test on data that had no part in finding it
+  (H31's variant test covers the control region; H30's mouse strains differ there or do not). *If it fails:* the
+  blocks are distance, and the entry says so.
