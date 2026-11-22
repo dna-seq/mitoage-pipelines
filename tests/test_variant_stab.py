@@ -20,7 +20,14 @@ class TestConsequence:
         assert vs.consequence(SEQ, CDS, 8, "A", "G") == [("synonymous", "ND1", 2, "K", "K")]     # AAA to AAG
         assert vs.consequence(SEQ, CDS, 14, "G", "A") == [("synonymous", "ND1", 4, "W", "W")]    # TGA is tryptophan in this code
         assert vs.consequence(SEQ, CDS, 13, "G", "A") == [("nonsense", "ND1", 4, "W", "*")]      # TGG to TAG
-        assert vs.consequence(SEQ, CDS, 16, "A", "C") == [("nonsense", "ND1", 5, "*", "S")]      # the stop lost
+        assert vs.consequence(SEQ, CDS, 16, "A", "C") == [("stop lost", "ND1", 5, "*", "S")]
+
+    def test_a_change_in_the_first_codon_is_a_change_of_the_start(self):
+        # the first codon of the plus-strand gene is positions 3 to 5 (ATG); of the minus-strand gene 29 to 31
+        assert vs.consequence(SEQ, CDS, 4, "T", "C") == [("start", "ND1", 1, "M", "T")]          # ATG to ACG
+        assert vs.consequence(SEQ, CDS, 5, "G", "A") == [("start", "ND1", 1, "M", "M")]          # ATG to ATA, still a start
+        assert [c[:3] for c in vs.consequence(SEQ, CDS, 30, "A", "G")] == [("start", "ND6", 1)]
+        assert vs.consequence(SEQ, CDS, 6, "A", "C")[0][0] == "missense"                         # the second codon is not
 
     def test_minus_strand(self):
         # the gene reads the reverse complement of positions 20 to 31: ATG AAA CGG TAG; position 31 is its first base
@@ -32,7 +39,7 @@ class TestConsequence:
             vs.consequence(SEQ, CDS, 6, "G", "C")
 
     def test_two_genes_that_overlap_each_give_their_change(self):
-        both = vs.consequence(SEQ, [("ATP8", 2, 17, 1), ("ATP6", 3, 15, 1)], 6, "A", "C")
+        both = vs.consequence(SEQ, [("ATP8", 2, 17, 1), ("ATP6", 0, 15, 1)], 6, "A", "C")     # in the second codon of each
         assert [(k, g) for k, g, *_ in both] == [("missense", "ATP8"), ("missense", "ATP6")] and both[0][2:] != both[1][2:]
 
 

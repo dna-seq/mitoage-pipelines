@@ -92,9 +92,10 @@ def reference(gb: Path) -> tuple[str, list[tuple[str, int, int, int]]]:
 
 def consequence(seq: str, cds: list[tuple[str, int, int, int]], pos: int, ref: str, alt: str) -> list[tuple[str, str, int, str, str]]:
     """[(kind, gene, 1-based protein position, reference amino acid, new amino acid)] for a single-nucleotide change
-    at the 1-based position `pos`, one entry per protein gene that holds it (ATP8 and ATP6 overlap); kind is missense,
-    synonymous or nonsense (a stop gained or lost; a codon the genome leaves incomplete counts as a stop). Empty
-    outside the protein genes. Refuses a reference base that is not the genome's."""
+    at the 1-based position `pos`, one entry per protein gene that holds it (ATP8 and ATP6 overlap); kind is start
+    (any change in the gene's first codon: what it does to the protein's start is not an amino acid change),
+    missense, synonymous, nonsense (a stop gained) or stop lost (a codon the genome leaves incomplete counts as a
+    stop). Empty outside the protein genes. Refuses a reference base that is not the genome's."""
     from Bio.Data import CodonTable
     table = CodonTable.unambiguous_dna_by_id[2].forward_table
     if seq[pos - 1] != ref:
@@ -109,7 +110,8 @@ def consequence(seq: str, cds: list[tuple[str, int, int, int]], pos: int, ref: s
         a = alt if strand == 1 else alt.translate(COMPLEMENT)
         new = codon[:i] + a + codon[i + 1:]
         x, y = (table.get(c, "*") if len(c) == 3 else "*" for c in (codon, new))
-        out.append(("synonymous" if x == y else "nonsense" if "*" in (x, y) else "missense", g, k + 1, x, y))
+        kind = "start" if k == 0 else "synonymous" if x == y else "stop lost" if x == "*" else "nonsense" if y == "*" else "missense"
+        out.append((kind, g, k + 1, x, y))
     return out
 
 
