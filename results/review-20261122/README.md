@@ -19,3 +19,24 @@ What it does to the tests: `d_all` T1 -0.355 as before, T2 0.742 (was 0.744), T3
 
 Not made again yet: H17's ESM and co-evolution sums (they place the donor on human columns the same old way and
 need the model run again), H31's and the nucleotide baselines' readouts against the corrected count.
+
+## The Chinese hamster's record corrected (job 6592840, commit fd27213)
+
+From a second fresh clone, with KronGenome's likelihood tables of H31's run (the model was not run again):
+`mitoport cybrid`, `cybrid-dna`, `cybrid-blocks`, `kron-cybrids`, `kron-variants`, the tests (72 passed) and the
+breaks (19 of 19, 22 of 22, 5 of 5).
+
+Mouse against the Chinese hamster: `nt_trna_d` 220 (was 280), `kron_trna` 20.7 (was 254.7); its control region is
+now scored (`nt_dloop_d` 279, `nt_csb_d` 17, `kron_dloop` 62.5), and H32's second check holds for it as for the
+golden hamster (above every donor that respired, as in 54% of random window sets). The donor has no measured
+activity: T1 and T2 of the nucleotide scores are the same to the last digit, and H31's and H32's verdicts stand.
+H31's variant summary is unchanged byte for byte.
+
+With the corrected count, `d_all` within one complex separates reduced from not reduced with an area of 0.60 (I),
+0.57 (III) and 0.72 (IV).
+
+| file | what |
+| --- | --- |
+| `dna_scores.tsv`, `dna_summary.tsv`, `dna_calibration.tsv`, `dna_correlations.tsv` | the nucleotide baselines, remade |
+| `kron_scores.tsv`, `h31_summary.tsv`, `h31_verdict.tsv`, `h31_calibration.tsv` | H31's cybrid readout, remade |
+| `h32_summary.tsv`, `h32_blocks.tsv` | H32, remade |

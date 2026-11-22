@@ -2905,5 +2905,11 @@ as first computed.
 - *Corrected on 2026-11-22 (commit 9d82153, job 6592805, `results/review-20261122/`):* H16's count now reads the
   donor through the host, and the end residues of a partial record are unknown. Fourteen counts fall (M. caroli
   complex V 23 to 15). `d_all`: T1 -0.355 as before, T2 0.742 from 0.744, T3 4 of 6 as before. No verdict of H16,
-  H28 or H31 changes. Still to correct: H17's sums, the Chinese hamster's tRNAs and control region, H31's shuffled
-  genome, the start-codon and stop variants.
+  H28 or H31 changes. With the corrected count the areas within one complex are 0.60 (I), 0.57 (III), 0.72 (IV).
+- *Corrected on 2026-11-22 (commit fd27213, job 6592840, same folder):* the Chinese hamster's two tRNA genes are
+  read on the minus strand and its control region is the stretch after tRNA-Pro, both listed by accession with what
+  shows them (`cybrid_dna.RECORD_FIXES`); a tRNA gene on different strands in the two records of a pair is now
+  refused. Mouse against it: `nt_trna_d` 220 from 280, `kron_trna` 20.7 from 254.7; its control region scores 279
+  differences, 17 in the blocks. T1 and T2 of every nucleotide score are unchanged; H31's and H32's verdicts stand.
+- *Still to correct:* H17's ESM and co-evolution sums (the model has to run again), H31's shuffled genome, the
+  start-codon and stop variants of H29 and H31, and the sentence on soluble weights in H28's entry.

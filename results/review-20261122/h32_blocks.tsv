@@ -1,0 +1,14 @@
+host	donor	blocks	CSB1	CSB2	CSB3	control_region	places
+homo-sapiens	gorilla-gorilla	22	2	2	18	310	CSB1:756-780;CSB2:845-860;CSB3:892-909
+homo-sapiens	pan-paniscus	0	0	0	0	168	CSB1:756-780;CSB2:845-860;CSB3:892-909
+homo-sapiens	pan-troglodytes	3	2	1	0	166	CSB1:756-780;CSB2:845-860;CSB3:892-909
+homo-sapiens	pongo-abelii	20	4	8	8	341	CSB1:756-780;CSB2:845-860;CSB3:892-909
+homo-sapiens	pongo-pygmaeus	27	5	8	14	383	CSB1:756-780;CSB2:845-860;CSB3:892-909
+mus-musculus	cricetulus-griseus	17	8	1	8	279	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	mesocricetus-auratus	25	10	3	12	283	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	mus-caroli	2	0	2	0	138	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	mus-pahari	3	2	1	0	135	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	mus-spretus	2	0	2	0	85	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	mus-terricolor	1	0	1	0	137	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	otomys-irroratus	4	3	1	0	215	CSB1:613-636;CSB2:667-682;CSB3:692-709
+mus-musculus	rattus-norvegicus	5	4	1	0	231	CSB1:613-636;CSB2:667-682;CSB3:692-709
