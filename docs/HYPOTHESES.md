@@ -2779,3 +2779,54 @@ rule below is written before any of its numbers.**
   the lead was the order of six donors; the blocks are one more ruler of distance. A slip in the message that
   proposed the checks: it called the human half "the real test", which three measured donors cannot be; the entry
   above had it right.
+
+## H33. Near-identical mitochondrial genomes on one nucleus: does a per-difference score name the genome that works worse? (proposed; no table, no code, no score)
+
+**State: proposed on 2026-11-22, after H28, H29, H31 and H32. Written before any contrast was scored; the table of
+contrasts is collected and committed before any code that scores it. A change after this date is said as a change.**
+
+**Background.** On the cybrids every score, protein or DNA, follows the donor's distance (H17, H28, H31, H32, the
+nucleotide baselines), so those 29 measurements cannot say which differences matter, nor whether the harm sits in
+proteins, RNA genes or the control region. The maintainer asked whether that leaves the question stuck. It does on
+that data. What can separate the kinds is data where distance is small: genomes that differ in a few listed
+positions, on one nuclear background, with a function measured for each.
+**Question.** Where two mitochondrial genomes on one nuclear background differ in few positions and one was measured
+to work worse, does a score of the differing alleles name the worse genome more often than chance?
+- *Contrasts.* A contrast is a pair of genomes on one nuclear background in one publication. It enters the table
+  only if (a) the differences between the two are listed by position, or both genomes have sequence accessions,
+  and (b) the publication states, for a measure of mitochondrial function (the activity of a complex, oxygen
+  consumption, ATP synthesis), which of the two is lower, or that they do not differ. Lifespan, behaviour, disease
+  models and reactive oxygen species are written into the table and decide nothing: none says by itself which
+  genome works worse. A first search (2026-11-22) found as candidates the conplastic mouse strains on C57BL/6
+  (Yu et al. 2009 and the papers that measured single strains), the conplastic rat strains on SHR, two fly panels
+  on one nuclear background (Salminen et al. 2017; Wolff et al. 2016), human haplogroup cybrids, the reciprocal
+  C57BL/6 and C3H mice, and the mouse cell lines of Moreno-Loshuertos et al. 2006; about 30 contrasts, of which 10
+  to 15 looked readable. Each is read in full before it enters; what could not be read is listed as not read.
+- *Outcome.* For each contrast: `worse` (which genome, by the function measure the publication leads with, in the
+  tissue it leads with), or `no difference`. Where two publications give opposite directions for one pair of
+  genomes, the contrast is `conflicting` and leaves the test. The outcome column is fixed in the committed table
+  before any score exists.
+- *Scores, each per genome of a contrast, summed over the positions where the two differ.* `cons`: for a position
+  in a protein gene, minus the logarithm of the share of the build's species of the same class whose aligned
+  residue equals the genome's; in an RNA gene, the same on nucleotides where the build aligns the gene; elsewhere
+  not assessed. `kron`: KronGenome's masked log-likelihood of the genome's base at the position, in the genome's
+  own sequence, with H31's revision, readings and context; only for species the model has a mitochondrial context
+  for, which is checked before the run and said. The predicted worse genome is the one whose alleles are rarer or
+  less likely. A contrast with no assessable difference is not assessed by that score and counted.
+- *Rule.* Over the contrasts with outcome `worse`, a score counts if it names the worse genome in more of them than
+  chance by a one-sided sign test at 0.05, with at least 10 such contrasts assessed; with fewer the answer is "not
+  assessed: too few contrasts", whatever the share. One score is not chosen after seeing both: each is reported
+  with its own verdict.
+- *Reported, claimed as nothing.* The share by kind of position (protein, tRNA, rRNA, non-coding) of the
+  differences in contrasts with an effect against those without; the contrasts with `no difference` and what the
+  scores say of them; each species alone.
+- *Known weaknesses, said in advance.* Few contrasts, over four species and different assays, pooled only as a
+  direction. Within a fly panel the genomes share ancestry and the contrasts share their reference genome, so they
+  are not independent; the test is also run with one contrast per panel and reference, and that is the one that
+  decides if the two disagree. Publications report effects more readily than their absence. Strains were chosen
+  for study partly because a variant looked functional. A lower activity is not always the worse state. And
+  several of the clearest known effects lie outside proteins (a tRNA, the origin of light-strand replication, a
+  start codon), where `cons` is weak or silent.
+- *What follows.* A score that counts is the first evidence here that single differences, not distance, can be
+  ranked, and is then tried on the cybrids' differences position by position. None counting leaves the question
+  open and says so; it does not show that the differences are unrankable.
