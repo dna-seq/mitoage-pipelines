@@ -121,6 +121,13 @@ def download_stabddg() -> None:
     download.stabddg(paths.STABDDG, paths.MANIFEST)
 
 
+@download_app.command("mitimpact")
+def download_mitimpact() -> None:
+    """H34: MitImpact 4's table of published predictors' scores into data/input/mitimpact; refuses another file than the pinned one."""
+    from .mitoport import variant_compare
+    print("wrote", variant_compare.download(paths.MITIMPACT))
+
+
 @download_app.command("variants")
 def download_variants() -> None:
     """H29: gnomAD v3.1's table of mitochondrial sites and ClinVar's mitochondrial records into data/input/variants,
@@ -1025,6 +1032,17 @@ def mitoport_variant_stab_readout(out: Annotated[Path, typer.Option("--out", hel
     """H29: the rule (the area for harmful against harmless, and against the two baselines) and what is reported beside it."""
     from .mitoport import variant_stab
     variant_stab.readout(out)
+
+
+@mitoport_app.command("variant-compare")
+def mitoport_variant_compare(
+    variant_scores: Annotated[Path, typer.Option("--variant-scores", help="H29's variant_scores.tsv")] = paths.VARIANT_OUT / "variant_scores.tsv",
+    kron_variants: Annotated[Path, typer.Option("--kron-variants", help="H31's kron_variants.tsv")] = paths.MITOPORT_OUT / "kron" / "kron_variants.tsv",
+    mitimpact: Annotated[Path, typer.Option("--mitimpact", help="MitImpact 4's table (`download mitimpact`)")] = paths.MITIMPACT / "MitImpact4_V059.csv",
+    out: Annotated[Path, typer.Option("--out", help="folder h34_existing.tsv is written to")] = paths.VARIANT_OUT) -> None:
+    """H34, part A: the published predictors, KronGenome and H29's score on H29's variants, each beside the site's variability."""
+    from .mitoport import variant_compare
+    variant_compare.main(variant_scores, kron_variants, mitimpact, out)
 
 
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]

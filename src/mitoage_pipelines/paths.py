@@ -41,6 +41,7 @@ PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.ci
 CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the cybrid hosts and donors (H16)
 STABDDG = INPUT / "stabddg"              # the three weight files of StaB-ddG at its pinned commit (H28)
 VARIANTS = INPUT / "variants"            # gnomad.chrM.tsv and clinvar_mt.json: human mitochondrial variants (H29)
+MITIMPACT = INPUT / "mitimpact"          # MitImpact4_V059.csv: published predictors' scores of every mtDNA change (H34)
 TECH_GB = INPUT / "technology"            # refseq/ and source/: GenBank records the sequencing technology is read from (H8's control)
 HIBERNATION = INPUT / "hibernation"        # the bat table of Wilkinson & Adams 2019 (DRUM) and Heldstab et al. 2018 (Dryad, placed by hand)
 
