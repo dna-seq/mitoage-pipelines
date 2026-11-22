@@ -1,0 +1,18 @@
+what	group	score	n_harmful	n_harmless	value	reads
+variants	all		41	331		355 scored with both baselines; 17 not assessed
+area	all	stab_fold	39	316	0.637	area under the ROC curve, harmful against harmless
+area	all	stab_bind	39	316	0.575	area under the ROC curve, harmful against harmless
+area	all	mpnn_fold	39	316	0.616	area under the ROC curve, harmful against harmless
+area	all	stabfold_fold	39	316	0.630	area under the ROC curve, harmful against harmless
+area	all	base_blosum	39	316	0.639	area under the ROC curve, harmful against harmless
+area	all	base_n_aa	39	316	0.916	area under the ROC curve, harmful against harmless
+difference	all	stab_fold - base_blosum	39	316	-0.001	95% bootstrap interval -0.115 to 0.106
+difference	all	stab_fold - base_n_aa	39	316	-0.278	95% bootstrap interval -0.419 to -0.141
+rule	all	stab_fold	39	316		does not count: an area of at least 0.7 and above both baselines with the interval above 0
+area (reported, claimed as nothing)	ND6	stab_fold	10	12	0.558	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	ND6	base_blosum	10	12	0.571	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	ND6	base_n_aa	10	12	0.933	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	contact	stab_fold	9	105	0.872	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	contact	stab_bind	9	105	0.785	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	not contact	stab_fold	30	211	0.595	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	not contact	stab_bind	30	211	0.532	area under the ROC curve, harmful against harmless

@@ -2588,9 +2588,9 @@ IV (0.17), and `stab_contact` is 0.60 and 0.33.
 counting what differs; H29 then showed the model does not tell harmful single substitutions either. No per-protein
 number of this model is shown as a verdict. Tables and their README: `results/h28/`.
 
-## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (code written, not run; H28's check)
+## H29. Does the model tell harmful from harmless substitutions within a mitochondrial protein? Disease variants against common ones (run: does not count, the model is far below conservation)
 
-**State: proposed on 2026-11-22; the code followed the same day (`mitoport variant-stab`), not run.** The maintainer
+**State: proposed on 2026-11-22; the code followed the same day (`mitoport variant-stab`); run the same day, result below.** The maintainer
 asked whether published work can validate the method; told of this check, he had not answered when it was written.
 It is written before any score, and runs after H28 unless he says no.
 *Made exact with the code, before any score:* the control weights run with seed 0 only; the nuclear partner alone
@@ -2630,6 +2630,23 @@ confirmed disease variants of the 13 mtDNA-encoded proteins from variants common
   model adds them up rightly.
 - *What follows.* Pass: H28's per-protein numbers may be shown as predictions with this evidence named. Fail: no
   per-protein verdict is printed from this model, whatever H28's complex-level result.
+
+**Result, 2026-11-22: does not count.** Run at commit 4b56a5f on RTX 2080 Ti cards of an idle node, one variant a
+call (jobs 6591811 to 6591814, 7.1 card-hours; second run 6592223 to 6592226, all 19 tables identical byte for
+byte; readout, tests and breaks 6592227: 31 tests passed, 19 of 19 breaks caught). Of 41 harmful and 331 harmless
+rows, 39 and 316 are scored with both baselines; 17 are not assessed (9 at unresolved positions, 8 harmless ones
+where the structure holds the other residue). Against the rule: the area for `stab_fold` is 0.64, below the 0.70
+asked, level with BLOSUM62 (0.64; difference -0.001, interval -0.115 to 0.106) and far below the site's
+variability among mammals (0.92; difference -0.28, interval -0.42 to -0.14). The binding term 0.58, plain
+ProteinMPNN 0.62, the stability-only weights 0.63. Reported, claimed as nothing: ND6 alone 0.56 (10 and 12); at
+contacts with nuclear subunits 0.87 (9 harmful, 105 harmless), elsewhere 0.59.
+*Reading:* the model's scores behave like a working stability model (the leucine-to-proline changes of ATP6 score
+highest, the common alleles lowest), and the review of 2026-11-22 and H28's positive control found it called as its
+authors call it. It fails here because many disease variants are mild changes at sites that never vary (ND6 M64V
+0.04, ND4 R340H 0.11), which a stability score rates as harmless and conservation does not. What follows is the
+entry's "fail": no per-protein number of this model is shown as a verdict. The 0.87 at contacts is nine harmful
+variants, seen after the fact; it is a lead to test on other data, not a result. H30, which scores with this
+model, is not built. Tables and their README: `results/h29/`.
 
 ## H30. Two healthy mitochondrial genomes in one cell: are complexes assembled from a mix predicted to be less stable? (agreed, after H28; no code)
 
