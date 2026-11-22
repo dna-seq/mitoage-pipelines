@@ -2596,3 +2596,35 @@ confirmed disease variants of the 13 mtDNA-encoded proteins from variants common
   model adds them up rightly.
 - *What follows.* Pass: H28's per-protein numbers may be shown as predictions with this evidence named. Fail: no
   per-protein verdict is printed from this model, whatever H28's complex-level result.
+
+## H30. Two healthy mitochondrial genomes in one cell: are complexes assembled from a mix predicted to be less stable? (agreed, after H28; no code)
+
+**State: agreed on 2026-11-22 ("Let's test second one after we get cybrid results"), no code, not run.** Written
+before any score.
+**Background.** Mice heteroplasmic for two normal mouse mtDNAs, each healthy alone on the same nucleus, are not
+healthy as a mixture: reduced activity and impaired cognition for NZB with 129 (Sharpley et al., Cell 2012), heart
+disease, frailty and a shorter life for NZB with C57 (Lechuga-Vieco et al., Circulation 2022), in the tissues that
+cannot get rid of one type. Three explanations are on offer and none is shown: the cell cannot tune itself to two
+genomes at once; complexes assembled from subunits of both fit themselves worse; the cell pays for trying to sort
+them. Only the second is a statement about structure, and only it can be put to this model.
+**Question.** For a complex with two or more mtDNA-encoded subunits, does StaB-ddG predict a mixed set (some
+subunits from one genome, the others from the other) to be less stable than both pure sets?
+- *Genomes.* C57BL/6 (the mouse reference) and NZB, and 129 as the second pair; the accessions are fixed with the
+  code, not looked up yet. The substitutions are those between the two genomes' proteins; if a complex's subunits do
+  not differ between the two, the complex is left out and said.
+- *Structures and model.* H28's mouse structures (8OM1 for I, 7O37 for IV; complex III has one mtDNA-encoded
+  subunit and nothing to mix; no mouse structure of V is in H28, so V is not assessed unless one is added before the
+  run), the system, the weights `stabddg` and seeds 0, 1 and 2 of H28. The host sequence is the structure's
+  (C57-like); a set is the list of subunits that take the other genome's residues.
+- *Score.* `fold` of each set: the pure other genome (all subunits), and every mixed set (complex I: the 126 proper
+  subsets of its seven subunits that are neither empty nor all). `mix_excess` of a mixed set is its `fold` minus the
+  sum of the `fold` of its subunits taken one at a time: what the model says the combination costs beyond its parts.
+  Mixing that is harmless by the model gives an excess near 0.
+- *Rule.* Explanation 2 is supported, as a prediction, only if the pure other genome is not itself predicted worse
+  than the largest mixed set, and the median `mix_excess` over the mixed sets is above 0 by more than twice the
+  spread over the seeds, in the same direction for both genome pairs. Otherwise it is not supported by this model.
+- *Known weaknesses, said in advance.* The genomes differ by about a dozen amino acids, so every number will be
+  small and near the seeds' noise. The model's "excess" is non-additivity in its own likelihood, which was never
+  tested against measured non-additivity. There is no measurement of a mixed complex anywhere: the animals'
+  phenotype is predicted alike by all three explanations, so even a clear result makes explanation 2 plausible or
+  less plausible, never shown. And whether H29 passes decides how much any of this is worth.
