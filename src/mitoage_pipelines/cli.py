@@ -1027,6 +1027,29 @@ def mitoport_variant_stab_readout(out: Annotated[Path, typer.Option("--out", hel
     variant_stab.readout(out)
 
 
+KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]
+
+
+@mitoport_app.command("kron-cybrids")
+def mitoport_kron_cybrids(tables: KronTables, gb: CybridGb = paths.CYBRID_GB / "records.gb", out: Out = paths.CYBRID_OUT,
+                          arm: Annotated[str, typer.Option("--arm", help="mito, nuclear or shuffled")] = "mito") -> None:
+    """H31: the cybrids scored from the DNA model's likelihood table of each host, through H16's readouts, and the
+    rule (after `mitoport cybrid` and `mitoport cybrid-dna`)."""
+    from .mitoport import kron
+    kron.cybrids(gb, tables, out, arm)
+
+
+@mitoport_app.command("kron-variants")
+def mitoport_kron_variants(tables: KronTables, gb: CybridGb = paths.CYBRID_GB / "records.gb", data: Build = paths.BUILD,
+                           source: Annotated[Path, typer.Option("--source", help="folder of `download variants`")] = paths.VARIANTS,
+                           out: Out = paths.MITOPORT_OUT / "kron",
+                           arm: Annotated[str, typer.Option("--arm", help="mito, nuclear or shuffled")] = "mito") -> None:
+    """H31: the human single-base variants of the whole mitochondrial genome scored from the DNA model's likelihood
+    table, harmful against harmless, and the rule."""
+    from .mitoport import kron
+    kron.variants(gb, source, data, tables, out, arm)
+
+
 @mitoport_app.command("partners")
 def mitoport_partners(
     cif: CifOpt = None, data: Build = paths.BUILD, work: IfaceDir = None,
