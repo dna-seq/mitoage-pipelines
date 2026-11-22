@@ -2544,6 +2544,9 @@ measured complexes fail?
   every score; a readout whose verdict changes with the seed is said as not settled. The whole run twice, the two
   sets of tables compared byte for byte. An empty set of substitutions must give exactly 0, and a table where it
   does not is refused.
+- *Added on 2026-11-22, after the result, from the review:* the model's base weights are ProteinMPNN's for
+  soluble proteins (the repository's README: "soluble ProteinMPNN weights"), and every protein scored here is a
+  membrane protein. The line below says what the model learned from, and not this.
 - *Known weaknesses, said in advance.* The model learned from small soluble domains and from measured soluble
   complexes, mostly with one to a few substitutions; here it scores membrane complexes of up to 45 chains with
   tens to hundreds of substitutions at once, far outside what it was tested on. Its "partners alone" are the same
@@ -2934,5 +2937,5 @@ as first computed.
   verdict as it was. H31 among amino acid changes: 0.922 against 0.865 (was 0.925 against 0.871), interval of the
   difference -0.009 to 0.130; its rule over all variants as it was. m.7445A>G stays "synonymous" in the table: its
   harm is through a tRNA precursor, which no consequence in a protein gene can say.
-- *Still to correct:* H17's ESM and co-evolution sums (the model has to run again), H31's shuffled genome, and the
-  sentence on soluble weights in H28's entry.
+- *Still to correct:* H17's ESM and co-evolution sums (the model has to run again) and H31's shuffled genome.
+  The sentence on soluble weights is added to H28's entry.
