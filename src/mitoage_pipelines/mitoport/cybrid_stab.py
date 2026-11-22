@@ -207,6 +207,13 @@ def predict(model, structs: tuple[dict, dict, dict], seqs: tuple[np.ndarray, np.
     return {"ddG": whole - (one + two), "fold": whole, "fold_one": one, "fold_two": two}
 
 
+def report_gpu(device: str) -> None:
+    """On a GPU, print the peak memory the task allocated: what a card must have free."""
+    if device.startswith("cuda"):
+        import torch
+        print(f"peak GPU memory allocated: {torch.cuda.max_memory_allocated() / 2**30:.2f} GiB")
+
+
 def sha256(path: Path) -> str:
     import hashlib
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -261,6 +268,7 @@ def run(host: str, donor: str, complex_: str, gb: Path, pdb_dir: Path, sites_dir
     f = d / f"{host}.{donor}.{complex_}.tsv"
     res.to_csv(f, sep="\t", index=False, float_format="%.6f")
     print("wrote", f)
+    report_gpu(device)
     return res
 
 

@@ -237,6 +237,7 @@ def run(complex_: str, chunk: int, gb: Path, pdb_dir: Path, source: Path, weight
     f = d / f"{complex_}.{chunk}.tsv"
     res.to_csv(f, sep="\t", index=False, float_format="%.6f")
     print("wrote", f, f"({len(todo)} scored, {len(v) - len(todo)} not assessed)")
+    cs.report_gpu(device)
     return res
 
 
