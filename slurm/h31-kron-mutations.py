@@ -11,6 +11,9 @@ from pathlib import Path
 K = Path("src/mitoage_pipelines/mitoport/kron.py")
 T = Path("src/mitoage_pipelines/mitoport/kron_table.py")
 breaks = [
+ (K, "a record's wrong tRNA strand taken as given", "        loc = cybrid_dna.trna_location(rec.id, f) if f.type == \"tRNA\" else f.location", "        loc = f.location"),
+ (K, "the listed control region not used", "    if (\"dloop\",) not in out and \"dloop\" in cybrid_dna.RECORD_FIXES.get(rec.id, {}):", "    if False:"),
+ (K, "crossed strands not refused", "        if crossed:\n            raise ValueError(f\"{host} / {donor}: {crossed} are on different strands in the two records\")", "        if False:\n            pass"),
  (K, "the drop upside down", "return float(lp[place, BASES.index(ref)] - lp[place, BASES.index(alt)])", "return float(lp[place, BASES.index(alt)] - lp[place, BASES.index(ref)])"),
  (K, "an unknown base scored", "    if ref not in BASES or alt not in BASES:\n        return float(\"nan\")\n", ""),
  (K, "the minus strand not complemented", "ref, alt = (x, y) if strand == 1 else (x.translate(COMPLEMENT), y.translate(COMPLEMENT))", "ref, alt = x, y"),

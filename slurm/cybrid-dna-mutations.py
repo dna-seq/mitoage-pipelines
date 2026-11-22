@@ -21,6 +21,10 @@ breaks = [
  ("a missing control region scored", "    if h[\"dloop\"] is None or d[\"dloop\"] is None:\n        return out\n", "    if h[\"dloop\"] is None or d[\"dloop\"] is None:\n        return dict(out, nt_dloop_d=0)\n"),
  ("the control region in the record's order of parts", "key=lambda q: int(q.start) == 0", "key=lambda q: 0"),
  ("tRNA genes not numbered", "i = seen.get(product, 0); seen[product] = i + 1", "i = 0"),
+ ("the record's wrong strand taken as given", "    if strand is None or strand == f.location.strand:\n", "    if True:\n"),
+ ("the listed control region not used", '        if dloop is None and "dloop" in RECORD_FIXES.get(rec.id, {}):', "        if False:"),
+ ("the listed control region one base late", "            dloop = (str(rec.seq[s:e]).upper(), s)", "            dloop = (str(rec.seq[s + 1:e]).upper(), s + 1)"),
+ ("crossed strands not refused", "    if crossed:\n        raise ValueError(f\"{host} / {donor}: {crossed} are on different strands", "    if False:\n        raise ValueError(f\"{host} / {donor}: {crossed} are on different strands"),
 ]
 caught = 0
 try:

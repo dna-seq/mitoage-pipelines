@@ -72,8 +72,12 @@ def stretches(gb: Path, accession: str) -> dict[tuple, tuple[str, np.ndarray, in
             continue
         if key is None:
             continue
-        places = np.array(list(f.location), dtype=np.int64)          # in the stretch's own 5' to 3' order
-        out[key] = (str(f.extract(rec.seq)).upper(), places, int(f.location.strand))
+        loc = cybrid_dna.trna_location(rec.id, f) if f.type == "tRNA" else f.location
+        places = np.array(list(loc), dtype=np.int64)                 # in the stretch's own 5' to 3' order
+        out[key] = (str(loc.extract(rec.seq)).upper(), places, int(loc.strand))
+    if ("dloop",) not in out and "dloop" in cybrid_dna.RECORD_FIXES.get(rec.id, {}):
+        s, e = cybrid_dna.RECORD_FIXES[rec.id]["dloop"]
+        out[("dloop",)] = (str(rec.seq[s:e]).upper(), np.arange(s, e), 1)
     return out
 
 
@@ -115,6 +119,9 @@ def pair_rows(gb: Path, host: str, donor: str, genome: str, lp: np.ndarray, al: 
     for name, keys in (("kron_rrna", [("rrna", "12S"), ("rrna", "16S")]), ("kron_trna", sorted(k for k in h if k[0] == "trna"))):
         if not set(keys) <= set(d):
             raise ValueError(f"{host} / {donor}: the genes of {name} do not pair")
+        crossed = sorted(str(k[1]) for k in keys if h[k][2] != d[k][2])
+        if crossed:
+            raise ValueError(f"{host} / {donor}: {crossed} are on different strands in the two records")
         s, n, _ = over(keys)
         pair[name], pair[name + "_mean"] = s, (s / n if n else np.nan)
     if ("dloop",) in h and ("dloop",) in d:

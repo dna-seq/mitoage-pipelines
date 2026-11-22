@@ -37,6 +37,27 @@ from . import cybrid
 HUMANIN = (2633, 2707)      # in the 16S rRNA gene; 24 residues, MAPRGFSCLLLLTSEIDLPVKRRA
 MOTSC = (1343, 1393)        # in the 12S rRNA gene; 16 residues, MRWQEMGYIFYPRKLR
 RRNA = {"12s ribosomal rna": "12S", "s-rrna": "12S", "16s ribosomal rna": "16S", "l-rrna": "16S"}
+# What a record says wrongly or leaves out, each with what shows it (the review of 2026-11-22). A correction is
+# listed here by accession and never guessed from a comparison: a tRNA gene whose strand differs between host and
+# donor without standing here is refused.
+RECORD_FIXES = {
+    # Cricetulus griseus: tRNA-Asn and tRNA-Cys are given on the plus strand; every other record of the set has
+    # them on the minus strand, and read as given they differ from the mouse's at 42 and 37 of about 70 columns
+    # (10 and 9 once reverse-complemented; the golden hamster's 7 and 8). The record annotates no control region;
+    # the 881 bases between tRNA-Pro and the record's end are it, as in the mouse and the golden hamster.
+    "NC_007936.1": {"trna_strand": {"tRNA-Asn": -1, "tRNA-Cys": -1}, "dloop": (15403, 16284)},
+}
+
+
+def trna_location(accession: str, f):
+    """The tRNA feature's location, with the strand of RECORD_FIXES where the record's is listed as wrong."""
+    from Bio.SeqFeature import SimpleLocation
+    strand = RECORD_FIXES.get(accession, {}).get("trna_strand", {}).get(f.qualifiers.get("product", [None])[0])
+    if strand is None or strand == f.location.strand:
+        return f.location
+    return SimpleLocation(int(f.location.start), int(f.location.end), strand=strand)
+
+
 PAIR_SCORES = ("nt_rrna_d", "nt_rrna_f", "nt_trna_d", "nt_trna_f", "nt_humanin_d", "nt_motsc_d",
                "nt_dloop_d", "nt_dloop_f", "nt_csb_d")
 COMPLEX_SCORES = ("nt_cds_d", "nt_cds_f", "nt_syn_d", "nt_syn_f", "nt_nonsyn_d", "nt_nonsyn_f")
@@ -62,7 +83,7 @@ def read_features(gb: Path) -> dict[str, dict]:
     or two control regions."""
     out = {}
     for rec in SeqIO.parse(str(gb), "genbank"):
-        cds, rrna, trna, seen, dloop, blocks = {}, {}, {}, {}, None, {}
+        cds, rrna, trna, strands, seen, dloop, blocks = {}, {}, {}, {}, {}, None, {}
         for f in rec.features:
             product = f.qualifiers.get("product", [None])[0]
             if f.type == "CDS":
@@ -80,7 +101,8 @@ def read_features(gb: Path) -> dict[str, dict]:
                 rrna[k] = (str(f.extract(rec.seq)).upper(), int(f.location.start))
             elif f.type == "tRNA":
                 i = seen.get(product, 0); seen[product] = i + 1
-                trna[(product, i)] = str(f.extract(rec.seq)).upper()
+                loc = trna_location(rec.id, f)
+                trna[(product, i)] = str(loc.extract(rec.seq)).upper(); strands[(product, i)] = int(loc.strand)
             elif f.type == "D-loop" or (f.type == "misc_feature"
                                         and f.qualifiers.get("note", [""])[0].strip().lower() == "control region"):
                 if dloop is not None:
@@ -92,7 +114,10 @@ def read_features(gb: Path) -> dict[str, dict]:
                 name = f.qualifiers.get("note", [""])[0].split(";")[0].strip()
                 if name in CSB:
                     blocks[name] = (int(f.location.start), int(f.location.end))
-        out[rec.id] = {"cds": cds, "rrna": rrna, "trna": trna, "dloop": dloop, "blocks": blocks}
+        if dloop is None and "dloop" in RECORD_FIXES.get(rec.id, {}):
+            s, e = RECORD_FIXES[rec.id]["dloop"]
+            dloop = (str(rec.seq[s:e]).upper(), s)
+        out[rec.id] = {"cds": cds, "rrna": rrna, "trna": trna, "trna_strand": strands, "dloop": dloop, "blocks": blocks}
     return out
 
 
@@ -198,6 +223,10 @@ def pair_rows(features: dict, host: str, donor: str, al: PairwiseAligner | None 
         raise ValueError(f"{host} / {donor}: an rRNA gene is missing")
     if set(h["trna"]) != set(d["trna"]) or len(h["trna"]) != 22:
         raise ValueError(f"{host} / {donor}: the tRNA genes do not pair ({len(h['trna'])} and {len(d['trna'])})")
+    crossed = sorted(k[0] for k in h["trna"] if h["trna_strand"][k] != d["trna_strand"][k])
+    if crossed:
+        raise ValueError(f"{host} / {donor}: {crossed} are on different strands in the two records; a record that is "
+                         f"wrong goes into RECORD_FIXES with what shows it")
     rr = [differences(h["rrna"][k][0], d["rrna"][k][0], al) for k in ("12S", "16S")]
     tr = [differences(h["trna"][k], d["trna"][k], al) for k in sorted(h["trna"])]
     fh, fd = frames(features, host, human, al), frames(features, donor, human, al)

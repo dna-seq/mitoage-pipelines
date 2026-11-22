@@ -127,6 +127,34 @@ class TestOnTheRecords:
             assert set(features[acc]["rrna"]) == {"12S", "16S"}
             assert len(features[acc]["trna"]) == 22
 
+    def test_the_chinese_hamsters_two_trna_genes_are_read_on_the_minus_strand(self, features):
+        # the record gives tRNA-Asn and tRNA-Cys on the plus strand (RECORD_FIXES): read as listed, each is as close
+        # to the mouse's as the golden hamster's is, and far from it when reverse-complemented back
+        al = cybrid_dna.aligner()
+        mouse, chinese, golden = (features[cybrid.GENOMES[s]] for s in ("mus-musculus", "cricetulus-griseus", "mesocricetus-auratus"))
+        for product in ("tRNA-Asn", "tRNA-Cys"):
+            k = (product, 0)
+            assert mouse["trna_strand"][k] == chinese["trna_strand"][k] == golden["trna_strand"][k] == -1
+            ours = cybrid_dna.differences(mouse["trna"][k], chinese["trna"][k], al)[0]
+            as_given = cybrid_dna.differences(mouse["trna"][k], str(Seq(chinese["trna"][k]).reverse_complement()), al)[0]
+            near = cybrid_dna.differences(mouse["trna"][k], golden["trna"][k], al)[0]
+            assert ours <= near + 5 and as_given >= 3 * ours
+
+    def test_the_chinese_hamsters_control_region_is_the_stretch_after_trna_pro(self, features):
+        seq, start = features[cybrid.GENOMES["cricetulus-griseus"]]["dloop"]
+        assert (start, len(seq)) == (15403, 881)
+        row = cybrid_dna.pair_rows(features, "mus-musculus", "cricetulus-griseus")[0]
+        golden = cybrid_dna.pair_rows(features, "mus-musculus", "mesocricetus-auratus")[0]
+        assert np.isfinite(row["nt_dloop_d"]) and abs(row["nt_dloop_d"] - golden["nt_dloop_d"]) < 0.2 * golden["nt_dloop_d"]
+
+    def test_a_trna_gene_on_different_strands_in_the_two_records_is_refused(self, features):
+        import copy
+        f = copy.deepcopy(features)
+        acc = cybrid.GENOMES["mus-spretus"]
+        f[acc]["trna_strand"][("tRNA-Asn", 0)] = 1
+        with pytest.raises(ValueError, match="different strands"):
+            cybrid_dna.pair_rows(f, "mus-musculus", "mus-spretus")
+
     def test_a_species_against_itself_scores_nothing(self, features):
         for r in cybrid_dna.pair_rows(features, "mus-musculus", "mus-musculus"):
             assert all(r[s] == 0 for s in cybrid_dna.SCORES)

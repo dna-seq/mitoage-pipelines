@@ -114,6 +114,30 @@ class TestOnTheRecords:
         seq, places, _ = st[("dloop",)]
         assert places[0] == 16023 and places[-1] == 575 and "".join(genome[i] for i in places) == seq
 
+    def test_the_chinese_hamsters_listed_corrections(self):
+        # RECORD_FIXES: two tRNA genes on the minus strand, read 5' to 3' with their places running backwards, and
+        # the control region as the stretch after tRNA-Pro
+        s = kron.stretches(GB, cybrid.GENOMES["cricetulus-griseus"])
+        for product in ("tRNA-Asn", "tRNA-Cys"):
+            seq, places, strand = s[("trna", (product, 0))]
+            assert strand == -1 and list(places) == sorted(places, reverse=True) and len(seq) == len(places)
+        seq, places, strand = s[("dloop",)]
+        assert (int(places[0]), int(places[-1]), len(seq), strand) == (15403, 16283, 881, 1)
+
+    def test_a_trna_gene_on_different_strands_is_refused(self, monkeypatch):
+        real = kron.stretches
+
+        def crossed(gb, accession):
+            out = dict(real(gb, accession))
+            if accession == cybrid.GENOMES["mus-spretus"]:
+                k = ("trna", ("tRNA-Asn", 0)); seq, places, strand = out[k]
+                out[k] = (seq, places, -strand)
+            return out
+        monkeypatch.setattr(kron, "stretches", crossed)
+        genome = next(str(r.seq).upper() for r in __import__("Bio.SeqIO", fromlist=["x"]).parse(str(GB), "genbank") if r.id == cybrid.GENOMES["mus-musculus"])
+        with pytest.raises(ValueError, match="different strands"):
+            kron.pair_rows(GB, "mus-musculus", "mus-spretus", genome, np.zeros((len(genome), 4)))
+
     def test_the_kinds_of_place(self):
         seq, kind, _ = kron.kinds(GB)
         assert kind[3306] == "protein" and kind[100] == "control region" and kind[700] == "rRNA" and kind[3229] == "tRNA"
