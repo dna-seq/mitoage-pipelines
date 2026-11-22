@@ -2638,3 +2638,65 @@ subunits from one genome, the others from the other) to be less stable than both
   tested against measured non-additivity. There is no measurement of a mixed complex anywhere: the animals'
   phenotype is predicted alike by all three explanations, so even a clear result makes explanation 2 plausible or
   less plausible, never shown. And whether H29 passes decides how much any of this is worth.
+
+## H31. The cybrids and the human variants by a DNA language model: KronGenome's masked likelihoods on the host's mitochondrial genome (proposed; no code)
+
+**State: proposed on 2026-11-22, the day H28's readout came out as "does not count" and the nucleotide baselines
+turned out stronger than the amino acid counts. The maintainer asked whether the kron genome model, trained on
+mitochondrial genomes as well, can score cybrids; its training seat gave the model's facts the same day. The protocol
+and the rules below were put to the maintainer before any code and any score; a change after this date is said as a
+change.**
+
+- *Question.* Does a model that has read 17,037 organelle genomes rate a donor's differences by more than their
+  number: are cybrids whose donor carries bases the model finds unexpected in the host's genome the ones with
+  reduced complexes, beyond what divergence says? And, on single human variants over the whole mitochondrial genome,
+  does it tell known harmful ones from common harmless ones, in the tRNA and rRNA genes too, where no protein model
+  can score?
+- *Model.* KronGenome F, the published checkpoint `just-dna-seq/KronGenome-F-1Mb` at step 170,000 (Hugging Face
+  revision 3420801c763bda2b0d6a33c1e21d2d7276e3ec7c; CC BY-NC 4.0), loaded with the package `kron_dna` of
+  github.com/antonkulaga/kron-fm at commit 58dfc5c. A bidirectional masked model over bases: a hidden base gets a
+  probability for each of A, C, G and T from the rest of the window. A mitochondrial genome is given as in its
+  training: one sequence with the context of genetic code 2 (vertebrate mitochondrial), read across the origin.
+- *What it cannot do, said in advance.* It reads one sequence. It was given no species for these genomes and was not
+  trained to connect a mitochondrial genome with nuclear genes, so it cannot see host and donor as a pair; the score
+  is how unexpected the donor's bases are in the host's mitochondrial genome. The great apes and the rodents of the
+  cybrids, or close relatives, are among its training genomes or among the 993 held out (which, is recorded with
+  the run); a genome it has memorised makes the host's own base likely everywhere, and then the score is a count
+  of differences again. The checkpoint is an intermediate one of a run still training.
+- *Likelihood table.* For each host (human NC_012920.1, mouse NC_005089.1): every place of the genome hidden in
+  turn, in groups of places 128 apart so one pass hides 1 place in 128, and the model's log-probabilities of the
+  four bases kept. Each place is scored twice, in the record's order and with the genome read from its middle
+  (rotated by half its length), and the value is taken from the reading in which the place lies farther from the
+  window's ends. The table is written once per host and everything below is read from it.
+- *Cybrid scores,* per (host, donor, complex): the donor's gene is aligned to the host's as in `cybrid-dna`; at
+  each column where both have a base and they differ, the log-probability of the host's base minus that of the
+  donor's at the host's place (positive: the donor's base is the less expected). `kron_cds` is the sum over the
+  complex's genes, `kron_cds_mean` the mean per differing place. Per pair, the same on each of its complexes:
+  `kron_rrna`, `kron_trna` and `kron_dloop` (the control region, where the two records annotate one and it aligns;
+  else not assessed). Insertions and deletions are counted beside the scores and not scored.
+- *Cybrid readouts and rule: H16's T1 to T4 on the same points.* The two scores read are `kron_cds` and
+  `kron_cds_mean`. The bar is the best of the divergence baselines known on 2026-11-22 (`d_all`, `f_all`,
+  `nt_cds_d`, `nt_cds_f`) on each test: T1 a more negative Spearman than −0.63 over the 13 stated activities; T2 an
+  area above 0.83 for 9 reduced against 20 not; T3 the most reduced complex named in at least 5 of the 6 pairs. A
+  score counts only with all three; two of three is partial and claimed as nothing. No significance is claimed.
+  The pair-level scores are reported beside them and can pass nothing.
+- *Variant test.* H29's variants without its restriction to proteins: ClinVar's mitochondrial single-base variants
+  reviewed by the expert panel as pathogenic or likely pathogenic (harmful), against gnomAD v3.1 single-base
+  variants that are homoplasmic in at least 1 in 1,000 genomes and not listed as harmful (harmless); the files
+  and their SHA-256 are H29's. Every kind of place enters: protein genes (silent changes too), tRNA, rRNA, the
+  control region. The score of a variant is the log-probability of the reference base minus that of the variant's
+  base at its place in the human table.
+- *Variant rule.* Area under the ROC curve for harmful against harmless, with a bootstrap interval, over all
+  variants and within each kind of gene. It counts if the area over all variants is at least 0.70 and above that
+  of the baseline: the number of different bases the mammals of the build hold at the place (fewer is the
+  prediction of harm), read from the build's codon and rRNA alignments. The build has no tRNA alignment: for tRNA
+  variants the baseline is not assessed, their area is reported against 0.70 alone and enters no comparison. A
+  second baseline, said in advance to be unfair to the model in the other direction: harmless variants are by
+  definition frequent in people, and the model saw one human reference, not human variation.
+- *Controls.* The table computed twice and compared byte for byte (the model draws nothing at inference; a
+  difference means the hardware). The host's own base must get a difference of exactly 0 against itself. A genome
+  with the bases shuffled within each gene, scored the same way, as the floor of what composition alone gives.
+  The context of the nuclear genome (id 0) in place of genetic code 2 as a second arm, reported beside.
+- *If it passes the cybrid rule,* the gene-level sums become a per-gene statement to check on H30's mouse strains.
+  *If it fails both,* the reading is that sequence models of either kind, protein or DNA, rank these cybrids no
+  better than distance, and the variant test says whether that is the cybrid data or the model.
