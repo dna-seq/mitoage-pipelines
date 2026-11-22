@@ -2794,7 +2794,7 @@ rule below is written before any of its numbers.**
   proposed the checks: it called the human half "the real test", which three measured donors cannot be; the entry
   above had it right.
 
-## H33. Near-identical mitochondrial genomes on one nucleus: does a per-difference score name the genome that works worse? (proposed; no table, no code, no score)
+## H33. Near-identical mitochondrial genomes on one nucleus: does a per-difference score name the genome that works worse? (table collected: too few contrasts as it stands; no code, no score)
 
 **State: proposed on 2026-11-22, after H28, H29, H31 and H32. Written before any contrast was scored; the table of
 contrasts is collected and committed before any code that scores it. A change after this date is said as a change.**
@@ -2844,3 +2844,11 @@ to work worse, does a score of the differing alleles name the worse genome more 
 - *What follows.* A score that counts is the first evidence here that single differences, not distance, can be
   ranked, and is then tried on the cybrids' differences position by position. None counting leaves the question
   open and says so; it does not show that the differences are unrankable.
+- *The table as collected, 2026-11-22, before any code and any score* (`results/h33/`): 54 rows, 22 marked as
+  entering. Twelve of those are pairs among six human cell lines of one publication that lists amino-acid-changing
+  differences only; they do not meet condition (a) and leave. That leaves 8 contrasts with a stated direction and 2
+  with none, against the 10 the rule needs: as it stands the answer is "not assessed: too few contrasts". The
+  publications that could add rows (the conplastic mice's strain table, the rat strains, two fly panels, the mouse
+  cell lines) could not be opened. Found while collecting, said before any score: the build holds 4 insects, so
+  `cons` is not assessed for flies; and a further case, a lethal incompatibility mapped to three proteins of
+  complex I in swordtail hybrids (Moran et al. 2024), is not read yet.
