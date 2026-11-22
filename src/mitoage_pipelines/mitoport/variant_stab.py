@@ -256,6 +256,14 @@ def site_variability(data: Path, gene: str, cls: str = "Mammalia") -> dict[int, 
     return {p: len({r[c] for r in rows} & set(cs.ALPHABET[:20])) for p, c in column_of_position(aln[cybrid.HUMAN]).items()}
 
 
+def without_start_changes(long: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """(the tasks' rows without the variants in a protein's first codon, how many variants that is). The tasks'
+    tables of the first run were made when such a change was still taken as an amino acid change; `consequence`
+    now names it a change of the start, and it is no missense variant."""
+    start = long.protein_pos == 1
+    return long[~start].reset_index(drop=True), int(long.id[start].nunique())
+
+
 def collect(out: Path, data: Path, sites_dir) -> pd.DataFrame:
     """variant_scores.tsv: one row per variant with `stab_fold` and `stab_bind` (means over the seeds, and the spread
     of the first), the control weights' `fold`, the two baselines and whether the site is a mito-nuclear contact. A
@@ -271,7 +279,9 @@ def collect(out: Path, data: Path, sites_dir) -> pd.DataFrame:
         print(f"NOT ASSESSED: {len(missing)} of {len(tasks())} tasks have no table: " + "; ".join(missing))
     if not tabs:
         raise SystemExit("no table to collect")
-    long = pd.concat(tabs, ignore_index=True)
+    long, n_start = without_start_changes(pd.concat(tabs, ignore_index=True))
+    if n_start:
+        print(f"left out: {n_start} variants in a first codon (a change of the start, not an amino acid change)")
     info = long.drop_duplicates("id").set_index("id")[["gene", "protein_pos", "ref_aa", "alt_aa", "label", "pos", "ref", "alt", "af_hom", "complex", "copies", "status"]]
     sc = long[long.status == "scored"]
     main = sc[sc.weights == "stabddg"].groupby("id")

@@ -43,6 +43,14 @@ class TestConsequence:
         assert [(k, g) for k, g, *_ in both] == [("missense", "ATP8"), ("missense", "ATP6")] and both[0][2:] != both[1][2:]
 
 
+def test_the_collection_leaves_out_the_changes_of_a_start():
+    long = pd.DataFrame({"id": ["a", "a", "b", "c", "c"], "protein_pos": [1, 1, 2, 1, 1], "fold": [1.0, 2.0, 3.0, 4.0, 5.0]})
+    kept, n = vs.without_start_changes(long)
+    assert list(kept.id) == ["b"] and list(kept.fold) == [3.0] and n == 2
+    same, none = vs.without_start_changes(long[long.protein_pos > 1])
+    assert list(same.id) == ["b"] and none == 0
+
+
 def test_what_counts_as_pathogenic():
     assert vs.is_pathogenic("Pathogenic") and vs.is_pathogenic("Likely pathogenic; drug response") and vs.is_pathogenic("Pathogenic/Likely pathogenic")
     assert not vs.is_pathogenic("Conflicting classifications of pathogenicity") and not vs.is_pathogenic("Benign") and not vs.is_pathogenic(None)

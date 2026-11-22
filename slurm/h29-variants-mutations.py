@@ -19,6 +19,8 @@ MUTATIONS = [
     (F, "a change of the start codon taken as an amino acid change", 'kind = "start" if k == 0 else "synonymous"', 'kind = "synonymous"'),
     (F, "the second codon taken as the start", 'kind = "start" if k == 0 else', 'kind = "start" if k <= 1 else'),
     (F, "a lost stop called nonsense", '"stop lost" if x == "*" else "nonsense" if y == "*"', '"nonsense" if "*" in (x, y)'),
+    (F, "the changes of a start kept in the collection", "    return long[~start].reset_index(drop=True), int(long.id[start].nunique())", "    return long, 0"),
+    (F, "the changes of a start counted by row", "int(long.id[start].nunique())", "int(start.sum())"),
     (F, "the standard genetic code", "CodonTable.unambiguous_dna_by_id[2]", "CodonTable.unambiguous_dna_by_id[1]"),
     (F, "conflicting classifications taken as pathogenic", 'classification.lower().startswith(("pathogenic", "likely pathogenic"))', '"pathogenic" in classification.lower()'),
     (F, "harmful at any review level", '        if r["review"] == PANEL:\n            rows +=', "        if True:\n            rows +="),
