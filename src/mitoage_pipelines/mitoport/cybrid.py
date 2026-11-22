@@ -133,7 +133,10 @@ def aligner() -> PairwiseAligner:
 
 def on_human(human: str, other: str, partial: bool, al: PairwiseAligner | None = None) -> list[str]:
     """`other`'s residue at each human position (index 0 is human position 1): a letter, '-' for a deletion in
-    `other`, '?' for a position a partial sequence does not cover (unknown, not a difference)."""
+    `other`, '?' for a position a partial sequence does not cover (unknown, not a difference). The first and the
+    last residue a partial sequence holds are unknown too: the record says the protein goes on beyond one of them,
+    and a truncated codon or a residue that is not the protein's start is read there (the chimpanzee's and the
+    bonobo's ND1 begin with a threonine that an alignment sets against the methionine)."""
     a = (al or aligner()).align(human, other)[0]
     out = ["-"] * len(human)
     first = last = None
@@ -143,9 +146,31 @@ def on_human(human: str, other: str, partial: bool, al: PairwiseAligner | None =
         first = h0 if first is None else first
         last = h1
     if partial and first is not None:
-        for i in itertools.chain(range(0, first), range(last, len(human))):
+        for i in itertools.chain(range(0, first + 1), range(last - 1, len(human))):
             out[i] = "?"
     return out
+
+
+def index_on_human(human: str, other: str, al: PairwiseAligner | None = None) -> list[int | None]:
+    """The 0-based index in `other` of the residue at each human position, None where `other` has none."""
+    a = (al or aligner()).align(human, other)[0]
+    out: list[int | None] = [None] * len(human)
+    for (h0, h1), (o0, o1) in zip(*a.aligned):
+        for k in range(h1 - h0):
+            out[h0 + k] = o0 + k
+    return out
+
+
+def donor_through_host(human: str, host: str, donor: str, donor_partial: bool, al: PairwiseAligner | None = None) -> list[str]:
+    """The donor's residue at each human position, read through the host: the donor is aligned to the host itself,
+    and a human position takes the donor residue that this alignment sets against the host residue there. Aligning
+    host and donor to human separately counted equal residues as different wherever one of the two alignments put a
+    gap the other did not (found by the review of 2026-11-22: mouse and M. caroli ATP8, 5 differences counted as
+    13). Where the host has no residue at a human position, the donor's own alignment to human is used."""
+    al = al or aligner()
+    direct = on_human(host, donor, donor_partial, al)
+    own = on_human(human, donor, donor_partial, al)
+    return [own[p] if i is None else direct[i] for p, i in enumerate(index_on_human(human, host, al))]
 
 
 # --- the contact maps -------------------------------------------------------------------------------------
@@ -204,7 +229,7 @@ def pair_scores(positions: pd.DataFrame, human: dict[str, str], host: dict, dono
              n_unknown=0)
     for g, grp in positions.groupby("gene", sort=False):
         hp, hpart, _ = host[g]; dp, dpart, _ = donor[g]
-        hs = on_human(human[g], hp, hpart, al); ds = on_human(human[g], dp, dpart, al)
+        hs = on_human(human[g], hp, hpart, al); ds = donor_through_host(human[g], hp, dp, dpart, al)
         for p, resolved, contact in zip(grp.human_pos, grp.resolved, grp.contact_nuclear):
             a, b = hs[p - 1], ds[p - 1]
             if a == "?" or b == "?":

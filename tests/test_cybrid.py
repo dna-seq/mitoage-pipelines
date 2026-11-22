@@ -33,8 +33,63 @@ class TestOnHuman:
     def test_the_ends_of_a_partial_sequence_are_unknown_not_deleted(self):
         human = "MKVLAWYRTEQ"
         other = "VLAWYRTE"                        # starts at human position 3, stops before the last two
-        assert "".join(cybrid.on_human(human, other, partial=True)) == "??VLAWYRTE?"
+        assert "".join(cybrid.on_human(human, other, partial=True)) == "???LAWYRT??"
         assert "".join(cybrid.on_human(human, other, partial=False)) == "--VLAWYRTE-"
+
+    def test_the_first_residue_of_a_partial_sequence_is_not_a_substitution(self):
+        human = "MPMANLLLLI"
+        other = "TPMANLLLLI"                      # a record partial at its start: T is not the protein's first residue
+        assert cybrid.on_human(human, other, partial=True)[0] == "?"
+        assert cybrid.on_human(human, other, partial=False)[0] == "T"
+
+
+class TestDonorThroughHost:
+    # the host and the donor carry the same three extra residues that human lacks; aligned to human one by one the
+    # two gaps can fall in different places, aligned to each other they are the same residues
+    human = "MKVLAWYRTEQNDPSG"
+    host = "MKVLAWAAAYRTEQNDPSG"
+    donor = "MKVLAWAAAYRSEQNDPSG"                  # one real difference: T -> S
+
+    def test_the_donor_is_read_against_the_host(self):
+        hs = cybrid.on_human(self.human, self.host, False)
+        ds = cybrid.donor_through_host(self.human, self.host, self.donor, False)
+        assert sum(a != b for a, b in zip(hs, ds)) == 1
+        assert [(a, b) for a, b in zip(hs, ds) if a != b] == [("T", "S")]
+
+    def test_a_gap_in_the_donor_alone_is_a_difference_once(self):
+        hs = cybrid.on_human("MKVLAWYRTE", "MKVLAWYRTE", False)
+        ds = cybrid.donor_through_host("MKVLAWYRTE", "MKVLAWYRTE", "MKVLAYRTE", False)
+        assert [(a, b) for a, b in zip(hs, ds) if a != b] == [("W", "-")]
+
+    def test_a_shifted_gap_is_not_counted(self):
+        # host and donor are equal and both lack one of human's two tryptophans: whichever one each alignment to
+        # human drops, the pair has no difference
+        human, same = "MKVLAWWYRTE", "MKVLAWYRTE"
+        hs = cybrid.on_human(human, same, False); ds = cybrid.donor_through_host(human, same, same, False)
+        assert hs == ds
+
+    # ATP8 of the three reference records (NC_012920.1, NC_005089.1, NC_025268.1): the case the review found
+    ATP8 = {"human": "MPQLNTTVWPTMITPMLLTLFLITQLKMLNTNYHLPPSPKPMKMKNYNKPWEPKWTKICSLHSLPPQS",
+            "mouse": "MPQLDTSTWFITIISSMITLFILFQLKVSSQTFPLAPSPKSLTTMKVKTPWELKWTKIYLPHSLPQQ",
+            "caroli": "MPQLDTSTWFITIISSMITLFILFQLKISSQIFPLPPSPKSLTTMKVKNPWESKWTKIYLPHSLPQQ"}
+
+    def test_mouse_and_caroli_atp8_differ_at_five_residues(self):
+        h, m, c = self.ATP8["human"], self.ATP8["mouse"], self.ATP8["caroli"]
+        direct = sum(x != y for x, y in zip(m, c))
+        assert len(m) == len(c) and direct == 5
+        hs = cybrid.on_human(h, m, False)
+        assert sum(x != y for x, y in zip(hs, cybrid.donor_through_host(h, m, c, False))) == direct
+        # each aligned to human by itself, the same pair counts more: what the count did before
+        assert sum(x != y for x, y in zip(hs, cybrid.on_human(h, c, False))) > direct
+
+    def test_the_count_reads_the_donor_through_the_host(self):
+        h, m, c = self.ATP8["human"], self.ATP8["mouse"], self.ATP8["caroli"]
+        positions = pd.DataFrame({"gene": "ATP8", "human_pos": range(1, len(h) + 1), "resolved": 1, "contact_nuclear": 0})
+        s = cybrid.pair_scores(positions, {"ATP8": h}, {"ATP8": (m, False, "m")}, {"ATP8": (c, False, "c")})
+        assert s["d_all"] == sum(x != y for x, y in zip(m, c)) and s["n_unknown"] == 0
+
+    def test_index_on_human(self):
+        assert cybrid.index_on_human("MKVLAWYRTE", "MKVLAYRTE") == [0, 1, 2, 3, 4, None, 5, 6, 7, 8]
 
 
 class TestPairScores:
@@ -56,10 +111,11 @@ class TestPairScores:
     def test_a_radical_change_and_an_unknown_position(self):
         human = {"X": "MKWLA"}
         host = {"X": ("MKWLA", False, "h")}
-        donor = {"X": ("MDWL", True, "d")}         # K->D at a contact (BLOSUM62 -1); partial, so position 5 unknown
+        donor = {"X": ("MDWL", True, "d")}         # K->D at a contact (BLOSUM62 -1); partial, so position 5 and the
+        #                                            record's own first and last residue (1 and 4) are unknown
         s = cybrid.pair_scores(self.positions(), human, host, donor)
         assert (s["d_contact"], s["d_contact_radical"]) == (1, 1)
-        assert (s["n_all"], s["n_unknown"]) == (4, 1)
+        assert (s["n_all"], s["n_unknown"]) == (2, 3)
 
     def test_identical_proteins_score_zero(self):
         human = {"X": "MKWLA"}
