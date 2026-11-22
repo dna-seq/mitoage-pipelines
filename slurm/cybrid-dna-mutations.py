@@ -13,6 +13,13 @@ breaks = [
  ("the own line ignored", "acc = cybrid.OWN_LINE.get((slug, gene), cybrid.GENOMES[slug])", "acc = cybrid.GENOMES[slug]"),
  ("humanin's frame moved", "HUMANIN = (2633, 2707)", "HUMANIN = (2634, 2708)"),
  ("the donor compared with itself", "h, d = features[cybrid.GENOMES[host]], features[cybrid.GENOMES[donor]]", "h = d = features[cybrid.GENOMES[donor]]"),
+ ("every changed codon silent", "if pa[a0 + k] == pb[b0 + k]:", "if True:"),
+ ("the standard code", "pa, pb = (str(Seq(\"\".join(c)).translate(table=2)) for c in (ca, cb))", "pa, pb = (str(Seq(\"\".join(c)).translate(table=1)) for c in (ca, cb))"),
+ ("an unknown base compared", "if set(x + y) - set(\"ACGT\"):", "if False:"),
+ ("a final stop kept", "    if out and str(Seq(out[-1]).translate(table=2)) == \"*\":\n        out.pop()\n", ""),
+ ("the blocks without the host's start", "carried(hs, ds, a - start, b - start, al)", "carried(hs, ds, a, b, al)"),
+ ("a missing control region scored", "    if h[\"dloop\"] is None or d[\"dloop\"] is None:\n        return out\n", "    if h[\"dloop\"] is None or d[\"dloop\"] is None:\n        return dict(out, nt_dloop_d=0)\n"),
+ ("the control region in the record's order of parts", "key=lambda q: int(q.start) == 0", "key=lambda q: 0"),
  ("tRNA genes not numbered", "i = seen.get(product, 0); seen[product] = i + 1", "i = 0"),
 ]
 caught = 0

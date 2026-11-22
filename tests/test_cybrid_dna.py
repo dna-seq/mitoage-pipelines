@@ -3,6 +3,7 @@ to another sequence, and, where `download cybrid` has put the records, the readi
 the human record and a pair's rows.
 
 Expected values are worked out by hand in each test, or read from the record itself."""
+import numpy as np
 import pytest
 from Bio.Seq import Seq
 
@@ -52,6 +53,54 @@ class TestCarried:
         assert cybrid_dna.carried(self.human, other, 15, 20, self.al) == "TTTTT"
 
 
+class TestSilentChanging:
+    def test_a_silent_and_a_changing_codon_are_counted_apart(self):
+        a = "ATGCTAAAAGGGTTTCCCTAA"               # M L K G F P, stop
+        b = "ATGCTGAAAGCGTTTCCCTAA"               # CTA>CTG silent (L); GGG>GCG changes G to A
+        assert cybrid_dna.silent_changing(a, a) == (0, 0, 6)
+        assert cybrid_dna.silent_changing(a, b) == (1, 1, 6)
+
+    def test_the_mitochondrial_code_decides_what_is_silent(self):
+        # ATA and ATG are both Met, TGA and TGG both Trp in the vertebrate mitochondrial code
+        assert cybrid_dna.silent_changing("ATATGACCC", "ATGTGGCCC") == (2, 0, 3)
+
+    def test_two_changed_bases_in_one_changing_codon_count_twice_and_a_gap_or_unknown_is_not_compared(self):
+        assert cybrid_dna.silent_changing("ATGAAACCC", "ATGGGACCC") == (0, 2, 3)
+        a = "ATGCTAAAAGGGTTTCCCTGGCATCAAGAA"
+        assert cybrid_dna.silent_changing(a, a[:12] + a[15:])[2] == 9
+        assert cybrid_dna.silent_changing(a, a[:12] + "NTT" + a[15:]) == (0, 0, 9)
+
+    def test_codons_drop_a_final_stop_and_a_partial_end(self):
+        assert cybrid_dna.codons("ATGAAATAA") == ["ATG", "AAA"]
+        assert cybrid_dna.codons("ATGAAAT") == ["ATG", "AAA"]
+
+
+class TestControlRegion:
+    al = cybrid_dna.aligner()
+    region = "ACGTTGCAAGGCTTAACCGGTTAACGTCAGTCAAGGTTCC" * 3
+
+    def side(self, seq, blocks=None, start=100):
+        return {"dloop": (seq, start), "blocks": blocks or {}}
+
+    def test_not_assessed_without_an_annotation(self):
+        got = cybrid_dna.control_region(self.side(self.region), {"dloop": None, "blocks": {}}, self.al)
+        assert all(np.isnan(v) for v in got.values())
+
+    def test_the_whole_region_and_the_blocks_of_the_host(self):
+        donor = self.region[:10] + "T" + self.region[11:50] + "A" + self.region[51:]     # places 10 and 50 changed
+        assert self.region[10] != "T" and self.region[50] != "A"
+        blocks = {"CSB1": (145, 155), "CSB2": (160, 170), "CSB3": (180, 190)}            # places 45..54, 60..69, 80..89
+        got = cybrid_dna.control_region(self.side(self.region, blocks), self.side(donor), self.al)
+        assert got["nt_dloop_d"] == 2 and got["nt_dloop_f"] == 2 / len(self.region) and got["nt_csb_d"] == 1
+        none = cybrid_dna.control_region(self.side(self.region), self.side(donor), self.al)
+        assert none["nt_dloop_d"] == 2 and np.isnan(none["nt_csb_d"])
+
+    def test_a_block_outside_the_region_is_refused(self):
+        blocks = {"CSB1": (50, 60), "CSB2": (160, 170), "CSB3": (180, 190)}
+        with pytest.raises(ValueError):
+            cybrid_dna.control_region(self.side(self.region, blocks), self.side(self.region), self.al)
+
+
 class TestCdsOf:
     def test_the_cell_lines_own_record_where_one_is_listed_else_the_genome(self):
         (slug, gene), own = next(iter(cybrid.OWN_LINE.items()))
@@ -81,6 +130,22 @@ class TestOnTheRecords:
     def test_a_species_against_itself_scores_nothing(self, features):
         for r in cybrid_dna.pair_rows(features, "mus-musculus", "mus-musculus"):
             assert all(r[s] == 0 for s in cybrid_dna.SCORES)
+
+    def test_the_human_control_region_is_read_across_the_records_end_on_the_plus_strand(self, features):
+        from Bio import SeqIO
+        rec = next(r for r in SeqIO.parse(str(GB), "genbank") if r.id == "NC_012920.1")
+        seq, start = features["NC_012920.1"]["dloop"]
+        assert start == 16023 and seq == str(rec.seq[16023:] + rec.seq[:576]).upper()
+
+    def test_the_mouse_blocks_lie_in_its_control_region_and_silent_and_changing_add_up(self, features):
+        m = features[cybrid.GENOMES["mus-musculus"]]
+        assert set(m["blocks"]) == set(cybrid_dna.CSB)
+        rows = cybrid_dna.pair_rows(features, "mus-musculus", "mus-spretus")
+        assert rows[0]["nt_csb_d"] <= rows[0]["nt_dloop_d"]
+        for r in rows:
+            assert r["nt_syn_d"] + r["nt_nonsyn_d"] <= r["nt_cds_d"] and r["nt_syn_d"] > r["nt_nonsyn_d"] > 0
+        human = cybrid_dna.pair_rows(features, "homo-sapiens", "pan-troglodytes")
+        assert np.isnan(human[0]["nt_csb_d"]) and human[0]["nt_dloop_d"] > 0
 
     def test_a_pair_is_the_same_both_ways_and_farther_donors_differ_more(self, features):
         ab = cybrid_dna.pair_rows(features, "homo-sapiens", "pan-troglodytes")
