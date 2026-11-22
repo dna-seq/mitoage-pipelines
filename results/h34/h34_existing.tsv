@@ -1,0 +1,8 @@
+score	n_harmful	n_harmless	not_covered	area	baseline_area	difference	low	high	labels
+alphamissense	39	325	3	0.9789	0.9184	0.0605	0.0152	0.1170	calibrated with population frequency, which the harmless variants here are chosen by
+esm1b	39	313	15	0.9375	0.9194	0.0181	-0.0567	0.0947	no labels
+apogee2	39	328	0	0.9997	0.9190	0.0807	0.0298	0.1463	trained on disease and population variants of these genes: not a test
+phylop_100v	39	328	0	0.8381	0.9190	-0.0809	-0.1546	-0.0102	no labels; conservation among 100 vertebrates
+mlc	39	328	0	0.7351	0.9190	-0.1839	-0.3064	-0.0711	built from population variation, which the harmless variants here are chosen by
+kron	39	328	0	0.9233	0.9190	0.0043	-0.0579	0.0719	no labels (H31)
+stab_fold	38	314	15	0.6293	0.9154	-0.2860	-0.4222	-0.1499	no labels (H29)

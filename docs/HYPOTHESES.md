@@ -2949,7 +2949,7 @@ as first computed.
 - *Still to correct:* H17's ESM and co-evolution sums (the model has to run again) and H31's shuffled genome.
   The sentence on soluble weights is added to H28's entry.
 
-## H34. A membrane-aware model on the human variants, beside the predictors that already exist (proposed; no code, no score of ours)
+## H34. A membrane-aware model on the human variants, beside the predictors that already exist (part A run; part B, the model, has no code)
 
 **State: proposed on 2026-11-22. The maintainer asked for it the same day ("let's see if membrane aware models show
 any signals ... and then think about possibility of proper MD"). Written before any code and before any score of
@@ -2991,3 +2991,10 @@ better than the site's variability among mammals, and better than the same model
 - *What follows.* Pass: the model is run on the cybrids' substitutions with H28's rule. Fail: structure models
   are put down for this question, and the maintainer's second step (molecular dynamics) is weighed on its own
   merits, for single contacts with a measured effect, not as a screen.
+- *Part A, run on 2026-11-22* (commit 832eca5, `results/h34/`; tests 7 passed, 10 of 10 breaks caught). Areas on
+  the variants each score covers, with the site's variability on the same variants: APOGEE 2 1.000 against 0.919
+  (trained on such variants: not a test); AlphaMissense 0.979 against 0.918, interval of the difference 0.015 to
+  0.117 (calibrated with population frequency); ESM1b 0.937 against 0.919 (-0.057 to 0.095); KronGenome 0.923
+  against 0.919 (-0.058 to 0.072); PhyloP 0.838; gnomAD's local constraint 0.735; H29's StaB-ddG 0.629 against
+  0.915. *Reading:* the two scores without labels that read sequence alone are level with the baseline; only the
+  two fitted to labels like ours are above it. The bar for part B stays the baseline's 0.92.
