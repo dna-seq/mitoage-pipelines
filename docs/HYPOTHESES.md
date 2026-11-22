@@ -2480,41 +2480,57 @@ equally spaced; almost no species is "huge" and few birds are "tiny", so the ter
 classes. It says nothing of lifespans from other sources, which have no sample size, and nothing of fishes or
 reptiles, which the entry did not include.
 
-## H28. The cybrids by a structure-conditioned sequence model: ProteinMPNN on the hosts' complexes (proposed; H16's to H18's open item)
+## H28. The cybrids by a learned binding-energy model: StaB-ddG on the hosts' complexes (agreed, not run; H16's to H18's open item)
 
-**State: proposed on 2026-11-21, not run, no code yet.** The maintainer asked whether a fast learned model could stand
-in for molecular dynamics; this is the cheapest candidate, written down before anything is computed. It runs only on
-his yes. The protocol below is then fixed with the code, before the first score, and any change after this date is
-said as a change.
+**State: proposed on 2026-11-21 with ProteinMPNN; the maintainer agreed on 2026-11-22 and asked for a check of the
+2026 literature for a better model first. The check changed the model to StaB-ddG, on 2026-11-22, before any code
+and any score. Not run.** The protocol below is fixed with the code, before the first score; any change after this
+date is said as a change.
 **Question.** Counts (H16), co-evolved pairs and ESM-2 (H17) and a force-field energy (H18) do not find the cybrids'
 defects better than divergence. ESM-2 never saw the partner in space, and the energy does not repeat between builds
-of one structure. Does a model that reads each residue in its three-dimensional surroundings, the host's nuclear
-subunits included, find the donor's residues unlikely where the measured complexes fail?
-- *Model.* ProteinMPNN (github.com/dauparas/ProteinMPNN at commit 8907e66, MIT licence), the full-backbone weights
-  `v_48_020`, no backbone noise, `--conditional_probs_only`: for each position, the probability of each amino acid
-  given the backbone of every chain and the amino acids at every other position.
+of one structure. Does a model trained to predict how substitutions change the binding energy of two partners, given
+their structure, find the donor's mitochondrial subunits binding the host's nuclear subunits worse where the
+measured complexes fail?
+- *Why this model (literature read on 2026-11-22, a search and not a review).* StaB-ddG (Deng et al., ICML 2025,
+  arXiv 2507.05502) is ProteinMPNN fine-tuned first on folding stabilities and then on measured binding energy
+  changes; it predicts the change of binding energy between two groups of chains for one substitution or many at
+  once, and its authors report it level with FoldX and Flex ddG on held-out interfaces at a fraction of the cost.
+  Against plain ProteinMPNN it answers the question asked here (binding of one partner to the other, not how well a
+  residue fits), takes all of a donor's substitutions together, and its repository carries the plain ProteinMPNN
+  weights as well, so the first proposal becomes a control arm of the same code. Looked at and not taken: BioEmu
+  (ensembles of single chains; its 2026 follow-up says complexes are not modelled); a 2026 preprint on inverse
+  folding from surface and backbone (reports sequence recovery, no mutation effects, not peer reviewed); supervised
+  predictors of binding energy changes from 2025 and 2026 (USP-ddG, Prot-ΔΔG, SimBinder-IF, ProtMutMap), which are
+  trained on the same measured set of soluble complexes and were not shown to be better outside it. No work was found
+  that scores cybrids or mitonuclear mismatch with any such model. What a wider search would find is not known.
+- *Model.* StaB-ddG (github.com/LDeng0205/StaB-ddG at commit b19a5d7, MIT licence), its final weights `stabddg.pt`,
+  the defaults of its prediction script: backbone noise 0.1, 20 Monte Carlo samples, seed 0. The prediction is the
+  model's folding-energy change of the whole complex minus those of the two partners taken alone, in kcal/mol,
+  positive for weaker binding.
 - *Structures.* H18's: human 5XTD (I), 5XTE (III), 5Z62 (IV), 8H9S (V); mouse 8OM1 (I), 7O3H (III), 7O37 (IV). The
-  backbone as deposited, every protein chain of the entry, the host's own sequence as the context. Nothing is built
-  or relaxed, so the step that made H18's energies differ between builds is absent.
-- *Scores,* per (host, donor, complex), named as in H17. At each resolved position where donor and host differ,
-  LLR = log p(donor's residue) − log p(host's residue). `mpnn_contact`, `mpnn_control` and `mpnn_all`: minus the sum
-  of LLR over the contact residues (H18's contact definition on the host's structure), over their burial-matched
-  controls, and over every mtDNA-encoded position of the complex. With the nuclear chains taken out of the structure
-  the same sums give what the mitochondrial chains alone say; `mpnn_partner_excess` is (with the partners − without)
-  at the contacts minus the same at the controls: what the partner's presence adds at the interface.
-- *Readouts and rule: H16's and H17's, unchanged* (`mitoport cybrid-readout`). The two scores read are
-  `mpnn_contact` and `mpnn_partner_excess`. A score counts if it beats divergence (`d_all`) on all three: T1 a more
-  negative Spearman than −0.36 over the 13 stated activities; T2 an area above 0.74 for 9 reduced against 20 not; T3
-  the most reduced complex named in at least 5 of the 6 pairs. Two of three is reported as partial and claimed as
-  nothing. No significance is claimed: the points are few and not independent.
-- *Controls.* `mpnn_control` and `mpnn_all` beside the scores (a score that only repeats them is divergence again);
-  the weights `v_48_010` and `v_48_030` as sensitivities; the whole run twice, the two tables compared byte for byte,
-  and if they differ the spread is reported beside every score.
-- *Known weaknesses, said in advance.* The model was trained on the Protein Data Bank, which holds these complexes
-  or close relatives: it may simply prefer the host's residue everywhere, and then the score is a count of
-  substitutions. Membrane proteins are a small part of its training. It sees no cofactor, lipid or water. One
-  substitution is scored at a time in the host's context, so two donor residues that compensate each other count as
-  two faults. It scores how well a residue fits a fixed backbone, not an energy and not a rate of electron transfer.
+  backbone as deposited, every protein chain of the entry, chains renumbered from 1 as the model expects. Partner
+  one is the complex's mtDNA-encoded chains, partner two every other protein chain. Nothing is built or relaxed, so
+  the step that made H18's energies differ between builds is absent.
+- *Scores,* per (host, donor, complex), named as in H17. `stab_all`: the predicted change of binding energy for all
+  of the donor's substitutions at resolved positions of the mtDNA-encoded chains, given together. `stab_contact` and
+  `stab_control`: the same for the substitutions at the contact residues only (H18's contact definition on the
+  host's structure) and at their burial-matched controls only.
+- *Readouts and rule: H16's and H17's, unchanged* (`mitoport cybrid-readout`). The two scores read are `stab_all`
+  and `stab_contact`. A score counts if it beats divergence (`d_all`) on all three: T1 a more negative Spearman than
+  −0.36 over the 13 stated activities; T2 an area above 0.74 for 9 reduced against 20 not; T3 the most reduced
+  complex named in at least 5 of the 6 pairs. Two of three is reported as partial and claimed as nothing. No
+  significance is claimed: the points are few and not independent.
+- *Controls.* `stab_control` beside the scores (a score that only repeats it is divergence again). The same run with
+  the repository's two earlier weights: `proteinmpnn.pt`, plain ProteinMPNN (the first proposal), and
+  `stability_finetuned.pt`. The model draws random noise: seeds 0, 1 and 2, and the spread over them reported beside
+  every score; a readout whose verdict changes with the seed is said as not settled. The run with seed 0 twice, the
+  two tables compared byte for byte. An empty set of substitutions must give exactly 0.
+- *Known weaknesses, said in advance.* The model learned from small soluble domains and from measured soluble
+  complexes, mostly with one to a few substitutions; here it scores membrane complexes of up to 45 chains with
+  tens to hundreds of substitutions at once, far outside what it was tested on. Its "partners alone" are the same
+  backbones taken apart, never relaxed. Its parent was trained on the Protein Data Bank, which holds these complexes
+  or close relatives: it may prefer the host's residue everywhere, and then the score is a count of substitutions.
+  It sees no cofactor, lipid or water, and it predicts a binding energy, not a rate of electron transfer.
 - *If it fails:* with H16 to H18, four kinds of score would then agree that the published cybrids cannot be told from
   divergence with 30 points, and what remains is dynamics at a few named sites (cytochrome b near the Rieske protein),
   not another score over all contacts.
