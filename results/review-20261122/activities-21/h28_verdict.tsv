@@ -1,0 +1,9 @@
+draws	score	T1	T1_baseline	T1_beats	T2	T2_baseline	T2_beats	T3_named	T3_pairs	T3_beats	verdict	settled_over_the_seeds
+mean	stab_all	-0.307	-0.520	False	0.556	0.742	False	3	6	False	does not count	True
+mean	stab_contact	-0.335	-0.520	False	0.650	0.742	False	3	6	False	does not count	True
+seed 0	stab_all	-0.300	-0.520	False	0.544	0.742	False	3	6	False	does not count	True
+seed 0	stab_contact	-0.357	-0.520	False	0.656	0.742	False	3	6	False	does not count	True
+seed 1	stab_all	-0.310	-0.520	False	0.567	0.742	False	3	6	False	does not count	True
+seed 1	stab_contact	-0.348	-0.520	False	0.650	0.742	False	3	6	False	does not count	True
+seed 2	stab_all	-0.312	-0.520	False	0.556	0.742	False	3	6	False	does not count	True
+seed 2	stab_contact	-0.359	-0.520	False	0.650	0.742	False	3	6	False	does not count	True

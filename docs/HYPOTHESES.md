@@ -2908,8 +2908,16 @@ as first computed.
 - *What the baseline's 0.74 is.* Within one complex `d_all` separates reduced from not reduced with an area of 0.55
   (I), 0.71 (III) and 0.72 (IV); pooled, part of its 0.74 is that complex I is the largest complex and the one
   most often reduced. The model's `stab_all` within complexes: 0.35, 0.57, 0.17. No score here ranks donors well.
-- *Possibly missing measurements.* The 2003 paper on mouse cells with other murids' mtDNA may give activities in a
-  figure for donors the table holds as "no value in the text"; seen from its abstract only. To be read in full.
+- *Missing measurements, added on 2026-11-22 (commit da06759, job 6593046, `results/review-20261122/activities-21`).*
+  The maintainer supplied the 2003 paper. Its Fig. 4 shows activities the text does not state for M. caroli,
+  M. terricolor and M. pahari; the eight bars are read from the figure (the same reading returns the seven values
+  the text states and the three of the 2000 paper for M. spretus within 1 point). A change of the measurement
+  table after the results: T1 has 21 values where it had 13; T2 and T3 are unchanged, since the paper calls none
+  of the eight a decrease. T1 with 21: `d_all` -0.52 (was -0.36), `stab_all` -0.31 (was -0.10), `stab_contact`
+  -0.34, `kron_cds` -0.04, `nt_dloop_d` -0.67, `nt_csb_d` -0.69 on 18. No model beats the count; H28's and H31's
+  verdicts stand. H32: the blocks' Spearman is now reached by 7.6% of random window sets (was 58.8%), their area
+  by 16.2% as before, so the rule (both under 5%) is still not met. The figure also shows that the rat's and
+  M. spretus's values in that paper are those of the 2000 paper, not a second measurement.
 - *Checked and found right:* every mtDNA-encoded chain's residues against the structures (no offset, no internal
   gap), the accessions' species, the pairing of genes between records, strands, the genetic code and codon phase,
   the placement of the conserved blocks, KronGenome's coordinates and sums, the direction and arithmetic of T1 to
@@ -2918,8 +2926,9 @@ as first computed.
   the figures and tables behind the cybrid papers' abstracts.
 - *H28's positive control* (`slurm/h28-stab-control.py`, added after the result): the pipeline's reading of a
   structure and its call of the model on complexes of the model's own benchmark, beside the authors' predictions.
-  On the first 16 mutations of 1AO7 (job 6592766, still running through 334): Pearson -0.98 with the authors'
-  values, mean difference of the sizes 0.13. The sign is opposite because the authors' benchmark file keeps
+  Job 6592766, 150 mutations of four complexes (184 more left out: the Protein Data Bank's entry numbers the
+  residue otherwise than the benchmark's file): Pearson -0.993 with the authors' values, and against the measured
+  values a Spearman of 0.375 in size where the authors' is 0.380. The sign is opposite because the authors' benchmark file keeps
   "negative is destabilising" (their notebook: ddG = -(dG_mut - dG_wt); 82% of its measured values are negative)
   and their run script, like this pipeline, turns it once. The model is called as its authors call it.
 - *Corrected on 2026-11-22 (commit 9d82153, job 6592805, `results/review-20261122/`):* H16's count now reads the
