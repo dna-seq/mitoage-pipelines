@@ -2649,7 +2649,7 @@ subunits from one genome, the others from the other) to be less stable than both
   phenotype is predicted alike by all three explanations, so even a clear result makes explanation 2 plausible or
   less plausible, never shown. And whether H29 passes decides how much any of this is worth.
 
-## H31. The cybrids and the human variants by a DNA language model: KronGenome's masked likelihoods on the host's mitochondrial genome (proposed; no code)
+## H31. The cybrids and the human variants by a DNA language model: KronGenome's masked likelihoods on the host's mitochondrial genome (run: neither rule met; the variant signal is real and equals conservation)
 
 **State: proposed on 2026-11-22, the day H28's readout came out as "does not count" and the nucleotide baselines
 turned out stronger than the amino acid counts. The maintainer asked whether the kron genome model, trained on
@@ -2710,6 +2710,29 @@ change.**
 - *If it passes the cybrid rule,* the gene-level sums become a per-gene statement to check on H30's mouse strains.
   *If it fails both,* the reading is that sequence models of either kind, protein or DNA, rank these cybrids no
   better than distance, and the variant test says whether that is the cybrid data or the model.
+- *Made exact with the code, 2026-11-22, before any score:* the model's code cannot share an environment with the
+  repository's other torch groups, so the table is filled by a script with its own pinned dependencies
+  (`slurm/h31-kron-table.py`); the bars of the cybrid rule are computed from the baselines in the same table (they
+  came out as written: −0.63, 0.83, and 5 of 6); an area needs at least 5 variants of each kind; the shuffled genome
+  is shuffled within each annotated gene and each stretch between genes; the control of "exactly 0 against itself"
+  is a test, not a table.
+- **Result, 2026-11-22** (tables by job 6591903 at 0e5f0a4, readouts at 637762f, `results/h31/`). *The model:* with
+  one place in 128 hidden it gives the genome's own base the highest probability at 76.1% of the places of the
+  human genome and 79.0% of the mouse's (30.4% and 31.8% on the shuffled genomes); 12 s and 1.35 GiB a table; two
+  runs, the same bytes. *Cybrids: does not count.* `kron_cds` T1 −0.01, T2 0.59, T3 3 of 6; `kron_cds_mean` −0.05,
+  0.42, 2 of 6. The mean drop per differing place is near 0.1 and negative for several donors: where two species
+  differ, the model is close to indifferent between their bases. Pair level, passing nothing: the control region
+  −0.53 and 0.72; rRNA and tRNA sums run the wrong way (T2 0.31 and 0.29). T4: every sum but one puts the donors
+  that did not respire above those that did, as the counts do. *Variants: does not count.* 95 harmful, 1,576
+  harmless. Area over all 0.883. On the 1,251 variants the baseline covers: 0.949 against 0.910, difference 0.039,
+  95% interval −0.015 to 0.095. Reported, claimed as nothing: protein genes 0.960 against 0.909 (interval 0.010 to
+  0.113), an area raised by 743 silent harmless variants against one silent harmful; amino-acid-changing only,
+  0.925 against 0.871 (−0.007 to 0.129); tRNA genes 0.772 for 44 against 81, no baseline. rRNA genes (2 harmful)
+  and the control region (none): not assessed. *The nuclear context* in place of genetic code 2: cybrids the same
+  verdict, variants 0.887. *Reading:* a model of one genome learns which places vary, which makes it a fair ranker
+  of single variants, level with conservation and usable where no alignment exists, and leaves it blind to whether
+  a variable place suits a given nucleus. Not done: whether the cybrid species were among the model's training
+  genomes or the held-out ones was not looked up.
 
 ## H32. Are the conserved sequence blocks of the control region special, or one more ruler of distance? (run: does not count, the blocks are distance)
 

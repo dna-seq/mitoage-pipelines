@@ -1,0 +1,104 @@
+test	score	n	value	reads
+T1	kron_cds	13	-0.006	Spearman of activity (% of control) against the score; negative is the prediction
+T1	kron_cds_mean	13	-0.052	Spearman of activity (% of control) against the score; negative is the prediction
+T1	kron_rrna	13	0.411	Spearman of activity (% of control) against the score; negative is the prediction
+T1	kron_trna	13	0.305	Spearman of activity (% of control) against the score; negative is the prediction
+T1	kron_dloop	13	-0.534	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_all	13	-0.355	Spearman of activity (% of control) against the score; negative is the prediction
+T1	f_all	13	-0.594	Spearman of activity (% of control) against the score; negative is the prediction
+T1	nt_cds_d	13	-0.036	Spearman of activity (% of control) against the score; negative is the prediction
+T1	nt_cds_f	13	-0.627	Spearman of activity (% of control) against the score; negative is the prediction
+T2	kron_cds	9 reduced, 20 not	0.594	area under the ROC curve for reduced against not reduced
+T2	kron_cds_mean	9 reduced, 20 not	0.417	area under the ROC curve for reduced against not reduced
+T2	kron_rrna	9 reduced, 20 not	0.314	area under the ROC curve for reduced against not reduced
+T2	kron_trna	9 reduced, 20 not	0.286	area under the ROC curve for reduced against not reduced
+T2	kron_dloop	9 reduced, 20 not	0.719	area under the ROC curve for reduced against not reduced
+T2	d_all	9 reduced, 20 not	0.744	area under the ROC curve for reduced against not reduced
+T2	f_all	9 reduced, 20 not	0.606	area under the ROC curve for reduced against not reduced
+T2	nt_cds_d	9 reduced, 20 not	0.828	area under the ROC curve for reduced against not reduced
+T2	nt_cds_f	9 reduced, 20 not	0.761	area under the ROC curve for reduced against not reduced
+T2b	kron_cds (complex I)	5 reduced, 4 not	0.250	T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds_mean (complex I)	5 reduced, 4 not	0.200	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_d (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_f (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds_mean (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex III)	1 reduced, 7 not	0.714	T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_d (complex III)	1 reduced, 7 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_f (complex III)	1 reduced, 7 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds (complex IV)	3 reduced, 6 not	0.556	T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds_mean (complex IV)	3 reduced, 6 not	0.500	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_d (complex IV)	3 reduced, 6 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_f (complex IV)	3 reduced, 6 not	1.000	T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	kron_cds_mean (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_d (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	nt_cds_f (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2	left out			mus-musculus / rattus-norvegicus complex III: the sources disagree (10.1074/jbc.M004053200;10.1074/jbc.M004070200)
+T3	kron_cds	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest kron_cds in complex I
+T3	kron_cds_mean	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest kron_cds_mean in complex V
+T3	d_all	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest f_all in complex III
+T3	nt_cds_d	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest nt_cds_d in complex I
+T3	nt_cds_f	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest nt_cds_f in complex III
+T3	kron_cds	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest kron_cds in complex III
+T3	kron_cds_mean	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest kron_cds_mean in complex V
+T3	d_all	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest f_all in complex III
+T3	nt_cds_d	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest nt_cds_d in complex I
+T3	nt_cds_f	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest nt_cds_f in complex III
+T3	kron_cds	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest kron_cds in complex I
+T3	kron_cds_mean	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest kron_cds_mean in complex V
+T3	d_all	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_all in complex I
+T3	f_all	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest f_all in complex V
+T3	nt_cds_d	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest nt_cds_d in complex I
+T3	nt_cds_f	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest nt_cds_f in complex III
+T3	kron_cds	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest kron_cds in complex I
+T3	kron_cds_mean	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest kron_cds_mean in complex I
+T3	d_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_all in complex I
+T3	f_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest f_all in complex I
+T3	nt_cds_d	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest nt_cds_d in complex I
+T3	nt_cds_f	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest nt_cds_f in complex I
+T3	kron_cds	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest kron_cds in complex I
+T3	kron_cds_mean	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest kron_cds_mean in complex III
+T3	d_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_all in complex I
+T3	f_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest f_all in complex I
+T3	nt_cds_d	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest nt_cds_d in complex I
+T3	nt_cds_f	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest nt_cds_f in complex I
+T3	kron_cds	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest kron_cds in complex I
+T3	kron_cds_mean	3	1.000	mus-musculus / otomys-irroratus: most reduced III, highest kron_cds_mean in complex III
+T3	d_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_all in complex I
+T3	f_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest f_all in complex I
+T3	nt_cds_d	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest nt_cds_d in complex I
+T3	nt_cds_f	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest nt_cds_f in complex I
+T4	kron_cds	3	1.000	homo-sapiens / pongo-pygmaeus: total kron_cds 199.805 against at most 149.395 for a donor that respired
+T4	kron_rrna	3	1.000	homo-sapiens / pongo-pygmaeus: total kron_rrna 267.855 against at most 50.0271 for a donor that respired
+T4	kron_trna	3	1.000	homo-sapiens / pongo-pygmaeus: total kron_trna 304.466 against at most 100.423 for a donor that respired
+T4	kron_dloop	3	1.000	homo-sapiens / pongo-pygmaeus: total kron_dloop 218.993 against at most 98.4988 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-pygmaeus: total d_all 443 against at most 209 for a donor that respired
+T4	nt_cds_d	3	1.000	homo-sapiens / pongo-pygmaeus: total nt_cds_d 1818 against at most 1346 for a donor that respired
+T4	kron_cds	3	1.000	homo-sapiens / pongo-abelii: total kron_cds 188.798 against at most 149.395 for a donor that respired
+T4	kron_rrna	3	0.000	homo-sapiens / pongo-abelii: total kron_rrna 25.7641 against at most 50.0271 for a donor that respired
+T4	kron_trna	3	1.000	homo-sapiens / pongo-abelii: total kron_trna 264.231 against at most 100.423 for a donor that respired
+T4	kron_dloop	3	1.000	homo-sapiens / pongo-abelii: total kron_dloop 196.412 against at most 98.4988 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-abelii: total d_all 426 against at most 209 for a donor that respired
+T4	nt_cds_d	3	1.000	homo-sapiens / pongo-abelii: total nt_cds_d 1783 against at most 1346 for a donor that respired
+T4	kron_cds	6	1.000	mus-musculus / cricetulus-griseus: total kron_cds 1116.23 against at most 339.422 for a donor that respired
+T4	kron_rrna	6	1.000	mus-musculus / cricetulus-griseus: total kron_rrna 379.196 against at most 99.9754 for a donor that respired
+T4	kron_trna	6	1.000	mus-musculus / cricetulus-griseus: total kron_trna 1018.85 against at most -21.4588 for a donor that respired
+T4	kron_dloop	6		mus-musculus / cricetulus-griseus: total kron_dloop nan against at most 253.816 for a donor that respired (not assessed: a total is missing)
+T4	d_all	6	1.000	mus-musculus / cricetulus-griseus: total d_all 740 against at most 415 for a donor that respired
+T4	nt_cds_d	6	1.000	mus-musculus / cricetulus-griseus: total nt_cds_d 2785 against at most 2185 for a donor that respired
+T4	kron_cds	6	1.000	mus-musculus / mesocricetus-auratus: total kron_cds 1179.16 against at most 339.422 for a donor that respired
+T4	kron_rrna	6	1.000	mus-musculus / mesocricetus-auratus: total kron_rrna 396.656 against at most 99.9754 for a donor that respired
+T4	kron_trna	6	1.000	mus-musculus / mesocricetus-auratus: total kron_trna 379.68 against at most -21.4588 for a donor that respired
+T4	kron_dloop	6	1.000	mus-musculus / mesocricetus-auratus: total kron_dloop 414.411 against at most 253.816 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / mesocricetus-auratus: total d_all 714 against at most 415 for a donor that respired
+T4	nt_cds_d	6	1.000	mus-musculus / mesocricetus-auratus: total nt_cds_d 2739 against at most 2185 for a donor that respired

@@ -1,0 +1,3 @@
+score	T1	T1_bar	T2	T2_bar	T3	T3_bar	verdict
+kron_cds	0.006	-0.627	0.589	0.828	3.000	4	does not count
+kron_cds_mean	-0.044	-0.627	0.400	0.828	2.000	4	does not count
