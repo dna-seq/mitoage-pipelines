@@ -1,0 +1,68 @@
+test	score	n	value	reads
+T1	d_contact	13	-0.195	Spearman of activity (% of control) against the score; negative is the prediction
+T1	f_contact	13	-0.465	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_contact_radical	13	-0.249	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_noncontact	13	-0.322	Spearman of activity (% of control) against the score; negative is the prediction
+T1	f_noncontact	13	-0.551	Spearman of activity (% of control) against the score; negative is the prediction
+T1	d_all	13	-0.355	Spearman of activity (% of control) against the score; negative is the prediction
+T1	f_all	13	-0.594	Spearman of activity (% of control) against the score; negative is the prediction
+T2	d_contact	9 reduced, 20 not	0.806	area under the ROC curve for reduced against not reduced
+T2	f_contact	9 reduced, 20 not	0.686	area under the ROC curve for reduced against not reduced
+T2	d_contact_radical	9 reduced, 20 not	0.781	area under the ROC curve for reduced against not reduced
+T2	d_noncontact	9 reduced, 20 not	0.733	area under the ROC curve for reduced against not reduced
+T2	f_noncontact	9 reduced, 20 not	0.547	area under the ROC curve for reduced against not reduced
+T2	d_all	9 reduced, 20 not	0.742	area under the ROC curve for reduced against not reduced
+T2	f_all	9 reduced, 20 not	0.606	area under the ROC curve for reduced against not reduced
+T2b	d_contact (complex I)	5 reduced, 4 not	0.650	T2 within one complex; added after the first run (exploratory)
+T2b	f_contact (complex I)	5 reduced, 4 not	0.650	T2 within one complex; added after the first run (exploratory)
+T2b	d_noncontact (complex I)	5 reduced, 4 not	0.550	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex I)	5 reduced, 4 not	0.600	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex I)	5 reduced, 4 not	0.600	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex III)	1 reduced, 7 not	0.857	T2 within one complex; added after the first run (exploratory)
+T2b	f_contact (complex III)	1 reduced, 7 not	0.857	T2 within one complex; added after the first run (exploratory)
+T2b	d_noncontact (complex III)	1 reduced, 7 not	0.643	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex III)	1 reduced, 7 not	0.571	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex III)	1 reduced, 7 not	0.571	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex IV)	3 reduced, 6 not	0.861	T2 within one complex; added after the first run (exploratory)
+T2b	f_contact (complex IV)	3 reduced, 6 not	0.861	T2 within one complex; added after the first run (exploratory)
+T2b	d_noncontact (complex IV)	3 reduced, 6 not	0.611	T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex IV)	3 reduced, 6 not	0.722	T2 within one complex; added after the first run (exploratory)
+T2b	d_contact (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	f_contact (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_noncontact (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	d_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2b	f_all (complex V)	0 reduced, 3 not		T2 within one complex; added after the first run (exploratory)
+T2	left out			mus-musculus / rattus-norvegicus complex III: the sources disagree (10.1074/jbc.M004053200;10.1074/jbc.M004070200)
+T3	f_contact	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest f_contact in complex I
+T3	d_contact	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_contact in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-troglodytes: most reduced I, highest f_all in complex III
+T3	d_all	4	1.000	homo-sapiens / pan-troglodytes: most reduced I, highest d_all in complex I
+T3	f_contact	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest f_contact in complex III
+T3	d_contact	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_contact in complex I
+T3	f_all	4	0.000	homo-sapiens / pan-paniscus: most reduced I, highest f_all in complex III
+T3	d_all	4	1.000	homo-sapiens / pan-paniscus: most reduced I, highest d_all in complex I
+T3	f_contact	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest f_contact in complex V
+T3	d_contact	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_contact in complex I
+T3	f_all	4	0.000	homo-sapiens / gorilla-gorilla: most reduced I, highest f_all in complex V
+T3	d_all	4	1.000	homo-sapiens / gorilla-gorilla: most reduced I, highest d_all in complex I
+T3	f_contact	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest f_contact in complex I
+T3	d_contact	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_contact in complex I
+T3	f_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest f_all in complex I
+T3	d_all	2	1.000	mus-musculus / rattus-norvegicus: most reduced I, highest d_all in complex I
+T3	f_contact	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest f_contact in complex I
+T3	d_contact	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_contact in complex I
+T3	f_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest f_all in complex I
+T3	d_all	3	0.000	mus-musculus / mus-pahari: most reduced IV, highest d_all in complex I
+T3	f_contact	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest f_contact in complex I
+T3	d_contact	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_contact in complex I
+T3	f_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest f_all in complex I
+T3	d_all	3	0.000	mus-musculus / otomys-irroratus: most reduced III, highest d_all in complex I
+T4	d_contact	3	1.000	homo-sapiens / pongo-pygmaeus: total d_contact 161 against at most 80 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-pygmaeus: total d_all 443 against at most 209 for a donor that respired
+T4	d_contact	3	1.000	homo-sapiens / pongo-abelii: total d_contact 165 against at most 80 for a donor that respired
+T4	d_all	3	1.000	homo-sapiens / pongo-abelii: total d_all 426 against at most 209 for a donor that respired
+T4	d_contact	6	1.000	mus-musculus / cricetulus-griseus: total d_contact 275 against at most 163 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / cricetulus-griseus: total d_all 735 against at most 414 for a donor that respired
+T4	d_contact	6	1.000	mus-musculus / mesocricetus-auratus: total d_contact 265 against at most 163 for a donor that respired
+T4	d_all	6	1.000	mus-musculus / mesocricetus-auratus: total d_all 708 against at most 414 for a donor that respired

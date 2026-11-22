@@ -2898,4 +2898,12 @@ as first computed.
   the figures and tables behind the cybrid papers' abstracts.
 - *H28's positive control* (`slurm/h28-stab-control.py`, added after the result): the pipeline's reading of a
   structure and its call of the model on complexes of the model's own benchmark, beside the authors' predictions.
-  Its result is added here when the job ends.
+  On the first 16 mutations of 1AO7 (job 6592766, still running through 334): Pearson -0.98 with the authors'
+  values, mean difference of the sizes 0.13. The sign is opposite because the authors' benchmark file keeps
+  "negative is destabilising" (their notebook: ddG = -(dG_mut - dG_wt); 82% of its measured values are negative)
+  and their run script, like this pipeline, turns it once. The model is called as its authors call it.
+- *Corrected on 2026-11-22 (commit 9d82153, job 6592805, `results/review-20261122/`):* H16's count now reads the
+  donor through the host, and the end residues of a partial record are unknown. Fourteen counts fall (M. caroli
+  complex V 23 to 15). `d_all`: T1 -0.355 as before, T2 0.742 from 0.744, T3 4 of 6 as before. No verdict of H16,
+  H28 or H31 changes. Still to correct: H17's sums, the Chinese hamster's tRNAs and control region, H31's shuffled
+  genome, the start-codon and stop variants.
