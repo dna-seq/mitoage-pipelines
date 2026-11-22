@@ -2560,8 +2560,9 @@ measured complexes fail?
 asked whether published work can validate the method; told of this check, he had not answered when it was written.
 It is written before any score, and runs after H28 unless he says no.
 *Made exact with the code, before any score:* the control weights run with seed 0 only; the nuclear partner alone
-holds no substitution, so its term is exactly 0 and is not computed; variants scored in one call (four at a time)
-share their draws, as in the model's own script; the site's variability is counted among the build's Mammalia.
+holds no substitution, so its term is exactly 0 and is not computed; variants scored in one call share their
+draws, as in the model's own script (four at a time on CPU; one at a time on the 11 GB cards it ran on, said with
+the results); the site's variability is counted among the build's Mammalia.
 Counted from the sources as fetched on 2026-11-22, with no score involved: 41 harmful and 331 harmless
 variant-and-gene rows; none harmful in COX1, COX3, CYTB or ND2, one in COX2, so the test speaks for complexes I
 and V and says nothing for III and almost nothing for IV. Only ATP6 and ND6 have 10 harmful variants.

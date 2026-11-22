@@ -207,6 +207,7 @@ def run(complex_: str, chunk: int, gb: Path, pdb_dir: Path, source: Path, weight
     placed = [place(r, chains, mt_chain) for r in v.itertuples()]
     todo = [k for k, (_, status) in enumerate(placed) if status == "scored"]
     rows = []
+    print(f"{complex_} task {chunk}: {len(todo)} variants to score, {batch} in a call, on {device}")
     for name, (file, digest) in cs.WEIGHTS.items():
         if model_for is None:
             w = weights_dir / file

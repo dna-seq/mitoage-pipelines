@@ -974,6 +974,7 @@ def mitoport_variant_stab(
     weights: Annotated[Path, typer.Option("--weights", help="folder of the weights of `download stabddg`")] = paths.STABDDG,
     out: Annotated[Path, typer.Option("--out", help="folder the tables are written to")] = paths.VARIANT_OUT,
     device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
+    batch: Annotated[int, typer.Option(help="variants scored in one call (they share their draws); 1 where the card's memory is small")] = 4,
 ) -> None:
     """H29: StaB-ddG's predicted change of stability for a share of a complex's human missense variants, harmful
     (ClinVar's expert panel) and harmless (common in gnomAD), each alone on the human structure."""
@@ -991,7 +992,7 @@ def mitoport_variant_stab(
         complex_, chunk = tasks[task]
     if complex_ is None or chunk is None:
         raise SystemExit("give --task, or --complex and --chunk")
-    variant_stab.run(complex_, chunk, gb, pdb_dir, source, weights, out, device)
+    variant_stab.run(complex_, chunk, gb, pdb_dir, source, weights, out, device, batch=batch)
 
 
 @mitoport_app.command("variant-stab-collect")

@@ -4,7 +4,8 @@
 # not run again. The card is named by the submitter, who has looked that it is free (no job is put on a card in use):
 #   sbatch --account=<account> --partition=<GPU partition> --nodelist=<node> --export=ALL,CARD=<card>[,H29=1][,H28_OUT=<folder>][,H29_OUT=<folder>] slurm/h28-stab-gpu.sbatch
 # Several cards: one job per card, each with SHARD=<k>,SHARDS=<n> (k from 0 to n-1); a job runs the tasks whose
-# number leaves k when divided by n. H28=0 leaves H28's tasks out.
+# number leaves k when divided by n. H28=0 leaves H28's tasks out. H29_BATCH is the variants scored in one call
+# (1 when omitted: complex I with four at a time does not fit an 11 GB card).
 #SBATCH --job-name=mitoage-h28-stab-gpu
 #SBATCH --constraint=A100
 #SBATCH --ntasks=1
@@ -37,7 +38,7 @@ if [ -n "$H29" ]; then
   for t in $(seq 0 18); do
     [ $((t % N)) -eq "$K" ] || continue
     s=$(date +%s)
-    $R mitoage mitoport variant-stab --task "$t" --device cuda --out "$V" < /dev/null
+    $R mitoage mitoport variant-stab --task "$t" --device cuda --batch "${H29_BATCH:-1}" --out "$V" < /dev/null
     echo "variants task $t: $(( $(date +%s) - s )) s"
   done
 fi
