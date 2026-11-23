@@ -1,0 +1,273 @@
+clade	clade_size	stem_age	sp_trait	sp_other	outgroup	sister_distance	taken	reason	dS_trait	dN_trait	dS_other	dN_other	usable	saturated	d_dS	d_dN	d_omega	trait	hypothesis
+coregonus-artedi	1	0.43939	coregonus-artedi	coregonus-hoyi	coregonus-autumnalis	0.87878	True		0.176982	0.00305705	0.176425	0.00305748	True	False	0.00136876	-6.19619e-05	-0.00143072	diadromy	H21
+coregonus-autumnalis	1	1.57222	coregonus-autumnalis	coregonus-hoyi	coregonus-clupeaformis	3.14444	False	path shares a branch with a pair already taken										diadromy	H21
+salvelinus-alpinus..salvelinus-malma (2)	2	4.70959	salvelinus-alpinus	salvelinus-namaycush	salvelinus-fontinalis	9.41917	True		0.249542	0.00635105	0.232872	0.00494387	True	False	0.0300257	0.108779	0.0787535	diadromy	H21
+platichthys-stellatus	1	4.78211	platichthys-stellatus	kareius-bicoloratus	parophrys-vetulus	9.56422	True		0.486689	0.00464672	0.55717	0.00956794	True	False	-0.0587359	-0.313672	-0.254936	diadromy	H21
+acipenser-brevirostrum	1	5.24742	acipenser-brevirostrum	acipenser-fulvescens	acipenser-baerii	10.4948	True		0.0497324	0.00207448	0.106394	0.00378758	True	False	-0.330278	-0.261453	0.0688251	diadromy	H21
+coregonus-clupeaformis..coregonus-ussuriensis (6)	6	6.60289	coregonus-clupeaformis	coregonus-hoyi	stenodus-leucichthys	13.2058	False	path shares a branch with a pair already taken										diadromy	H21
+salvelinus-fontinalis	1	7.56212	salvelinus-fontinalis	salvelinus-namaycush	salvelinus-leucomaenis	15.1242	False	path shares a branch with a pair already taken										diadromy	H21
+salvelinus-leucomaenis	1	7.56212	salvelinus-leucomaenis	salvelinus-namaycush	parahucho-perryi	15.1242	False	path shares a branch with a pair already taken										diadromy	H21
+acipenser-gueldenstaedtii	1	7.80245	acipenser-gueldenstaedtii	acipenser-ruthenus	acipenser-baerii	15.6049	True		0.0382492	0.00280934	0.172145	0.00268593	True	False	-0.653271	0.0195085	0.67278	diadromy	H21
+stenodus-leucichthys	1	9.06246	stenodus-leucichthys	coregonus-hoyi	prosopium-cylindraceum	18.1249	False	path shares a branch with a pair already taken										diadromy	H21
+oreochromis-mossambicus	1	9.75792	oreochromis-mossambicus	oreochromis-niloticus	coptodon-zillii	19.5158	True		0.568321	0.0389857	0.540785	0.0133159	True	False	0.0215693	0.466535	0.444966	diadromy	H21
+cottus-aleuticus..cottus-asper (2)	2	11.1216	cottus-aleuticus	comephorus-baikalensis	cottus-pollux	22.2432	True		0.763333	0.0229928	0.790737	0.0234401	True	False	-0.0153184	-0.00836598	0.00695239	diadromy	H21
+cottus-pollux	1	11.1216	cottus-pollux	comephorus-baikalensis	cyclopterus-lumpus	22.2432	False	path shares a branch with a pair already taken										diadromy	H21
+parabramis-pekinensis	1	12.7288	parabramis-pekinensis	hypophthalmichthys-molitrix	mylopharyngodon-piceus	25.4577	True		0.473148	0.00834569	0.454213	0.00840396	True	False	0.0177375	-0.00302185	-0.0207594	diadromy	H21
+pomatoschistus-minutus	1	13.0404	pomatoschistus-minutus	gobiusculus-flavescens	acanthogobius-hasta	26.0807	True			0.12073	3.26809	0.114933	False	False				diadromy	H21
+clupanodon-thrissa	1	13.7889	clupanodon-thrissa	konosirus-punctatus	nematalosa-erebi	27.5779	True		1.45527	0.0239086	1.64181	0.025532	True	True	-0.052379	-0.0285301	0.0238489	diadromy	H21
+eleginus-gracilis	1	14.6914	eleginus-gracilis	gadus-chalcogrammus	gadus-macrocephalus	29.3828	True		0.724284	0.00811379	0.256888	0.00218832	True	False	0.450165	0.569113	0.118949	diadromy	H21
+netuma-thalassina	1	16.2362	netuma-thalassina	arius-maculatus	genidens-barbus	32.4725	True		0.580941	0.0170161	0.581161	0.0167653	True	False	-0.000164175	0.00644781	0.00661198	diadromy	H21
+parahucho-perryi	1	16.5967	parahucho-perryi	salvelinus-namaycush	oncorhynchus-clarkii	33.1933	False	path shares a branch with a pair already taken										diadromy	H21
+lates-calcarifer	1	17.9902	lates-calcarifer	lates-niloticus	glyptocephalus-stelleri	35.9803	True		2.62697	0.0998516	2.51991	0.0975277	True	True	0.0180698	0.0102271	-0.00784268	diadromy	H21
+perca-fluviatilis	1	20.4572	perca-fluviatilis	sander-canadensis	crystallaria-asprella	40.9143	True		1.43129	0.0319396	1.50455	0.0390816	True	True	-0.0216781	-0.0876427	-0.0659646	diadromy	H21
+apeltes-quadracus	1	21.5006	apeltes-quadracus	spinachia-spinachia	culaea-inconstans	43.0012	True		1.15483	0.0476321	1.5242	0.0999425	True	True	-0.120526	-0.321851	-0.201325	diadromy	H21
+oncorhynchus-clarkii..oncorhynchus-tshawytscha (8)	8	21.5347	oncorhynchus-clarkii	salvelinus-namaycush	salmo-salar	43.0695	False	path shares a branch with a pair already taken										diadromy	H21
+pseudaspius-brandtii..pseudaspius-hakonensis (2)	2	22.3089	pseudaspius-brandtii	rhynchocypris-percnurus	couesius-plumbeus	44.6178	True		1.04642	0.0400494	1.16162	0.0468864	True	True	-0.0453593	-0.0684504	-0.023091	diadromy	H21
+anchoa-mitchilli	1	22.437	anchoa-mitchilli	engraulis-encrasicolus	engraulis-ringens	44.874	True		1.78328	0.0255116	1.59866	0.0300741	True	True	0.047463	-0.0714547	-0.118918	diadromy	H21
+gasterosteus-aculeatus..pungitius-pungitius (2)	2	23.8188	gasterosteus-aculeatus	culaea-inconstans	comephorus-baikalensis	47.6377	True		2.49133	0.0663185		0.0859221	False	False				diadromy	H21
+otolithes-ruber	1	25.299	otolithes-ruber	pennahia-argentata	larimichthys-crocea	50.598	True		1.31908	0.0907959	1.21954	0.0866779	True	True	0.0340745	0.0201577	-0.0139168	diadromy	H21
+acanthogobius-hasta	1	25.6428	acanthogobius-hasta	eucyclogobius-newberryi	gobiusculus-flavescens	51.2856	True		3.27566	0.115045		0.0833738	False	False				diadromy	H21
+arripis-trutta	1	26.2833	arripis-trutta	pomatomus-saltatrix	rastrelliger-brachysoma	52.5666	True		1.77634	0.0862798	1.49153	0.0488427	True	True	0.0758927	0.247109	0.171216	diadromy	H21
+periophthalmus-barbarus	1	27.9991	periophthalmus-barbarus	boleophthalmus-pectinirostris	acanthogobius-hasta	55.9982	True		1.94334	0.107075	1.94673	0.109016	True	True	-0.000756748	-0.00780179	-0.00704504	diadromy	H21
+salmo-salar..salmo-trutta (2)	2	28.559	salmo-salar	salvelinus-namaycush	brachymystax-lenok	57.118	False	path shares a branch with a pair already taken										diadromy	H21
+trichiurus-lepturus	1	32.4868	trichiurus-lepturus	aphanopus-carbo	promethichthys-prometheus	64.9737	True		1.74707	0.153125	1.56651	0.102722	True	True	0.047377	0.173384	0.126007	diadromy	H21
+pelecus-cultratus	1	32.5671	pelecus-cultratus	abramis-brama	chrosomus-erythrogaster	65.1342	True		1.01064	0.0288209	0.997173	0.0311104	True	True	0.00582811	-0.0331978	-0.0390259	diadromy	H21
+plotosus-lineatus	1	34.663	plotosus-lineatus	tandanus-tandanus	silurus-glanis	69.326	True		1.47143	0.100406	1.43718	0.070976	True	True	0.0102281	0.150647	0.140419	diadromy	H21
+neogobius-melanostomus	1	39.8088	neogobius-melanostomus	boleophthalmus-pectinirostris	oxyeleotris-marmorata	79.6176	False	path shares a branch with a pair already taken										diadromy	H21
+pama-pama	1	40.8857	pama-pama	argyrosomus-japonicus	centropyge-bispinosa	81.7715	True		2.11476	0.118622	1.77554	0.10174	True	True	0.0759297	0.0666749	-0.00925483	diadromy	H21
+prototroctes-maraena	1	41.5419	prototroctes-maraena	retropinna-semoni	hypomesus-olidus	83.0838	True			0.0551169		0.0580342	False	False				diadromy	H21
+sillago-sihama	1	43.823	sillago-sihama	sillago-aeolus	lobotes-surinamensis	87.6459	True			0.138325		0.122662	False	False				diadromy	H21
+clupeonella-cultriventris	1	43.8299	clupeonella-cultriventris	clupeonella-abrau	alosa-aestivalis	87.6598	True		1.72702	0.0408714	1.71438	0.0418917	True	True	0.00318868	-0.0107084	-0.0138971	diadromy	H21
+coilia-mystus..coilia-nasus (2)	2	51.2336	coilia-mystus	thryssa-kammalensis	anchoa-mitchilli	102.467	True		1.92422	0.0437231	2.15105	0.0414164	True	True	-0.048397	0.0235388	0.0719358	diadromy	H21
+thryssa-hamiltonii	1	51.2336	thryssa-hamiltonii	engraulis-encrasicolus	alosa-aestivalis	102.467	False	path shares a branch with a pair already taken										diadromy	H21
+tenualosa-ilisha	1	54.1628	tenualosa-ilisha	konosirus-punctatus	dorosoma-cepedianum	108.326	False	path shares a branch with a pair already taken										diadromy	H21
+trinectes-maculatus	1	55.4088	trinectes-maculatus	glyptocephalus-stelleri	lates-calcarifer	110.818	True		1.75439	0.12624	2.63796	0.0993582	True	True	-0.177142	0.103992	0.281134	diadromy	H21
+terapon-jarbua	1	56.2465	terapon-jarbua	girella-punctata	bostockia-porosa	112.493	True		2.01104	0.0861039	1.64166	0.0814371	True	True	0.0881373	0.0242009	-0.0639365	diadromy	H21
+acipenser-dabryanus..acipenser-nudiventris (2)	2	62.6653	acipenser-dabryanus	pseudoscaphirhynchus-hermanni	acipenser-baerii	125.331	True		0.305499	0.0103674	0.21289	0.00556385	True	False	0.156856	0.270295	0.113439	diadromy	H21
+acipenser-medirostris..huso-dauricus (5)	5	62.6653	acipenser-medirostris	acipenser-baerii	acipenser-oxyrinchus	125.331	True		0.408378	0.0132611	0.40933	0.0109175	True	False	-0.00101211	0.0844549	0.085467	diadromy	H21
+acipenser-oxyrinchus	1	62.6653	acipenser-oxyrinchus	acipenser-baerii	acipenser-sturio	125.331	False	path shares a branch with a pair already taken										diadromy	H21
+acipenser-stellatus	1	62.6653	acipenser-stellatus	pseudoscaphirhynchus-hermanni	acipenser-dabryanus	125.331	False	path shares a branch with a pair already taken										diadromy	H21
+acipenser-sturio	1	62.6653	acipenser-sturio	acipenser-baerii	polyodon-spathula	125.331	False	path shares a branch with a pair already taken										diadromy	H21
+huso-huso	1	62.6653	huso-huso	acipenser-baerii	scaphirhynchus-albus	125.331	False	path shares a branch with a pair already taken										diadromy	H21
+polydactylus-sextarius	1	72.3231	polydactylus-sextarius	glyptocephalus-stelleri	coryphaena-equiselis	144.646	False	path shares a branch with a pair already taken										diadromy	H21
+alosa-aestivalis..alosa-sapidissima (5)	5	73.6702	alosa-aestivalis	sardina-pilchardus	clupanodon-thrissa	147.34	True		1.75403	0.0345682	3.41689	0.0618244	True	True	-0.289595	-0.252483	0.0371119	diadromy	H21
+dorosoma-cepedianum..dorosoma-petenense (2)	2	73.6702	dorosoma-cepedianum	konosirus-punctatus	sardinella-aurita	147.34	False	path shares a branch with a pair already taken										diadromy	H21
+percalates-colonorum..percalates-novemaculeata (2)	2	74.2744	percalates-colonorum	bostockia-porosa	polyprion-americanus	148.549	True		1.2757	0.0444115	1.33752	0.0612495	True	True	-0.0205518	-0.139607	-0.119055	diadromy	H21
+oryzias-latipes	1	76.5358	oryzias-latipes	cololabis-saira	aphyosemion-australe	153.072	True			0.138853	2.00826	0.125471	False	False				diadromy	H21
+scatophagus-argus	1	80.888	scatophagus-argus	siganus-canaliculatus	balistes-vetula	161.776	True		1.87	0.114648	1.69916	0.0708741	True	True	0.0416072	0.208879	0.167272	diadromy	H21
+menidia-menidia	1	83.0258	menidia-menidia	aphyosemion-australe	cichla-temensis	166.052	True		2.91684	0.0644726		0.118605	False	False				diadromy	H21
+hypomesus-olidus..thaleichthys-pacificus (9)	9	83.0838	hypomesus-olidus	retropinna-semoni	brachymystax-lenok	166.168	False	path shares a branch with a pair already taken										diadromy	H21
+dicentrarchus-labrax..morone-saxatilis (3)	3	87.6459	dicentrarchus-labrax	chaetodipterus-faber	argyrosomus-japonicus	175.292	True		2.31976	0.103974	1.33472	0.0684666	True	True	0.240054	0.181445	-0.0586084	diadromy	H21
+escualosa-thoracata	1	87.6598	escualosa-thoracata	clupea-harengus	anchoa-mitchilli	175.32	True			0.0814218	2.56196	0.0819282	False	False				diadromy	H21
+potamalosa-richmondia	1	87.6598	potamalosa-richmondia	clupea-harengus	anchoa-mitchilli	175.32	False	path shares a branch with a pair already taken										diadromy	H21
+tenualosa-toli	1	87.6598	tenualosa-toli	clupea-harengus	alosa-aestivalis	175.32	False	path shares a branch with a pair already taken										diadromy	H21
+aldrichetta-forsteri..planiliza-macrolepis (5)	5	89.2143	aldrichetta-forsteri	parambassis-ranga	cymatogaster-aggregata	178.429	True		2.07107	0.0904595	3.07325	0.104576	True	True	-0.171404	-0.0629768	0.108428	diadromy	H21
+gerres-filamentosus	1	100.291	gerres-filamentosus	ammodytes-hexapterus	abudefduf-saxatilis	200.582	True		2.0237	0.092398	2.13327	0.0740278	True	True	-0.0229008	0.0962675	0.119168	diadromy	H21
+anguilla-anguilla..anguilla-rostrata (10)	10	140.949	anguilla-anguilla	conger-myriaster	albula-vulpes	281.897	True			0.126013		0.157336	False	False				diadromy	H21
+saurida-undosquamis	1	158.325	saurida-undosquamis	abudefduf-saxatilis	brachymystax-lenok	316.65	True		2.37558	0.0888687	1.97226	0.0897072	True	True	0.0808066	-0.00407864	-0.0848852	diadromy	H21
+albula-vulpes	1	159.484	albula-vulpes	conger-myriaster	megalops-atlanticus	318.968	False	path shares a branch with a pair already taken										diadromy	H21
+chanos-chanos	1	176.022	chanos-chanos	abramis-brama	alosa-aestivalis	352.044	False	path shares a branch with a pair already taken										diadromy	H21
+megalops-atlanticus..megalops-cyprinoides (2)	2	177.753	megalops-atlanticus	conger-myriaster	abramis-brama	355.506	False	path shares a branch with a pair already taken										diadromy	H21
+polypterus-senegalus	1	391.489	polypterus-senegalus	abudefduf-saxatilis			False	no outgroup outside the pair's clade										migration	H21 secondary
+coregonus-artedi	1	0.43939	coregonus-artedi	coregonus-hoyi	coregonus-autumnalis	0.87878	True		0.176982	0.00305705	0.176425	0.00305748	True	False	0.00136876	-6.19619e-05	-0.00143072	migration	H21 secondary
+coregonus-autumnalis	1	1.57222	coregonus-autumnalis	coregonus-hoyi	coregonus-clupeaformis	3.14444	False	path shares a branch with a pair already taken										migration	H21 secondary
+lepisosteus-oculatus	1	1.57562	lepisosteus-oculatus	lepisosteus-platyrhincus	lepisosteus-osseus	3.15124	True		0.114663	0.00447068	0.114232	0.00447059	True	False	0.00163724	8.74585e-06	-0.00162849	migration	H21 secondary
+clupea-harengus	1	3.08109	clupea-harengus	clupea-pallasii	sprattus-sprattus	6.16218	True		0.641892	0.0106341	0.654576	0.00958283	True	False	-0.00849782	0.0452075	0.0537053	migration	H21 secondary
+lepisosteus-osseus	1	5.83701	lepisosteus-osseus	lepisosteus-platyrhincus	atractosteus-spatula	11.674	False	path shares a branch with a pair already taken										migration	H21 secondary
+fundulus-grandis	1	6.27485	fundulus-grandis	fundulus-heteroclitus	fundulus-catenatus	12.5497	True		1.02259	0.0563334	0.943278	0.055829	True	True	0.035062	0.00390677	-0.0311552	migration	H21 secondary
+coregonus-clupeaformis..coregonus-ussuriensis (6)	6	6.60289	coregonus-clupeaformis	coregonus-hoyi	stenodus-leucichthys	13.2058	False	path shares a branch with a pair already taken										migration	H21 secondary
+thymallus-arcticus	1	6.97725	thymallus-arcticus	thymallus-thymallus	brachymystax-lenok	13.9545	True		1.03899	0.0228575	1.06645	0.0248693	True	True	-0.0113285	-0.0366349	-0.0253064	migration	H21 secondary
+hypentelium-nigricans	1	8.54282	hypentelium-nigricans	thoburnia-rhothoeca	moxostoma-duquesnii	17.0856	True		0.745397	0.0128001	0.261179	0.00694774	True	False	0.45545	0.265371	-0.190078	migration	H21 secondary
+stenodus-leucichthys	1	9.06246	stenodus-leucichthys	coregonus-hoyi	prosopium-cylindraceum	18.1249	False	path shares a branch with a pair already taken										migration	H21 secondary
+chrosomus-erythrogaster	1	10.4083	chrosomus-erythrogaster	phoxinus-eos	gila-robusta	20.8167	True		0.92792	0.0248985	0.893256	0.0276216	True	False	0.0165348	-0.0450758	-0.0616106	migration	H21 secondary
+comephorus-baikalensis	1	11.1216	comephorus-baikalensis	cottus-bairdii	cottus-aleuticus	22.2432	True		0.266881	0.00619458	0.309741	0.0102044	True	False	-0.0646809	-0.216778	-0.152097	migration	H21 secondary
+cottus-aleuticus..cottus-asper (2)	2	11.1216	cottus-aleuticus	cottus-bairdii	cottus-pollux	22.2432	False	path shares a branch with a pair already taken										migration	H21 secondary
+cottus-pollux	1	11.1216	cottus-pollux	cottus-bairdii	cyclopterus-lumpus	22.2432	False	path shares a branch with a pair already taken										migration	H21 secondary
+pomatoschistus-minutus	1	13.0404	pomatoschistus-minutus	gobiusculus-flavescens	acanthogobius-hasta	26.0807	True			0.12073	3.26809	0.114933	False	False				migration	H21 secondary
+ameiurus-melas..ameiurus-nebulosus (2)	2	13.7908	ameiurus-melas	ameiurus-natalis	ameiurus-catus	27.5816	True		0.466972	0.0120236	0.494863	0.0130785	True	False	-0.0251935	-0.036525	-0.0113315	migration	H21 secondary
+pimephales-notatus	1	15.3068	pimephales-notatus	pimephales-promelas	cyprinella-spiloptera	30.6136	True		1.08364	0.0284182	1.11842	0.0285493	True	True	-0.013723	-0.00199917	0.0117238	migration	H21 secondary
+anarhichas-lupus	1	15.8221	anarhichas-lupus	pholis-gunnellus	zoarces-americanus	31.6442	True		0.723758	0.0172875	1.18665	0.0234428	True	True	-0.21473	-0.132278	0.0824516	migration	H21 secondary
+epinephelus-polyphekadion	1	16.8368	epinephelus-polyphekadion	anyperodon-leucogrammicus	epinephelus-chlorostigma	33.6736	True		1.13681	0.035754	0.989579	0.0348221	True	True	0.0602362	0.0114698	-0.0487663	migration	H21 secondary
+ameiurus-catus	1	16.912	ameiurus-catus	ameiurus-natalis	ictalurus-furcatus	33.8239	False	path shares a branch with a pair already taken										migration	H21 secondary
+moxostoma-duquesnii..moxostoma-erythrurum (2)	2	17.0856	moxostoma-duquesnii	thoburnia-rhothoeca	catostomus-catostomus	34.1713	False	path shares a branch with a pair already taken										migration	H21 secondary
+sprattus-sprattus	1	17.3511	sprattus-sprattus	clupea-pallasii	etrumeus-teres	34.7022	False	path shares a branch with a pair already taken										migration	H21 secondary
+gambusia-affinis..gambusia-holbrooki (2)	2	20.2229	gambusia-affinis	xiphophorus-hellerii	poecilia-reticulata	40.4459	True		1.5131	0.079973	1.39887	0.0673062	True	True	0.0340906	0.0748885	0.0407979	migration	H21 secondary
+zoarces-americanus	1	20.5971	zoarces-americanus	pholis-gunnellus	apeltes-quadracus	41.1943	False	path shares a branch with a pair already taken										migration	H21 secondary
+apeltes-quadracus	1	21.5006	apeltes-quadracus	spinachia-spinachia	culaea-inconstans	43.0012	True		1.15483	0.0476321	1.5242	0.0999425	True	True	-0.120526	-0.321851	-0.201325	migration	H21 secondary
+luxilus-cornutus	1	21.5741	luxilus-cornutus	cyprinella-spiloptera	notropis-atherinoides	43.1482	True		0.655058	0.0100714	1.03939	0.0273485	True	True	-0.2005	-0.433844	-0.233345	migration	H21 secondary
+notropis-atherinoides	1	22.1007	notropis-atherinoides	cyprinella-spiloptera	notropis-hudsonius	44.2014	False	path shares a branch with a pair already taken										migration	H21 secondary
+pseudaspius-brandtii..pseudaspius-hakonensis (2)	2	22.3089	pseudaspius-brandtii	rhynchocypris-percnurus	couesius-plumbeus	44.6178	True		1.04642	0.0400494	1.16162	0.0468864	True	True	-0.0453593	-0.0684504	-0.023091	migration	H21 secondary
+notropis-hudsonius	1	23.1539	notropis-hudsonius	cyprinella-spiloptera	macrhybopsis-aestivalis	46.3077	False	path shares a branch with a pair already taken										migration	H21 secondary
+culaea-inconstans	1	23.8188	culaea-inconstans	spinachia-spinachia	gasterosteus-aculeatus	47.6377	False	path shares a branch with a pair already taken										migration	H21 secondary
+gasterosteus-aculeatus..pungitius-pungitius (2)	2	23.8188	gasterosteus-aculeatus	spinachia-spinachia	comephorus-baikalensis	47.6377	False	path shares a branch with a pair already taken										migration	H21 secondary
+prosopium-cylindraceum..prosopium-williamsoni (2)	2	24.6395	prosopium-cylindraceum	coregonus-hoyi	brachymystax-lenok	49.2791	False	path shares a branch with a pair already taken										migration	H21 secondary
+misgurnus-anguillicaudatus	1	25.0985	misgurnus-anguillicaudatus	cobitis-elongatoides	barbatula-barbatula	50.197	True		2.32242	0.0662818	2.55793	0.0837494	True	True	-0.0419489	-0.101588	-0.0596387	migration	H21 secondary
+macrhybopsis-aestivalis..phenacobius-mirabilis (3)	3	25.2602	macrhybopsis-aestivalis	cyprinella-spiloptera	campostoma-oligolepis	50.5204	False	path shares a branch with a pair already taken										migration	H21 secondary
+acanthogobius-hasta	1	25.6428	acanthogobius-hasta	eucyclogobius-newberryi	gobiusculus-flavescens	51.2856	True		3.27566	0.115045		0.0833738	False	False				migration	H21 secondary
+catostomus-catostomus..minytrema-melanops (11)	11	25.8365	catostomus-catostomus	thoburnia-rhothoeca	carpiodes-carpio	51.6729	False	path shares a branch with a pair already taken										migration	H21 secondary
+periophthalmus-barbarus	1	27.9991	periophthalmus-barbarus	boleophthalmus-pectinirostris	acanthogobius-hasta	55.9982	True		1.94334	0.107075	1.94673	0.109016	True	True	-0.000756748	-0.00780179	-0.00704504	migration	H21 secondary
+campostoma-oligolepis..rhinichthys-cataractae (3)	3	28.937	campostoma-oligolepis	cyprinella-spiloptera	clinostomus-elongatus	57.874	False	path shares a branch with a pair already taken										migration	H21 secondary
+pogonichthys-macrolepidotus	1	29.453	pogonichthys-macrolepidotus	clinostomus-elongatus	campostoma-oligolepis	58.9059	True		1.16403	0.0413385	1.24201	0.0378676	True	True	-0.0281635	0.038086	0.0662495	migration	H21 secondary
+couesius-plumbeus..semotilus-corporalis (3)	3	32.22	couesius-plumbeus	rhynchocypris-percnurus	campostoma-oligolepis	64.4401	False	path shares a branch with a pair already taken										migration	H21 secondary
+gila-robusta..ptychocheilus-oregonensis (4)	4	32.8387	gila-robusta	phoxinus-eos	abramis-brama	65.6774	False	path shares a branch with a pair already taken										migration	H21 secondary
+cyclopterus-lumpus	1	35.0728	cyclopterus-lumpus	cottus-bairdii	hexagrammos-agrammus	70.1456	False	path shares a branch with a pair already taken										migration	H21 secondary
+hexagrammos-agrammus..pleurogrammus-azonus (3)	3	35.0728	hexagrammos-agrammus	cottus-bairdii	apeltes-quadracus	70.1456	False	path shares a branch with a pair already taken										migration	H21 secondary
+abramis-brama..squalius-cephalus (10)	10	38.0413	abramis-brama	phoxinus-eos	campostoma-oligolepis	76.0827	False	path shares a branch with a pair already taken										migration	H21 secondary
+gobio-gobio..hemibarbus-labeo (2)	2	38.0413	gobio-gobio	clinostomus-elongatus	carassius-gibelio	76.0827	False	path shares a branch with a pair already taken										migration	H21 secondary
+phoxinus-phoxinus	1	38.0413	phoxinus-phoxinus	clinostomus-elongatus	couesius-plumbeus	76.0827	False	path shares a branch with a pair already taken										migration	H21 secondary
+bostockia-porosa	1	39.5355	bostockia-porosa	nannoperca-variegata	macquaria-ambigua	79.071	True		1.16422	0.0491043	1.23248	0.0427015	True	True	-0.0247437	0.0606772	0.0854209	migration	H21 secondary
+macquaria-ambigua	1	39.5427	macquaria-ambigua	nannoperca-variegata	maccullochella-peeli	79.0855	False	path shares a branch with a pair already taken										migration	H21 secondary
+neogobius-melanostomus	1	39.8088	neogobius-melanostomus	boleophthalmus-pectinirostris	oxyeleotris-marmorata	79.6176	False	path shares a branch with a pair already taken										migration	H21 secondary
+boreogadus-saida..pollachius-virens (11)	11	40.63	boreogadus-saida	molva-dypterygia	lota-lota	81.26	True		1.1992	0.0277271	0.807727	0.0195469	True	True	0.171628	0.151826	-0.0198012	migration	H21 secondary
+lota-lota	1	40.63	lota-lota	molva-dypterygia	albatrossia-pectoralis	81.26	False	path shares a branch with a pair already taken										migration	H21 secondary
+maccullochella-peeli	1	41.9371	maccullochella-peeli	nannoperca-variegata	elassoma-alabamae	83.8742	False	path shares a branch with a pair already taken										migration	H21 secondary
+ictalurus-furcatus..ictalurus-punctatus (2)	2	42.0313	ictalurus-furcatus	ameiurus-natalis	pylodictis-olivaris	84.0627	False	path shares a branch with a pair already taken										migration	H21 secondary
+pylodictis-olivaris	1	42.0313	pylodictis-olivaris	ameiurus-natalis	arius-maculatus	84.0627	False	path shares a branch with a pair already taken										migration	H21 secondary
+carpiodes-carpio..ictiobus-cyprinellus (5)	5	42.4478	carpiodes-carpio	thoburnia-rhothoeca	barbatula-barbatula	84.8956	False	path shares a branch with a pair already taken										migration	H21 secondary
+sillago-sihama	1	43.823	sillago-sihama	sillago-aeolus	lobotes-surinamensis	87.6459	True			0.138325		0.122662	False	False				migration	H21 secondary
+clupeonella-cultriventris	1	43.8299	clupeonella-cultriventris	clupeonella-abrau	alosa-aestivalis	87.6598	True		1.72702	0.0408714	1.71438	0.0418917	True	True	0.00318868	-0.0107084	-0.0138971	migration	H21 secondary
+thamnaconus-modestus	1	46.3839	thamnaconus-modestus	balistes-vetula	mola-mola	92.7679	True		2.26712	0.0809235	2.17546	0.073029	True	True	0.0179227	0.0445791	0.0266564	migration	H21 secondary
+lepomis-gibbosus..micropterus-dolomieu (2)	2	50.0603	lepomis-gibbosus	elassoma-alabamae	bostockia-porosa	100.121	True		2.02849	0.0780376	2.93718	0.113183	True	True	-0.160758	-0.161478	-0.00072052	migration	H21 secondary
+barbatula-barbatula	1	50.197	barbatula-barbatula	cobitis-elongatoides	yasuhikotakia-modesta	100.394	False	path shares a branch with a pair already taken										migration	H21 secondary
+anoplopoma-fimbria	1	51.1584	anoplopoma-fimbria	cottus-bairdii	platycephalus-indicus	102.317	False	path shares a branch with a pair already taken										migration	H21 secondary
+brachymystax-lenok..salvelinus-namaycush (19)	19	51.9156	salmo-salar	thymallus-thymallus	coregonus-artedi	103.831	False	path shares a branch with a pair already taken										migration	H21 secondary
+etrumeus-teres	1	52.5054	etrumeus-teres	clupea-pallasii	tenualosa-toli	105.011	False	path shares a branch with a pair already taken										migration	H21 secondary
+barbus-barbus..luciobarbus-sclateri (6)	6	56.4528	barbus-barbus	garra-rufa	tor-tor	112.906	True		0.845191	0.0314408	0.958353	0.0533046	True	False	-0.0545709	-0.229272	-0.174701	migration	H21 secondary
+carassius-gibelio	1	56.4528	carassius-gibelio	rhodeus-sericeus	tinca-tinca	112.906	True		1.0407	0.0470817	1.38245	0.0500164	True	True	-0.123324	-0.0262605	0.097063	migration	H21 secondary
+cirrhinus-cirrhosus..labeo-senegalensis (6)	6	56.4528	cirrhinus-cirrhosus	clinostomus-elongatus	barbatula-barbatula	112.906	False	path shares a branch with a pair already taken										migration	H21 secondary
+ctenopharyngodon-idella..paralaubuca-typus (6)	6	56.4528	ctenopharyngodon-idella	clinostomus-elongatus	barbus-barbus	112.906	False	path shares a branch with a pair already taken										migration	H21 secondary
+tinca-tinca	1	56.4528	tinca-tinca	rhodeus-sericeus	abramis-brama	112.906	False	path shares a branch with a pair already taken										migration	H21 secondary
+tor-tor	1	56.4528	tor-tor	garra-rufa	abramis-brama	112.906	False	path shares a branch with a pair already taken										migration	H21 secondary
+diplodus-cervinus..rhabdosargus-sarba (6)	6	60.6876	diplodus-cervinus	lethrinus-obsoletus	nemipterus-japonicus	121.375	True		2.34692	0.116566	3.5314	0.11141	True	True	-0.177448	0.0196477	0.197096	migration	H21 secondary
+merluccius-hubbsi	1	61.2924	merluccius-hubbsi	albatrossia-pectoralis	boreogadus-saida	122.585	True		1.90436	0.0660571	2.01406	0.137777	True	True	-0.0243224	-0.319257	-0.294934	migration	H21 secondary
+percopsis-omiscomaycus	1	61.4495	percopsis-omiscomaycus	aphredoderus-sayanus	allocyttus-niger	122.899	True		2.17342	0.108971	1.90014	0.11689	True	True	0.0583589	-0.0304665	-0.0888254	migration	H21 secondary
+coptodon-zillii..oreochromis-niloticus (3)	3	61.9487	coptodon-zillii	cichla-temensis	aphyosemion-australe	123.897	True			0.122		0.118605	False	False				migration	H21 secondary
+arius-maculatus..pangasianodon-gigas (4)	4	64.9449	arius-maculatus	silurus-glanis	ameiurus-catus	129.89	True		1.36267	0.0492501	1.38498	0.0544902	True	True	-0.00705064	-0.0439108	-0.0368602	migration	H21 secondary
+clarias-gariepinus	1	64.9449	clarias-gariepinus	ameiurus-natalis	hepsetus-odoe	129.89	False	path shares a branch with a pair already taken										migration	H21 secondary
+malapterurus-electricus	1	64.9449	malapterurus-electricus	silurus-glanis	arius-maculatus	129.89	False	path shares a branch with a pair already taken										migration	H21 secondary
+plotosus-lineatus..tandanus-tandanus (2)	2	64.9449	plotosus-lineatus	silurus-glanis	malapterurus-electricus	129.89	False	path shares a branch with a pair already taken										migration	H21 secondary
+oxyeleotris-marmorata	1	65.2629	oxyeleotris-marmorata	boleophthalmus-pectinirostris	abudefduf-saxatilis	130.526	False	path shares a branch with a pair already taken										migration	H21 secondary
+pagrus-auratus	1	65.6861	pagrus-auratus	lethrinus-obsoletus	lobotes-surinamensis	131.372	False	path shares a branch with a pair already taken										migration	H21 secondary
+pagrus-major	1	65.6861	pagrus-major	lethrinus-obsoletus	lobotes-surinamensis	131.372	False	path shares a branch with a pair already taken										migration	H21 secondary
+yasuhikotakia-modesta	1	67.7728	yasuhikotakia-modesta	cobitis-elongatoides	carpiodes-carpio	135.546	False	path shares a branch with a pair already taken										migration	H21 secondary
+centropristis-striata	1	68.1757	centropristis-striata	anyperodon-leucogrammicus	anarhichas-lupus	136.351	False	path shares a branch with a pair already taken										migration	H21 secondary
+crystallaria-asprella..sander-vitreus (6)	6	68.1757	crystallaria-asprella	cottus-bairdii	anyperodon-leucogrammicus	136.351	False	path shares a branch with a pair already taken										migration	H21 secondary
+dissostichus-eleginoides..sebastes-norvegicus (4)	4	68.1757	dissostichus-eleginoides	cottus-bairdii	crystallaria-asprella	136.351	False	path shares a branch with a pair already taken										migration	H21 secondary
+platycephalus-indicus	1	68.1757	platycephalus-indicus	cottus-bairdii	dissostichus-eleginoides	136.351	False	path shares a branch with a pair already taken										migration	H21 secondary
+lutjanus-argentimaculatus..lutjanus-johnii (2)	2	68.9951	lutjanus-argentimaculatus	centropyge-bispinosa	chaetodon-melannotus	137.99	True		1.4778	0.0825711	1.72477	0.127568	True	True	-0.0671149	-0.188912	-0.121797	migration	H21 secondary
+mola-mola	1	73.3112	mola-mola	balistes-vetula	takifugu-rubripes	146.622	False	path shares a branch with a pair already taken										migration	H21 secondary
+amia-calva	1	74.1006	amia-calva	lepisosteus-platyrhincus	abramis-brama	148.201	False	path shares a branch with a pair already taken										migration	H21 secondary
+atractosteus-spatula	1	74.1006	atractosteus-spatula	lepisosteus-platyrhincus	amia-calva	148.201	False	path shares a branch with a pair already taken										migration	H21 secondary
+mullus-surmuletus..upeneus-sulphureus (2)	2	74.2539	mullus-surmuletus	hippocampus-capensis	acanthocybium-solandri	148.508	True		2.41484	0.0853092		0.118166	False	False				migration	H21 secondary
+girella-punctata..terapon-jarbua (2)	2	74.2744	girella-punctata	elassoma-alabamae	percalates-colonorum	148.549	False	path shares a branch with a pair already taken										migration	H21 secondary
+percalates-colonorum..percalates-novemaculeata (2)	2	74.2744	percalates-colonorum	elassoma-alabamae	polyprion-americanus	148.549	False	path shares a branch with a pair already taken										migration	H21 secondary
+lophius-americanus	1	80.888	lophius-americanus	balistes-vetula	scatophagus-argus	161.776	False	path shares a branch with a pair already taken										migration	H21 secondary
+scatophagus-argus..siganus-canaliculatus (2)	2	80.888	scatophagus-argus	balistes-vetula	diplodus-cervinus	161.776	False	path shares a branch with a pair already taken										migration	H21 secondary
+dallia-pectoralis..esox-niger (4)	4	82.5641	dallia-pectoralis	umbra-limi	brachymystax-lenok	165.128	True		2.33841	0.0980988	1.9523	0.0883714	True	True	0.078374	0.045352	-0.033022	migration	H21 secondary
+cololabis-saira..tylosurus-crocodilus (3)	3	83.0258	cololabis-saira	aphyosemion-australe	menidia-menidia	166.052	True			0.0842404		0.12386	False	False				migration	H21 secondary
+menidia-menidia	1	83.0258	menidia-menidia	aphyosemion-australe	cichla-temensis	166.052	False	path shares a branch with a pair already taken										migration	H21 secondary
+argyrosomus-japonicus..umbrina-canosai (11)	11	87.6459	argyrosomus-japonicus	centropyge-bispinosa	balistes-vetula	175.292	False	path shares a branch with a pair already taken										migration	H21 secondary
+chaetodipterus-faber..morone-saxatilis (4)	4	87.6459	chaetodipterus-faber	balistes-vetula	ammodytes-hexapterus	175.292	False	path shares a branch with a pair already taken										migration	H21 secondary
+lobotes-surinamensis	1	87.6459	lobotes-surinamensis	sillago-aeolus	diplodus-cervinus	175.292	False	path shares a branch with a pair already taken										migration	H21 secondary
+priacanthus-macracanthus	1	87.6459	priacanthus-macracanthus	zebrasoma-scopas	centropyge-bispinosa	175.292	True		1.96674	0.117248	1.63053	0.103106	True	True	0.0814193	0.0558198	-0.0255995	migration	H21 secondary
+alosa-aestivalis..tenualosa-ilisha (17)	17	87.6598	alosa-aestivalis	clupea-pallasii	anchoa-mitchilli	175.32	False	path shares a branch with a pair already taken										migration	H21 secondary
+escualosa-thoracata	1	87.6598	escualosa-thoracata	clupea-pallasii	anchoa-mitchilli	175.32	False	path shares a branch with a pair already taken										migration	H21 secondary
+potamalosa-richmondia	1	87.6598	potamalosa-richmondia	clupea-pallasii	anchoa-mitchilli	175.32	False	path shares a branch with a pair already taken										migration	H21 secondary
+tenualosa-toli	1	87.6598	tenualosa-toli	clupea-pallasii	alosa-aestivalis	175.32	False	path shares a branch with a pair already taken										migration	H21 secondary
+aldrichetta-forsteri..planiliza-macrolepis (6)	6	89.2143	aldrichetta-forsteri	cymatogaster-aggregata	abudefduf-saxatilis	178.429	True		1.62583	0.0767021	2.08131	0.0685754	True	True	-0.107262	0.0486391	0.155901	migration	H21 secondary
+ammodytes-hexapterus..chlorurus-sordidus (3)	3	98.5929	ammodytes-hexapterus	balistes-vetula	anarhichas-lupus	197.186	False	path shares a branch with a pair already taken										migration	H21 secondary
+polyprion-americanus	1	98.5929	polyprion-americanus	elassoma-alabamae	anarhichas-lupus	197.186	False	path shares a branch with a pair already taken										migration	H21 secondary
+gerres-filamentosus	1	100.291	gerres-filamentosus	anyperodon-leucogrammicus	abudefduf-saxatilis	200.582	False	path shares a branch with a pair already taken										migration	H21 secondary
+acanthocybium-solandri..trichiurus-lepturus (27)	27	100.596	acanthocybium-solandri	hippocampus-capensis	abudefduf-saxatilis	201.193	False	path shares a branch with a pair already taken										migration	H21 secondary
+anabas-testudineus..xiphias-gladius (31)	31	106.154	anabas-testudineus	abudefduf-saxatilis	arripis-trutta	212.308	True		2.53664	0.11525	2.16843	0.100231	True	True	0.0681136	0.0606391	-0.00747444	migration	H21 secondary
+arripis-trutta..scomber-scombrus (6)	6	106.154	arripis-trutta	abudefduf-saxatilis	ammodytes-hexapterus	212.308	False	path shares a branch with a pair already taken										migration	H21 secondary
+allocyttus-niger..zeus-faber (3)	3	108.774	allocyttus-niger	albatrossia-pectoralis	aphredoderus-sayanus	217.549	False	path shares a branch with a pair already taken										migration	H21 secondary
+anchoa-mitchilli..thryssa-kammalensis (8)	8	109.609	anchoa-mitchilli	clupea-pallasii	abramis-brama	219.219	False	path shares a branch with a pair already taken										migration	H21 secondary
+hepsetus-odoe..salminus-brasiliensis (5)	5	115.405	hepsetus-odoe	ameiurus-natalis	abramis-brama	230.81	False	path shares a branch with a pair already taken										migration	H21 secondary
+beryx-splendens	1	129.66	beryx-splendens	abudefduf-saxatilis	lampris-guttatus	259.32	False	path shares a branch with a pair already taken										migration	H21 secondary
+lampris-guttatus	1	129.66	lampris-guttatus	abudefduf-saxatilis	albatrossia-pectoralis	259.32	False	path shares a branch with a pair already taken										migration	H21 secondary
+hypomesus-olidus..thaleichthys-pacificus (11)	11	137.08	hypomesus-olidus	coregonus-hoyi	abudefduf-saxatilis	274.161	False	path shares a branch with a pair already taken										migration	H21 secondary
+electrona-carlsbergi	1	147.103	electrona-carlsbergi	abudefduf-saxatilis	saurida-undosquamis	294.207	False	path shares a branch with a pair already taken										migration	H21 secondary
+saurida-undosquamis	1	158.325	saurida-undosquamis	abudefduf-saxatilis	brachymystax-lenok	316.65	False	path shares a branch with a pair already taken										migration	H21 secondary
+chanos-chanos	1	176.022	chanos-chanos	ameiurus-natalis	alosa-aestivalis	352.044	False	path shares a branch with a pair already taken										migration	H21 secondary
+hiodon-alosoides..hiodon-tergisus (2)	2	217.605	hiodon-alosoides	abudefduf-saxatilis	albula-vulpes	435.21	False	path shares a branch with a pair already taken										migration	H21 secondary
+albula-vulpes..muraenesox-cinereus (15)	15	249.558	albula-vulpes	abudefduf-saxatilis	amia-calva	499.116	False	path shares a branch with a pair already taken										migration	H21 secondary
+acipenser-baerii..scaphirhynchus-platorynchus (21)	21	347.072	acipenser-baerii	abudefduf-saxatilis	polypterus-senegalus	694.144	False	path shares a branch with a pair already taken										migration	H21 secondary
+sebastes-crameri..sebastes-reedi (2)	2	0.92835	sebastes-crameri	sebastes-polyspinis	sebastes-ciliatus	1.8567	True		0.0215394	0.000610265	0.0207796	0.000610203	True	False	0.0155963	4.41702e-05	-0.0155521	deep_habitat	H22
+sebastes-zacentrus	1	1.0258	sebastes-zacentrus	sebastes-emphaeus	sebastes-wilsoni	2.0516	True		0.0230381	0.000610575	0.0230366	0.000244175	True	False	2.73382e-05	0.398037	0.39801	deep_habitat	H22
+chionodraco-myersi	1	2.11305	chionodraco-myersi	chionodraco-hamatus	chaenocephalus-aceratus	4.2261	True		0.155883	0.00552395	0.160583	0.00476726	True	False	-0.0129018	0.0639811	0.0768828	deep_habitat	H22
+sebastes-proriger	1	2.55271	sebastes-proriger	sebastes-emphaeus	sebastes-brevispinis	5.10542	False	path shares a branch with a pair already taken										deep_habitat	H22
+hemilepidotus-jordani	1	2.69698	hemilepidotus-jordani	hemilepidotus-gilberti	hemitripterus-bolini	5.39396	True		0.792041	0.0258653	0.774857	0.0266915	True	False	0.00952616	-0.0136549	-0.0231811	deep_habitat	H22
+sebastes-alutus	1	3.69365	sebastes-alutus	sebastes-fasciatus	sebastes-ciliatus	7.3873	True		0.115249	0.00256708	0.131111	0.00440539	True	False	-0.0560032	-0.234544	-0.178541	deep_habitat	H22
+sebastes-aleutianus	1	3.85594	sebastes-aleutianus	sebastes-minor	sebastes-brevispinis	7.71188	True		0.114955	0.00385471	0.247734	0.00790223	True	False	-0.33346	-0.311757	0.0217022	deep_habitat	H22
+trematomus-loennbergii	1	4.2261	trematomus-loennbergii	trematomus-bernacchii	pagothenia-borchgrevinki	8.4522	True		0.407571	0.0158653	0.409816	0.0191312	True	False	-0.00238582	-0.0812953	-0.0789095	deep_habitat	H22
+sebastes-diploproa..sebastes-melanostomus (2)	2	5.36542	sebastes-diploproa	sebastes-ciliatus	sebastes-auriculatus	10.7308	True		0.165464	0.00428372	0.214197	0.0053271	True	False	-0.112108	-0.09467	0.0174377	deep_habitat	H22
+lyopsetta-exilis	1	6.71502	lyopsetta-exilis	hippoglossus-hippoglossus	glyptocephalus-stelleri	13.43	True		0.801057	0.0285822	0.7727	0.02149	True	False	0.0156525	0.123858	0.108206	deep_habitat	H22
+masturus-lanceolatus	1	7.53536	masturus-lanceolatus	mola-mola	balistes-vetula	15.0707	True		2.30074	0.0718227	2.17546	0.073029	True	True	0.0243152	-0.0072335	-0.0315487	deep_habitat	H22
+lophius-piscatorius	1	8.93937	lophius-piscatorius	lophius-americanus	capros-aper	17.8787	True		4.72246	0.120707	3.42822	0.122469	True	True	0.1391	-0.00629324	-0.145393	deep_habitat	H22
+triglops-scepticus	1	9.95372	triglops-scepticus	triglops-forficatus	dasycottus-setiger	19.9074	True		0.640109	0.0142605	0.696005	0.0144099	True	False	-0.036358	-0.00452543	0.0318326	deep_habitat	H22
+beryx-decadactylus	1	12.4152	beryx-decadactylus	beryx-splendens	neoniphon-sammara	24.8303	True		1.42608	0.0581703	1.39931	0.0587179	True	True	0.00822731	-0.0040691	-0.0122964	deep_habitat	H22
+dolloidraco-longedorsalis	1	13.4958	dolloidraco-longedorsalis	chaenocephalus-aceratus	notothenia-coriiceps	26.9917	True		0.714693	0.040254	0.760165	0.0487399	True	False	-0.0267887	-0.0830754	-0.0562868	deep_habitat	H22
+emmelichthys-nitidus..plagiogeneion-rubiginosum (2)	2	15.4994	emmelichthys-nitidus	erythrocles-schlegelii	argyrosomus-japonicus	30.9989	True		1.26755	0.0528989	1.19715	0.0512896	True	True	0.0248181	0.0134173	-0.0114007	deep_habitat	H22
+hyporthodus-octofasciatus	1	17.8346	hyporthodus-octofasciatus	hyporthodus-niveatus	epinephelus-marginatus	35.6691	True		0.714775	0.0199093	0.771104	0.0236508	True	False	-0.0329438	-0.0747916	-0.0418478	deep_habitat	H22
+aethotaxis-mitopteryx	1	19.3197	aethotaxis-mitopteryx	chaenocephalus-aceratus	eleginops-maclovinus	38.6394	False	path shares a branch with a pair already taken										deep_habitat	H22
+micromesistius-poutassou	1	22.7028	micromesistius-poutassou	gadus-macrocephalus	brosme-brosme	45.4056	True		1.23008	0.0228152	1.31951	0.023694	True	True	-0.0304793	-0.0164145	0.0140648	deep_habitat	H22
+albatrossia-pectoralis	1	30.1599	albatrossia-pectoralis	coelorinchus-caelorhincus	antimora-microlepis	60.3199	True		1.92082	0.160867	1.70424	0.164267	True	True	0.0519545	-0.00908136	-0.0610359	deep_habitat	H22
+arctoscopus-japonicus	1	30.4753	arctoscopus-japonicus	cyclopterus-lumpus	comephorus-baikalensis	60.9506	True		1.39408	0.0488853	1.45245	0.0526519	True	True	-0.0178157	-0.0322356	-0.0144199	deep_habitat	H22
+aphanopus-carbo	1	32.4868	aphanopus-carbo	tentoriceps-cristatus	promethichthys-prometheus	64.9737	True		1.55852	0.101936	2.15567	0.143402	True	True	-0.140869	-0.14823	-0.00736066	deep_habitat	H22
+diaphus-theta..electrona-carlsbergi (2)	2	37.7777	diaphus-theta	triphoturus-mexicanus	atherinops-affinis	75.5554	True		3.27177	0.10528	3.89045	0.109684	True	True	-0.0752161	-0.0177991	0.057417	deep_habitat	H22
+stenobrachius-leucopsarus	1	37.7777	stenobrachius-leucopsarus	triphoturus-mexicanus	diaphus-theta	75.5554	False	path shares a branch with a pair already taken										deep_habitat	H22
+conger-myriaster	1	45.3107	conger-myriaster	conger-erebennus	muraenesox-cinereus	90.6215	True		1.58726	0.134386	1.6246	0.133801	True	True	-0.0100972	0.00189437	0.0119916	deep_habitat	H22
+allocyttus-niger..neocyttus-rhomboidalis (2)	2	48.3737	allocyttus-niger	zenopsis-nebulosus	albatrossia-pectoralis	96.7474	True		2.09148	0.16626	5.16862	0.179932	True	True	-0.392922	-0.034319	0.358603	deep_habitat	H22
+anoplopoma-fimbria..erilepis-zonifer (2)	2	51.1584	anoplopoma-fimbria	acantholumpenus-mackayi	chelidonichthys-kumu	102.317	True		1.82737	0.0676408	2.03336	0.0606309	True	True	-0.0463873	0.0475148	0.0939021	deep_habitat	H22
+cubiceps-pauciradiatus	1	52.5666	cubiceps-pauciradiatus	acanthocybium-solandri	pampus-argenteus	105.133	True		1.38897	0.105397	1.54353	0.104828	True	True	-0.045824	0.00234948	0.0481735	deep_habitat	H22
+antimora-microlepis	1	61.2924	antimora-microlepis	coelorinchus-caelorhincus	merluccius-hubbsi	122.585	False	path shares a branch with a pair already taken										deep_habitat	H22
+lampris-guttatus	1	129.66	lampris-guttatus	atherinops-affinis	albatrossia-pectoralis	259.32	True		2.92632	0.183385	3.83267	0.171994	True	True	-0.11718	0.0278526	0.145033	deep_habitat	H22
+halosauropsis-macrochir	1	159.484	halosauropsis-macrochir	anguilla-anguilla	albula-vulpes	318.968	True			0.1181		0.126637	False	False				deep_habitat	H22
+alepocephalus-bairdii	1	207.665	alepocephalus-bairdii	abbottina-rivularis	alosa-aestivalis	415.331	True		2.25948	0.0852971	2.49918	0.113444	True	True	-0.0437889	-0.123847	-0.0800577	deep_habitat	H22
+thunnus-albacares..thunnus-obesus (3)	3	3.47797	thunnus-albacares	thunnus-atlanticus	euthynnus-alletteratus	6.95594	True		0.776061	0.00933205	0.802092	0.00939405	True	False	-0.0143282	-0.00287566	0.0114525	deep_depth	H22 sensitivity
+sebastes-norvegicus	1	5.36542	sebastes-norvegicus	sebastes-auriculatus	sebastes-minor	10.7308	True		0.2933	0.00858203	0.311988	0.00882688	True	False	-0.0268255	-0.012217	0.0146085	deep_depth	H22 sensitivity
+anguilla-marmorata	1	7.5822	anguilla-marmorata	anguilla-nebulosa	anguilla-reinhardtii	15.1644	True		0.290388	0.00723469	0.305913	0.00812118	True	False	-0.0226186	-0.0501993	-0.0275807	deep_depth	H22 sensitivity
+hippoglossoides-elassodon	1	8.47191	hippoglossoides-elassodon	kareius-bicoloratus	glyptocephalus-stelleri	16.9438	True		0.903161	0.0292399	0.993944	0.0299052	True	False	-0.0415969	-0.00977008	0.0318268	deep_depth	H22 sensitivity
+anguilla-reinhardtii	1	10.0244	anguilla-reinhardtii	anguilla-nebulosa	anguilla-australis	20.0487	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+comephorus-baikalensis	1	11.1216	comephorus-baikalensis	cottus-bairdii	cottus-poecilopus	22.2432	True		0.603632	0.0216583	0.64269	0.0241084	True	False	-0.0272294	-0.0465438	-0.0193144	deep_depth	H22 sensitivity
+glyptocephalus-stelleri..reinhardtius-hippoglossoides (3)	3	14.6738	glyptocephalus-stelleri	kareius-bicoloratus	hippoglossus-hippoglossus	29.3476	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+hippoglossus-hippoglossus..hippoglossus-stenolepis (2)	2	14.6738	hippoglossus-hippoglossus	kareius-bicoloratus	atheresthes-evermanni	29.3476	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+anguilla-australis	1	16.9246	anguilla-australis	anguilla-nebulosa	gymnothorax-fimbriatus	33.8492	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+atheresthes-evermanni	1	22.9033	atheresthes-evermanni	kareius-bicoloratus	pseudorhombus-cinnamoneus	45.8066	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+trachurus-trachurus	1	24.9055	trachurus-trachurus	selar-crumenophthalmus	caranx-crysos	49.8109	True		1.14607	0.0197072	1.35554	0.0254808	True	True	-0.0729009	-0.111588	-0.038687	deep_depth	H22 sensitivity
+scomber-scombrus	1	29.0966	scomber-scombrus	rastrelliger-kanagurta	arripis-trutta	58.1932	True		1.80434	0.0876627	1.80636	0.0865106	True	True	-0.000487603	0.00574542	0.00623303	deep_depth	H22 sensitivity
+sebastolobus-alascanus	1	30.3216	sebastolobus-alascanus	sebastes-auriculatus	pterois-volitans	60.6431	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+aphanopus-carbo	1	32.4868	aphanopus-carbo	tentoriceps-cristatus	acanthocybium-solandri	64.9737	True		1.20254	0.0602666	1.81906	0.118629	True	True	-0.179746	-0.294115	-0.114369	deep_depth	H22 sensitivity
+anoplopoma-fimbria	1	51.1584	anoplopoma-fimbria	apeltes-quadracus	prionotus-evolans	102.317	True		2.18308	0.10757	4.1081	0.128154	True	True	-0.274572	-0.0760404	0.198532	deep_depth	H22 sensitivity
+cubiceps-pauciradiatus	1	52.5666	cubiceps-pauciradiatus	acanthocybium-solandri	pampus-argenteus	105.133	True		1.38897	0.105397	1.54353	0.104828	True	True	-0.045824	0.00234948	0.0481735	deep_depth	H22 sensitivity
+rachycentron-canadum	1	64.8635	rachycentron-canadum	caranx-melampygus	atheresthes-evermanni	129.727	True		2.8263	0.174123	2.03926	0.105686	True	True	0.141746	0.21684	0.0750944	deep_depth	H22 sensitivity
+aethotaxis-mitopteryx..trematomus-loennbergii (5)	5	68.1757	aethotaxis-mitopteryx	pterois-volitans	anoplopoma-fimbria	136.351	True		2.5211	0.122926	2.83174	0.0781502	True	True	-0.050464	0.196713	0.247177	deep_depth	H22 sensitivity
+makaira-nigricans..xiphias-gladius (2)	2	72.3231	makaira-nigricans	caranx-crysos	atheresthes-evermanni	144.646	True		2.47141	0.10402	2.40062	0.106391	True	True	0.0126221	-0.00978681	-0.0224089	deep_depth	H22 sensitivity
+mola-mola	1	73.3112	mola-mola	thamnaconus-modestus	diodon-hystrix	146.622	True		1.91038	0.0706983	1.78657	0.093812	True	True	0.0291006	-0.12285	-0.15195	deep_depth	H22 sensitivity
+lophius-piscatorius	1	80.888	lophius-piscatorius	diodon-hystrix	scatophagus-argus	161.776	True		2.77258	0.116716	1.79009	0.115153	True	True	0.19001	0.00585577	-0.184154	deep_depth	H22 sensitivity
+pseudopentaceros-richardsoni	1	98.5929	pseudopentaceros-richardsoni	ambloplites-rupestris	aethotaxis-mitopteryx	197.186	True		2.38075	0.114234	2.87167	0.116342	True	True	-0.0814197	-0.00794006	0.0734797	deep_depth	H22 sensitivity
+albatrossia-pectoralis..neocyttus-rhomboidalis (12)	12	117.856	allocyttus-niger	percopsis-omiscomaycus	abudefduf-saxatilis	235.711	True		2.13359	0.102111	1.91292	0.105897	True	True	0.047414	-0.0158143	-0.0632283	deep_depth	H22 sensitivity
+beryx-decadactylus..beryx-splendens (2)	2	129.66	beryx-decadactylus	neoniphon-sammara	abudefduf-saxatilis	259.32	True		1.50884	0.0708363	1.63119	0.0723001	True	True	-0.0338631	-0.00888304	0.0249801	deep_depth	H22 sensitivity
+glossanodon-semifasciatus	1	137.08	glossanodon-semifasciatus	coregonus-artedi	osmerus-eperlanus	274.161	True		3.04281	0.089146	2.47845	0.0734046	True	True	0.0890952	0.0843785	-0.00471669	deep_depth	H22 sensitivity
+diaphus-theta..stenobrachius-leucopsarus (3)	3	147.103	diaphus-theta	abudefduf-saxatilis	saurida-elongata	294.207	True		2.15613	0.104065	2.09449	0.0986415	True	True	0.0125955	0.0232437	0.0106482	deep_depth	H22 sensitivity
+halosauropsis-macrochir	1	159.484	halosauropsis-macrochir	anguilla-nebulosa	albula-vulpes	318.968	False	path shares a branch with a pair already taken										deep_depth	H22 sensitivity
+alepocephalus-bairdii	1	207.665	alepocephalus-bairdii	ameiurus-nebulosus	alosa-aestivalis	415.331	True		2.26306	0.0846652	2.47188	0.118742	True	True	-0.0383303	-0.146901	-0.108571	deep_depth	H22 sensitivity
+enhydra-lutris	1	9.43402	enhydra-lutris	hydrictis-maculicollis	aonyx-capensis	18.868	True		0.692703	0.0317508	0.730313	0.0298925	True	False	-0.0229614	0.0261922	0.0491536	marine	H23
+arctocephalus-australis..zalophus-californianus (10)	10	39.6458	arctocephalus-australis	ailuropoda-melanoleuca	ailurus-fulgens	79.2916	True		1.67698	0.0704786	1.63105	0.068422	True	True	0.0120606	0.0128616	0.000801007	marine	H23
+balaena-mysticetus..ziphius-cavirostris (36)	36	53.0069	balaena-mysticetus	hexaprotodon-liberiensis	addax-nasomaculatus	106.014	True		1.34684	0.0864218	1.3496	0.0759514	True	True	-0.000889437	0.0560879	0.0569774	marine	H23
+dugong-dugon..trichechus-manatus (2)	2	63.338	dugong-dugon	elephas-maximus	echinops-telfairi	126.676	True		5.22677	0.151049	2.96439	0.188403	True	True	0.246298	-0.0959717	-0.342269	marine	H23
+myotis-yumanensis	1	5.744	myotis-yumanensis	myotis-nigricans	myotis-evotis	11.488	True		0.732407	0.016547	0.837661	0.0201527	True	False	-0.0583157	-0.0856132	-0.0272975	hibernation	H23
+myotis-bechsteinii..myotis-myotis (2)	2	11.488	myotis-bechsteinii	myotis-nigricans	lasionycteris-noctivagans	22.976	False	path shares a branch with a pair already taken										hibernation	H23
+myotis-brandtii	1	11.488	myotis-brandtii	myotis-nigricans	myotis-bechsteinii	22.976	False	path shares a branch with a pair already taken										hibernation	H23
+myotis-evotis..myotis-volans (5)	5	11.488	myotis-evotis	myotis-nigricans	myotis-brandtii	22.976	False	path shares a branch with a pair already taken										hibernation	H23
+lasionycteris-noctivagans..vespertilio-murinus (5)	5	26.7828	lasionycteris-noctivagans	myotis-nigricans	molossus-molossus	53.5655	False	path shares a branch with a pair already taken										hibernation	H23
+mystacina-tuberculata	1	46.7217	mystacina-tuberculata	macrotus-californicus	lasionycteris-noctivagans	93.4434	True		2.48622	0.108123	2.20388	0.113154	True	True	0.0523498	-0.0197535	-0.0721033	hibernation	H23
+rhinolophus-ferrumequinum	1	50.9732	rhinolophus-ferrumequinum	macroderma-gigas	cynopterus-brachyotis	101.946	True		1.5897	0.0829109	1.93315	0.103094	True	True	-0.0849512	-0.0946225	-0.00967131	hibernation	H23
+myotis-yumanensis	1	5.744	myotis-yumanensis	myotis-nigricans	myotis-evotis	11.488	True		0.732407	0.016547	0.837661	0.0201527	True	False	-0.0583157	-0.0856132	-0.0272975	hibernation	H24 L3
+myotis-bechsteinii..myotis-myotis (2)	2	11.488	myotis-bechsteinii	myotis-nigricans	lasionycteris-noctivagans	22.976	False	path shares a branch with a pair already taken										hibernation	H24 L3
+myotis-brandtii	1	11.488	myotis-brandtii	myotis-nigricans	myotis-bechsteinii	22.976	False	path shares a branch with a pair already taken										hibernation	H24 L3
+myotis-evotis..myotis-volans (5)	5	11.488	myotis-evotis	myotis-nigricans	myotis-brandtii	22.976	False	path shares a branch with a pair already taken										hibernation	H24 L3
+lasionycteris-noctivagans..plecotus-auritus (4)	4	26.7828	lasionycteris-noctivagans	myotis-nigricans	molossus-molossus	53.5655	False	path shares a branch with a pair already taken										hibernation	H24 L3
+mystacina-tuberculata	1	46.7217	mystacina-tuberculata	macrotus-californicus	lasionycteris-noctivagans	93.4434	True		2.48622	0.108123	2.20388	0.113154	True	True	0.0523498	-0.0197535	-0.0721033	hibernation	H24 L3
+rhinolophus-ferrumequinum	1	50.9732	rhinolophus-ferrumequinum	macroderma-gigas	cynopterus-brachyotis	101.946	True		1.5897	0.0829109	1.93315	0.103094	True	True	-0.0849512	-0.0946225	-0.00967131	hibernation	H24 L3

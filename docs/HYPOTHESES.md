@@ -1959,7 +1959,10 @@ H24's L3 and H25's B2 will be "not assessed" by the rules as fixed, and they sta
 - `slurm/adapt-coupling.sbatch`: H19's vertebrate alignments (made there if H19's job has not), `adapt coupling-prep`,
   `mitoport branch-lengths`, `adapt coupling` for mammals and ray-finned fishes;
 - then `mitoage adapt readout`.
-**Result.** Not yet run.
+**Result, 2026-11-23** (first job 6587083 and selection array 6587084 at ff05158, coupling job 6587349 at 59f739a, readout job 6599963; `results/h21-25/`). *Not detected.* R1: K = 1.02, p = 0.053 (Holm 0.11); 1 of 20
+control draws lies below. R2: over 12 pairs the median difference in omega is +0.074 (interval 0.003 to 0.116, 9
+positive, p = 0.064, Holm 0.11), against the predicted direction. C1 and C2: not assessed, no species has every
+protein the species rule keeps (H19's nuclear alignments cover too few fishes).
 
 ## H22. Deep-sea fishes: relaxed or adapted mitochondria where the deep sea was entered
 
@@ -1989,7 +1992,8 @@ species of 893 ray-finned fishes, 32 trait clades, 32 changes, 2 in the partner 
   from H20's temperature without H20's result beside it. The deep-sea lineages of the build are the ones with
   mitogenomes in RefSeq, a fraction of those Shen et al. sampled.
 **Test.** As H21.
-**Result.** Not yet run.
+**Result, 2026-11-23** (first job 6587083 and selection array 6587084 at ff05158, coupling job 6587349 at 59f739a, readout job 6599963; `results/h21-25/`). *Not detected.* R1: K = 1.02, p = 0.21 (Holm 0.43). R2: over 12
+pairs the median difference in omega is +0.001 (p = 0.97). C1 and C2: not assessed, as in H21.
 
 ## H23. Hibernating and marine mammals, with bats as the positive control: the mitochondrial genes and their nuclear partners
 
@@ -2052,7 +2056,11 @@ hibernate, 394 do not, 190 are unknown (in neither source: cetaceans, sirenians 
 dataset); 19 bats are coded by both sources, all alike, so no species is unknown by disagreement. 16 families of
 hibernators, 25 trait clades and 20 changes on the dated tree; 20 hibernators are in H12's partner set of 177 mammals.
 **Test.** As H21.
-**Result.** Not yet run.
+**Result, 2026-11-23** (first job 6587083 and selection array 6587084 at ff05158, coupling job 6587349 at 59f739a, readout job 6599963; `results/h21-25/`). *Marine mammals:* R1 gives K = 0.84, p = 1.9e-06, but 9 of the 20
+control draws lie below it: "not separated from the control clades", claimed as nothing. R2: not assessed, 1 pair
+without saturation, fewer than 8. *Hibernation:* R1 not run (the mammal-wide table of hibernation was not obtained;
+its array tasks were left out); R2 not assessed, 1 pair. C1, C2 and the positive control on bats: not assessed, no
+species has every protein the species rule keeps, so the method's power on the coupling side is not shown.
 
 ## H24. Hibernation and longevity in mammals: is part of lifespan's mitochondrial signal hibernation's?
 
@@ -2110,7 +2118,10 @@ read when H11 was written.
   hibernation go together. Latitude predicts longevity among hibernating bats (Wilkinson & Adams 2019) and is not in
   the build. Torpor's gains and losses are hard to tell apart, so L3's pairs may count a loss as an origin.
 **Test.** As H21 (`adapt fits` writes P, L1 and L2; `adapt pairs` writes L3).
-**Result.** Not yet run.
+**Result, 2026-11-23** (first job 6587083 and selection array 6587084 at ff05158, coupling job 6587349 at 59f739a, readout job 6599963; `results/h21-25/`). The positive control passes (lifespan on hibernation given mass:
+slope 0.29, p = 0.0003, 41 species; the same numbers as H25's B1, so it rests on the bats' table alone while the
+mammal-wide table is missing, which was not checked further). L3: not assessed, 1 pair, fewer than 8. L2: not assessed, 1 feature passes
+without hibernation, fewer than 5. The question of the entry is not answered.
 
 ## H25. Inside bats: lifespan, hibernation and the mitochondrial genome where flight is held constant
 
@@ -2160,7 +2171,9 @@ between them. B2 is therefore H20's design as H20 fits it: log10 dS per million 
 log10 lifespan and mean log10 mass, GLS with Pagel's lambda, each pair at its first species' tip (`fits.bat_pairs`). Its
 minimum of 12 pairs, its two-sided reading and its place in the correction are unchanged.
 **Test.** As H21 (`adapt fits` writes B1, B2 and B3; B4 is RELAX on `bat_hibernation` in `slurm/adapt-selection.sbatch`).
-**Result.** Not yet run.
+**Result, 2026-11-23** (first job 6587083 and selection array 6587084 at ff05158, coupling job 6587349 at 59f739a, readout job 6599963; `results/h21-25/`). B1, the positive control, passes (slope 0.29, p = 0.0003, 41
+species). B4: K = 0.96, p = 0.031, with 3 of 20 control draws below: "not separated from the control clades",
+claimed as nothing. B2: not assessed, not run (11 bat pairs, fewer than its 12, as said before the run).
 
 ## H26. Long-lived for their body mass: the mitochondrial genes where long life arose, counting each origin once
 

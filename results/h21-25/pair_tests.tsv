@@ -1,0 +1,50 @@
+hypothesis	trait	measure	with_saturated	n_pairs	status	median	ci_low	ci_high	p	positive	sign_p	intercept	se	size_slope
+H21	diadromy	d_omega	False	12	assessed	0.0737893	0.00259063	0.116194	0.0639648	9	0.145996			
+H21	diadromy	d_omega	True	36	assessed	0.00678218	-0.0138971	0.0787535	0.161527	19	0.867939			
+H21	diadromy	d_dS	False	12	assessed	0.00060229	-0.0370271	0.0257975	0.909668	6	1			
+H21	diadromy	d_dS	True	36	assessed	0.00227872	-0.0205518	0.0238816	0.944335	19	0.867939			
+H21	diadromy	d_dN	False	12	assessed	0.0129782	-0.00569391	0.189537	0.30127	7	0.774414			
+H21	diadromy	d_dN	True	36	assessed	0.00833745	-0.00953721	0.0666749	0.362414	19	0.867939			
+H21	diadromy	d_omega given size		12	assessed				0.165817			0.109593	0.0733121	0.00494173
+H21 secondary	migration	d_omega	False	8	assessed	-0.0364711	-0.174701	-0.00143072	0.0546875	1	0.0703125			
+H21 secondary	migration	d_omega	True	35	assessed	-0.0198012	-0.0368602	-0.00143072	0.0934481	10	0.0166738			
+H21 secondary	migration	d_dS	False	8	assessed	-0.00356453	-0.0545709	0.0165348	0.742188	4	1			
+H21 secondary	migration	d_dS	True	35	assessed	-0.0113285	-0.0419489	0.00318868	0.231797	14	0.310505			
+H21 secondary	migration	d_dN	False	8	assessed	-0.0182935	-0.216778	0.0452075	0.640625	3	0.726562			
+H21 secondary	migration	d_dN	True	35	assessed	-0.00780179	-0.0439108	0.0196477	0.279851	15	0.49956			
+H21 secondary	migration	d_omega given size		8	assessed				0.625746			-0.0152409	0.029662	-0.215393
+H22	deep_habitat	d_omega	False	12	assessed	0.000942783	-0.0490673	0.0543577	0.969727	6	1			
+H22	deep_habitat	d_omega	True	27	assessed	-0.00736066	-0.0231811	0.0318326	0.731718	13	1			
+H22	deep_habitat	d_dS	False	12	assessed	-0.0198452	-0.0461806	0.00477675	0.0639648	4	0.387695			
+H22	deep_habitat	d_dS	True	27	assessed	-0.0267887	-0.045824	2.73382e-05	0.0130108	9	0.122078			
+H22	deep_habitat	d_dN	False	12	assessed	-0.0442233	-0.0888727	0.0320126	0.339355	4	0.387695			
+H22	deep_habitat	d_dN	True	27	assessed	-0.00908136	-0.034319	4.41702e-05	0.0618988	9	0.122078			
+H22	deep_habitat	d_omega given size		12	assessed				0.609041			0.0224506	0.0425232	0.0190141
+H22 sensitivity	deep_depth	d_omega	False	5	not assessed: 5 pairs, fewer than 8									
+H22 sensitivity	deep_depth	d_omega	True	21	assessed	0.00623303	-0.0275807	0.0249801	0.972858	11	1			
+H22 sensitivity	deep_depth	d_dS	False	5	not assessed: 5 pairs, fewer than 8									
+H22 sensitivity	deep_depth	d_dS	True	21	assessed	-0.0268255	-0.0415969	0.0125955	0.242842	7	0.189247			
+H22 sensitivity	deep_depth	d_dN	False	5	not assessed: 5 pairs, fewer than 8									
+H22 sensitivity	deep_depth	d_dN	True	21	assessed	-0.00977008	-0.0465438	0.00234948	0.146964	7	0.189247			
+H22 sensitivity	deep_depth	d_omega given size		5	not assessed: 5 pairs with both sizes									
+H23	marine	d_omega	False	1	not assessed: 1 pairs, fewer than 8									
+H23	marine	d_omega	True	4	not assessed: 4 pairs, fewer than 8									
+H23	marine	d_dS	False	1	not assessed: 1 pairs, fewer than 8									
+H23	marine	d_dS	True	4	not assessed: 4 pairs, fewer than 8									
+H23	marine	d_dN	False	1	not assessed: 1 pairs, fewer than 8									
+H23	marine	d_dN	True	4	not assessed: 4 pairs, fewer than 8									
+H23	marine	d_omega given size		1	not assessed: 1 pairs with both sizes									
+H23	hibernation	d_omega	False	1	not assessed: 1 pairs, fewer than 8									
+H23	hibernation	d_omega	True	3	not assessed: 3 pairs, fewer than 8									
+H23	hibernation	d_dS	False	1	not assessed: 1 pairs, fewer than 8									
+H23	hibernation	d_dS	True	3	not assessed: 3 pairs, fewer than 8									
+H23	hibernation	d_dN	False	1	not assessed: 1 pairs, fewer than 8									
+H23	hibernation	d_dN	True	3	not assessed: 3 pairs, fewer than 8									
+H23	hibernation	d_omega given size		1	not assessed: 1 pairs with both sizes									
+H24 L3	hibernation	d_dS	False	1	not assessed: 1 pairs, fewer than 8									
+H24 L3	hibernation	d_dS	True	3	not assessed: 3 pairs, fewer than 8									
+H24 L3	hibernation	d_omega	False	1	not assessed: 1 pairs, fewer than 8									
+H24 L3	hibernation	d_omega	True	3	not assessed: 3 pairs, fewer than 8									
+H24 L3	hibernation	d_dN	False	1	not assessed: 1 pairs, fewer than 8									
+H24 L3	hibernation	d_dN	True	3	not assessed: 3 pairs, fewer than 8									
+H24 L3	hibernation	d_dS given size		1	not assessed: 1 pairs with both sizes									

@@ -1,0 +1,6 @@
+model	response	term	n	status	lambda	slope	se	t	p	n_species	n_pairs_all	n_saturated	n_pairs
+H24 P	ll	hib	41	assessed	5.96086e-06	0.290392	0.0736262	3.94414	0.000333177				
+H24 P	ll	lm	41	assessed	5.96086e-06	0.163777	0.0587173	2.78925	0.00821145				
+H25 B1	ll	hib	41	assessed	5.96086e-06	0.290392	0.0736262	3.94414	0.000333177				
+H25 B1	ll	lm	41	assessed	5.96086e-06	0.163777	0.0587173	2.78925	0.00821145				
+B2				not assessed: 11 pairs, fewer than 12						41	20	9	11
