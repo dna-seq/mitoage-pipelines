@@ -3040,3 +3040,23 @@ better than the site's variability among mammals, and better than the same model
   residues (the repository's `--use_sequence 0`), and it is checked against that output before any variant is
   scored. Also seen: the file the model's repository calls `solublempnn_v_48_020` has the SHA-256 of the
   `proteinmpnn.pt` that StaB-ddG ships (7af52d09...), which confirms that H28 and H29 ran on soluble weights.
+- *Made exact with the code on 2026-11-23, before any variant is scored* (`mitoport variant-mpnn`, module
+  `variant_mpnn`). Where the entry leaves a choice open, this is it. *The reading:* the repository's own
+  `single_aa_score` is not called; `read` computes the same numbers at the variants' positions only, with the
+  model's encoder and decoder layers, and a test holds it equal to the repository's function on a real structure
+  (a chain of complex IV with a nuclear partner) for all four checkpoints. *The structure as the model sees it:*
+  H29's system (the same chains, the same reading of the file), but given as the repository's reader gives a
+  structure: the residues' own numbers and one label per chain, not H29's masked places at the breaks (StaB-ddG's
+  reader has no residue numbers; this model has). *Copies:* where the system holds a protein twice, each copy is
+  read on its own, the other copy keeping the reference residue, and the variant's score is the mean over the
+  copies and then over the seeds (H29 put the substitution in every copy at once; a likelihood read at one place
+  has no such reading). *Seeds:* 0, 1 and 2 for every arm, controls included, since the reading is cheap; the
+  order is a draw of the CPU's generator, so any device gives the same order. *Readout:* the rule as written,
+  against the site's variability only; beside it, deciding nothing, the area of each control, BLOSUM62's, the score
+  minus the soluble weights with its interval, the split by contact and each complex alone. *Where it runs:* on CPU
+  nodes, four complexes as four tasks (every A100 of the cluster is taken by training at the time of writing and
+  the reading is light enough); the second run likewise, compared byte for byte. *A check beside the tests:* the
+  repository's own `score.py` run on its example 1BC8 and on the same two chains of complex IV, each checkpoint,
+  against our reading with the decoding order the repository's output reports.
+  Run on 1BC8 before any variant was scored (seed 1, three draws): all four arms agree with `score.py` within
+  3e-6 at every one of the 279 places, and the native residue's mean log-probability is -1.53 to -1.61.

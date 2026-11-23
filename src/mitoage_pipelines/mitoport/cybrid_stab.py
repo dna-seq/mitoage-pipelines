@@ -68,8 +68,10 @@ def read_chains(cif: Path) -> list[dict]:
     unknown), num (the residues' numbers), bb [n, 4, 3] (N, CA, C, O; NaN where an atom is missing), heavy [m, 3]}.
     A residue counts as protein when it is a standard amino acid or has a standard parent, and has a CA."""
     from Bio.Data.PDBData import protein_letters_3to1_extended as LETTER
+    from Bio.PDB import PDBParser
     from Bio.PDB.MMCIFParser import MMCIFParser
-    model = next(iter(MMCIFParser(QUIET=True).get_structure(cif.stem, str(cif))))
+    parser = PDBParser(QUIET=True) if cif.suffix.lower() == ".pdb" else MMCIFParser(QUIET=True)      # a .pdb file for H34's check
+    model = next(iter(parser.get_structure(cif.stem, str(cif))))
     out = []
     for chain in model:
         seq, num, bb, hv = [], [], [], []

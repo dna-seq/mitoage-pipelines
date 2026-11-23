@@ -1045,6 +1045,51 @@ def mitoport_variant_compare(
     variant_compare.main(variant_scores, kron_variants, mitimpact, out)
 
 
+@mitoport_app.command("variant-mpnn")
+def mitoport_variant_mpnn(
+    complex_: Annotated[Optional[str], typer.Option("--complex", help="I, III, IV or V")] = None,
+    task: Annotated[Optional[int], typer.Option(help="instead: the 0-based index of the complex, as --list prints them (for a Slurm array)")] = None,
+    list_: Annotated[bool, typer.Option("--list", help="print the tasks and stop")] = False,
+    gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+    source: Annotated[Path, typer.Option("--source", help="folder of `download variants`")] = paths.VARIANTS,
+    tool: Annotated[Path, typer.Option("--tool", help="the LigandMPNN repository at its pinned commit, with model_params/")] = paths.LIGANDMPNN,
+    out: Annotated[Path, typer.Option("--out", help="folder the tables are written to")] = paths.VARIANT_MPNN_OUT,
+    device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
+    batch: Annotated[int, typer.Option(help="positions decoded in one call (memory only, not the numbers)")] = 4,
+) -> None:
+    """H34, part B: ProteinMPNN's membrane checkpoint and its controls on a complex's human missense variants: the
+    log-probability of the reference residue minus the new one, the position decoded last."""
+    from .mitoport import cybrid, variant_mpnn
+    from .mitoport.cybrid_energy import STRUCTURES
+    tasks = list(STRUCTURES[cybrid.HUMAN])
+    if list_:
+        for i, c in enumerate(tasks):
+            print(i, c, STRUCTURES[cybrid.HUMAN][c])
+        return
+    if task is not None:
+        complex_ = tasks[task]
+    if complex_ not in tasks:
+        raise SystemExit(f"give --task, or --complex as one of {tasks}")
+    variant_mpnn.run(complex_, gb, pdb_dir, source, tool, out, device, batch=batch)
+
+
+@mitoport_app.command("variant-mpnn-collect")
+def mitoport_variant_mpnn_collect(data: Build = paths.BUILD,
+                                  out: Annotated[Path, typer.Option("--out", help="folder of the complexes' tables")] = paths.VARIANT_MPNN_OUT) -> None:
+    """H34, part B: mpnn_scores.tsv from the complexes' tables, with the baselines; a complex without a table is said."""
+    from .mitoport import variant_mpnn
+    from .mitoport.complexes import COMPLEXES
+    variant_mpnn.collect(out, data, lambda c: COMPLEXES[c].work)
+
+
+@mitoport_app.command("variant-mpnn-readout")
+def mitoport_variant_mpnn_readout(out: Annotated[Path, typer.Option("--out", help="folder of mpnn_scores.tsv")] = paths.VARIANT_MPNN_OUT) -> None:
+    """H34, part B: the rule (the area for harmful against harmless, and against the site's variability) and what is reported beside it."""
+    from .mitoport import variant_mpnn
+    variant_mpnn.readout(out)
+
+
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]
 
 

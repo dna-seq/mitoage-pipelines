@@ -185,6 +185,11 @@ uv run mitoage download variants                  # gnomAD v3.1's mitochondrial 
 uv run mitoage mitoport variant-stab --list       # the variants kept per gene and the 19 tasks; one with --task N
 uv run mitoage mitoport variant-stab-collect && uv run mitoage mitoport variant-stab-readout
 
+# H34, part B: ProteinMPNN's membrane checkpoint on H29's variants (slurm/h34-mpnn.sbatch, CPU nodes). The LigandMPNN
+# repository at its pinned commit, with its weights from its get_model_params.sh, goes in data/input/ligandmpnn
+uv run mitoage mitoport variant-mpnn --task N      # one complex (0 to 3, --list); four checkpoints and labels, seeds 0 to 2
+uv run mitoage mitoport variant-mpnn-collect && uv run mitoage mitoport variant-mpnn-readout
+
 # H10: structural alignments
 uv run mitoage download pdb 5XTD 5Z62 8H9S 5XTE 5XTH 5XTI 6ZQN 7AJD
 uv run mitoage structure within                   # US-align, the solved human proteins all against all
@@ -374,6 +379,12 @@ time.
 strand in the mitochondrial code, which variants are kept and which left out, how they are dealt out to the tasks and
 placed on every copy of a chain, the scoring's arithmetic, and the rule's readout on made-up tables;
 `slurm/h29-variants-mutations.py` breaks 19 guards one at a time.
+
+`tests/test_variant_mpnn.py` (H34, part B) holds our per-position reading of ProteinMPNN equal to the LigandMPNN
+repository's own `single_aa_score` on two chains of complex IV for all four arms, checks that the scored place sees
+every other residue and not its own, the model's input, one complex on 5Z62 with a stand-in reading, the mean over
+copies and seeds, and the rule's readout; `slurm/h34-mpnn-mutations.py` breaks 22 guards one at a time, and
+`slurm/h34-mpnn-tool-check.py` compares the reading with the repository's `score.py` end to end.
 
 ## Licence
 

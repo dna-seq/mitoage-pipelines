@@ -42,6 +42,7 @@ CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the c
 STABDDG = INPUT / "stabddg"              # the three weight files of StaB-ddG at its pinned commit (H28)
 VARIANTS = INPUT / "variants"            # gnomad.chrM.tsv and clinvar_mt.json: human mitochondrial variants (H29)
 MITIMPACT = INPUT / "mitimpact"          # MitImpact4_V059.csv: published predictors' scores of every mtDNA change (H34)
+LIGANDMPNN = INPUT / "ligandmpnn"        # the LigandMPNN repository at its pinned commit, with model_params/ (H34, part B)
 TECH_GB = INPUT / "technology"            # refseq/ and source/: GenBank records the sequencing technology is read from (H8's control)
 HIBERNATION = INPUT / "hibernation"        # the bat table of Wilkinson & Adams 2019 (DRUM) and Heldstab et al. 2018 (Dryad, placed by hand)
 
@@ -97,6 +98,7 @@ PEPTIDES_OUT = OUTPUT / "peptides"        # <peptide>.tsv, summary.txt
 MITOPORT_OUT = OUTPUT / "mitoport"        # erc.tsv, coembed.tsv
 IFACE_OUT = MITOPORT_OUT / "iface"        # coupling.tsv, lifespan.tsv
 VARIANT_OUT = MITOPORT_OUT / "variants"   # variants/<complex>.<task>.tsv, variant_scores.tsv, h29_summary.tsv (H29)
+VARIANT_MPNN_OUT = MITOPORT_OUT / "variants-mpnn"   # mpnn/<complex>.tsv, mpnn_scores.tsv, h34_mpnn_summary.tsv (H34, part B)
 CYBRID_OUT = MITOPORT_OUT / "cybrid"      # positions.tsv, scores.tsv, calibration.tsv, summary.tsv (H16); coev_*, esm_*, h17_* (H17)
 STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, structural_msa.tsv
 ADAPT_OUT = OUTPUT / "adaptations"        # traits, pairs, fits, selection/, coupling/, readout (H21-H25)
