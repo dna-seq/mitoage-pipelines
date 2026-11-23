@@ -2777,6 +2777,14 @@ change.**
   review. What it is read as: the floor that base composition gives. It changes no verdict. Said in advance: an
   area of the shuffled arm within 0.05 of the real arm's on the variants would mean the variant signal is mostly
   composition; an area near 0.5 means the model reads the order of the bases.
+- **Result of the shuffled genome, 2026-11-23** (job 6596363 at c8b5b0c, on the tables of job 6591903;
+  `results/h31/arms-20261123/`). *Variants:* the area of the shuffled arm is 0.364 over the 95 harmful and 1,576
+  harmless variants, against 0.883 for the real genome in the same run (0.378 against 0.922 on the amino acid
+  changes, 0.362 against 0.772 in tRNA genes). Composition gives none of the model's variant signal: it comes from
+  the order of the bases. The area is below 0.5, not near it; why was not looked into (one guess, not tested: the
+  harmless variants are mostly changes towards the bases a gene holds most of). *Cybrids:* `kron_cds` T1 0.06, T2
+  0.42, T3 3 of 6 on the shuffled genome; the real genome on the 21 activities and the corrected baselines, T1
+  −0.04, T2 0.59, 3 of 6, against bars of −0.52, 0.83 and 4. No verdict changes.
 
 ## H32. Are the conserved sequence blocks of the control region special, or one more ruler of distance? (run: does not count, the blocks are distance)
 
@@ -2956,7 +2964,8 @@ as first computed.
   verdict as it was. H31 among amino acid changes: 0.922 against 0.865 (was 0.925 against 0.871), interval of the
   difference -0.009 to 0.130; its rule over all variants as it was. m.7445A>G stays "synonymous" in the table: its
   harm is through a tRNA precursor, which no consequence in a protein gene can say.
-- *Still to correct:* H17's ESM and co-evolution sums (the model has to run again) and H31's shuffled genome.
+- *Still to correct:* H17's ESM and co-evolution sums (the code is corrected at 4f9f1e3; the scores are not yet
+  rerun). H31's shuffled genome is scored (2026-11-23, in H31's entry).
   The sentence on soluble weights is added to H28's entry.
 
 ## H34. A membrane-aware model on the human variants, beside the predictors that already exist (part A run; part B, the model, has no code)

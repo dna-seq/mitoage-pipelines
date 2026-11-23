@@ -1,0 +1,1672 @@
+pos	ref	alt	label	af_hom	kind	effect	kron	n_bases
+41	C	T	harmless	0.00135	control region		0.63879	
+55	T	C	harmless	0.00124	control region		-0.58721	
+57	T	C	harmless	0.00103	control region		-0.33935	
+64	C	T	harmless	0.04123	control region		-0.19001	
+72	T	C	harmless	0.02502	control region		-0.48391	
+72	T	G	harmless	0.00108	control region		0.73247	
+73	A	G	harmless	0.71574	control region		0.78778	
+89	T	C	harmless	0.00688	control region		-0.27274	
+93	A	G	harmless	0.04054	control region		1.24549	
+94	G	A	harmless	0.00202	control region		-1.28360	
+95	A	C	harmless	0.00799	control region		0.59529	
+97	G	A	harmless	0.00275	control region		-0.47246	
+103	G	A	harmless	0.00101	control region		-1.15684	
+114	C	T	harmless	0.00692	control region		0.76305	
+119	T	C	harmless	0.00198	control region		-0.59186	
+125	T	C	harmless	0.00392	control region		-0.35905	
+127	T	C	harmless	0.00409	control region		-0.21117	
+131	T	C	harmless	0.00135	control region		-0.75040	
+143	G	A	harmless	0.03059	control region		-0.65121	
+146	T	C	harmless	0.20369	control region		-0.24609	
+150	C	T	harmless	0.16628	control region		-0.01959	
+151	C	T	harmless	0.03544	control region		0.34995	
+152	T	C	harmless	0.31733	control region		-0.46603	
+153	A	G	harmless	0.05536	control region		1.47233	
+182	C	T	harmless	0.08120	control region		0.60027	
+183	A	G	harmless	0.00846	control region		0.14190	
+185	G	A	harmless	0.05010	control region		-0.56093	
+185	G	C	harmless	0.00121	control region		0.37676	
+185	G	T	harmless	0.02546	control region		0.48251	
+186	C	A	harmless	0.02901	control region		-0.08682	
+188	A	G	harmless	0.01306	control region		0.69178	
+189	A	C	harmless	0.02804	control region		-0.15966	
+189	A	G	harmless	0.07739	control region		1.71038	
+194	C	T	harmless	0.01128	control region		0.31477	
+195	T	A	harmless	0.00208	control region		0.02853	
+195	T	C	harmless	0.27606	control region		-0.54541	
+198	C	T	harmless	0.05670	control region		0.49754	
+199	T	C	harmless	0.03511	control region		-0.56750	
+200	A	G	harmless	0.03601	control region		1.75210	
+203	G	A	harmless	0.00617	control region		-0.54577	
+204	T	C	harmless	0.06609	control region		-0.70337	
+207	G	A	harmless	0.03649	control region		-1.31677	
+210	A	G	harmless	0.00198	control region		1.04384	
+214	A	G	harmless	0.00293	control region		0.33395	
+215	A	G	harmless	0.00821	control region		0.76013	
+217	T	C	harmless	0.01549	control region		-0.29268	
+222	C	T	harmless	0.00135	control region		0.13633	
+225	G	A	harmless	0.00838	control region		-0.87837	
+226	T	C	harmless	0.00510	control region		-0.62355	
+227	A	G	harmless	0.00395	control region		0.97648	
+228	G	A	harmless	0.03486	control region		-1.00448	
+234	A	G	harmless	0.00230	control region		1.05965	
+235	A	G	harmless	0.04900	control region		0.79290	
+236	T	C	harmless	0.01381	control region		-0.97742	
+239	T	C	harmless	0.01436	control region		-0.37893	
+242	C	T	harmless	0.00732	control region		0.64781	
+244	A	G	harmless	0.00126	control region		0.53365	
+246	T	C	harmless	0.00145	control region		-0.56353	
+247	G	A	harmless	0.06353	control region		-0.82116	
+249	A	G	harmless	0.00124	control region		0.95272	
+250	T	C	harmless	0.01661	control region		-0.52825	
+257	A	G	harmless	0.00510	control region		1.64776	
+263	A	G	harmless	0.99069	control region		1.09100	
+264	C	T	harmless	0.00112	control region		-0.20145	
+271	C	T	harmless	0.00172	control region		0.71988	
+279	T	C	harmless	0.00328	control region		-0.32407	
+282	T	C	harmless	0.00549	control region		-0.35491	
+285	C	T	harmless	0.00149	control region		0.06996	
+293	T	C	harmless	0.00106	control region		-0.44132	
+294	T	C	harmless	0.00129	control region		-0.60438	
+295	C	T	harmless	0.05604	control region		0.19073	
+297	A	G	harmless	0.02019	control region		1.84280	
+319	T	C	harmless	0.00671	control region		-0.62178	
+325	C	T	harmless	0.01514	control region		0.01316	
+327	C	T	harmless	0.00154	control region		0.62686	
+340	C	T	harmless	0.00571	control region		-0.11565	
+357	A	G	harmless	0.02582	control region		1.13367	
+372	T	C	harmless	0.00106	control region		0.70776	
+385	A	G	harmless	0.00461	control region		0.69452	
+408	T	A	harmless	0.00200	control region		-0.12733	
+417	G	A	harmless	0.00108	control region		-0.15020	
+418	C	T	harmless	0.00833	control region		0.89633	
+444	A	G	harmless	0.00108	control region		0.64063	
+456	C	T	harmless	0.02651	control region		0.09571	
+458	C	T	harmless	0.00119	control region		0.08250	
+460	T	C	harmless	0.00234	control region		-0.25346	
+462	C	T	harmless	0.04495	control region		0.40118	
+466	T	C	harmless	0.00117	control region		-0.45941	
+477	T	C	harmless	0.01536	control region		0.19601	
+479	A	G	harmless	0.00172	control region		1.46610	
+482	T	C	harmless	0.00934	control region		-0.75359	
+485	T	C	harmless	0.00236	control region		-0.36545	
+489	T	C	harmless	0.10935	control region		-0.96450	
+493	A	G	harmless	0.01024	control region		2.14084	
+494	C	T	harmless	0.00101	control region		0.60303	
+497	C	T	harmless	0.02707	control region		0.62624	
+499	G	A	harmless	0.04510	control region		-1.45667	
+508	A	G	harmless	0.01046	control region		1.62560	
+512	A	C	harmless	0.00170	control region		0.30305	
+513	G	A	harmless	0.01117	control region		-1.19614	
+516	C	T	harmless	0.00172	control region		-0.18404	
+533	A	G	harmless	0.00142	control region		0.82984	
+534	C	T	harmless	0.00475	control region		0.79823	
+575	C	T	harmless	0.00183	control region		0.58943	
+591	C	T	harmful		tRNA		0.30015	
+593	T	C	harmless	0.00248	tRNA		-0.13988	
+606	A	G	harmless	0.00106	tRNA		0.59523	
+616	T	C	harmful		tRNA		-0.32020	
+629	T	C	harmless	0.00390	tRNA		0.50711	
+633	A	G	harmless	0.00136	tRNA		0.90806	
+663	A	G	harmless	0.04752	rRNA		0.77290	2.00000
+669	T	C	harmless	0.00145	rRNA		0.19509	4.00000
+680	T	C	harmless	0.01432	rRNA		-0.19712	4.00000
+709	G	A	harmless	0.14529	rRNA		-1.07475	4.00000
+710	T	C	harmless	0.02653	rRNA		-0.37356	4.00000
+711	T	C	harmless	0.00209	rRNA		-0.22478	4.00000
+719	G	A	harmless	0.00165	rRNA		-1.46834	3.00000
+721	T	C	harmless	0.00170	rRNA		0.40846	3.00000
+723	A	C	harmless	0.00122	rRNA		-0.05369	4.00000
+723	A	G	harmless	0.00390	rRNA		0.55801	4.00000
+731	A	G	harmless	0.00179	rRNA		0.55576	4.00000
+735	A	G	harmless	0.00117	rRNA		0.65797	4.00000
+745	A	G	harmless	0.00113	rRNA		1.11088	4.00000
+750	A	G	harmless	0.98341	rRNA		0.98006	3.00000
+751	A	G	harmless	0.00135	rRNA		0.47874	2.00000
+769	G	A	harmless	0.15269	rRNA		-1.02250	4.00000
+789	T	C	harmless	0.00113	rRNA		-0.58387	3.00000
+825	T	A	harmless	0.06453	rRNA		-0.84404	4.00000
+827	A	G	harmless	0.02321	rRNA		0.88161	2.00000
+869	C	T	harmless	0.00140	rRNA		0.57494	4.00000
+870	C	T	harmless	0.00248	rRNA		-0.25657	4.00000
+896	A	G	harmless	0.00172	rRNA		-0.16509	2.00000
+921	T	C	harmless	0.01747	rRNA		-0.06081	3.00000
+930	G	A	harmless	0.02838	rRNA		-1.33543	4.00000
+951	G	A	harmless	0.00755	rRNA		-0.56486	4.00000
+961	T	C	harmless	0.00496	rRNA		-0.32527	4.00000
+961	T	G	harmless	0.00783	rRNA		0.51649	4.00000
+980	T	C	harmless	0.00401	rRNA		-0.58925	4.00000
+990	T	C	harmless	0.00151	rRNA		-0.68195	3.00000
+1005	T	C	harmless	0.00138	rRNA		-0.03108	4.00000
+1007	G	A	harmless	0.00108	rRNA		-0.44375	4.00000
+1018	G	A	harmless	0.15113	rRNA		-0.35691	4.00000
+1040	T	C	harmless	0.00541	rRNA		-0.42593	4.00000
+1048	C	T	harmless	0.01288	rRNA		0.27652	4.00000
+1107	T	C	harmless	0.00149	rRNA		-0.42058	4.00000
+1189	T	C	harmless	0.04005	rRNA		-0.75589	3.00000
+1193	T	C	harmless	0.00156	rRNA		-0.10349	3.00000
+1211	G	A	harmless	0.00222	rRNA		-1.11237	3.00000
+1243	T	C	harmless	0.01487	rRNA		-0.03778	4.00000
+1291	T	C	harmless	0.00105	rRNA		-0.12924	4.00000
+1303	G	A	harmless	0.00145	rRNA		-0.83692	4.00000
+1341	C	T	harmless	0.00239	rRNA		0.67838	4.00000
+1391	T	C	harmless	0.00138	rRNA		0.08626	4.00000
+1393	G	A	harmless	0.00183	rRNA		-0.44048	4.00000
+1406	T	C	harmless	0.00298	rRNA		-0.70235	4.00000
+1420	T	C	harmless	0.00353	rRNA		-0.54003	4.00000
+1438	A	G	harmless	0.95610	rRNA		1.46957	2.00000
+1442	G	A	harmless	0.02837	rRNA		-1.68878	4.00000
+1462	G	A	harmless	0.00282	rRNA		-1.05462	4.00000
+1473	C	T	harmless	0.00108	rRNA		0.55955	2.00000
+1494	C	T	harmful		rRNA		0.03423	2.00000
+1503	G	A	harmless	0.00314	rRNA		-1.05150	4.00000
+1555	A	G	harmful		rRNA		0.80732	2.00000
+1598	G	A	harmless	0.00668	rRNA		-0.98364	4.00000
+1624	C	T	harmful		tRNA		0.20039	
+1644	G	A	harmful		tRNA		-1.01402	
+1664	G	A	harmless	0.00172	tRNA		-1.19912	
+1692	A	G	harmless	0.00128	rRNA		0.89713	4.00000
+1694	T	C	harmless	0.00167	rRNA		0.02823	4.00000
+1700	T	C	harmless	0.00781	rRNA		-0.77194	4.00000
+1703	C	T	harmless	0.00337	rRNA		0.09978	4.00000
+1706	C	T	harmless	0.01320	rRNA		0.52426	4.00000
+1709	G	A	harmless	0.00302	rRNA		-0.89059	4.00000
+1717	T	C	harmless	0.00262	rRNA		-0.18674	4.00000
+1719	G	A	harmless	0.04033	rRNA		-1.14571	4.00000
+1721	C	T	harmless	0.01070	rRNA		0.81755	4.00000
+1736	A	G	harmless	0.04745	rRNA		1.00645	4.00000
+1738	T	C	harmless	0.02625	rRNA		-0.48501	4.00000
+1804	A	G	harmless	0.00108	rRNA		1.26195	4.00000
+1809	T	C	harmless	0.00129	rRNA		0.16268	4.00000
+1811	A	G	harmless	0.08794	rRNA		0.95535	3.00000
+1822	T	C	harmless	0.01407	rRNA		0.02328	4.00000
+1836	A	G	harmless	0.00140	rRNA		1.16260	4.00000
+1842	A	G	harmless	0.00175	rRNA		1.06289	4.00000
+1850	T	C	harmless	0.00445	rRNA		0.46093	3.00000
+1888	G	A	harmless	0.06360	rRNA		-1.15464	4.00000
+2000	C	T	harmless	0.00796	rRNA		0.16424	4.00000
+2056	G	A	harmless	0.00145	rRNA		-0.74742	4.00000
+2083	T	C	harmless	0.00225	rRNA		-0.56937	4.00000
+2092	C	T	harmless	0.00383	rRNA		0.43270	4.00000
+2098	G	A	harmless	0.00408	rRNA		-1.61773	4.00000
+2141	T	C	harmless	0.00193	rRNA		0.28038	4.00000
+2158	T	C	harmless	0.00661	rRNA		-0.30721	4.00000
+2159	T	C	harmless	0.00268	rRNA		-0.41006	4.00000
+2217	C	T	harmless	0.00195	rRNA		-0.15510	4.00000
+2218	C	T	harmless	0.00108	rRNA		0.39442	4.00000
+2220	A	G	harmless	0.00369	rRNA		1.04606	4.00000
+2245	A	C	harmless	0.00413	rRNA		0.67823	4.00000
+2245	A	G	harmless	0.00755	rRNA		1.28843	4.00000
+2259	C	T	harmless	0.00810	rRNA		-0.09840	4.00000
+2283	C	T	harmless	0.00232	rRNA		1.01379	4.00000
+2294	A	G	harmless	0.00266	rRNA		0.54526	4.00000
+2308	A	G	harmless	0.00106	rRNA		1.39923	4.00000
+2332	C	T	harmless	0.03066	rRNA		-0.18632	4.00000
+2352	T	C	harmless	0.07515	rRNA		-0.04477	3.00000
+2358	A	G	harmless	0.01315	rRNA		1.47206	4.00000
+2361	G	A	harmless	0.00202	rRNA		-0.91164	4.00000
+2387	T	C	harmless	0.00266	rRNA		-0.64165	4.00000
+2416	T	C	harmless	0.08485	rRNA		-0.17689	4.00000
+2442	T	C	harmless	0.00202	rRNA		0.14047	4.00000
+2445	T	C	harmless	0.00106	rRNA		-0.75061	4.00000
+2483	T	C	harmless	0.00447	rRNA		-0.66962	3.00000
+2581	A	G	harmless	0.00411	rRNA		0.87200	2.00000
+2626	T	C	harmless	0.00198	rRNA		0.06798	4.00000
+2639	C	T	harmless	0.00333	rRNA		0.25031	4.00000
+2702	G	A	harmless	0.00117	rRNA		-1.57811	2.00000
+2706	A	G	harmless	0.73949	rRNA		0.69829	4.00000
+2707	A	G	harmless	0.00269	rRNA		1.14625	4.00000
+2746	T	C	harmless	0.00103	rRNA		0.02196	4.00000
+2755	A	G	harmless	0.00342	rRNA		1.05909	4.00000
+2757	A	G	harmless	0.00338	rRNA		1.50411	4.00000
+2758	G	A	harmless	0.06444	rRNA		-0.87116	4.00000
+2768	A	G	harmless	0.02561	rRNA		0.50785	4.00000
+2772	C	T	harmless	0.00232	rRNA		-0.08453	4.00000
+2789	C	T	harmless	0.05240	rRNA		0.98524	4.00000
+2831	G	A	harmless	0.00112	rRNA		-1.36490	4.00000
+2833	A	G	harmless	0.00119	rRNA		1.39117	2.00000
+2836	C	T	harmless	0.00163	rRNA		0.50385	4.00000
+2850	T	C	harmless	0.00271	rRNA		-0.25776	4.00000
+2863	T	C	harmless	0.00200	rRNA		-0.02927	4.00000
+2885	T	C	harmless	0.06516	rRNA		-0.09003	4.00000
+3010	G	A	harmless	0.16341	rRNA		-2.14476	2.00000
+3027	T	C	harmless	0.00236	rRNA		-1.52314	2.00000
+3096	T	C	harmless	0.00113	rRNA		-0.99269	2.00000
+3105	A	G	harmless	0.00246	rRNA		0.33425	2.00000
+3116	C	T	harmless	0.00269	rRNA		0.41171	3.00000
+3150	T	C	harmless	0.00268	rRNA		-0.27507	3.00000
+3197	T	C	harmless	0.06438	rRNA		-0.63953	4.00000
+3200	T	A	harmless	0.01432	rRNA		-0.80411	4.00000
+3202	T	C	harmless	0.00229	rRNA		-0.87261	3.00000
+3203	A	G	harmless	0.00207	rRNA		1.07255	4.00000
+3204	C	T	harmless	0.00170	rRNA		0.73137	3.00000
+3206	C	T	harmless	0.00149	rRNA		0.32605	4.00000
+3210	C	T	harmless	0.00159	rRNA		-0.19636	4.00000
+3212	C	T	harmless	0.00209	rRNA		-0.11557	4.00000
+3221	A	G	harmless	0.00112	rRNA		1.72447	4.00000
+3242	G	A	harmful		tRNA		-1.26728	
+3243	A	G	harmful		tRNA		1.37466	
+3243	A	T	harmful		tRNA		0.70461	
+3251	A	G	harmful		tRNA		1.23137	
+3252	A	G	harmful		tRNA		0.68649	
+3254	C	A	harmless	0.00243	tRNA		-0.08415	
+3255	G	A	harmful		tRNA		-0.85384	
+3256	C	T	harmful		tRNA		0.23888	
+3258	T	C	harmful		tRNA		-0.49076	
+3260	A	G	harmful		tRNA		1.44851	
+3271	T	C	harmful		tRNA		-0.38249	
+3277	G	A	harmless	0.00248	tRNA		-1.15181	
+3290	T	C	harmless	0.00145	tRNA		-0.66201	
+3291	T	C	harmful		tRNA		-0.43475	
+3302	A	G	harmful		tRNA		1.66362	
+3303	C	T	harmful		tRNA		0.64238	
+3308	T	C	harmless	0.02852	protein	start	-0.26398	2.00000
+3316	G	A	harmless	0.00457	protein	missense	-1.78581	4.00000
+3320	A	G	harmless	0.00158	protein	missense	1.38398	3.00000
+3333	C	T	harmless	0.00170	protein	synonymous	0.95460	4.00000
+3335	T	C	harmless	0.00138	protein	missense	-0.75350	3.00000
+3336	T	C	harmless	0.00299	protein	synonymous	-0.16537	4.00000
+3337	G	A	harmless	0.00154	protein	missense	-1.38052	4.00000
+3338	T	C	harmless	0.00191	protein	missense	-0.58765	2.00000
+3348	A	G	harmless	0.00464	protein	synonymous	1.43358	4.00000
+3360	A	G	harmless	0.00106	protein	synonymous	0.87868	4.00000
+3385	A	G	harmless	0.00117	protein	missense	1.77474	4.00000
+3394	T	C	harmless	0.00911	protein	missense	-0.62194	2.00000
+3396	T	C	harmless	0.01508	protein	synonymous	-0.53742	2.00000
+3397	A	G	harmless	0.00151	protein	missense	1.33378	1.00000
+3398	T	C	harmless	0.00239	protein	missense	-0.09054	2.00000
+3420	C	T	harmless	0.00324	protein	synonymous	0.13306	3.00000
+3421	G	A	harmless	0.00223	protein	missense	-1.88286	3.00000
+3423	T	A	harmless	0.00101	protein	synonymous	-0.74801	4.00000
+3434	A	G	harmless	0.00822	protein	missense	1.06412	3.00000
+3438	G	A	harmless	0.00376	protein	synonymous	-1.48018	4.00000
+3441	A	G	harmless	0.00172	protein	synonymous	0.96420	4.00000
+3447	A	G	harmless	0.00907	protein	synonymous	1.32323	2.00000
+3450	C	T	harmless	0.01990	protein	synonymous	0.12161	4.00000
+3460	G	A	harmful		protein	missense	-1.14241	1.00000
+3480	A	G	harmless	0.04887	protein	synonymous	1.61247	2.00000
+3483	G	A	harmless	0.00190	protein	synonymous	-0.79832	2.00000
+3495	C	A	harmless	0.00310	protein	synonymous	-0.41599	4.00000
+3505	A	G	harmless	0.01978	protein	missense	1.51745	3.00000
+3513	C	T	harmless	0.00188	protein	synonymous	0.42391	4.00000
+3516	C	A	harmless	0.01178	protein	synonymous	-0.50701	4.00000
+3531	G	A	harmless	0.00266	protein	synonymous	-1.00101	4.00000
+3537	A	G	harmless	0.00296	protein	synonymous	1.24768	4.00000
+3547	A	G	harmless	0.02235	protein	missense	2.00415	4.00000
+3549	C	T	harmless	0.00167	protein	synonymous	1.31477	4.00000
+3552	T	A	harmless	0.01538	protein	synonymous	-0.99124	4.00000
+3552	T	C	harmless	0.00255	protein	synonymous	-0.46088	4.00000
+3565	A	G	harmless	0.00129	protein	missense	1.34743	4.00000
+3591	G	A	harmless	0.00541	protein	synonymous	-1.00916	4.00000
+3594	C	T	harmless	0.14857	protein	synonymous	0.15358	4.00000
+3606	A	G	harmless	0.00172	protein	synonymous	-0.84483	4.00000
+3635	G	A	harmful		protein	missense	-1.43744	1.00000
+3666	G	A	harmless	0.05399	protein	synonymous	-0.66773	4.00000
+3672	A	G	harmless	0.00232	protein	synonymous	0.16125	4.00000
+3688	G	A	harmful		protein	missense	-0.31119	3.00000
+3693	G	A	harmless	0.02937	protein	synonymous	-1.16659	4.00000
+3697	G	A	harmful		protein	missense	-1.21084	1.00000
+3705	G	A	harmless	0.00376	protein	synonymous	-0.97408	4.00000
+3714	A	G	harmless	0.00108	protein	synonymous	0.70729	4.00000
+3720	A	G	harmless	0.00991	protein	synonymous	0.91330	2.00000
+3736	G	A	harmless	0.00204	protein	missense	-1.35982	2.00000
+3738	C	T	harmless	0.00326	protein	synonymous	0.50020	4.00000
+3741	C	T	harmless	0.00266	protein	synonymous	0.63996	4.00000
+3744	A	G	harmless	0.00165	protein	synonymous	1.11317	4.00000
+3745	G	A	harmless	0.00186	protein	missense	-0.92327	3.00000
+3761	C	A	harmful		protein	nonsense	0.09345	2.00000
+3766	T	C	harmless	0.00172	protein	synonymous	-0.54039	4.00000
+3777	T	C	harmless	0.00353	protein	synonymous	-0.28274	4.00000
+3796	A	G	harmless	0.00826	protein	missense	1.00431	3.00000
+3796	A	T	harmless	0.00877	protein	missense	-1.97009	3.00000
+3826	T	C	harmless	0.00204	protein	synonymous	-0.62220	4.00000
+3834	G	A	harmless	0.00447	protein	synonymous	-0.97090	4.00000
+3843	A	G	harmless	0.00891	protein	synonymous	1.09336	2.00000
+3847	T	C	harmless	0.00175	protein	synonymous	-0.63537	3.00000
+3849	G	A	harmless	0.00590	protein	synonymous	-0.75310	4.00000
+3861	A	G	harmless	0.00172	protein	synonymous	0.70804	2.00000
+3866	T	C	harmless	0.00735	protein	missense	-0.60089	2.00000
+3882	G	A	harmless	0.00211	protein	synonymous	-0.54519	2.00000
+3890	G	A	harmful		protein	missense	-0.86741	1.00000
+3915	G	A	harmless	0.01668	protein	synonymous	-1.44651	4.00000
+3918	G	A	harmless	0.02266	protein	synonymous	-1.00903	2.00000
+3921	C	A	harmless	0.00337	protein	synonymous	0.70879	4.00000
+3921	C	T	harmless	0.00193	protein	synonymous	0.37706	4.00000
+3927	A	G	harmless	0.00190	protein	synonymous	0.54750	4.00000
+3946	G	A	harmful		protein	missense	-0.77325	1.00000
+3970	C	T	harmless	0.00588	protein	synonymous	0.43831	3.00000
+3990	C	T	harmless	0.00567	protein	synonymous	0.70852	2.00000
+3992	C	T	harmless	0.01145	protein	missense	0.18035	2.00000
+4012	A	G	harmless	0.00152	protein	missense	1.10633	3.00000
+4017	C	T	harmless	0.00113	protein	synonymous	0.54521	4.00000
+4024	A	G	harmless	0.00969	protein	missense	1.10916	3.00000
+4025	C	T	harmless	0.00138	protein	missense	0.67671	2.00000
+4029	C	A	harmless	0.00314	protein	missense	0.00670	4.00000
+4048	G	A	harmless	0.00583	protein	missense	-0.85950	4.00000
+4059	C	T	harmless	0.00337	protein	synonymous	0.51805	4.00000
+4071	C	T	harmless	0.00416	protein	synonymous	0.50841	2.00000
+4080	T	C	harmless	0.00142	protein	synonymous	-0.39748	3.00000
+4086	C	T	harmless	0.00211	protein	synonymous	0.50900	4.00000
+4092	G	A	harmless	0.00165	protein	synonymous	-0.92392	2.00000
+4093	A	G	harmless	0.00285	protein	missense	0.60424	3.00000
+4104	A	G	harmless	0.14846	protein	synonymous	0.39535	4.00000
+4113	G	A	harmless	0.00136	protein	synonymous	-1.41156	4.00000
+4122	A	G	harmless	0.01311	protein	synonymous	1.43123	2.00000
+4123	A	G	harmless	0.01327	protein	missense	1.10978	2.00000
+4129	A	G	harmless	0.00122	protein	missense	0.60888	3.00000
+4158	A	G	harmless	0.01320	protein	synonymous	1.75684	4.00000
+4164	A	G	harmless	0.00388	protein	synonymous	1.32264	2.00000
+4167	C	T	harmless	0.00184	protein	synonymous	0.67519	3.00000
+4188	A	G	harmless	0.00122	protein	synonymous	1.22899	4.00000
+4203	A	G	harmless	0.00124	protein	synonymous	1.29508	4.00000
+4216	T	C	harmless	0.11756	protein	missense	-0.66256	3.00000
+4218	T	C	harmless	0.01395	protein	synonymous	-0.22635	3.00000
+4219	G	A	harmless	0.00101	protein	missense	-0.92171	4.00000
+4225	A	G	harmless	0.00128	protein	missense	1.34128	4.00000
+4232	T	C	harmless	0.00378	protein	missense	-0.10327	2.00000
+4242	C	T	harmless	0.00358	protein	synonymous	0.03131	4.00000
+4248	T	C	harmless	0.04839	protein	synonymous	-0.57405	4.00000
+4295	A	G	harmless	0.00296	tRNA		0.90588	
+4300	A	G	harmful		tRNA		1.43084	
+4310	A	G	harmless	0.00103	tRNA		0.80551	
+4312	C	T	harmless	0.01175	tRNA		-0.13328	
+4336	T	C	harmless	0.01306	tRNA		-0.32606	
+4363	T	C	harmless	0.00128	tRNA		0.23134	
+4370	T	C	harmless	0.01326	tRNA		-0.38216	
+4386	T	C	harmless	0.00122	tRNA		-0.12499	
+4388	A	G	harmless	0.00149	tRNA		0.58217	
+4418	T	C	harmless	0.00390	tRNA		-0.07989	
+4450	G	A	harmful		tRNA		-1.14554	
+4452	T	C	harmless	0.00583	tRNA		-0.25170	
+4454	T	A	harmless	0.00331	tRNA		-0.38522	
+4454	T	C	harmless	0.00239	tRNA		-0.12106	
+4491	G	A	harmless	0.00298	protein	missense	-0.91078	4.00000
+4506	A	G	harmless	0.00110	protein	missense	1.14169	4.00000
+4529	A	T	harmless	0.01662	protein	synonymous	0.04471	4.00000
+4541	G	A	harmless	0.00126	protein	synonymous	-0.38134	4.00000
+4553	T	C	harmless	0.00588	protein	synonymous	-0.54175	4.00000
+4561	T	C	harmless	0.00861	protein	missense	-0.48900	2.00000
+4562	A	G	harmless	0.00424	protein	synonymous	0.50385	4.00000
+4580	G	A	harmless	0.02425	protein	synonymous	-0.85017	4.00000
+4586	T	C	harmless	0.01187	protein	synonymous	-0.98941	4.00000
+4596	G	A	harmless	0.00113	protein	missense	-2.11978	4.00000
+4639	T	C	harmless	0.00471	protein	missense	-0.22547	3.00000
+4640	C	A	harmless	0.00117	protein	missense	-0.95013	4.00000
+4646	T	C	harmless	0.01723	protein	synonymous	0.12719	3.00000
+4655	G	A	harmless	0.00836	protein	synonymous	-1.08915	4.00000
+4659	G	A	harmless	0.00126	protein	missense	-0.85242	4.00000
+4688	T	C	harmless	0.00576	protein	synonymous	-0.52361	4.00000
+4703	T	C	harmless	0.00454	protein	synonymous	-0.32594	4.00000
+4715	A	G	harmless	0.01829	protein	synonymous	1.86024	4.00000
+4727	A	G	harmless	0.01120	protein	synonymous	1.22293	4.00000
+4732	A	G	harmless	0.00673	protein	missense	1.80057	4.00000
+4733	T	C	harmless	0.00234	protein	synonymous	-0.73145	4.00000
+4735	C	A	harmless	0.00206	protein	missense	-0.76644	4.00000
+4736	T	C	harmless	0.00429	protein	synonymous	0.33431	4.00000
+4745	A	G	harmless	0.00611	protein	synonymous	1.09429	4.00000
+4755	T	C	harmless	0.00269	protein	synonymous	0.24900	4.00000
+4767	A	G	harmless	0.01404	protein	missense	1.04050	4.00000
+4769	A	G	harmless	0.98387	protein	synonymous	1.69139	4.00000
+4772	T	C	harmless	0.00121	protein	synonymous	0.09225	4.00000
+4793	A	G	harmless	0.00900	protein	synonymous	0.98043	4.00000
+4810	G	A	harmful		protein	nonsense	-1.67670	1.00000
+4811	A	G	harmless	0.00184	protein	synonymous	1.54763	2.00000
+4820	G	A	harmless	0.02374	protein	synonymous	-1.02316	2.00000
+4823	T	C	harmless	0.01214	protein	synonymous	-0.49702	4.00000
+4824	A	G	harmless	0.04775	protein	missense	1.54115	4.00000
+4833	A	G	harmless	0.00152	protein	missense	1.36490	4.00000
+4850	C	T	harmless	0.00197	protein	synonymous	0.56010	4.00000
+4853	G	A	harmless	0.00106	protein	synonymous	-0.71939	4.00000
+4859	T	C	harmless	0.00112	protein	synonymous	-0.07945	4.00000
+4883	C	T	harmless	0.01090	protein	synonymous	0.20694	4.00000
+4907	T	C	harmless	0.00151	protein	synonymous	-0.72874	4.00000
+4917	A	G	harmless	0.05754	protein	missense	0.73000	4.00000
+4928	T	C	harmless	0.00161	protein	synonymous	-1.10607	4.00000
+4944	A	G	harmless	0.00241	protein	missense	0.95485	4.00000
+4960	C	T	harmless	0.00346	protein	missense	1.06822	2.00000
+4977	T	C	harmless	0.02256	protein	synonymous	-0.61280	3.00000
+4991	G	A	harmless	0.00321	protein	synonymous	-1.27506	4.00000
+5004	T	C	harmless	0.01051	protein	synonymous	-0.50852	3.00000
+5027	C	T	harmless	0.01354	protein	synonymous	1.05956	2.00000
+5036	A	G	harmless	0.02378	protein	synonymous	1.07650	3.00000
+5046	G	A	harmless	0.04330	protein	missense	-0.89488	2.00000
+5054	G	A	harmless	0.00202	protein	synonymous	-2.48938	4.00000
+5069	A	T	harmless	0.00156	protein	missense	0.91140	4.00000
+5082	T	C	harmless	0.00167	protein	synonymous	-1.28873	3.00000
+5087	T	C	harmless	0.00106	protein	synonymous	-0.39907	4.00000
+5093	T	C	harmless	0.00101	protein	synonymous	-0.69585	2.00000
+5096	T	C	harmless	0.00964	protein	synonymous	-1.08128	4.00000
+5108	T	C	harmless	0.00370	protein	synonymous	-0.97863	4.00000
+5128	A	G	harmless	0.00101	protein	missense	1.50220	4.00000
+5147	G	A	harmless	0.05187	protein	synonymous	-1.20962	4.00000
+5153	A	G	harmless	0.00188	protein	synonymous	0.99995	4.00000
+5177	G	A	harmless	0.00110	protein	synonymous	-0.86420	4.00000
+5178	C	A	harmless	0.01069	protein	missense	0.10560	4.00000
+5186	A	T	harmless	0.00142	protein	missense	0.92351	4.00000
+5187	C	T	harmless	0.00120	protein	synonymous	0.58439	4.00000
+5196	T	C	harmless	0.00204	protein	synonymous	-0.31581	4.00000
+5198	A	G	harmless	0.00399	protein	synonymous	1.56890	4.00000
+5201	T	C	harmless	0.00183	protein	synonymous	-0.07354	4.00000
+5211	C	T	harmless	0.00126	protein	missense	0.18445	4.00000
+5231	G	A	harmless	0.01613	protein	synonymous	-1.05678	4.00000
+5237	G	A	harmless	0.00458	protein	synonymous	-0.92084	4.00000
+5240	A	G	harmless	0.00319	protein	synonymous	0.94910	4.00000
+5250	T	C	harmless	0.00126	protein	synonymous	-0.38547	4.00000
+5252	G	A	harmless	0.00237	protein	synonymous	-1.42846	4.00000
+5255	C	T	harmless	0.00165	protein	synonymous	0.22683	4.00000
+5261	G	A	harmless	0.00197	protein	synonymous	-0.50160	4.00000
+5262	G	A	harmless	0.01041	protein	missense	-0.81856	4.00000
+5263	C	T	harmless	0.00459	protein	missense	-0.26885	2.00000
+5276	A	G	harmless	0.00174	protein	synonymous	1.12723	3.00000
+5277	T	C	harmless	0.00354	protein	missense	-0.32934	4.00000
+5285	A	G	harmless	0.01453	protein	synonymous	1.53798	4.00000
+5300	C	T	harmless	0.00154	protein	synonymous	0.29158	4.00000
+5301	A	G	harmless	0.00243	protein	missense	1.26156	4.00000
+5315	A	G	harmless	0.00147	protein	synonymous	1.69141	4.00000
+5319	A	G	harmless	0.00234	protein	missense	1.07060	4.00000
+5331	C	A	harmless	0.01320	protein	missense	0.18840	4.00000
+5342	C	T	harmless	0.00120	protein	synonymous	0.51651	2.00000
+5348	C	T	harmless	0.00202	protein	synonymous	-0.11083	2.00000
+5351	A	G	harmless	0.00257	protein	synonymous	0.48849	4.00000
+5360	C	T	harmless	0.00266	protein	synonymous	0.13226	4.00000
+5366	C	A	harmless	0.00135	protein	synonymous	-0.18513	4.00000
+5372	A	G	harmless	0.00138	protein	synonymous	0.68690	4.00000
+5378	A	G	harmless	0.00101	protein	synonymous	1.32476	4.00000
+5390	A	G	harmless	0.01140	protein	synonymous	2.08125	4.00000
+5393	T	C	harmless	0.02394	protein	synonymous	-0.79870	4.00000
+5417	G	A	harmless	0.00225	protein	synonymous	-1.36728	4.00000
+5426	T	C	harmless	0.01317	protein	synonymous	-0.68862	4.00000
+5442	T	C	harmless	0.01484	protein	missense	-0.04054	4.00000
+5460	G	A	harmless	0.05398	protein	missense	-1.21670	4.00000
+5463	C	T	harmless	0.00158	protein	missense	0.08118	4.00000
+5465	T	C	harmless	0.00315	protein	synonymous	-0.61522	4.00000
+5471	G	A	harmless	0.00967	protein	synonymous	-0.86589	4.00000
+5483	T	C	harmless	0.00113	protein	synonymous	-0.60383	4.00000
+5492	T	C	harmless	0.00307	protein	synonymous	-0.31159	4.00000
+5495	T	C	harmless	0.00796	protein	synonymous	-0.36934	4.00000
+5521	G	A	harmful		tRNA		-0.68168	
+5553	T	C	harmless	0.00165	tRNA		-0.78204	
+5556	G	A	harmful		tRNA		-1.49848	
+5558	A	G	harmless	0.00237	tRNA		1.34751	
+5563	G	A	harmless	0.00296	tRNA		-1.51206	
+5580	T	C	harmless	0.00697	other		-0.24329	
+5581	A	G	harmless	0.01189	other		1.68007	
+5582	A	G	harmless	0.00101	other		1.58069	
+5584	A	G	harmless	0.00193	other		1.14721	
+5585	G	A	harmless	0.00479	other		-0.74405	
+5601	C	T	harmless	0.01388	tRNA		0.08848	
+5603	C	T	harmless	0.01187	tRNA		0.65482	
+5633	C	T	harmless	0.00374	tRNA		1.11916	
+5650	G	A	harmful		tRNA		-2.53974	
+5655	T	C	harmless	0.02424	tRNA		-0.53342	
+5656	A	G	harmless	0.02075	other		2.03967	
+5690	A	G	harmful		tRNA		0.16856	
+5703	G	A	harmful		tRNA		-0.94061	
+5711	A	G	harmless	0.00236	tRNA		0.92667	
+5728	T	C	harmful		tRNA		-0.21305	
+5744	G	A	harmless	0.00106	other		0.64520	
+5747	A	G	harmless	0.00151	other		0.35304	
+5773	G	A	harmless	0.02267	tRNA		-0.22647	
+5785	T	C	harmless	0.00126	tRNA		0.12804	
+5814	T	C	harmless	0.01377	tRNA		-0.75829	
+5821	G	A	harmless	0.00259	tRNA		-0.60922	
+5823	A	G	harmless	0.00191	tRNA		1.27632	
+5824	G	A	harmless	0.00108	tRNA		-0.32647	
+5836	A	G	harmless	0.00140	tRNA		0.67781	
+5894	A	C	harmless	0.00135	other		-0.47651	
+5894	A	G	harmless	0.00181	other		0.79144	
+5911	C	T	harmless	0.00347	protein	missense	0.52186	2.00000
+5913	G	A	harmless	0.00530	protein	missense	-0.89089	4.00000
+5918	T	C	harmless	0.00103	protein	synonymous	-0.13532	4.00000
+5920	G	A	harmful		protein	nonsense	-0.42651	1.00000
+5951	A	G	harmless	0.02705	protein	synonymous	1.52260	4.00000
+5964	T	C	harmless	0.00136	protein	synonymous	-0.15254	4.00000
+5978	A	G	harmless	0.00161	protein	synonymous	1.19589	2.00000
+5984	A	G	harmless	0.00255	protein	synonymous	0.89973	4.00000
+5999	T	C	harmless	0.01735	protein	synonymous	-0.13814	4.00000
+6014	T	C	harmless	0.00159	protein	synonymous	-0.09687	2.00000
+6023	G	A	harmless	0.00241	protein	synonymous	-0.78306	2.00000
+6026	G	A	harmless	0.01045	protein	synonymous	-1.27589	4.00000
+6040	A	G	harmless	0.00272	protein	missense	1.08119	4.00000
+6045	C	T	harmless	0.00964	protein	synonymous	0.52214	3.00000
+6047	A	G	harmless	0.01632	protein	synonymous	0.87431	4.00000
+6071	T	C	harmless	0.02716	protein	synonymous	-0.35704	4.00000
+6146	A	G	harmless	0.00179	protein	synonymous	0.25599	2.00000
+6150	G	A	harmless	0.01003	protein	missense	-1.08747	2.00000
+6152	T	C	harmless	0.01383	protein	synonymous	-0.27145	4.00000
+6164	C	T	harmless	0.00393	protein	synonymous	0.73938	2.00000
+6173	C	T	harmless	0.00204	protein	synonymous	1.00951	4.00000
+6179	G	A	harmless	0.00172	protein	synonymous	-1.22795	2.00000
+6182	G	A	harmless	0.00158	protein	synonymous	-0.60445	4.00000
+6185	T	C	harmless	0.01202	protein	synonymous	0.10593	2.00000
+6216	T	C	harmless	0.00317	protein	synonymous	-0.40264	2.00000
+6221	T	A	harmless	0.00732	protein	synonymous	-0.52744	4.00000
+6221	T	C	harmless	0.04845	protein	synonymous	-0.42593	4.00000
+6231	C	T	harmless	0.00243	protein	synonymous	0.37033	3.00000
+6253	T	C	harmless	0.01163	protein	missense	-0.58220	2.00000
+6257	G	A	harmless	0.00257	protein	synonymous	-0.30969	4.00000
+6260	G	A	harmless	0.01378	protein	synonymous	-0.57579	2.00000
+6261	G	A	harmless	0.00711	protein	missense	-0.72358	2.00000
+6267	G	A	harmless	0.00376	protein	missense	-1.52300	2.00000
+6272	A	G	harmless	0.00360	protein	synonymous	0.22736	4.00000
+6293	T	C	harmless	0.00328	protein	synonymous	-0.54273	4.00000
+6296	C	A	harmless	0.00105	protein	synonymous	0.08683	4.00000
+6297	T	C	harmless	0.00145	protein	synonymous	-0.49469	2.00000
+6308	C	T	harmless	0.00138	protein	synonymous	0.08286	2.00000
+6311	C	T	harmless	0.00103	protein	synonymous	0.55346	4.00000
+6353	A	G	harmless	0.00175	protein	synonymous	0.28518	4.00000
+6359	A	G	harmless	0.00170	protein	synonymous	0.15860	4.00000
+6365	T	C	harmless	0.00468	protein	synonymous	-0.59507	4.00000
+6366	G	A	harmless	0.00110	protein	missense	-0.90489	2.00000
+6371	C	T	harmless	0.00968	protein	synonymous	0.07068	4.00000
+6378	T	C	harmless	0.00349	protein	synonymous	-0.26875	2.00000
+6383	G	A	harmless	0.00103	protein	synonymous	-0.88376	4.00000
+6392	T	C	harmless	0.00945	protein	synonymous	-0.23802	2.00000
+6413	T	C	harmless	0.00727	protein	synonymous	-0.18667	2.00000
+6446	G	A	harmless	0.00358	protein	synonymous	-1.31655	4.00000
+6455	C	T	harmless	0.00758	protein	synonymous	-0.18956	2.00000
+6464	C	A	harmless	0.00175	protein	synonymous	-0.54739	4.00000
+6473	C	T	harmless	0.02160	protein	synonymous	0.28795	3.00000
+6480	G	A	harmless	0.00324	protein	missense	-1.36270	2.00000
+6489	C	A	harmless	0.00328	protein	missense	-0.04674	4.00000
+6518	C	T	harmless	0.00268	protein	synonymous	0.30484	4.00000
+6524	T	C	harmless	0.00831	protein	synonymous	0.33035	4.00000
+6527	A	G	harmless	0.00128	protein	synonymous	0.72416	2.00000
+6528	C	T	harmless	0.00195	protein	synonymous	0.23957	2.00000
+6548	C	T	harmless	0.02655	protein	synonymous	0.55448	4.00000
+6554	C	T	harmless	0.00234	protein	synonymous	0.64949	4.00000
+6587	C	T	harmless	0.01244	protein	synonymous	0.45438	4.00000
+6614	T	C	harmless	0.00312	protein	synonymous	-1.07707	2.00000
+6620	T	C	harmless	0.00337	protein	synonymous	-0.79938	4.00000
+6629	A	G	harmless	0.00354	protein	synonymous	0.58819	2.00000
+6632	T	C	harmless	0.00218	protein	synonymous	-0.39876	4.00000
+6663	A	G	harmless	0.01067	protein	missense	1.27074	2.00000
+6671	T	C	harmless	0.00278	protein	synonymous	-0.81921	2.00000
+6680	T	C	harmless	0.01505	protein	synonymous	-0.43506	4.00000
+6713	C	T	harmless	0.01350	protein	synonymous	0.10844	2.00000
+6719	T	C	harmless	0.00422	protein	synonymous	-0.37572	4.00000
+6722	G	A	harmless	0.00183	protein	synonymous	-0.58437	2.00000
+6734	G	A	harmless	0.00853	protein	synonymous	-0.41549	2.00000
+6752	A	G	harmless	0.00291	protein	synonymous	0.25593	4.00000
+6755	G	A	harmless	0.00342	protein	synonymous	-1.86397	4.00000
+6776	T	C	harmless	0.02740	protein	synonymous	0.13996	2.00000
+6791	A	G	harmless	0.00105	protein	synonymous	1.04474	4.00000
+6794	A	G	harmless	0.00408	protein	synonymous	0.88214	4.00000
+6806	A	G	harmless	0.00500	protein	synonymous	1.10760	4.00000
+6827	T	C	harmless	0.02678	protein	synonymous	-0.19160	4.00000
+6911	T	C	harmless	0.00161	protein	synonymous	-0.11615	4.00000
+6917	G	A	harmless	0.00787	protein	synonymous	-0.82286	3.00000
+6930	G	A	harmful		protein	nonsense	-0.71434	1.00000
+6932	A	G	harmless	0.00172	protein	synonymous	1.01262	4.00000
+6938	C	T	harmless	0.00113	protein	synonymous	0.64092	2.00000
+6962	G	A	harmless	0.00406	protein	synonymous	-0.63524	4.00000
+6989	A	G	harmless	0.02596	protein	synonymous	0.52211	4.00000
+7013	G	A	harmless	0.00555	protein	synonymous	-0.45859	4.00000
+7022	T	C	harmless	0.00278	protein	synonymous	-0.68739	4.00000
+7028	C	T	harmless	0.74940	protein	synonymous	0.06566	4.00000
+7055	A	G	harmless	0.04981	protein	synonymous	1.64486	4.00000
+7064	T	C	harmless	0.00108	protein	synonymous	-0.21690	2.00000
+7076	A	G	harmless	0.00913	protein	synonymous	1.29072	4.00000
+7080	T	C	harmless	0.00140	protein	missense	-0.26786	2.00000
+7094	T	C	harmless	0.00103	protein	synonymous	-0.58537	2.00000
+7124	A	G	harmless	0.01570	protein	synonymous	0.69700	4.00000
+7146	A	G	harmless	0.06426	protein	missense	-0.32847	4.00000
+7158	A	G	harmless	0.00342	protein	missense	0.77531	3.00000
+7160	C	T	harmless	0.00119	protein	synonymous	0.42106	4.00000
+7175	T	C	harmless	0.05259	protein	synonymous	-0.03908	4.00000
+7184	A	G	harmless	0.00206	protein	synonymous	0.50797	4.00000
+7196	C	A	harmless	0.01795	protein	synonymous	-0.26260	4.00000
+7196	C	T	harmless	0.00112	protein	synonymous	0.02910	4.00000
+7202	A	G	harmless	0.00209	protein	synonymous	-0.20673	4.00000
+7211	G	A	harmless	0.00110	protein	synonymous	-0.46640	2.00000
+7226	G	A	harmless	0.00128	protein	synonymous	-1.06225	4.00000
+7241	A	G	harmless	0.00110	protein	synonymous	1.11670	4.00000
+7256	C	T	harmless	0.14837	protein	synonymous	0.47136	2.00000
+7269	G	A	harmless	0.00175	protein	missense	0.17503	4.00000
+7270	T	C	harmless	0.00122	protein	missense	-0.12522	2.00000
+7271	A	G	harmless	0.00204	protein	synonymous	0.88690	4.00000
+7274	C	T	harmless	0.05224	protein	synonymous	0.00400	4.00000
+7278	T	C	harmless	0.00101	protein	missense	-0.55835	3.00000
+7299	A	G	harmless	0.00139	protein	missense	1.47505	4.00000
+7309	T	C	harmless	0.00498	protein	missense	-0.63980	2.00000
+7337	G	A	harmless	0.01711	protein	synonymous	-0.62375	4.00000
+7340	G	A	harmless	0.00268	protein	synonymous	-0.98688	2.00000
+7385	A	G	harmless	0.00964	protein	synonymous	0.52399	2.00000
+7389	T	C	harmless	0.05317	protein	missense	-0.51778	3.00000
+7403	A	G	harmless	0.00106	protein	synonymous	0.65963	4.00000
+7424	A	G	harmless	0.01968	protein	synonymous	1.77497	3.00000
+7444	G	A	harmless	0.00535	protein	stop lost	-1.18116	
+7445	A	G	harmful		protein	synonymous	1.44627	
+7453	G	A	harmful		tRNA		-0.49249	
+7476	C	T	harmless	0.01102	tRNA		0.09734	
+7497	G	A	harmful		tRNA		-0.70040	
+7498	G	A	harmless	0.00418	tRNA		-1.33063	
+7510	T	C	harmful		tRNA		-0.28887	
+7511	T	C	harmful		tRNA		-0.69610	
+7512	T	C	harmful		tRNA		-0.66533	
+7521	G	A	harmless	0.15111	tRNA		-1.04917	
+7559	A	G	harmless	0.00147	tRNA		1.15668	
+7569	A	G	harmless	0.00170	tRNA		1.94863	
+7581	T	C	harmless	0.00156	tRNA		0.31409	
+7587	T	C	harmful		protein	start	0.11999	1.00000
+7598	G	A	harmless	0.00223	protein	missense	-0.88946	4.00000
+7600	G	A	harmless	0.00103	protein	synonymous	-1.07603	4.00000
+7621	T	C	harmless	0.00105	protein	synonymous	-0.04198	4.00000
+7624	T	A	harmless	0.02747	protein	synonymous	-0.40964	4.00000
+7624	T	C	harmless	0.00142	protein	synonymous	-0.31453	4.00000
+7645	T	C	harmless	0.00179	protein	synonymous	-0.85226	4.00000
+7648	C	T	harmless	0.00248	protein	synonymous	0.46672	4.00000
+7673	A	G	harmless	0.00140	protein	missense	1.49135	2.00000
+7679	T	C	harmless	0.00159	protein	missense	0.01181	4.00000
+7684	T	C	harmless	0.00257	protein	synonymous	-0.39238	4.00000
+7705	T	C	harmless	0.00478	protein	synonymous	-0.59841	2.00000
+7711	T	C	harmless	0.00145	protein	synonymous	0.16181	4.00000
+7762	G	A	harmless	0.00135	protein	synonymous	-0.78403	2.00000
+7765	A	G	harmless	0.00229	protein	synonymous	1.13640	4.00000
+7768	A	G	harmless	0.03234	protein	synonymous	1.52864	4.00000
+7771	A	G	harmless	0.05241	protein	synonymous	0.88777	2.00000
+7775	G	A	harmless	0.00101	protein	missense	-1.16306	2.00000
+7789	G	A	harmless	0.01099	protein	synonymous	-1.03496	4.00000
+7805	G	A	harmless	0.00647	protein	missense	-1.81518	2.00000
+7819	C	A	harmless	0.01292	protein	synonymous	-0.59693	4.00000
+7844	A	G	harmless	0.00144	protein	missense	0.73306	2.00000
+7853	G	A	harmless	0.00459	protein	missense	-0.04690	4.00000
+7859	G	A	harmless	0.00291	protein	missense	-0.27056	3.00000
+7861	T	C	harmless	0.00353	protein	synonymous	-0.86057	4.00000
+7864	C	T	harmless	0.00650	protein	synonymous	0.35147	4.00000
+7867	C	T	harmless	0.02630	protein	synonymous	-0.01254	4.00000
+7873	C	T	harmless	0.00124	protein	synonymous	0.75174	4.00000
+7896	G	A	harmful		protein	nonsense	-0.33609	1.00000
+7897	G	A	harmless	0.00190	protein	synonymous	-0.43808	2.00000
+7912	G	A	harmless	0.00106	protein	synonymous	-0.92653	2.00000
+7915	C	T	harmless	0.00154	protein	synonymous	1.07624	2.00000
+7930	A	T	harmless	0.00207	protein	synonymous	0.54287	4.00000
+7948	C	T	harmless	0.00197	protein	synonymous	0.66235	2.00000
+7960	A	G	harmless	0.00574	protein	synonymous	1.04181	4.00000
+7961	T	C	harmless	0.00206	protein	synonymous	-1.12776	4.00000
+8014	A	T	harmless	0.00191	protein	synonymous	0.42525	4.00000
+8020	G	A	harmless	0.00262	protein	synonymous	-1.51953	4.00000
+8027	G	A	harmless	0.07397	protein	missense	-0.71496	4.00000
+8047	T	C	harmless	0.00101	protein	synonymous	-0.75823	4.00000
+8065	G	A	harmless	0.00206	protein	synonymous	-0.21291	4.00000
+8077	T	C	harmless	0.00170	protein	synonymous	-0.61024	4.00000
+8080	C	T	harmless	0.01299	protein	synonymous	0.16248	4.00000
+8087	T	C	harmless	0.00344	protein	synonymous	-0.38139	3.00000
+8104	T	C	harmless	0.00172	protein	synonymous	-0.76885	3.00000
+8119	T	C	harmless	0.00103	protein	synonymous	-0.28535	4.00000
+8137	C	T	harmless	0.00269	protein	synonymous	0.66778	4.00000
+8143	T	C	harmless	0.00135	protein	synonymous	-0.64969	4.00000
+8149	A	G	harmless	0.00126	protein	synonymous	0.97188	4.00000
+8152	G	A	harmless	0.00124	protein	synonymous	-0.67777	4.00000
+8155	G	A	harmless	0.00261	protein	synonymous	-1.03690	4.00000
+8167	T	C	harmless	0.00160	protein	synonymous	-0.84564	4.00000
+8188	A	G	harmless	0.00140	protein	synonymous	2.26392	4.00000
+8191	A	G	harmless	0.00122	protein	synonymous	1.23040	4.00000
+8206	G	A	harmless	0.08412	protein	synonymous	-1.58275	2.00000
+8227	T	C	harmless	0.00105	protein	synonymous	-0.99382	4.00000
+8248	A	G	harmless	0.02593	protein	synonymous	1.36147	4.00000
+8251	G	A	harmless	0.04441	protein	synonymous	-0.70038	3.00000
+8260	T	C	harmless	0.00218	protein	synonymous	-1.36069	2.00000
+8269	G	A	harmless	0.01735	protein	synonymous	-1.38799	
+8271	A	T	harmless	0.00386	other		0.60859	
+8277	T	C	harmless	0.00273	other		-0.71688	
+8286	T	C	harmless	0.00106	other		-1.18039	
+8292	G	A	harmless	0.00160	other		-1.08951	
+8313	G	A	harmful		tRNA		-1.40932	
+8337	T	C	harmless	0.00112	tRNA		-0.64885	
+8340	G	A	harmful		tRNA		-0.73926	
+8343	A	G	harmless	0.00170	tRNA		0.95763	
+8344	A	G	harmful		tRNA		0.55984	
+8347	A	G	harmless	0.00117	tRNA		1.11382	
+8356	T	C	harmful		tRNA		-0.88207	
+8363	G	A	harmful		tRNA		-1.38702	
+8383	T	C	harmless	0.00218	protein	synonymous	-0.55723	4.00000
+8387	G	A	harmless	0.01565	protein	missense	-1.57615	4.00000
+8389	A	G	harmless	0.00266	protein	synonymous	1.94267	4.00000
+8392	G	A	harmless	0.00112	protein	synonymous	-2.30581	2.00000
+8393	C	T	harmless	0.00486	protein	missense	0.63761	4.00000
+8410	C	T	harmless	0.00638	protein	synonymous	0.36361	4.00000
+8414	C	T	harmless	0.00898	protein	missense	0.73157	4.00000
+8417	C	T	harmless	0.00161	protein	missense	0.38664	4.00000
+8428	C	T	harmless	0.01164	protein	synonymous	0.63386	3.00000
+8440	A	G	harmless	0.00119	protein	synonymous	1.46487	4.00000
+8448	T	C	harmless	0.00877	protein	missense	-0.56954	2.00000
+8460	A	G	harmless	0.00386	protein	missense	1.40825	4.00000
+8468	C	T	harmless	0.06464	protein	synonymous	1.16517	4.00000
+8471	C	T	harmless	0.00128	protein	missense	0.38723	4.00000
+8472	C	T	harmless	0.00333	protein	missense	0.82446	4.00000
+8473	T	C	harmless	0.01089	protein	synonymous	0.10835	4.00000
+8474	C	T	harmless	0.00471	protein	missense	0.64035	4.00000
+8485	G	A	harmless	0.00121	protein	synonymous	-1.37045	4.00000
+8503	T	C	harmless	0.00360	protein	synonymous	0.16439	4.00000
+8512	A	G	harmless	0.00337	protein	synonymous	1.76105	4.00000
+8519	G	A	harmless	0.00255	protein	missense	-1.07812	4.00000
+8521	A	G	harmless	0.00117	protein	synonymous	2.60740	4.00000
+8527	A	G	harmless	0.01304	protein	start;synonymous	1.80999	2.00000
+8528	T	C	harmful		protein	missense;start	-1.43454	1.00000
+8537	A	G	harmless	0.00115	protein	missense	2.52689	2.00000
+8541	G	A	harmless	0.00232	protein	missense;synonymous	0.30722	3.00000
+8557	G	A	harmless	0.00844	protein	missense;synonymous	-2.46086	4.00000
+8563	A	G	harmless	0.00112	protein	missense;synonymous	1.48580	3.00000
+8566	A	G	harmless	0.01198	protein	missense;synonymous	0.91417	4.00000
+8567	T	C	harmless	0.00138	protein	missense	-1.03963	2.00000
+8572	G	A	harmless	0.00211	protein	missense;synonymous	-0.87685	2.00000
+8573	G	A	harmless	0.00115	protein	missense	-0.83611	3.00000
+8577	A	G	harmless	0.00161	protein	synonymous	1.57240	4.00000
+8584	G	A	harmless	0.02122	protein	missense	-1.94938	4.00000
+8592	G	A	harmless	0.00119	protein	synonymous	-1.01399	4.00000
+8602	T	C	harmless	0.00154	protein	missense	-1.06229	4.00000
+8604	T	C	harmless	0.00158	protein	synonymous	-0.94279	4.00000
+8610	T	C	harmless	0.00158	protein	synonymous	-1.04778	4.00000
+8614	T	C	harmless	0.00353	protein	synonymous	-0.71028	3.00000
+8616	G	T	harmless	0.00574	protein	missense	-0.28318	4.00000
+8618	T	C	harmless	0.01845	protein	missense	-1.26250	2.00000
+8619	C	T	harmless	0.00117	protein	synonymous	0.22937	4.00000
+8650	C	T	harmless	0.00177	protein	synonymous	0.46609	4.00000
+8655	C	T	harmless	0.06446	protein	synonymous	1.38694	4.00000
+8659	A	G	harmless	0.00131	protein	missense	1.61505	4.00000
+8668	T	C	harmless	0.00167	protein	missense	-1.54727	4.00000
+8684	C	T	harmless	0.00365	protein	missense	0.38388	3.00000
+8697	G	A	harmless	0.05689	protein	synonymous	-1.49392	4.00000
+8701	A	G	harmless	0.30319	protein	missense	1.61637	4.00000
+8705	T	C	harmless	0.00560	protein	missense	-0.79090	4.00000
+8709	C	T	harmless	0.00145	protein	synonymous	0.90218	4.00000
+8715	T	C	harmless	0.00237	protein	synonymous	-1.26488	4.00000
+8723	G	A	harmless	0.00108	protein	missense	-1.70434	3.00000
+8730	A	G	harmless	0.00124	protein	synonymous	1.91180	2.00000
+8764	G	A	harmless	0.00136	protein	missense	-1.86778	3.00000
+8772	T	C	harmless	0.00156	protein	synonymous	-0.74586	4.00000
+8784	A	G	harmless	0.00913	protein	synonymous	1.98154	4.00000
+8790	G	A	harmless	0.00722	protein	synonymous	-0.91631	4.00000
+8794	C	T	harmless	0.04750	protein	missense	0.93528	2.00000
+8818	C	T	harmless	0.00826	protein	synonymous	0.88052	2.00000
+8836	A	G	harmless	0.00335	protein	missense	1.50261	3.00000
+8838	G	A	harmless	0.00113	protein	synonymous	-1.18916	2.00000
+8839	G	A	harmless	0.00103	protein	missense	-1.74456	2.00000
+8841	C	T	harmless	0.00158	protein	synonymous	0.58520	4.00000
+8842	A	G	harmless	0.00227	protein	missense	1.57698	4.00000
+8843	T	C	harmless	0.00512	protein	missense	-0.13650	1.00000
+8854	G	A	harmless	0.00108	protein	missense	-1.61165	4.00000
+8856	G	A	harmless	0.00594	protein	synonymous	-0.77077	4.00000
+8860	A	G	harmless	0.99381	protein	missense	1.12408	3.00000
+8865	G	A	harmless	0.00326	protein	synonymous	-2.04715	4.00000
+8869	A	G	harmless	0.00392	protein	missense	1.61131	4.00000
+8870	T	C	harmless	0.00214	protein	missense	-0.55185	3.00000
+8875	T	C	harmless	0.01320	protein	missense	-0.60445	2.00000
+8877	T	C	harmless	0.00879	protein	synonymous	-0.55021	4.00000
+8887	A	G	harmless	0.00161	protein	missense	1.52338	4.00000
+8896	G	A	harmless	0.00470	protein	missense	-1.36866	3.00000
+8898	C	T	harmless	0.00308	protein	synonymous	0.49262	4.00000
+8901	A	G	harmless	0.00252	protein	synonymous	1.44072	4.00000
+8923	A	G	harmless	0.00159	protein	missense	1.62366	1.00000
+8932	C	T	harmless	0.01327	protein	missense	0.44792	4.00000
+8969	G	A	harmful		protein	missense	-1.00833	1.00000
+8974	C	G	harmless	0.00103	protein	missense	1.02457	4.00000
+8993	T	C	harmful		protein	missense	-0.77796	2.00000
+8993	T	G	harmful		protein	missense	0.03253	2.00000
+8994	G	A	harmless	0.01656	protein	synonymous	-1.18733	4.00000
+9006	A	G	harmless	0.00253	protein	synonymous	1.35896	4.00000
+9007	A	G	harmless	0.00321	protein	missense	1.46526	1.00000
+9035	T	C	harmful		protein	missense	-0.24105	1.00000
+9039	G	A	harmless	0.00269	protein	synonymous	-0.80178	4.00000
+9042	C	T	harmless	0.01171	protein	synonymous	0.66789	2.00000
+9052	A	G	harmless	0.00103	protein	missense	1.82102	3.00000
+9053	G	A	harmless	0.00711	protein	missense	-1.62516	4.00000
+9055	G	A	harmless	0.05393	protein	missense	-0.98725	2.00000
+9066	A	G	harmless	0.00523	protein	synonymous	0.79222	4.00000
+9067	A	G	harmless	0.00144	protein	missense	1.25565	3.00000
+9070	T	G	harmless	0.00174	protein	missense	0.40253	4.00000
+9072	A	G	harmless	0.02667	protein	synonymous	1.52373	4.00000
+9090	T	C	harmless	0.00179	protein	synonymous	0.07003	4.00000
+9093	A	G	harmless	0.00517	protein	synonymous	0.80607	4.00000
+9098	T	C	harmless	0.00145	protein	missense	-0.96845	2.00000
+9101	T	C	harmless	0.00105	protein	missense	-0.13933	2.00000
+9111	T	C	harmless	0.00165	protein	synonymous	-0.39824	3.00000
+9117	T	C	harmless	0.00198	protein	synonymous	-0.23365	4.00000
+9120	A	G	harmless	0.00135	protein	synonymous	1.47388	4.00000
+9123	G	A	harmless	0.01292	protein	synonymous	-0.64173	4.00000
+9128	T	C	harmless	0.00112	protein	missense	-0.53122	3.00000
+9145	G	A	harmless	0.00105	protein	missense	-0.66411	1.00000
+9150	A	G	harmless	0.00404	protein	synonymous	0.89149	4.00000
+9151	A	G	harmless	0.00174	protein	missense	1.75229	1.00000
+9155	A	G	harmful		protein	missense	1.04810	1.00000
+9156	A	G	harmless	0.00121	protein	synonymous	1.18526	2.00000
+9176	T	C	harmful		protein	missense	-0.33131	1.00000
+9176	T	G	harmful		protein	missense	0.74905	1.00000
+9180	A	G	harmless	0.00315	protein	synonymous	0.86832	4.00000
+9181	A	G	harmless	0.00147	protein	missense	1.19013	2.00000
+9185	T	C	harmful		protein	missense	-0.66369	1.00000
+9191	T	C	harmful		protein	missense	-0.21363	1.00000
+9196	G	A	harmless	0.00207	protein	missense	-1.38035	2.00000
+9210	A	G	harmless	0.00101	protein	missense	0.68515	2.00000
+9221	A	G	harmless	0.08364	protein	synonymous	-0.01724	4.00000
+9233	T	C	harmless	0.00275	protein	synonymous	1.07612	2.00000
+9248	C	T	harmless	0.00115	protein	synonymous	0.05779	2.00000
+9254	A	G	harmless	0.01131	protein	synonymous	1.24454	2.00000
+9266	G	A	harmless	0.00454	protein	synonymous	-0.81640	4.00000
+9288	A	G	harmless	0.00140	protein	missense	1.56700	2.00000
+9299	A	G	harmless	0.00110	protein	synonymous	1.27517	4.00000
+9300	G	A	harmless	0.00491	protein	missense	-0.80254	2.00000
+9329	G	A	harmless	0.00145	protein	synonymous	-1.70086	4.00000
+9335	C	T	harmless	0.00122	protein	synonymous	0.06819	4.00000
+9336	A	G	harmless	0.00144	protein	missense	1.42921	4.00000
+9338	A	G	harmless	0.00113	protein	synonymous	1.39336	4.00000
+9347	A	G	harmless	0.01168	protein	synonymous	0.96451	4.00000
+9350	A	G	harmless	0.00131	protein	synonymous	1.13191	4.00000
+9356	C	T	harmless	0.00103	protein	synonymous	0.49694	4.00000
+9365	C	T	harmless	0.00324	protein	synonymous	0.82813	4.00000
+9368	A	G	harmless	0.00135	protein	synonymous	1.63770	4.00000
+9377	A	G	harmless	0.00875	protein	synonymous	1.13915	2.00000
+9380	G	A	harmless	0.01384	protein	synonymous	-1.13787	2.00000
+9389	A	G	harmless	0.00113	protein	synonymous	1.48151	4.00000
+9391	C	T	harmless	0.00184	protein	missense	0.57778	2.00000
+9438	G	A	harmless	0.00340	protein	missense	-1.10059	2.00000
+9449	C	T	harmless	0.02197	protein	synonymous	1.15901	2.00000
+9467	T	C	harmless	0.00138	protein	synonymous	0.05556	2.00000
+9477	G	A	harmless	0.06410	protein	missense	-1.25057	3.00000
+9478	T	C	harmless	0.00225	protein	missense	-0.25925	2.00000
+9494	A	G	harmless	0.00230	protein	synonymous	0.96292	4.00000
+9497	T	C	harmless	0.00149	protein	synonymous	-0.48309	3.00000
+9509	T	C	harmless	0.00167	protein	synonymous	-0.37968	2.00000
+9530	T	C	harmless	0.00167	protein	synonymous	-0.61509	4.00000
+9540	T	C	harmless	0.30433	protein	synonymous	-0.37645	3.00000
+9545	A	G	harmless	0.02074	protein	synonymous	-0.60123	4.00000
+9548	G	A	harmless	0.00627	protein	synonymous	-0.78612	4.00000
+9554	G	A	harmless	0.01443	protein	synonymous	-0.27458	2.00000
+9557	C	T	harmless	0.00360	protein	synonymous	-0.24374	4.00000
+9575	G	A	harmless	0.00308	protein	synonymous	-1.24162	4.00000
+9612	G	A	harmless	0.00218	protein	missense	-0.27076	2.00000
+9632	A	G	harmless	0.00172	protein	synonymous	0.69512	4.00000
+9647	T	C	harmless	0.00216	protein	synonymous	-0.16119	4.00000
+9656	T	C	harmless	0.00158	protein	synonymous	0.06663	2.00000
+9667	A	G	harmless	0.00771	protein	missense	0.66099	3.00000
+9670	A	G	harmless	0.00103	protein	missense	0.35432	2.00000
+9682	T	C	harmless	0.01402	protein	missense	-0.22358	2.00000
+9698	T	C	harmless	0.05235	protein	synonymous	-0.38092	4.00000
+9716	T	C	harmless	0.01032	protein	synonymous	-0.72543	4.00000
+9738	G	A	harmless	0.00136	protein	missense	-0.83778	4.00000
+9755	G	A	harmless	0.01390	protein	synonymous	-0.91912	4.00000
+9758	T	C	harmless	0.00243	protein	synonymous	-0.45808	4.00000
+9777	G	A	harmless	0.00126	protein	missense	-0.89437	2.00000
+9804	G	A	harmless	0.00363	protein	missense	-0.81585	3.00000
+9818	C	T	harmless	0.01164	protein	synonymous	0.37292	2.00000
+9824	T	C	harmless	0.00482	protein	synonymous	-0.60912	4.00000
+9833	T	C	harmless	0.00151	protein	synonymous	-0.32456	3.00000
+9855	A	G	harmless	0.00135	protein	missense	0.89838	2.00000
+9861	T	C	harmless	0.00213	protein	missense	-0.14401	3.00000
+9899	T	C	harmless	0.01187	protein	synonymous	-0.31863	2.00000
+9903	T	C	harmless	0.00190	protein	missense	-0.48070	2.00000
+9932	G	A	harmless	0.00445	protein	synonymous	-1.91023	2.00000
+9941	A	G	harmless	0.00234	protein	synonymous	1.95462	4.00000
+9947	G	A	harmless	0.00854	protein	synonymous	-1.60596	4.00000
+9948	G	A	harmless	0.00160	protein	missense	-0.31932	3.00000
+9950	T	C	harmless	0.03621	protein	synonymous	-1.12751	4.00000
+9952	G	A	harmful		protein	nonsense	-1.47999	1.00000
+9962	G	A	harmless	0.00198	protein	synonymous	-1.15213	4.00000
+9965	T	C	harmless	0.00131	protein	synonymous	-0.31039	2.00000
+9966	G	A	harmless	0.00793	protein	missense	-1.63567	4.00000
+9971	C	T	harmless	0.00163	protein	synonymous	-0.23415	4.00000
+9986	G	A	harmless	0.00186	protein	synonymous	-0.64417	4.00000
+10031	T	C	harmless	0.00613	tRNA		-0.59119	
+10034	T	C	harmless	0.01786	tRNA		0.03034	
+10044	A	G	harmless	0.00703	tRNA		1.07591	
+10070	C	T	harmless	0.00535	protein	synonymous	-0.43372	4.00000
+10071	T	C	harmless	0.00135	protein	synonymous	-0.17409	4.00000
+10084	T	C	harmless	0.00518	protein	missense	-0.26400	2.00000
+10086	A	G	harmless	0.02121	protein	missense	1.49786	3.00000
+10097	A	G	harmless	0.00209	protein	synonymous	-0.82454	4.00000
+10101	T	C	harmless	0.00268	protein	synonymous	-0.18176	4.00000
+10115	T	C	harmless	0.08369	protein	synonymous	-0.35969	4.00000
+10124	T	C	harmless	0.00110	protein	synonymous	-0.20605	3.00000
+10142	C	T	harmless	0.00326	protein	synonymous	0.47001	2.00000
+10143	G	A	harmless	0.00406	protein	missense	-0.02239	4.00000
+10158	T	C	harmful		protein	missense	-0.82319	4.00000
+10172	G	A	harmless	0.00581	protein	synonymous	-0.84332	2.00000
+10191	T	C	harmful		protein	missense	-0.45928	4.00000
+10192	C	T	harmless	0.00144	protein	missense	0.09939	4.00000
+10197	G	A	harmful		protein	missense	-0.50453	2.00000
+10211	C	T	harmless	0.00131	protein	synonymous	0.73224	2.00000
+10237	T	C	harmless	0.00179	protein	missense	-0.36397	2.00000
+10238	T	C	harmless	0.02483	protein	synonymous	-1.39634	2.00000
+10254	G	A	harmful		protein	missense	-1.25953	2.00000
+10262	A	G	harmless	0.00140	protein	synonymous	1.44215	2.00000
+10265	T	C	harmless	0.00113	protein	synonymous	0.14430	3.00000
+10283	A	G	harmless	0.00195	protein	synonymous	1.33329	4.00000
+10289	A	G	harmless	0.00284	protein	synonymous	2.18369	2.00000
+10310	G	A	harmless	0.00894	protein	synonymous	-2.11466	4.00000
+10320	G	A	harmless	0.00184	protein	missense	-1.05846	4.00000
+10321	T	C	harmless	0.01896	protein	missense	-0.32460	2.00000
+10325	G	A	harmless	0.00206	protein	synonymous	-1.40245	4.00000
+10370	T	C	harmless	0.00542	protein	synonymous	-0.01072	2.00000
+10373	G	A	harmless	0.01640	protein	synonymous	-0.90567	2.00000
+10394	C	T	harmless	0.00269	protein	synonymous	0.21112	4.00000
+10397	A	G	harmless	0.00213	protein	synonymous	1.70849	2.00000
+10398	A	G	harmless	0.41848	protein	missense	1.15360	4.00000
+10400	C	T	harmless	0.05275	protein	synonymous	0.49195	4.00000
+10410	T	C	harmless	0.00386	tRNA		0.75601	
+10454	T	C	harmless	0.00399	tRNA		-0.30902	
+10463	T	C	harmless	0.05802	tRNA		-0.19673	
+10499	A	G	harmless	0.00742	protein	synonymous	0.87574	4.00000
+10506	A	G	harmless	0.00257	protein	missense	1.22563	4.00000
+10535	T	C	harmless	0.00183	protein	synonymous	-0.20879	2.00000
+10550	A	G	harmless	0.04855	protein	synonymous	1.79845	2.00000
+10586	G	A	harmless	0.02915	protein	synonymous	0.14796	4.00000
+10589	G	A	harmless	0.01841	protein	synonymous	0.81375	4.00000
+10598	A	G	harmless	0.00129	protein	synonymous	1.54209	4.00000
+10609	T	C	harmless	0.00369	protein	missense	-0.02600	4.00000
+10619	C	T	harmless	0.00128	protein	synonymous	0.65842	3.00000
+10640	T	C	harmless	0.00509	protein	synonymous	0.39916	4.00000
+10646	G	A	harmless	0.00227	protein	synonymous	-1.78029	4.00000
+10663	T	C	harmful		protein	missense	-0.79035	1.00000
+10664	C	T	harmless	0.01190	protein	synonymous	0.20609	4.00000
+10667	T	C	harmless	0.00840	protein	synonymous	-0.03895	3.00000
+10685	G	A	harmless	0.00484	protein	synonymous	-1.35587	4.00000
+10688	G	A	harmless	0.06506	protein	synonymous	-1.11078	4.00000
+10700	A	G	harmless	0.00214	protein	synonymous	1.64136	4.00000
+10733	C	T	harmless	0.00315	protein	synonymous	0.36168	2.00000
+10750	A	G	harmless	0.00340	protein	missense	2.44679	2.00000
+10754	A	C	harmless	0.00204	protein	synonymous	1.16750	4.00000
+10754	A	G	harmless	0.00298	protein	synonymous	0.84862	4.00000
+10771	A	G	harmless	0.00211	protein	synonymous	2.27702	4.00000
+10792	A	G	harmless	0.00865	protein	synonymous	2.08864	4.00000
+10793	C	T	harmless	0.00893	protein	synonymous	0.10623	4.00000
+10810	T	C	harmless	0.06566	protein	synonymous	-0.81839	4.00000
+10813	C	T	harmless	0.00112	protein	synonymous	0.32941	4.00000
+10816	A	G	harmless	0.00771	protein	synonymous	1.25846	4.00000
+10819	A	G	harmless	0.05075	protein	synonymous	-0.51973	4.00000
+10822	C	T	harmless	0.00310	protein	synonymous	-0.18072	4.00000
+10828	T	C	harmless	0.00934	protein	synonymous	1.06771	4.00000
+10861	T	C	harmless	0.00133	protein	synonymous	-0.61095	4.00000
+10873	T	C	harmless	0.30495	protein	synonymous	0.00633	4.00000
+10876	A	G	harmless	0.01023	protein	synonymous	0.35758	4.00000
+10899	A	G	harmless	0.00108	protein	missense	2.42691	4.00000
+10903	C	T	harmless	0.00172	protein	synonymous	-0.08614	4.00000
+10907	T	C	harmless	0.00269	protein	missense	0.63674	4.00000
+10915	T	C	harmless	0.02085	protein	synonymous	0.00966	4.00000
+10920	C	T	harmless	0.00310	protein	missense	-0.88039	4.00000
+10927	T	C	harmless	0.01035	protein	synonymous	0.29192	4.00000
+10931	T	C	harmless	0.00211	protein	missense	-0.07442	4.00000
+10955	C	T	harmless	0.00239	protein	synonymous	0.23651	4.00000
+10978	A	G	harmless	0.00705	protein	synonymous	1.22893	4.00000
+10993	G	A	harmless	0.00106	protein	synonymous	0.86001	4.00000
+11002	A	G	harmless	0.01739	protein	synonymous	0.71788	2.00000
+11009	T	C	harmless	0.00255	protein	synonymous	1.33434	3.00000
+11016	G	A	harmless	0.01875	protein	missense	-2.11012	4.00000
+11020	A	G	harmless	0.00126	protein	synonymous	0.92369	4.00000
+11025	T	C	harmless	0.00204	protein	missense	-1.16914	4.00000
+11065	A	G	harmless	0.00128	protein	synonymous	1.60000	4.00000
+11084	A	G	harmless	0.00167	protein	missense	2.23156	3.00000
+11143	C	T	harmless	0.00331	protein	synonymous	-0.10317	4.00000
+11150	G	A	harmless	0.00337	protein	missense	-1.46941	2.00000
+11151	C	T	harmless	0.00163	protein	missense	0.51658	2.00000
+11152	T	C	harmless	0.00252	protein	synonymous	-0.98448	4.00000
+11164	A	G	harmless	0.00569	protein	synonymous	1.88788	4.00000
+11167	A	G	harmless	0.00138	protein	synonymous	1.67616	2.00000
+11172	A	G	harmless	0.00284	protein	missense	1.10523	4.00000
+11176	G	A	harmless	0.01356	protein	synonymous	-1.29056	2.00000
+11177	C	T	harmless	0.02153	protein	missense	-0.16587	4.00000
+11191	C	T	harmless	0.00207	protein	synonymous	1.09507	4.00000
+11197	C	T	harmless	0.00278	protein	synonymous	0.64666	4.00000
+11204	T	C	harmless	0.00399	protein	missense	-1.70227	2.00000
+11227	C	T	harmless	0.00161	protein	synonymous	1.46004	4.00000
+11239	A	G	harmless	0.00167	protein	synonymous	1.23503	4.00000
+11242	C	G	harmless	0.00186	protein	synonymous	1.31532	4.00000
+11251	A	G	harmless	0.11009	protein	synonymous	1.56939	4.00000
+11253	T	C	harmless	0.00673	protein	missense	-0.22032	3.00000
+11257	C	T	harmless	0.00303	protein	synonymous	1.03880	4.00000
+11260	T	C	harmless	0.00250	protein	synonymous	-0.57333	4.00000
+11299	T	C	harmless	0.04949	protein	synonymous	-0.36413	4.00000
+11302	C	T	harmless	0.00746	protein	synonymous	0.51248	4.00000
+11314	A	G	harmless	0.00204	protein	synonymous	0.66279	4.00000
+11332	C	T	harmless	0.01636	protein	synonymous	0.88579	4.00000
+11337	A	G	harmless	0.00117	protein	missense	1.24843	4.00000
+11339	T	C	harmless	0.00431	protein	synonymous	-0.59059	4.00000
+11348	C	T	harmless	0.00167	protein	synonymous	-0.35044	4.00000
+11353	T	C	harmless	0.00427	protein	synonymous	-0.65311	4.00000
+11362	A	G	harmless	0.00195	protein	synonymous	2.06246	4.00000
+11377	G	A	harmless	0.01361	protein	synonymous	-0.36234	2.00000
+11386	T	C	harmless	0.00101	protein	synonymous	0.09684	4.00000
+11404	A	G	harmless	0.00213	protein	synonymous	0.52397	2.00000
+11410	T	C	harmless	0.00119	protein	synonymous	0.34209	4.00000
+11440	G	A	harmless	0.01542	protein	synonymous	-1.71162	4.00000
+11465	T	C	harmless	0.00106	protein	synonymous	-0.84062	2.00000
+11467	A	G	harmless	0.15558	protein	synonymous	1.31503	4.00000
+11470	A	G	harmless	0.00675	protein	synonymous	1.37801	2.00000
+11482	T	C	harmless	0.00106	protein	synonymous	0.02644	2.00000
+11485	T	C	harmless	0.00881	protein	synonymous	-0.76916	4.00000
+11506	T	C	harmless	0.00133	protein	synonymous	-0.59479	4.00000
+11560	A	G	harmless	0.00172	protein	synonymous	1.13713	2.00000
+11590	A	G	harmless	0.00245	protein	synonymous	1.38371	4.00000
+11623	C	T	harmless	0.00101	protein	synonymous	0.82287	2.00000
+11641	A	G	harmless	0.01198	protein	synonymous	1.05294	2.00000
+11653	A	G	harmless	0.00436	protein	synonymous	1.16635	3.00000
+11654	A	G	harmless	0.00897	protein	missense	1.15286	4.00000
+11665	C	T	harmless	0.00206	protein	synonymous	0.51874	4.00000
+11674	C	T	harmless	0.01499	protein	synonymous	0.50458	4.00000
+11692	C	T	harmless	0.00119	protein	synonymous	0.79347	4.00000
+11719	G	A	harmless	0.71104	protein	synonymous	-1.53193	4.00000
+11722	T	C	harmless	0.00131	protein	synonymous	-0.23925	4.00000
+11732	T	C	harmless	0.00317	protein	synonymous	-0.27076	4.00000
+11777	C	A	harmful		protein	missense	1.02219	1.00000
+11778	G	A	harmful		protein	missense	-1.49042	1.00000
+11788	C	T	harmless	0.00142	protein	synonymous	0.33215	4.00000
+11800	A	G	harmless	0.00230	protein	synonymous	1.95859	4.00000
+11809	T	C	harmless	0.00106	protein	synonymous	-0.21849	4.00000
+11812	A	G	harmless	0.04224	protein	synonymous	1.29607	4.00000
+11840	C	T	harmless	0.00594	protein	synonymous	0.69402	4.00000
+11864	T	C	harmless	0.00170	protein	synonymous	-1.27042	3.00000
+11869	C	A	harmless	0.00181	protein	synonymous	1.16626	4.00000
+11887	G	A	harmless	0.00399	protein	synonymous	-0.60525	4.00000
+11899	T	C	harmless	0.01037	protein	synonymous	0.22949	4.00000
+11914	G	A	harmless	0.10858	protein	synonymous	-0.94054	4.00000
+11923	A	G	harmless	0.00207	protein	synonymous	0.60540	2.00000
+11928	A	G	harmless	0.00298	protein	missense	0.92557	3.00000
+11935	T	C	harmless	0.00246	protein	synonymous	-0.14987	4.00000
+11944	T	C	harmless	0.08412	protein	synonymous	-1.15491	4.00000
+11947	A	G	harmless	0.01451	protein	synonymous	1.33866	4.00000
+11963	G	A	harmless	0.00191	protein	missense	-1.52656	4.00000
+11969	G	A	harmless	0.00154	protein	missense	-1.79652	3.00000
+11989	A	G	harmless	0.00179	protein	synonymous	1.50005	2.00000
+12007	G	A	harmless	0.07122	protein	synonymous	-1.84796	4.00000
+12019	C	T	harmless	0.00418	protein	synonymous	1.12811	4.00000
+12026	A	G	harmless	0.00108	protein	missense	0.79312	4.00000
+12049	C	T	harmless	0.00952	protein	synonymous	1.80981	4.00000
+12061	C	T	harmless	0.00106	protein	synonymous	0.49807	4.00000
+12083	T	G	harmless	0.00136	protein	missense	1.21562	4.00000
+12091	T	C	harmless	0.00213	protein	synonymous	-0.11154	4.00000
+12092	C	T	harmless	0.00257	protein	missense	0.25252	4.00000
+12106	C	T	harmless	0.00144	protein	synonymous	0.06650	4.00000
+12127	G	A	harmless	0.00518	protein	synonymous	-2.51723	4.00000
+12130	T	C	harmless	0.00110	protein	synonymous	-0.55721	4.00000
+12135	C	A	harmless	0.00243	protein	missense	0.41506	4.00000
+12136	T	C	harmless	0.00131	protein	synonymous	0.90972	4.00000
+12147	G	A	harmful		tRNA		-1.89938	
+12171	A	G	harmless	0.00200	tRNA		0.91325	
+12172	A	G	harmless	0.00544	tRNA		1.31036	
+12189	T	C	harmless	0.00174	tRNA		-0.31187	
+12192	G	A	harmless	0.00395	tRNA		-0.77607	
+12201	T	C	harmful		tRNA		-0.81302	
+12236	G	A	harmless	0.02822	tRNA		-0.43098	
+12239	C	T	harmless	0.00218	tRNA		0.37558	
+12248	A	G	harmless	0.00744	tRNA		0.59210	
+12258	C	A	harmful		tRNA		-0.53037	
+12276	G	A	harmful		tRNA		-0.82220	
+12280	A	G	harmless	0.00147	tRNA		0.64152	
+12285	T	C	harmless	0.00101	tRNA		1.06593	
+12297	T	C	harmless	0.00160	tRNA		-0.18458	
+12308	A	G	harmless	0.15539	tRNA		1.02560	
+12311	T	C	harmless	0.00151	tRNA		0.33440	
+12315	G	A	harmful		tRNA		0.35530	
+12338	T	C	harmless	0.00124	protein	start	-0.06669	2.00000
+12346	C	T	harmless	0.00358	protein	missense	0.19087	4.00000
+12354	T	C	harmless	0.00349	protein	synonymous	0.12916	4.00000
+12358	A	G	harmless	0.00385	protein	missense	1.95153	4.00000
+12361	A	G	harmless	0.00145	protein	missense	1.16139	4.00000
+12366	A	G	harmless	0.00128	protein	synonymous	1.78697	4.00000
+12372	G	A	harmless	0.15795	protein	synonymous	-0.82216	4.00000
+12397	A	G	harmless	0.00330	protein	missense	1.42110	4.00000
+12400	A	G	harmless	0.00165	protein	missense	1.60652	4.00000
+12403	C	T	harmless	0.00108	protein	missense	0.91222	4.00000
+12405	C	T	harmless	0.00227	protein	synonymous	0.96186	4.00000
+12406	G	A	harmless	0.00881	protein	missense	-1.41900	4.00000
+12408	T	C	harmless	0.00255	protein	synonymous	-1.05504	4.00000
+12414	T	C	harmless	0.01616	protein	synonymous	-1.55227	4.00000
+12425	A	G	harmless	0.00108	protein	missense	1.80866	4.00000
+12438	T	C	harmless	0.00218	protein	synonymous	-0.22656	4.00000
+12441	T	C	harmless	0.00151	protein	synonymous	-0.37846	3.00000
+12454	G	A	harmless	0.00372	protein	missense	-2.14915	2.00000
+12477	T	C	harmless	0.00537	protein	synonymous	1.40643	3.00000
+12501	G	A	harmless	0.02730	protein	synonymous	-0.70844	4.00000
+12507	A	G	harmless	0.00152	protein	synonymous	1.61802	4.00000
+12519	T	C	harmless	0.02618	protein	synonymous	-0.52954	4.00000
+12542	C	T	harmless	0.00152	protein	missense	0.07491	2.00000
+12545	C	T	harmless	0.00124	protein	missense	1.24536	4.00000
+12557	C	T	harmless	0.00523	protein	missense	0.27102	2.00000
+12561	G	A	harmless	0.00261	protein	synonymous	-0.27806	4.00000
+12609	T	C	harmless	0.00406	protein	synonymous	-0.65280	4.00000
+12612	A	G	harmless	0.05775	protein	synonymous	0.87306	4.00000
+12613	G	A	harmless	0.00133	protein	missense	-1.99898	3.00000
+12616	T	C	harmless	0.00278	protein	synonymous	-0.42011	2.00000
+12618	G	A	harmless	0.01794	protein	synonymous	-0.60123	4.00000
+12630	G	A	harmless	0.00812	protein	synonymous	-0.97552	2.00000
+12633	C	A	harmless	0.01271	protein	synonymous	0.16179	4.00000
+12634	A	G	harmless	0.00363	protein	missense	1.72853	1.00000
+12642	A	G	harmless	0.00184	protein	synonymous	1.56198	2.00000
+12651	G	A	harmless	0.00138	protein	synonymous	-2.38385	4.00000
+12654	A	G	harmless	0.00175	protein	synonymous	1.34451	2.00000
+12661	A	T	harmless	0.00103	protein	missense	0.47466	4.00000
+12669	C	T	harmless	0.00225	protein	synonymous	0.72591	2.00000
+12681	T	C	harmless	0.00181	protein	synonymous	-0.69774	3.00000
+12684	G	A	harmless	0.00116	protein	synonymous	-1.34042	4.00000
+12693	A	G	harmless	0.05214	protein	synonymous	0.77066	4.00000
+12696	T	C	harmless	0.00271	protein	synonymous	-1.02114	2.00000
+12705	C	T	harmless	0.48879	protein	synonymous	0.75885	4.00000
+12706	T	C	harmful		protein	missense	-0.06325	1.00000
+12714	T	C	harmless	0.00106	protein	synonymous	-0.72632	4.00000
+12720	A	G	harmless	0.01228	protein	synonymous	1.52709	2.00000
+12738	T	G	harmless	0.00260	protein	synonymous	1.69599	4.00000
+12753	A	G	harmless	0.00159	protein	synonymous	1.70696	2.00000
+12768	A	G	harmless	0.00142	protein	synonymous	2.13573	2.00000
+12771	G	A	harmless	0.00635	protein	synonymous	-2.03100	2.00000
+12795	G	A	harmless	0.00113	protein	synonymous	-1.76541	4.00000
+12810	A	G	harmless	0.03040	protein	synonymous	1.13889	2.00000
+12811	T	C	harmless	0.00581	protein	missense	-0.48677	2.00000
+12822	A	G	harmless	0.00335	protein	synonymous	1.53934	4.00000
+12858	C	T	harmless	0.00126	protein	synonymous	0.32020	2.00000
+12864	T	C	harmless	0.00222	protein	synonymous	-0.57931	4.00000
+12865	A	G	harmless	0.00106	protein	missense	2.09389	2.00000
+12870	C	T	harmless	0.00181	protein	synonymous	1.20356	4.00000
+12879	T	C	harmless	0.00464	protein	synonymous	-1.13937	4.00000
+12882	C	T	harmless	0.00409	protein	synonymous	0.05317	3.00000
+12891	C	T	harmless	0.00246	protein	synonymous	1.34833	4.00000
+12930	A	G	harmless	0.00119	protein	synonymous	1.84596	4.00000
+12937	A	G	harmless	0.00305	protein	missense	1.00809	4.00000
+12948	A	G	harmless	0.01308	protein	synonymous	1.21203	4.00000
+12950	A	C	harmless	0.00106	protein	missense	-1.39944	4.00000
+12950	A	G	harmless	0.00129	protein	missense	0.45789	4.00000
+12954	T	C	harmless	0.00571	protein	synonymous	-1.23809	4.00000
+12957	T	C	harmless	0.00202	protein	synonymous	-1.62192	4.00000
+12967	A	G	harmless	0.00101	protein	missense	1.61173	4.00000
+13017	A	G	harmless	0.00135	protein	synonymous	1.57623	3.00000
+13020	T	C	harmless	0.01193	protein	synonymous	-1.19963	4.00000
+13042	G	A	harmful		protein	missense	-1.45707	1.00000
+13046	T	C	harmful		protein	missense	-1.14676	1.00000
+13094	T	C	harmful		protein	missense	-1.10463	1.00000
+13095	T	C	harmless	0.00167	protein	synonymous	-0.32964	4.00000
+13101	A	C	harmless	0.00843	protein	synonymous	-1.07698	4.00000
+13104	A	G	harmless	0.00202	protein	synonymous	2.14606	4.00000
+13105	A	G	harmless	0.12750	protein	missense	2.06306	2.00000
+13116	C	T	harmless	0.00154	protein	synonymous	-0.76279	4.00000
+13117	A	G	harmless	0.00172	protein	missense	1.40589	2.00000
+13129	C	T	harmless	0.00211	protein	missense	0.54720	1.00000
+13135	G	A	harmless	0.00574	protein	missense	-1.20638	4.00000
+13143	T	C	harmless	0.00101	protein	synonymous	-1.44584	4.00000
+13145	G	A	harmless	0.00566	protein	missense	-1.32946	2.00000
+13149	A	G	harmless	0.00964	protein	synonymous	0.87961	4.00000
+13167	A	G	harmless	0.00177	protein	synonymous	1.62691	4.00000
+13184	T	C	harmless	0.00135	protein	missense	0.33645	3.00000
+13188	C	T	harmless	0.00119	protein	synonymous	0.38745	4.00000
+13191	T	C	harmless	0.00121	protein	synonymous	-0.87045	4.00000
+13194	G	A	harmless	0.00447	protein	synonymous	-1.73999	4.00000
+13197	C	T	harmless	0.00739	protein	synonymous	0.49223	2.00000
+13203	A	G	harmless	0.00124	protein	synonymous	2.09977	4.00000
+13215	T	C	harmless	0.00115	protein	synonymous	-1.07620	4.00000
+13260	T	C	harmless	0.00337	protein	synonymous	-0.59115	2.00000
+13263	A	G	harmless	0.01767	protein	synonymous	1.83717	4.00000
+13266	A	G	harmless	0.00101	protein	synonymous	2.03251	4.00000
+13269	A	G	harmless	0.00259	protein	synonymous	2.47803	4.00000
+13276	A	G	harmless	0.01168	protein	missense	1.67386	3.00000
+13281	T	C	harmless	0.00198	protein	synonymous	-0.05381	4.00000
+13326	T	C	harmless	0.00564	protein	synonymous	-0.23365	2.00000
+13350	A	G	harmless	0.00154	protein	synonymous	1.24356	4.00000
+13356	T	C	harmless	0.00152	protein	synonymous	-0.80442	2.00000
+13359	G	A	harmless	0.00270	protein	synonymous	-1.78481	4.00000
+13368	G	A	harmless	0.05779	protein	synonymous	-1.95274	4.00000
+13395	A	G	harmless	0.00108	protein	synonymous	1.77057	3.00000
+13401	T	C	harmless	0.00131	protein	synonymous	-0.00522	2.00000
+13404	T	C	harmless	0.00188	protein	synonymous	-0.38272	2.00000
+13422	A	G	harmless	0.00101	protein	synonymous	1.49394	4.00000
+13434	A	G	harmless	0.00491	protein	synonymous	1.01170	4.00000
+13437	T	C	harmless	0.00181	protein	synonymous	0.18311	4.00000
+13470	A	G	harmless	0.00305	protein	synonymous	1.03432	4.00000
+13485	A	G	harmless	0.02688	protein	synonymous	1.13913	4.00000
+13497	A	G	harmless	0.00110	protein	synonymous	1.94079	4.00000
+13500	T	C	harmless	0.00565	protein	synonymous	-0.95152	4.00000
+13506	C	T	harmless	0.06476	protein	synonymous	0.07952	2.00000
+13513	G	A	harmful		protein	missense	-0.86212	1.00000
+13514	A	G	harmful		protein	missense	1.70406	1.00000
+13528	A	G	harmless	0.00209	protein	missense	1.13102	3.00000
+13542	A	G	harmless	0.00464	protein	synonymous	2.49375	4.00000
+13563	A	G	harmless	0.00207	protein	synonymous	1.26393	4.00000
+13565	C	T	harmless	0.00167	protein	missense	0.28451	3.00000
+13590	G	A	harmless	0.10851	protein	synonymous	-0.88609	4.00000
+13617	T	C	harmless	0.06287	protein	synonymous	-0.40946	4.00000
+13630	A	G	harmless	0.00282	protein	missense	1.34468	4.00000
+13635	T	C	harmless	0.00239	protein	synonymous	-0.44202	4.00000
+13637	A	G	harmless	0.01139	protein	missense	0.65529	3.00000
+13650	C	T	harmless	0.14852	protein	synonymous	0.63711	4.00000
+13651	A	G	harmless	0.00895	protein	missense	1.70297	4.00000
+13656	T	C	harmless	0.00108	protein	synonymous	0.03543	4.00000
+13680	C	T	harmless	0.00613	protein	synonymous	0.31518	4.00000
+13681	A	G	harmless	0.00390	protein	missense	1.05034	4.00000
+13708	G	A	harmless	0.07564	protein	missense	-1.04306	4.00000
+13710	A	G	harmless	0.00245	protein	synonymous	1.16930	4.00000
+13711	G	A	harmless	0.00110	protein	missense	-1.00975	4.00000
+13722	A	G	harmless	0.00757	protein	synonymous	0.52076	4.00000
+13731	A	G	harmless	0.00190	protein	synonymous	1.49785	4.00000
+13734	T	C	harmless	0.01040	protein	synonymous	-0.60663	2.00000
+13740	T	C	harmless	0.00608	protein	synonymous	0.00174	4.00000
+13743	T	C	harmless	0.00174	protein	synonymous	-1.04896	4.00000
+13749	C	T	harmless	0.00220	protein	synonymous	0.65604	3.00000
+13759	G	A	harmless	0.01495	protein	missense	-1.23188	4.00000
+13762	T	G	harmless	0.00139	protein	missense	1.18353	4.00000
+13768	T	C	harmless	0.00255	protein	missense	-0.48416	4.00000
+13780	A	G	harmless	0.01848	protein	missense	1.42318	4.00000
+13789	T	C	harmless	0.05281	protein	missense	-0.00356	4.00000
+13803	A	G	harmless	0.05235	protein	synonymous	1.75923	4.00000
+13813	G	A	harmless	0.00121	protein	missense	-0.91614	4.00000
+13827	A	G	harmless	0.00704	protein	synonymous	2.04003	4.00000
+13830	T	C	harmless	0.00191	protein	synonymous	-0.33928	4.00000
+13879	T	C	harmless	0.00947	protein	missense	0.15023	4.00000
+13880	C	A	harmless	0.02357	protein	missense	0.37766	4.00000
+13884	A	G	harmless	0.00145	protein	synonymous	1.07636	4.00000
+13886	T	C	harmless	0.01815	protein	missense	-1.57919	4.00000
+13889	G	A	harmless	0.00188	protein	missense	-1.28256	4.00000
+13893	A	G	harmless	0.00191	protein	synonymous	1.29341	4.00000
+13899	T	C	harmless	0.00121	protein	synonymous	-1.46541	4.00000
+13914	C	A	harmless	0.01995	protein	synonymous	0.55653	4.00000
+13924	C	T	harmless	0.00847	protein	missense	0.33243	3.00000
+13928	G	C	harmless	0.02694	protein	missense	-1.27810	4.00000
+13933	A	G	harmless	0.00237	protein	missense	1.83897	4.00000
+13934	C	T	harmless	0.01331	protein	missense	0.48316	2.00000
+13948	C	T	harmless	0.00138	protein	missense	0.32360	4.00000
+13958	G	C	harmless	0.01476	protein	missense	-2.11994	4.00000
+13965	T	C	harmless	0.00509	protein	synonymous	0.19030	4.00000
+13966	A	G	harmless	0.01354	protein	missense	0.87873	4.00000
+13967	C	T	harmless	0.00188	protein	missense	0.85258	3.00000
+13980	G	A	harmless	0.00794	protein	synonymous	-1.69741	4.00000
+13981	C	T	harmless	0.00275	protein	missense	0.34580	4.00000
+13992	C	T	harmless	0.00117	protein	synonymous	0.34265	4.00000
+14000	T	A	harmless	0.02701	protein	missense	-0.01284	4.00000
+14002	A	G	harmless	0.00328	protein	missense	2.11524	4.00000
+14007	A	G	harmless	0.00356	protein	synonymous	1.94628	2.00000
+14016	G	A	harmless	0.00383	protein	synonymous	-1.15723	4.00000
+14022	A	G	harmless	0.00252	protein	synonymous	1.22322	4.00000
+14034	T	C	harmless	0.00129	protein	synonymous	-0.55632	4.00000
+14037	A	G	harmless	0.00190	protein	synonymous	1.16023	4.00000
+14040	G	A	harmless	0.00496	protein	synonymous	-0.77677	4.00000
+14053	A	G	harmless	0.00354	protein	missense	1.14718	4.00000
+14059	A	G	harmless	0.01315	protein	missense	1.09427	4.00000
+14070	A	G	harmless	0.00131	protein	synonymous	1.52208	4.00000
+14071	A	G	harmless	0.00108	protein	missense	0.96707	4.00000
+14079	A	G	harmless	0.00113	protein	synonymous	1.06886	4.00000
+14088	T	C	harmless	0.00354	protein	synonymous	-0.59435	4.00000
+14097	C	T	harmless	0.00119	protein	synonymous	0.62719	2.00000
+14106	T	C	harmless	0.00232	protein	synonymous	-0.29419	4.00000
+14110	T	C	harmless	0.00331	protein	missense	-0.81863	4.00000
+14128	A	G	harmless	0.00388	protein	missense	1.55729	4.00000
+14133	A	G	harmless	0.00794	protein	synonymous	1.79382	4.00000
+14139	A	G	harmless	0.00379	protein	synonymous	1.35926	4.00000
+14148	A	G	harmless	0.01023	protein	synonymous	2.53790	
+14152	A	G	harmless	0.01262	protein	synonymous	0.97500	4.00000
+14167	C	T	harmless	0.04880	protein	synonymous	1.43816	3.00000
+14178	T	C	harmless	0.05435	protein	missense	-0.45918	2.00000
+14179	A	G	harmless	0.00317	protein	synonymous	1.29658	4.00000
+14180	T	C	harmless	0.00505	protein	missense	-1.04266	3.00000
+14182	T	C	harmless	0.03727	protein	synonymous	-0.45480	4.00000
+14198	G	A	harmless	0.00172	protein	missense	-1.25716	4.00000
+14203	A	G	harmless	0.02401	protein	synonymous	1.96093	4.00000
+14212	T	C	harmless	0.04928	protein	synonymous	-0.58082	4.00000
+14233	A	G	harmless	0.04276	protein	synonymous	1.22986	4.00000
+14251	A	G	harmless	0.00209	protein	synonymous	1.41756	4.00000
+14272	C	T	harmless	0.00220	protein	synonymous	-0.18530	4.00000
+14281	C	T	harmless	0.00174	protein	synonymous	0.41108	4.00000
+14284	C	T	harmless	0.01767	protein	synonymous	0.89114	4.00000
+14299	T	C	harmless	0.00177	protein	synonymous	-0.50149	4.00000
+14305	G	A	harmless	0.00365	protein	synonymous	-1.79500	4.00000
+14308	T	C	harmless	0.01234	protein	synonymous	-0.35593	4.00000
+14311	T	C	harmless	0.00113	protein	synonymous	-0.45689	4.00000
+14318	T	C	harmless	0.01535	protein	missense	-0.46210	4.00000
+14319	T	C	harmless	0.00105	protein	missense	-0.48434	4.00000
+14323	G	A	harmless	0.00658	protein	synonymous	-2.08983	4.00000
+14325	T	C	harmless	0.00138	protein	missense	-0.52299	4.00000
+14364	G	A	harmless	0.00489	protein	synonymous	-1.43558	4.00000
+14365	C	T	harmless	0.00953	protein	synonymous	0.51922	4.00000
+14393	A	G	harmless	0.00105	protein	missense	1.32003	3.00000
+14407	C	T	harmless	0.00120	protein	synonymous	0.84640	4.00000
+14410	G	A	harmless	0.00198	protein	synonymous	-1.32957	4.00000
+14420	C	T	harmless	0.00229	protein	missense	0.99223	2.00000
+14453	G	A	harmful		protein	missense	-0.64242	1.00000
+14459	G	A	harmful		protein	missense	-1.25717	1.00000
+14465	G	A	harmful		protein	missense	-1.88202	1.00000
+14470	T	A	harmless	0.00597	protein	synonymous	-0.78124	4.00000
+14470	T	C	harmless	0.01564	protein	synonymous	-0.85466	4.00000
+14482	C	A	harmful		protein	missense	0.05209	4.00000
+14482	C	G	harmful		protein	missense	1.18625	4.00000
+14482	C	T	harmless	0.00142	protein	synonymous	0.83883	4.00000
+14484	T	C	harmful		protein	missense	-0.22796	4.00000
+14487	T	C	harmful		protein	missense	-0.65568	1.00000
+14495	A	G	harmful		protein	missense	0.86309	1.00000
+14502	T	C	harmless	0.00156	protein	missense	0.00800	2.00000
+14524	A	G	harmless	0.00159	protein	synonymous	2.56873	2.00000
+14544	G	A	harmless	0.00246	protein	synonymous	-1.49418	4.00000
+14560	G	A	harmless	0.05554	protein	synonymous	-1.55860	4.00000
+14564	A	G	harmless	0.00122	protein	missense	1.19786	3.00000
+14566	A	G	harmless	0.05077	protein	synonymous	2.24950	4.00000
+14568	C	T	harmful		protein	missense	0.32911	1.00000
+14569	G	A	harmless	0.00951	protein	synonymous	-1.65079	4.00000
+14581	T	C	harmless	0.00321	protein	synonymous	-0.53401	4.00000
+14582	A	G	harmless	0.00989	protein	missense	2.04980	3.00000
+14584	T	C	harmless	0.00188	protein	synonymous	-0.11611	4.00000
+14587	A	G	harmless	0.00500	protein	synonymous	1.61387	4.00000
+14597	A	G	harmful		protein	missense	1.81125	1.00000
+14599	A	G	harmless	0.00236	protein	synonymous	1.21161	4.00000
+14620	C	T	harmless	0.01655	protein	synonymous	-0.02184	4.00000
+14632	C	T	harmless	0.00138	protein	synonymous	0.78403	4.00000
+14634	T	C	harmless	0.00266	protein	missense	-0.34564	4.00000
+14668	C	T	harmless	0.00975	protein	synonymous	0.58054	4.00000
+14674	T	C	harmful		tRNA		-0.11985	
+14687	A	G	harmless	0.00792	tRNA		1.23162	
+14693	A	G	harmless	0.00193	tRNA		2.47494	
+14696	A	G	harmless	0.00117	tRNA		1.79312	
+14709	T	C	harmful		tRNA		-0.25126	
+14755	A	G	harmless	0.00268	protein	synonymous	1.65737	4.00000
+14757	T	C	harmless	0.00170	protein	missense	1.17574	2.00000
+14766	C	T	harmless	0.70679	protein	missense	0.79008	4.00000
+14769	A	G	harmless	0.03987	protein	missense	1.26968	2.00000
+14783	T	C	harmless	0.05535	protein	synonymous	0.47826	4.00000
+14793	A	G	harmless	0.03139	protein	missense	0.34656	3.00000
+14794	C	T	harmless	0.00275	protein	synonymous	0.69815	4.00000
+14798	T	C	harmless	0.08762	protein	missense	0.71631	2.00000
+14831	G	A	harmless	0.00287	protein	missense	-1.17082	3.00000
+14845	C	T	harmless	0.00237	protein	synonymous	-0.44268	3.00000
+14857	T	C	harmless	0.00110	protein	synonymous	0.74188	4.00000
+14861	G	A	harmless	0.00300	protein	missense	-0.61203	4.00000
+14866	C	T	harmless	0.00191	protein	synonymous	0.65212	2.00000
+14869	G	A	harmless	0.01147	protein	synonymous	-0.97172	4.00000
+14872	C	T	harmless	0.00863	protein	synonymous	0.07341	4.00000
+14902	C	T	harmless	0.00260	protein	synonymous	0.83269	4.00000
+14905	G	A	harmless	0.08201	protein	synonymous	-0.92202	3.00000
+14911	C	T	harmless	0.02616	protein	synonymous	1.04031	2.00000
+14926	A	G	harmless	0.00122	protein	synonymous	-1.12475	4.00000
+14927	A	G	harmless	0.00119	protein	missense	2.06317	3.00000
+14935	T	C	harmless	0.00181	protein	synonymous	0.22860	2.00000
+14953	C	T	harmless	0.00105	protein	synonymous	1.09700	3.00000
+14956	T	C	harmless	0.00213	protein	synonymous	-1.32255	4.00000
+14971	T	C	harmless	0.00170	protein	synonymous	-0.06812	4.00000
+14978	A	G	harmless	0.00167	protein	missense	1.14229	4.00000
+14979	T	C	harmless	0.00174	protein	missense	-0.41152	2.00000
+15016	C	T	harmless	0.00292	protein	synonymous	0.19216	3.00000
+15028	C	A	harmless	0.00303	protein	synonymous	0.77285	4.00000
+15043	G	A	harmless	0.07876	protein	synonymous	-1.50184	4.00000
+15049	C	T	harmless	0.00161	protein	synonymous	1.04568	4.00000
+15058	C	T	harmless	0.00214	protein	synonymous	-0.03800	2.00000
+15061	A	G	harmless	0.00287	protein	synonymous	1.79377	4.00000
+15067	T	C	harmless	0.00207	protein	synonymous	-0.03455	2.00000
+15077	G	A	harmless	0.00218	protein	missense	-1.72763	3.00000
+15103	C	T	harmless	0.00168	protein	synonymous	0.96025	4.00000
+15106	G	A	harmless	0.00105	protein	synonymous	-1.67950	4.00000
+15110	G	A	harmless	0.03280	protein	missense	-0.99085	4.00000
+15115	T	C	harmless	0.03077	protein	synonymous	-0.47713	4.00000
+15119	G	A	harmless	0.00264	protein	missense	-1.71835	2.00000
+15136	C	T	harmless	0.01161	protein	synonymous	0.70829	4.00000
+15148	G	A	harmless	0.00333	protein	synonymous	-1.16573	4.00000
+15150	G	A	harmful		protein	nonsense	-1.83605	1.00000
+15172	G	A	harmless	0.00356	protein	synonymous	-1.88361	4.00000
+15191	T	C	harmless	0.00206	protein	synonymous	-0.43957	2.00000
+15204	T	C	harmless	0.00105	protein	missense	-0.16027	2.00000
+15211	C	T	harmless	0.00310	protein	synonymous	0.69713	2.00000
+15217	G	A	harmless	0.02954	protein	synonymous	-0.62980	4.00000
+15218	A	G	harmless	0.02253	protein	missense	0.60998	4.00000
+15223	C	T	harmless	0.00106	protein	synonymous	0.58656	4.00000
+15226	A	G	harmless	0.00760	protein	synonymous	1.21944	4.00000
+15229	T	C	harmless	0.00466	protein	synonymous	-0.19580	4.00000
+15235	A	G	harmless	0.00103	protein	synonymous	1.24224	2.00000
+15236	A	G	harmless	0.00263	protein	missense	0.88622	3.00000
+15242	G	A	harmful		protein	nonsense	-0.70009	1.00000
+15244	A	G	harmless	0.01812	protein	synonymous	1.75057	4.00000
+15257	G	A	harmless	0.01274	protein	missense	-1.28014	2.00000
+15261	G	A	harmless	0.00108	protein	missense	-1.44536	2.00000
+15262	T	C	harmless	0.00144	protein	synonymous	-0.49642	4.00000
+15263	C	T	harmless	0.00126	protein	missense	0.56764	2.00000
+15287	T	C	harmless	0.00156	protein	missense	-0.57840	3.00000
+15289	T	C	harmless	0.00142	protein	synonymous	-0.36671	4.00000
+15299	T	C	harmless	0.00222	protein	synonymous	-0.75792	4.00000
+15301	G	A	harmless	0.24462	protein	synonymous	-1.90599	4.00000
+15311	A	G	harmless	0.01777	protein	missense	1.60375	2.00000
+15313	T	C	harmless	0.00110	protein	synonymous	-0.06647	4.00000
+15314	G	A	harmless	0.00408	protein	missense	-1.78185	4.00000
+15317	G	A	harmless	0.00190	protein	missense	-1.43491	3.00000
+15323	G	A	harmless	0.00238	protein	missense	-1.08123	3.00000
+15326	A	G	harmless	0.99342	protein	missense	0.81742	4.00000
+15344	T	C	harmless	0.00110	protein	synonymous	-0.29286	2.00000
+15346	G	A	harmless	0.00170	protein	synonymous	-1.74057	4.00000
+15355	G	A	harmless	0.00305	protein	synonymous	-0.99816	4.00000
+15367	C	T	harmless	0.00257	protein	synonymous	0.75724	2.00000
+15391	C	T	harmless	0.00344	protein	synonymous	0.28349	4.00000
+15412	T	C	harmless	0.00110	protein	synonymous	-0.12395	4.00000
+15421	A	G	harmless	0.00268	protein	synonymous	0.61944	4.00000
+15431	G	A	harmless	0.01456	protein	missense	-0.83876	4.00000
+15449	T	C	harmless	0.00119	protein	missense	-0.62064	4.00000
+15452	C	A	harmless	0.11031	protein	missense	-0.58236	4.00000
+15454	T	C	harmless	0.00441	protein	synonymous	-0.57798	4.00000
+15455	C	T	harmless	0.00211	protein	missense	0.35813	4.00000
+15458	T	C	harmless	0.00200	protein	missense	-0.13522	4.00000
+15466	G	A	harmless	0.00122	protein	synonymous	-1.55108	4.00000
+15470	T	C	harmless	0.00163	protein	synonymous	-0.74452	4.00000
+15479	T	C	harmless	0.00138	protein	missense	-0.90392	2.00000
+15487	A	T	harmless	0.01790	protein	synonymous	0.77722	4.00000
+15497	G	A	harmless	0.00386	protein	missense	-1.33728	2.00000
+15511	T	C	harmless	0.00331	protein	synonymous	-0.27562	2.00000
+15514	T	C	harmless	0.01496	protein	synonymous	0.10164	2.00000
+15519	T	C	harmless	0.00156	protein	missense	-0.83743	3.00000
+15530	T	C	harmless	0.00168	protein	synonymous	-0.82309	3.00000
+15535	C	T	harmless	0.02245	protein	synonymous	1.21157	2.00000
+15550	C	T	harmless	0.00126	protein	synonymous	0.60879	2.00000
+15553	G	A	harmless	0.00168	protein	synonymous	-1.82317	2.00000
+15596	G	A	harmless	0.00110	protein	missense	-1.82992	2.00000
+15607	A	G	harmless	0.05558	protein	synonymous	1.02319	2.00000
+15617	G	A	harmless	0.00151	protein	missense	-1.26609	2.00000
+15626	C	T	harmless	0.00264	protein	synonymous	0.40877	2.00000
+15629	T	C	harmless	0.01549	protein	synonymous	-0.85004	4.00000
+15662	A	G	harmless	0.00105	protein	missense	1.18019	4.00000
+15670	T	C	harmless	0.01555	protein	synonymous	-0.53019	4.00000
+15672	T	C	harmless	0.00241	protein	missense	-0.40007	3.00000
+15679	A	G	harmless	0.00110	protein	synonymous	1.31726	4.00000
+15693	T	C	harmless	0.01640	protein	missense	-0.80508	4.00000
+15697	T	C	harmless	0.00175	protein	synonymous	-0.23984	2.00000
+15703	A	G	harmless	0.00128	protein	synonymous	1.29343	4.00000
+15721	T	C	harmless	0.00261	protein	synonymous	-0.69706	3.00000
+15734	G	A	harmless	0.00397	protein	missense	0.04761	3.00000
+15735	C	T	harmless	0.00186	protein	missense	1.00440	3.00000
+15746	A	G	harmless	0.00236	protein	missense	1.01923	4.00000
+15758	A	G	harmless	0.01112	protein	missense	1.01198	2.00000
+15766	A	G	harmless	0.00106	protein	synonymous	1.30935	4.00000
+15773	G	A	harmless	0.00144	protein	missense	-1.18131	2.00000
+15775	A	G	harmless	0.00159	protein	synonymous	1.20411	4.00000
+15777	G	C	harmless	0.00245	protein	missense	-1.26375	4.00000
+15784	T	C	harmless	0.06254	protein	synonymous	-0.00209	4.00000
+15789	C	T	harmless	0.00160	protein	missense	0.02446	3.00000
+15790	C	T	harmless	0.00172	protein	synonymous	0.32450	4.00000
+15799	A	G	harmless	0.00252	protein	synonymous	1.11804	4.00000
+15812	G	A	harmless	0.01163	protein	missense	-1.10064	4.00000
+15817	A	G	harmless	0.00140	protein	synonymous	1.02453	4.00000
+15824	A	G	harmless	0.01979	protein	missense	1.01643	4.00000
+15833	C	T	harmless	0.00999	protein	synonymous	0.16562	4.00000
+15848	A	G	harmless	0.00385	protein	missense	0.67083	4.00000
+15849	C	T	harmless	0.01432	protein	missense	0.57534	3.00000
+15883	G	A	harmless	0.00300	protein	synonymous	-1.11145	4.00000
+15884	G	A	harmless	0.00756	protein	missense	-0.17355	4.00000
+15884	G	C	harmless	0.01462	protein	missense	-0.47875	4.00000
+15889	T	C	harmless	0.00191	tRNA		-0.34974	
+15900	T	C	harmless	0.00145	tRNA		-0.45742	
+15904	C	T	harmless	0.02238	tRNA		-0.09406	
+15905	T	C	harmless	0.00856	tRNA		-0.10243	
+15907	A	G	harmless	0.00968	tRNA		0.93577	
+15923	A	G	harmful		tRNA		0.96419	
+15924	A	G	harmless	0.04115	tRNA		1.74757	
+15927	G	A	harmless	0.00709	tRNA		-1.27007	
+15928	G	A	harmless	0.05609	tRNA		-0.87297	
+15929	A	G	harmless	0.00106	tRNA		0.68960	
+15930	G	A	harmless	0.00860	tRNA		-0.46849	
+15940	T	C	harmless	0.00118	tRNA		-0.37580	
+15941	T	C	harmless	0.00239	tRNA		0.00316	
+15942	T	C	harmless	0.01303	tRNA		0.13023	
+15946	C	T	harmless	0.00170	tRNA		-0.58511	
+15954	A	C	harmless	0.00145	other		-0.28845	
+15978	C	T	harmless	0.00769	tRNA		-0.08654	
+15990	C	T	harmful		tRNA		0.28464	
+16017	T	C	harmless	0.00211	tRNA		-0.06777	
+16037	A	G	harmless	0.00198	control region		0.06570	
+16038	A	G	harmless	0.00308	control region		1.60976	
+16048	G	A	harmless	0.00280	control region		-1.02017	
+16051	A	G	harmless	0.02529	control region		1.30844	
+16067	C	T	harmless	0.00198	control region		0.03516	
+16069	C	T	harmless	0.05621	control region		0.35370	
+16071	C	T	harmless	0.00138	control region		0.72670	
+16075	T	C	harmless	0.00144	control region		-0.00404	
+16080	A	G	harmless	0.00168	control region		1.57373	
+16083	C	T	harmless	0.00158	control region		0.18482	
+16086	T	C	harmless	0.01675	control region		-0.35621	
+16092	T	C	harmless	0.01438	control region		-0.39062	
+16093	T	C	harmless	0.05311	control region		-0.44399	
+16104	C	T	harmless	0.00266	control region		0.29676	
+16108	C	T	harmless	0.00128	control region		0.71277	
+16111	C	A	harmless	0.00230	control region		0.13217	
+16111	C	T	harmless	0.05405	control region		0.20426	
+16114	C	A	harmless	0.02053	control region		0.17931	
+16114	C	G	harmless	0.00117	control region		0.58314	
+16114	C	T	harmless	0.00402	control region		0.84976	
+16124	T	C	harmless	0.03541	control region		-0.56803	
+16126	T	C	harmless	0.14321	control region		-0.77378	
+16129	G	A	harmless	0.11526	control region		-0.53666	
+16129	G	C	harmless	0.00966	control region		-0.51823	
+16134	C	T	harmless	0.00377	control region		0.38929	
+16136	T	C	harmless	0.00631	control region		0.14885	
+16140	T	C	harmless	0.00525	control region		-0.25019	
+16144	T	C	harmless	0.00771	control region		-0.42706	
+16145	G	A	harmless	0.02836	control region		-1.04814	
+16146	A	G	harmless	0.00307	control region		0.94070	
+16147	C	A	harmless	0.00147	control region		-0.00748	
+16147	C	T	harmless	0.00195	control region		0.79320	
+16148	C	T	harmless	0.01842	control region		-0.58087	
+16150	C	T	harmless	0.00167	control region		0.18491	
+16153	G	A	harmless	0.00834	control region		-0.60679	
+16154	T	C	harmless	0.00172	control region		-0.54148	
+16162	A	G	harmless	0.01897	control region		1.36079	
+16163	A	G	harmless	0.01613	control region		1.27453	
+16166	A	G	harmless	0.00261	control region		1.71065	
+16167	C	T	harmless	0.00151	control region		0.46963	
+16168	C	T	harmless	0.01271	control region		0.51343	
+16169	C	T	harmless	0.00443	control region		0.43823	
+16172	T	C	harmless	0.06386	control region		-0.14554	
+16174	C	T	harmless	0.00218	control region		0.18240	
+16175	A	G	harmless	0.00165	control region		1.21168	
+16176	C	A	harmless	0.00218	control region		0.08580	
+16176	C	G	harmless	0.00115	control region		0.92988	
+16176	C	T	harmless	0.00365	control region		0.67712	
+16179	C	T	harmless	0.00640	control region		0.17177	
+16181	A	G	harmless	0.00119	control region		1.24436	
+16183	A	C	harmless	0.00470	control region		-0.04574	
+16183	A	G	harmless	0.00184	control region		0.96218	
+16184	C	T	harmless	0.00661	control region		0.30254	
+16185	C	T	harmless	0.00628	control region		0.60976	
+16186	C	T	harmless	0.01386	control region		1.09707	
+16187	C	T	harmless	0.05196	control region		0.17214	
+16188	C	T	harmless	0.00214	control region		0.35971	
+16189	T	C	harmless	0.24856	control region		-0.12564	
+16192	C	T	harmless	0.04637	control region		0.53915	
+16193	C	T	harmless	0.00870	control region		0.28484	
+16201	C	T	harmless	0.00175	control region		0.16474	
+16203	A	G	harmless	0.00117	control region		0.91534	
+16207	A	G	harmless	0.00172	control region		1.29850	
+16209	T	C	harmless	0.02902	control region		-0.05211	
+16212	A	G	harmless	0.00124	control region		1.09367	
+16213	G	A	harmless	0.02132	control region		-1.24409	
+16214	C	T	harmless	0.00246	control region		0.24150	
+16215	A	G	harmless	0.00502	control region		1.54149	
+16216	A	G	harmless	0.00147	control region		1.06700	
+16217	T	C	harmless	0.02791	control region		-0.70760	
+16218	C	T	harmless	0.00671	control region		-0.22020	
+16219	A	G	harmless	0.00611	control region		1.39806	
+16220	A	C	harmless	0.00131	control region		0.19491	
+16221	C	T	harmless	0.00464	control region		0.22578	
+16222	C	T	harmless	0.00932	control region		0.26070	
+16223	C	T	harmless	0.39409	control region		0.75352	
+16224	T	C	harmless	0.05210	control region		-0.95450	
+16230	A	G	harmless	0.01422	control region		1.31874	
+16231	T	C	harmless	0.00778	control region		-0.55410	
+16234	C	T	harmless	0.01696	control region		1.05300	
+16235	A	G	harmless	0.00475	control region		0.35010	
+16239	C	G	harmless	0.00112	control region		0.92981	
+16239	C	T	harmless	0.01319	control region		0.27257	
+16240	A	G	harmless	0.00239	control region		1.51788	
+16241	A	G	harmless	0.00227	control region		1.11070	
+16242	C	T	harmless	0.00138	control region		0.51902	
+16243	T	C	harmless	0.00292	control region		-0.34813	
+16245	C	T	harmless	0.00317	control region		0.48550	
+16247	A	G	harmless	0.00222	control region		0.83237	
+16248	C	T	harmless	0.00402	control region		0.22039	
+16249	T	C	harmless	0.00948	control region		-0.96453	
+16255	G	A	harmless	0.00393	control region		-1.06874	
+16256	C	A	harmless	0.00135	control region		0.27304	
+16256	C	T	harmless	0.04475	control region		-0.15715	
+16257	C	A	harmless	0.00112	control region		0.06356	
+16257	C	T	harmless	0.00186	control region		0.50472	
+16259	C	T	harmless	0.00289	control region		0.76954	
+16260	C	T	harmless	0.00722	control region		0.45357	
+16261	C	T	harmless	0.03654	control region		1.04840	
+16263	T	C	harmless	0.00638	control region		-0.52202	
+16264	C	T	harmless	0.03405	control region		0.76574	
+16265	A	C	harmless	0.01051	control region		-0.33054	
+16265	A	G	harmless	0.00402	control region		1.10025	
+16265	A	T	harmless	0.00787	control region		0.14808	
+16266	C	T	harmless	0.00715	control region		0.51784	
+16270	C	T	harmless	0.08836	control region		0.57444	
+16271	T	C	harmless	0.00424	control region		-0.31211	
+16272	A	G	harmless	0.00103	control region		1.06789	
+16274	G	A	harmless	0.01381	control region		-1.48668	
+16278	C	T	harmless	0.19641	control region		0.52936	
+16284	A	G	harmless	0.00369	control region		0.75907	
+16286	C	A	harmless	0.00264	control region		0.79805	
+16286	C	G	harmless	0.00603	control region		2.21669	
+16286	C	T	harmless	0.00757	control region		0.92823	
+16287	C	T	harmless	0.00204	control region		-0.28043	
+16288	T	C	harmless	0.00303	control region		-0.48476	
+16289	A	G	harmless	0.00103	control region		0.78375	
+16290	C	T	harmless	0.05430	control region		0.37726	
+16291	C	T	harmless	0.02073	control region		1.03538	
+16292	C	T	harmless	0.03466	control region		0.50082	
+16293	A	G	harmless	0.04344	control region		0.76882	
+16293	A	T	harmless	0.00147	control region		0.17519	
+16294	C	T	harmless	0.14190	control region		0.69567	
+16295	C	T	harmless	0.01245	control region		0.66898	
+16296	C	T	harmless	0.02974	control region		0.61788	
+16297	T	C	harmless	0.00323	control region		-0.93704	
+16298	T	C	harmless	0.04984	control region		-0.83258	
+16299	A	G	harmless	0.00493	control region		1.10846	
+16300	A	G	harmless	0.00494	control region		0.75050	
+16301	C	T	harmless	0.00555	control region		0.08635	
+16304	T	C	harmless	0.05546	control region		-0.48051	
+16309	A	G	harmless	0.04505	control region		0.82064	
+16311	T	C	harmless	0.21850	control region		-1.03775	
+16312	A	G	harmless	0.00158	control region		0.90582	
+16316	A	G	harmless	0.00618	control region		1.05351	
+16318	A	G	harmless	0.00253	control region		0.81864	
+16318	A	T	harmless	0.00321	control region		0.48132	
+16319	G	A	harmless	0.06228	control region		-0.73695	
+16320	C	T	harmless	0.04753	control region		1.02192	
+16324	T	C	harmless	0.00588	control region		-0.57619	
+16325	T	C	harmless	0.02546	control region		-0.66344	
+16327	C	T	harmless	0.02932	control region		0.54661	
+16335	A	G	harmless	0.00296	control region		0.34648	
+16342	T	C	harmless	0.00381	control region		-0.36976	
+16343	A	G	harmless	0.00457	control region		1.17586	
+16344	C	T	harmless	0.00376	control region		0.00722	
+16352	T	C	harmless	0.00541	control region		-0.24082	
+16353	C	T	harmless	0.00117	control region		0.84915	
+16354	C	T	harmless	0.01221	control region		0.79174	
+16355	C	T	harmless	0.02152	control region		0.66734	
+16356	T	C	harmless	0.03172	control region		-1.06072	
+16357	T	C	harmless	0.00333	control region		-0.83010	
+16359	T	C	harmless	0.00149	control region		-0.83267	
+16360	C	T	harmless	0.03074	control region		0.25529	
+16362	T	C	harmless	0.14978	control region		-0.09630	
+16366	C	T	harmless	0.00122	control region		-0.38162	
+16368	T	C	harmless	0.00916	control region		-0.36121	
+16390	G	A	harmless	0.10033	control region		-1.02782	
+16391	G	A	harmless	0.01827	control region		-1.45692	
+16398	G	A	harmless	0.00285	control region		-1.19963	
+16399	A	G	harmless	0.03497	control region		0.52625	
+16400	C	T	harmless	0.00387	control region		0.49488	
+16463	A	G	harmless	0.00188	control region		0.60265	
+16465	C	T	harmless	0.00324	control region		1.01884	
+16468	T	C	harmless	0.00126	control region		-0.36963	
+16482	A	G	harmless	0.01117	control region		1.37925	
+16483	G	A	harmless	0.00133	control region		-0.31176	
+16497	A	G	harmless	0.00259	control region		0.64494	
+16519	T	C	harmless	0.65725	control region		-0.17369	
+16524	A	G	harmless	0.00315	control region		0.59419	
+16526	G	A	harmless	0.01576	control region		-1.24063	
+16527	C	T	harmless	0.01796	control region		0.56671	

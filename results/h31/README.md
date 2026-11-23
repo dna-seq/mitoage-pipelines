@@ -23,3 +23,12 @@ Result: neither rule is met. Cybrids: `kron_cds` T1 −0.01, T2 0.59, T3 3 of 6;
 the bars were −0.63, 0.83 and 5. Variants: the area over all 95 harmful and 1,576 harmless variants is 0.88; on the
 1,251 the conservation baseline covers it is 0.95 against 0.91, and the 95% interval of the difference, −0.015 to
 0.095, holds 0. Reported beside: amino-acid-changing variants 0.93 against 0.87; tRNA genes 0.77, with no baseline.
+
+## The shuffled genome, 2026-11-23
+
+`arms-20261123/shuffled/` and `arms-20261123/mito/`: the readouts of Slurm job 6596363 (CPU, one minute), from a
+fresh clone at commit c8b5b0c, on the tables of job 6591903. The shuffled genome's table is read at the record's own
+places with the record's own bases (`--arm shuffled`); `mito` is the arm with genetic code 2 run beside it, on the 21
+stated activities and the corrected baselines. Tests 21 passed, breaks 25 of 25 caught. Variants: area 0.364 on the
+shuffled genome against 0.883 on the real one. Cybrids: `kron_cds` T1 0.06, T2 0.42 against −0.04, 0.59. The rule
+was written before the scores: `docs/HYPOTHESES.md`, H31.
