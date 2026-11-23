@@ -25,5 +25,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "commit $(cat .git/refs/heads/main 2>/dev/null || cat .git/HEAD); task $SLURM_ARRAY_TASK_ID on $(hostname)"
 sha256sum data/input/cybrid/records.gb data/input/pdb/{5XTD,5XTE,5Z62,8H9S}.cif data/input/variants/* data/input/ligandmpnn/model_utils.py data/input/ligandmpnn/model_params/*.pt
 s=$(date +%s)
-$UV run --frozen --group stab mitoage mitoport variant-mpnn --task "$SLURM_ARRAY_TASK_ID" ${H34_OUT:+--out "$H34_OUT"}
+# --no-sync: the tasks start together on one environment, and a `uv run` that syncs it (to other groups than the
+# ones installed) removes and rewrites torch's files under the others; four of eight tasks died of it on 2026-11-23
+$UV run --frozen --no-sync mitoage mitoport variant-mpnn --task "$SLURM_ARRAY_TASK_ID" ${H34_OUT:+--out "$H34_OUT"}
 echo "task $SLURM_ARRAY_TASK_ID: $(( $(date +%s) - s )) s"
