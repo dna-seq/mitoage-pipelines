@@ -36,6 +36,32 @@ class TestDrop:
         assert np.isnan(kron.drop(lp, 3, "T", "A"))
 
 
+class TestTableOf:
+    def write(self, tmp_path, genome):
+        lp = table(genome)
+        t = pd.DataFrame({"pos": range(1, len(genome) + 1), "ref": list(genome), **{f"lp_{b}": lp[:, i] for i, b in enumerate("ACGT")}})
+        t.to_csv(tmp_path / "t.tsv", sep="\t", index=False)
+        return tmp_path / "t.tsv", lp
+
+    def test_a_table_of_the_genome_and_of_another(self, tmp_path):
+        p, lp = self.write(tmp_path, GENOME)
+        assert np.array_equal(kron.table_of(p, GENOME, "mito"), lp)
+        with pytest.raises(ValueError, match="not of the record"):
+            kron.table_of(p, GENOME[1:] + GENOME[0], "mito")
+
+    def test_the_shuffled_arm_takes_another_order_of_the_same_bases_only(self, tmp_path):
+        turned = GENOME[1:] + GENOME[0]
+        p, lp = self.write(tmp_path, turned)
+        got = kron.table_of(p, GENOME, "shuffled")
+        assert np.array_equal(got, lp)
+        # read at the record's place with the record's bases: place 0 holds A in the record, C in the shuffle
+        assert kron.drop(got, 0, "A", "C") == lp[0, 0] - lp[0, 1] == -1.0
+        with pytest.raises(ValueError, match="not a shuffle"):
+            kron.table_of(p, turned, "shuffled")                      # the genome itself is no shuffle
+        with pytest.raises(ValueError, match="not a shuffle"):
+            kron.table_of(p, "A" + GENOME[1:-1] + "A", "shuffled")    # other bases
+
+
 class TestStretchScore:
     def test_plus_strand_two_changes_and_a_gap(self):
         seq = GENOME[4:24]

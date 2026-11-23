@@ -2767,6 +2767,16 @@ change.**
   of single variants, level with conservation and usable where no alignment exists, and leaves it blind to whether
   a variable place suits a given nucleus. Not done: whether the cybrid species were among the model's training
   genomes or the held-out ones was not looked up.
+- *The shuffled genome, made exact on 2026-11-23, before any of its scores* (the review of 2026-11-22 found it was
+  never scored). The table of the shuffled genome holds, for each place, what the model gives each base when the
+  bases around it are those of the same gene in a random order. It is read at the record's own places with the
+  record's own bases: the drop of a change is the log-probability of the real base minus that of the other base,
+  both taken from the shuffled genome's table at that place. Everything else is as in the other arms
+  (`--arm shuffled`); the table must hold the record's bases in another order, or it is refused. Run beside it, from
+  the same clone: the arm with genetic code 2, on the 21 stated activities and the corrected baselines of the
+  review. What it is read as: the floor that base composition gives. It changes no verdict. Said in advance: an
+  area of the shuffled arm within 0.05 of the real arm's on the variants would mean the variant signal is mostly
+  composition; an area near 0.5 means the model reads the order of the bases.
 
 ## H32. Are the conserved sequence blocks of the control region special, or one more ruler of distance? (run: does not count, the blocks are distance)
 

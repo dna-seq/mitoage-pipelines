@@ -36,6 +36,26 @@ def read_table(path: Path) -> tuple[str, np.ndarray]:
     return "".join(t.ref), t[[f"lp_{b}" for b in BASES]].to_numpy(float)
 
 
+def table_of(path: Path, seq: str, arm: str) -> np.ndarray:
+    """The log-probabilities of a table, checked against the record's genome `seq`. Every arm but `shuffled` must hold
+    that genome. The shuffled arm must hold its bases in another order: its probabilities are then read at the
+    record's places with the record's bases, the floor that composition gives."""
+    genome, lp = read_table(path)
+    if arm == "shuffled":
+        if genome == seq or sorted(genome) != sorted(seq):
+            raise ValueError(f"{path}: not a shuffle of the record's genome")
+    elif genome != seq:
+        raise ValueError(f"{path}: the table is not of the record's genome")
+    return lp
+
+
+def record_sequence(gb: Path, accession: str) -> str:
+    rec = next((r for r in SeqIO.parse(str(gb), "genbank") if r.id == accession), None)
+    if rec is None:
+        raise SystemExit(f"{accession} is not in {gb}: `mitoage download cybrid`")
+    return str(rec.seq).upper()
+
+
 def drop(lp: np.ndarray, place: int, ref: str, alt: str) -> float:
     """The log-probability of `ref` minus that of `alt` at the 0-based place; NaN when either is not A, C, G or T or
     the place was not scored."""
@@ -164,7 +184,8 @@ def cybrids(gb: Path, tables: Path, out: Path, arm: str = "mito", measurements: 
     meas = cybrid.read_measurements(measurements)
     al, rows = cybrid_dna.aligner(), []
     for host in sorted(set(meas.host)):
-        genome, lp = read_table(tables / f"{cybrid.GENOMES[host]}.{arm}.tsv")
+        genome = record_sequence(gb, cybrid.GENOMES[host])
+        lp = table_of(tables / f"{cybrid.GENOMES[host]}.{arm}.tsv", genome, arm)
         for donor in sorted(set(meas.donor[meas.host == host])):
             rows += pair_rows(gb, host, donor, genome, lp, al)
     kron = pd.DataFrame(rows)
@@ -265,9 +286,7 @@ def variants(gb: Path, source: Path, data: Path, tables: Path, out: Path, arm: s
     baseline) and h31_variants_summary.tsv (the rule)."""
     out.mkdir(parents=True, exist_ok=True)
     seq, kind, cds = kinds(gb)
-    genome, lp = read_table(tables / f"{cybrid.GENOMES[cybrid.HUMAN]}.{arm}.tsv")
-    if genome != seq:
-        raise SystemExit("the table is not of the human record's genome")
+    lp = table_of(tables / f"{cybrid.GENOMES[cybrid.HUMAN]}.{arm}.tsv", seq, arm)
     v, counts = read_variants(source / "clinvar_mt.json", source / "gnomad.chrM.tsv")
     held, notes = bases_held(data, gb)
     wrong = [f"m.{r.pos}{r.ref}>{r.alt}" for r in v.itertuples() if seq[r.pos - 1] != r.ref]
