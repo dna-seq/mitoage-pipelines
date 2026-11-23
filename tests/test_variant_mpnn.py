@@ -135,12 +135,12 @@ class Letters:
 
 def test_one_complex_on_the_real_structure_with_a_stand_in_reader(tmp_path):
     pytest.importorskip("torch")
-    if not (CIF.is_file() and GB.is_file() and (paths.VARIANTS / "clinvar_mt.json").is_file()):
-        pytest.skip("needs `mitoage download pdb 5Z62`, `mitoage download cybrid` and `mitoage download variants`")
+    if not ((paths.PDB / "8H9S.cif").is_file() and GB.is_file() and (paths.VARIANTS / "clinvar_mt.json").is_file()):
+        pytest.skip("needs `mitoage download pdb 8H9S`, `mitoage download cybrid` and `mitoage download variants`")
     reader = Letters()
-    res = vm.run("IV", GB, paths.PDB, paths.VARIANTS, tmp_path, tmp_path, seeds=(0, 1), model_for=lambda arm: None, reader=reader)
+    res = vm.run("V", GB, paths.PDB, paths.VARIANTS, tmp_path, tmp_path, seeds=(0, 1), model_for=lambda arm: None, reader=reader)
     v, _ = vs.variants(GB, paths.VARIANTS / "clinvar_mt.json", paths.VARIANTS / "gnomad.chrM.tsv")
-    mine = v[v.gene.isin(["COX1", "COX2", "COX3"])]
+    mine = v[v.gene.isin(["ATP6", "ATP8"])]      # complex V: some of its variants cannot be placed
     assert set(res.id) == set(mine.id) and (res.protein_pos > 1).all()
     sc = res[res.status == "scored"]
     assert len(sc) and sc.groupby("id").size().eq(len(vm.ARMS) * 2 * sc.groupby("id").copies.first()).all()
@@ -151,7 +151,7 @@ def test_one_complex_on_the_real_structure_with_a_stand_in_reader(tmp_path):
     assert np.allclose(sc.lp_alt.to_numpy() - noise0, -(1000 * place + b))
     assert np.allclose(sc.score, sc.lp_ref - sc.lp_alt) and np.allclose(sc.score, b - a)
     left = res[res.status != "scored"]
-    assert left.score.isna().all() and len(left) == mine.id.nunique() - sc.id.nunique()
+    assert len(left) and left.score.isna().all() and len(left) == mine.id.nunique() - sc.id.nunique()
 
 
 def test_the_score_is_the_mean_over_copies_then_seeds():

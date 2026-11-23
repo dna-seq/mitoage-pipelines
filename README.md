@@ -382,7 +382,7 @@ placed on every copy of a chain, the scoring's arithmetic, and the rule's readou
 
 `tests/test_variant_mpnn.py` (H34, part B) holds our per-position reading of ProteinMPNN equal to the LigandMPNN
 repository's own `single_aa_score` on two chains of complex IV for all four arms, checks that the scored place sees
-every other residue and not its own, the model's input, one complex on 5Z62 with a stand-in reading, the mean over
+every other residue and not its own, the model's input, one complex on 8H9S with a stand-in reading, the mean over
 copies and seeds, and the rule's readout; `slurm/h34-mpnn-mutations.py` breaks 22 guards one at a time, and
 `slurm/h34-mpnn-tool-check.py` compares the reading with the repository's `score.py` end to end.
 
