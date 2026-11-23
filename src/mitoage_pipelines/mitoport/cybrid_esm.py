@@ -169,7 +169,7 @@ def main(data: Path, gb: Path, nucaln: Path, out: Path, measurements: Path = cyb
     commit = "injected"
     if logprobs is None:
         logprobs, commit = model_logprobs()
-    from .cybrid_coev import on_columns
+    from .cybrid_coev import donor_on_columns
     rows, llr_rows = [], []
     for name, cx in complexes.COMPLEXES.items():
         pr, nuc_alns = complex_pairs(cx, nucaln)
@@ -184,7 +184,7 @@ def main(data: Path, gb: Path, nucaln: Path, out: Path, measurements: Path = cyb
             host_idx = {g: index_on_columns(human_row[g], host_seq[g]) for g in cx.mt}
             host_nuc = {n: a[h].replace("-", "").upper() for n, a in nuc_alns.items() if h in a}
             donors = sorted(set(meas.donor[meas.host == h]))
-            donors_mt = {d: {g: on_columns(human_row[g], prot[d][g][0], prot[d][g][1]) for g in cx.mt} for d in donors}
+            donors_mt = {d: {g: donor_on_columns(human_row[g], host_seq[g], prot[d][g][0], prot[d][g][1]) for g in cx.mt} for d in donors}
             todo, too_long = tasks(host_seq, host_idx, donors_mt, pr, host_nuc)
             print(f"complex {name}, host {h}: {len(todo)} sequences, {sum(len(t[2]) for t in todo.values())} masked "
                   f"positions, {too_long} partner pairs over {MAX_RESIDUES} residues (not assessed)")

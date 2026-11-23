@@ -113,6 +113,15 @@ def on_columns(human_row: str, protein: str, partial: bool) -> dict[int, str]:
     return {col[p + 1]: aa for p, aa in enumerate(placed)}
 
 
+def donor_on_columns(human_row: str, host: str, donor: str, donor_partial: bool) -> dict[int, str]:
+    """As `on_columns`, for a donor beside its host: the donor is read through the host
+    (`cybrid.donor_through_host`), so that residues the two share are not set apart by two separate alignments to the
+    human protein (the review of 2026-11-22)."""
+    col = column_of_position(human_row)
+    placed = cybrid.donor_through_host(human_row.replace("-", "").upper(), host, donor, donor_partial)
+    return {col[p + 1]: aa for p, aa in enumerate(placed)}
+
+
 def complex_pairs(cx: complexes.Complex, nucaln: Path) -> tuple[pd.DataFrame, dict[str, dict[str, str]]]:
     """(the contact pairs of the complex with their controls, as `partners.pairs` builds them; the nuclear alignments)."""
     work = cx.work
@@ -189,10 +198,11 @@ def main(data: Path, gb: Path, nucaln: Path, out: Path, measurements: Path = cyb
                 raise SystemExit(f"no order is named for the host {h} (HOST_ORDER)")
             base = frozenset({h, d})
             no_order = base | frozenset(s for s in common if order_of.get(s) == HOST_ORDER[h])
+            donor = {g: donor_on_columns(mt_alns[g]["homo-sapiens"], prot[h][g][0], prot[d][g][0], prot[d][g][1]) for g in cx.mt}
             row = {"host": h, "donor": d, "complex": name,
-                   **score_pair(pr, mt_alns, nuc_alns, w, h, d, placed[h], placed[d], base)}
+                   **score_pair(pr, mt_alns, nuc_alns, w, h, d, placed[h], donor, base)}
             for tag, skip, theta in (("_t50", base, THETA_SENSITIVITY), ("_noorder", no_order, THETA)):
-                s = score_pair(pr, mt_alns, nuc_alns, w, h, d, placed[h], placed[d], skip, theta)
+                s = score_pair(pr, mt_alns, nuc_alns, w, h, d, placed[h], donor, skip, theta)
                 row.update({f"coev_excess{tag}": s["coev_excess"], f"pairs_scored{tag}": s["pairs_scored"]})
             rows.append(row)
     res = pd.DataFrame(rows)

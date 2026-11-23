@@ -103,6 +103,21 @@ class TestColumns:
         assert idx == {0: 0, 2: 1, 3: 2, 4: 3, 5: 4, 9: 5, 10: 6, 11: 7, 12: 8}
 
 
+    def test_a_donor_is_placed_through_its_host(self):
+        # ATP8 of the human, mouse and M. caroli reference records: mouse and caroli differ at 5 residues; placed on
+        # human one by one they came out different at 13 (the review of 2026-11-22)
+        human = "MPQLNTTVWPTMITPMLLTLFLITQLKMLNTNYHLPPSPKPMKMKNYNKPWEPKWTKICSLHSLPPQS"
+        mouse = "MPQLDTSTWFITIISSMITLFILFQLKVSSQTFPLAPSPKSLTTMKVKTPWELKWTKIYLPHSLPQQ"
+        caroli = "MPQLDTSTWFITIISSMITLFILFQLKISSQIFPLPPSPKSLTTMKVKNPWESKWTKIYLPHSLPQQ"
+        row = human[:20] + "--" + human[20:]
+        host = cc.on_columns(row, mouse, False)
+        through = cc.donor_on_columns(row, mouse, caroli, False)
+        direct = sum(a != b for a, b in zip(mouse, caroli))
+        assert direct == 5 and set(through) == set(host) and 20 not in through and 21 not in through
+        assert sum(host[c] != through[c] for c in host) == direct
+        assert sum(host[c] != cc.on_columns(row, caroli, False)[c] for c in host) > direct
+
+
 class TestEsmBookkeeping:
     def setup(self):
         host_seq = {"X": "MKWLA"}; host_idx = {"X": {c: c for c in range(5)}}
