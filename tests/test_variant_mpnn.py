@@ -147,9 +147,9 @@ def test_one_complex_on_the_real_structure_with_a_stand_in_reader(tmp_path):
     a = np.array([cs.ALPHABET.index(x) for x in sc.ref_aa]); b = np.array([cs.ALPHABET.index(x) for x in sc.alt_aa])
     noise0 = np.array([float(vm.order_noise(len(reader.S), s)[0]) for s in sc.seed])
     place = (-(sc.lp_ref.to_numpy() - noise0) - a) / 1000.0
-    assert np.allclose(place, np.round(place)) and (reader.S[np.round(place).astype(int)] == a).all()       # read where the reference residue is
-    assert np.allclose(sc.lp_alt.to_numpy() - noise0, -(1000 * place + b))
-    assert np.allclose(sc.score, sc.lp_ref - sc.lp_alt) and np.allclose(sc.score, b - a)
+    assert np.allclose(place, np.round(place), rtol=0, atol=1e-6) and (reader.S[np.round(place).astype(int)] == a).all()       # read where the reference residue is
+    assert np.allclose(sc.lp_alt.to_numpy() - noise0, -(1000 * place + b), rtol=0, atol=1e-6)
+    assert np.allclose(sc.score, sc.lp_ref - sc.lp_alt, rtol=0, atol=1e-6) and np.allclose(sc.score, b - a, rtol=0, atol=1e-6)
     left = res[res.status != "scored"]
     assert len(left) and left.score.isna().all() and len(left) == mine.id.nunique() - sc.id.nunique()
 
