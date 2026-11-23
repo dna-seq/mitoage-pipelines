@@ -2981,7 +2981,7 @@ as first computed.
   rerun). H31's shuffled genome is scored (2026-11-23, in H31's entry).
   The sentence on soluble weights is added to H28's entry.
 
-## H34. A membrane-aware model on the human variants, beside the predictors that already exist (part A run; part B, the model, has no code)
+## H34. A membrane-aware model on the human variants, beside the predictors that already exist (part A run; part B run: does not count, the membrane model is far below the site's variability and no better than soluble weights)
 
 **State: proposed on 2026-11-22. The maintainer asked for it the same day ("let's see if membrane aware models show
 any signals ... and then think about possibility of proper MD"). Written before any code and before any score of
@@ -3073,3 +3073,21 @@ better than the site's variability among mammals, and better than the same model
   against our reading with the decoding order the repository's output reports.
   Run on 1BC8 before any variant was scored (seed 1, three draws): all four arms agree with `score.py` within
   3e-6 at every one of the 279 places, and the native residue's mean log-probability is -1.53 to -1.61.
+- *Part B, result, 2026-11-23: does not count.* Run at commit b9e62ed on CPU nodes (jobs 6596441 and 6598251;
+  second run 6596442 and 6598252, all four tables identical byte for byte; four tasks of the first submission died
+  at start on an environment re-synced under them and were run again, see `results/h34/README.md`). Collection,
+  readout, tests (47 passed, 1 skipped), breaks (22 of 22 caught) and the check against the repository's
+  `score.py` (every reading within 2.9e-6 on 1BC8 and on two chains of 5Z62): job 6600204 at commit 04b161d, on
+  the same tables. The variants are H29's corrected set: 38 harmful and 314 harmless scored by every arm, 15 not
+  assessed (7 unresolved, 8 where the structure holds another residue). Against the rule: the membrane checkpoint
+  with the label transmembrane has an area of 0.583, below the 0.70 asked and far below the site's variability on
+  the same variants (0.915; difference -0.332, interval -0.472 to -0.188). Reported, deciding nothing: label 0
+  0.583, `proteinmpnn_v_48_020` 0.581, `solublempnn_v_48_020` 0.625, BLOSUM62 0.635; membrane minus soluble
+  -0.041 (interval -0.095 to 0.003), so membrane training does not help here; at contacts with nuclear subunits
+  0.80 (8 harmful, 104 harmless; the baseline there 0.89), elsewhere 0.54 (0.92); complex I 0.53 (29, 161;
+  baseline 0.93), complex V 0.80 (9, 55; baseline 0.92); complexes III and IV hold no harmful variant, not
+  assessed. *Reading:* what the entry said it would follow from a fail: structure models are put down for this
+  question. Neither the membrane training nor the label adds anything a soluble model or BLOSUM62 does not have,
+  and all of them rank variants by the substitution's chemistry, not by whether the site may vary. The contacts'
+  0.80, H29's 0.87 lead tried on a second model, is eight harmful variants and still below the baseline there:
+  not a result. The cybrids are not scored with this model. Tables and their README: `results/h34/`.

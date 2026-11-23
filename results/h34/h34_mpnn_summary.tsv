@@ -1,0 +1,23 @@
+what	group	score	n_harmful	n_harmless	value	reads
+variants	all		39	328		352 scored by every arm with the baseline; 15 not assessed
+area	all	memb	38	314	0.583	area under the ROC curve, harmful against harmless
+area	all	base_n_aa	38	314	0.915	area under the ROC curve, harmful against harmless
+difference	all	memb - base_n_aa	38	314	-0.332	95% bootstrap interval -0.472 to -0.188
+area (reported, claimed as nothing)	all	memb0	38	314	0.583	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	all	pmpnn	38	314	0.581	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	all	smpnn	38	314	0.625	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	all	base_blosum	38	314	0.635	area under the ROC curve, harmful against harmless
+difference (reported, claimed as nothing)	all	memb - smpnn	38	314	-0.041	95% bootstrap interval -0.095 to 0.003
+area (reported, claimed as nothing)	contact	memb	8	104	0.804	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	contact	base_n_aa	8	104	0.889	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	not contact	memb	30	210	0.537	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	not contact	base_n_aa	30	210	0.918	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex I	memb	29	161	0.530	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex I	base_n_aa	29	161	0.928	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex III	memb	0	49		area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex III	base_n_aa	0	49		area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex IV	memb	0	49		area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex IV	base_n_aa	0	49		area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex V	memb	9	55	0.802	area under the ROC curve, harmful against harmless
+area (reported, claimed as nothing)	complex V	base_n_aa	9	55	0.922	area under the ROC curve, harmful against harmless
+rule	all	memb	38	314		does not count: an area of at least 0.7 and above the site's variability with the interval above 0
