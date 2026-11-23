@@ -3091,3 +3091,40 @@ better than the site's variability among mammals, and better than the same model
   and all of them rank variants by the substitution's chemistry, not by whether the site may vary. The contacts'
   0.80, H29's 0.87 lead tried on a second model, is eight harmful variants and still below the baseline there:
   not a result. The cybrids are not scored with this model. Tables and their README: `results/h34/`.
+
+## H35. Larger sequence models: Evo 2 on the variants and the cybrids, and whether a protein model holds dependencies between a mitochondrial residue and its nuclear partner (proposed; no code, no score)
+
+**State: proposed on 2026-11-23, after the maintainer asked about Evo and models larger than ESM ("their attention
+should [tell] which protein bases depend on others"). Nothing is run. The rule below is written before any code.**
+
+- *What is known before.* On H29's variants the site's variability among mammals gives 0.92, ESM1b 0.94, KronGenome
+  0.92 (H34 part A); structure models 0.58 to 0.63 (H28, H34 part B). On the cybrids nothing ranks better than the
+  count of differences (H16, H17, H28, H31). H17 put ESM-2 650M beside the nuclear partner and it did not count.
+- *Looked up, 2026-11-23.* The dataset card of Evo 2's training set names organelle genomes of the NCBI Organelle
+  resource among its sources; a copy of the card gives them about 0.16% of the tokens (not confirmed on the official
+  card). The first Evo was trained on prokaryotes and phages only. The dependencies a protein language model holds
+  can be read by changing one residue and measuring where its predictions move (Zhang et al. 2024, PNAS, the
+  categorical Jacobian); nothing was found on such a reading between two proteins.
+- *Part 1, Evo 2 as one more arm of H31.* The likelihood of each base of the two hosts' mitochondrial genomes, read
+  as H31 reads KronGenome's, on the same variants and cybrids, with H31's rules unchanged: variants, an area of at
+  least 0.70 and above the baseline with the 95% interval of the difference above 0; cybrids, T1, T2 and T3 all
+  past the bars of the count. The checkpoint is the largest that fits one card of ours; which one, and how a place
+  is scored by a model that reads left to right (both strands, or one), is fixed with the code before any score.
+  Expected, said in advance: level with KronGenome and conservation on the variants, nothing on the cybrids.
+- *Part 2, the dependency map across the interface: the test of the maintainer's point.* For each mitochondrial
+  subunit and each nuclear subunit it touches in the human structures (the contact pairs and their control pairs of
+  `mitoport partners`), the two human proteins are given to the protein model as one input, and the dependency of
+  the nuclear residue on the mitochondrial one is read for every contact pair and for its control pair. The rule: in
+  at least three of the four complexes the contact pairs have the larger dependency than their controls more often
+  than not, sign test p < 0.05 in each. If it fails, the model holds no signal between the two genomes' proteins
+  and the cybrids are not scored. If it passes, the cybrid score is the change of the model's fit of the host's
+  nuclear residue when the donor's residue replaces the host's at its contact pairs, through H16's readouts and
+  bars. The model (ESM-2 3B or ESM C, whichever takes the joined pair within its length), the linker between the
+  two proteins, the measure of dependency and the pairs too long to join are fixed with the code before any score.
+- *Controls.* The same pairs with the nuclear partner's sequence shuffled; a pair of subunits that do not touch;
+  two runs compared byte for byte; within one protein the map must find the structure's own contacts above chance
+  (the method's positive control, as in Zhang et al.), or part 2 is "not assessed".
+- *A weakness, said in advance.* A protein model was trained on single chains. A dependency across two joined
+  chains may reflect only that both are membrane proteins of one complex, which the shuffled partner tests.
+- *If both parts fail,* sequence models of every kind tried, with or without the partner, do not read mito-nuclear
+  fit from sequence, and the question goes back to data with few differences (H33) or to physics.
