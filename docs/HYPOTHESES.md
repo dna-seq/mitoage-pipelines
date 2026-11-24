@@ -3143,3 +3143,41 @@ should [tell] which protein bases depend on others"). Nothing is run. The rule b
   chains may reflect only that both are membrane proteins of one complex, which the shuffled partner tests.
 - *If both parts fail,* sequence models of every kind tried, with or without the partner, do not read mito-nuclear
   fit from sequence, and the question goes back to data with few differences (H33) or to physics.
+
+## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (proposed; step 1 coded, not run)
+
+**State: proposed on 2026-11-24, after the maintainer's correction: the aim is to find nuclear genes to edit
+(mitochondrial DNA cannot be edited), and H28, H29, H31 and H34 judged their models only by how well they ranked the
+donors, which is the mitochondrial side. "I want to reevaluate." The rule below is written before any number.**
+
+- *What is wrong with what was done.* A model that fails to rank donors better than the count of differences was
+  put down. That answers which donor works worse, not which nuclear subunit or residue is the one that fails. H28
+  kept its energy per mitochondrial protein and per set (contacts, controls), never per nuclear subunit, so its
+  tables cannot be read from the nuclear side; the verdicts of H28, H29, H31 and H34 on the ranking of donors stand
+  as they are, and say nothing on this question.
+- *A limit that no model removes.* Within a host the nucleus is the same in every cybrid, so a nuclear residue
+  cannot be ranked by its own variation. Three hosts (human, mouse, hamster) are too few to read a nuclear gene from
+  their differences. What varies is the donor's mitochondrial protein, and with it which nuclear residues have a
+  changed partner. A subunit or residue is therefore ranked by how much of the donor's change it faces. The result
+  is a list of nuclear sites that must cope with the change, which is a list of candidates to look at, not a proof
+  that editing one restores activity.
+- *Step 1, no model* (`mitoport where`, `mitoport nuclear-where`, `slurm/where-mutations.py`,
+  `slurm/nuclear-where-mutations.py`). For each (host, donor, complex) with a stated outcome (papers that disagree
+  left out): the nuclear residues, in the solved structures used throughout, with a heavy atom within the contact
+  distance of a mitochondrial residue that differs between donor and host (the donor read through the host). Per
+  nuclear subunit: the number of such residues in reduced and not reduced pairs, the area under the ROC curve of
+  that number for telling the two apart, the Spearman correlation with the stated activity, and the same two
+  numbers for the complex's whole count of differences. Per nuclear residue: the share of reduced pairs and the share
+  of not reduced pairs in which it faces a difference, and their difference. Read as: a subunit "adds something"
+  when its area exceeds that of the complex's whole count; with 9 reduced and 20 not reduced pairs in all and a few
+  per complex, nothing is claimed from these tables, and they only decide where step 2 looks.
+- *Step 2, a model, written as exact after step 1 and before it runs.* StaB-ddG's binding change with the
+  mitochondrial chains as one partner and a single nuclear chain as the other, for the donor's substitutions at the
+  residues that touch that chain, per (pair, nuclear chain); the same with ProteinMPNN's weights and the membrane
+  weights (H34) as controls. Read as step 1 reads the counts. The model must beat the count of the same residues
+  (step 1's number for that subunit), or it adds nothing on the nuclear side either.
+- *Step 3, if step 2 holds anywhere.* A model's reading of the nuclear residue itself: its likelihood with the
+  host's mitochondrial partner against with the donor's (the pair in one input), for ESM-2 and Evo-type models, as
+  H35's second part.
+- *If no step finds a subunit that the whole count does not already name,* the data cannot point to nuclear genes
+  to edit, and the next data are those with few differences (H33) or new measurements.
