@@ -2977,8 +2977,11 @@ as first computed.
   verdict as it was. H31 among amino acid changes: 0.922 against 0.865 (was 0.925 against 0.871), interval of the
   difference -0.009 to 0.130; its rule over all variants as it was. m.7445A>G stays "synonymous" in the table: its
   harm is through a tRNA precursor, which no consequence in a protein gene can say.
-- *Still to correct:* H17's ESM and co-evolution sums (the code is corrected at 4f9f1e3; the scores are not yet
-  rerun). H31's shuffled genome is scored (2026-11-23, in H31's entry).
+- *H17 run again with the donor read through the host, 2026-11-24* (code 4f9f1e3; jobs 6596367 and 6615315 from a
+  fresh clone at 531d3a8; `results/review-20261122/h17-corrected/`; 21 activities). Still does not count.
+  `coev_excess` T1 −0.23, T2 0.74; `esm_contact` T1 +0.32 (the wrong way), T2 0.29; `esm_partner_excess` −0.21 and
+  0.56; against the count's −0.52 and 0.74. H31's shuffled genome is scored (2026-11-23, in H31's entry). Nothing
+  of the review is left to correct.
   The sentence on soluble weights is added to H28's entry.
 
 ## H34. A membrane-aware model on the human variants, beside the predictors that already exist (part A run; part B run: does not count, the membrane model is far below the site's variability and no better than soluble weights)
