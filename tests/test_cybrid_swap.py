@@ -626,15 +626,18 @@ class TestProteinReading:
         ids[1] = [None] * 9
         assert sw.protein_contact_differences(seqs, rows, ids, flags) == 1     # a residue without an identity (no column) is not counted
         assert sw.protein_contact_differences({0: "KVX"}, {0: "KIX"}, {0: [0, 1, 2]}, {0: np.array([1, 1, 1], bool)}) == 1
+        assert sw.protein_contact_differences({0: "KVX"}, {0: "KIA"}, {0: [0, 1, 2]}, {0: np.array([1, 1, 1], bool)}) == 1      # an unknown of the chain is no difference
 
     def test_the_donors_number_of_differences_can_be_given_for_a_donor_the_alignment_does_not_hold(self):
-        rows = {"homo-sapiens": "ACDEFGHIKL", "a": "ACDEFGHIKL", "b": "VCDEFGHIKL", "c": "VCDEFGHIKM", "d": "VCDEFGHIKL"}
+        rows = {"homo-sapiens": "ACDEFGHIKL", "a": "ACDEFGHIKL", "b": "VCDEFGHIKL", "c": "VCDEFGHIKM", "d": "VCDEFGHIKM", "e": "VCDEFGHIMM"}
         mammals = set(rows)
         columns = list(range(10))
         cand, n = sw.null_candidates(rows, mammals, "not-in-the-alignment", columns, n=1)
-        assert n == 1 and cand == ["b", "d"]                                  # 0.75 <= k <= 1.25 of 1: exactly one difference
-        cand, n = sw.null_candidates(rows, mammals, "b", columns)             # without it, the donor's row gives it
-        assert n == 1 and cand == ["d"]
+        assert n == 1 and cand == ["b"]                                       # 0.75 <= k <= 1.25 of 1: exactly one difference
+        cand, n = sw.null_candidates(rows, mammals, "not-in-the-alignment", columns, n=2)
+        assert n == 2 and cand == ["c", "d"]                                  # 1.5 <= k <= 2.5
+        cand, n = sw.null_candidates(rows, mammals, "c", columns)             # without it, the donor's row gives it
+        assert n == 2 and cand == ["d"]
 
 
 class TestProteinTask:
@@ -650,6 +653,18 @@ class TestProteinTask:
             assert case_p[k] == case_a[k], k
         assert case_p["reading"] == "protein" and case_p["donor_protein"] == "XP_0.1" and "reading" not in case_a        # the alignment reading's table is as it was
         pd.testing.assert_frame_equal(by_protein, by_alignment)
+
+    def test_every_copy_of_a_subunit_carries_the_donors_protein_residues(self, tmp_path):
+        gb, aln, sp = real_inputs("III", "UQCRFS1")
+        rows = sw.read_alignment(aln / "UQCRFS1.afa")
+        m = lambda name: Counting()
+        _, by_alignment = sw.run("pan-troglodytes", "III", "UQCRFS1", gb, paths.PDB, aln, sp, tmp_path / "a", tmp_path, seeds=(0,), samples=1, draws=3, model_for=m)
+        source = do.Source({("pan-troglodytes", "UQCRFS1"): do.Ortholog(rows["pan-troglodytes"].replace("-", ""), "XP_0.1", "1")}, {}, {"pan-troglodytes": "x"})
+        scores, case = sw.run("pan-troglodytes", "III", "UQCRFS1", gb, paths.PDB, aln, sp, tmp_path / "p", tmp_path, seeds=(0,), samples=1, draws=3,
+                              model_for=m, donor_source=source)
+        assert case["copies"] == by_alignment["copies"] == 2 and case["substituted"] == by_alignment["substituted"] > 1
+        b1 = scores[scores.kind == "B1"].iloc[0]
+        assert b1.fold_two == case["substituted"] and b1.ddG == case["mt_substituted"] + case["substituted"]
 
     def test_a_gene_without_an_alignment_is_scored_with_the_donors_protein_and_has_no_null(self, tmp_path):
         d = paths.DONOR_ORTHOLOGS
