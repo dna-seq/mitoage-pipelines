@@ -371,6 +371,8 @@ class TestCollect:
         res = sw.collect(tmp_path)
         assert f"MISSING: {len(sw.tasks()) - 1} of {len(sw.tasks())}" in capsys.readouterr().out
         assert len(res) == 1 and res.iloc[0].restoration == 3.0
+        r = res.iloc[0]
+        assert r.null_draws == 3 and r.null_p95 == np.percentile([1.0, 2.0, 0.5], 95)          # the rows of kind "null" are read as they are
         for name in ("scores", "cases", "restoration", "candidates", "sums", "spearman"):
             assert (tmp_path / f"swap_{name}.tsv").is_file()
         assert len(pd.read_csv(tmp_path / "swap_scores.tsv", sep="\t")) == 15

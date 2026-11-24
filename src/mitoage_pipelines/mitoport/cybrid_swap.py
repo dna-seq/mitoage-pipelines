@@ -414,7 +414,9 @@ def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS) -> pd.DataFrame
     for d, c, g in want:
         f = out / "swap" / f"{d}.{c}.{g}"
         if Path(f"{f}.cases.tsv").is_file() and Path(f"{f}.tsv").is_file():
-            cases.append(pd.read_csv(f"{f}.cases.tsv", sep="\t")); scores.append(pd.read_csv(f"{f}.tsv", sep="\t"))
+            # "null" is a kind of row here, not a missing value: pandas would read it as NaN by default
+            cases.append(pd.read_csv(f"{f}.cases.tsv", sep="\t", keep_default_na=False, na_values=[""]))
+            scores.append(pd.read_csv(f"{f}.tsv", sep="\t", keep_default_na=False, na_values=[""]))
         else:
             missing.append(f"{d} / {c} / {g}")
     if missing:

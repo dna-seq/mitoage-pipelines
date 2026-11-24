@@ -71,6 +71,7 @@ breaks = [
  (S, "the union of genes summed", "common = set.intersection(*ok) if ok else set()", "common = set.union(*ok) if ok else set()"),
  (S, "a correlation of two cases", "if len(g) >= 3 and g.pct.nunique()", "if len(g) >= 2 and g.pct.nunique()"),
  (S, "a missing task not said", "    if missing:\n        print(f\"MISSING:", "    if False:\n        print(f\"MISSING:"),
+ (S, "the null rows read as missing values", "scores.append(pd.read_csv(f\"{f}.tsv\", sep=\"\\t\", keep_default_na=False, na_values=[\"\"]))", "scores.append(pd.read_csv(f\"{f}.tsv\", sep=\"\\t\"))"),
  (C, "the residues' atom counts wrong", "hv += atoms; nh.append(len(atoms))", "hv += atoms; nh.append(1)"),
 ]
 caught = 0
