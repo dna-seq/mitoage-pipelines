@@ -1090,6 +1090,17 @@ def mitoport_variant_mpnn_readout(out: Annotated[Path, typer.Option("--out", hel
     variant_mpnn.readout(out)
 
 
+@mitoport_app.command("where")
+def mitoport_where(
+    variants: Annotated[Path, typer.Option("--variants", help="a table of H29's variants with id, gene, protein_pos, label, n_aa")] = paths.VARIANT_OUT / "variant_scores.tsv",
+    positions: Annotated[Path, typer.Option("--positions", help="positions.tsv of `mitoport cybrid`")] = paths.CYBRID_OUT / "positions.tsv",
+    data: Build = paths.BUILD, gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    out: Annotated[Path, typer.Option("--out", help="folder the three tables are written to")] = paths.MITOPORT_OUT / "where") -> None:
+    """Exploratory: where the harmful variants and the cybrids' differences sit (conserved, buried, at a contact)."""
+    from .mitoport import where
+    where.main(variants, positions, data, gb, out)
+
+
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]
 
 
