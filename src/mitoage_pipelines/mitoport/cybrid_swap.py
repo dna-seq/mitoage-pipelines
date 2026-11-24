@@ -253,6 +253,15 @@ def outcome_pairs(measurements: Path, host: str) -> list[tuple[str, str]]:
     return sorted({(c, d) for c, d in zip(m["complex"], m.donor)})
 
 
+def known_donors(pairs: list[tuple[str, str]]) -> dict[str, bool]:
+    """`sourced_species()`, refusing when a donor of `pairs` is not in the table of donor species (`donor_species.tsv`)."""
+    src = sourced_species()
+    unknown = sorted({d for _, d in pairs if d not in src})
+    if unknown:
+        raise SystemExit(f"{unknown} are not in the table of donor species (`donor_species.tsv`)")
+    return src
+
+
 def tasks(measurements: Path = cybrid.MEASUREMENTS, host: str = HOST) -> list[tuple[str, str, str]]:
     """Every (donor, complex, nuclear gene) the swap runs, in a fixed order (the array's tasks): the donors of the host with a
     stated outcome for the complex, and every nuclear gene of the complex's structure. For the human host the donors are the
@@ -263,19 +272,17 @@ def tasks(measurements: Path = cybrid.MEASUREMENTS, host: str = HOST) -> list[tu
     if host == HOST:
         pairs = [(c, d) for c, d in pairs if d in DONORS]
     else:
-        src = sourced_species()
-        unknown = sorted({d for _, d in pairs if d not in src})
-        if unknown:
-            raise SystemExit(f"{unknown} are not in the table of donor species (`donor_species.tsv`)")
+        src = known_donors(pairs)
         pairs = [(c, d) for c, d in pairs if src[d]]
     return [(d, c, g) for c, d in pairs for g in COMPLEXES[c].nuclear]
 
 
 def unassessed_donors(measurements: Path = cybrid.MEASUREMENTS, host: str = MOUSE) -> pd.DataFrame:
     """One row per (host, donor, complex) of a host other than human whose donor has no RefSeq source: not run, and said."""
-    src = sourced_species()
+    pairs = outcome_pairs(measurements, host)
+    src = known_donors(pairs)
     return pd.DataFrame([{"host": host, "donor": d, "complex": c, "status": "not assessed: no ortholog source (no RefSeq annotation of the species' genome)"}
-                         for c, d in outcome_pairs(measurements, host) if d in src and not src[d]], columns=["host", "donor", "complex", "status"])
+                         for c, d in pairs if not src[d]], columns=["host", "donor", "complex", "status"])
 
 
 def gene_chains(chains: list[dict], mt_chain: dict, chain_gene: dict[str, str]) -> dict[str, list[int]]:
@@ -578,7 +585,7 @@ def reduced_table(res: pd.DataFrame, cases: pd.DataFrame, meas: pd.DataFrame, ho
         x = r[(r["complex"] == cx) & (r.gene == g)]
         red, nred = x[x.status == "reduced"], x[x.status == "not_reduced"]
         rows.append({"complex": cx, "gene": g, "reduced_donors": len(red), "reduced_both": int(red.both.sum()),
-                     "candidate_reduced": bool(len(red) and 2 * int(red.both.sum()) > len(red)),
+                     "candidate_reduced": bool(2 * int(red.both.sum()) > len(red)),
                      "not_reduced_donors": len(nred), "not_reduced_both": int(nred.both.sum()),
                      "best_reduced_restoration": red.restoration.max() if len(red) else np.nan})
     return pd.DataFrame(rows)

@@ -729,6 +729,8 @@ class TestMouseTasks:
         m.drop(columns="pct").to_csv(f, sep="\t", index=False)
         with pytest.raises(SystemExit):
             sw.tasks(f, MOUSE)
+        with pytest.raises(SystemExit):
+            sw.unassessed_donors(f, MOUSE)                        # said in the table of the donors without a task too, never dropped
 
     def test_the_human_host_keeps_its_donors(self):
         assert {d for d, _, _ in sw.tasks()} == {"pan-troglodytes", "pan-paniscus", "gorilla-gorilla"} and len(sw.tasks()) == 216
@@ -820,6 +822,15 @@ class TestMouseTask:
         assert case["candidates"] == len(sw.null_candidates(rows, mammals, "rattus-norvegicus", columns, n=n, host=MOUSE)[0]) >= sw.MIN_CANDIDATES
         by_human = len(sw.null_candidates(rows, mammals, "rattus-norvegicus", columns, n=n)[0])           # measured from the human row it is another set
         assert by_human != case["candidates"] or by_human == 0
+
+    def test_an_alignment_without_a_row_of_the_host_is_refused(self, tmp_path):
+        gb, aln, sp, src = mouse_inputs()
+        (tmp_path / "aln").mkdir()
+        keep = [r for r in (aln / "COX5B.afa").read_text().split(">")[1:] if not r.startswith("mus-musculus")]
+        assert len(keep) == len(sw.read_alignment(aln / "COX5B.afa")) - 1
+        (tmp_path / "aln" / "COX5B.afa").write_text("".join(">" + r for r in keep))
+        with pytest.raises(SystemExit):
+            sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, tmp_path / "aln", sp, tmp_path, tmp_path, model_for=lambda n: Counting(), donor_source=src, host=MOUSE)
 
     def test_a_mouse_host_needs_the_pinned_orthologs(self, tmp_path):
         gb, aln, sp, _ = mouse_inputs()
@@ -935,6 +946,7 @@ class TestReducedReading:
         rows.append({**self.base, "donor": "dis", "significant": "yes", "pct_low": 50.0, "pct_high": 50.0, "pct": 50.0})
         rows.append({**self.base, "donor": "dis", "significant": "no", "pct_low": 95.0, "pct_high": 95.0, "pct": 95.0})
         rows.append({**self.base, "donor": "human-host-row", "host": "homo-sapiens", "significant": "yes", "pct_low": 1.0, "pct_high": 1.0, "pct": 1.0})
+        rows.append({**self.base, "donor": "n1", "host": "homo-sapiens", "significant": "yes", "pct_low": 1.0, "pct_high": 1.0, "pct": 1.0})      # the same donor, reduced in another host
         return pd.DataFrame(rows)
 
     def test_the_rule_is_read_on_the_reduced_pairs_alone_and_the_not_reduced_are_counted_apart(self):
