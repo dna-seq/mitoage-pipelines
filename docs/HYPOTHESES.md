@@ -3338,3 +3338,24 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     interface) needs a GPU card and every A100 of the cluster was held by other groups' trainings; no GPU and no
     `GPUrequeue` partition was used. The controls with the two other weights of the model were not repeated. A nuclear
     residue's own contribution was not read (the unit is the subunit).
+  - **Donor orthologs from RefSeq, 2026-11-24** (code `eb12408`, `c817648`, `3034258` and `2a18c31`; `results/h36/orthologs/`; `mitoage download
+    donor-orthologs`). *What now exists:* the RefSeq proteins of the 72 nuclear genes of the complexes for the mouse (host), the rat,
+    *M. caroli*, *M. pahari* and the Chinese hamster, as a pinned table (`mitoport/donor_orthologs.tsv`: NCBI's ortholog of the human gene,
+    the longest RefSeq protein on the species' RefSeq reference assembly, ties by accession; SHA-256 of every sequence; re-selection from NCBI
+    and a second download give the same bytes): 72 genes for the mouse, rat and *M. pahari*, 70 for *M. caroli* (no ATP5F1C, ATP5MF) and for
+    the Chinese hamster (no NDUFB1, NDUFB9): the gaps are genes NCBI's ortholog group does not hold for the species, listed with the genes that
+    look like them and were not taken. *What is missing:* *M. spretus*, *M. terricolor* (*M. dunni*) and *Otomys irroratus* have no RefSeq
+    annotation of a nuclear genome (*M. spretus* has GenBank assemblies without one; the other two have no assembly at NCBI), so they are
+    "not assessed: no ortholog source" and nothing stands in for them; and there is no hamster-host cybrid in `cybrid_measurements.tsv` (the
+    Chinese and Syrian hamsters are only donors into the mouse, both with no respiring cybrid), so the swap has no hamster-host case to run.
+    *What this changes for the swap:* (1) the 22 genes the vertebrate alignments lack are exactly the nuclear genes that touch none of the
+    mtDNA-encoded chains in the four structures (the 50 with an alignment are the 50 that touch them), so for the swap as coded the
+    alignments already cover every unit, and what the fetch adds is the donors: *M. caroli*, *M. pahari* and the Chinese hamster, which the
+    alignments do not hold, and a cross-check of the mouse and the rat (45 of 50 proteins identical to the alignment rows, the rest another
+    isoform). (2) `mitoport swap --donor-orthologs <folder>` places a donor's protein on the structure's chain by a pairwise alignment (as
+    `cybrid.py` places a protein through another) in place of the alignment column; a donor the table covers is never read from the alignment
+    for a gene the table lacks (not assessed, said); the random-mammal null keeps using the alignments, and a gene with none has no null;
+    without the option the swap is as it was, and the tables of the first run are unchanged. 105 tests of the swap, the model and the donor
+    orthologs pass (job 6629122), and 124 of 124 breaks of their guards are caught (60 new, the swap's 64 again). *Not done:* no swap was run for the mouse or hamster hosts; `run` still takes the
+    human structure and the human chain as the baseline, so a mouse-host case needs the host's own ortholog on the human chain as B0 (the
+    reading serves it, the mouse is in the table) and the host's tasks in `tasks()`; these are the next code.

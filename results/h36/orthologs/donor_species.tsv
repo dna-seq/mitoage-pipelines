@@ -1,0 +1,9 @@
+species	taxon	assembly	source
+mus-musculus	10090	GCF_000001635.27	RefSeq
+rattus-norvegicus	10116	GCF_036323735.1	RefSeq
+mus-spretus	10096		no ortholog source: no RefSeq reference genome
+mus-caroli	10089	GCF_978045245.1	RefSeq
+mus-pahari	10093	GCF_900095145.1	RefSeq
+mus-terricolor	254704		no ortholog source: no RefSeq reference genome
+otomys-irroratus	121570		no ortholog source: no RefSeq reference genome
+cricetulus-griseus	10029	GCF_003668045.3	RefSeq
