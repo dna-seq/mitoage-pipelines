@@ -65,7 +65,8 @@ BACKBONE = ("N", "CA", "C", "O")
 
 def read_chains(cif: Path) -> list[dict]:
     """The protein chains of the entry's first model, in the file's order: {id, seq (one letter per residue, X when
-    unknown), num (the residues' numbers), bb [n, 4, 3] (N, CA, C, O; NaN where an atom is missing), heavy [m, 3]}.
+    unknown), num (the residues' numbers), bb [n, 4, 3] (N, CA, C, O; NaN where an atom is missing), heavy [m, 3],
+    n_heavy (how many rows of `heavy` each residue holds, in order)}.
     A residue counts as protein when it is a standard amino acid or has a standard parent, and has a CA."""
     from Bio.Data.PDBData import protein_letters_3to1_extended as LETTER
     from Bio.PDB import PDBParser
@@ -74,16 +75,18 @@ def read_chains(cif: Path) -> list[dict]:
     model = next(iter(parser.get_structure(cif.stem, str(cif))))
     out = []
     for chain in model:
-        seq, num, bb, hv = [], [], [], []
+        seq, num, bb, hv, nh = [], [], [], [], []
         for res in chain:
             name = res.get_resname().strip()
             if name not in LETTER or "CA" not in res:
                 continue
             seq.append(LETTER[name] if LETTER[name] in THREE else "X"); num.append(res.id[1])
             bb.append([res[a].coord if a in res else np.full(3, np.nan) for a in BACKBONE])
-            hv += [a.coord for a in res if a.element != "H"]
+            atoms = [a.coord for a in res if a.element != "H"]
+            hv += atoms; nh.append(len(atoms))
         if seq:
-            out.append({"id": chain.id, "seq": "".join(seq), "num": num, "bb": np.array(bb, dtype=float), "heavy": np.array(hv, dtype=float)})
+            out.append({"id": chain.id, "seq": "".join(seq), "num": num, "bb": np.array(bb, dtype=float), "heavy": np.array(hv, dtype=float),
+                        "n_heavy": nh})
     return out
 
 

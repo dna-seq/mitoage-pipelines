@@ -180,6 +180,12 @@ uv run mitoage mitoport cybrid-stab --list        # the 44 tasks; one with --tas
 uv run mitoage mitoport cybrid-stab-collect && uv run mitoage mitoport cybrid-stab-readout
 uv run mitoage mitoport cybrid-dna                # exploratory: nucleotide divergence (genes, rRNA, tRNA, humanin, MOTS-c) through H16's readouts
 
+# H36, step 2: the subunit swap, StaB-ddG's binding of the donor's mitochondrial proteins to one nuclear subunit with the
+# human subunit, with the donor's ortholog and with random mammals' (slurm/h36-swap.sbatch, CPU nodes; the vertebrate
+# alignments of the nuclear subunits are the inputs of `mitoport partners`)
+uv run mitoage mitoport swap --list               # the 216 tasks (donor, complex, nuclear gene); one with --task N
+uv run mitoage mitoport swap-collect              # the swap tables and the candidate rule of the entry
+
 # H29: does the same model tell harmful from harmless human variants within a protein (slurm/h29-variants.sbatch)
 uv run mitoage download variants                  # gnomAD v3.1's mitochondrial sites and ClinVar's mitochondrial records
 uv run mitoage mitoport variant-stab --list       # the variants kept per gene and the 19 tasks; one with --task N

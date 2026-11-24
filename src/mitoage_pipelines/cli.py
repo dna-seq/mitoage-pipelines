@@ -1112,6 +1112,43 @@ def mitoport_nuclear_where(
     nuclear_where.main(sites, positions, out, draws=draws)
 
 
+@mitoport_app.command("swap")
+def mitoport_swap(
+    donor: Annotated[Optional[str], typer.Option(help="donor species slug (with --complex and --gene)")] = None,
+    complex_: Annotated[Optional[str], typer.Option("--complex", help="I, III, IV or V")] = None,
+    gene: Annotated[Optional[str], typer.Option(help="the nuclear gene whose ortholog is swapped")] = None,
+    task: Annotated[Optional[int], typer.Option(help="instead of the three: the 0-based index of the task, as --list prints them (for a Slurm array)")] = None,
+    list_: Annotated[bool, typer.Option("--list", help="print the tasks and stop")] = False,
+    gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+    aln: Annotated[Path, typer.Option("--aln", help="folder of the nuclear subunits' vertebrate alignments (<GENE>.afa)")] = paths.MITOPORT / "partners" / "aln",
+    build: Build = paths.BUILD,
+    weights: Annotated[Path, typer.Option("--weights", help="folder of the weights of `download stabddg`")] = paths.STABDDG,
+    out: Out = paths.CYBRID_OUT,
+    device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
+) -> None:
+    """H36, step 2: StaB-ddG's binding of the donor's mitochondrial proteins to one nuclear subunit of the human complex, with
+    the human subunit and with the donor's ortholog, and against random mammals' (`uv sync --group stab`)."""
+    from .mitoport import cybrid_swap
+    all_tasks = cybrid_swap.tasks()
+    if list_:
+        for i, t in enumerate(all_tasks):
+            print(i, *t)
+        return
+    if task is not None:
+        donor, complex_, gene = all_tasks[task]
+    if not (donor and complex_ and gene):
+        raise SystemExit("give --task, or --donor, --complex and --gene")
+    cybrid_swap.run(donor, complex_, gene, gb, pdb_dir, aln, build / "species.parquet", weights, out, device)
+
+
+@mitoport_app.command("swap-collect")
+def mitoport_swap_collect(out: Out = paths.CYBRID_OUT) -> None:
+    """H36, step 2: the swap's tables and the candidate rule from the tasks' tables; a task without a table is said."""
+    from .mitoport import cybrid_swap
+    cybrid_swap.collect(out)
+
+
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]
 
 

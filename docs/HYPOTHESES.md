@@ -3262,3 +3262,50 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     NDUFS5 and NDUFA13 against a foreign mitochondrial genome, not read yet) and the mouse and fly hybrid
     literature as a short list of known incompatible nuclear genes, to see whether any ranking puts them high. Its rule
     is written when it is coded.
+  - **Step 2 (the swap) made exact with the code, 2026-11-24, before any score** (`mitoport swap`, module `cybrid_swap`;
+    written by an agent for the lead seat, the choices below are where the entry left one open). *Cases:* the human host
+    and, for each complex, the donors with a stated outcome for it in `cybrid_measurements.tsv` among the apes that
+    have orthologs: chimpanzee, bonobo and gorilla, for each of I, III, IV and V. The Bornean orangutan has orthologs
+    but the table holds only a whole-cybrid row for it (no respiring cybrid) and no outcome for any complex, so it is not
+    a case here and is not run (adding it later is possible, it would add four cases). The Sumatran orangutan, the
+    mouse and hamster donors and every mouse and hamster host: *not assessed, no ortholog*. *The unit:* u is a nuclear
+    gene; partner two is every chain of that gene in the system (every copy that has a heavy atom within 4.5 A of an
+    mtDNA-encoded chain), each carrying the same ortholog residues, as H28 puts a donor's substitutions in every copy.
+    *The system is smaller than H28's:* the complex's mtDNA-encoded chains and the chains of u only, three structures
+    (both partners, partner one, partner two); the other nuclear subunits are absent. A nuclear gene of the complex
+    with no chain in the system, or none in the vertebrate alignments (`data/interim/mitoport/partners/aln`, 50 genes),
+    or none for the donor, is *not assessed* for that donor and said with its reason. *Placing the ortholog:* each
+    residue of the structure's chain is put on the alignment's human row by an alignment with BLOSUM62, gap open -10,
+    extend -0.5 and free end gaps (a chain may hold a part of the protein; with the scoring of `mitoport partners`, match 1
+    and mismatch 0 under end gaps that cost, a short chain was seen placed at the wrong end of the row), and takes the donor's residue in that column; a residue with no column (placed against no residue of the
+    row, or against a different one: the structure holds a sequence the alignment's human protein does not), an unknown or a gap in
+    the donor, or a residue the structure does not hold as a standard amino acid keeps the human residue and is counted
+    as *not placed*. *Differences at the contact residues:* contact residues of u are those with a heavy atom within 4.5 A
+    of a heavy atom of an mtDNA-encoded chain of the system, in any copy; a species differs from human at a contact
+    column when both hold an amino acid and they differ. *The null:* the other mammals of that alignment (class
+    Mammalia of the build, without the donor and the host), keeping those whose differences k at the contact columns
+    satisfy 0.75 n <= k <= 1.25 n with n the donor's (exactly 0 when the donor has none); fewer than 3 of them: the
+    null of that (donor, u) is not assessed and the gene cannot be a candidate in that donor. *50 draws, not 1,000:* each
+    draw is a model run on CPU (a chain's complex with u is a few thousand residues), and 1,000 would not finish in days;
+    the 95th percentile of 50 draws is a coarse bound, and the entry's reading stays that a real value must exceed it.
+    *The null is not run where it cannot matter:* for a (donor, u) whose ortholog changes no placed residue, B1 is B0, the
+    restoration is exactly 0 and, by the reading of the rule below (the largest are above 0), 0 is never a candidate; the
+    draws are skipped and the table says so. This saves most of the model runs and changes no verdict.
+    Draw k takes the candidate at position `default_rng((0, k)).integers(n)` of the sorted candidates; the same species
+    drawn twice is read once. *The model:* `stabddg` weights only (the controls H28 ran with the two other weights are
+    not repeated), 20 samples, seeds 0, 1 and 2, the mean over the seeds; one function reads B0, B1 and every draw, with
+    the generator seeded before each term, so a term depends only on its inputs and the seed, and the wild-type pass of a
+    sample is shared by the sequences read on that draw (the repository's own `folding_ddG` computes the same number;
+    tested). A set with no substitution is not run and is 0. The restoration of a (donor, u) is the mean over the seeds
+    of B0 minus the mean of B1, and a draw's restoration is B0 minus that draw's mean over the seeds. *The candidate
+    rule, read as follows:* of the genes scored for a donor in a complex, u is "among the largest" when its restoration is
+    above 0 and fewer than k genes have a larger one, k = 3, or a quarter of the genes rounded up when there are more than
+    12; u is a candidate for the complex when, in more than half of the donors that have an ortholog for it, it is both
+    among the largest and above the 95th percentile of its null. A donor whose null is not assessed counts as having an
+    ortholog and as not above the null. *The sum and the correlation:* the restoration summed over the genes scored for
+    every donor of the complex, and its Spearman correlation with the stated activity over the cases with a stated
+    percentage, per complex and pooled; the table states a percentage only for complex I (59, 57 and 55 for the chimpanzee,
+    the bonobo and the gorilla), so n is 3 and the correlation claims nothing. *Part (a) of the step (embeddings of a
+    structure model) is not run:* it needs a GPU card, and every A100 of the cluster is held by other groups' trainings at
+    the time of writing; no GPU and no `GPUrequeue` partition is used. *Jobs:* one task per (donor, complex, gene), on CPU
+    nodes, the whole run twice and the two sets of tables compared byte for byte.
