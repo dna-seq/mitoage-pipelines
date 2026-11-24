@@ -653,19 +653,23 @@ class TestProteinTask:
 
     def test_a_gene_without_an_alignment_is_scored_with_the_donors_protein_and_has_no_null(self, tmp_path):
         d = paths.DONOR_ORTHOLOGS
-        cx = COMPLEXES["V"]
-        if not ((d / "mus-pahari.faa").is_file() and cx.cif.is_file() and (cx.work / "chains.tsv").is_file()):
-            pytest.skip("needs `mitoage download donor-orthologs` and 8H9S")
+        if not (d / "mus-pahari.faa").is_file():
+            pytest.skip("needs `mitoage download donor-orthologs`")
         gb, aln, sp = real_inputs("IV", "COX5B")
         source = do.read_source(d)
-        assert not (aln / "ATP5F1A.afa").is_file()
-        scores, case = sw.run("mus-pahari", "V", "ATP5F1A", gb, paths.PDB, aln, sp, tmp_path, tmp_path, seeds=(0,), samples=1, draws=5,
+        # every gene a task can use has an alignment (they are the genes that touch the mtDNA-encoded chains); a folder without one stands for a gene without
+        scores, case = sw.run("mus-pahari", "IV", "COX5B", gb, paths.PDB, tmp_path / "none", sp, tmp_path, tmp_path, seeds=(0,), samples=1, draws=5,
                               model_for=lambda name: Counting(), donor_source=source)
-        assert case["status"] == "scored" and case["reading"] == "protein" and case["donor_protein"] == source.orthologs[("mus-pahari", "ATP5F1A")].accession
-        assert case["copies"] == 3 and case["substituted"] > 0 and case["contact_residues"] > 0 and case["candidates"] == 0
+        assert case["status"] == "scored" and case["reading"] == "protein" and case["donor_protein"] == source.orthologs[("mus-pahari", "COX5B")].accession
+        assert case["copies"] == 1 and case["substituted"] > 0 and case["contact_residues"] > 0 and case["candidates"] == 0 and case["contact_differences"] > 0
         assert case["null"].startswith("not assessed: no alignment of the gene") and set(scores.kind) == {"B0", "B1"}
         b1 = scores[scores.kind == "B1"].iloc[0]
         assert b1.fold_two == case["substituted"] and b1.ddG == case["mt_substituted"] + case["substituted"]
+        # the same gene with its alignment: the contact residues are those of the alignment's columns and the null is assessed
+        _, with_aln = sw.run("mus-pahari", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path / "w", tmp_path, seeds=(0,), samples=1, draws=5,
+                             model_for=lambda name: Counting(), donor_source=source)
+        assert with_aln["substituted"] == case["substituted"] and with_aln["contact_differences"] == case["contact_differences"]
+        assert with_aln["contact_residues"] == case["contact_residues"] and with_aln["candidates"] >= sw.MIN_CANDIDATES and with_aln["null"] == "assessed"
 
     def test_a_donor_the_table_covers_is_never_read_from_the_alignment_for_a_gene_it_lacks(self, tmp_path):
         gb, aln, sp = real_inputs("IV", "COX5B")
