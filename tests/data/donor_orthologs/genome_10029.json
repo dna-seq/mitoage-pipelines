@@ -1,0 +1,34 @@
+{
+ "reports": [
+  {
+   "accession": "GCF_003668045.3",
+   "assembly_info": {
+    "assembly_name": "CriGri-PICRH-1.0",
+    "assembly_status": "current",
+    "refseq_category": "reference genome"
+   },
+   "organism": {
+    "common_name": "Chinese hamster",
+    "infraspecific_names": {
+     "sex": "female",
+     "strain": "17A/GY"
+    },
+    "organism_name": "Cricetulus griseus",
+    "tax_id": 10029
+   }
+  },
+  {
+   "accession": "GCF_000223135.1",
+   "assembly_info": {
+    "assembly_name": "CriGri_1.0",
+    "assembly_status": "current",
+    "refseq_category": null
+   },
+   "organism": {
+    "common_name": "Chinese hamster",
+    "organism_name": "Cricetulus griseus",
+    "tax_id": 10029
+   }
+  }
+ ]
+}

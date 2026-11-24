@@ -1,0 +1,266 @@
+{
+ "reports": [
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_000001635.27-RS_2024_02",
+      "annotation_release_date": "2024-02-01",
+      "assembly_accession": "GCF_000001635.27",
+      "assembly_name": "GRCm39",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000078.7",
+        "genomic_range": {
+         "begin": "101934355",
+         "end": "101941997",
+         "orientation": "minus"
+        },
+        "sequence_name": "12"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "12"
+    ],
+    "common_name": "house mouse",
+    "gene_groups": [
+     {
+      "id": "4707",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "102631912",
+    "map_locations": [
+     {
+      "map_type": "Cytogenetic",
+      "map_value": "12 E"
+     },
+     {
+      "map_type": "Genetic",
+      "map_value": "12 51.33 cM"
+     }
+    ],
+    "nomenclature_authority": {
+     "authority": "MGI",
+     "identifier": "MGI:3780865"
+    },
+    "orientation": "minus",
+    "protein_count": 2,
+    "summary": [
+     {
+      "description": "Predicted to be involved in proton motive force-driven mitochondrial ATP synthesis. Part of respiratory chain complex I. Is active in mitochondrial inner membrane. Orthologous to human NDUFB1 (NADH:ubiquinone oxidoreductase subunit B1). [provided by Alliance of Genome Resources, Jun 2026]"
+     }
+    ],
+    "swiss_prot_accessions": [
+     "P0DN34"
+    ],
+    "symbol": "Ndufb1",
+    "tax_id": "10090",
+    "taxname": "Mus musculus",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "4707"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_036323735.1-RS_2026_08",
+      "annotation_release_date": "2026-08-17",
+      "assembly_accession": "GCF_036323735.1",
+      "assembly_name": "GRCr8",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086024.1",
+        "genomic_range": {
+         "begin": "126880537",
+         "end": "126888864",
+         "orientation": "minus"
+        },
+        "sequence_name": "6"
+       }
+      ]
+     },
+     {
+      "annotation_name": "GCF_021556685.1-RS_2026_08",
+      "annotation_release_date": "2026-08-17",
+      "assembly_accession": "GCF_021556685.1",
+      "assembly_name": "SHRSP_T2T",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_141539.1",
+        "genomic_range": {
+         "begin": "127193179",
+         "end": "127200377",
+         "orientation": "minus"
+        },
+        "sequence_name": "6"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "6"
+    ],
+    "common_name": "Norway rat",
+    "gene_groups": [
+     {
+      "id": "4707",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "100912357",
+    "map_locations": [
+     {
+      "map_type": "Cytogenetic",
+      "map_value": "6q32"
+     }
+    ],
+    "nomenclature_authority": {
+     "authority": "RGD",
+     "identifier": "6487218"
+    },
+    "orientation": "minus",
+    "protein_count": 3,
+    "summary": [
+     {
+      "description": "Predicted to be located in mitochondrial inner membrane. Predicted to be part of respiratory chain complex I. Orthologous to human NDUFB1 (NADH:ubiquinone oxidoreductase subunit B1). [provided by Alliance of Genome Resources, Oct 2026]"
+     }
+    ],
+    "swiss_prot_accessions": [
+     "P0DN35"
+    ],
+    "symbol": "Ndufb1",
+    "tax_id": "10116",
+    "taxname": "Rattus norvegicus",
+    "transcript_count": 3,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "4707"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_978045245.1-RS_2026_07",
+      "annotation_release_date": "2026-07-16",
+      "assembly_accession": "GCF_978045245.1",
+      "assembly_name": "Mus_caroli_1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227269.1",
+        "genomic_range": {
+         "begin": "100092141",
+         "end": "100100231",
+         "orientation": "minus"
+        },
+        "sequence_name": "Unplaced Scaffold"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "Un"
+    ],
+    "common_name": "Ryukyu mouse",
+    "gene_groups": [
+     {
+      "id": "4707",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "110306743",
+    "orientation": "minus",
+    "protein_count": 2,
+    "symbol": "Ndufb1",
+    "tax_id": "10089",
+    "taxname": "Mus caroli",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "4707"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "NCBI Mus pahari Annotation Release 101",
+      "annotation_release_date": "2019-06-14",
+      "assembly_accession": "GCF_900095145.1",
+      "assembly_name": "PAHARI_EIJ_v1.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034596.1",
+        "genomic_range": {
+         "begin": "96203003",
+         "end": "96211116",
+         "orientation": "minus"
+        },
+        "sequence_name": "7"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "7"
+    ],
+    "common_name": "shrew mouse",
+    "gene_groups": [
+     {
+      "id": "4707",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "110324555",
+    "orientation": "minus",
+    "protein_count": 2,
+    "symbol": "Ndufb1",
+    "tax_id": "10093",
+    "taxname": "Mus pahari",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "4707"
+   ]
+  }
+ ],
+ "total_count": 4
+}

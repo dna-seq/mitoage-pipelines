@@ -1,0 +1,333 @@
+{
+ "reports": [
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_036323735.1-RS_2026_08",
+      "annotation_release_date": "2026-08-17",
+      "assembly_accession": "GCF_036323735.1",
+      "assembly_name": "GRCr8",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086028.1",
+        "genomic_range": {
+         "begin": "81520762",
+         "end": "81523416",
+         "orientation": "minus"
+        },
+        "sequence_name": "10"
+       }
+      ]
+     },
+     {
+      "annotation_name": "GCF_021556685.1-RS_2026_08",
+      "annotation_release_date": "2026-08-17",
+      "assembly_accession": "GCF_021556685.1",
+      "assembly_name": "SHRSP_T2T",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_141543.1",
+        "genomic_range": {
+         "begin": "87263321",
+         "end": "87265987",
+         "orientation": "minus"
+        },
+        "sequence_name": "10"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "10"
+    ],
+    "common_name": "Norway rat",
+    "gene_groups": [
+     {
+      "id": "516",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "29754",
+    "map_locations": [
+     {
+      "map_type": "Cytogenetic",
+      "map_value": "10q26"
+     }
+    ],
+    "nomenclature_authority": {
+     "authority": "RGD",
+     "identifier": "61933"
+    },
+    "orientation": "minus",
+    "protein_count": 5,
+    "summary": [
+     {
+      "description": "Predicted to enable proton channel activity. Predicted to be involved in proton motive force-driven ATP synthesis and proton transmembrane transport. Part of proton-transporting ATP synthase complex. Orthologous to human ATP5MC1 (ATP synthase membrane subunit c locus 1). [provided by Alliance of Genome Resources, Jun 2026]"
+     }
+    ],
+    "swiss_prot_accessions": [
+     "Q06645"
+    ],
+    "symbol": "Atp5mc1",
+    "tax_id": "10116",
+    "taxname": "Rattus norvegicus",
+    "transcript_count": 5,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 4,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "516"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_000001635.27-RS_2024_02",
+      "annotation_release_date": "2024-02-01",
+      "assembly_accession": "GCF_000001635.27",
+      "assembly_name": "GRCm39",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000077.7",
+        "genomic_range": {
+         "begin": "95963619",
+         "end": "95966520",
+         "orientation": "minus"
+        },
+        "sequence_name": "11"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "11"
+    ],
+    "common_name": "house mouse",
+    "gene_groups": [
+     {
+      "id": "516",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "11951",
+    "map_locations": [
+     {
+      "map_type": "Cytogenetic",
+      "map_value": "11 D"
+     },
+     {
+      "map_type": "Genetic",
+      "map_value": "11 59.33 cM"
+     }
+    ],
+    "nomenclature_authority": {
+     "authority": "MGI",
+     "identifier": "MGI:107653"
+    },
+    "orientation": "minus",
+    "protein_count": 3,
+    "summary": [
+     {
+      "description": "Predicted to enable ligand-gated channel activity and proton channel activity. Predicted to be involved in proton motive force-driven ATP synthesis and proton transmembrane transport. Located in mitochondrial inner membrane. Is expressed in several structures, including 2-cell stage conceptus; 4-cell stage conceptus; alimentary system; genitourinary system; and nervous system. Orthologous to human ATP5MC1 (ATP synthase membrane subunit c locus 1). [provided by Alliance of Genome Resources, Jun 2026]"
+     }
+    ],
+    "swiss_prot_accessions": [
+     "Q9CR84"
+    ],
+    "symbol": "Atp5mc1",
+    "tax_id": "10090",
+    "taxname": "Mus musculus",
+    "transcript_count": 3,
+    "transcript_type_counts": [
+     {
+      "count": 3,
+      "type": "PROTEIN_CODING"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "516"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "NCBI Cricetulus griseus Annotation Release 104",
+      "annotation_release_date": "2020-06-25",
+      "assembly_accession": "GCF_000223135.1",
+      "assembly_name": "CriGri_1.0",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_003614015.1",
+        "genomic_range": {
+         "begin": "99265",
+         "end": "101919",
+         "orientation": "plus"
+        },
+        "sequence_name": "Unplaced Scaffold"
+       }
+      ]
+     },
+     {
+      "annotation_name": "NCBI Cricetulus griseus Annotation Release 104",
+      "annotation_release_date": "2020-06-25",
+      "assembly_accession": "GCF_003668045.3",
+      "assembly_name": "CriGri-PICRH-1.0",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_048600.1",
+        "genomic_range": {
+         "begin": "109218408",
+         "end": "109221062",
+         "orientation": "minus"
+        },
+        "sequence_name": "7"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "7"
+    ],
+    "common_name": "Chinese hamster",
+    "gene_groups": [
+     {
+      "id": "516",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "100752739",
+    "orientation": "plus",
+    "protein_count": 4,
+    "symbol": "Atp5mc1",
+    "tax_id": "10029",
+    "taxname": "Cricetulus griseus",
+    "transcript_count": 4,
+    "transcript_type_counts": [
+     {
+      "count": 4,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "516"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_978045245.1-RS_2026_07",
+      "annotation_release_date": "2026-07-16",
+      "assembly_accession": "GCF_978045245.1",
+      "assembly_name": "Mus_caroli_1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227268.1",
+        "genomic_range": {
+         "begin": "26263344",
+         "end": "26266012",
+         "orientation": "plus"
+        },
+        "sequence_name": "Unplaced Scaffold"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "Un"
+    ],
+    "common_name": "Ryukyu mouse",
+    "gene_groups": [
+     {
+      "id": "516",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "110305296",
+    "orientation": "plus",
+    "protein_count": 5,
+    "symbol": "Atp5mc1",
+    "tax_id": "10089",
+    "taxname": "Mus caroli",
+    "transcript_count": 5,
+    "transcript_type_counts": [
+     {
+      "count": 5,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "516"
+   ]
+  },
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "NCBI Mus pahari Annotation Release 101",
+      "annotation_release_date": "2019-06-14",
+      "assembly_accession": "GCF_900095145.1",
+      "assembly_name": "PAHARI_EIJ_v1.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034603.1",
+        "genomic_range": {
+         "begin": "63479459",
+         "end": "63482176",
+         "orientation": "minus"
+        },
+        "sequence_name": "14"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "14"
+    ],
+    "common_name": "shrew mouse",
+    "gene_groups": [
+     {
+      "id": "516",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "110331847",
+    "orientation": "minus",
+    "protein_count": 2,
+    "symbol": "Atp5mc1",
+    "tax_id": "10093",
+    "taxname": "Mus pahari",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "516"
+   ]
+  }
+ ],
+ "total_count": 5
+}

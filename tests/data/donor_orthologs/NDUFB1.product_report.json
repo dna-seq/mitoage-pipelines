@@ -1,0 +1,298 @@
+{
+ "reports": [
+  {
+   "product": {
+    "common_name": "house mouse",
+    "description": "NADH:ubiquinone oxidoreductase subunit B1",
+    "gene_id": "102631912",
+    "protein_count": 2,
+    "symbol": "Ndufb1",
+    "tax_id": "10090",
+    "taxname": "Mus musculus",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "NM_001378525.1",
+      "cds": {
+       "accession_version": "NM_001378525.1"
+      },
+      "ensembl_transcript": "ENSMUST00000221422.3",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000078.7",
+        "sequence_name": "Chromosome 12 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 339,
+      "name": "transcript variant 1",
+      "protein": {
+       "accession_version": "NP_001365454.1",
+       "ensembl_protein": "ENSMUSP00000159138.2",
+       "length": 57,
+       "name": "nADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "select_category": "REFSEQ_SELECT",
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "NM_001378527.1",
+      "cds": {
+       "accession_version": "NM_001378527.1"
+      },
+      "ensembl_transcript": "ENSMUST00000221191.3",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000078.7",
+        "sequence_name": "Chromosome 12 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 336,
+      "name": "transcript variant 2",
+      "protein": {
+       "accession_version": "NP_001365456.1",
+       "ensembl_protein": "ENSMUSP00000159028.2",
+       "length": 57,
+       "name": "nADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "102631912"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Norway rat",
+    "description": "NADH:ubiquinone oxidoreductase subunit B1",
+    "gene_id": "100912357",
+    "protein_count": 3,
+    "symbol": "Ndufb1",
+    "tax_id": "10116",
+    "taxname": "Rattus norvegicus",
+    "transcript_count": 3,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "NM_001402546.1",
+      "cds": {
+       "accession_version": "NM_001402546.1"
+      },
+      "ensembl_transcript": "ENSRNOT00000153359.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086024.1",
+        "sequence_name": "Chromosome 6 Reference GRCr8"
+       },
+       {
+        "genomic_accession_version": "NC_141539.1",
+        "sequence_name": "Chromosome 6 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 321,
+      "protein": {
+       "accession_version": "NP_001389475.1",
+       "ensembl_protein": "ENSRNOP00000109926.1",
+       "length": 57,
+       "name": "nADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "select_category": "REFSEQ_SELECT",
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "XM_056985555.3",
+      "cds": {
+       "accession_version": "XM_056985555.3"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086024.1",
+        "sequence_name": "Chromosome 6 Reference GRCr8"
+       }
+      ],
+      "length": 302,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_056841535.1",
+       "isoform_name": "isoform X1",
+       "length": 57,
+       "name": "nADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_087551955.1",
+      "cds": {
+       "accession_version": "XM_087551955.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_141539.1",
+        "sequence_name": "Chromosome 6 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 302,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_087408081.1",
+       "isoform_name": "isoform X1",
+       "length": 57,
+       "name": "nADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "100912357"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Ryukyu mouse",
+    "description": "NADH:ubiquinone oxidoreductase subunit B1",
+    "gene_id": "110306743",
+    "protein_count": 2,
+    "symbol": "Ndufb1",
+    "tax_id": "10089",
+    "taxname": "Mus caroli",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_029484670.2",
+      "cds": {
+       "accession_version": "XM_029484670.2"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227269.1",
+        "sequence_name": "NW_028227269 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 376,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_029340530.1",
+       "length": 57,
+       "name": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_029484671.2",
+      "cds": {
+       "accession_version": "XM_029484671.2"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227269.1",
+        "sequence_name": "NW_028227269 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 361,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_029340531.1",
+       "length": 57,
+       "name": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "110306743"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "shrew mouse",
+    "description": "NADH:ubiquinone oxidoreductase subunit B1",
+    "gene_id": "110324555",
+    "protein_count": 2,
+    "symbol": "Ndufb1",
+    "tax_id": "10093",
+    "taxname": "Mus pahari",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_021202210.2",
+      "cds": {
+       "accession_version": "XM_021202210.2"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034596.1",
+        "sequence_name": "Chromosome 7 Reference PAHARI_EIJ_v1.1"
+       }
+      ],
+      "length": 363,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_021057869.1",
+       "length": 57,
+       "name": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_029540983.1",
+      "cds": {
+       "accession_version": "XM_029540983.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034596.1",
+        "sequence_name": "Chromosome 7 Reference PAHARI_EIJ_v1.1"
+       }
+      ],
+      "length": 372,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_029396843.1",
+       "length": 57,
+       "name": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 1"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "110324555"
+   ]
+  }
+ ],
+ "total_count": 4
+}

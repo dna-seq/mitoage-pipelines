@@ -8,7 +8,7 @@ import pytest
 from scipy import stats
 
 from mitoage_pipelines import paths
-from mitoage_pipelines.mitoport import cybrid, cybrid_stab as cs, cybrid_swap as sw
+from mitoage_pipelines.mitoport import cybrid, cybrid_stab as cs, cybrid_swap as sw, donor_orthologs as do
 from mitoage_pipelines.mitoport.complexes import COMPLEXES
 
 HUMAN = "MKVLAWYRTEQNDSGHIFPC"
@@ -553,3 +553,127 @@ class TestTask:
             # a gene with an alignment whose chain is not in this complex's structure
             _, c = sw.run("gorilla-gorilla", "III", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m)
             assert c["status"] == "not assessed: no chain of the gene touches the mitochondrial chains"
+
+
+FIXTURES = __import__("pathlib").Path(__file__).parent / "data" / "donor_orthologs"
+REAL = do.parse_fasta((FIXTURES / "proteins.faa").read_text())          # RefSeq proteins of NDUFS2 and ATP5MC1 (tests/test_donor_orthologs.py)
+MOUSE_NDUFS2, RAT_NDUFS2 = REAL["NP_694704.1"], REAL["NP_001011907.1"]
+
+
+class TestProteinReading:
+    """H36 (donor orthologs from RefSeq): the donor's protein is aligned to the structure's chain itself."""
+
+    def test_the_residue_set_against_each_residue_of_the_chain_is_the_donors_through_a_presequence_and_a_tail(self):
+        chain = MOUSE_NDUFS2[40:140]                                        # a part of the protein, as a structure holds it
+        assert sw.place_protein(chain, MOUSE_NDUFS2) == chain                # the whole protein around it: end gaps are free
+        assert sw.place_protein(chain, "MAAGGSTPLR" + MOUSE_NDUFS2 + "GGGG") == chain
+        row = sw.place_protein(chain, RAT_NDUFS2)
+        assert len(row) == len(chain) and row == RAT_NDUFS2[40:140]         # one length, no insertion: the rat's own residues
+        assert row != chain                                                  # and the rat's NDUFS2 does differ from the mouse's there
+
+    def test_the_substitutions_are_where_the_donor_differs_and_every_other_residue_is_placed(self):
+        chain = MOUSE_NDUFS2[40:140]
+        subs, placed, lost, row = sw.protein_subs(chain, RAT_NDUFS2)
+        assert subs == {i: RAT_NDUFS2[40 + i] for i in range(100) if RAT_NDUFS2[40 + i] != chain[i]} and 0 < len(subs) < 20
+        assert placed == 100 and lost == 0 and row == RAT_NDUFS2[40:140]
+        assert sw.protein_subs(chain, MOUSE_NDUFS2)[:3] == ({}, 100, 0)       # the same protein changes nothing
+
+    def test_a_residue_set_against_a_gap_or_an_unknown_or_in_a_chain_that_is_not_an_amino_acid_is_not_placed(self):
+        chain = MOUSE_NDUFS2[40:140]
+        gapped = chain[:50] + chain[52:]                                      # the donor lacks residues 50 and 51
+        subs, placed, lost, row = sw.protein_subs(chain, gapped)
+        assert row[50:52] == "--" and subs == {} and placed == 98 and lost == 2
+        subs, placed, lost, _ = sw.protein_subs(chain, chain[:30] + "X" + chain[31:])
+        assert subs == {} and placed == 99 and lost == 1                       # an unknown in the donor
+        subs, placed, lost, _ = sw.protein_subs(chain[:30] + "X" + chain[31:], chain)
+        assert subs == {} and placed == 99 and lost == 1                       # an unknown in the structure
+        subs, placed, lost, _ = sw.protein_subs(chain, chain[:30] + "a" + chain[31:])
+        assert subs == {30: "A"} if chain[30] != "A" else subs == {}           # the donor's letters are read in upper case
+        assert placed + lost == 100
+
+    def test_a_chain_that_is_the_start_or_the_end_of_the_protein_keeps_to_that_end(self):
+        # with end gaps that cost, the first residues of the chain were set against a shifted stretch (MAALRAVQCL for the rat's MAALRAVCSL)
+        assert sw.place_protein(MOUSE_NDUFS2[:10], RAT_NDUFS2) == RAT_NDUFS2[:10]
+        assert sw.place_protein(MOUSE_NDUFS2[-10:], RAT_NDUFS2) == RAT_NDUFS2[-10:]
+        assert sw.protein_subs(MOUSE_NDUFS2[:10], RAT_NDUFS2)[3] == RAT_NDUFS2[:10]
+
+    def test_a_donor_that_holds_only_a_part_of_the_chain_leaves_the_rest_not_placed(self):
+        chain = MOUSE_NDUFS2[40:140]
+        subs, placed, lost, row = sw.protein_subs(chain, MOUSE_NDUFS2[60:120])
+        assert row == "-" * 20 + MOUSE_NDUFS2[60:120] + "-" * 20 and subs == {} and placed == 60 and lost == 40
+
+    def test_the_real_alignments_and_the_proteins_give_the_same_residues(self):
+        f = paths.MITOPORT / "partners" / "aln" / "COX4I1.afa"
+        if not (f.is_file() and (paths.PDB / "5Z62.cif").is_file()):
+            pytest.skip("needs the vertebrate alignments of `mitoport iface-align` and 5Z62")
+        rows = sw.read_alignment(f)
+        ct = pd.read_csv(COMPLEXES["IV"].work / "chains.tsv", sep="\t", dtype={"chain": str})
+        chain = [c for c in cs.read_chains(paths.PDB / "5Z62.cif") if c["id"] == ct.chain[ct.gene == "COX4I1"].iloc[0]][0]
+        cols = sw.chain_columns(chain["seq"], rows["homo-sapiens"])
+        for sp in ("mus-musculus", "gorilla-gorilla", "rattus-norvegicus"):
+            by_alignment = sw.ortholog_subs(chain["seq"], cols, rows[sp])
+            by_protein = sw.protein_subs(chain["seq"], rows[sp].replace("-", ""))
+            assert by_protein[0] == by_alignment[0] and by_protein[1] == by_alignment[1] and by_protein[2] == by_alignment[2]
+            assert by_alignment[0]                                            # each differs from human somewhere
+
+    def test_contact_differences_count_a_position_once_across_copies_and_not_a_gap_an_unknown_or_an_unplaced_residue(self):
+        seqs = {0: "KVLAWYRTE", 1: "KVLAWYRTE"}
+        rows = {0: "KILAWYRTE", 1: "KILGWY-TX"}                                # copy 0: V2->I; copy 1: V2->I, A4->G, a gap and an unknown
+        ids = {0: list(range(9)), 1: list(range(9))}
+        flags = {0: np.array([1, 1, 0, 0, 0, 0, 0, 0, 0], bool), 1: np.array([1, 1, 0, 1, 0, 0, 1, 0, 1], bool)}
+        assert sw.protein_contact_differences(seqs, rows, ids, flags) == 2     # position 1 (in both copies) and 3; the gap (6) and the unknown (8) are not
+        assert sw.protein_contact_differences(seqs, rows, ids, {0: flags[0] & False, 1: flags[1] & False}) == 0
+        ids[1] = [None] * 9
+        assert sw.protein_contact_differences(seqs, rows, ids, flags) == 1     # a residue without an identity (no column) is not counted
+        assert sw.protein_contact_differences({0: "KVX"}, {0: "KIX"}, {0: [0, 1, 2]}, {0: np.array([1, 1, 1], bool)}) == 1
+
+    def test_the_donors_number_of_differences_can_be_given_for_a_donor_the_alignment_does_not_hold(self):
+        rows = {"homo-sapiens": "ACDEFGHIKL", "a": "ACDEFGHIKL", "b": "VCDEFGHIKL", "c": "VCDEFGHIKM", "d": "VCDEFGHIKL"}
+        mammals = set(rows)
+        columns = list(range(10))
+        cand, n = sw.null_candidates(rows, mammals, "not-in-the-alignment", columns, n=1)
+        assert n == 1 and cand == ["b", "d"]                                  # 0.75 <= k <= 1.25 of 1: exactly one difference
+        cand, n = sw.null_candidates(rows, mammals, "b", columns)             # without it, the donor's row gives it
+        assert n == 1 and cand == ["d"]
+
+
+class TestProteinTask:
+    def test_a_protein_that_is_the_alignments_row_gives_the_alignment_readings_whole_task(self, tmp_path):
+        gb, aln, sp = real_inputs("IV", "COX5B")
+        rows = sw.read_alignment(aln / "COX5B.afa")
+        m = lambda name: Counting()
+        by_alignment, case_a = sw.run("gorilla-gorilla", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path / "a", tmp_path, seeds=(0,), samples=1, draws=6, model_for=m)
+        source = do.Source({("gorilla-gorilla", "COX5B"): do.Ortholog(rows["gorilla-gorilla"].replace("-", ""), "XP_0.1", "1")}, {}, {"gorilla-gorilla": "x"})
+        by_protein, case_p = sw.run("gorilla-gorilla", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path / "p", tmp_path, seeds=(0,), samples=1, draws=6,
+                                    model_for=m, donor_source=source)
+        for k in ("status", "copies", "contact_residues", "placed", "not_placed", "substituted", "contact_differences", "candidates", "null", "mt_substituted"):
+            assert case_p[k] == case_a[k], k
+        assert case_p["reading"] == "protein" and case_p["donor_protein"] == "XP_0.1" and "reading" not in case_a        # the alignment reading's table is as it was
+        pd.testing.assert_frame_equal(by_protein, by_alignment)
+
+    def test_a_gene_without_an_alignment_is_scored_with_the_donors_protein_and_has_no_null(self, tmp_path):
+        d = paths.DONOR_ORTHOLOGS
+        cx = COMPLEXES["V"]
+        if not ((d / "mus-pahari.faa").is_file() and cx.cif.is_file() and (cx.work / "chains.tsv").is_file()):
+            pytest.skip("needs `mitoage download donor-orthologs` and 8H9S")
+        gb, aln, sp = real_inputs("IV", "COX5B")
+        source = do.read_source(d)
+        assert not (aln / "ATP5F1A.afa").is_file()
+        scores, case = sw.run("mus-pahari", "V", "ATP5F1A", gb, paths.PDB, aln, sp, tmp_path, tmp_path, seeds=(0,), samples=1, draws=5,
+                              model_for=lambda name: Counting(), donor_source=source)
+        assert case["status"] == "scored" and case["reading"] == "protein" and case["donor_protein"] == source.orthologs[("mus-pahari", "ATP5F1A")].accession
+        assert case["copies"] == 3 and case["substituted"] > 0 and case["contact_residues"] > 0 and case["candidates"] == 0
+        assert case["null"].startswith("not assessed: no alignment of the gene") and set(scores.kind) == {"B0", "B1"}
+        b1 = scores[scores.kind == "B1"].iloc[0]
+        assert b1.fold_two == case["substituted"] and b1.ddG == case["mt_substituted"] + case["substituted"]
+
+    def test_a_donor_the_table_covers_is_never_read_from_the_alignment_for_a_gene_it_lacks(self, tmp_path):
+        gb, aln, sp = real_inputs("IV", "COX5B")
+        m = lambda name: Counting()
+        source = do.Source({}, {("gorilla-gorilla", "COX5B"): "no ortholog"}, {"gorilla-gorilla": "GCF_x", "mus-spretus": ""})
+        s, c = sw.run("gorilla-gorilla", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=source)
+        assert c["status"] == "not assessed: no ortholog of the donor in RefSeq (no ortholog)" and s.empty       # the alignment holds a gorilla row, which is not used
+        s, c = sw.run("mus-spretus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=source)
+        assert c["status"].startswith("not assessed: no ortholog source") and s.empty
+        _, c = sw.run("gorilla-gorilla", "IV", "COX6B2", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=do.Source({}, {}, {"mus-musculus": "x"}))
+        assert c["status"] == "not assessed: no alignment of the gene"           # a donor the table does not cover keeps the alignment reading

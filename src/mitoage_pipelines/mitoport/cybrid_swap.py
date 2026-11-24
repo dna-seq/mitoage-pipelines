@@ -34,6 +34,15 @@ Fixed with the code, before any score (docs/HYPOTHESES.md, H36, the changes of 2
   samples; the score is the mean over the three seeds. B0, B1 and the null are read by one function with the same
   settings. The partner-one term does not depend on u or on the draw and is computed once per task and seed.
 
+Where the donor's ortholog comes from RefSeq and not from the alignments (`donor_orthologs`: the hosts and donors the
+alignments lack, and the 22 nuclear genes they do not hold), it is read the other way (H36, 2026-11-24): the donor's
+protein is aligned to the structure's chain itself (global, BLOSUM62, gap open -10, extend -0.5, free end gaps: the
+chain may be a part of the protein, and the RefSeq protein holds a presequence the structure lacks), and each residue of
+the chain takes the donor residue the alignment sets against it, as `cybrid.py` reads a protein through another. A gap
+against the residue, an unknown, or a residue the structure does not hold as a standard amino acid leaves the human
+residue and is counted as not placed, as before. The random-mammal null keeps using the alignments: a gene with none has
+no null. The alignment reading is unchanged and is the one without a pinned source (`donor_source=None`).
+
 `swap` runs one (donor, complex, gene) and writes swap/<donor>.<complex>.<gene>.tsv (one row per kind and seed) and
 .cases.tsv (one row: what was placed and why a gene is not assessed); `swap-collect` joins them into the tables and
 applies the candidate rule of the entry. Needs `uv sync --group stab` and the weights (`mitoage download stabddg`).
@@ -101,6 +110,43 @@ def ortholog_subs(chain_seq: str, cols: list[int | None], row: str) -> tuple[dic
     return subs, placed, lost
 
 
+def place_protein(chain_seq: str, protein: str) -> str:
+    """The residue of `protein` that a global alignment (BLOSUM62, gap open -10, extend -0.5, free end gaps) sets against each
+    residue of the structure's chain, as a string of the chain's length: '-' where the chain's residue is set against a gap.
+    The chain is not required to be the protein's whole (an end of either may be left out) nor to be identical to it."""
+    from Bio.Align import PairwiseAligner, substitution_matrices
+    al = PairwiseAligner(mode="global", substitution_matrix=substitution_matrices.load("BLOSUM62"), open_gap_score=-10,
+                         extend_gap_score=-0.5, end_gap_score=0)
+    a = al.align(chain_seq, protein.upper())[0]
+    out = ["-"] * len(chain_seq)
+    for (s0, s1), (p0, p1) in zip(*a.aligned):
+        for k in range(s1 - s0):
+            out[s0 + k] = protein[p0 + k].upper()
+    return "".join(out)
+
+
+def protein_subs(chain_seq: str, protein: str) -> tuple[dict[int, str], int, int, str]:
+    """(`ortholog_subs` of the chain read from the protein placed on it, and the placement row): ({residue index: the donor's
+    residue}, placed, not placed, the row). A residue is placed when the donor's residue set against it is an amino acid
+    and the structure holds a standard amino acid there."""
+    row = place_protein(chain_seq, protein)
+    return (*ortholog_subs(chain_seq, list(range(len(chain_seq))), row), row)
+
+
+def protein_contact_differences(seqs: dict[int, str], rows: dict[int, str], ids: dict[int, list],
+                                flags: dict[int, np.ndarray]) -> int:
+    """How many contact positions of the gene hold a donor amino acid other than the chain's: the positions are the
+    identities `ids[copy][i]` of a copy's residues (an alignment column, or the residue's number where the gene has no
+    alignment) so that a position seen in several copies counts once; a residue with identity None, a gap or an unknown
+    in the donor or the chain is not a difference."""
+    diff = set()
+    for k, f in flags.items():
+        for i, hit in enumerate(f):
+            if hit and ids[k][i] is not None and rows[k][i] in THREE and seqs[k][i] in THREE and rows[k][i] != seqs[k][i]:
+                diff.add(ids[k][i])
+    return len(diff)
+
+
 def contact_flags(chains: list[dict], mt_idx: list[int], which: list[int]) -> dict[int, np.ndarray]:
     """{chain index: bool per residue} for the chains `which`: a heavy atom within CONTACT_A of a heavy atom of an
     mtDNA-encoded chain (`mt_idx`). Needs the chains' `n_heavy` (`cybrid_stab.read_chains`)."""
@@ -126,11 +172,13 @@ def contact_differences(row: str, human_row: str, columns: list[int]) -> int:
 
 
 def null_candidates(rows: dict[str, str], mammals: set[str], donor: str, columns: list[int],
-                    window: tuple[int, int] = WINDOW) -> tuple[list[str], int]:
+                    window: tuple[int, int] = WINDOW, n: int | None = None) -> tuple[list[str], int]:
     """(the sorted slugs of the other mammals of the alignment whose differences from human at the contact columns are
-    within 25% of the donor's, the donor's number). Neither the donor nor the host is a candidate."""
+    within 25% of the donor's, the donor's number). Neither the donor nor the host is a candidate. The donor's number is
+    read from its row of the alignment, or is `n` where the donor's ortholog was read from its protein (`protein_subs`)."""
     human = rows[HOST]
-    n = contact_differences(rows[donor], human, columns)
+    if n is None:
+        n = contact_differences(rows[donor], human, columns)
     lo, hi = window
     pool = sorted(s for s in rows if s in mammals and s not in (donor, HOST))
     return [s for s in pool if lo * n <= 4 * contact_differences(rows[s], human, columns) <= hi * n], n
@@ -210,9 +258,11 @@ def case_row(donor: str, complex_: str, gene: str, status: str, **kw) -> dict:
 
 def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: Path, species: Path, weights_dir: Path,
         out: Path, device: str = "cpu", seeds: tuple[int, ...] = SEEDS, samples: int = cs.MC_SAMPLES, draws: int = DRAWS,
-        batch: int = BATCH, model_for=None) -> tuple[pd.DataFrame, dict]:
+        batch: int = BATCH, model_for=None, donor_source=None) -> tuple[pd.DataFrame, dict]:
     """(the scores, the case row) of one (donor, complex, nuclear gene); both written under `out`/swap.
-    `model_for(weights name)` replaces the model (for tests)."""
+    `model_for(weights name)` replaces the model (for tests). `donor_source` is a `donor_orthologs.Source`: a donor it
+    covers is read from its RefSeq protein (`protein_subs`), and a gene it has none for is not assessed, never read from
+    the alignment instead; without it, or for a donor it does not cover, the ortholog is read from the alignment."""
     pid = STRUCTURES[HOST][complex_]
     cif = pdb_dir / f"{pid}.cif"
     if not cif.is_file():
@@ -228,13 +278,17 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
         return scores, case
 
     aln_file = aln_dir / f"{gene}.afa"
-    if not aln_file.is_file():
-        return done(case_row(donor, complex_, gene, "not assessed: no alignment of the gene"))
-    rows = read_alignment(aln_file)
-    if HOST not in rows:
+    ortholog, reason = donor_source.get(donor, gene) if donor_source is not None else (None, None)
+    if reason is not None:
+        return done(case_row(donor, complex_, gene, reason))
+    rows = read_alignment(aln_file) if aln_file.is_file() else None
+    if rows is not None and HOST not in rows:
         raise SystemExit(f"{aln_file} holds no human row")
-    if donor not in rows:
-        return done(case_row(donor, complex_, gene, "not assessed: no ortholog of the donor in the alignment"))
+    if ortholog is None:                                            # the alignment is the source of the donor's ortholog
+        if rows is None:
+            return done(case_row(donor, complex_, gene, "not assessed: no alignment of the gene"))
+        if donor not in rows:
+            return done(case_row(donor, complex_, gene, "not assessed: no ortholog of the donor in the alignment"))
     records = cybrid.read_proteins(gb)
     hp, dp = (cybrid.species_proteins(records, s) for s in (HOST, donor))
     genes = tuple(COMPLEXES[complex_].mt)
@@ -246,8 +300,9 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
     if gene not in by_gene:
         return done(case_row(donor, complex_, gene, "not assessed: no chain of the gene touches the mitochondrial chains"))
     u_idx, one_idx = by_gene[gene], sorted(mt_chain)
-    cols = {c: chain_columns(chains[c]["seq"], rows[HOST]) for c in u_idx}
-    columns = contact_columns(cols, contact_flags(chains, one_idx, u_idx))
+    flags = contact_flags(chains, one_idx, u_idx)
+    cols = {c: chain_columns(chains[c]["seq"], rows[HOST]) for c in u_idx} if rows is not None else None
+    columns = contact_columns(cols, flags) if cols is not None else []
     sp = pd.read_parquet(species, columns=["slug", "class"])
     pool = set(sp.slug[sp["class"] == CLASS])
 
@@ -258,8 +313,21 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
             sub.update({(c, i): aa for i, aa in s.items()}); placed += p; lost += l
         return sub, placed, lost
 
-    donor_sub, placed, lost = u_subs(rows[donor])
-    candidates, n_contact_diff = null_candidates(rows, pool, donor, columns)
+    extra: dict = {}
+    if ortholog is None:
+        donor_sub, placed, lost = u_subs(rows[donor])
+        candidates, n_contact_diff = null_candidates(rows, pool, donor, columns)
+    else:
+        donor_sub, placed, lost, placement = {}, 0, 0, {}
+        for c in u_idx:
+            s_, p_, l_, placement[c] = protein_subs(chains[c]["seq"], ortholog.protein)
+            donor_sub.update({(c, i): aa for i, aa in s_.items()}); placed += p_; lost += l_
+        ids = cols if cols is not None else {c: list(chains[c]["num"]) for c in u_idx}
+        n_contact_diff = protein_contact_differences({c: chains[c]["seq"] for c in u_idx}, placement, ids, flags)
+        candidates = null_candidates(rows, pool, donor, columns, n=n_contact_diff)[0] if rows is not None else []
+        if cols is None:
+            columns = sorted({n for c in u_idx for n, hit in zip(chains[c]["num"], flags[c]) if hit})
+        extra = {"reading": "protein", "donor_protein": ortholog.accession, "donor_gene_id": ortholog.gene_id}
     al = cybrid.aligner()
     donor_on = {g: cybrid.on_human(mt[g], dp[g][0], dp[g][1], al) for g in genes}
     sets, unmodelled = cs.plan(chains, mt_chain, mt, donor_on, {g: {} for g in genes})
@@ -267,13 +335,15 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
     mt_sub = sets["all"]
     if not donor_sub:
         null = "not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's"
+    elif rows is None:
+        null = "not assessed: no alignment of the gene (the null draws from the alignments)"
     elif len(candidates) < MIN_CANDIDATES:
         null = f"not assessed: {len(candidates)} candidates, at least {MIN_CANDIDATES} needed"
     else:
         null = "assessed"
     case = case_row(donor, complex_, gene, "scored", copies=len(u_idx), contact_residues=len(columns), placed=placed, not_placed=lost,
                     substituted=len(donor_sub), contact_differences=n_contact_diff, candidates=len(candidates), null=null,
-                    mt_substituted=len(mt_sub), unmodelled=unmodelled, pdb=pid)
+                    mt_substituted=len(mt_sub), unmodelled=unmodelled, pdb=pid, **extra)
     # the substitution sets read: B0, B1 and the species of the null, each once however often it is drawn
     drawn = [draw_species(candidates, k) for k in range(draws)] if null == "assessed" else []
     species_sub = {s: u_subs(rows[s])[0] for s in sorted(set(drawn))}

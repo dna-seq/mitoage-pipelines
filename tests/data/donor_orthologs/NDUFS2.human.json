@@ -1,0 +1,95 @@
+{
+ "reports": [
+  {
+   "gene": {
+    "annotations": [
+     {
+      "annotation_name": "GCF_000001405.40-RS_2026_11",
+      "annotation_release_date": "2026-11-07",
+      "assembly_accession": "GCF_000001405.40",
+      "assembly_name": "GRCh38.p14",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000001.11",
+        "genomic_range": {
+         "begin": "161197417",
+         "end": "161214395",
+         "orientation": "plus"
+        },
+        "sequence_name": "1"
+       }
+      ]
+     },
+     {
+      "annotation_name": "GCF_009914755.1-RS_2026_11",
+      "annotation_release_date": "2026-11-07",
+      "assembly_accession": "GCF_009914755.1",
+      "assembly_name": "T2T-CHM13v2.0",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_060925.1",
+        "genomic_range": {
+         "begin": "160334507",
+         "end": "160351847",
+         "orientation": "plus"
+        },
+        "sequence_name": "1"
+       }
+      ]
+     }
+    ],
+    "chromosomes": [
+     "1"
+    ],
+    "common_name": "human",
+    "gene_groups": [
+     {
+      "id": "4720",
+      "method": "NCBI Ortholog"
+     }
+    ],
+    "gene_id": "4720",
+    "map_locations": [
+     {
+      "map_type": "Cytogenetic",
+      "map_value": "1q23.3"
+     }
+    ],
+    "nomenclature_authority": {
+     "authority": "HGNC",
+     "identifier": "HGNC:7708"
+    },
+    "orientation": "plus",
+    "protein_count": 11,
+    "summary": [
+     {
+      "description": "The protein encoded by this gene is a core subunit of the mitochondrial membrane respiratory chain NADH dehydrogenase (complex I). Mammalian mitochondrial complex I is composed of at least 43 different subunits, 7 of which are encoded by the mitochondrial genome, and the rest are the products of nuclear genes. The iron-sulfur protein fraction of complex I is made up of 7 subunits, including this gene product. Complex I catalyzes the NADH oxidation with concomitant ubiquinone reduction and proton ejection out of the mitochondria. Mutations in this gene are associated with mitochondrial complex I deficiency. Alternatively spliced transcript variants encoding different isoforms have been found for this gene.[provided by RefSeq, Oct 2009]"
+     }
+    ],
+    "symbol": "NDUFS2",
+    "tax_id": "9606",
+    "taxname": "Homo sapiens",
+    "transcript_count": 12,
+    "transcript_type_counts": [
+     {
+      "count": 8,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 1,
+      "type": "NON_CODING"
+     },
+     {
+      "count": 3,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "NDUFS2"
+   ]
+  }
+ ],
+ "total_count": 1
+}

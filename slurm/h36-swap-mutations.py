@@ -46,7 +46,7 @@ breaks = [
  (S, "the mitochondrial chains counted as a gene's", "        if i in mt_chain:\n            continue\n        g = chain_gene", "        g = chain_gene"),
  (S, "a chain without a gene accepted", "        if g is None:\n            raise SystemExit(f\"chain {c['id']} has no gene in chains.tsv\")\n", "        if g is None:\n            continue\n"),
  (S, "a donor without a row read", "    if donor not in rows:\n", "    if False:\n"),
- (S, "a gene without an alignment read", "    if not aln_file.is_file():\n", "    if False:\n"),
+ (S, "a gene without an alignment read", "        if rows is None:\n            return done(case_row(donor, complex_, gene, \"not assessed: no alignment of the gene\"))", "        if False:\n            return done(case_row(donor, complex_, gene, \"not assessed: no alignment of the gene\"))"),
  (S, "a gene without a chain taken as assessed", "    if gene not in by_gene:\n", "    if False:\n"),
  (S, "only the first copy carries the ortholog", "    u_idx, one_idx = by_gene[gene], sorted(mt_chain)", "    u_idx, one_idx = by_gene[gene][:1], sorted(mt_chain)"),
  (S, "the null run for an ortholog identical to human", "if null == \"assessed\" else []", "if len(candidates) >= MIN_CANDIDATES else []"),

@@ -161,6 +161,33 @@ def download_cybrid() -> None:
     download.genbank(cybrid.accessions(), paths.CYBRID_GB, paths.MANIFEST)
 
 
+@download_app.command("donor-orthologs")
+def download_donor_orthologs(
+    dest: Annotated[Path, typer.Option(help="where the species' FASTA files go")] = paths.DONOR_ORTHOLOGS,
+    manifest: Annotated[Path, typer.Option(help="the download record")] = paths.MANIFEST,
+) -> None:
+    """H36: the RefSeq proteins of the nuclear OXPHOS subunits of the cybrid hosts and donors (mouse, rat, M. caroli, M. pahari,
+    Chinese hamster) that the vertebrate alignments lack, by the accession.versions of the pinned table
+    (mitoport/donor_orthologs.tsv), from NCBI into data/input/donor-orthologs/<species>.faa. A sequence that is not the
+    pinned one (length, SHA-256) refuses the download; each file's SHA-256 goes into the manifest."""
+    from .mitoport import donor_orthologs
+    donor_orthologs.download(dest, manifest)
+
+
+@download_app.command("donor-orthologs-select")
+def download_donor_orthologs_select(
+    out: Annotated[Path, typer.Option(help="where donor_orthologs.tsv, donor_species.tsv and NCBI's answers go (to be copied over the pin by hand)")],
+    gene: Annotated[Optional[list[str]], typer.Option("--gene", help="a gene symbol; repeat for several. Every nuclear gene of the complexes when omitted")] = None,
+) -> None:
+    """H36: choose the species' orthologs of the complexes' nuclear genes from NCBI's orthology (the rules in
+    mitoport/donor_orthologs.py) and write the table that `download donor-orthologs` is pinned to. Needs the network; rerun
+    it only to change the pin, and say so in the changelog of the entry."""
+    from .mitoport import donor_orthologs
+    table, species = donor_orthologs.select(out, gene)
+    donor_orthologs.write_table(table, out / "donor_orthologs.tsv")
+    species.to_csv(out / "donor_species.tsv", sep="\t", index=False)
+
+
 @download_app.command("orthologs")
 def download_orthologs(
     gene: Annotated[Optional[list[str]], typer.Option("--gene", help="a gene symbol; repeat for several. All the nuclear genes of the analysis when omitted")] = None,
@@ -1126,6 +1153,7 @@ def mitoport_swap(
     weights: Annotated[Path, typer.Option("--weights", help="folder of the weights of `download stabddg`")] = paths.STABDDG,
     out: Out = paths.CYBRID_OUT,
     device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
+    donor_orthologs: Annotated[Optional[Path], typer.Option("--donor-orthologs", help="folder of `download donor-orthologs`: the donors it covers are read from their RefSeq proteins, not the alignments (the published first run is without it)")] = None,
 ) -> None:
     """H36, step 2: StaB-ddG's binding of the donor's mitochondrial proteins to one nuclear subunit of the human complex, with
     the human subunit and with the donor's ortholog, and against random mammals' (`uv sync --group stab`)."""
@@ -1139,7 +1167,11 @@ def mitoport_swap(
         donor, complex_, gene = all_tasks[task]
     if not (donor and complex_ and gene):
         raise SystemExit("give --task, or --donor, --complex and --gene")
-    cybrid_swap.run(donor, complex_, gene, gb, pdb_dir, aln, build / "species.parquet", weights, out, device)
+    source = None
+    if donor_orthologs is not None:
+        from .mitoport import donor_orthologs as pinned
+        source = pinned.read_source(donor_orthologs)
+    cybrid_swap.run(donor, complex_, gene, gb, pdb_dir, aln, build / "species.parquet", weights, out, device, donor_source=source)
 
 
 @mitoport_app.command("swap-collect")

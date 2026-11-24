@@ -1,0 +1,352 @@
+{
+ "reports": [
+  {
+   "product": {
+    "common_name": "house mouse",
+    "description": "NADH:ubiquinone oxidoreductase core subunit S2",
+    "gene_id": "226646",
+    "protein_count": 3,
+    "symbol": "Ndufs2",
+    "tax_id": "10090",
+    "taxname": "Mus musculus",
+    "transcript_count": 3,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "NM_001421482.1",
+      "cds": {
+       "accession_version": "NM_001421482.1"
+      },
+      "ensembl_transcript": "ENSMUST00000111318.9",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000067.7",
+        "sequence_name": "Chromosome 1 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 1525,
+      "name": "transcript variant 2",
+      "protein": {
+       "accession_version": "NP_001408411.1",
+       "ensembl_protein": "ENSMUSP00000106950.2",
+       "isoform_name": "isoform 2",
+       "length": 437,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "NM_153064.6",
+      "cds": {
+       "accession_version": "NM_153064.6"
+      },
+      "ensembl_transcript": "ENSMUST00000013737.14",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000067.7",
+        "sequence_name": "Chromosome 1 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 1603,
+      "name": "transcript variant 1",
+      "protein": {
+       "accession_version": "NP_694704.1",
+       "ensembl_protein": "ENSMUSP00000013737.7",
+       "isoform_name": "isoform 1",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "select_category": "REFSEQ_SELECT",
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "XM_030253424.2",
+      "cds": {
+       "accession_version": "XM_030253424.2"
+      },
+      "ensembl_transcript": "ENSMUST00000417038.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000067.7",
+        "sequence_name": "Chromosome 1 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 2349,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_030109284.1",
+       "ensembl_protein": "ENSMUSP00000195401.1",
+       "isoform_name": "isoform X1",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "226646"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Norway rat",
+    "description": "NADH:ubiquinone oxidoreductase core subunit S2",
+    "gene_id": "289218",
+    "protein_count": 3,
+    "symbol": "Ndufs2",
+    "tax_id": "10116",
+    "taxname": "Rattus norvegicus",
+    "transcript_count": 3,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "NM_001011907.1",
+      "cds": {
+       "accession_version": "NM_001011907.1"
+      },
+      "ensembl_transcript": "ENSRNOT00000094027.2",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086031.1",
+        "sequence_name": "Chromosome 13 Reference GRCr8"
+       },
+       {
+        "genomic_accession_version": "NC_141546.1",
+        "sequence_name": "Chromosome 13 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 1612,
+      "protein": {
+       "accession_version": "NP_001011907.1",
+       "ensembl_protein": "ENSRNOP00000090418.1",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial precursor"
+      },
+      "select_category": "REFSEQ_SELECT",
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "XM_087580272.1",
+      "cds": {
+       "accession_version": "XM_087580272.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_141546.1",
+        "sequence_name": "Chromosome 13 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 1620,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_087436398.1",
+       "isoform_name": "isoform X1",
+       "length": 412,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_087637930.1",
+      "cds": {
+       "accession_version": "XM_087637930.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086031.1",
+        "sequence_name": "Chromosome 13 Reference GRCr8"
+       }
+      ],
+      "length": 1620,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_087494056.1",
+       "isoform_name": "isoform X1",
+       "length": 412,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "289218"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Chinese hamster",
+    "description": "NADH:ubiquinone oxidoreductase core subunit S2",
+    "gene_id": "100768067",
+    "protein_count": 2,
+    "symbol": "Ndufs2",
+    "tax_id": "10029",
+    "taxname": "Cricetulus griseus",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_016977803.3",
+      "cds": {
+       "accession_version": "XM_016977803.3"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_003614301.1",
+        "sequence_name": "NW_003614301 Unplaced Scaffold Reference CriGri_1.0 Primary Assembly"
+       }
+      ],
+      "length": 1786,
+      "protein": {
+       "accession_version": "XP_016833292.1",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_027419009.2",
+      "cds": {
+       "accession_version": "XM_027419009.2"
+      },
+      "ensembl_transcript": "ENSCGRT00015028690.2",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_048598.1",
+        "sequence_name": "Chromosome 5 Alternate CriGri-PICRH-1.0"
+       }
+      ],
+      "length": 1786,
+      "protein": {
+       "accession_version": "XP_027274810.1",
+       "ensembl_protein": "ENSCGRP00015023399.2",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "100768067"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Ryukyu mouse",
+    "description": "NADH:ubiquinone oxidoreductase core subunit S2",
+    "gene_id": "110305317",
+    "protein_count": 1,
+    "symbol": "Ndufs2",
+    "tax_id": "10089",
+    "taxname": "Mus caroli",
+    "transcript_count": 1,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_021177238.3",
+      "cds": {
+       "accession_version": "XM_021177238.3"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227256.1",
+        "sequence_name": "NW_028227256 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 1649,
+      "protein": {
+       "accession_version": "XP_021032897.1",
+       "ensembl_protein": "MGP_CAROLIEiJ_P0021139",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "110305317"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "shrew mouse",
+    "description": "NADH:ubiquinone oxidoreductase core subunit S2",
+    "gene_id": "110321406",
+    "protein_count": 1,
+    "symbol": "Ndufs2",
+    "tax_id": "10093",
+    "taxname": "Mus pahari",
+    "transcript_count": 1,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_021197645.1",
+      "cds": {
+       "accession_version": "XM_021197645.1"
+      },
+      "ensembl_transcript": "MGP_PahariEiJ_T0076404.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034594.1",
+        "sequence_name": "Chromosome 5 Reference PAHARI_EIJ_v1.1"
+       }
+      ],
+      "length": 1803,
+      "protein": {
+       "accession_version": "XP_021053304.1",
+       "ensembl_protein": "MGP_PahariEiJ_P0076404",
+       "length": 463,
+       "name": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "110321406"
+   ]
+  }
+ ],
+ "total_count": 5
+}

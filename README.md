@@ -185,6 +185,11 @@ uv run mitoage mitoport cybrid-dna                # exploratory: nucleotide dive
 # alignments of the nuclear subunits are the inputs of `mitoport partners`)
 uv run mitoage mitoport swap --list               # the 216 tasks (donor, complex, nuclear gene); one with --task N
 uv run mitoage mitoport swap-collect              # the swap tables and the candidate rule of the entry
+# H36, donors the alignments lack: RefSeq proteins of the 72 nuclear subunits of the mouse, rat, M. caroli, M. pahari and the Chinese
+# hamster, by the accession.versions of the pinned table mitoport/donor_orthologs.tsv (M. spretus, M. terricolor and Otomys irroratus
+# have no RefSeq annotation: no ortholog source). `swap --donor-orthologs <folder>` reads such a donor from its protein, not the alignment.
+uv run mitoage download donor-orthologs           # data/input/donor-orthologs/<species>.faa, each sequence checked against the pin
+uv run mitoage download donor-orthologs-select --out <folder>   # only to change the pin: NCBI's orthology again (needs the network)
 
 # H29: does the same model tell harmful from harmless human variants within a protein (slurm/h29-variants.sbatch)
 uv run mitoage download variants                  # gnomAD v3.1's mitochondrial sites and ClinVar's mitochondrial records

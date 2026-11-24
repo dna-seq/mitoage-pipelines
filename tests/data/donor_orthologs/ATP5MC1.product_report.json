@@ -1,0 +1,537 @@
+{
+ "reports": [
+  {
+   "product": {
+    "common_name": "Norway rat",
+    "description": "ATP synthase membrane subunit c locus 1",
+    "gene_id": "29754",
+    "protein_count": 5,
+    "symbol": "Atp5mc1",
+    "tax_id": "10116",
+    "taxname": "Rattus norvegicus",
+    "transcript_count": 5,
+    "transcript_type_counts": [
+     {
+      "count": 1,
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "count": 4,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "NM_017311.1",
+      "cds": {
+       "accession_version": "NM_017311.1"
+      },
+      "ensembl_transcript": "ENSRNOT00000009815.7",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086028.1",
+        "sequence_name": "Chromosome 10 Reference GRCr8"
+       },
+       {
+        "genomic_accession_version": "NC_141543.1",
+        "sequence_name": "Chromosome 10 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 561,
+      "protein": {
+       "accession_version": "NP_059007.1",
+       "ensembl_protein": "ENSRNOP00000108669.1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial precursor"
+      },
+      "select_category": "REFSEQ_SELECT",
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "XM_006247188.6",
+      "cds": {
+       "accession_version": "XM_006247188.6"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086028.1",
+        "sequence_name": "Chromosome 10 Reference GRCr8"
+       }
+      ],
+      "length": 565,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_006247250.1",
+       "isoform_name": "isoform X1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_006247189.4",
+      "cds": {
+       "accession_version": "XM_006247189.4"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_086028.1",
+        "sequence_name": "Chromosome 10 Reference GRCr8"
+       }
+      ],
+      "length": 711,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_006247251.1",
+       "isoform_name": "isoform X1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_087571257.1",
+      "cds": {
+       "accession_version": "XM_087571257.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_141543.1",
+        "sequence_name": "Chromosome 10 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 565,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_087427383.1",
+       "isoform_name": "isoform X1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_087571259.1",
+      "cds": {
+       "accession_version": "XM_087571259.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_141543.1",
+        "sequence_name": "Chromosome 10 Alternate SHRSP_T2T Primary Assembly"
+       }
+      ],
+      "length": 711,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_087427385.1",
+       "isoform_name": "isoform X1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "29754"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "house mouse",
+    "description": "ATP synthase membrane subunit c locus 1",
+    "gene_id": "11951",
+    "protein_count": 3,
+    "symbol": "Atp5mc1",
+    "tax_id": "10090",
+    "taxname": "Mus musculus",
+    "transcript_count": 3,
+    "transcript_type_counts": [
+     {
+      "count": 3,
+      "type": "PROTEIN_CODING"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "NM_001161419.1",
+      "cds": {
+       "accession_version": "NM_001161419.1"
+      },
+      "ensembl_transcript": "ENSMUST00000107684.3",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000077.7",
+        "sequence_name": "Chromosome 11 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 805,
+      "name": "transcript variant 2",
+      "protein": {
+       "accession_version": "NP_001154891.1",
+       "ensembl_protein": "ENSMUSP00000103312.2",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "select_category": "REFSEQ_SELECT",
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "NM_001417327.1",
+      "cds": {
+       "accession_version": "NM_001417327.1"
+      },
+      "ensembl_transcript": "ENSMUST00000107686.9",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000077.7",
+        "sequence_name": "Chromosome 11 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 735,
+      "name": "transcript variant 3",
+      "protein": {
+       "accession_version": "NP_001404256.1",
+       "ensembl_protein": "ENSMUSP00000103314.2",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING"
+     },
+     {
+      "accession_version": "NM_007506.6",
+      "cds": {
+       "accession_version": "NM_007506.6"
+      },
+      "ensembl_transcript": "ENSMUST00000090541.13",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_000077.7",
+        "sequence_name": "Chromosome 11 Reference GRCm39 C57BL/6J"
+       }
+      ],
+      "length": 798,
+      "name": "transcript variant 1",
+      "protein": {
+       "accession_version": "NP_031532.2",
+       "ensembl_protein": "ENSMUSP00000088029.6",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "11951"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Chinese hamster",
+    "description": "ATP synthase membrane subunit c locus 1",
+    "gene_id": "100752739",
+    "protein_count": 4,
+    "symbol": "Atp5mc1",
+    "tax_id": "10029",
+    "taxname": "Cricetulus griseus",
+    "transcript_count": 4,
+    "transcript_type_counts": [
+     {
+      "count": 4,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_003503936.5",
+      "cds": {
+       "accession_version": "XM_003503936.5"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_003614015.1",
+        "sequence_name": "NW_003614015 Unplaced Scaffold Reference CriGri_1.0 Primary Assembly"
+       }
+      ],
+      "length": 617,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_003503984.1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_003503937.5",
+      "cds": {
+       "accession_version": "XM_003503937.5"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_003614015.1",
+        "sequence_name": "NW_003614015 Unplaced Scaffold Reference CriGri_1.0 Primary Assembly"
+       }
+      ],
+      "length": 649,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_003503985.1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_027424234.2",
+      "cds": {
+       "accession_version": "XM_027424234.2"
+      },
+      "ensembl_transcript": "ENSCGRT00015084047.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_048600.1",
+        "sequence_name": "Chromosome 7 Alternate CriGri-PICRH-1.0"
+       }
+      ],
+      "length": 649,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_027280035.1",
+       "ensembl_protein": "ENSCGRP00015056437.1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_027424235.2",
+      "cds": {
+       "accession_version": "XM_027424235.2"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_048600.1",
+        "sequence_name": "Chromosome 7 Alternate CriGri-PICRH-1.0"
+       }
+      ],
+      "length": 617,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_027280036.1",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "100752739"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "Ryukyu mouse",
+    "description": "ATP synthase membrane subunit c locus 1",
+    "gene_id": "110305296",
+    "protein_count": 5,
+    "symbol": "Atp5mc1",
+    "tax_id": "10089",
+    "taxname": "Mus caroli",
+    "transcript_count": 5,
+    "transcript_type_counts": [
+     {
+      "count": 5,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_085829618.1",
+      "cds": {
+       "accession_version": "XM_085829618.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227268.1",
+        "sequence_name": "NW_028227268 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 511,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_085685744.1",
+       "isoform_name": "isoform X1",
+       "length": 126,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_085829619.1",
+      "cds": {
+       "accession_version": "XM_085829619.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227268.1",
+        "sequence_name": "NW_028227268 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 612,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_085685745.1",
+       "isoform_name": "isoform X2",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_085829620.1",
+      "cds": {
+       "accession_version": "XM_085829620.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227268.1",
+        "sequence_name": "NW_028227268 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 591,
+      "name": "transcript variant X3",
+      "protein": {
+       "accession_version": "XP_085685746.1",
+       "isoform_name": "isoform X2",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_085829621.1",
+      "cds": {
+       "accession_version": "XM_085829621.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227268.1",
+        "sequence_name": "NW_028227268 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 639,
+      "name": "transcript variant X4",
+      "protein": {
+       "accession_version": "XP_085685747.1",
+       "isoform_name": "isoform X2",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_085829622.1",
+      "cds": {
+       "accession_version": "XM_085829622.1"
+      },
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NW_028227268.1",
+        "sequence_name": "NW_028227268 Unplaced Scaffold Reference Mus_caroli_1 Primary Assembly"
+       }
+      ],
+      "length": 508,
+      "name": "transcript variant X5",
+      "protein": {
+       "accession_version": "XP_085685748.1",
+       "isoform_name": "isoform X3",
+       "length": 125,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "110305296"
+   ]
+  },
+  {
+   "product": {
+    "common_name": "shrew mouse",
+    "description": "ATP synthase membrane subunit c locus 1",
+    "gene_id": "110331847",
+    "protein_count": 2,
+    "symbol": "Atp5mc1",
+    "tax_id": "10093",
+    "taxname": "Mus pahari",
+    "transcript_count": 2,
+    "transcript_type_counts": [
+     {
+      "count": 2,
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "transcripts": [
+     {
+      "accession_version": "XM_021212711.2",
+      "cds": {
+       "accession_version": "XM_021212711.2"
+      },
+      "ensembl_transcript": "MGP_PahariEiJ_T0036123.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034603.1",
+        "sequence_name": "Chromosome 14 Reference PAHARI_EIJ_v1.1"
+       }
+      ],
+      "length": 588,
+      "name": "transcript variant X2",
+      "protein": {
+       "accession_version": "XP_021068370.1",
+       "ensembl_protein": "MGP_PahariEiJ_P0036123",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     },
+     {
+      "accession_version": "XM_021212712.2",
+      "cds": {
+       "accession_version": "XM_021212712.2"
+      },
+      "ensembl_transcript": "MGP_PahariEiJ_T0036126.1",
+      "genomic_locations": [
+       {
+        "genomic_accession_version": "NC_034603.1",
+        "sequence_name": "Chromosome 14 Reference PAHARI_EIJ_v1.1"
+       }
+      ],
+      "length": 640,
+      "name": "transcript variant X1",
+      "protein": {
+       "accession_version": "XP_021068371.1",
+       "ensembl_protein": "MGP_PahariEiJ_P0036126",
+       "length": 136,
+       "name": "ATP synthase F(0) complex subunit C1, mitochondrial"
+      },
+      "type": "PROTEIN_CODING_MODEL"
+     }
+    ],
+    "type": "PROTEIN_CODING"
+   },
+   "query": [
+    "110331847"
+   ]
+  }
+ ],
+ "total_count": 5
+}

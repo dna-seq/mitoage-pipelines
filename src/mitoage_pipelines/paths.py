@@ -39,6 +39,7 @@ NCBI_VERT = INPUT / "ncbi-vertebrata"     # the same for complex IV's nuclear su
 MANIFEST = INPUT / "MANIFEST.json"        # what was downloaded, from where and when
 PDB = INPUT / "pdb"                       # solved structures from RCSB, <ID>.cif as served
 CYBRID_GB = INPUT / "cybrid"              # records.gb: the mitogenomes of the cybrid hosts and donors (H16)
+DONOR_ORTHOLOGS = INPUT / "donor-orthologs"   # <species>.faa: RefSeq proteins of the nuclear OXPHOS subunits of the hosts and donors the alignments lack (H36)
 STABDDG = INPUT / "stabddg"              # the three weight files of StaB-ddG at its pinned commit (H28)
 VARIANTS = INPUT / "variants"            # gnomad.chrM.tsv and clinvar_mt.json: human mitochondrial variants (H29)
 MITIMPACT = INPUT / "mitimpact"          # MitImpact4_V059.csv: published predictors' scores of every mtDNA change (H34)
