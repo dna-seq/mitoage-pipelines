@@ -1104,10 +1104,12 @@ def mitoport_where(
 @mitoport_app.command("nuclear-where")
 def mitoport_nuclear_where(
     sites: Annotated[Path, typer.Option("--sites", help="where_cybrid_sites.tsv of `mitoport where`")] = paths.MITOPORT_OUT / "where" / "where_cybrid_sites.tsv",
-    out: Annotated[Path, typer.Option("--out", help="folder the two tables are written to")] = paths.MITOPORT_OUT / "where") -> None:
-    """Exploratory: which nuclear subunits and residues face the donor's differences in the cybrids that lost activity."""
+    positions: Annotated[Path, typer.Option("--positions", help="positions.tsv of `mitoport cybrid`")] = paths.CYBRID_OUT / "positions.tsv",
+    out: Annotated[Path, typer.Option("--out", help="folder the tables are written to")] = paths.MITOPORT_OUT / "where",
+    draws: Annotated[int, typer.Option(help="draws of the permutation null")] = 1000) -> None:
+    """Exploratory (H36): which nuclear subunits and residues face the donor's differences in the cybrids that lost activity, against a permutation null."""
     from .mitoport import nuclear_where
-    nuclear_where.main(sites, out)
+    nuclear_where.main(sites, positions, out, draws=draws)
 
 
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]

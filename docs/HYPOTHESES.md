@@ -3207,6 +3207,30 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     identical put in one group, said as such. The pairs the papers disagree on are listed, not only left out, and the
     subunit table is run twice, once without them and once with each coded as reduced; a result that changes between
     the codings is "not stable".
+  - **Changed again 2026-11-24, on the maintainer's design, before any number:** *the swap replaces the per-chain
+    energy as step 2.* Instead of asking which nuclear chain faces the donor's changes, put the donor species' own
+    nuclear subunit in the host: for each (host, donor, complex) and each nuclear subunit u, the complex is built
+    from the donor's mitochondrial proteins, the host's nuclear subunits, and u replaced by the donor's ortholog
+    (mitoage's alignments of the nuclear subunits give the orthologs; the host's structure gives the geometry). The
+    quantity read is how much the swap restores the fit: the fit of the complex with the host's u minus its fit with
+    the donor's u, from (a) the embeddings of a structure model of the interface (the change of the per-residue
+    embedding at the contacts of u, against the same for the host's own mitochondrial proteins), and (b) the binding
+    energy of StaB-ddG between the mitochondrial chains and u alone. u is a candidate when its restoration is among the
+    largest of the complex in more than half of the donors that have an ortholog, and larger than the same swap
+    with the ortholog of a random mammal differing from the host at as many residues (the null: 1,000 random
+    mammals, seed 0). The restoration of u summed over the subunits is then compared with the stated activities (the
+    Spearman correlation, as T1); it need not beat the count, since it answers another question. *Coverage, looked
+    at before the design was fixed:* the nuclear subunit alignments hold the orthologs of 50 genes for human,
+    chimpanzee, bonobo, gorilla, Bornean orangutan, mouse, rat and Syrian hamster; they hold none for the Sumatran
+    orangutan, for M. spretus, caroli, pahari and terricolor, Otomys, and for the Chinese hamster (the host).
+    The first run is therefore the human host with the apes that have orthologs; the mouse and hamster hosts wait
+    for the orthologs to be fetched from the genomes of those species, and are "not assessed" until then.
+  - *Step 3, which the review dropped, is reinstated on the same design:* for a protein model of the joined
+    mitochondrial and nuclear chains, the dependencies it holds (the change of its prediction at a nuclear residue
+    when a mitochondrial residue is changed; the model's attention is read beside it, as a second reading) at the
+    sites where the donor differs, against sites matched for burial and conservation. Evo 2 reads DNA and does not
+    see a nuclear protein beside a mitochondrial one, so it is not used for this part; it stays an arm of part 1 of
+    H35 (variants and cybrids on the mitochondrial genome).
   - *Step 2 stays deferred* until step 1 names a subunit; then it is read against the count of conservation-weighted
     differences at the same sites (changes at sites with at most 2 amino acids in the build's mammals), not the raw
     count, and with the same permutation null.
