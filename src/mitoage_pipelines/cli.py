@@ -1154,11 +1154,12 @@ def mitoport_swap(
     out: Out = paths.CYBRID_OUT,
     device: Annotated[str, typer.Option(help="cpu or cuda")] = "cpu",
     donor_orthologs: Annotated[Optional[Path], typer.Option("--donor-orthologs", help="folder of `download donor-orthologs`: the donors it covers are read from their RefSeq proteins, not the alignments (the published first run is without it)")] = None,
+    host: Annotated[str, typer.Option(help="the host species: homo-sapiens (the first run) or mus-musculus (its own structures; needs the donor orthologs, which default to their folder)")] = "homo-sapiens",
 ) -> None:
     """H36, step 2: StaB-ddG's binding of the donor's mitochondrial proteins to one nuclear subunit of the human complex, with
     the human subunit and with the donor's ortholog, and against random mammals' (`uv sync --group stab`)."""
     from .mitoport import cybrid_swap
-    all_tasks = cybrid_swap.tasks()
+    all_tasks = cybrid_swap.tasks(host=host)
     if list_:
         for i, t in enumerate(all_tasks):
             print(i, *t)
@@ -1168,17 +1169,20 @@ def mitoport_swap(
     if not (donor and complex_ and gene):
         raise SystemExit("give --task, or --donor, --complex and --gene")
     source = None
+    if donor_orthologs is None and host != cybrid_swap.HOST:
+        donor_orthologs = paths.DONOR_ORTHOLOGS
     if donor_orthologs is not None:
         from .mitoport import donor_orthologs as pinned
         source = pinned.read_source(donor_orthologs)
-    cybrid_swap.run(donor, complex_, gene, gb, pdb_dir, aln, build / "species.parquet", weights, out, device, donor_source=source)
+    cybrid_swap.run(donor, complex_, gene, gb, pdb_dir, aln, build / "species.parquet", weights, out, device, donor_source=source, host=host)
 
 
 @mitoport_app.command("swap-collect")
-def mitoport_swap_collect(out: Out = paths.CYBRID_OUT) -> None:
+def mitoport_swap_collect(out: Out = paths.CYBRID_OUT,
+                          host: Annotated[str, typer.Option(help="the host species of the tasks: homo-sapiens or mus-musculus")] = "homo-sapiens") -> None:
     """H36, step 2: the swap's tables and the candidate rule from the tasks' tables; a task without a table is said."""
     from .mitoport import cybrid_swap
-    cybrid_swap.collect(out)
+    cybrid_swap.collect(out, host=host)
 
 
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]

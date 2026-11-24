@@ -43,6 +43,14 @@ against the residue, an unknown, or a residue the structure does not hold as a s
 residue and is counted as not placed, as before. The random-mammal null keeps using the alignments: a gene with none has
 no null. The alignment reading is unchanged and is the one without a pinned source (`donor_source=None`).
 
+The mouse host (H36, 2026-11-24, `host="mus-musculus"`, `--host`): the system is the mouse complex as solved (8OM1, 7O3H, 7O37:
+`cybrid_energy.STRUCTURES`), never the human one; its mtDNA-encoded chains carry the mouse's own proteins and the donor's
+substitutions are read through the mouse; the nuclear chains are named by their sequence against the mouse's RefSeq proteins
+(`gene_chains_by_sequence`: the structure's chains are the mouse's own, identical to them, and a chain that is another isoform is
+no chain of the gene); B0 has the mouse's own subunit on the chain (the chain as solved, which `run` checks is the host's RefSeq
+protein), B1 the donor's RefSeq protein placed on it, the null the alignments' random mammals measured from the mouse's row. The
+donor and the host are read from the pinned RefSeq orthologs only (never one from the alignments and the other from the table).
+
 `swap` runs one (donor, complex, gene) and writes swap/<donor>.<complex>.<gene>.tsv (one row per kind and seed) and
 .cases.tsv (one row: what was placed and why a gene is not assessed); `swap-collect` joins them into the tables and
 applies the candidate rule of the entry. Needs `uv sync --group stab` and the weights (`mitoage download stabddg`).
@@ -58,6 +66,7 @@ from .cybrid_energy import STRUCTURES, THREE, insertions
 from .complexes import COMPLEXES
 
 HOST = cybrid.HUMAN
+MOUSE = "mus-musculus"
 DONORS = ("pan-troglodytes", "pan-paniscus", "gorilla-gorilla", "pongo-pygmaeus")     # with orthologs in the alignments
 SEEDS = cs.SEEDS
 DRAWS = 50
@@ -172,15 +181,15 @@ def contact_differences(row: str, human_row: str, columns: list[int]) -> int:
 
 
 def null_candidates(rows: dict[str, str], mammals: set[str], donor: str, columns: list[int],
-                    window: tuple[int, int] = WINDOW, n: int | None = None) -> tuple[list[str], int]:
+                    window: tuple[int, int] = WINDOW, n: int | None = None, host: str = HOST) -> tuple[list[str], int]:
     """(the sorted slugs of the other mammals of the alignment whose differences from human at the contact columns are
-    within 25% of the donor's, the donor's number). Neither the donor nor the host is a candidate. The donor's number is
+    within 25% of the donor's, the donor's number; differences are from the host's row, `rows[host]`). Neither the donor nor the host is a candidate. The donor's number is
     read from its row of the alignment, or is `n` where the donor's ortholog was read from its protein (`protein_subs`)."""
-    human = rows[HOST]
+    human = rows[host]
     if n is None:
         n = contact_differences(rows[donor], human, columns)
     lo, hi = window
-    pool = sorted(s for s in rows if s in mammals and s not in (donor, HOST))
+    pool = sorted(s for s in rows if s in mammals and s not in (donor, host))
     return [s for s in pool if lo * n <= 4 * contact_differences(rows[s], human, columns) <= hi * n], n
 
 
@@ -229,13 +238,44 @@ def binding(whole: np.ndarray, one: float, two: np.ndarray) -> np.ndarray:
 # --- one task -------------------------------------------------------------------------------------------------------
 
 
-def tasks(measurements: Path = cybrid.MEASUREMENTS) -> list[tuple[str, str, str]]:
-    """Every (donor, complex, nuclear gene) the swap runs, in a fixed order (the array's tasks): the donors of the human
-    host with a stated outcome for the complex, and every nuclear gene of the complex's structure."""
+def sourced_species(species_table: Path | None = None) -> dict[str, bool]:
+    """{species slug: whether the pinned table of donor orthologs has a RefSeq source for it} (`donor_species.tsv`)."""
+    from . import donor_orthologs as do
+    t = pd.read_csv(species_table or do.SPECIES_TABLE, sep="\t", dtype=str, keep_default_na=False)
+    return {r.species: bool(r.assembly) for r in t.itertuples()}
+
+
+def outcome_pairs(measurements: Path, host: str) -> list[tuple[str, str]]:
+    """The sorted (complex, donor) pairs of `host` with a row for a complex of the repository's (the whole-cybrid rows have no
+    structure)."""
     m = cybrid.read_measurements(measurements)
-    m = m[(m.host == HOST) & m["complex"].isin(list(COMPLEXES)) & m.donor.isin(DONORS)]
-    pairs = sorted({(c, d) for c, d in zip(m["complex"], m.donor)})
+    m = m[(m.host == host) & m["complex"].isin(list(COMPLEXES))]
+    return sorted({(c, d) for c, d in zip(m["complex"], m.donor)})
+
+
+def tasks(measurements: Path = cybrid.MEASUREMENTS, host: str = HOST) -> list[tuple[str, str, str]]:
+    """Every (donor, complex, nuclear gene) the swap runs, in a fixed order (the array's tasks): the donors of the host with a
+    stated outcome for the complex, and every nuclear gene of the complex's structure. For the human host the donors are the
+    apes that have orthologs in the alignments (`DONORS`); for another host they are the donors with a RefSeq source in the
+    pinned table (`sourced_species`); a donor without one has no task and is listed by `unassessed_donors`. A donor the
+    species table does not know is refused."""
+    pairs = outcome_pairs(measurements, host)
+    if host == HOST:
+        pairs = [(c, d) for c, d in pairs if d in DONORS]
+    else:
+        src = sourced_species()
+        unknown = sorted({d for _, d in pairs if d not in src})
+        if unknown:
+            raise SystemExit(f"{unknown} are not in the table of donor species (`donor_species.tsv`)")
+        pairs = [(c, d) for c, d in pairs if src[d]]
     return [(d, c, g) for c, d in pairs for g in COMPLEXES[c].nuclear]
+
+
+def unassessed_donors(measurements: Path = cybrid.MEASUREMENTS, host: str = MOUSE) -> pd.DataFrame:
+    """One row per (host, donor, complex) of a host other than human whose donor has no RefSeq source: not run, and said."""
+    src = sourced_species()
+    return pd.DataFrame([{"host": host, "donor": d, "complex": c, "status": "not assessed: no ortholog source (no RefSeq annotation of the species' genome)"}
+                         for c, d in outcome_pairs(measurements, host) if d in src and not src[d]], columns=["host", "donor", "complex", "status"])
 
 
 def gene_chains(chains: list[dict], mt_chain: dict, chain_gene: dict[str, str]) -> dict[str, list[int]]:
@@ -252,21 +292,41 @@ def gene_chains(chains: list[dict], mt_chain: dict, chain_gene: dict[str, str]) 
     return out
 
 
-def case_row(donor: str, complex_: str, gene: str, status: str, **kw) -> dict:
-    return {"host": HOST, "donor": donor, "complex": complex_, "gene": gene, "status": status, **kw}
+def gene_chains_by_sequence(chains: list[dict], mt_chain: dict, proteins: dict[str, str]) -> dict[str, list[int]]:
+    """{nuclear gene: the indices of its chains among the system's} for a structure of another host than human, which has no
+    `chains.tsv`: a chain is the gene's when it is a copy of the gene's protein in `proteins` (`cybrid_energy.match_protein`:
+    90% identical over aligned residues that cover 80% of the chain; the best gene wins). A chain of no gene (another isoform,
+    a protein of no gene of the complex) is left out, never given a gene."""
+    from .cybrid_energy import match_protein
+    al = cybrid.aligner()
+    out: dict[str, list[int]] = {}
+    for i, c in enumerate(chains):
+        if i in mt_chain:
+            continue
+        hit = match_protein(c["seq"], proteins, al)
+        if hit is not None:
+            out.setdefault(hit[0], []).append(i)
+    return out
+
+
+def case_row(donor: str, complex_: str, gene: str, status: str, host: str = HOST, **kw) -> dict:
+    return {"host": host, "donor": donor, "complex": complex_, "gene": gene, "status": status, **kw}
 
 
 def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: Path, species: Path, weights_dir: Path,
         out: Path, device: str = "cpu", seeds: tuple[int, ...] = SEEDS, samples: int = cs.MC_SAMPLES, draws: int = DRAWS,
-        batch: int = BATCH, model_for=None, donor_source=None) -> tuple[pd.DataFrame, dict]:
+        batch: int = BATCH, model_for=None, donor_source=None, host: str = HOST) -> tuple[pd.DataFrame, dict]:
     """(the scores, the case row) of one (donor, complex, nuclear gene); both written under `out`/swap.
+    `host` is the species whose nucleus the donor's mitochondrial proteins are put against: human (the structure, the chain's own
+    sequence as the baseline, the alignments or the table for the donor) or another (the mouse): then `donor_source` is required, its
+    structure is that host's own in `cybrid_energy.STRUCTURES` and no other is used, and the host's ortholog and the donor's are
+    both RefSeq proteins of the table.
     `model_for(weights name)` replaces the model (for tests). `donor_source` is a `donor_orthologs.Source`: a donor it
     covers is read from its RefSeq protein (`protein_subs`), and a gene it has none for is not assessed, never read from
     the alignment instead; without it, or for a donor it does not cover, the ortholog is read from the alignment."""
-    pid = STRUCTURES[HOST][complex_]
-    cif = pdb_dir / f"{pid}.cif"
-    if not cif.is_file():
-        raise SystemExit(f"{cif} is missing: `mitoage download pdb {pid}`")
+    if host != HOST and donor_source is None:
+        raise SystemExit(f"a host other than {HOST} reads its subunits from the pinned RefSeq orthologs: give the donor orthologs")
+    pid = STRUCTURES.get(host, {}).get(complex_)
     d = out / "swap"; d.mkdir(parents=True, exist_ok=True)
     stem = d / f"{donor}.{complex_}.{gene}"
 
@@ -277,31 +337,58 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
         print("wrote", f"{stem}.tsv", case["status"])
         return scores, case
 
+    if pid is None:                                                 # never the human structure for another host
+        return done(case_row(donor, complex_, gene, f"not assessed: no solved structure of the {host} complex {complex_}", host=host))
+    cif = pdb_dir / f"{pid}.cif"
+    if not cif.is_file():
+        raise SystemExit(f"{cif} is missing: `mitoage download pdb {pid}`")
     aln_file = aln_dir / f"{gene}.afa"
+    host_ortholog = None
+    if host != HOST:
+        host_ortholog, reason = donor_source.get(host, gene)
+        if host_ortholog is None:
+            why = "no pinned source for the host" if reason is None else reason.replace("not assessed: ", "").replace("of the donor", "of the host")
+            return done(case_row(donor, complex_, gene, f"not assessed: {why}", host=host))
     ortholog, reason = donor_source.get(donor, gene) if donor_source is not None else (None, None)
     if reason is not None:
-        return done(case_row(donor, complex_, gene, reason))
+        return done(case_row(donor, complex_, gene, reason, host=host))
+    if ortholog is None and host != HOST:                           # one host and one donor are never read from different sources
+        return done(case_row(donor, complex_, gene, "not assessed: the pinned table does not cover the donor", host=host))
     rows = read_alignment(aln_file) if aln_file.is_file() else None
-    if rows is not None and HOST not in rows:
-        raise SystemExit(f"{aln_file} holds no human row")
+    if rows is not None and host not in rows:
+        raise SystemExit(f"{aln_file} holds no row of {host}")
     if ortholog is None:                                            # the alignment is the source of the donor's ortholog
         if rows is None:
             return done(case_row(donor, complex_, gene, "not assessed: no alignment of the gene"))
         if donor not in rows:
             return done(case_row(donor, complex_, gene, "not assessed: no ortholog of the donor in the alignment"))
     records = cybrid.read_proteins(gb)
-    hp, dp = (cybrid.species_proteins(records, s) for s in (HOST, donor))
+    hp, dp = (cybrid.species_proteins(records, s) for s in (host, donor))
     genes = tuple(COMPLEXES[complex_].mt)
     mt = {g: hp[g][0] for g in genes}
     chains, mt_chain = cs.system(cs.read_chains(cif), mt, {g: p for g, (p, _, _) in hp.items() if g not in genes})
-    ct = pd.read_csv(COMPLEXES[complex_].work / "chains.tsv", sep="\t", dtype={"chain": str})
-    chain_gene = dict(zip(ct.chain, ct.gene))
-    by_gene = gene_chains(chains, mt_chain, chain_gene)
+    if host == HOST:
+        ct = pd.read_csv(COMPLEXES[complex_].work / "chains.tsv", sep="\t", dtype={"chain": str})
+        chain_gene = dict(zip(ct.chain, ct.gene))
+        by_gene = gene_chains(chains, mt_chain, chain_gene)
+        no_chain = "not assessed: no chain of the gene touches the mitochondrial chains"
+    else:
+        nuclear = {g: o.protein for g in COMPLEXES[complex_].nuclear for o in [donor_source.get(host, g)[0]] if o is not None}
+        by_gene = gene_chains_by_sequence(chains, mt_chain, nuclear)
+        no_chain = (f"not assessed: no chain of {pid} touching the mitochondrial chains is the host's {gene} (the structure holds none "
+                    f"that is 90% identical to its RefSeq protein: it touches none, or it holds another isoform)")
     if gene not in by_gene:
-        return done(case_row(donor, complex_, gene, "not assessed: no chain of the gene touches the mitochondrial chains"))
+        return done(case_row(donor, complex_, gene, no_chain, host=host))
     u_idx, one_idx = by_gene[gene], sorted(mt_chain)
+    extra: dict = {}
+    if host != HOST:                                                # B0's subunit is the chain as solved: it must be the host's own protein
+        differs = sum(len(protein_subs(chains[c]["seq"], host_ortholog.protein)[0]) for c in u_idx)
+        if differs:
+            return done(case_row(donor, complex_, gene, f"not assessed: the chains of {pid} differ from the host's RefSeq protein at {differs} placed residues, "
+                                 "so the chain as solved is not the host's own subunit", host=host))
+        extra = {"host_protein": host_ortholog.accession, "host_differs": differs}
     flags = contact_flags(chains, one_idx, u_idx)
-    cols = {c: chain_columns(chains[c]["seq"], rows[HOST]) for c in u_idx} if rows is not None else None
+    cols = {c: chain_columns(chains[c]["seq"], rows[host]) for c in u_idx} if rows is not None else None
     columns = contact_columns(cols, flags) if cols is not None else []
     sp = pd.read_parquet(species, columns=["slug", "class"])
     pool = set(sp.slug[sp["class"] == CLASS])
@@ -313,7 +400,6 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
             sub.update({(c, i): aa for i, aa in s.items()}); placed += p; lost += l
         return sub, placed, lost
 
-    extra: dict = {}
     if ortholog is None:
         donor_sub, placed, lost = u_subs(rows[donor])
         candidates, n_contact_diff = null_candidates(rows, pool, donor, columns)
@@ -324,10 +410,10 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
             donor_sub.update({(c, i): aa for i, aa in s_.items()}); placed += p_; lost += l_
         ids = cols if cols is not None else {c: list(chains[c]["num"]) for c in u_idx}
         n_contact_diff = protein_contact_differences({c: chains[c]["seq"] for c in u_idx}, placement, ids, flags)
-        candidates = null_candidates(rows, pool, donor, columns, n=n_contact_diff)[0] if rows is not None else []
+        candidates = null_candidates(rows, pool, donor, columns, n=n_contact_diff, host=host)[0] if rows is not None else []
         if cols is None:
             columns = sorted({n for c in u_idx for n, hit in zip(chains[c]["num"], flags[c]) if hit})
-        extra = {"reading": "protein", "donor_protein": ortholog.accession, "donor_gene_id": ortholog.gene_id}
+        extra = {**extra, "reading": "protein", "donor_protein": ortholog.accession, "donor_gene_id": ortholog.gene_id}
     al = cybrid.aligner()
     donor_on = {g: cybrid.on_human(mt[g], dp[g][0], dp[g][1], al) for g in genes}
     sets, unmodelled = cs.plan(chains, mt_chain, mt, donor_on, {g: {} for g in genes})
@@ -341,7 +427,7 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
         null = f"not assessed: {len(candidates)} candidates, at least {MIN_CANDIDATES} needed"
     else:
         null = "assessed"
-    case = case_row(donor, complex_, gene, "scored", copies=len(u_idx), contact_residues=len(columns), placed=placed, not_placed=lost,
+    case = case_row(donor, complex_, gene, "scored", host=host, copies=len(u_idx), contact_residues=len(columns), placed=placed, not_placed=lost,
                     substituted=len(donor_sub), contact_differences=n_contact_diff, candidates=len(candidates), null=null,
                     mt_substituted=len(mt_sub), unmodelled=unmodelled, pdb=pid, **extra)
     # the substitution sets read: B0, B1 and the species of the null, each once however often it is drawn
@@ -378,7 +464,7 @@ def run(donor: str, complex_: str, gene: str, gb: Path, pdb_dir: Path, aln_dir: 
             fw, ft, dg = value[tuple(sorted(sub.items()))]
             return {**{k: case[k] for k in ("host", "donor", "complex", "gene")}, "kind": kind, "draw": draw, "species": sp, "seed": seed,
                     "substituted": len(sub), "fold": fw, "fold_one": fold_one, "fold_two": ft, "ddG": dg}
-        b0, b1 = row("B0", {}, -1, HOST), row("B1", donor_sub, -1, donor)
+        b0, b1 = row("B0", {}, -1, host), row("B1", donor_sub, -1, donor)
         res += [b0, b1, *(row("null", species_sub[s], k, s) for k, s in enumerate(drawn))]
         print(f"{donor} {complex_} {gene} seed {seed}: B0 {b0['ddG']:.4f}, B1 {b1['ddG']:.4f}, "
               f"{len(drawn)} null draws on {len(species_sub)} species", flush=True)
@@ -450,12 +536,12 @@ def candidate_table(cases: pd.DataFrame, res: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def activity_table(res: pd.DataFrame, cases: pd.DataFrame, meas: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def activity_table(res: pd.DataFrame, cases: pd.DataFrame, meas: pd.DataFrame, host: str = HOST) -> tuple[pd.DataFrame, pd.DataFrame]:
     """(one row per (donor, complex): the stated activity, the outcome and the restoration summed over the genes scored for
     every donor of that complex, and the Spearman correlation of activity with that sum within each complex and pooled,
     over the cases with a stated activity)."""
     from .nuclear_where import labelled
-    lab = labelled(meas[meas.host == HOST], complexes=tuple(COMPLEXES))
+    lab = labelled(meas[meas.host == host], complexes=tuple(COMPLEXES))
     rows = []
     for cx, c in cases.groupby("complex", sort=False):
         donors = sorted(set(c.donor))
@@ -476,10 +562,34 @@ def activity_table(res: pd.DataFrame, cases: pd.DataFrame, meas: pd.DataFrame) -
     return sums, pd.DataFrame(out)
 
 
-def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS) -> pd.DataFrame:
+def reduced_table(res: pd.DataFrame, cases: pd.DataFrame, meas: pd.DataFrame, host: str) -> pd.DataFrame:
+    """The candidate rule read on the cases the papers state as reduced (H36, mouse host): one row per (complex, gene) of the
+    cases with, among the donors whose pair is reduced for that complex and that have an ortholog for the gene, how many are
+    both among the largest and above the null's 95th percentile (`in_top & exceeds_null`), whether that is more than half of
+    them (`candidate_reduced`: the rule as coded, on those donors alone, and never with no reduced donor), and the same count
+    for the pairs stated as not reduced, which a subunit that matters for the loss should not have. Pairs the papers disagree
+    on are in neither."""
+    from .nuclear_where import labelled
+    lab = labelled(meas[meas.host == host], complexes=tuple(COMPLEXES))[["donor", "complex", "status"]]
+    r = res.merge(lab, on=["donor", "complex"], how="left")
+    r["both"] = r.in_top & r.exceeds_null
+    rows = []
+    for (cx, g), c in cases.groupby(["complex", "gene"], sort=False):
+        x = r[(r["complex"] == cx) & (r.gene == g)]
+        red, nred = x[x.status == "reduced"], x[x.status == "not_reduced"]
+        rows.append({"complex": cx, "gene": g, "reduced_donors": len(red), "reduced_both": int(red.both.sum()),
+                     "candidate_reduced": bool(len(red) and 2 * int(red.both.sum()) > len(red)),
+                     "not_reduced_donors": len(nred), "not_reduced_both": int(nred.both.sum()),
+                     "best_reduced_restoration": red.restoration.max() if len(red) else np.nan})
+    return pd.DataFrame(rows)
+
+
+def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS, host: str = HOST) -> pd.DataFrame:
     """swap_scores.tsv (every task's rows), swap_cases.tsv, swap_restoration.tsv, swap_candidates.tsv, swap_sums.tsv and
-    swap_spearman.tsv from the tasks' tables. A task without a table is listed as missing, never as zero."""
-    want = tasks(measurements)
+    swap_spearman.tsv from the tasks' tables. A task without a table is listed as missing, never as zero. For a host other than
+    human, also swap_unassessed.tsv (the donors with an outcome and no RefSeq source, which have no task) and swap_reduced.tsv (the
+    candidate rule on the reduced pairs alone)."""
+    want = tasks(measurements, host)
     cases, scores, missing = [], [], []
     for d, c, g in want:
         f = out / "swap" / f"{d}.{c}.{g}"
@@ -496,8 +606,12 @@ def collect(out: Path, measurements: Path = cybrid.MEASUREMENTS) -> pd.DataFrame
     cases, scores = pd.concat(cases, ignore_index=True), pd.concat(scores, ignore_index=True)
     res = restoration_table(cases, scores)
     cand = candidate_table(cases, res)
-    sums, rho = activity_table(res, cases, cybrid.read_measurements(measurements))
-    for name, t in (("scores", scores), ("cases", cases), ("restoration", res), ("candidates", cand), ("sums", sums), ("spearman", rho)):
+    sums, rho = activity_table(res, cases, cybrid.read_measurements(measurements), host)
+    tables = [("scores", scores), ("cases", cases), ("restoration", res), ("candidates", cand), ("sums", sums), ("spearman", rho)]
+    if host != HOST:
+        tables.append(("unassessed", unassessed_donors(measurements, host)))
+        tables.append(("reduced", reduced_table(res, cases, cybrid.read_measurements(measurements), host)))
+    for name, t in tables:
         t.to_csv(out / f"swap_{name}.tsv", sep="\t", index=False, float_format="%.5f")
     with pd.option_context("display.width", 250, "display.max_rows", 400, "display.max_columns", 40):
         print(res.to_string(index=False, float_format=lambda v: f"{v:.3f}"))

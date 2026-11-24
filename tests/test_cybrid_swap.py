@@ -376,6 +376,7 @@ class TestCollect:
         for name in ("scores", "cases", "restoration", "candidates", "sums", "spearman"):
             assert (tmp_path / f"swap_{name}.tsv").is_file()
         assert len(pd.read_csv(tmp_path / "swap_scores.tsv", sep="\t")) == 15
+        assert not (tmp_path / "swap_unassessed.tsv").exists()           # the human host's tables are the first run's six
 
 
 # --- the model and the structures ------------------------------------------------------------------------------------
@@ -696,3 +697,257 @@ class TestProteinTask:
         assert c["status"].startswith("not assessed: no ortholog source") and s.empty
         _, c = sw.run("gorilla-gorilla", "IV", "COX6B2", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=do.Source({}, {}, {"mus-musculus": "x"}))
         assert c["status"] == "not assessed: no alignment of the gene"           # a donor the table does not cover keeps the alignment reading
+
+
+# --- the mouse host (H36, 2026-11-24) --------------------------------------------------------------------------------
+
+MOUSE = sw.MOUSE
+
+
+class TestMouseTasks:
+    def test_the_donors_with_a_refseq_source_and_an_outcome_have_a_task_for_each_gene_and_no_complex_v(self):
+        t = sw.tasks(host=MOUSE)
+        assert {d for d, _, _ in t} == {"rattus-norvegicus", "mus-caroli", "mus-pahari"} and {c for _, c, _ in t} == {"I", "III", "IV"}
+        for d in {"rattus-norvegicus", "mus-caroli", "mus-pahari"}:
+            for c in ("I", "III", "IV"):
+                assert [g for dd, cx, g in t if dd == d and cx == c] == COMPLEXES[c].nuclear
+        assert len(t) == 3 * sum(len(COMPLEXES[c].nuclear) for c in ("I", "III", "IV"))
+        assert t == sorted(t, key=lambda x: (x[1], x[0], COMPLEXES[x[1]].nuclear.index(x[2])))
+
+    def test_a_donor_without_a_source_has_no_task_and_is_listed_as_not_assessed(self):
+        t = sw.tasks(host=MOUSE)
+        for d in ("mus-spretus", "mus-terricolor", "otomys-irroratus", "cricetulus-griseus", "mesocricetus-auratus"):
+            assert d not in {x for x, _, _ in t}
+        u = sw.unassessed_donors(host=MOUSE)
+        assert set(zip(u.donor, u["complex"])) == {(d, c) for d in ("mus-spretus", "mus-terricolor", "otomys-irroratus") for c in ("I", "III", "IV")}
+        assert (u.host == MOUSE).all() and u.status.str.startswith("not assessed: no ortholog source").all()      # the hamsters have only whole-cybrid rows
+
+    def test_a_donor_the_species_table_does_not_know_is_refused(self, tmp_path):
+        m = cybrid.read_measurements().copy()
+        m = pd.concat([m, m[(m.host == MOUSE) & (m.donor == "mus-pahari")].assign(donor="mus-unknown")])
+        f = tmp_path / "m.tsv"
+        m.drop(columns="pct").to_csv(f, sep="\t", index=False)
+        with pytest.raises(SystemExit):
+            sw.tasks(f, MOUSE)
+
+    def test_the_human_host_keeps_its_donors(self):
+        assert {d for d, _, _ in sw.tasks()} == {"pan-troglodytes", "pan-paniscus", "gorilla-gorilla"} and len(sw.tasks()) == 216
+
+
+class TestChainsBySequence:
+    A = "MKVLAWYRTEQNDSGHIFPCMKVLAWYRTEQNDSGHIFPC"
+    B = "GSTNDEQKRHGSTNDEQKRHAAAAKKKKLLLLMMMMVVVV"
+
+    def test_a_chain_is_the_gene_whose_protein_it_copies_and_every_copy_is_listed(self):
+        chains = [{"id": "m", "seq": "X" * 30}, {"id": "a1", "seq": self.A}, {"id": "b", "seq": self.B}, {"id": "a2", "seq": self.A}]
+        got = sw.gene_chains_by_sequence(chains, {0: ("ND1", {})}, {"GA": self.A, "GB": self.B})
+        assert got == {"GA": [1, 3], "GB": [2]}
+
+    def test_the_mitochondrial_chains_another_isoform_and_a_short_chain_are_no_gene(self):
+        other = self.A[:20] + "W" * 20                                         # half of the residues of GA changed: another isoform
+        chains = [{"id": "m", "seq": self.A}, {"id": "iso", "seq": other}, {"id": "short", "seq": self.A[:15]}, {"id": "none", "seq": "P" * 40}]
+        assert sw.gene_chains_by_sequence(chains, {0: ("ND1", {})}, {"GA": self.A}) == {}
+        assert sw.gene_chains_by_sequence([], {}, {"GA": self.A}) == {}
+        near = self.A[:37] + "WWW"                                             # 3 of 40 changed (92.5% identical): still the gene's
+        assert sw.gene_chains_by_sequence([{"id": "n", "seq": near}], {}, {"GA": self.A}) == {"GA": [0]}
+
+    def test_the_real_mouse_structures_name_their_subunits_and_leave_the_other_isoforms_out(self):
+        pdb, d = paths.PDB / "7O37.cif", paths.DONOR_ORTHOLOGS
+        if not (pdb.is_file() and (d / "mus-musculus.faa").is_file() and (paths.CYBRID_GB / "records.gb").is_file()):
+            pytest.skip("needs 7O37, `mitoage download donor-orthologs` and the cybrid records")
+        source = do.read_source(d)
+        hp = cybrid.species_proteins(cybrid.read_proteins(paths.CYBRID_GB / "records.gb"), MOUSE)
+        genes = tuple(COMPLEXES["IV"].mt)
+        chains, mt_chain = cs.system(cs.read_chains(pdb), {g: hp[g][0] for g in genes}, {g: p for g, (p, _, _) in hp.items() if g not in genes})
+        nuclear = {g: source.get(MOUSE, g)[0].protein for g in COMPLEXES["IV"].nuclear}
+        by = sw.gene_chains_by_sequence(chains, mt_chain, nuclear)
+        assert set(by) == {"COX4I1", "COX5A", "COX5B", "COX6B1", "COX6C", "COX7B", "COX7C"}          # not COX6A1, COX7A2, COX8A: the structure holds other isoforms
+        assert all(len(v) == 1 and v[0] not in mt_chain for v in by.values())
+        for g, (i,) in by.items():                                                # the chains are the mouse's RefSeq proteins, residue for residue
+            assert sw.protein_subs(chains[i]["seq"], nuclear[g])[:3] == ({}, len(chains[i]["seq"]), 0)
+
+
+def mouse_inputs(complex_="IV", gene="COX5B"):
+    pytest.importorskip("torch"); pytest.importorskip("stabddg")
+    pid = sw.STRUCTURES[MOUSE][complex_]
+    gb, aln, sp, d = paths.CYBRID_GB / "records.gb", paths.MITOPORT / "partners" / "aln", paths.BUILD / "species.parquet", paths.DONOR_ORTHOLOGS
+    if not ((paths.PDB / f"{pid}.cif").is_file() and gb.is_file() and (aln / f"{gene}.afa").is_file() and sp.is_file() and (d / "mus-pahari.faa").is_file()):
+        pytest.skip("needs the mouse structures, the cybrid records, the vertebrate alignments, the build and `mitoage download donor-orthologs`")
+    return gb, aln, sp, do.read_source(d)
+
+
+class TestMouseTask:
+    def run(self, tmp_path, donor="rattus-norvegicus", complex_="IV", gene="COX5B", source=None, draws=8, **kw):
+        gb, aln, sp, src = mouse_inputs(complex_, gene)
+        models = {}
+        out = sw.run(donor, complex_, gene, gb, paths.PDB, aln, sp, tmp_path, tmp_path, seeds=(0,), samples=1, draws=draws,
+                     model_for=lambda name: models.setdefault(name, Counting()), donor_source=source or src, host=MOUSE, **kw)
+        return (*out, models, (gb, aln, sp, src))
+
+    def test_the_mouse_complex_is_the_system_its_own_subunit_is_b0_and_the_donors_is_b1(self, tmp_path):
+        scores, case, models, (gb, aln, sp, src) = self.run(tmp_path)
+        assert case["host"] == MOUSE and case["status"] == "scored" and case["pdb"] == "7O37" and case["host_differs"] == 0
+        assert case["host_protein"] == src.get(MOUSE, "COX5B")[0].accession and case["donor_protein"] == src.get("rattus-norvegicus", "COX5B")[0].accession
+        assert {n for m in models.values() for n, _ in m.seen} == {"7O37_COX5B", "7O37_mt", "7O37_COX5B_nuc"}       # never the human structure
+        assert (scores.host == MOUSE).all() and scores[scores.kind == "B0"].species.iloc[0] == MOUSE and scores[scores.kind == "B1"].species.iloc[0] == "rattus-norvegicus"
+        chain = [c for c in cs.read_chains(paths.PDB / "7O37.cif") if c["id"] == "f"][0]
+        subs = sw.protein_subs(chain["seq"], src.get("rattus-norvegicus", "COX5B")[0].protein)[0]
+        assert case["substituted"] == len(subs) > 0
+        b0, b1 = scores[scores.kind == "B0"].iloc[0], scores[scores.kind == "B1"].iloc[0]
+        assert b0.substituted == 0 and b0.ddG == case["mt_substituted"] > 0           # B0: the mouse's subunit, the rat's mitochondrial changes
+        assert b1.fold_two == case["substituted"] and b1.ddG == case["mt_substituted"] + case["substituted"]
+        assert pd.read_csv(tmp_path / "swap" / "rattus-norvegicus.IV.COX5B.cases.tsv", sep="\t").host.iloc[0] == MOUSE
+
+    def test_the_null_draws_mammals_that_differ_from_the_mouse_as_often_as_the_donor_does(self, tmp_path):
+        scores, case, _, (gb, aln, sp, src) = self.run(tmp_path, draws=12)
+        rows = sw.read_alignment(aln / "COX5B.afa")
+        mammals = set(pd.read_parquet(sp, columns=["slug", "class"]).query("`class` == 'Mammalia'").slug)
+        hp = cybrid.species_proteins(cybrid.read_proteins(gb), MOUSE)
+        genes = tuple(COMPLEXES["IV"].mt)
+        chains, mt_chain = cs.system(cs.read_chains(paths.PDB / "7O37.cif"), {g: hp[g][0] for g in genes}, {g: p for g, (p, _, _) in hp.items() if g not in genes})
+        u = [i for i, c in enumerate(chains) if c["id"] == "f"][0]
+        mt = sorted(mt_chain)
+        m = rows[MOUSE]
+        cols = sw.chain_columns(chains[u]["seq"], m)
+        columns = sw.contact_columns({u: cols}, sw.contact_flags(chains, mt, [u]))
+        assert case["contact_residues"] == len(columns) > 0
+        drawn = set(scores[scores.kind == "null"].species)
+        assert drawn and drawn <= mammals - {MOUSE, "rattus-norvegicus"}
+        n = case["contact_differences"]
+        for s in drawn:
+            k = sum(1 for c in columns if rows[s][c] in sw.THREE and m[c] in sw.THREE and rows[s][c] != m[c])
+            assert 0.75 * n <= k <= 1.25 * n
+        assert case["candidates"] == len(sw.null_candidates(rows, mammals, "rattus-norvegicus", columns, n=n, host=MOUSE)[0]) >= sw.MIN_CANDIDATES
+        by_human = len(sw.null_candidates(rows, mammals, "rattus-norvegicus", columns, n=n)[0])           # measured from the human row it is another set
+        assert by_human != case["candidates"] or by_human == 0
+
+    def test_a_mouse_host_needs_the_pinned_orthologs(self, tmp_path):
+        gb, aln, sp, _ = mouse_inputs()
+        with pytest.raises(SystemExit):
+            sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=lambda n: Counting(), host=MOUSE)
+
+    def test_a_complex_without_a_mouse_structure_is_not_assessed_and_the_human_one_is_not_used(self, tmp_path):
+        gb, aln, sp, src = mouse_inputs()
+        m = {}
+        s, c = sw.run("rattus-norvegicus", "V", "ATP5PF", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=lambda n: m.setdefault(n, Counting()), donor_source=src, host=MOUSE)
+        assert c["status"].startswith("not assessed: no solved structure of the mus-musculus complex V") and s.empty and not m
+
+    def test_a_gene_without_a_chain_of_the_host_in_the_structure_is_not_assessed_and_says_why(self, tmp_path):
+        s, c, models, _ = self.run(tmp_path, gene="COX7A2")          # the structure holds another isoform (COX7A2L) there
+        assert c["status"].startswith("not assessed: no chain of 7O37") and "COX7A2" in c["status"] and s.empty and not models
+
+    def test_a_missing_ortholog_of_the_host_or_the_donor_is_not_assessed_and_a_donor_the_table_lacks_is_not_read_from_the_alignment(self, tmp_path):
+        gb, aln, sp, src = mouse_inputs()
+        m = lambda n: Counting()
+        no_host = do.Source({k: v for k, v in src.orthologs.items() if k != (MOUSE, "COX5B")}, {**src.status, (MOUSE, "COX5B"): "no ortholog"}, src.species)
+        s, c = sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=no_host, host=MOUSE)
+        assert c["status"] == "not assessed: no ortholog of the host in RefSeq (no ortholog)" and s.empty and c["host"] == MOUSE
+        s, c = sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m,
+                      donor_source=do.Source({}, {}, {"rattus-norvegicus": "x"}), host=MOUSE)
+        assert c["status"] == "not assessed: no pinned source for the host"
+        s, c = sw.run("mus-spretus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=src, host=MOUSE)
+        assert c["status"].startswith("not assessed: no ortholog source") and s.empty
+        gone = do.Source(src.orthologs, src.status, {k: v for k, v in src.species.items() if k != "rattus-norvegicus"})
+        s, c = sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=gone, host=MOUSE)
+        assert c["status"] == "not assessed: the pinned table does not cover the donor" and s.empty         # the alignment holds a rat row; it is not used
+        no_donor = do.Source(src.orthologs, {**src.status, ("mus-caroli", "COX5B"): "no ortholog"}, src.species)
+        no_donor.orthologs = {k: v for k, v in src.orthologs.items() if k != ("mus-caroli", "COX5B")}
+        _, c = sw.run("mus-caroli", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=m, donor_source=no_donor, host=MOUSE)
+        assert c["status"] == "not assessed: no ortholog of the donor in RefSeq (no ortholog)"
+
+    def test_a_chain_that_is_not_the_hosts_protein_is_not_assessed_because_b0_would_not_be_the_hosts_own(self, tmp_path):
+        gb, aln, sp, src = mouse_inputs()
+        host = src.get(MOUSE, "COX5B")[0]
+        p = host.protein
+        changed = p[:40] + ("W" if p[40] != "W" else "F") + p[41:60] + ("W" if p[60] != "W" else "F") + p[61:]
+        other = do.Source({**src.orthologs, (MOUSE, "COX5B"): do.Ortholog(changed, host.accession, host.gene_id)}, src.status, src.species)
+        s, c = sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path, tmp_path, model_for=lambda n: Counting(), donor_source=other, host=MOUSE)
+        assert c["status"] == "not assessed: the chains of 7O37 differ from the host's RefSeq protein at 2 placed residues, so the chain as solved is not the host's own subunit"
+        assert s.empty
+
+    def test_a_donor_identical_to_the_host_or_with_a_gap_changes_nothing_and_runs_no_null(self, tmp_path):
+        gb, aln, sp, src = mouse_inputs()
+        host = src.get(MOUSE, "COX5B")[0]
+        for name, protein, lost in (("same", host.protein, 0), ("gap", host.protein[:80] + host.protein[83:], 3)):
+            other = do.Source({**src.orthologs, ("rattus-norvegicus", "COX5B"): do.Ortholog(protein, "XP_0.1", "1")}, src.status, src.species)
+            s, c = sw.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, sp, tmp_path / name, tmp_path, seeds=(0,), samples=1, draws=5,
+                          model_for=lambda n: Counting(), donor_source=other, host=MOUSE)
+            assert c["status"] == "scored" and c["substituted"] == 0 and c["null"].startswith("not run") and c["not_placed"] == lost
+            assert set(s.kind) == {"B0", "B1"} and (s[s.kind == "B1"].ddG.values == s[s.kind == "B0"].ddG.values).all()
+            r = sw.restoration_table(pd.DataFrame([c]), s)
+            assert r.restoration.iloc[0] == 0 and not r.in_top.iloc[0] and not r.exceeds_null.iloc[0]
+
+    def test_every_copy_of_the_complex_iii_subunit_carries_the_donors_protein_in_the_mouse_dimer(self, tmp_path):
+        gb, aln, sp, src = mouse_inputs("III", "UQCRFS1")
+        s, c = sw.run("mus-pahari", "III", "UQCRFS1", gb, paths.PDB, aln, sp, tmp_path, tmp_path, seeds=(0,), samples=1, draws=3,
+                      model_for=lambda n: Counting(), donor_source=src, host=MOUSE)
+        chains = cs.read_chains(paths.PDB / "7O3H.cif")
+        copies = [c_ for c_ in chains if c_["id"] in ("E", "P")]
+        prot = src.get("mus-pahari", "UQCRFS1")[0].protein
+        assert c["status"] == "scored" and c["copies"] == 2 and c["pdb"] == "7O3H"
+        assert c["substituted"] == sum(len(sw.protein_subs(x["seq"], prot)[0]) for x in copies)
+        assert s[s.kind == "B1"].iloc[0].fold_two == c["substituted"] > 0
+
+
+class TestMouseCollect:
+    def test_the_mouse_tasks_are_collected_with_the_donors_that_have_no_task_listed(self, tmp_path, capsys):
+        (tmp_path / "swap").mkdir()
+        d, c, g = sw.tasks(host=MOUSE)[0]
+        case = {"host": MOUSE, "donor": d, "complex": c, "gene": g, "status": "scored", "substituted": 1, "contact_differences": 1, "candidates": 3}
+        pd.DataFrame([case]).to_csv(tmp_path / "swap" / f"{d}.{c}.{g}.cases.tsv", sep="\t", index=False)
+        rows = [{"host": MOUSE, "donor": d, "complex": c, "gene": g, "kind": k, "draw": dr, "species": "s", "seed": s, "substituted": 1, "fold": 0.0,
+                 "fold_one": 0.0, "fold_two": 0.0, "ddG": v} for s in (0, 1, 2) for k, dr, v in (("B0", -1, 4.0), ("B1", -1, 1.0), ("null", 0, 3.0), ("null", 1, 2.0), ("null", 2, 3.5))]
+        pd.DataFrame(rows).to_csv(tmp_path / "swap" / f"{d}.{c}.{g}.tsv", sep="\t", index=False)
+        res = sw.collect(tmp_path, host=MOUSE)
+        n = len(sw.tasks(host=MOUSE))
+        assert f"MISSING: {n - 1} of {n}" in capsys.readouterr().out and len(res) == 1 and res.iloc[0].restoration == 3.0
+        u = pd.read_csv(tmp_path / "swap_unassessed.tsv", sep="\t")
+        assert len(u) == 9 and set(u.donor) == {"mus-spretus", "mus-terricolor", "otomys-irroratus"}
+
+    def test_the_activity_of_the_mouse_host_is_the_mouse_rows(self):
+        cases = pd.DataFrame([{"host": MOUSE, "donor": d, "complex": "I", "gene": "A", "status": "scored", "substituted": 1, "contact_differences": 1, "candidates": 5}
+                              for d in ("d1", "d2", "d3")])
+        scores = pd.DataFrame([{"donor": d, "complex": "I", "gene": "A", "kind": k, "draw": -1, "seed": 0, "ddG": v}
+                               for d, b1 in (("d1", 1.0), ("d2", 2.0), ("d3", 3.0)) for k, v in (("B0", 4.0), ("B1", b1))])
+        res = sw.restoration_table(cases, scores)
+        base = {"assay": "x", "outcome": "measured", "significant": "yes", "source_doi": "x", "location": "x", "note": "", "complex": "I"}
+        meas = pd.DataFrame([{**base, "host": MOUSE, "donor": d, "pct_low": p, "pct_high": p, "pct": p} for d, p in (("d1", 30.0), ("d2", 50.0), ("d3", 70.0))]
+                            + [{**base, "host": "homo-sapiens", "donor": d, "pct_low": p, "pct_high": p, "pct": p} for d, p in (("d1", 90.0), ("d2", 50.0), ("d3", 10.0))])
+        sums, rho = sw.activity_table(res, cases, meas, MOUSE)
+        assert list(sums.pct) == [30.0, 50.0, 70.0] and rho.set_index("complex").loc["I", "spearman"] == pytest.approx(-1.0)
+        assert list(sw.activity_table(res, cases, meas)[0].pct) == [90.0, 50.0, 10.0]          # the default host reads the human rows
+
+
+class TestReducedReading:
+    base = {"assay": "x", "outcome": "measured", "source_doi": "x", "location": "x", "note": "", "complex": "IV", "host": MOUSE}
+
+    def frames(self, restorations):
+        """restorations: {donor: {gene: (restoration, null draws' restorations)}}, B0 = 10."""
+        cases, scores = frame(list(restorations), "IV", "A", {(d, g): {"B0": [10.0], "B1": [10.0 - r], "null": [[10.0 - n] for n in nulls]}
+                                                             for d, genes in restorations.items() for g, (r, nulls) in genes.items()})
+        cases["host"] = MOUSE
+        return cases, sw.restoration_table(cases, scores)
+
+    def meas(self, **status):
+        rows = []
+        for d, (sig, pct) in status.items():
+            rows.append({**self.base, "donor": d, "significant": sig, "pct_low": pct, "pct_high": pct, "pct": pct})
+        rows.append({**self.base, "donor": "dis", "significant": "yes", "pct_low": 50.0, "pct_high": 50.0, "pct": 50.0})
+        rows.append({**self.base, "donor": "dis", "significant": "no", "pct_low": 95.0, "pct_high": 95.0, "pct": 95.0})
+        rows.append({**self.base, "donor": "human-host-row", "host": "homo-sapiens", "significant": "yes", "pct_low": 1.0, "pct_high": 1.0, "pct": 1.0})
+        return pd.DataFrame(rows)
+
+    def test_the_rule_is_read_on_the_reduced_pairs_alone_and_the_not_reduced_are_counted_apart(self):
+        low = [0.0] * 4
+        cases, res = self.frames({"r1": {"A": (5.0, low), "B": (0.0, low)}, "r2": {"A": (5.0, low), "B": (5.0, low)},
+                                  "n1": {"A": (5.0, low), "B": (0.0, low)}, "dis": {"A": (5.0, low), "B": (5.0, low)}})
+        t = sw.reduced_table(res, cases, self.meas(r1=("yes", 50.0), r2=("yes", 40.0), n1=("no", 90.0)), MOUSE).set_index("gene")
+        a, b = t.loc["A"], t.loc["B"]
+        assert (a.reduced_donors, a.reduced_both, bool(a.candidate_reduced), a.not_reduced_donors, a.not_reduced_both) == (2, 2, True, 1, 1)
+        assert (b.reduced_donors, b.reduced_both, bool(b.candidate_reduced), b.not_reduced_donors, b.not_reduced_both) == (2, 1, False, 1, 0)   # one of two is not more than half
+        assert a.best_reduced_restoration == 5.0                               # the donor the papers disagree on ("dis") is in neither count
+
+    def test_no_reduced_pair_is_never_a_candidate_and_another_hosts_rows_are_not_read(self):
+        cases, res = self.frames({"n1": {"A": (5.0, [0.0] * 4)}, "h": {"A": (5.0, [0.0] * 4)}})
+        t = sw.reduced_table(res, cases, self.meas(n1=("no", 90.0)), MOUSE).iloc[0]
+        assert t.reduced_donors == 0 and not t.candidate_reduced and np.isnan(t.best_reduced_restoration) and t.not_reduced_donors == 1

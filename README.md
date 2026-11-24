@@ -185,6 +185,9 @@ uv run mitoage mitoport cybrid-dna                # exploratory: nucleotide dive
 # alignments of the nuclear subunits are the inputs of `mitoport partners`)
 uv run mitoage mitoport swap --list               # the 216 tasks (donor, complex, nuclear gene); one with --task N
 uv run mitoage mitoport swap-collect              # the swap tables and the candidate rule of the entry
+# the mouse host: its own solved complexes (I, III, IV), the donors with RefSeq proteins (slurm/h36-swap-mouse.sbatch)
+uv run mitoage mitoport swap --host mus-musculus --list          # the 171 tasks; --out keeps them apart from the human host's
+uv run mitoage mitoport swap-collect --host mus-musculus --out <folder>   # also swap_unassessed.tsv and swap_reduced.tsv
 # H36, donors the alignments lack: RefSeq proteins of the 72 nuclear subunits of the mouse, rat, M. caroli, M. pahari and the Chinese
 # hamster, by the accession.versions of the pinned table mitoport/donor_orthologs.tsv (M. spretus, M. terricolor and Otomys irroratus
 # have no RefSeq annotation: no ortholog source). `swap --donor-orthologs <folder>` reads such a donor from its protein, not the alignment.

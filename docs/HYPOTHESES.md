@@ -3359,3 +3359,38 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     orthologs pass (job 6629122), and 124 of 124 breaks of their guards are caught (60 new, the swap's 64 again). *Not done:* no swap was run for the mouse or hamster hosts; `run` still takes the
     human structure and the human chain as the baseline, so a mouse-host case needs the host's own ortholog on the human chain as B0 (the
     reading serves it, the mouse is in the table) and the host's tasks in `tasks()`; these are the next code.
+  - **Step 2 for the mouse host, made exact with the code, 2026-11-24, before any score** (`mitoage mitoport swap --host mus-musculus`,
+    `cybrid_swap.run(host=...)`; written by an agent for the lead seat; the choices below are where the first change left one open).
+    *The structure is the mouse's own, not the human one:* `cybrid_energy.STRUCTURES` holds mouse complexes I (8OM1), III (7O3H) and
+    IV (7O37); complex V has none, and there is no stated mouse-host outcome for V either, so V is not a case. The human structure
+    is used for no mouse-host case: a (complex) without a mouse structure would be "not assessed: no solved structure", never run on
+    the human one. This differs from the human host's cases, where the human structure was the host's own. *The mitochondrial chains*
+    carry the mouse's own proteins (the cybrid records) and the donor's substitutions are the donor read through the mouse, as H18
+    and H28 build them. *Which chain is which gene:* the mouse structures have no `chains.tsv`; a nuclear chain is the gene whose
+    mouse RefSeq protein (the pinned table's) it copies, 90% identical over aligned residues covering 80% of the chain, the best gene
+    taking it (`cybrid_energy.match_protein`); a chain that matches none is no gene's. Checked before any score: every matched
+    nuclear chain of 8OM1, 7O3H and 7O37 is identical to the mouse RefSeq protein at every placed residue (0 differences), and `run`
+    refuses a chain that is not (the host's own subunit would not be the chain as solved). Three chains of 7O37 that touch the
+    mitochondrial chains match none of the mouse's COX6A1, COX7A2 and COX8A (they are other isoforms, such as COX7A2L, which this
+    was not checked against): those genes are "not assessed: no chain of 7O37 ... is the host's gene". *B0* is the system with the
+    mouse's own subunit u (the chain as solved) and the donor's mitochondrial substitutions; *B1* is the same with u carrying the
+    donor's RefSeq protein placed on the chain by the global alignment of the first change; restoration is B0 minus B1. *The null:*
+    as for the human host (50 draws, generator seeded (0, draw), the window of 25% of the donor's differences at the chain's contact
+    residues), with the differences measured from the *mouse's* row of the subunit's alignment and the mammals of the alignment
+    other than the donor and the mouse; a gene with no alignment has no null. *The donors:* *Rattus norvegicus*, *M. caroli* and
+    *M. pahari* have RefSeq proteins and, with the three complexes, give 171 tasks. *M. spretus*, *M. terricolor* and *Otomys
+    irroratus* have no ortholog source and are not run: "not assessed: no ortholog source" for each of their complexes, listed in
+    `swap_unassessed.tsv`. The Chinese and Syrian hamsters are donors into the mouse with the single outcome "no respiring cybrid"
+    for the whole cybrid, not for a complex, so they have no case; there is no hamster-host row. Host and donor are read only from
+    the pinned table (a donor it does not cover is not read from the alignments). *The stated outcomes of the cases:* *M. caroli*
+    I, III and IV not reduced; *M. pahari* I and III not reduced and IV reduced; the rat I and IV reduced and III mixed (the
+    two laboratories disagree, so it is in no group below). *The candidate rule is the first change's, unchanged* (among the
+    largest and above the null's 95th percentile in more than half of the donors that have an ortholog; here three donors, so two).
+    *One more reading, the same rule on the reduced cases alone* (`swap_reduced.tsv`): a subunit that matters for the loss would
+    restore the fit in the reduced pairs, which are now the rat I, the rat IV and *M. pahari* IV; per complex, u is read as a
+    candidate there when it is both among the largest and above its null in more than half of the reduced donors that have an
+    ortholog for it (complex I has one such donor, IV two, III none), and the count in the not-reduced pairs is listed beside it,
+    which a subunit that matters should not share. Nothing is claimed from a handful of cases, as for the apes: the rule's verdict
+    is read in the first change's terms (a candidate or none), and a restoration within the model's seed-to-seed noise, or
+    not above the null, is not a restoration. *Not run:* the same as for the apes (part (a), the controls with the two other
+    weights; the unit is the subunit).
