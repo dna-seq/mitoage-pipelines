@@ -3181,3 +3181,42 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
   H35's second part.
 - *If no step finds a subunit that the whole count does not already name,* the data cannot point to nuclear genes
   to edit, and the next data are those with few differences (H33) or new measurements.
+- **Changed 2026-11-24, before any number of step 1 existed** (the job had not left the queue), after a review of
+  this entry by Codex and by a Sonnet 5.5 agent (Fable 5.2 and Opus 5.5 were stopped by the safety filter and gave
+  none). Both put the same flaws first: (1) *the target is not identified*: a donor changes a whole mitochondrial
+  genome against one nucleus, so two nuclear chains that face the same changes cannot be told apart, and no
+  prediction of activity can say which chain, if either, would rescue it when edited; (2) a subunit's count follows
+  its interface size and the donor's divergence, so it is a noisy copy of the complex's whole count; (3) the rows are
+  dependent (one donor in several complexes and hosts, few papers) and the pairs on which the papers disagree are
+  left out by outcome; (4) choosing subunits on these outcomes and then fitting step 2 on them launders noise; (5)
+  contacts in one species' structure miss assembly, translation and indirect effects, so a null is not "no nuclear
+  gene". The entry is changed as follows.
+  - *The statement of what the cybrids can show:* they cannot name a nuclear gene to edit. Step 1 is a map of which
+    nuclear interfaces face the donor's changes and whether that goes beyond what the interface's geometry gives; it
+    nominates nothing for editing.
+  - *Step 1 gets a null that it must beat.* In each draw, for every pair and every mitochondrial protein, the
+    differing sites are replaced by as many sites drawn without replacement from that protein's resolved positions
+    (so each pair keeps its number of differences per protein and each subunit keeps its interface); 1,000 draws,
+    seed 0; the area is computed for every subunit in every draw. Reported: each subunit's area, its null mean, the
+    share of draws at or above it, and the share of draws in which the best subunit of the complex is at or above the
+    observed best (the family-wise p). A subunit is *named* only when that family-wise p is below 0.05 in its
+    complex. Dividing the count by the interface size is not done: it multiplies every pair of a subunit by the
+    same number and moves no area.
+  - *Dependence:* for every subunit the range of its area when each donor in turn is left out (a donor's pairs
+    together); the full table of pairs by subunits (`nuclear_exposure.tsv`), and the subunits whose columns are
+    identical put in one group, said as such. The pairs the papers disagree on are listed, not only left out, and the
+    subunit table is run twice, once without them and once with each coded as reduced; a result that changes between
+    the codings is "not stable".
+  - *Step 2 stays deferred* until step 1 names a subunit; then it is read against the count of conservation-weighted
+    differences at the same sites (changes at sites with at most 2 amino acids in the build's mammals), not the raw
+    count, and with the same permutation null.
+  - *Step 3 is dropped.* A language model's reading of a nuclear residue given its partner is a weak signal here, and
+    the paired contrast is not run.
+  - *Step 4, added: evidence that does not come from the cybrids' outcomes.* (a) Coupling between each mitochondrial
+    residue and the nuclear residues in contact with it across the build's mammals (the tables of H14 and H17):
+    nuclear residues ranked by their coupling to the mitochondrial sites that differ in the donors, against residues
+    with matched burial and conservation. (b) Whether such residues are enriched for curated disease variants of the
+    nuclear OXPHOS genes (ClinVar), with conservation as the control. (c) The swordtail case (Moran et al. 2024:
+    NDUFS5 and NDUFA13 against a foreign mitochondrial genome, not read yet) and the mouse and fly hybrid
+    literature as a short list of known incompatible nuclear genes, to see whether any ranking puts them high. Its rule
+    is written when it is coded.
