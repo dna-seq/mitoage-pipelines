@@ -1,0 +1,217 @@
+host	donor	complex	gene	status	copies	contact_residues	placed	not_placed	substituted	contact_differences	candidates	null	mt_substituted	unmodelled	pdb
+homo-sapiens	gorilla-gorilla	I	NDUFV1	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFV2	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFV3	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFS1	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFS2	scored	1.00000	68.00000	422.00000	8.00000	1.00000	1.00000	3.00000	assessed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFS3	scored	1.00000	1.00000	208.00000	0.00000	0.00000	0.00000	180.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFS4	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFS5	scored	1.00000	35.00000	104.00000	0.00000	1.00000	1.00000	0.00000	not assessed: 0 candidates, at least 3 needed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFS6	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFS7	scored	1.00000	32.00000	124.00000	32.00000	0.00000	0.00000	160.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFS8	scored	1.00000	14.00000	176.00000	0.00000	1.00000	0.00000	28.00000	assessed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA1	scored	1.00000	32.00000	70.00000	0.00000	1.00000	1.00000	4.00000	assessed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA2	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFA3	scored	1.00000	22.00000	83.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA5	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFA6	scored	1.00000	6.00000	113.00000	0.00000	0.00000	0.00000	11.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA7	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFA8	scored	1.00000	3.00000	124.00000	45.00000	0.00000	0.00000	16.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA9	scored	1.00000	11.00000	337.00000	0.00000	2.00000	0.00000	137.00000	assessed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA10	scored	1.00000	41.00000	301.00000	19.00000	7.00000	2.00000	0.00000	not assessed: 0 candidates, at least 3 needed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA11	scored	1.00000	12.00000	104.00000	36.00000	0.00000	0.00000	8.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA12	scored	1.00000	3.00000	57.00000	86.00000	0.00000	0.00000	120.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFA13	scored	1.00000	27.00000	138.00000	0.00000	0.00000	0.00000	0.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFAB1	scored	1.00000	4.00000	85.00000	0.00000	0.00000	0.00000	179.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB1	scored	1.00000	16.00000	56.00000	0.00000	0.00000	0.00000	17.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB2	scored	1.00000	27.00000	59.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB3	scored	1.00000	14.00000	80.00000	0.00000	0.00000	0.00000	10.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB4	scored	1.00000	35.00000	110.00000	18.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB5	scored	1.00000	21.00000	106.00000	32.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB6	scored	1.00000	9.00000	78.00000	46.00000	0.00000	0.00000	8.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB7	scored	1.00000	14.00000	111.00000	0.00000	1.00000	0.00000	2.00000	not assessed: 2 candidates, at least 3 needed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB8	scored	1.00000	34.00000	127.00000	26.00000	1.00000	1.00000	4.00000	assessed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB9	scored	1.00000	25.00000	123.00000	49.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB10	scored	1.00000	29.00000	171.00000	0.00000	4.00000	3.00000	2.00000	not assessed: 2 candidates, at least 3 needed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFB11	scored	1.00000	31.00000	97.00000	0.00000	2.00000	0.00000	3.00000	assessed	130.00000	0.00000	5XTD
+homo-sapiens	gorilla-gorilla	I	NDUFC1	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	I	NDUFC2	scored	1.00000	16.00000	79.00000	40.00000	0.00000	0.00000	5.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	130.00000	0.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFV1	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFV2	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFV3	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFS1	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFS2	scored	1.00000	68.00000	422.00000	8.00000	3.00000	1.00000	3.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFS3	scored	1.00000	1.00000	208.00000	0.00000	0.00000	0.00000	180.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFS4	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFS5	scored	1.00000	35.00000	104.00000	0.00000	0.00000	0.00000	1.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFS6	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFS7	scored	1.00000	32.00000	124.00000	32.00000	0.00000	0.00000	160.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFS8	scored	1.00000	14.00000	176.00000	0.00000	0.00000	0.00000	28.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA1	scored	1.00000	32.00000	70.00000	0.00000	1.00000	1.00000	4.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA2	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFA3	scored	1.00000	22.00000	83.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA5	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFA6	scored	1.00000	6.00000	113.00000	0.00000	0.00000	0.00000	11.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA7	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFA8	scored	1.00000	3.00000	124.00000	45.00000	0.00000	0.00000	16.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA9	scored	1.00000	11.00000	337.00000	0.00000	2.00000	0.00000	137.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA10	scored	1.00000	41.00000	301.00000	19.00000	2.00000	0.00000	1.00000	not assessed: 1 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA11	scored	1.00000	12.00000	104.00000	36.00000	0.00000	0.00000	8.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA12	scored	1.00000	3.00000	57.00000	86.00000	0.00000	0.00000	120.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFA13	not assessed: no ortholog of the donor in the alignment											
+homo-sapiens	pan-paniscus	I	NDUFAB1	scored	1.00000	4.00000	85.00000	0.00000	0.00000	0.00000	179.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB1	scored	1.00000	16.00000	56.00000	0.00000	0.00000	0.00000	17.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB2	scored	1.00000	27.00000	59.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB3	scored	1.00000	14.00000	80.00000	0.00000	0.00000	0.00000	10.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB4	scored	1.00000	35.00000	110.00000	18.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB5	scored	1.00000	21.00000	106.00000	32.00000	1.00000	0.00000	2.00000	not assessed: 2 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB6	scored	1.00000	9.00000	93.00000	31.00000	0.00000	0.00000	8.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB7	scored	1.00000	14.00000	111.00000	0.00000	1.00000	0.00000	2.00000	not assessed: 2 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB8	scored	1.00000	34.00000	127.00000	26.00000	1.00000	1.00000	4.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB9	scored	1.00000	25.00000	123.00000	49.00000	2.00000	1.00000	2.00000	not assessed: 2 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB10	scored	1.00000	29.00000	171.00000	0.00000	4.00000	1.00000	1.00000	not assessed: 1 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFB11	scored	1.00000	31.00000	97.00000	0.00000	1.00000	0.00000	3.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-paniscus	I	NDUFC1	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	I	NDUFC2	scored	1.00000	16.00000	79.00000	40.00000	1.00000	0.00000	5.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFV1	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFV2	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFV3	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFS1	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFS2	scored	1.00000	68.00000	422.00000	8.00000	1.00000	1.00000	3.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFS3	scored	1.00000	1.00000	208.00000	0.00000	0.00000	0.00000	180.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFS4	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFS5	scored	1.00000	35.00000	104.00000	0.00000	0.00000	0.00000	1.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFS6	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFS7	scored	1.00000	32.00000	124.00000	32.00000	0.00000	0.00000	160.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFS8	scored	1.00000	14.00000	176.00000	0.00000	0.00000	0.00000	28.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA1	scored	1.00000	32.00000	70.00000	0.00000	1.00000	1.00000	4.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA2	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFA3	scored	1.00000	22.00000	83.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA5	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFA6	scored	1.00000	6.00000	113.00000	0.00000	0.00000	0.00000	11.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA7	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFA8	scored	1.00000	3.00000	124.00000	45.00000	0.00000	0.00000	16.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA9	scored	1.00000	11.00000	337.00000	0.00000	2.00000	0.00000	137.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA10	scored	1.00000	41.00000	301.00000	19.00000	2.00000	0.00000	1.00000	not assessed: 1 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA11	scored	1.00000	12.00000	104.00000	36.00000	0.00000	0.00000	8.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA12	scored	1.00000	3.00000	57.00000	86.00000	0.00000	0.00000	120.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFA13	scored	1.00000	27.00000	138.00000	0.00000	1.00000	1.00000	2.00000	not assessed: 2 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFAB1	scored	1.00000	4.00000	85.00000	0.00000	0.00000	0.00000	179.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB1	scored	1.00000	16.00000	56.00000	0.00000	0.00000	0.00000	17.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB2	scored	1.00000	27.00000	59.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB3	scored	1.00000	14.00000	80.00000	0.00000	0.00000	0.00000	10.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB4	scored	1.00000	35.00000	110.00000	18.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB5	scored	1.00000	21.00000	106.00000	32.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB6	scored	1.00000	9.00000	93.00000	31.00000	0.00000	0.00000	8.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB7	scored	1.00000	14.00000	110.00000	1.00000	1.00000	0.00000	2.00000	not assessed: 2 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB8	scored	1.00000	34.00000	127.00000	26.00000	1.00000	1.00000	4.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB9	scored	1.00000	25.00000	123.00000	49.00000	1.00000	0.00000	4.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB10	scored	1.00000	29.00000	171.00000	0.00000	2.00000	1.00000	1.00000	not assessed: 1 candidates, at least 3 needed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFB11	scored	1.00000	31.00000	97.00000	0.00000	1.00000	0.00000	3.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	pan-troglodytes	I	NDUFC1	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	I	NDUFC2	scored	1.00000	16.00000	79.00000	40.00000	1.00000	0.00000	5.00000	assessed	102.00000	2.00000	5XTD
+homo-sapiens	gorilla-gorilla	III	UQCRC1	scored	2.00000	13.00000	892.00000	0.00000	2.00000	0.00000	24.00000	assessed	54.00000	2.00000	5XTE
+homo-sapiens	gorilla-gorilla	III	UQCRC2	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	III	CYC1	scored	2.00000	36.00000	482.00000	0.00000	4.00000	0.00000	5.00000	assessed	54.00000	2.00000	5XTE
+homo-sapiens	gorilla-gorilla	III	UQCRFS1	scored	2.00000	23.00000	392.00000	0.00000	0.00000	0.00000	7.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	54.00000	2.00000	5XTE
+homo-sapiens	gorilla-gorilla	III	UQCRB	scored	2.00000	17.00000	158.00000	54.00000	0.00000	0.00000	3.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	54.00000	2.00000	5XTE
+homo-sapiens	gorilla-gorilla	III	UQCRQ	scored	2.00000	19.00000	162.00000	0.00000	0.00000	0.00000	7.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	54.00000	2.00000	5XTE
+homo-sapiens	gorilla-gorilla	III	UQCRH	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	III	UQCR10	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	III	UQCR11	scored	2.00000	2.00000	102.00000	0.00000	2.00000	0.00000	173.00000	assessed	54.00000	2.00000	5XTE
+homo-sapiens	pan-paniscus	III	UQCRC1	scored	2.00000	13.00000	892.00000	0.00000	0.00000	0.00000	24.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	50.00000	0.00000	5XTE
+homo-sapiens	pan-paniscus	III	UQCRC2	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	III	CYC1	scored	2.00000	36.00000	482.00000	0.00000	0.00000	0.00000	5.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	50.00000	0.00000	5XTE
+homo-sapiens	pan-paniscus	III	UQCRFS1	scored	2.00000	23.00000	392.00000	0.00000	2.00000	0.00000	7.00000	assessed	50.00000	0.00000	5XTE
+homo-sapiens	pan-paniscus	III	UQCRB	scored	2.00000	17.00000	158.00000	54.00000	0.00000	0.00000	3.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	50.00000	0.00000	5XTE
+homo-sapiens	pan-paniscus	III	UQCRQ	scored	2.00000	19.00000	162.00000	0.00000	0.00000	0.00000	7.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	50.00000	0.00000	5XTE
+homo-sapiens	pan-paniscus	III	UQCRH	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	III	UQCR10	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	III	UQCR11	scored	2.00000	2.00000	102.00000	0.00000	0.00000	0.00000	173.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	50.00000	0.00000	5XTE
+homo-sapiens	pan-troglodytes	III	UQCRC1	scored	2.00000	13.00000	892.00000	0.00000	0.00000	0.00000	24.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	48.00000	2.00000	5XTE
+homo-sapiens	pan-troglodytes	III	UQCRC2	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	III	CYC1	scored	2.00000	36.00000	482.00000	0.00000	0.00000	0.00000	5.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	48.00000	2.00000	5XTE
+homo-sapiens	pan-troglodytes	III	UQCRFS1	scored	2.00000	23.00000	392.00000	0.00000	2.00000	0.00000	7.00000	assessed	48.00000	2.00000	5XTE
+homo-sapiens	pan-troglodytes	III	UQCRB	scored	2.00000	17.00000	158.00000	54.00000	0.00000	0.00000	3.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	48.00000	2.00000	5XTE
+homo-sapiens	pan-troglodytes	III	UQCRQ	scored	2.00000	19.00000	162.00000	0.00000	0.00000	0.00000	7.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	48.00000	2.00000	5XTE
+homo-sapiens	pan-troglodytes	III	UQCRH	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	III	UQCR10	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	III	UQCR11	scored	2.00000	2.00000	102.00000	0.00000	0.00000	0.00000	173.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	48.00000	2.00000	5XTE
+homo-sapiens	gorilla-gorilla	IV	COX4I1	scored	1.00000	42.00000	144.00000	0.00000	1.00000	1.00000	1.00000	not assessed: 1 candidates, at least 3 needed	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX5A	scored	1.00000	9.00000	109.00000	0.00000	2.00000	0.00000	14.00000	assessed	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX5B	scored	1.00000	47.00000	98.00000	0.00000	1.00000	1.00000	3.00000	assessed	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX6A1	scored	1.00000	31.00000	75.00000	0.00000	0.00000	0.00000	11.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX6B1	scored	1.00000	24.00000	82.00000	0.00000	0.00000	0.00000	12.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX6C	scored	1.00000	26.00000	73.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX7A2	scored	1.00000	26.00000	56.00000	0.00000	1.00000	0.00000	0.00000	not assessed: 0 candidates, at least 3 needed	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX7B	scored	1.00000	8.00000	49.00000	0.00000	0.00000	0.00000	155.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX7C	scored	1.00000	30.00000	47.00000	0.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	COX8A	scored	1.00000	18.00000	43.00000	0.00000	2.00000	2.00000	0.00000	not assessed: 0 candidates, at least 3 needed	23.00000	1.00000	5Z62
+homo-sapiens	gorilla-gorilla	IV	NDUFA4	scored	1.00000	27.00000	79.00000	0.00000	3.00000	0.00000	5.00000	assessed	23.00000	1.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX4I1	scored	1.00000	42.00000	144.00000	0.00000	0.00000	0.00000	1.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX5A	scored	1.00000	9.00000	109.00000	0.00000	1.00000	0.00000	14.00000	assessed	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX5B	scored	1.00000	47.00000	98.00000	0.00000	3.00000	2.00000	3.00000	assessed	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX6A1	scored	1.00000	31.00000	75.00000	0.00000	0.00000	0.00000	11.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX6B1	scored	1.00000	24.00000	82.00000	0.00000	0.00000	0.00000	12.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX6C	scored	1.00000	26.00000	73.00000	0.00000	1.00000	0.00000	2.00000	not assessed: 2 candidates, at least 3 needed	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX7A2	scored	1.00000	26.00000	56.00000	0.00000	1.00000	1.00000	3.00000	assessed	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX7B	scored	1.00000	8.00000	49.00000	0.00000	0.00000	0.00000	155.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX7C	scored	1.00000	30.00000	47.00000	0.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	COX8A	scored	1.00000	18.00000	43.00000	0.00000	1.00000	1.00000	4.00000	assessed	17.00000	0.00000	5Z62
+homo-sapiens	pan-paniscus	IV	NDUFA4	scored	1.00000	27.00000	79.00000	0.00000	0.00000	0.00000	5.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	17.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX4I1	scored	1.00000	42.00000	144.00000	0.00000	0.00000	0.00000	1.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX5A	scored	1.00000	9.00000	109.00000	0.00000	1.00000	0.00000	14.00000	assessed	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX5B	scored	1.00000	47.00000	98.00000	0.00000	2.00000	1.00000	3.00000	assessed	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX6A1	scored	1.00000	31.00000	75.00000	0.00000	0.00000	0.00000	11.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX6B1	scored	1.00000	24.00000	82.00000	0.00000	0.00000	0.00000	12.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX6C	scored	1.00000	26.00000	73.00000	0.00000	1.00000	0.00000	2.00000	not assessed: 2 candidates, at least 3 needed	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX7A2	scored	1.00000	26.00000	56.00000	0.00000	1.00000	1.00000	3.00000	assessed	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX7B	scored	1.00000	8.00000	49.00000	0.00000	0.00000	0.00000	155.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX7C	scored	1.00000	30.00000	47.00000	0.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	COX8A	scored	1.00000	18.00000	43.00000	0.00000	1.00000	1.00000	4.00000	assessed	18.00000	0.00000	5Z62
+homo-sapiens	pan-troglodytes	IV	NDUFA4	scored	1.00000	27.00000	79.00000	0.00000	0.00000	0.00000	5.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	18.00000	0.00000	5Z62
+homo-sapiens	gorilla-gorilla	V	ATP5F1A	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5F1B	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5F1C	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5F1D	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5F1E	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5PB	scored	1.00000	37.00000	198.00000	0.00000	1.00000	1.00000	2.00000	not assessed: 2 candidates, at least 3 needed	21.00000	2.00000	8H9S
+homo-sapiens	gorilla-gorilla	V	ATP5PD	scored	1.00000	26.00000	132.00000	24.00000	0.00000	0.00000	9.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	21.00000	2.00000	8H9S
+homo-sapiens	gorilla-gorilla	V	ATP5PF	scored	1.00000	1.00000	67.00000	0.00000	1.00000	0.00000	177.00000	assessed	21.00000	2.00000	8H9S
+homo-sapiens	gorilla-gorilla	V	ATP5PO	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5MC1	scored	4.00000	15.00000	300.00000	0.00000	0.00000	0.00000	180.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	21.00000	2.00000	8H9S
+homo-sapiens	gorilla-gorilla	V	ATP5ME	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5MF	scored	1.00000	21.00000	78.00000	0.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	21.00000	2.00000	8H9S
+homo-sapiens	gorilla-gorilla	V	ATP5MG	not assessed: no alignment of the gene											
+homo-sapiens	gorilla-gorilla	V	ATP5MJ	scored	1.00000	20.00000	41.00000	0.00000	2.00000	1.00000	10.00000	assessed	21.00000	2.00000	8H9S
+homo-sapiens	gorilla-gorilla	V	ATP5IF1	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5F1A	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5F1B	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5F1C	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5F1D	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5F1E	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5PB	scored	1.00000	37.00000	198.00000	0.00000	1.00000	1.00000	2.00000	not assessed: 2 candidates, at least 3 needed	15.00000	0.00000	8H9S
+homo-sapiens	pan-paniscus	V	ATP5PD	scored	1.00000	26.00000	132.00000	24.00000	1.00000	0.00000	9.00000	assessed	15.00000	0.00000	8H9S
+homo-sapiens	pan-paniscus	V	ATP5PF	scored	1.00000	1.00000	67.00000	0.00000	2.00000	0.00000	177.00000	assessed	15.00000	0.00000	8H9S
+homo-sapiens	pan-paniscus	V	ATP5PO	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5MC1	scored	4.00000	15.00000	300.00000	0.00000	0.00000	0.00000	180.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	15.00000	0.00000	8H9S
+homo-sapiens	pan-paniscus	V	ATP5ME	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5MF	scored	1.00000	21.00000	78.00000	0.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	15.00000	0.00000	8H9S
+homo-sapiens	pan-paniscus	V	ATP5MG	not assessed: no alignment of the gene											
+homo-sapiens	pan-paniscus	V	ATP5MJ	scored	1.00000	20.00000	41.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	15.00000	0.00000	8H9S
+homo-sapiens	pan-paniscus	V	ATP5IF1	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5F1A	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5F1B	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5F1C	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5F1D	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5F1E	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5PB	scored	1.00000	37.00000	198.00000	0.00000	2.00000	1.00000	2.00000	not assessed: 2 candidates, at least 3 needed	16.00000	1.00000	8H9S
+homo-sapiens	pan-troglodytes	V	ATP5PD	scored	1.00000	26.00000	132.00000	24.00000	0.00000	0.00000	9.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	16.00000	1.00000	8H9S
+homo-sapiens	pan-troglodytes	V	ATP5PF	scored	1.00000	1.00000	67.00000	0.00000	2.00000	0.00000	177.00000	assessed	16.00000	1.00000	8H9S
+homo-sapiens	pan-troglodytes	V	ATP5PO	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5MC1	scored	4.00000	15.00000	300.00000	0.00000	0.00000	0.00000	180.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	16.00000	1.00000	8H9S
+homo-sapiens	pan-troglodytes	V	ATP5ME	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5MF	scored	1.00000	21.00000	78.00000	0.00000	0.00000	0.00000	4.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	16.00000	1.00000	8H9S
+homo-sapiens	pan-troglodytes	V	ATP5MG	not assessed: no alignment of the gene											
+homo-sapiens	pan-troglodytes	V	ATP5MJ	scored	1.00000	20.00000	41.00000	0.00000	0.00000	0.00000	2.00000	not run: the donor's ortholog changes no placed residue, so its restoration is 0 and cannot be a candidate's	16.00000	1.00000	8H9S
+homo-sapiens	pan-troglodytes	V	ATP5IF1	not assessed: no alignment of the gene											

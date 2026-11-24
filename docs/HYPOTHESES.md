@@ -3144,7 +3144,7 @@ should [tell] which protein bases depend on others"). Nothing is run. The rule b
 - *If both parts fail,* sequence models of every kind tried, with or without the partner, do not read mito-nuclear
   fit from sequence, and the question goes back to data with few differences (H33) or to physics.
 
-## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (proposed; step 1 coded, not run)
+## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (step 1 run: no subunit named; step 2, the swap, run on the apes: no candidate, and the swap is nearly trivial for them)
 
 **State: proposed on 2026-11-24, after the maintainer's correction: the aim is to find nuclear genes to edit
 (mitochondrial DNA cannot be edited), and H28, H29, H31 and H34 judged their models only by how well they ranked the
@@ -3309,3 +3309,32 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     structure model) is not run:* it needs a GPU card, and every A100 of the cluster is held by other groups' trainings at
     the time of writing; no GPU and no `GPUrequeue` partition is used. *Jobs:* one task per (donor, complex, gene), on CPU
     nodes, the whole run twice and the two sets of tables compared byte for byte.
+  - **Result of step 2 (the swap), 2026-11-24: no candidate.** Tasks from commit 2c3d50c (jobs 6618903, with 46 tasks
+    run again as 6619266 after a start-up file error; second run 6618904; 432 task tables identical byte for byte);
+    collection, tests (60 passed) and breaks (64 of 64 caught) at 03c5d36 (job 6625589; the first collection, 6619267,
+    read the rows of kind `null` as missing values and was discarded). Tables and README: `results/h36/step2/`. *What was
+    and was not assessed:* of the 216 (donor, complex, gene) tasks, 149 were scored; 66 had no alignment of the gene (the vertebrate alignments hold 50 genes, of the
+    structures' nuclear genes) and 1 had no ortholog of the donor (the
+    bonobo's NDUFA13). Of the 149, 88 have an ortholog that changes no placed residue (restoration exactly 0, null not
+    run), 21 have fewer than 3 mammals in the null's window (null not assessed) and 40 have a null of 50 draws. *The
+    apes differ from human in 0 to a few residues per subunit, so the swap is nearly trivial for them:* the changed
+    residues per subunit are 1 to 4 in most subunits (7 in gorilla NDUFA10), and the restorations are small, mostly within
+    +-0.3 kcal/mol, with a few larger (NDUFB11 0.57 in the chimpanzee and the bonobo and 0.44 in the gorilla, whose null's
+    95th percentile is 0.57, not exceeded; NDUFB10 0.75, 0.82 and 0.67 in the chimpanzee, the bonobo and the gorilla, and
+    the bonobo's NDUFB5 0.61, whose null is not assessed: 2 candidates or fewer, so nothing is said of them against it). The seed-to-seed spread of a restoration is 0.001 to 0.15. *Against the rule:* no subunit is a
+    candidate in any complex. Six (donor, subunit) pairs exceed the 95th percentile of their null (gorilla NDUFB8,
+    bonobo NDUFS2, chimpanzee NDUFB9, gorilla CYC1, gorilla COX5A, bonobo ATP5PD); none is both among the largest and above its null in more than
+    one donor, and all six have a restoration of 0.04 kcal/mol or less, or negative, with a null whose 95th percentile
+    is itself 0.03 or less there, which is the model's noise level and not a restoration. NDUFB10 and NDUFB11 are
+    among the largest in all three donors, but NDUFB10 has no assessable null and NDUFB11's restoration does not exceed
+    its own (equal to it for the chimpanzee and the bonobo). *Against the activities:* the restoration summed over the genes scored for every donor, against the stated
+    percentages of complex I (59, 57, 55): Spearman -0.50, n = 3 (p 0.67); the other complexes state no percentage, so
+    there is nothing to correlate. This claims nothing. *Reading:* the swap, as the maintainer designed it, cannot name a
+    nuclear subunit for the human host and the apes, because the apes' orthologs hardly differ from the human ones and the
+    model's own noise is as large as most restorations. The informative cases are the mouse and hamster hosts, whose
+    donors differ from them at many residues; they wait for the orthologs of the mouse, rat and hamster species to be
+    fetched from their genomes (and for the Sumatran orangutan's), and the Bornean orangutan, which has orthologs but no
+    stated outcome per complex, was not run. *Not run:* part (a) of the step (the embeddings of a structure model of the
+    interface) needs a GPU card and every A100 of the cluster was held by other groups' trainings; no GPU and no
+    `GPUrequeue` partition was used. The controls with the two other weights of the model were not repeated. A nuclear
+    residue's own contribution was not read (the unit is the subunit).
