@@ -3146,7 +3146,7 @@ should [tell] which protein bases depend on others"). Nothing is run. The rule b
 
 - **Result of part 1, 2026-11-24** (tables: job 6629999 at a73d76f; readout: job 6630056 at 3034258; `results/h35/`). *Cybrids: Evo 2 does not count in any arm.* T1 (Spearman against the stated activities) -0.18 (both strands), -0.13 (plus), -0.19 (minus), against the bar -0.52; T2 (AUC, reduced against not) 0.71, 0.71, 0.63 against 0.83; T3 4, 3, 3 against the bar 4 (met only by both strands, while T1 and T2 fail). The mean-score version is no better. *Variants: the rule counts in two of the three arms.* Over all 95 harmful and 1,576 harmless variants Evo 2's area is 0.905 (both strands), 0.894 (plus), 0.898 (minus); on the 50 harmful and 1,201 harmless variants the build's alignments cover, the baseline (fewer different bases among mammals) has 0.910 and Evo 2 0.966 (both strands), difference +0.055, 95% interval 0.002 to 0.114: counts; minus strand +0.049 (0.001 to 0.104): counts; plus strand +0.044 (-0.015 to 0.105): does not count. Reading: Evo 2 reads the variants about as well as conservation and slightly better where an alignment exists, and it gives no help for the cybrids, as the other models did not. The variants' interval touches zero at the lower end (0.001 to 0.002), so this is a thin margin, and the arm choice (both strands) was made before the score. Tables are from one run; no second run was compared byte for byte.
 
-## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (step 1 run: no subunit named; step 2, the swap, run on the apes: no candidate, and the swap is nearly trivial for them)
+## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (step 1 run: no subunit named; step 2, the swap, run on the apes and on the mouse host: no candidate)
 
 **State: proposed on 2026-11-24, after the maintainer's correction: the aim is to find nuclear genes to edit
 (mitochondrial DNA cannot be edited), and H28, H29, H31 and H34 judged their models only by how well they ranked the
@@ -3396,3 +3396,26 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     is read in the first change's terms (a candidate or none), and a restoration within the model's seed-to-seed noise, or
     not above the null, is not a restoration. *Not run:* the same as for the apes (part (a), the controls with the two other
     weights; the unit is the subunit).
+  - **Result of step 2 for the mouse host, 2026-11-24: no candidate.** Tasks from commit 7aec214 (array 6631178, second run 6631179
+    into another folder; 342 task tables identical byte for byte); collection, tests (126 passed) and breaks (96 of 96 of the swap's,
+    60 of 60 of the orthologs') at 369700c (job 6638790; the code differs from the tasks' by a refusal and a simplified expression
+    outside `run`). The first submission (8 cores a task, jobs 6630435 to 6630437) was cancelled before a task started, held by the
+    shared CPU cap; the run is at 2 cores a task. Tables and README: `results/h36/step2-mouse/`. *What was and was not assessed:* of the 171
+    tasks (rat, *M. caroli*, *M. pahari*; I, III, IV), 123 were scored and 48 had no chain of the mouse's own protein for the gene
+    touching the mtDNA-encoded chains (I: 9 genes that touch none; III: 3; IV: COX6A1, COX7A2 and COX8A, where the structure holds
+    other isoforms, and NDUFA4); of the 123, 30 have a donor protein that changes no placed residue (restoration exactly 0), 52 have a
+    null of 50 draws, 39 have fewer than 3 mammals in the window and 2 no alignment. *M. spretus*, *M. terricolor* and *Otomys
+    irroratus*: not assessed, no ortholog source. *Against the rule:* no subunit is a candidate: the restorations are small (36 above
+    0, 57 below, 30 exactly 0; the seed-to-seed spread has a median of 0.04), 10 of the 52 with a null exceed its 95th percentile and 6
+    of those are also among the largest, none in more than one of the three donors (two are needed). The largest with a null: rat IV
+    COX4I1 0.66 (null 95th percentile 0.63) and *M. pahari* III UQCRC1 0.59 (0.49; a pair stated as not reduced); in complex I the
+    largest (rat NDUFA1 0.44, *M. pahari* NDUFB4 0.66, *M. caroli* NDUFA11 0.64) have no null, fewer than 3 mammals differing from the
+    mouse as often. *The reading on the reduced pairs* (rat I, rat IV, *M. pahari* IV): complex I has one reduced donor and no gene
+    above its null among the largest; in IV COX4I1, COX5B and COX6C are both in the rat only, one of two, not more than half, and the
+    reduced *M. pahari* IV pair (59%) has no restoration above 0 in any of its 7 genes; III has no reduced pair. The not-reduced pairs hold
+    three of the six (NDUFB1, NDUFB9, UQCRC1). *Against the activities:* complex I (n 3) Spearman 1.0, IV (n 3) 0.5 (p 0.67), pooled
+    (n 8) 0.38 (p 0.35); with 3 or 2 pairs a complex this claims nothing. *Reading:* as for the apes, the swap, with the model's noise,
+    does not name a nuclear subunit for the mouse host; nothing is claimed from the handful of cases. It also says nothing of the four
+    IV genes with no chain, of the three donors with no ortholog source, or of the loss of the reduced *M. pahari* IV pair if it is not the
+    binding of a subunit to the mtDNA-encoded chains. *Not run:* part (a) (a GPU), the controls with the two other weights. The cost
+    was 94 wall-clock hours at 2 cores for the first run, about 63 core-hours a donor, not the 8 that the first run's estimate gave.
