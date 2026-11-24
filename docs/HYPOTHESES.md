@@ -3111,6 +3111,18 @@ should [tell] which protein bases depend on others"). Nothing is run. The rule b
   past the bars of the count. The checkpoint is the largest that fits one card of ours; which one, and how a place
   is scored by a model that reads left to right (both strands, or one), is fixed with the code before any score.
   Expected, said in advance: level with KronGenome and conservation on the variants, nothing on the cybrids.
+- *Part 1 made exact with the code, 2026-11-24, before any score.* The checkpoint is `evo2_7b` (7 billion
+  parameters, context of a million bases; revision bda0089 of its repository, the file used only with its SHA-256):
+  its authors say the 1B, 20B and 40B checkpoints need FP8 on cards of a newer kind than ours to be numerically
+  right, the 7B ones do not. The model reads left to right, so each strand is read twice, from the record's start
+  and from its middle, and a place takes the reading with more bases before it (at least half the genome); the
+  minus strand is read as the reverse complement and turned back; the log-probabilities of the two strands are
+  averaged and brought back to sum to one over the four bases (`mitoport/evo_table.py`,
+  `slurm/h35-evo2-table.py`). The table has KronGenome's format and goes through H31's readouts unchanged, as the
+  arm `evo2`; the single strands are reported beside as `evo2plus` and `evo2minus`, claimed as nothing. No genetic
+  code or species is told to the model. Controls: the table twice (largest difference reported; a model in half
+  precision on a card need not give the same bytes); how often the model's likeliest base is the genome's own,
+  beside KronGenome's 76% and 79%.
 - *Part 2, the dependency map across the interface: the test of the maintainer's point.* For each mitochondrial
   subunit and each nuclear subunit it touches in the human structures (the contact pairs and their control pairs of
   `mitoport partners`), the two human proteins are given to the protein model as one input, and the dependency of
