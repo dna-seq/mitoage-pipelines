@@ -1,0 +1,2060 @@
+host	donor	complex	gene	human_pos	human_aa	host_aa	donor_aa	blosum	n_aa	rasa_complex	conserved	buried	contact_nuclear	contact_mt	nuclear_chains
+homo-sapiens	gorilla-gorilla	I	ND1	2	P	P	S	-1.0000	10	0.5149	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND1	64	A	A	S	1.0000	11	0.2671	0.0000	0.0000	1	1	J
+homo-sapiens	gorilla-gorilla	I	ND1	157	S	S	N	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+homo-sapiens	gorilla-gorilla	I	ND1	167	T	T	M	-1.0000	15	0.2527	0.0000	0.0000	1	0	W,u
+homo-sapiens	gorilla-gorilla	I	ND1	178	S	S	T	1.0000	6	0.0138	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND1	229	T	T	M	-1.0000	6	0.0133	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND1	240	T	T	M	-1.0000	6	0.0717	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND1	248	D	D	N	1.0000	14	0.3171	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND1	250	L	L	H	-3.0000	19	0.6192	0.0000	0.0000	1	0	u
+homo-sapiens	gorilla-gorilla	I	ND1	257	T	T	V	0.0000	8	0.2972	0.0000	0.0000	1	0	S
+homo-sapiens	gorilla-gorilla	I	ND1	258	Y	Y	C	-2.0000	11	0.4848	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND1	260	V	V	I	3.0000	6	0.0555	0.0000	1.0000	1	0	S
+homo-sapiens	gorilla-gorilla	I	ND1	305	V	V	I	3.0000	7	0.0278	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND1	309	I	I	T	-1.0000	6	0.0123	0.0000	1.0000	1	1	U
+homo-sapiens	gorilla-gorilla	I	ND2	8	V	V	I	3.0000	9	0.1805	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND2	29	T	T	A	0.0000	5	0.0187	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	76	F	F	S	-2.0000	12	0.1157	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND2	86	M	M	T	-1.0000	9	0.0632	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	89	T	T	A	0.0000	16	0.1956	0.0000	1.0000	1	0	h
+homo-sapiens	gorilla-gorilla	I	ND2	99	M	M	V	1.0000	8	0.0420	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	100	M	M	V	1.0000	8	0.1517	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	125	T	T	M	-1.0000	17	0.4382	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	139	I	I	M	1.0000	6	0.0245	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	147	P	P	S	-1.0000	12	0.3271	0.0000	0.0000	1	0	a
+homo-sapiens	gorilla-gorilla	I	ND2	149	L	L	T	-1.0000	6	0.0114	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	163	M	M	L	2.0000	9	0.3610	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	187	M	M	V	1.0000	4	0.0108	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	215	A	A	T	0.0000	7	0.0873	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	265	A	A	L	-1.0000	6	0.1104	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	275	S	S	D	0.0000	12	0.0585	0.0000	1.0000	1	0	V
+homo-sapiens	gorilla-gorilla	I	ND2	278	I	I	T	-1.0000	9	0.0307	0.0000	1.0000	1	0	V
+homo-sapiens	gorilla-gorilla	I	ND2	284	T	T	I	-1.0000	8	0.4187	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND2	317	F	F	L	0.0000	10	0.0386	0.0000	1.0000	1	0	w
+homo-sapiens	gorilla-gorilla	I	ND2	319	H	H	Y	2.0000	18	0.1565	0.0000	1.0000	1	0	w
+homo-sapiens	gorilla-gorilla	I	ND2	331	A	A	T	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+homo-sapiens	gorilla-gorilla	I	ND2	346	I	I	V	3.0000	13	0.4215	0.0000	0.0000	1	0	g
+homo-sapiens	gorilla-gorilla	I	ND3	9	I	I	T	-1.0000	8	0.1755	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND3	29	G	G	S	0.0000	11	0.3931	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND3	34	S	S	T	1.0000	11	0.1807	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND3	35	T	T	N	0.0000	7	0.2512	0.0000	0.0000	1	1	C
+homo-sapiens	gorilla-gorilla	I	ND3	44	M	M	V	1.0000	9	0.1143	0.0000	1.0000	1	0	E,Q
+homo-sapiens	gorilla-gorilla	I	ND3	49	V	V	I	3.0000	5	0.0732	0.0000	1.0000	1	1	Q
+homo-sapiens	gorilla-gorilla	I	ND3	99	A	A	T	0.0000	8	0.3598	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND3	114	T	T	A	0.0000	12	0.1049	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND4	6	V	V	A	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+homo-sapiens	gorilla-gorilla	I	ND4	52	C	C	Y	-2.0000	13	0.0987	0.0000	1.0000	1	0	a
+homo-sapiens	gorilla-gorilla	I	ND4	54	P	P	L	-3.0000	12	0.1643	0.0000	1.0000	1	0	a,n
+homo-sapiens	gorilla-gorilla	I	ND4	55	T	T	S	1.0000	13	0.2533	0.0000	0.0000	1	0	u
+homo-sapiens	gorilla-gorilla	I	ND4	86	S	S	N	1.0000	10	0.6502	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	124	T	T	A	0.0000	3	0.0476	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND4	131	A	A	V	0.0000	4	0.1770	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	145	A	A	V	0.0000	3	0.0728	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	166	Y	Y	H	2.0000	12	0.2737	0.0000	0.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND4	187	S	S	P	-1.0000	17	0.5445	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	230	V	V	M	1.0000	4	0.1596	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	247	T	T	M	-1.0000	8	0.0491	0.0000	1.0000	1	0	d
+homo-sapiens	gorilla-gorilla	I	ND4	263	V	V	A	0.0000	6	0.0486	0.0000	1.0000	1	0	o
+homo-sapiens	gorilla-gorilla	I	ND4	299	T	T	A	0.0000	7	0.0203	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	314	I	I	V	3.0000	8	0.0429	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	357	F	F	L	0.0000	9	0.3774	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	391	I	I	T	-1.0000	11	0.2731	0.0000	0.0000	1	0	o
+homo-sapiens	gorilla-gorilla	I	ND4	398	L	L	S	-2.0000	10	0.3953	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	402	V	V	I	3.0000	4	0.1319	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	418	S	S	P	-1.0000	9	0.1804	0.0000	1.0000	1	1	c
+homo-sapiens	gorilla-gorilla	I	ND4	424	N	N	T	0.0000	12	0.3091	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND4	435	T	T	I	-1.0000	9	0.0062	0.0000	1.0000	1	0	a,e
+homo-sapiens	gorilla-gorilla	I	ND4	458	S	S	T	1.0000	11	0.1349	0.0000	1.0000	1	1	d
+homo-sapiens	gorilla-gorilla	I	ND4L	62	A	A	T	0.0000	6	0.0000	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND4L	91	H	H	Q	0.0000	5	0.6571	0.0000	0.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND5	4	H	H	Y	2.0000	13	0.0426	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	5	T	T	A	0.0000	11	0.0140	0.0000	1.0000	1	0	b
+homo-sapiens	gorilla-gorilla	I	ND5	11	T	T	A	0.0000	7	0.0733	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	23	L	L	F	0.0000	15	0.5680	0.0000	0.0000	1	0	a
+homo-sapiens	gorilla-gorilla	I	ND5	24	V	V	I	3.0000	13	0.5374	0.0000	0.0000	1	0	a
+homo-sapiens	gorilla-gorilla	I	ND5	30	N	N	S	1.0000	19	0.6730	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	55	M	M	L	2.0000	7	0.1991	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	61	V	V	A	0.0000	13	0.0000	0.0000	1.0000	1	0	b
+homo-sapiens	gorilla-gorilla	I	ND5	65	N	N	S	1.0000	5	0.1572	0.0000	1.0000	1	0	b
+homo-sapiens	gorilla-gorilla	I	ND5	74	T	T	I	-1.0000	6	0.0522	0.0000	1.0000	1	0	d
+homo-sapiens	gorilla-gorilla	I	ND5	156	S	S	G	0.0000	5	0.0277	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND5	162	A	A	T	0.0000	9	0.1123	0.0000	1.0000	1	0	c
+homo-sapiens	gorilla-gorilla	I	ND5	169	I	I	V	3.0000	6	0.1900	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND5	190	I	I	L	2.0000	10	0.0123	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	202	A	A	S	1.0000	8	0.1903	0.0000	1.0000	1	0	d
+homo-sapiens	gorilla-gorilla	I	ND5	206	A	A	T	0.0000	18	0.5112	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	209	S	S	N	1.0000	12	0.4076	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	211	T	T	I	-1.0000	8	0.3409	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	216	L	L	F	0.0000	5	0.0421	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	257	I	I	V	3.0000	3	0.0061	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	265	P	P	H	-2.0000	3	0.4565	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	270	S	S	N	1.0000	4	0.1974	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	271	P	P	S	-1.0000	16	0.5156	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	273	I	I	A	-1.0000	8	0.0429	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	314	M	M	V	1.0000	5	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	315	V	V	A	0.0000	5	0.0486	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	320	N	N	G	0.0000	2	0.3033	1.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	365	T	T	A	0.0000	11	0.0594	0.0000	1.0000	1	0	Y,Z
+homo-sapiens	gorilla-gorilla	I	ND5	374	T	T	A	0.0000	7	0.0538	0.0000	1.0000	1	0	Z
+homo-sapiens	gorilla-gorilla	I	ND5	381	A	A	M	-1.0000	6	0.1217	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	394	H	H	L	-3.0000	9	0.2203	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	403	Y	Y	H	2.0000	5	0.5937	0.0000	0.0000	1	0	c
+homo-sapiens	gorilla-gorilla	I	ND5	412	T	T	I	-1.0000	3	0.1122	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	440	L	L	F	0.0000	12	0.3095	0.0000	0.0000	1	0	X,Y,Z
+homo-sapiens	gorilla-gorilla	I	ND5	441	T	T	A	0.0000	12	0.1740	0.0000	1.0000	1	0	Z
+homo-sapiens	gorilla-gorilla	I	ND5	447	N	N	Y	-2.0000	11	0.2767	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	448	P	P	S	-1.0000	11	0.6144	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	458	A	A	T	0.0000	8	0.0468	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	459	A	A	I	-1.0000	8	0.3172	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	467	L	L	F	0.0000	8	0.3545	0.0000	0.0000	1	0	v
+homo-sapiens	gorilla-gorilla	I	ND5	473	S	S	L	-2.0000	13	0.2588	0.0000	0.0000	1	0	v
+homo-sapiens	gorilla-gorilla	I	ND5	475	A	A	T	0.0000	12	0.2024	0.0000	0.0000	1	0	v
+homo-sapiens	gorilla-gorilla	I	ND5	477	P	P	V	-2.0000	14	0.3576	0.0000	0.0000	1	0	v
+homo-sapiens	gorilla-gorilla	I	ND5	478	F	F	P	-4.0000	10	0.2493	0.0000	0.0000	1	0	v
+homo-sapiens	gorilla-gorilla	I	ND5	480	T	T	M	-1.0000	7	0.1999	0.0000	1.0000	1	0	Y
+homo-sapiens	gorilla-gorilla	I	ND5	492	A	A	S	1.0000	11	0.4140	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	493	V	V	I	3.0000	8	0.2082	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	495	F	F	L	0.0000	8	0.4881	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	515	S	S	H	-1.0000	17	0.5741	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	517	L	L	P	-3.0000	15	0.6291	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	518	C	C	H	-3.0000	16	0.4555	0.0000	0.0000	1	0	c
+homo-sapiens	gorilla-gorilla	I	ND5	531	S	S	N	1.0000	13	0.2077	0.0000	0.0000	1	0	c
+homo-sapiens	gorilla-gorilla	I	ND5	544	T	T	M	-1.0000	15	0.3945	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	556	T	T	I	-1.0000	13	0.0140	0.0000	1.0000	1	0	o
+homo-sapiens	gorilla-gorilla	I	ND5	573	T	T	A	0.0000	13	0.1388	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND5	576	I	I	T	-1.0000	12	0.7027	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	583	M	M	L	2.0000	5	0.1905	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND5	596	I	I	L	2.0000	10	0.3310	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND5	597	L	L	M	2.0000	9	0.3504	0.0000	0.0000	1	0	V
+homo-sapiens	gorilla-gorilla	I	ND5	598	T	T	I	-1.0000	12	0.1170	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND6	2	M	M	T	-1.0000	12	0.4853	0.0000	0.0000	1	0	W
+homo-sapiens	gorilla-gorilla	I	ND6	4	A	A	V	0.0000	11	0.3589	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND6	41	V	V	A	0.0000	10	0.3255	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	I	ND6	46	F	F	C	-2.0000	9	0.1011	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	I	ND6	120	S	S	N	1.0000	15	0.4178	0.0000	0.0000	1	0	h
+homo-sapiens	gorilla-gorilla	III	CYTB	11	M	M	A	-1.0000	8	0.2705	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	29	A	A	T	0.0000	10	0.4707	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	78	I	I	T	-1.0000	7	0.0545	0.0000	1.0000	1	0	C,H
+homo-sapiens	gorilla-gorilla	III	CYTB	109	Y	Y	H	2.0000	9	0.2784	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	110	S	S	Q	0.0000	14	0.3807	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	122	A	A	T	0.0000	8	0.1863	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	164	I	I	V	3.0000	4	0.2070	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	190	A	A	T	0.0000	7	0.2870	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	193	A	A	T	0.0000	6	0.2517	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	212	T	T	P	-1.0000	11	0.3136	0.0000	0.0000	1	0	F
+homo-sapiens	gorilla-gorilla	III	CYTB	229	A	A	I	-1.0000	8	0.2943	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	233	L	L	F	0.0000	10	0.1262	0.0000	1.0000	1	0	H
+homo-sapiens	gorilla-gorilla	III	CYTB	234	L	L	F	0.0000	9	0.3945	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	238	S	S	T	1.0000	11	0.3475	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	279	T	T	A	0.0000	2	0.0133	1.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	302	A	A	T	0.0000	9	0.3358	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	323	S	S	L	-2.0000	13	0.2673	0.0000	0.0000	1	0	A
+homo-sapiens	gorilla-gorilla	III	CYTB	327	L	L	F	0.0000	8	0.2917	0.0000	0.0000	1	0	A
+homo-sapiens	gorilla-gorilla	III	CYTB	329	A	A	I	-1.0000	6	0.2309	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	331	D	D	N	1.0000	5	0.0118	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	333	L	L	F	0.0000	8	0.4185	0.0000	0.0000	1	0	A
+homo-sapiens	gorilla-gorilla	III	CYTB	334	I	I	T	-1.0000	6	0.1226	0.0000	1.0000	1	0	A
+homo-sapiens	gorilla-gorilla	III	CYTB	348	T	T	I	-1.0000	5	0.2619	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	349	I	I	T	-1.0000	8	0.4843	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	364	I	I	F	0.0000	8	0.5258	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	368	T	T	I	-1.0000	8	0.3486	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	369	I	I	T	-1.0000	9	0.1778	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	III	CYTB	380	A	A	T	0.0000	11		0.0000		0	0	
+homo-sapiens	gorilla-gorilla	IV	COX1	3	A	A	T	0.0000	6	0.3531	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX1	109	L	L	F	0.0000	2	0.0601	1.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX1	155	V	V	I	3.0000	4	0.4095	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX1	332	M	M	T	-1.0000	4	0.1493	0.0000	1.0000	0	1	
+homo-sapiens	gorilla-gorilla	IV	COX1	338	V	V	M	1.0000	4	0.0347	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX1	415	T	T	A	0.0000	8	0.2177	0.0000	0.0000	1	0	D
+homo-sapiens	gorilla-gorilla	IV	COX1	485	V	V	I	3.0000	6	0.0617	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX1	490	M	M	T	-1.0000	10	0.1911	0.0000	1.0000	1	0	F
+homo-sapiens	gorilla-gorilla	IV	COX1	513	S	S	-		14	0.5282	0.0000	0.0000	1	0	F
+homo-sapiens	gorilla-gorilla	IV	COX2	22	T	T	I	-1.0000	9	0.2315	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX2	64	V	V	I	3.0000	5	0.4642	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX2	90	V	V	I	3.0000	5	0.2621	0.0000	0.0000	1	0	N
+homo-sapiens	gorilla-gorilla	IV	COX2	95	L	L	F	0.0000	5	0.0901	0.0000	1.0000	1	0	H
+homo-sapiens	gorilla-gorilla	IV	COX2	146	I	I	V	3.0000	7	0.0456	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX2	150	I	I	V	3.0000	4	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX2	226	T	T	A	0.0000	9	0.4000	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX3	2	T	T	I	-1.0000	5	0.8354	0.0000	0.0000	1	0	F
+homo-sapiens	gorilla-gorilla	IV	COX3	40	M	M	T	-1.0000	13	0.3460	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX3	51	T	T	M	-1.0000	9	0.3673	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX3	62	T	T	M	-1.0000	4	0.1668	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX3	73	P	P	L	-3.0000	12	0.5240	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	IV	COX3	114	G	G	A	0.0000	6	0.1302	0.0000	1.0000	1	0	H
+homo-sapiens	gorilla-gorilla	IV	COX3	184	S	S	A	1.0000	3	0.0138	0.0000	1.0000	1	0	G
+homo-sapiens	gorilla-gorilla	IV	COX3	219	F	F	L	0.0000	4	0.2113	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	26	F	F	L	0.0000	7	0.1560	0.0000	1.0000	1	0	R
+homo-sapiens	gorilla-gorilla	V	ATP6	44	T	T	A	0.0000	7	0.0819	0.0000	1.0000	1	0	K
+homo-sapiens	gorilla-gorilla	V	ATP6	51	K	K	Q	1.0000	11	0.2233	0.0000	0.0000	1	1	M
+homo-sapiens	gorilla-gorilla	V	ATP6	63	T	T	A	0.0000	15	0.7122	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	73	V	V	M	1.0000	6	0.0000	0.0000	1.0000	1	1	M
+homo-sapiens	gorilla-gorilla	V	ATP6	112	T	T	A	0.0000	4	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	114	I	I	T	-1.0000	8	0.2575	0.0000	0.0000	1	0	P
+homo-sapiens	gorilla-gorilla	V	ATP6	115	M	M	T	-1.0000	8	0.0371	0.0000	1.0000	1	0	P
+homo-sapiens	gorilla-gorilla	V	ATP6	121	I	I	T	-1.0000	7	0.5076	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	128	F	F	L	0.0000	4	0.1498	0.0000	1.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	150	L	L	F	0.0000	5	0.4612	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	184	I	I	T	-1.0000	8	0.4461	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	195	I	I	V	3.0000	5	0.3603	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP6	201	I	I	M	1.0000	7	0.4386	0.0000	0.0000	1	0	K
+homo-sapiens	gorilla-gorilla	V	ATP6	224	D	D	E	2.0000	3	0.3846	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP8	14	T	T	A	0.0000	10	0.4709	0.0000	0.0000	0	0	
+homo-sapiens	gorilla-gorilla	V	ATP8	28	M	M	V	1.0000	6	0.0000	0.0000	1.0000	1	1	M
+homo-sapiens	gorilla-gorilla	V	ATP8	38	S	S	L	-2.0000	16	0.3979	0.0000	0.0000	1	0	M
+homo-sapiens	gorilla-gorilla	V	ATP8	41	P	P	T	-1.0000	18	0.5036	0.0000	0.0000	1	0	K
+homo-sapiens	gorilla-gorilla	V	ATP8	47	Y	Y	F	3.0000	17	0.5789	0.0000	0.0000	1	0	K,M
+homo-sapiens	gorilla-gorilla	V	ATP8	48	N	N	C	-3.0000	19	0.2697	0.0000	0.0000	1	0	M
+homo-sapiens	gorilla-gorilla	V	ATP8	53	P	P	S	-1.0000	17		0.0000		0	0	
+homo-sapiens	gorilla-gorilla	V	ATP8	59	C	C	Y	-2.0000	3		0.0000		0	0	
+homo-sapiens	pan-paniscus	I	ND1	4	A	A	T	0.0000	7	0.2332	0.0000	0.0000	1	0	S
+homo-sapiens	pan-paniscus	I	ND1	13	I	I	V	3.0000	4	0.0245	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	39	V	V	I	3.0000	5	0.2744	0.0000	0.0000	1	0	C,N
+homo-sapiens	pan-paniscus	I	ND1	64	A	A	S	1.0000	11	0.2671	0.0000	0.0000	1	1	J
+homo-sapiens	pan-paniscus	I	ND1	175	L	L	I	2.0000	6	0.3365	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	178	S	S	T	1.0000	6	0.0138	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	201	A	A	T	0.0000	5	0.0187	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	229	T	T	M	-1.0000	6	0.0133	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	239	T	T	A	0.0000	6	0.0195	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	248	D	D	N	1.0000	14	0.3171	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND1	249	A	A	T	0.0000	14	0.0562	0.0000	1.0000	1	0	S,u
+homo-sapiens	pan-paniscus	I	ND1	250	L	L	H	-3.0000	19	0.6192	0.0000	0.0000	1	0	u
+homo-sapiens	pan-paniscus	I	ND1	263	T	T	A	0.0000	7	0.0327	0.0000	1.0000	1	0	S
+homo-sapiens	pan-paniscus	I	ND1	276	A	A	T	0.0000	3	0.0166	0.0000	1.0000	1	0	B,Q
+homo-sapiens	pan-paniscus	I	ND1	280	F	F	L	0.0000	2	0.1755	1.0000	1.0000	1	0	Q
+homo-sapiens	pan-paniscus	I	ND1	281	R	R	C	-3.0000	2	0.0846	1.0000	1.0000	1	0	Q
+homo-sapiens	pan-paniscus	I	ND1	300	L	L	S	-2.0000	7	0.1142	0.0000	1.0000	1	0	U
+homo-sapiens	pan-paniscus	I	ND1	305	V	V	I	3.0000	7	0.0278	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND1	309	I	I	T	-1.0000	6	0.0123	0.0000	1.0000	1	1	U
+homo-sapiens	pan-paniscus	I	ND2	8	V	V	I	3.0000	9	0.1805	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND2	18	L	L	F	0.0000	9	0.2758	0.0000	0.0000	1	0	h
+homo-sapiens	pan-paniscus	I	ND2	21	A	A	V	0.0000	7	0.0655	0.0000	1.0000	1	0	h
+homo-sapiens	pan-paniscus	I	ND2	49	N	N	S	1.0000	7	0.1075	0.0000	1.0000	1	0	Q
+homo-sapiens	pan-paniscus	I	ND2	76	F	F	S	-2.0000	12	0.1157	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND2	100	M	M	T	-1.0000	8	0.1517	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	125	T	T	M	-1.0000	17	0.4382	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	145	I	I	M	1.0000	10	0.0061	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	147	P	P	S	-1.0000	12	0.3271	0.0000	0.0000	1	0	a
+homo-sapiens	pan-paniscus	I	ND2	152	S	S	N	1.0000	14	0.3114	0.0000	0.0000	1	1	V
+homo-sapiens	pan-paniscus	I	ND2	215	A	A	T	0.0000	7	0.0873	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	265	A	A	V	0.0000	6	0.1104	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	281	I	I	T	-1.0000	8	0.3188	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	284	T	T	I	-1.0000	8	0.4187	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND2	331	A	A	T	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+homo-sapiens	pan-paniscus	I	ND3	4	A	A	V	0.0000	10	0.3623	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND3	9	I	I	T	-1.0000	8	0.1755	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND3	29	G	G	S	0.0000	11	0.3931	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND3	35	T	T	N	0.0000	7	0.2512	0.0000	0.0000	1	1	C
+homo-sapiens	pan-paniscus	I	ND3	82	T	T	A	0.0000	16	0.4305	0.0000	0.0000	1	0	U
+homo-sapiens	pan-paniscus	I	ND3	96	I	I	T	-1.0000	9	0.3372	0.0000	0.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND3	114	T	T	A	0.0000	12	0.1049	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND4	6	V	V	I	3.0000	9	0.1319	0.0000	1.0000	1	0	n
+homo-sapiens	pan-paniscus	I	ND4	17	L	L	F	0.0000	11	0.4271	0.0000	0.0000	1	0	n
+homo-sapiens	pan-paniscus	I	ND4	21	H	H	R	0.0000	13	0.4381	0.0000	0.0000	1	0	e
+homo-sapiens	pan-paniscus	I	ND4	36	I	I	T	-1.0000	9	0.2084	0.0000	0.0000	1	0	e
+homo-sapiens	pan-paniscus	I	ND4	54	P	P	L	-3.0000	12	0.1643	0.0000	1.0000	1	0	a,n
+homo-sapiens	pan-paniscus	I	ND4	55	T	T	S	1.0000	13	0.2533	0.0000	0.0000	1	0	u
+homo-sapiens	pan-paniscus	I	ND4	70	T	T	A	0.0000	9	0.0335	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	86	S	S	N	1.0000	10	0.6502	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	89	L	L	P	-3.0000	18	0.2747	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	111	T	T	S	1.0000	7	0.0265	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	189	S	S	T	1.0000	13	0.2371	0.0000	0.0000	1	0	V
+homo-sapiens	pan-paniscus	I	ND4	263	V	V	M	1.0000	6	0.0486	0.0000	1.0000	1	0	o
+homo-sapiens	pan-paniscus	I	ND4	291	I	I	V	3.0000	2	0.0300	1.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	385	T	T	S	1.0000	7	0.0413	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	391	I	I	T	-1.0000	11	0.2731	0.0000	0.0000	1	0	o
+homo-sapiens	pan-paniscus	I	ND4	398	L	L	F	0.0000	10	0.3953	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	402	V	V	I	3.0000	4	0.1319	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND4	458	S	S	T	1.0000	11	0.1349	0.0000	1.0000	1	1	d
+homo-sapiens	pan-paniscus	I	ND4L	44	A	A	T	0.0000	10	0.0717	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND4L	62	A	A	T	0.0000	6	0.0000	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND5	4	H	H	Y	2.0000	13	0.0426	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	14	S	S	P	-1.0000	10	0.0969	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	17	P	P	L	-3.0000	10	0.2194	0.0000	0.0000	1	0	b
+homo-sapiens	pan-paniscus	I	ND5	24	V	V	I	3.0000	13	0.5374	0.0000	0.0000	1	0	a
+homo-sapiens	pan-paniscus	I	ND5	40	V	V	I	3.0000	4	0.0069	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	61	V	V	A	0.0000	13	0.0000	0.0000	1.0000	1	0	b
+homo-sapiens	pan-paniscus	I	ND5	88	M	M	T	-1.0000	6	0.0825	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	99	S	S	A	1.0000	3	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	162	A	A	T	0.0000	9	0.1123	0.0000	1.0000	1	0	c
+homo-sapiens	pan-paniscus	I	ND5	190	I	I	L	2.0000	10	0.0123	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	202	A	A	V	0.0000	8	0.1903	0.0000	1.0000	1	0	d
+homo-sapiens	pan-paniscus	I	ND5	205	N	N	S	1.0000	16	0.0948	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	206	A	A	T	0.0000	18	0.5112	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	216	L	L	F	0.0000	5	0.0421	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	257	I	I	V	3.0000	3	0.0061	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	270	S	S	N	1.0000	4	0.1974	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	290	V	V	I	3.0000	7	0.2144	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	374	T	T	I	-1.0000	7	0.0538	0.0000	1.0000	1	0	Z
+homo-sapiens	pan-paniscus	I	ND5	394	H	H	L	-3.0000	9	0.2203	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	404	T	T	M	-1.0000	7	0.1264	0.0000	1.0000	1	0	c
+homo-sapiens	pan-paniscus	I	ND5	432	T	T	M	-1.0000	6	0.1161	0.0000	1.0000	1	0	Z
+homo-sapiens	pan-paniscus	I	ND5	458	A	A	T	0.0000	8	0.0468	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	459	A	A	I	-1.0000	8	0.3172	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	467	L	L	F	0.0000	8	0.3545	0.0000	0.0000	1	0	v
+homo-sapiens	pan-paniscus	I	ND5	473	S	S	L	-2.0000	13	0.2588	0.0000	0.0000	1	0	v
+homo-sapiens	pan-paniscus	I	ND5	475	A	A	M	-1.0000	12	0.2024	0.0000	0.0000	1	0	v
+homo-sapiens	pan-paniscus	I	ND5	477	P	P	T	-1.0000	14	0.3576	0.0000	0.0000	1	0	v
+homo-sapiens	pan-paniscus	I	ND5	478	F	F	S	-2.0000	10	0.2493	0.0000	0.0000	1	0	v
+homo-sapiens	pan-paniscus	I	ND5	480	T	T	M	-1.0000	7	0.1999	0.0000	1.0000	1	0	Y
+homo-sapiens	pan-paniscus	I	ND5	492	A	A	S	1.0000	11	0.4140	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	517	L	L	P	-3.0000	15	0.6291	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	518	C	C	Y	-2.0000	16	0.4555	0.0000	0.0000	1	0	c
+homo-sapiens	pan-paniscus	I	ND5	531	S	S	N	1.0000	13	0.2077	0.0000	0.0000	1	0	c
+homo-sapiens	pan-paniscus	I	ND5	533	T	T	M	-1.0000	8	0.2404	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	536	T	T	S	1.0000	13	0.1645	0.0000	1.0000	1	0	c,o
+homo-sapiens	pan-paniscus	I	ND5	569	H	H	Y	2.0000	12	0.3708	0.0000	0.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND5	571	I	I	V	3.0000	12	0.2268	0.0000	0.0000	1	0	Q
+homo-sapiens	pan-paniscus	I	ND5	573	T	T	A	0.0000	13	0.1388	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND5	576	I	I	T	-1.0000	12	0.7027	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND5	592	F	F	L	0.0000	6	0.3472	0.0000	0.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND5	603	T	T	M	-1.0000	12	0.4528	0.0000	0.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND6	2	M	M	T	-1.0000	12	0.4853	0.0000	0.0000	1	0	W
+homo-sapiens	pan-paniscus	I	ND6	4	A	A	V	0.0000	11	0.3589	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND6	11	G	G	S	0.0000	10	0.2463	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND6	41	V	V	T	0.0000	10	0.3255	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	I	ND6	46	F	F	Y	3.0000	9	0.1011	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	I	ND6	132	S	S	P	-1.0000	16	0.2696	0.0000	0.0000	1	0	S,W
+homo-sapiens	pan-paniscus	III	CYTB	4	M	M	T	-1.0000	9	0.6300	0.0000	0.0000	1	0	L
+homo-sapiens	pan-paniscus	III	CYTB	7	T	T	I	-1.0000	10	0.5184	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	29	A	A	T	0.0000	10	0.4707	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	90	F	F	L	0.0000	2	0.1006	1.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	98	I	I	V	3.0000	5	0.1716	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	110	S	S	L	-2.0000	14	0.3807	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	122	A	A	T	0.0000	8	0.1863	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	164	I	I	V	3.0000	4	0.2070	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	181	F	F	L	0.0000	3	0.2113	0.0000	0.0000	1	1	P
+homo-sapiens	pan-paniscus	III	CYTB	190	A	A	T	0.0000	7	0.2870	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	193	A	A	T	0.0000	6	0.2517	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	226	I	I	T	-1.0000	7	0.1349	0.0000	1.0000	1	0	H
+homo-sapiens	pan-paniscus	III	CYTB	229	A	A	I	-1.0000	8	0.2943	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	233	L	L	F	0.0000	10	0.1262	0.0000	1.0000	1	0	H
+homo-sapiens	pan-paniscus	III	CYTB	238	S	S	A	1.0000	11	0.3475	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	241	T	T	V	0.0000	11	0.2268	0.0000	0.0000	1	0	H
+homo-sapiens	pan-paniscus	III	CYTB	263	N	N	I	-3.0000	5	0.1880	0.0000	1.0000	1	0	P
+homo-sapiens	pan-paniscus	III	CYTB	303	M	M	V	1.0000	8	0.3775	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	309	M	M	T	-1.0000	10	0.3807	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	323	S	S	L	-2.0000	13	0.2673	0.0000	0.0000	1	0	A
+homo-sapiens	pan-paniscus	III	CYTB	330	A	A	T	0.0000	6	0.0187	0.0000	1.0000	1	0	A
+homo-sapiens	pan-paniscus	III	CYTB	348	T	T	I	-1.0000	5	0.2619	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	349	I	I	T	-1.0000	8	0.4843	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	368	T	T	I	-1.0000	8	0.3486	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	III	CYTB	378	K	K	E	1.0000	4	0.4115	0.0000	0.0000	1	0	F
+homo-sapiens	pan-paniscus	IV	COX1	3	A	A	T	0.0000	6	0.3531	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX1	24	A	A	T	0.0000	2	0.2673	1.0000	0.0000	1	0	L
+homo-sapiens	pan-paniscus	IV	COX1	413	H	H	Q	0.0000	3	0.0216	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX1	415	T	T	A	0.0000	8	0.2177	0.0000	0.0000	1	0	D
+homo-sapiens	pan-paniscus	IV	COX1	452	I	I	V	3.0000	6	0.1280	0.0000	1.0000	1	0	K
+homo-sapiens	pan-paniscus	IV	COX1	490	M	M	A	-1.0000	10	0.1911	0.0000	1.0000	1	0	F
+homo-sapiens	pan-paniscus	IV	COX2	22	T	T	I	-1.0000	9	0.2315	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX2	54	N	N	S	1.0000	6	0.2970	0.0000	0.0000	1	0	E
+homo-sapiens	pan-paniscus	IV	COX2	95	L	L	F	0.0000	5	0.0901	0.0000	1.0000	1	0	H
+homo-sapiens	pan-paniscus	IV	COX2	146	I	I	V	3.0000	7	0.0456	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX2	150	I	I	V	3.0000	4	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX3	2	T	T	A	0.0000	5	0.8354	0.0000	0.0000	1	0	F
+homo-sapiens	pan-paniscus	IV	COX3	38	H	H	Y	2.0000	9	0.5447	0.0000	0.0000	1	0	G
+homo-sapiens	pan-paniscus	IV	COX3	40	M	M	T	-1.0000	13	0.3460	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX3	44	M	M	T	-1.0000	11	0.4164	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX3	62	T	T	M	-1.0000	4	0.1668	0.0000	1.0000	0	0	
+homo-sapiens	pan-paniscus	IV	COX3	219	F	F	L	0.0000	4	0.2113	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	10	I	I	A	-1.0000	9	0.4080	0.0000	0.0000	0	1	
+homo-sapiens	pan-paniscus	V	ATP6	31	I	I	V	3.0000	6	0.0797	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	V	ATP6	36	Y	Y	H	2.0000	10	0.2467	0.0000	0.0000	1	0	K,M
+homo-sapiens	pan-paniscus	V	ATP6	51	K	K	Q	1.0000	11	0.2233	0.0000	0.0000	1	1	M
+homo-sapiens	pan-paniscus	V	ATP6	114	I	I	V	3.0000	8	0.2575	0.0000	0.0000	1	0	P
+homo-sapiens	pan-paniscus	V	ATP6	119	S	S	F	-2.0000	8	0.3126	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	121	I	I	T	-1.0000	7	0.5076	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	142	V	V	I	3.0000	2	0.3532	1.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	150	L	L	F	0.0000	5	0.4612	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	181	M	M	L	2.0000	3	0.2540	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	185	N	N	S	1.0000	6	0.5139	0.0000	0.0000	0	0	
+homo-sapiens	pan-paniscus	V	ATP6	201	I	I	V	3.0000	7	0.4386	0.0000	0.0000	1	0	K
+homo-sapiens	pan-paniscus	V	ATP8	7	T	T	A	0.0000	6	0.5487	0.0000	0.0000	1	0	P
+homo-sapiens	pan-paniscus	V	ATP8	12	M	M	T	-1.0000	8	0.0000	0.0000	1.0000	0	1	
+homo-sapiens	pan-paniscus	V	ATP8	31	T	T	S	1.0000	10	0.0187	0.0000	1.0000	1	1	M
+homo-sapiens	pan-troglodytes	I	ND1	4	A	A	T	0.0000	7	0.2332	0.0000	0.0000	1	0	S
+homo-sapiens	pan-troglodytes	I	ND1	39	V	V	I	3.0000	5	0.2744	0.0000	0.0000	1	0	C,N
+homo-sapiens	pan-troglodytes	I	ND1	64	A	A	S	1.0000	11	0.2671	0.0000	0.0000	1	1	J
+homo-sapiens	pan-troglodytes	I	ND1	166	I	I	V	3.0000	8	0.0790	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	175	L	L	I	2.0000	6	0.3365	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	178	S	S	T	1.0000	6	0.0138	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	201	A	A	T	0.0000	5	0.0187	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	229	T	T	M	-1.0000	6	0.0133	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	239	T	T	A	0.0000	6	0.0195	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	245	T	T	A	0.0000	5	0.0266	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	248	D	D	N	1.0000	14	0.3171	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND1	249	A	A	T	0.0000	14	0.0562	0.0000	1.0000	1	0	S,u
+homo-sapiens	pan-troglodytes	I	ND1	250	L	L	H	-3.0000	19	0.6192	0.0000	0.0000	1	0	u
+homo-sapiens	pan-troglodytes	I	ND1	263	T	T	A	0.0000	7	0.0327	0.0000	1.0000	1	0	S
+homo-sapiens	pan-troglodytes	I	ND1	300	L	L	S	-2.0000	7	0.1142	0.0000	1.0000	1	0	U
+homo-sapiens	pan-troglodytes	I	ND1	305	V	V	I	3.0000	7	0.0278	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND1	309	I	I	T	-1.0000	6	0.0123	0.0000	1.0000	1	1	U
+homo-sapiens	pan-troglodytes	I	ND2	8	V	V	I	3.0000	9	0.1805	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND2	14	F	F	L	0.0000	9	0.5128	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	15	A	A	T	0.0000	8	0.2808	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	43	V	V	I	3.0000	5	0.0416	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	49	N	N	S	1.0000	7	0.1075	0.0000	1.0000	1	0	Q
+homo-sapiens	pan-troglodytes	I	ND2	76	F	F	S	-2.0000	12	0.1157	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND2	78	N	N	S	1.0000	11	0.1392	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	125	T	T	M	-1.0000	17	0.4382	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	147	P	P	S	-1.0000	12	0.3271	0.0000	0.0000	1	0	a
+homo-sapiens	pan-troglodytes	I	ND2	152	S	S	N	1.0000	14	0.3114	0.0000	0.0000	1	1	V
+homo-sapiens	pan-troglodytes	I	ND2	265	A	A	V	0.0000	6	0.1104	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	284	T	T	I	-1.0000	8	0.4187	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND2	331	A	A	T	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+homo-sapiens	pan-troglodytes	I	ND3	4	A	A	V	0.0000	10	0.3623	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND3	9	I	I	T	-1.0000	8	0.1755	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND3	29	G	G	S	0.0000	11	0.3931	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND3	82	T	T	A	0.0000	16	0.4305	0.0000	0.0000	1	0	U
+homo-sapiens	pan-troglodytes	I	ND3	89	M	M	T	-1.0000	13	0.5292	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND3	96	I	I	T	-1.0000	9	0.3372	0.0000	0.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND4	6	V	V	I	3.0000	9	0.1319	0.0000	1.0000	1	0	n
+homo-sapiens	pan-troglodytes	I	ND4	17	L	L	F	0.0000	11	0.4271	0.0000	0.0000	1	0	n
+homo-sapiens	pan-troglodytes	I	ND4	21	H	H	R	0.0000	13	0.4381	0.0000	0.0000	1	0	e
+homo-sapiens	pan-troglodytes	I	ND4	36	I	I	T	-1.0000	9	0.2084	0.0000	0.0000	1	0	e
+homo-sapiens	pan-troglodytes	I	ND4	54	P	P	L	-3.0000	12	0.1643	0.0000	1.0000	1	0	a,n
+homo-sapiens	pan-troglodytes	I	ND4	55	T	T	P	-1.0000	13	0.2533	0.0000	0.0000	1	0	u
+homo-sapiens	pan-troglodytes	I	ND4	70	T	T	A	0.0000	9	0.0335	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	86	S	S	N	1.0000	10	0.6502	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	111	T	T	S	1.0000	7	0.0265	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	183	A	A	T	0.0000	17	0.1943	0.0000	1.0000	1	0	d
+homo-sapiens	pan-troglodytes	I	ND4	189	S	S	T	1.0000	13	0.2371	0.0000	0.0000	1	0	V
+homo-sapiens	pan-troglodytes	I	ND4	263	V	V	M	1.0000	6	0.0486	0.0000	1.0000	1	0	o
+homo-sapiens	pan-troglodytes	I	ND4	289	S	S	P	-1.0000	2	0.0138	1.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	291	I	I	V	3.0000	2	0.0300	1.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	313	V	V	I	3.0000	6	0.0208	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	327	F	F	S	-2.0000	2	0.0000	1.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	385	T	T	S	1.0000	7	0.0413	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	391	I	I	T	-1.0000	11	0.2731	0.0000	0.0000	1	0	o
+homo-sapiens	pan-troglodytes	I	ND4	398	L	L	F	0.0000	10	0.3953	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	402	V	V	I	3.0000	4	0.1319	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	425	N	N	S	1.0000	10	0.0062	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND4	439	M	M	L	2.0000	3	0.0054	0.0000	1.0000	1	0	e
+homo-sapiens	pan-troglodytes	I	ND4	458	S	S	T	1.0000	11	0.1349	0.0000	1.0000	1	1	d
+homo-sapiens	pan-troglodytes	I	ND4L	62	A	A	T	0.0000	6	0.0000	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND5	4	H	H	Y	2.0000	13	0.0426	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	5	T	T	A	0.0000	11	0.0140	0.0000	1.0000	1	0	b
+homo-sapiens	pan-troglodytes	I	ND5	11	T	T	A	0.0000	7	0.0733	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	21	T	T	G	-2.0000	14	0.2791	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	22	T	T	A	0.0000	12	0.1785	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	24	V	V	I	3.0000	13	0.5374	0.0000	0.0000	1	0	a
+homo-sapiens	pan-troglodytes	I	ND5	40	V	V	I	3.0000	4	0.0069	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	61	V	V	T	0.0000	13	0.0000	0.0000	1.0000	1	0	b
+homo-sapiens	pan-troglodytes	I	ND5	88	M	M	T	-1.0000	6	0.0825	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	109	N	N	D	1.0000	11	0.5577	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	162	A	A	T	0.0000	9	0.1123	0.0000	1.0000	1	0	c
+homo-sapiens	pan-troglodytes	I	ND5	183	I	I	V	3.0000	6	0.0429	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND5	190	I	I	L	2.0000	10	0.0123	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	202	A	A	I	-1.0000	8	0.1903	0.0000	1.0000	1	0	d
+homo-sapiens	pan-troglodytes	I	ND5	205	N	N	S	1.0000	16	0.0948	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	206	A	A	T	0.0000	18	0.5112	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	208	P	P	T	-1.0000	17	0.0346	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	209	S	S	D	0.0000	12	0.4076	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	216	L	L	F	0.0000	5	0.0421	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	264	H	H	Y	2.0000	7	0.0686	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	270	S	S	N	1.0000	4	0.1974	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	394	H	H	L	-3.0000	9	0.2203	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	458	A	A	T	0.0000	8	0.0468	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	459	A	A	I	-1.0000	8	0.3172	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	473	S	S	L	-2.0000	13	0.2588	0.0000	0.0000	1	0	v
+homo-sapiens	pan-troglodytes	I	ND5	475	A	A	M	-1.0000	12	0.2024	0.0000	0.0000	1	0	v
+homo-sapiens	pan-troglodytes	I	ND5	477	P	P	T	-1.0000	14	0.3576	0.0000	0.0000	1	0	v
+homo-sapiens	pan-troglodytes	I	ND5	478	F	F	P	-4.0000	10	0.2493	0.0000	0.0000	1	0	v
+homo-sapiens	pan-troglodytes	I	ND5	480	T	T	V	0.0000	7	0.1999	0.0000	1.0000	1	0	Y
+homo-sapiens	pan-troglodytes	I	ND5	492	A	A	G	0.0000	11	0.4140	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	495	F	F	S	-2.0000	8	0.4881	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	509	N	N	S	1.0000	12	0.3977	0.0000	0.0000	1	0	p
+homo-sapiens	pan-troglodytes	I	ND5	518	C	C	Y	-2.0000	16	0.4555	0.0000	0.0000	1	0	c
+homo-sapiens	pan-troglodytes	I	ND5	521	Y	Y	H	2.0000	13	0.2040	0.0000	0.0000	1	0	p
+homo-sapiens	pan-troglodytes	I	ND5	531	S	S	N	1.0000	13	0.2077	0.0000	0.0000	1	0	c
+homo-sapiens	pan-troglodytes	I	ND5	533	T	T	M	-1.0000	8	0.2404	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND5	536	T	T	S	1.0000	13	0.1645	0.0000	1.0000	1	0	c,o
+homo-sapiens	pan-troglodytes	I	ND5	569	H	H	Y	2.0000	12	0.3708	0.0000	0.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND5	573	T	T	A	0.0000	13	0.1388	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND5	576	I	I	T	-1.0000	12	0.7027	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND6	2	M	M	T	-1.0000	12	0.4853	0.0000	0.0000	1	0	W
+homo-sapiens	pan-troglodytes	I	ND6	11	G	G	S	0.0000	10	0.2463	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND6	41	V	V	A	0.0000	10	0.3255	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND6	46	F	F	Y	3.0000	9	0.1011	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	I	ND6	108	E	E	G	-2.0000	17	0.5853	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND6	112	V	V	M	1.0000	13	0.5757	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	I	ND6	132	S	S	P	-1.0000	16	0.2696	0.0000	0.0000	1	0	S,W
+homo-sapiens	pan-troglodytes	III	CYTB	4	M	M	T	-1.0000	9	0.6300	0.0000	0.0000	1	0	L
+homo-sapiens	pan-troglodytes	III	CYTB	7	T	T	I	-1.0000	10	0.5184	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	110	S	S	L	-2.0000	14	0.3807	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	122	A	A	T	0.0000	8	0.1863	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	164	I	I	V	3.0000	4	0.2070	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	190	A	A	T	0.0000	7	0.2870	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	193	A	A	T	0.0000	6	0.2517	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	229	A	A	I	-1.0000	8	0.2943	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	233	L	L	F	0.0000	10	0.1262	0.0000	1.0000	1	0	H
+homo-sapiens	pan-troglodytes	III	CYTB	238	S	S	I	-2.0000	11	0.3475	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	248	D	D	G	-1.0000	3	0.2363	0.0000	0.0000	1	0	H
+homo-sapiens	pan-troglodytes	III	CYTB	284	V	V	I	3.0000	2	0.2559	1.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	302	A	A	T	0.0000	9	0.3358	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	303	M	M	A	-1.0000	8	0.3775	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	306	I	I	V	3.0000	11	0.6244	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	309	M	M	T	-1.0000	10	0.3807	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	323	S	S	L	-2.0000	13	0.2673	0.0000	0.0000	1	0	A
+homo-sapiens	pan-troglodytes	III	CYTB	330	A	A	T	0.0000	6	0.0187	0.0000	1.0000	1	0	A
+homo-sapiens	pan-troglodytes	III	CYTB	348	T	T	I	-1.0000	5	0.2619	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	349	I	I	T	-1.0000	8	0.4843	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	353	V	V	M	1.0000	8	0.4912	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	368	T	T	I	-1.0000	8	0.3486	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	369	I	I	A	-1.0000	9	0.1778	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	III	CYTB	378	K	K	E	1.0000	4	0.4115	0.0000	0.0000	1	0	F
+homo-sapiens	pan-troglodytes	III	CYTB	380	A	A	T	0.0000	11		0.0000		0	0	
+homo-sapiens	pan-troglodytes	IV	COX1	3	A	A	T	0.0000	6	0.3531	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX1	155	V	V	I	3.0000	4	0.4095	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX1	413	H	H	Q	0.0000	3	0.0216	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX1	415	T	T	A	0.0000	8	0.2177	0.0000	0.0000	1	0	D
+homo-sapiens	pan-troglodytes	IV	COX1	452	I	I	V	3.0000	6	0.1280	0.0000	1.0000	1	0	K
+homo-sapiens	pan-troglodytes	IV	COX1	490	M	M	A	-1.0000	10	0.1911	0.0000	1.0000	1	0	F
+homo-sapiens	pan-troglodytes	IV	COX2	22	T	T	I	-1.0000	9	0.2315	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX2	54	N	N	S	1.0000	6	0.2970	0.0000	0.0000	1	0	E
+homo-sapiens	pan-troglodytes	IV	COX2	95	L	L	F	0.0000	5	0.0901	0.0000	1.0000	1	0	H
+homo-sapiens	pan-troglodytes	IV	COX2	146	I	I	V	3.0000	7	0.0456	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX2	150	I	I	V	3.0000	4	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX3	38	H	H	Y	2.0000	9	0.5447	0.0000	0.0000	1	0	G
+homo-sapiens	pan-troglodytes	IV	COX3	40	M	M	T	-1.0000	13	0.3460	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX3	44	M	M	T	-1.0000	11	0.4164	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX3	62	T	T	M	-1.0000	4	0.1668	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX3	65	S	S	G	0.0000	2	0.1245	1.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX3	219	F	F	L	0.0000	4	0.2113	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	IV	COX3	236	E	E	Q	2.0000	3	0.1839	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	10	I	I	A	-1.0000	9	0.4080	0.0000	0.0000	0	1	
+homo-sapiens	pan-troglodytes	V	ATP6	31	I	I	V	3.0000	6	0.0797	0.0000	1.0000	0	1	
+homo-sapiens	pan-troglodytes	V	ATP6	36	Y	Y	H	2.0000	10	0.2467	0.0000	0.0000	1	0	K,M
+homo-sapiens	pan-troglodytes	V	ATP6	51	K	K	Q	1.0000	11	0.2233	0.0000	0.0000	1	1	M
+homo-sapiens	pan-troglodytes	V	ATP6	62	N	N	S	1.0000	4	0.3216	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	80	A	A	T	0.0000	4	0.1311	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	112	T	T	A	0.0000	4	0.0000	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	114	I	I	V	3.0000	8	0.2575	0.0000	0.0000	1	0	P
+homo-sapiens	pan-troglodytes	V	ATP6	119	S	S	F	-2.0000	8	0.3126	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	121	I	I	T	-1.0000	7	0.5076	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	181	M	M	L	2.0000	3	0.2540	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	188	S	S	Y	-2.0000	9	0.2436	0.0000	0.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP6	189	T	T	A	0.0000	4	0.0843	0.0000	1.0000	0	0	
+homo-sapiens	pan-troglodytes	V	ATP8	7	T	T	A	0.0000	6	0.5487	0.0000	0.0000	1	0	P
+homo-sapiens	pan-troglodytes	V	ATP8	23	I	I	V	3.0000	10	0.2874	0.0000	0.0000	0	1	
+homo-sapiens	pan-troglodytes	V	ATP8	31	T	T	S	1.0000	10	0.0187	0.0000	1.0000	1	1	M
+homo-sapiens	pan-troglodytes	V	ATP8	59	C	C	Y	-2.0000	3		0.0000		0	0	
+mus-musculus	mus-caroli	I	ND1	2	P	F	Y	3.0000	10	0.5149	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	68	I	M	I	1.0000	10	0.4569	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	157	S	N	S	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+mus-musculus	mus-caroli	I	ND1	172	L	M	L	2.0000	12	0.1557	0.0000	1.0000	1	0	W
+mus-musculus	mus-caroli	I	ND1	175	L	L	I	2.0000	6	0.3365	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	176	L	L	I	2.0000	8	0.2944	0.0000	0.0000	1	0	W
+mus-musculus	mus-caroli	I	ND1	240	T	I	V	3.0000	6	0.0717	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	247	Y	Y	H	2.0000	16	0.2327	0.0000	0.0000	1	0	S
+mus-musculus	mus-caroli	I	ND1	251	S	L	I	2.0000	14	0.2777	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	257	T	T	I	-1.0000	8	0.2972	0.0000	0.0000	1	0	S
+mus-musculus	mus-caroli	I	ND1	261	T	M	T	-1.0000	9	0.4282	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	269	L	T	A	0.0000	9	0.3485	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND1	311	I	T	L	-1.0000	9	0.2023	0.0000	0.0000	1	0	U,W
+mus-musculus	mus-caroli	I	ND1	314	I	V	T	0.0000	7	0.0524	0.0000	1.0000	1	1	U,W
+mus-musculus	mus-caroli	I	ND1	317	Q	Y	L	-1.0000	6	0.2477	0.0000	0.0000	1	1	W
+mus-musculus	mus-caroli	I	ND2	7	P	A	I	-1.0000	13	0.4971	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	11	S	F	S	-2.0000	11	0.3255	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND2	27	F	M	L	2.0000	5	0.0252	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND2	39	A	A	S	1.0000	3	0.0281	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND2	43	V	M	L	2.0000	5	0.0416	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	91	N	N	S	1.0000	14	0.3296	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	92	Q	G	S	0.0000	16	0.4227	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND2	98	I	T	S	1.0000	9	0.0245	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	126	S	M	T	-1.0000	8	0.0148	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	146	S	Y	F	3.0000	13	0.0415	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	147	P	P	H	-2.0000	12	0.3271	0.0000	0.0000	1	0	a
+mus-musculus	mus-caroli	I	ND2	150	N	N	D	1.0000	6	0.2874	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND2	156	T	M	L	2.0000	10	0.3767	0.0000	0.0000	1	0	V
+mus-musculus	mus-caroli	I	ND2	157	L	L	M	2.0000	8	0.1081	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	160	L	T	S	1.0000	7	0.3538	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	164	A	M	L	2.0000	7	0.1196	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	175	L	M	T	-1.0000	5	0.0834	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	206	T	M	A	-1.0000	10	0.3626	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	210	I	I	L	2.0000	9	0.2084	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	213	T	A	I	-1.0000	10	0.1256	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	226	T	T	N	0.0000	6	0.1029	0.0000	1.0000	1	0	Q
+mus-musculus	mus-caroli	I	ND2	240	L	M	V	1.0000	9	0.0474	0.0000	1.0000	1	0	g
+mus-musculus	mus-caroli	I	ND2	247	T	M	I	1.0000	9	0.0195	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	278	I	M	L	2.0000	9	0.0307	0.0000	1.0000	1	0	V
+mus-musculus	mus-caroli	I	ND2	315	W	T	S	1.0000	12	0.0127	0.0000	1.0000	1	0	g,w
+mus-musculus	mus-caroli	I	ND2	316	Q	H	F	-1.0000	13	0.0719	0.0000	1.0000	1	0	w
+mus-musculus	mus-caroli	I	ND2	318	E	T	P	-1.0000	17	0.2218	0.0000	0.0000	1	0	g,w
+mus-musculus	mus-caroli	I	ND2	320	T	T	F	-2.0000	14	0.5085	0.0000	0.0000	1	0	w
+mus-musculus	mus-caroli	I	ND2	322	P	P	S	-1.0000	16	0.6015	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	323	T	N	Y	-2.0000	13	0.3076	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	325	F	M	T	-1.0000	14	0.6705	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	326	L	F	L	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	mus-caroli	I	ND2	328	T	T	I	-1.0000	11	0.1895	0.0000	1.0000	1	0	g
+mus-musculus	mus-caroli	I	ND2	329	L	L	M	2.0000	8	0.1502	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND2	330	I	A	T	0.0000	9	0.0483	0.0000	1.0000	1	0	g
+mus-musculus	mus-caroli	I	ND2	332	L	M	L	2.0000	9	0.2864	0.0000	0.0000	1	0	g
+mus-musculus	mus-caroli	I	ND2	340	S	A	S	1.0000	7	0.0000	0.0000	1.0000	1	0	u
+mus-musculus	mus-caroli	I	ND2	347	L	T	M	-1.0000	10	0.4432	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	4	A	Y	F	3.0000	10	0.3623	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	5	L	T	I	-1.0000	8	0.3107	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND3	11	T	I	T	-1.0000	11	0.2550	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND3	16	L	T	A	0.0000	9	0.3658	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	19	I	L	S	-2.0000	7	0.5312	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	20	I	V	I	3.0000	5	0.3732	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	82	T	I	T	-1.0000	16	0.4305	0.0000	0.0000	1	0	U
+mus-musculus	mus-caroli	I	ND3	83	N	K	N	0.0000	11	0.3297	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND3	85	P	S	T	1.0000	18	0.4496	0.0000	0.0000	1	0	U
+mus-musculus	mus-caroli	I	ND3	86	L	T	I	-1.0000	14	0.2463	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND3	89	M	I	T	-1.0000	13	0.5292	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	103	A	A	M	-1.0000	7	0.2902	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND3	107	L	T	L	-1.0000	11	0.6326	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	6	V	L	F	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+mus-musculus	mus-caroli	I	ND4	9	I	L	F	0.0000	7	0.3794	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	15	T	T	V	0.0000	5	0.0000	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	19	K	S	N	1.0000	10	0.2870	0.0000	0.0000	1	0	n
+mus-musculus	mus-caroli	I	ND4	25	I	T	M	-1.0000	6	0.0953	0.0000	1.0000	1	0	e
+mus-musculus	mus-caroli	I	ND4	27	T	V	T	0.0000	8	0.0273	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	33	I	L	M	2.0000	8	0.3827	0.0000	0.0000	1	0	e
+mus-musculus	mus-caroli	I	ND4	34	I	I	V	3.0000	4	0.0429	0.0000	1.0000	1	0	n
+mus-musculus	mus-caroli	I	ND4	37	I	T	I	-1.0000	10	0.0736	0.0000	1.0000	1	0	n
+mus-musculus	mus-caroli	I	ND4	50	F	K	Q	1.0000	15	0.1208	0.0000	1.0000	1	0	a,d
+mus-musculus	mus-caroli	I	ND4	70	T	A	T	0.0000	9	0.0335	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	87	E	D	E	2.0000	7	0.1509	0.0000	1.0000	1	0	Q
+mus-musculus	mus-caroli	I	ND4	89	L	N	P	-2.0000	18	0.2747	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	90	S	V	L	1.0000	14	0.4936	0.0000	0.0000	1	0	w
+mus-musculus	mus-caroli	I	ND4	98	M	M	L	2.0000	5	0.1958	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	100	I	I	V	3.0000	7	0.0368	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	170	T	H	Y	2.0000	13	0.4248	0.0000	0.0000	1	0	a
+mus-musculus	mus-caroli	I	ND4	171	L	V	I	3.0000	12	0.2764	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	176	I	L	F	0.0000	8	0.0981	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	177	L	M	T	-1.0000	11	0.0360	0.0000	1.0000	1	0	a
+mus-musculus	mus-caroli	I	ND4	180	T	S	L	-2.0000	15	0.1668	0.0000	1.0000	1	0	d
+mus-musculus	mus-caroli	I	ND4	181	L	F	L	0.0000	10	0.0180	0.0000	1.0000	1	0	a,d
+mus-musculus	mus-caroli	I	ND4	186	L	L	M	2.0000	10	0.1308	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	188	N	A	N	-2.0000	17	0.4373	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	193	N	N	S	1.0000	15	0.1671	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	248	L	I	V	3.0000	12	0.0900	0.0000	1.0000	1	0	d
+mus-musculus	mus-caroli	I	ND4	351	L	V	I	3.0000	8	0.0634	0.0000	1.0000	1	0	a,p
+mus-musculus	mus-caroli	I	ND4	356	A	A	S	1.0000	8	0.0260	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	358	W	W	C	-2.0000	4	0.0551	0.0000	1.0000	1	0	a
+mus-musculus	mus-caroli	I	ND4	361	L	M	L	2.0000	8	0.2443	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	383	V	M	I	1.0000	8	0.0478	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND4	392	T	T	S	1.0000	3	0.0000	0.0000	1.0000	1	0	o
+mus-musculus	mus-caroli	I	ND4	398	L	I	T	-1.0000	10	0.3953	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	411	F	I	V	3.0000	6	0.0252	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	421	H	N	S	1.0000	12	0.3285	0.0000	0.0000	1	0	o,p
+mus-musculus	mus-caroli	I	ND4	429	S	S	T	1.0000	7	0.0209	0.0000	1.0000	1	0	a,e
+mus-musculus	mus-caroli	I	ND4	434	N	L	S	-2.0000	6	0.0056	0.0000	1.0000	1	0	a
+mus-musculus	mus-caroli	I	ND4	441	L	M	L	2.0000	7	0.0360	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND4	449	L	T	V	0.0000	8	0.4426	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND4L	2	P	P	T	-1.0000	11	0.1274	0.0000	1.0000	1	1	h
+mus-musculus	mus-caroli	I	ND4L	4	I	T	A	0.0000	8	0.0490	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND4L	10	L	M	L	2.0000	8	0.1070	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND4L	11	A	A	S	1.0000	3	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND4L	13	T	S	T	1.0000	9	0.3813	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND4L	37	M	V	M	1.0000	5	0.0273	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND4L	46	L	V	M	1.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND4L	48	T	S	T	1.0000	10	0.0897	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	20	L	L	F	0.0000	9	0.4553	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	24	V	S	L	-2.0000	13	0.5374	0.0000	0.0000	1	0	a
+mus-musculus	mus-caroli	I	ND5	27	N	I	T	-1.0000	18	0.4967	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	46	I	I	L	2.0000	8	0.1594	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	49	F	L	F	0.0000	9	0.4126	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	53	M	M	L	2.0000	8	0.0486	0.0000	1.0000	1	0	d
+mus-musculus	mus-caroli	I	ND5	55	M	F	L	0.0000	7	0.1991	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	56	C	H	Y	2.0000	13	0.1869	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-caroli	I	ND5	67	H	H	Q	0.0000	8	0.3349	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	69	A	V	I	3.0000	7	0.1009	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND5	75	Q	E	K	1.0000	10	0.2008	0.0000	0.0000	1	0	d
+mus-musculus	mus-caroli	I	ND5	77	S	K	T	-1.0000	11	0.1115	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	82	L	T	I	-1.0000	7	0.0781	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	84	Y	F	Y	3.0000	5	0.1331	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	90	I	T	M	-1.0000	6	0.0858	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	113	N	N	H	1.0000	11	0.3076	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	187	A	V	T	0.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND5	198	P	L	F	0.0000	5	0.1535	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	203	L	F	L	0.0000	10	0.1767	0.0000	1.0000	1	0	d
+mus-musculus	mus-caroli	I	ND5	205	N	N	-		16	0.0948	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	214	L	M	T	-1.0000	9	0.3684	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	261	I	V	I	3.0000	3	0.0565	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	268	E	T	S	1.0000	12	0.3166	0.0000	0.0000	1	0	v
+mus-musculus	mus-caroli	I	ND5	271	P	N	D	1.0000	16	0.5156	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	272	L	F	N	-3.0000	13	0.4506	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	274	Q	L	M	2.0000	4	0.1336	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	276	L	T	I	-1.0000	9	0.3458	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	302	V	I	V	3.0000	3	0.0139	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	323	H	H	Y	2.0000	4	0.1734	0.0000	1.0000	1	0	v
+mus-musculus	mus-caroli	I	ND5	362	L	I	M	1.0000	5	0.0114	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	363	L	T	M	-1.0000	12	0.0213	0.0000	1.0000	1	0	Z
+mus-musculus	mus-caroli	I	ND5	365	T	I	T	-1.0000	11	0.0594	0.0000	1.0000	1	0	Y,Z
+mus-musculus	mus-caroli	I	ND5	373	L	L	M	2.0000	5	0.0828	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	374	T	V	I	3.0000	7	0.0538	0.0000	1.0000	1	0	Z
+mus-musculus	mus-caroli	I	ND5	437	F	F	Y	3.0000	6	0.0302	0.0000	1.0000	1	0	Z
+mus-musculus	mus-caroli	I	ND5	451	L	M	I	1.0000	8	0.0601	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	459	A	F	L	0.0000	8	0.3172	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	467	L	V	I	3.0000	8	0.3545	0.0000	0.0000	1	0	v
+mus-musculus	mus-caroli	I	ND5	476	S	S	N	1.0000	12	0.2222	0.0000	0.0000	1	0	v
+mus-musculus	mus-caroli	I	ND5	478	F	P	Q	-1.0000	10	0.2493	0.0000	0.0000	1	0	v
+mus-musculus	mus-caroli	I	ND5	479	Q	V	T	0.0000	12	0.2265	0.0000	0.0000	1	0	v
+mus-musculus	mus-caroli	I	ND5	511	L	L	F	0.0000	8	0.2476	0.0000	0.0000	1	0	Z,p
+mus-musculus	mus-caroli	I	ND5	513	M	M	T	-1.0000	15	0.2437	0.0000	0.0000	1	0	p
+mus-musculus	mus-caroli	I	ND5	516	P	A	S	1.0000	15	0.3010	0.0000	0.0000	1	0	p
+mus-musculus	mus-caroli	I	ND5	518	C	P	S	-1.0000	16	0.4555	0.0000	0.0000	1	0	c
+mus-musculus	mus-caroli	I	ND5	519	T	Y	F	3.0000	13	0.5194	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	528	F	F	Y	3.0000	4	0.0151	0.0000	1.0000	1	0	c
+mus-musculus	mus-caroli	I	ND5	531	S	S	P	-1.0000	13	0.2077	0.0000	0.0000	1	0	c
+mus-musculus	mus-caroli	I	ND5	533	T	I	M	1.0000	8	0.2404	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	537	I	T	M	-1.0000	16	0.5312	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	544	T	L	I	2.0000	15	0.3945	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	561	L	T	L	-1.0000	9	0.4525	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	569	H	L	I	2.0000	12	0.3708	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND5	572	S	N	S	1.0000	17	0.3918	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	593	F	I	V	3.0000	7	0.1912	0.0000	1.0000	1	0	V
+mus-musculus	mus-caroli	I	ND5	594	P	N	S	1.0000	4	0.1341	0.0000	1.0000	1	1	V
+mus-musculus	mus-caroli	I	ND5	595	L	I	M	1.0000	9	0.3485	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND5	601	L	L	I	2.0000	13	0.4091	0.0000	0.0000	1	0	V
+mus-musculus	mus-caroli	I	ND5	602	I	L	P	-3.0000	11	0.2267	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND6	7	L	V	I	3.0000	10	0.5453	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	38	V	V	I	3.0000	9	0.1658	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	89	L	L	F	0.0000	8	0.3478	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	93	L	V	I	3.0000	10	0.5901	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	97	A	I	L	2.0000	10	0.4545	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	98	M	M	L	2.0000	9	0.3935	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND6	102	L	L	T	-1.0000	11	0.3184	0.0000	0.0000	0	1	
+mus-musculus	mus-caroli	I	ND6	104	L	C	Y	-2.0000	14	0.4867	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	105	W	V	T	0.0000	12	0.3211	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	107	K	N	D	1.0000	15	0.4586	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	I	ND6	111	G	-	D		15	0.2441	0.0000	0.0000	1	0	h
+mus-musculus	mus-caroli	I	ND6	114	V	G	E	-2.0000	14	0.1958	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND6	115	V	V	L	1.0000	13	0.0902	0.0000	1.0000	1	1	h
+mus-musculus	mus-caroli	I	ND6	117	N	N	S	1.0000	13	0.0495	0.0000	1.0000	0	1	
+mus-musculus	mus-caroli	I	ND6	120	S	G	S	0.0000	15	0.4178	0.0000	0.0000	1	0	h
+mus-musculus	mus-caroli	I	ND6	129	G	V	I	3.0000	14	0.2603	0.0000	0.0000	1	1	W
+mus-musculus	mus-caroli	III	CYTB	4	M	M	I	1.0000	9	0.6300	0.0000	0.0000	1	0	L
+mus-musculus	mus-caroli	III	CYTB	19	I	I	V	3.0000	3	0.2445	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	39	A	V	I	3.0000	8	0.2383	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	102	L	L	I	2.0000	6	0.2296	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	108	L	T	A	0.0000	9	0.2421	0.0000	0.0000	1	0	F
+mus-musculus	mus-caroli	III	CYTB	238	S	I	F	0.0000	11	0.3475	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	303	M	L	F	0.0000	8	0.3775	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	304	I	M	L	2.0000	7	0.1519	0.0000	1.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	327	L	I	V	3.0000	8	0.2917	0.0000	0.0000	1	0	A
+mus-musculus	mus-caroli	III	CYTB	360	T	S	T	1.0000	9	0.2199	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	III	CYTB	379	W	Y	H	2.0000	6	0.3424	0.0000	0.0000	1	0	F
+mus-musculus	mus-caroli	IV	COX1	403	Y	F	Y	3.0000	2	0.0046	1.0000	1.0000	1	0	L
+mus-musculus	mus-caroli	IV	COX1	467	L	I	V	3.0000	5	0.0481	0.0000	1.0000	1	0	D
+mus-musculus	mus-caroli	IV	COX1	483	L	M	S	-1.0000	17	0.1482	0.0000	1.0000	1	0	D,M
+mus-musculus	mus-caroli	IV	COX2	123	L	I	V	3.0000	5	0.2403	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	IV	COX3	37	F	Y	F	3.0000	5	0.4750	0.0000	0.0000	1	0	J
+mus-musculus	mus-caroli	IV	COX3	122	T	S	F	-2.0000	14	0.4828	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	IV	COX3	175	L	I	V	3.0000	10	0.5907	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	IV	COX3	217	I	V	I	3.0000	4	0.4775	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	V	ATP6	14	I	M	V	1.0000	7	0.2139	0.0000	0.0000	1	0	R
+mus-musculus	mus-caroli	V	ATP6	17	L	F	L	0.0000	7	0.5588	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	V	ATP6	19	A	I	V	3.0000	6	0.0187	0.0000	1.0000	1	0	R
+mus-musculus	mus-caroli	V	ATP6	22	L	A	T	0.0000	8	0.5367	0.0000	0.0000	1	0	R
+mus-musculus	mus-caroli	V	ATP6	50	I	V	I	3.0000	8	0.0490	0.0000	1.0000	1	1	M
+mus-musculus	mus-caroli	V	ATP6	69	S	T	A	0.0000	4	0.0000	0.0000	1.0000	1	0	M
+mus-musculus	mus-caroli	V	ATP6	73	V	V	I	3.0000	6	0.0000	0.0000	1.0000	1	1	M
+mus-musculus	mus-caroli	V	ATP6	115	M	T	M	-1.0000	8	0.0371	0.0000	1.0000	1	0	P
+mus-musculus	mus-caroli	V	ATP6	136	P	S	T	1.0000	10	0.7087	0.0000	0.0000	0	0	
+mus-musculus	mus-caroli	V	ATP6	201	I	I	V	3.0000	7	0.4386	0.0000	0.0000	1	0	K
+mus-musculus	mus-caroli	V	ATP8	28	M	V	I	3.0000	6	0.0000	0.0000	1.0000	1	1	M
+mus-musculus	mus-caroli	V	ATP8	32	N	T	I	-1.0000	19	0.1934	0.0000	1.0000	1	1	M
+mus-musculus	mus-caroli	V	ATP8	36	P	A	P	-1.0000	18	0.4152	0.0000	0.0000	1	0	K,M
+mus-musculus	mus-caroli	V	ATP8	49	K	T	N	0.0000	12	0.1251	0.0000	1.0000	1	0	K
+mus-musculus	mus-caroli	V	ATP8	53	P	L	S	-2.0000	17		0.0000		0	0	
+mus-musculus	mus-pahari	I	ND1	2	P	F	Y	3.0000	10	0.5149	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND1	4	A	I	V	3.0000	7	0.2332	0.0000	0.0000	1	0	S
+mus-musculus	mus-pahari	I	ND1	46	L	L	F	0.0000	5	0.2944	0.0000	0.0000	1	0	C
+mus-musculus	mus-pahari	I	ND1	68	I	M	I	1.0000	10	0.4569	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND1	87	T	V	I	3.0000	8	0.0281	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND1	157	S	N	S	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+mus-musculus	mus-pahari	I	ND1	167	T	T	N	0.0000	15	0.2527	0.0000	0.0000	1	0	W,u
+mus-musculus	mus-pahari	I	ND1	175	L	L	I	2.0000	6	0.3365	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND1	251	S	L	I	2.0000	14	0.2777	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND1	261	T	M	L	2.0000	9	0.4282	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND1	263	T	A	T	0.0000	7	0.0327	0.0000	1.0000	1	0	S
+mus-musculus	mus-pahari	I	ND1	311	I	T	L	-1.0000	9	0.2023	0.0000	0.0000	1	0	U,W
+mus-musculus	mus-pahari	I	ND1	314	I	V	T	0.0000	7	0.0524	0.0000	1.0000	1	1	U,W
+mus-musculus	mus-pahari	I	ND1	318	T	M	V	1.0000	9	0.0889	0.0000	1.0000	1	1	S,U,h
+mus-musculus	mus-pahari	I	ND2	7	P	A	M	-1.0000	13	0.4971	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	18	L	V	I	3.0000	9	0.2758	0.0000	0.0000	1	0	h
+mus-musculus	mus-pahari	I	ND2	24	S	T	S	1.0000	9	0.1220	0.0000	1.0000	1	0	h
+mus-musculus	mus-pahari	I	ND2	43	V	M	L	2.0000	5	0.0416	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	61	L	V	I	3.0000	6	0.0541	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND2	75	L	V	I	3.0000	10	0.0360	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND2	83	Q	T	M	-1.0000	12	0.0974	0.0000	1.0000	1	0	a,h
+mus-musculus	mus-pahari	I	ND2	92	Q	G	H	-2.0000	16	0.4227	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND2	95	S	L	I	2.0000	10	0.0424	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	97	M	M	L	2.0000	8	0.2227	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	98	I	T	A	0.0000	9	0.0245	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	103	A	S	C	-1.0000	10	0.0000	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	113	F	F	H	-1.0000	7	0.1258	0.0000	1.0000	1	1	V
+mus-musculus	mus-pahari	I	ND2	147	P	P	N	-2.0000	12	0.3271	0.0000	0.0000	1	0	a
+mus-musculus	mus-pahari	I	ND2	151	V	S	P	-1.0000	15	0.1368	0.0000	1.0000	1	0	V
+mus-musculus	mus-pahari	I	ND2	156	T	M	I	1.0000	10	0.3767	0.0000	0.0000	1	0	V
+mus-musculus	mus-pahari	I	ND2	160	L	T	I	-1.0000	7	0.3538	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	164	A	M	T	-1.0000	7	0.1196	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	210	I	I	L	2.0000	9	0.2084	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	213	T	A	I	-1.0000	10	0.1256	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	218	L	A	M	-1.0000	9	0.0580	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	223	S	N	S	1.0000	14	0.1704	0.0000	1.0000	1	0	w
+mus-musculus	mus-pahari	I	ND2	230	L	I	L	2.0000	7	0.0414	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	239	W	A	I	-1.0000	13	0.2929	0.0000	0.0000	1	0	g,w
+mus-musculus	mus-pahari	I	ND2	240	L	M	V	1.0000	9	0.0474	0.0000	1.0000	1	0	g
+mus-musculus	mus-pahari	I	ND2	247	T	M	I	1.0000	9	0.0195	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	271	T	M	V	1.0000	8	0.0249	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND2	278	I	M	I	1.0000	9	0.0307	0.0000	1.0000	1	0	V
+mus-musculus	mus-pahari	I	ND2	279	P	A	T	0.0000	4	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND2	281	I	L	M	2.0000	8	0.3188	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	284	T	M	I	1.0000	8	0.4187	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	304	L	M	L	2.0000	7	0.0661	0.0000	1.0000	1	1	Q,w
+mus-musculus	mus-pahari	I	ND2	313	M	M	L	2.0000	9	0.0054	0.0000	1.0000	1	0	w
+mus-musculus	mus-pahari	I	ND2	314	K	M	Y	-1.0000	15	0.0199	0.0000	1.0000	1	0	w
+mus-musculus	mus-pahari	I	ND2	315	W	T	L	-1.0000	12	0.0127	0.0000	1.0000	1	0	g,w
+mus-musculus	mus-pahari	I	ND2	322	P	P	L	-3.0000	16	0.6015	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	324	P	L	F	0.0000	13	0.4455	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	325	F	M	T	-1.0000	14	0.6705	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND2	326	L	F	L	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	mus-pahari	I	ND2	327	P	S	P	-1.0000	8	0.1215	0.0000	1.0000	1	0	g
+mus-musculus	mus-pahari	I	ND2	328	T	T	L	-1.0000	11	0.1895	0.0000	1.0000	1	0	g
+mus-musculus	mus-pahari	I	ND2	330	I	A	T	0.0000	9	0.0483	0.0000	1.0000	1	0	g
+mus-musculus	mus-pahari	I	ND2	331	A	I	V	3.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	mus-pahari	I	ND2	340	S	A	S	1.0000	7	0.0000	0.0000	1.0000	1	0	u
+mus-musculus	mus-pahari	I	ND2	347	L	T	I	-1.0000	10	0.4432	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	4	A	Y	F	3.0000	10	0.3623	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	5	L	T	I	-1.0000	8	0.3107	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND3	6	I	V	I	3.0000	8	0.0729	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND3	7	L	I	M	1.0000	6	0.3538	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND3	8	M	F	V	-1.0000	8	0.5471	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	9	I	I	T	-1.0000	8	0.1755	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND3	11	T	I	S	-2.0000	11	0.2550	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND3	16	L	T	I	-1.0000	9	0.3658	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	20	I	V	I	3.0000	5	0.3732	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	85	P	S	N	1.0000	18	0.4496	0.0000	0.0000	1	0	U
+mus-musculus	mus-pahari	I	ND3	88	V	M	T	-1.0000	7	0.0972	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND3	89	M	I	A	-1.0000	13	0.5292	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	103	A	A	M	-1.0000	7	0.2902	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND3	107	L	T	M	-1.0000	11	0.6326	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	6	V	L	F	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+mus-musculus	mus-pahari	I	ND4	15	T	T	I	-1.0000	5	0.0000	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	19	K	S	Q	0.0000	10	0.2870	0.0000	0.0000	1	0	n
+mus-musculus	mus-pahari	I	ND4	25	I	T	M	-1.0000	6	0.0953	0.0000	1.0000	1	0	e
+mus-musculus	mus-pahari	I	ND4	37	I	T	I	-1.0000	10	0.0736	0.0000	1.0000	1	0	n
+mus-musculus	mus-pahari	I	ND4	39	L	L	F	0.0000	8	0.1262	0.0000	1.0000	1	0	e
+mus-musculus	mus-pahari	I	ND4	48	N	N	S	1.0000	14	0.1199	0.0000	1.0000	1	0	d
+mus-musculus	mus-pahari	I	ND4	50	F	K	I	-3.0000	15	0.1208	0.0000	1.0000	1	0	a,d
+mus-musculus	mus-pahari	I	ND4	57	S	S	F	-2.0000	8	0.0138	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	70	T	A	T	0.0000	9	0.0335	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	87	E	D	E	2.0000	7	0.1509	0.0000	1.0000	1	0	Q
+mus-musculus	mus-pahari	I	ND4	88	P	N	K	0.0000	11	0.2347	0.0000	0.0000	1	0	w
+mus-musculus	mus-pahari	I	ND4	89	L	N	S	1.0000	18	0.2747	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	90	S	V	T	0.0000	14	0.4936	0.0000	0.0000	1	0	w
+mus-musculus	mus-pahari	I	ND4	100	I	I	V	3.0000	7	0.0368	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	112	A	A	S	1.0000	4	0.0177	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	170	T	H	Y	2.0000	13	0.4248	0.0000	0.0000	1	0	a
+mus-musculus	mus-pahari	I	ND4	171	L	V	I	3.0000	12	0.2764	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	173	S	T	S	1.0000	2	0.0581	1.0000	1.0000	1	0	a
+mus-musculus	mus-pahari	I	ND4	182	T	T	S	1.0000	19	0.2471	0.0000	0.0000	1	0	d
+mus-musculus	mus-pahari	I	ND4	183	A	T	S	1.0000	17	0.1943	0.0000	1.0000	1	0	d
+mus-musculus	mus-pahari	I	ND4	184	Q	H	N	1.0000	18	0.5307	0.0000	0.0000	1	0	d,g
+mus-musculus	mus-pahari	I	ND4	185	E	T	P	-1.0000	17	0.4124	0.0000	0.0000	1	0	g
+mus-musculus	mus-pahari	I	ND4	186	L	L	M	2.0000	10	0.1308	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	187	S	D	N	1.0000	17	0.5445	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	188	N	A	Y	-2.0000	17	0.4373	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	240	G	S	G	0.0000	3	0.0000	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	248	L	I	V	3.0000	12	0.0900	0.0000	1.0000	1	0	d
+mus-musculus	mus-pahari	I	ND4	251	N	D	N	1.0000	11	0.1270	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	255	K	K	E	1.0000	15	0.3163	0.0000	0.0000	1	0	g
+mus-musculus	mus-pahari	I	ND4	310	T	M	S	-1.0000	6	0.0749	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	380	S	F	L	0.0000	10	0.0622	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	392	T	T	S	1.0000	3	0.0000	0.0000	1.0000	1	0	o
+mus-musculus	mus-pahari	I	ND4	396	T	M	I	1.0000	7	0.0273	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	398	L	I	V	3.0000	10	0.3953	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4	434	N	L	M	2.0000	6	0.0056	0.0000	1.0000	1	0	a
+mus-musculus	mus-pahari	I	ND4	449	L	T	I	-1.0000	8	0.4426	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND4	450	N	S	N	1.0000	7	0.3194	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4L	2	P	P	S	-1.0000	11	0.1274	0.0000	1.0000	1	1	h
+mus-musculus	mus-pahari	I	ND4L	3	L	S	Y	-2.0000	11	0.1382	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND4L	6	M	F	L	0.0000	8	0.2976	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND4L	10	L	M	L	2.0000	8	0.1070	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND4L	13	T	S	I	-2.0000	9	0.3813	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND4L	37	M	V	M	1.0000	5	0.0273	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND4L	45	T	S	A	1.0000	5	0.0140	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND4L	55	L	S	N	1.0000	10	0.0481	0.0000	1.0000	1	1	h
+mus-musculus	mus-pahari	I	ND4L	62	A	T	I	-1.0000	6	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND5	3	M	I	V	3.0000	13	0.0534	0.0000	1.0000	1	0	d
+mus-musculus	mus-pahari	I	ND5	6	T	T	V	0.0000	10	0.0133	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-pahari	I	ND5	9	T	L	I	2.0000	8	0.1264	0.0000	1.0000	1	0	b
+mus-musculus	mus-pahari	I	ND5	10	L	L	S	-2.0000	8	0.0240	0.0000	1.0000	1	0	b
+mus-musculus	mus-pahari	I	ND5	14	S	L	M	2.0000	10	0.0969	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	19	I	I	M	1.0000	7	0.2023	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	20	L	L	A	-1.0000	9	0.4553	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	23	L	M	A	-1.0000	15	0.5680	0.0000	0.0000	1	0	a
+mus-musculus	mus-pahari	I	ND5	24	V	S	I	-2.0000	13	0.5374	0.0000	0.0000	1	0	a
+mus-musculus	mus-pahari	I	ND5	25	N	N	Y	-2.0000	18	0.3674	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	26	P	L	P	-3.0000	15	0.3483	0.0000	0.0000	1	0	a
+mus-musculus	mus-pahari	I	ND5	27	N	I	T	-1.0000	18	0.4967	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	29	K	H	N	1.0000	17	0.4473	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	30	N	I	S	-2.0000	19	0.6730	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	36	V	T	A	0.0000	7	0.0062	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	38	S	T	S	1.0000	11	0.2466	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	45	I	I	F	0.0000	9	0.4713	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	49	F	L	M	2.0000	9	0.4126	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	53	M	M	L	2.0000	8	0.0486	0.0000	1.0000	1	0	d
+mus-musculus	mus-pahari	I	ND5	57	L	N	Y	-2.0000	13	0.1501	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-pahari	I	ND5	69	A	V	I	3.0000	7	0.1009	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND5	82	L	T	I	-1.0000	7	0.0781	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	90	I	T	M	-1.0000	6	0.0858	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	182	F	F	L	0.0000	3	0.0050	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	187	A	V	I	3.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND5	193	S	M	I	1.0000	12	0.0069	0.0000	1.0000	1	0	o
+mus-musculus	mus-pahari	I	ND5	198	P	L	F	0.0000	5	0.1535	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	203	L	F	L	0.0000	10	0.1767	0.0000	1.0000	1	0	d
+mus-musculus	mus-pahari	I	ND5	205	N	N	D	1.0000	16	0.0948	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	207	N	N	-		15	0.6225	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	208	P	D	-		17	0.0346	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	209	S	N	S	1.0000	12	0.4076	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	210	L	L	F	0.0000	11	0.3167	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	214	L	M	L	2.0000	9	0.3684	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	261	I	V	I	3.0000	3	0.0565	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	268	E	T	S	1.0000	12	0.3166	0.0000	0.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	272	L	F	N	-3.0000	13	0.4506	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	276	L	T	I	-1.0000	9	0.3458	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	283	I	L	I	2.0000	6	0.1464	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	302	V	I	V	3.0000	3	0.0139	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	319	I	M	I	1.0000	4	0.1096	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	323	H	H	Y	2.0000	4	0.1734	0.0000	1.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	351	N	A	G	0.0000	9	0.5554	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	362	L	I	M	1.0000	5	0.0114	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	363	L	T	M	-1.0000	12	0.0213	0.0000	1.0000	1	0	Z
+mus-musculus	mus-pahari	I	ND5	365	T	I	S	-2.0000	11	0.0594	0.0000	1.0000	1	0	Y,Z
+mus-musculus	mus-pahari	I	ND5	374	T	V	I	3.0000	7	0.0538	0.0000	1.0000	1	0	Z
+mus-musculus	mus-pahari	I	ND5	434	Q	K	N	0.0000	11	0.2336	0.0000	0.0000	1	0	Z
+mus-musculus	mus-pahari	I	ND5	442	N	S	T	1.0000	14	0.3110	0.0000	0.0000	1	0	X,Y
+mus-musculus	mus-pahari	I	ND5	447	N	D	N	1.0000	11	0.2767	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	451	L	M	I	1.0000	8	0.0601	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	463	F	F	M	0.0000	7	0.2868	0.0000	0.0000	1	0	Y
+mus-musculus	mus-pahari	I	ND5	467	L	V	I	3.0000	8	0.3545	0.0000	0.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	476	S	S	N	1.0000	12	0.2222	0.0000	0.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	478	F	P	Q	-1.0000	10	0.2493	0.0000	0.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	479	Q	V	I	3.0000	12	0.2265	0.0000	0.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	485	Y	F	Y	3.0000	14	0.3936	0.0000	0.0000	1	0	v
+mus-musculus	mus-pahari	I	ND5	489	T	T	M	-1.0000	7	0.3502	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	509	N	M	T	-1.0000	12	0.3977	0.0000	0.0000	1	0	p
+mus-musculus	mus-pahari	I	ND5	511	L	L	F	0.0000	8	0.2476	0.0000	0.0000	1	0	Z,p
+mus-musculus	mus-pahari	I	ND5	516	P	A	I	-1.0000	15	0.3010	0.0000	0.0000	1	0	p
+mus-musculus	mus-pahari	I	ND5	519	T	Y	F	3.0000	13	0.5194	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	520	F	S	T	1.0000	15	0.2214	0.0000	0.0000	1	0	p
+mus-musculus	mus-pahari	I	ND5	521	Y	S	P	-1.0000	13	0.2040	0.0000	0.0000	1	0	p
+mus-musculus	mus-pahari	I	ND5	525	M	L	Q	-2.0000	7	0.1679	0.0000	1.0000	1	0	c,p
+mus-musculus	mus-pahari	I	ND5	528	F	F	Y	3.0000	4	0.0151	0.0000	1.0000	1	0	c
+mus-musculus	mus-pahari	I	ND5	531	S	S	L	-2.0000	13	0.2077	0.0000	0.0000	1	0	c
+mus-musculus	mus-pahari	I	ND5	536	T	I	M	1.0000	13	0.1645	0.0000	1.0000	1	0	c,o
+mus-musculus	mus-pahari	I	ND5	537	I	T	M	-1.0000	16	0.5312	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	539	Y	M	K	-1.0000	15	0.2135	0.0000	0.0000	1	0	c,o
+mus-musculus	mus-pahari	I	ND5	544	T	L	H	-3.0000	15	0.3945	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	547	N	K	N	0.0000	10	0.2567	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	548	L	T	M	-1.0000	11	0.1976	0.0000	1.0000	1	1	o
+mus-musculus	mus-pahari	I	ND5	551	L	T	N	0.0000	14	0.0914	0.0000	1.0000	1	0	c
+mus-musculus	mus-pahari	I	ND5	553	L	L	M	2.0000	6	0.1142	0.0000	1.0000	1	1	o
+mus-musculus	mus-pahari	I	ND5	561	L	T	L	-1.0000	9	0.4525	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	569	H	L	I	2.0000	12	0.3708	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND5	573	T	M	F	0.0000	13	0.1388	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND5	575	I	T	K	-1.0000	14	0.2493	0.0000	0.0000	1	0	Q
+mus-musculus	mus-pahari	I	ND5	576	I	L	M	2.0000	12	0.7027	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND5	577	T	T	L	-1.0000	7	0.3641	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND5	593	F	I	V	3.0000	7	0.1912	0.0000	1.0000	1	0	V
+mus-musculus	mus-pahari	I	ND5	602	I	L	P	-3.0000	11	0.2267	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	7	L	V	A	0.0000	10	0.5453	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	10	V	S	L	-2.0000	8	0.2568	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	14	M	V	T	0.0000	8	0.4211	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	34	V	V	I	3.0000	6	0.5475	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	87	E	L	M	2.0000	13	0.5272	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	89	L	L	F	0.0000	8	0.3478	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	97	A	I	L	2.0000	10	0.4545	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	100	V	V	I	3.0000	10	0.4789	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	101	G	F	L	0.0000	12	0.2465	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	102	L	L	V	1.0000	11	0.3184	0.0000	0.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	103	V	I	V	3.0000	10	0.3046	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	104	L	C	Y	-2.0000	14	0.4867	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	105	W	V	L	1.0000	12	0.3211	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	106	V	L	F	0.0000	13	0.0278	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	111	G	-	D		15	0.2441	0.0000	0.0000	1	0	h
+mus-musculus	mus-pahari	I	ND6	113	V	V	I	3.0000	14	0.5511	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	114	V	G	E	-2.0000	14	0.1958	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	115	V	V	L	1.0000	13	0.0902	0.0000	1.0000	1	1	h
+mus-musculus	mus-pahari	I	ND6	116	V	I	V	3.0000	13	0.1041	0.0000	1.0000	1	0	h
+mus-musculus	mus-pahari	I	ND6	117	N	N	D	1.0000	13	0.0495	0.0000	1.0000	0	1	
+mus-musculus	mus-pahari	I	ND6	119	N	D	E	2.0000	12	0.1722	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	I	ND6	120	S	G	S	0.0000	15	0.4178	0.0000	0.0000	1	0	h
+mus-musculus	mus-pahari	I	ND6	129	G	V	I	3.0000	14	0.2603	0.0000	0.0000	1	1	W
+mus-musculus	mus-pahari	III	CYTB	39	A	V	I	3.0000	8	0.2383	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	102	L	L	M	2.0000	6	0.2296	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	190	A	A	T	0.0000	7	0.2870	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	193	A	A	V	0.0000	6	0.2517	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	232	L	I	A	-1.0000	8	0.3658	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	238	S	I	F	0.0000	11	0.3475	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	241	T	T	I	-1.0000	11	0.2268	0.0000	0.0000	1	0	H
+mus-musculus	mus-pahari	III	CYTB	304	I	M	L	2.0000	7	0.1519	0.0000	1.0000	0	0	
+mus-musculus	mus-pahari	III	CYTB	323	S	I	T	-1.0000	13	0.2673	0.0000	0.0000	1	0	A
+mus-musculus	mus-pahari	III	CYTB	327	L	I	L	2.0000	8	0.2917	0.0000	0.0000	1	0	A
+mus-musculus	mus-pahari	III	CYTB	334	I	I	V	3.0000	6	0.1226	0.0000	1.0000	1	0	A
+mus-musculus	mus-pahari	IV	COX1	177	T	T	S	1.0000	3	0.4095	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX1	403	Y	F	Y	3.0000	2	0.0046	1.0000	1.0000	1	0	L
+mus-musculus	mus-pahari	IV	COX1	408	T	T	M	-1.0000	7	0.1372	0.0000	1.0000	1	0	D,K
+mus-musculus	mus-pahari	IV	COX1	467	L	I	V	3.0000	5	0.0481	0.0000	1.0000	1	0	D
+mus-musculus	mus-pahari	IV	COX1	486	E	S	T	1.0000	11	0.1197	0.0000	1.0000	1	0	D,M
+mus-musculus	mus-pahari	IV	COX1	488	P	A	S	1.0000	8	0.2354	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX1	510	Y	Y	F	3.0000	4	0.0276	0.0000	1.0000	1	0	F
+mus-musculus	mus-pahari	IV	COX2	75	L	M	L	2.0000	5	0.5213	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX3	40	M	I	T	-1.0000	13	0.3460	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX3	41	T	T	I	-1.0000	14	0.4368	0.0000	0.0000	1	0	J
+mus-musculus	mus-pahari	IV	COX3	44	M	T	S	1.0000	11	0.4164	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX3	122	T	S	F	-2.0000	14	0.4828	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX3	168	L	M	I	1.0000	10	0.5682	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	IV	COX3	175	L	I	V	3.0000	10	0.5907	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	V	ATP6	14	I	M	V	1.0000	7	0.2139	0.0000	0.0000	1	0	R
+mus-musculus	mus-pahari	V	ATP6	17	L	F	L	0.0000	7	0.5588	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	V	ATP6	22	L	A	T	0.0000	8	0.5367	0.0000	0.0000	1	0	R
+mus-musculus	mus-pahari	V	ATP6	35	K	K	E	1.0000	16	0.4931	0.0000	0.0000	1	1	M
+mus-musculus	mus-pahari	V	ATP6	50	I	V	I	3.0000	8	0.0490	0.0000	1.0000	1	1	M
+mus-musculus	mus-pahari	V	ATP6	69	S	T	A	0.0000	4	0.0000	0.0000	1.0000	1	0	M
+mus-musculus	mus-pahari	V	ATP6	115	M	T	L	-1.0000	8	0.0371	0.0000	1.0000	1	0	P
+mus-musculus	mus-pahari	V	ATP8	28	M	V	I	3.0000	6	0.0000	0.0000	1.0000	1	1	M
+mus-musculus	mus-pahari	V	ATP8	32	N	T	N	0.0000	19	0.1934	0.0000	1.0000	1	1	M
+mus-musculus	mus-pahari	V	ATP8	36	P	A	P	-1.0000	18	0.4152	0.0000	0.0000	1	0	K,M
+mus-musculus	mus-pahari	V	ATP8	41	P	S	A	1.0000	18	0.5036	0.0000	0.0000	1	0	K
+mus-musculus	mus-pahari	V	ATP8	44	M	T	I	-1.0000	16	0.2124	0.0000	0.0000	1	0	K,M
+mus-musculus	mus-pahari	V	ATP8	45	K	M	L	2.0000	18	0.7722	0.0000	0.0000	0	0	
+mus-musculus	mus-pahari	V	ATP8	53	P	L	S	-2.0000	17		0.0000		0	0	
+mus-musculus	mus-spretus	I	ND1	11	V	V	L	1.0000	7	0.3887	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND1	19	F	F	Y	3.0000	2	0.0704	1.0000	1.0000	1	0	S
+mus-musculus	mus-spretus	I	ND1	39	V	I	V	3.0000	5	0.2744	0.0000	0.0000	1	0	C,N
+mus-musculus	mus-spretus	I	ND1	57	T	M	I	1.0000	4	0.1903	0.0000	1.0000	1	0	C
+mus-musculus	mus-spretus	I	ND1	93	N	H	Y	2.0000	14	0.0845	0.0000	1.0000	1	0	S
+mus-musculus	mus-spretus	I	ND1	157	S	N	S	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+mus-musculus	mus-spretus	I	ND1	175	L	L	V	1.0000	6	0.3365	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND1	261	T	M	T	-1.0000	9	0.4282	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND1	314	I	V	T	0.0000	7	0.0524	0.0000	1.0000	1	1	U,W
+mus-musculus	mus-spretus	I	ND2	4	L	I	M	1.0000	12	0.5472	0.0000	0.0000	1	0	w
+mus-musculus	mus-spretus	I	ND2	11	S	F	L	0.0000	11	0.3255	0.0000	0.0000	0	1	
+mus-musculus	mus-spretus	I	ND2	85	T	M	V	1.0000	13	0.1108	0.0000	1.0000	1	0	a,h
+mus-musculus	mus-spretus	I	ND2	151	V	S	P	-1.0000	15	0.1368	0.0000	1.0000	1	0	V
+mus-musculus	mus-spretus	I	ND2	213	T	A	I	-1.0000	10	0.1256	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND2	331	A	I	V	3.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	mus-spretus	I	ND3	5	L	T	I	-1.0000	8	0.3107	0.0000	0.0000	0	1	
+mus-musculus	mus-spretus	I	ND3	6	I	V	I	3.0000	8	0.0729	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND3	89	M	I	T	-1.0000	13	0.5292	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	6	V	L	F	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+mus-musculus	mus-spretus	I	ND4	19	K	S	N	1.0000	10	0.2870	0.0000	0.0000	1	0	n
+mus-musculus	mus-spretus	I	ND4	37	I	T	V	0.0000	10	0.0736	0.0000	1.0000	1	0	n
+mus-musculus	mus-spretus	I	ND4	40	L	T	S	1.0000	12	0.1923	0.0000	1.0000	1	0	a,e
+mus-musculus	mus-spretus	I	ND4	100	I	I	V	3.0000	7	0.0368	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	104	I	I	A	-1.0000	8	0.0920	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	171	L	V	I	3.0000	12	0.2764	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	185	E	T	A	0.0000	17	0.4124	0.0000	0.0000	1	0	g
+mus-musculus	mus-spretus	I	ND4	187	S	D	N	1.0000	17	0.5445	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	188	N	A	T	0.0000	17	0.4373	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	380	S	F	Y	3.0000	10	0.0622	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND4	449	L	T	I	-1.0000	8	0.4426	0.0000	0.0000	0	1	
+mus-musculus	mus-spretus	I	ND4	459	S	M	I	1.0000	12	0.2378	0.0000	0.0000	1	1	e
+mus-musculus	mus-spretus	I	ND4L	4	I	T	A	0.0000	8	0.0490	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND4L	37	M	V	M	1.0000	5	0.0273	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND4L	47	M	T	A	0.0000	9	0.1103	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND4L	48	T	S	C	-1.0000	10	0.0897	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND4L	81	I	V	I	3.0000	4	0.1226	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND5	6	T	T	S	1.0000	10	0.0133	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-spretus	I	ND5	45	I	I	L	2.0000	9	0.4713	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	69	A	V	I	3.0000	7	0.1009	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND5	71	T	M	V	1.0000	8	0.1840	0.0000	1.0000	0	1	
+mus-musculus	mus-spretus	I	ND5	82	L	T	I	-1.0000	7	0.0781	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	90	I	T	M	-1.0000	6	0.0858	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	211	T	I	L	2.0000	8	0.3409	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	214	L	M	L	2.0000	9	0.3684	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	272	L	F	Y	3.0000	13	0.4506	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	302	V	I	V	3.0000	3	0.0139	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	323	H	H	Y	2.0000	4	0.1734	0.0000	1.0000	1	0	v
+mus-musculus	mus-spretus	I	ND5	365	T	I	T	-1.0000	11	0.0594	0.0000	1.0000	1	0	Y,Z
+mus-musculus	mus-spretus	I	ND5	476	S	S	N	1.0000	12	0.2222	0.0000	0.0000	1	0	v
+mus-musculus	mus-spretus	I	ND5	479	Q	V	I	3.0000	12	0.2265	0.0000	0.0000	1	0	v
+mus-musculus	mus-spretus	I	ND5	485	Y	F	L	0.0000	14	0.3936	0.0000	0.0000	1	0	v
+mus-musculus	mus-spretus	I	ND5	514	K	N	S	1.0000	15	0.3179	0.0000	0.0000	1	0	p
+mus-musculus	mus-spretus	I	ND5	589	L	M	L	2.0000	6	0.3598	0.0000	0.0000	0	1	
+mus-musculus	mus-spretus	I	ND5	590	S	S	T	1.0000	2	0.0294	1.0000	1.0000	1	1	V
+mus-musculus	mus-spretus	I	ND5	596	I	I	T	-1.0000	10	0.3310	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND5	602	I	L	P	-3.0000	11	0.2267	0.0000	0.0000	0	1	
+mus-musculus	mus-spretus	I	ND6	7	L	V	I	3.0000	10	0.5453	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND6	101	G	F	V	-1.0000	12	0.2465	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND6	102	L	L	V	1.0000	11	0.3184	0.0000	0.0000	0	1	
+mus-musculus	mus-spretus	I	ND6	103	V	I	V	3.0000	10	0.3046	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND6	104	L	C	Y	-2.0000	14	0.4867	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND6	111	G	-	D		15	0.2441	0.0000	0.0000	1	0	h
+mus-musculus	mus-spretus	I	ND6	113	V	V	I	3.0000	14	0.5511	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	I	ND6	116	V	I	V	3.0000	13	0.1041	0.0000	1.0000	1	0	h
+mus-musculus	mus-spretus	I	ND6	120	S	G	A	0.0000	15	0.4178	0.0000	0.0000	1	0	h
+mus-musculus	mus-spretus	III	CYTB	23	T	A	T	0.0000	4	0.0491	0.0000	1.0000	0	0	
+mus-musculus	mus-spretus	III	CYTB	39	A	V	I	3.0000	8	0.2383	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	III	CYTB	102	L	L	M	2.0000	6	0.2296	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	III	CYTB	238	S	I	L	2.0000	11	0.3475	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	IV	COX1	403	Y	F	Y	3.0000	2	0.0046	1.0000	1.0000	1	0	L
+mus-musculus	mus-spretus	IV	COX2	21	I	M	T	-1.0000	7	0.0667	0.0000	1.0000	1	0	I
+mus-musculus	mus-spretus	IV	COX3	38	H	N	S	1.0000	9	0.5447	0.0000	0.0000	1	0	G
+mus-musculus	mus-spretus	IV	COX3	168	L	M	I	1.0000	10	0.5682	0.0000	0.0000	0	0	
+mus-musculus	mus-spretus	V	ATP6	50	I	V	I	3.0000	8	0.0490	0.0000	1.0000	1	1	M
+mus-musculus	mus-spretus	V	ATP6	201	I	I	V	3.0000	7	0.4386	0.0000	0.0000	1	0	K
+mus-musculus	mus-spretus	V	ATP8	41	P	S	L	-2.0000	18	0.5036	0.0000	0.0000	1	0	K
+mus-musculus	mus-spretus	V	ATP8	53	P	L	S	-2.0000	17		0.0000		0	0	
+mus-musculus	mus-terricolor	I	ND1	2	P	F	Y	3.0000	10	0.5149	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND1	157	S	N	S	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+mus-musculus	mus-terricolor	I	ND1	165	L	L	F	0.0000	4	0.0421	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND1	175	L	L	I	2.0000	6	0.3365	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND1	176	L	L	I	2.0000	8	0.2944	0.0000	0.0000	1	0	W
+mus-musculus	mus-terricolor	I	ND1	251	S	L	M	2.0000	14	0.2777	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND1	258	Y	N	S	1.0000	11	0.4848	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND1	261	T	M	T	-1.0000	9	0.4282	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND1	311	I	T	L	-1.0000	9	0.2023	0.0000	0.0000	1	0	U,W
+mus-musculus	mus-terricolor	I	ND1	317	Q	Y	H	2.0000	6	0.2477	0.0000	0.0000	1	1	W
+mus-musculus	mus-terricolor	I	ND2	4	L	I	M	1.0000	12	0.5472	0.0000	0.0000	1	0	w
+mus-musculus	mus-terricolor	I	ND2	7	P	A	T	0.0000	13	0.4971	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	11	S	F	S	-2.0000	11	0.3255	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND2	27	F	M	L	2.0000	5	0.0252	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND2	36	N	S	N	1.0000	3	0.0416	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	41	I	I	V	3.0000	5	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND2	43	V	M	L	2.0000	5	0.0416	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	45	T	I	M	1.0000	7	0.0803	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	57	I	T	M	-1.0000	7	0.0920	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND2	61	L	V	I	3.0000	6	0.0541	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND2	92	Q	G	S	0.0000	16	0.4227	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND2	151	V	S	P	-1.0000	15	0.1368	0.0000	1.0000	1	0	V
+mus-musculus	mus-terricolor	I	ND2	156	T	M	T	-1.0000	10	0.3767	0.0000	0.0000	1	0	V
+mus-musculus	mus-terricolor	I	ND2	157	L	L	M	2.0000	8	0.1081	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	160	L	T	M	-1.0000	7	0.3538	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	206	T	M	A	-1.0000	10	0.3626	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	213	T	A	I	-1.0000	10	0.1256	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	223	S	N	S	1.0000	14	0.1704	0.0000	1.0000	1	0	w
+mus-musculus	mus-terricolor	I	ND2	225	T	M	L	2.0000	8	0.1949	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	240	L	M	V	1.0000	9	0.0474	0.0000	1.0000	1	0	g
+mus-musculus	mus-terricolor	I	ND2	242	P	T	M	-1.0000	10	0.4903	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	244	I	I	T	-1.0000	8	0.1410	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	247	T	M	I	1.0000	9	0.0195	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND2	310	N	N	S	1.0000	9	0.0335	0.0000	1.0000	1	0	w
+mus-musculus	mus-terricolor	I	ND2	315	W	T	I	-1.0000	12	0.0127	0.0000	1.0000	1	0	g,w
+mus-musculus	mus-terricolor	I	ND2	320	T	T	I	-1.0000	14	0.5085	0.0000	0.0000	1	0	w
+mus-musculus	mus-terricolor	I	ND2	332	L	M	I	1.0000	9	0.2864	0.0000	0.0000	1	0	g
+mus-musculus	mus-terricolor	I	ND2	340	S	A	S	1.0000	7	0.0000	0.0000	1.0000	1	0	u
+mus-musculus	mus-terricolor	I	ND2	345	M	L	M	2.0000	13	0.0571	0.0000	1.0000	1	0	g
+mus-musculus	mus-terricolor	I	ND2	347	L	T	I	-1.0000	10	0.4432	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND3	5	L	T	I	-1.0000	8	0.3107	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND3	11	T	I	T	-1.0000	11	0.2550	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND3	16	L	T	A	0.0000	9	0.3658	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND3	85	P	S	T	1.0000	18	0.4496	0.0000	0.0000	1	0	U
+mus-musculus	mus-terricolor	I	ND3	89	M	I	T	-1.0000	13	0.5292	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	6	V	L	F	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+mus-musculus	mus-terricolor	I	ND4	9	I	L	F	0.0000	7	0.3794	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	15	T	T	I	-1.0000	5	0.0000	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	51	S	N	T	0.0000	10	0.0078	0.0000	1.0000	1	0	a
+mus-musculus	mus-terricolor	I	ND4	54	P	N	I	-3.0000	12	0.1643	0.0000	1.0000	1	0	a,n
+mus-musculus	mus-terricolor	I	ND4	70	T	A	T	0.0000	9	0.0335	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	87	E	D	E	2.0000	7	0.1509	0.0000	1.0000	1	0	Q
+mus-musculus	mus-terricolor	I	ND4	88	P	N	S	1.0000	11	0.2347	0.0000	0.0000	1	0	w
+mus-musculus	mus-terricolor	I	ND4	89	L	N	L	-3.0000	18	0.2747	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	90	S	V	I	3.0000	14	0.4936	0.0000	0.0000	1	0	w
+mus-musculus	mus-terricolor	I	ND4	100	I	I	V	3.0000	7	0.0368	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	107	I	I	T	-1.0000	6	0.0245	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	170	T	H	Y	2.0000	13	0.4248	0.0000	0.0000	1	0	a
+mus-musculus	mus-terricolor	I	ND4	171	L	V	I	3.0000	12	0.2764	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	176	I	L	F	0.0000	8	0.0981	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	177	L	M	T	-1.0000	11	0.0360	0.0000	1.0000	1	0	a
+mus-musculus	mus-terricolor	I	ND4	181	L	F	L	0.0000	10	0.0180	0.0000	1.0000	1	0	a,d
+mus-musculus	mus-terricolor	I	ND4	183	A	T	A	0.0000	17	0.1943	0.0000	1.0000	1	0	d
+mus-musculus	mus-terricolor	I	ND4	186	L	L	M	2.0000	10	0.1308	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	188	N	A	T	0.0000	17	0.4373	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	351	L	V	I	3.0000	8	0.0634	0.0000	1.0000	1	0	a,p
+mus-musculus	mus-terricolor	I	ND4	382	L	T	A	0.0000	7	0.0421	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND4	383	V	M	I	1.0000	8	0.0478	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND4	392	T	T	S	1.0000	3	0.0000	0.0000	1.0000	1	0	o
+mus-musculus	mus-terricolor	I	ND4	398	L	I	M	1.0000	10	0.3953	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	444	I	L	I	2.0000	4	0.0245	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4	449	L	T	I	-1.0000	8	0.4426	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND4	450	N	S	N	1.0000	7	0.3194	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4L	2	P	P	S	-1.0000	11	0.1274	0.0000	1.0000	1	1	h
+mus-musculus	mus-terricolor	I	ND4L	4	I	T	V	0.0000	8	0.0490	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND4L	10	L	M	L	2.0000	8	0.1070	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND4L	13	T	S	A	1.0000	9	0.3813	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND4L	37	M	V	M	1.0000	5	0.0273	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND4L	47	M	T	I	-1.0000	9	0.1103	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND5	6	T	T	A	0.0000	10	0.0133	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-terricolor	I	ND5	16	I	L	I	2.0000	11	0.3985	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	27	N	I	T	-1.0000	18	0.4967	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	29	K	H	Y	2.0000	17	0.4473	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	38	S	T	M	-1.0000	11	0.2466	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	49	F	L	I	2.0000	9	0.4126	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	53	M	M	L	2.0000	8	0.0486	0.0000	1.0000	1	0	d
+mus-musculus	mus-terricolor	I	ND5	56	C	H	Y	2.0000	13	0.1869	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-terricolor	I	ND5	57	L	N	S	1.0000	13	0.1501	0.0000	1.0000	1	0	b,d
+mus-musculus	mus-terricolor	I	ND5	69	A	V	M	1.0000	7	0.1009	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND5	75	Q	E	K	1.0000	10	0.2008	0.0000	0.0000	1	0	d
+mus-musculus	mus-terricolor	I	ND5	77	S	K	T	-1.0000	11	0.1115	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	82	L	T	L	-1.0000	7	0.0781	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	187	A	V	I	3.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	mus-terricolor	I	ND5	214	L	M	L	2.0000	9	0.3684	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	268	E	T	A	0.0000	12	0.3166	0.0000	0.0000	1	0	v
+mus-musculus	mus-terricolor	I	ND5	271	P	N	S	1.0000	16	0.5156	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	272	L	F	N	-3.0000	13	0.4506	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	276	L	T	I	-1.0000	9	0.3458	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	302	V	I	V	3.0000	3	0.0139	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	361	G	N	S	1.0000	4	0.0813	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	362	L	I	M	1.0000	5	0.0114	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	365	T	I	A	-1.0000	11	0.0594	0.0000	1.0000	1	0	Y,Z
+mus-musculus	mus-terricolor	I	ND5	447	N	D	N	1.0000	11	0.2767	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	467	L	V	I	3.0000	8	0.3545	0.0000	0.0000	1	0	v
+mus-musculus	mus-terricolor	I	ND5	476	S	S	N	1.0000	12	0.2222	0.0000	0.0000	1	0	v
+mus-musculus	mus-terricolor	I	ND5	477	P	I	V	3.0000	14	0.3576	0.0000	0.0000	1	0	v
+mus-musculus	mus-terricolor	I	ND5	478	F	P	Q	-1.0000	10	0.2493	0.0000	0.0000	1	0	v
+mus-musculus	mus-terricolor	I	ND5	479	Q	V	I	3.0000	12	0.2265	0.0000	0.0000	1	0	v
+mus-musculus	mus-terricolor	I	ND5	511	L	L	F	0.0000	8	0.2476	0.0000	0.0000	1	0	Z,p
+mus-musculus	mus-terricolor	I	ND5	513	M	M	T	-1.0000	15	0.2437	0.0000	0.0000	1	0	p
+mus-musculus	mus-terricolor	I	ND5	516	P	A	T	0.0000	15	0.3010	0.0000	0.0000	1	0	p
+mus-musculus	mus-terricolor	I	ND5	537	I	T	M	-1.0000	16	0.5312	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	540	L	K	M	-1.0000	14	0.5334	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	544	T	L	P	-3.0000	15	0.3945	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	561	L	T	V	0.0000	9	0.4525	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND5	602	I	L	P	-3.0000	11	0.2267	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND6	34	V	V	I	3.0000	6	0.5475	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	90	V	G	S	0.0000	12	0.4497	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	97	A	I	V	3.0000	10	0.4545	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	100	V	V	I	3.0000	10	0.4789	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	102	L	L	V	1.0000	11	0.3184	0.0000	0.0000	0	1	
+mus-musculus	mus-terricolor	I	ND6	104	L	C	Y	-2.0000	14	0.4867	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	105	W	V	M	1.0000	12	0.3211	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	107	K	N	G	0.0000	15	0.4586	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	108	E	Y	N	-2.0000	17	0.5853	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	109	Y	Y	N	-2.0000	14	0.4455	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	I	ND6	111	G	-	D		15	0.2441	0.0000	0.0000	1	0	h
+mus-musculus	mus-terricolor	I	ND6	115	V	V	L	1.0000	13	0.0902	0.0000	1.0000	1	1	h
+mus-musculus	mus-terricolor	I	ND6	116	V	I	V	3.0000	13	0.1041	0.0000	1.0000	1	0	h
+mus-musculus	mus-terricolor	I	ND6	132	S	V	I	3.0000	16	0.2696	0.0000	0.0000	1	0	S,W
+mus-musculus	mus-terricolor	III	CYTB	39	A	V	I	3.0000	8	0.2383	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	III	CYTB	102	L	L	M	2.0000	6	0.2296	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	III	CYTB	190	A	A	T	0.0000	7	0.2870	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	III	CYTB	192	L	L	M	2.0000	4	0.2043	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	III	CYTB	193	A	A	V	0.0000	6	0.2517	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	III	CYTB	238	S	I	F	0.0000	11	0.3475	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	III	CYTB	304	I	M	L	2.0000	7	0.1519	0.0000	1.0000	0	0	
+mus-musculus	mus-terricolor	IV	COX1	403	Y	F	Y	3.0000	2	0.0046	1.0000	1.0000	1	0	L
+mus-musculus	mus-terricolor	IV	COX1	467	L	I	V	3.0000	5	0.0481	0.0000	1.0000	1	0	D
+mus-musculus	mus-terricolor	IV	COX1	483	L	M	A	-1.0000	17	0.1482	0.0000	1.0000	1	0	D,M
+mus-musculus	mus-terricolor	IV	COX3	44	M	T	S	1.0000	11	0.4164	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	IV	COX3	45	L	L	I	2.0000	6	0.2824	0.0000	0.0000	1	0	J
+mus-musculus	mus-terricolor	IV	COX3	51	T	I	V	3.0000	9	0.3673	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	IV	COX3	122	T	S	F	-2.0000	14	0.4828	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	IV	COX3	168	L	M	L	2.0000	10	0.5682	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	V	ATP6	17	L	F	L	0.0000	7	0.5588	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	V	ATP6	50	I	V	I	3.0000	8	0.0490	0.0000	1.0000	1	1	M
+mus-musculus	mus-terricolor	V	ATP6	183	T	N	S	1.0000	12	0.7031	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	V	ATP6	201	I	I	V	3.0000	7	0.4386	0.0000	0.0000	1	0	K
+mus-musculus	mus-terricolor	V	ATP8	28	M	V	I	3.0000	6	0.0000	0.0000	1.0000	1	1	M
+mus-musculus	mus-terricolor	V	ATP8	34	H	P	T	-1.0000	13	0.1822	0.0000	1.0000	1	1	K,M
+mus-musculus	mus-terricolor	V	ATP8	36	P	A	P	-1.0000	18	0.4152	0.0000	0.0000	1	0	K,M
+mus-musculus	mus-terricolor	V	ATP8	43	K	T	M	-1.0000	18	0.5100	0.0000	0.0000	1	0	K
+mus-musculus	mus-terricolor	V	ATP8	45	K	M	L	2.0000	18	0.7722	0.0000	0.0000	0	0	
+mus-musculus	mus-terricolor	V	ATP8	47	Y	V	T	0.0000	17	0.5789	0.0000	0.0000	1	0	K,M
+mus-musculus	mus-terricolor	V	ATP8	53	P	L	S	-2.0000	17		0.0000		0	0	
+mus-musculus	otomys-irroratus	I	ND1	2	P	F	Y	3.0000	10	0.5149	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	11	V	V	I	3.0000	7	0.3887	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	57	T	M	I	1.0000	4	0.1903	0.0000	1.0000	1	0	C
+mus-musculus	otomys-irroratus	I	ND1	87	T	V	I	3.0000	8	0.0281	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND1	157	S	N	S	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+mus-musculus	otomys-irroratus	I	ND1	160	F	Y	F	3.0000	3	0.0453	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND1	164	T	T	M	-1.0000	8	0.0694	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	166	I	I	M	1.0000	8	0.0790	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	175	L	L	I	2.0000	6	0.3365	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	176	L	L	I	2.0000	8	0.2944	0.0000	0.0000	1	0	W
+mus-musculus	otomys-irroratus	I	ND1	178	S	A	T	0.0000	6	0.0138	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	181	L	M	I	1.0000	2	0.0060	1.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	247	Y	Y	H	2.0000	16	0.2327	0.0000	0.0000	1	0	S
+mus-musculus	otomys-irroratus	I	ND1	248	D	Y	N	-2.0000	14	0.3171	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	249	A	I	M	1.0000	14	0.0562	0.0000	1.0000	1	0	S,u
+mus-musculus	otomys-irroratus	I	ND1	250	L	N	D	1.0000	19	0.6192	0.0000	0.0000	1	0	u
+mus-musculus	otomys-irroratus	I	ND1	251	S	L	F	0.0000	14	0.2777	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	257	T	T	I	-1.0000	8	0.2972	0.0000	0.0000	1	0	S
+mus-musculus	otomys-irroratus	I	ND1	261	T	M	T	-1.0000	9	0.4282	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	263	T	A	T	0.0000	7	0.0327	0.0000	1.0000	1	0	S
+mus-musculus	otomys-irroratus	I	ND1	265	L	L	V	1.0000	10	0.5768	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	268	S	S	T	1.0000	9	0.2232	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND1	300	L	L	F	0.0000	7	0.1142	0.0000	1.0000	1	0	U
+mus-musculus	otomys-irroratus	I	ND1	311	I	T	L	-1.0000	9	0.2023	0.0000	0.0000	1	0	U,W
+mus-musculus	otomys-irroratus	I	ND1	313	S	G	S	0.0000	7	0.0769	0.0000	1.0000	1	0	W
+mus-musculus	otomys-irroratus	I	ND1	314	I	V	I	3.0000	7	0.0524	0.0000	1.0000	1	1	U,W
+mus-musculus	otomys-irroratus	I	ND1	318	T	M	L	2.0000	9	0.0889	0.0000	1.0000	1	1	S,U,h
+mus-musculus	otomys-irroratus	I	ND2	6	Q	L	I	2.0000	12	0.2262	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	7	P	A	I	-1.0000	13	0.4971	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	14	F	F	L	0.0000	9	0.5128	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	15	A	L	M	2.0000	8	0.2808	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	18	L	V	L	1.0000	9	0.2758	0.0000	0.0000	1	0	h
+mus-musculus	otomys-irroratus	I	ND2	22	L	S	A	1.0000	9	0.0661	0.0000	1.0000	1	0	h
+mus-musculus	otomys-irroratus	I	ND2	35	M	F	M	0.0000	5	0.0654	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	43	V	M	L	2.0000	5	0.0416	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	53	T	T	I	-1.0000	5	0.0959	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	61	L	V	I	3.0000	6	0.0541	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	69	I	I	M	1.0000	6	0.1349	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	74	I	I	M	1.0000	6	0.0415	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	75	L	V	I	3.0000	10	0.0360	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	83	Q	T	M	-1.0000	12	0.0974	0.0000	1.0000	1	0	a,h
+mus-musculus	otomys-irroratus	I	ND2	85	T	M	T	-1.0000	13	0.1108	0.0000	1.0000	1	0	a,h
+mus-musculus	otomys-irroratus	I	ND2	92	Q	G	N	0.0000	16	0.4227	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	93	Y	L	M	2.0000	14	0.3396	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	94	S	I	L	2.0000	10	0.0078	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	97	M	M	I	1.0000	8	0.2227	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	98	I	T	M	-1.0000	9	0.0245	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	100	M	M	I	1.0000	8	0.1517	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	101	A	A	S	1.0000	3	0.0000	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	113	F	F	Y	3.0000	7	0.1258	0.0000	1.0000	1	1	V
+mus-musculus	otomys-irroratus	I	ND2	126	S	M	I	1.0000	8	0.0148	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	142	M	L	M	2.0000	6	0.0162	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	143	Y	I	F	0.0000	9	0.2135	0.0000	0.0000	1	0	h
+mus-musculus	otomys-irroratus	I	ND2	147	P	P	H	-2.0000	12	0.3271	0.0000	0.0000	1	0	a
+mus-musculus	otomys-irroratus	I	ND2	151	V	S	P	-1.0000	15	0.1368	0.0000	1.0000	1	0	V
+mus-musculus	otomys-irroratus	I	ND2	153	L	I	L	2.0000	7	0.0481	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	154	L	I	V	3.0000	5	0.0354	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	156	T	M	I	1.0000	10	0.3767	0.0000	0.0000	1	0	V
+mus-musculus	otomys-irroratus	I	ND2	160	L	T	S	1.0000	7	0.3538	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	175	L	M	T	-1.0000	5	0.0834	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	191	M	L	V	1.0000	8	0.0000	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	199	N	S	N	1.0000	13	0.0946	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	206	T	M	I	1.0000	10	0.3626	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	213	T	A	I	-1.0000	10	0.1256	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	218	L	A	T	0.0000	9	0.0580	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	221	L	L	M	2.0000	14	0.0594	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	223	S	N	T	0.0000	14	0.1704	0.0000	1.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND2	225	T	M	T	-1.0000	8	0.1949	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	230	L	I	M	1.0000	7	0.0414	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	239	W	A	M	-1.0000	13	0.2929	0.0000	0.0000	1	0	g,w
+mus-musculus	otomys-irroratus	I	ND2	240	L	M	I	1.0000	9	0.0474	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	244	I	I	T	-1.0000	8	0.1410	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	247	T	M	L	2.0000	9	0.0195	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	265	A	I	T	-1.0000	6	0.1104	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	271	T	M	L	2.0000	8	0.0249	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND2	314	K	M	T	-1.0000	15	0.0199	0.0000	1.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND2	315	W	T	S	1.0000	12	0.0127	0.0000	1.0000	1	0	g,w
+mus-musculus	otomys-irroratus	I	ND2	317	F	Q	H	0.0000	10	0.0386	0.0000	1.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND2	318	E	T	S	1.0000	17	0.2218	0.0000	0.0000	1	0	g,w
+mus-musculus	otomys-irroratus	I	ND2	319	H	K	N	0.0000	18	0.1565	0.0000	1.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND2	320	T	T	P	-1.0000	14	0.5085	0.0000	0.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND2	322	P	P	Y	-3.0000	16	0.6015	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	325	F	M	I	1.0000	14	0.6705	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND2	326	L	F	L	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	327	P	S	P	-1.0000	8	0.1215	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	328	T	T	S	1.0000	11	0.1895	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	330	I	A	T	0.0000	9	0.0483	0.0000	1.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	332	L	M	L	2.0000	9	0.2864	0.0000	0.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	335	L	M	L	2.0000	8	0.2937	0.0000	0.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND2	340	S	A	S	1.0000	7	0.0000	0.0000	1.0000	1	0	u
+mus-musculus	otomys-irroratus	I	ND2	347	L	T	L	-1.0000	10	0.4432	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND3	4	A	Y	F	3.0000	10	0.3623	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND3	5	L	T	I	-1.0000	8	0.3107	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND3	6	I	V	I	3.0000	8	0.0729	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND3	11	T	I	S	-2.0000	11	0.2550	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND3	12	L	L	F	0.0000	10	0.5747	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND3	16	L	T	I	-1.0000	9	0.3658	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND3	23	W	W	F	1.0000	5	0.6086	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND3	29	G	L	I	2.0000	11	0.3931	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND3	31	M	S	T	1.0000	8	0.2239	0.0000	0.0000	1	0	J
+mus-musculus	otomys-irroratus	I	ND3	82	T	I	T	-1.0000	16	0.4305	0.0000	0.0000	1	0	U
+mus-musculus	otomys-irroratus	I	ND3	83	N	K	Y	-2.0000	11	0.3297	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND3	85	P	S	T	1.0000	18	0.4496	0.0000	0.0000	1	0	U
+mus-musculus	otomys-irroratus	I	ND3	88	V	M	A	-1.0000	7	0.0972	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND3	90	S	M	T	-1.0000	10	0.0623	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND3	96	I	T	S	1.0000	9	0.3372	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	6	V	L	F	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+mus-musculus	otomys-irroratus	I	ND4	19	K	S	K	0.0000	10	0.2870	0.0000	0.0000	1	0	n
+mus-musculus	otomys-irroratus	I	ND4	23	I	T	V	0.0000	6	0.0307	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	25	I	T	M	-1.0000	6	0.0953	0.0000	1.0000	1	0	e
+mus-musculus	otomys-irroratus	I	ND4	37	I	T	I	-1.0000	10	0.0736	0.0000	1.0000	1	0	n
+mus-musculus	otomys-irroratus	I	ND4	40	L	T	L	-1.0000	12	0.1923	0.0000	1.0000	1	0	a,e
+mus-musculus	otomys-irroratus	I	ND4	45	I	T	N	0.0000	16	0.1715	0.0000	1.0000	1	0	e
+mus-musculus	otomys-irroratus	I	ND4	49	L	Y	N	-2.0000	16	0.0360	0.0000	1.0000	1	0	a,d
+mus-musculus	otomys-irroratus	I	ND4	50	F	K	L	-2.0000	15	0.1208	0.0000	1.0000	1	0	a,d
+mus-musculus	otomys-irroratus	I	ND4	54	P	N	I	-3.0000	12	0.1643	0.0000	1.0000	1	0	a,n
+mus-musculus	otomys-irroratus	I	ND4	55	T	M	L	2.0000	13	0.2533	0.0000	0.0000	1	0	u
+mus-musculus	otomys-irroratus	I	ND4	57	S	S	F	-2.0000	8	0.0138	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	63	T	T	S	1.0000	6	0.0133	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	70	T	A	T	0.0000	9	0.0335	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	78	M	M	L	2.0000	5	0.0115	0.0000	1.0000	1	0	e
+mus-musculus	otomys-irroratus	I	ND4	87	E	D	E	2.0000	7	0.1509	0.0000	1.0000	1	0	Q
+mus-musculus	otomys-irroratus	I	ND4	88	P	N	E	0.0000	11	0.2347	0.0000	0.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND4	89	L	N	M	-2.0000	18	0.2747	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	90	S	V	T	0.0000	14	0.4936	0.0000	0.0000	1	0	w
+mus-musculus	otomys-irroratus	I	ND4	91	R	L	Y	-1.0000	11	0.1419	0.0000	1.0000	1	0	Q,w
+mus-musculus	otomys-irroratus	I	ND4	94	L	L	I	2.0000	10	0.4080	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	100	I	I	V	3.0000	7	0.0368	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	107	I	I	T	-1.0000	6	0.0245	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	112	A	A	S	1.0000	4	0.0177	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	147	T	I	L	2.0000	9	0.1293	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	166	Y	L	S	-2.0000	12	0.2737	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	170	T	H	S	-1.0000	13	0.4248	0.0000	0.0000	1	0	a
+mus-musculus	otomys-irroratus	I	ND4	171	L	V	I	3.0000	12	0.2764	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	176	I	L	F	0.0000	8	0.0981	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	177	L	M	L	2.0000	11	0.0360	0.0000	1.0000	1	0	a
+mus-musculus	otomys-irroratus	I	ND4	181	L	F	L	0.0000	10	0.0180	0.0000	1.0000	1	0	a,d
+mus-musculus	otomys-irroratus	I	ND4	184	Q	H	S	-1.0000	18	0.5307	0.0000	0.0000	1	0	d,g
+mus-musculus	otomys-irroratus	I	ND4	185	E	T	P	-1.0000	17	0.4124	0.0000	0.0000	1	0	g
+mus-musculus	otomys-irroratus	I	ND4	186	L	L	T	-1.0000	10	0.1308	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	187	S	D	I	-3.0000	17	0.5445	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	188	N	A	F	-2.0000	17	0.4373	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	193	N	N	Y	-2.0000	15	0.1671	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	194	L	L	I	2.0000	9	0.3751	0.0000	0.0000	1	0	V
+mus-musculus	otomys-irroratus	I	ND4	240	G	S	G	0.0000	3	0.0000	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	244	M	I	M	1.0000	4	0.0108	0.0000	1.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND4	256	H	Y	H	2.0000	15	0.4934	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	314	I	M	T	-1.0000	8	0.0429	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	351	L	V	I	3.0000	8	0.0634	0.0000	1.0000	1	0	a,p
+mus-musculus	otomys-irroratus	I	ND4	382	L	T	A	0.0000	7	0.0421	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	392	T	T	S	1.0000	3	0.0000	0.0000	1.0000	1	0	o
+mus-musculus	otomys-irroratus	I	ND4	404	A	G	A	0.0000	5	0.0094	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	405	L	M	T	-1.0000	7	0.2083	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	408	L	M	I	1.0000	4	0.0421	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4	413	T	T	M	-1.0000	7	0.0913	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	421	H	N	S	1.0000	12	0.3285	0.0000	0.0000	1	0	o,p
+mus-musculus	otomys-irroratus	I	ND4	424	N	I	N	-3.0000	12	0.3091	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	438	F	A	S	1.0000	8	0.1610	0.0000	1.0000	1	0	a,e
+mus-musculus	otomys-irroratus	I	ND4	441	L	M	I	1.0000	7	0.0360	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	442	S	I	M	1.0000	9	0.0459	0.0000	1.0000	1	0	e
+mus-musculus	otomys-irroratus	I	ND4	445	L	I	V	3.0000	8	0.4385	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4	449	L	T	I	-1.0000	8	0.4426	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	2	P	P	S	-1.0000	11	0.1274	0.0000	1.0000	1	1	h
+mus-musculus	otomys-irroratus	I	ND4L	4	I	T	A	0.0000	8	0.0490	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	6	M	F	L	0.0000	8	0.2976	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	10	L	M	L	2.0000	8	0.1070	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	13	T	S	T	1.0000	9	0.3813	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4L	37	M	V	M	1.0000	5	0.0273	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	46	L	V	M	1.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	47	M	T	A	0.0000	9	0.1103	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND4L	48	T	S	T	1.0000	10	0.0897	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND4L	55	L	S	I	-2.0000	10	0.0481	0.0000	1.0000	1	1	h
+mus-musculus	otomys-irroratus	I	ND4L	58	I	P	S	-1.0000	8	0.0000	0.0000	1.0000	1	1	h
+mus-musculus	otomys-irroratus	I	ND4L	81	I	V	I	3.0000	4	0.1226	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	3	M	I	T	-1.0000	13	0.0534	0.0000	1.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND5	4	H	F	M	0.0000	13	0.0426	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	5	T	T	S	1.0000	11	0.0140	0.0000	1.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	6	T	T	S	1.0000	10	0.0133	0.0000	1.0000	1	0	b,d
+mus-musculus	otomys-irroratus	I	ND5	7	M	S	L	-2.0000	10	0.0891	0.0000	1.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND5	10	L	L	M	2.0000	8	0.0240	0.0000	1.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	17	P	S	M	-1.0000	10	0.2194	0.0000	0.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	19	I	I	V	3.0000	7	0.2023	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	20	L	L	F	0.0000	9	0.4553	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	24	V	S	T	1.0000	13	0.5374	0.0000	0.0000	1	0	a
+mus-musculus	otomys-irroratus	I	ND5	26	P	L	M	2.0000	15	0.3483	0.0000	0.0000	1	0	a
+mus-musculus	otomys-irroratus	I	ND5	27	N	I	T	-1.0000	18	0.4967	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	29	K	H	Y	2.0000	17	0.4473	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	32	Y	F	Y	3.0000	5	0.1005	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	36	V	T	V	0.0000	7	0.0062	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	42	S	F	Y	3.0000	13	0.1739	0.0000	1.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	46	I	I	L	2.0000	8	0.1594	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	52	T	L	T	-1.0000	10	0.3572	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	53	M	M	W	-1.0000	8	0.0486	0.0000	1.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND5	56	C	H	C	-3.0000	13	0.1869	0.0000	1.0000	1	0	b,d
+mus-musculus	otomys-irroratus	I	ND5	57	L	N	S	1.0000	13	0.1501	0.0000	1.0000	1	0	b,d
+mus-musculus	otomys-irroratus	I	ND5	59	Q	M	T	-1.0000	16	0.1426	0.0000	1.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	61	V	Y	C	-2.0000	13	0.0000	0.0000	1.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	65	N	T	S	1.0000	5	0.1572	0.0000	1.0000	1	0	b
+mus-musculus	otomys-irroratus	I	ND5	69	A	V	I	3.0000	7	0.1009	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	72	Q	N	S	1.0000	10	0.0258	0.0000	1.0000	1	1	d,o
+mus-musculus	otomys-irroratus	I	ND5	75	Q	E	K	1.0000	10	0.2008	0.0000	0.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND5	77	S	K	S	0.0000	11	0.1115	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	80	F	F	L	0.0000	4	0.1560	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	82	L	T	I	-1.0000	7	0.0781	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	84	Y	F	Y	3.0000	5	0.1331	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	90	I	T	L	-1.0000	6	0.0858	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	91	P	S	P	-1.0000	2	0.1283	1.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	112	P	P	M	-2.0000	4	0.3342	0.0000	0.0000	1	0	p
+mus-musculus	otomys-irroratus	I	ND5	113	N	N	Y	-2.0000	11	0.3076	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	122	L	T	L	-1.0000	5	0.0120	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	133	T	S	T	1.0000	2	0.0133	1.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	162	A	T	A	0.0000	9	0.1123	0.0000	1.0000	1	0	c
+mus-musculus	otomys-irroratus	I	ND5	187	A	V	T	0.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	190	I	S	C	-1.0000	10	0.0123	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	193	S	M	T	-1.0000	12	0.0069	0.0000	1.0000	1	0	o
+mus-musculus	otomys-irroratus	I	ND5	198	P	L	I	2.0000	5	0.1535	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	202	A	M	L	2.0000	8	0.1903	0.0000	1.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND5	203	L	F	L	0.0000	10	0.1767	0.0000	1.0000	1	0	d
+mus-musculus	otomys-irroratus	I	ND5	204	L	S	A	1.0000	11	0.1093	0.0000	1.0000	1	0	d,o
+mus-musculus	otomys-irroratus	I	ND5	205	N	N	D	1.0000	16	0.0948	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	207	N	N	S	1.0000	15	0.6225	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	208	P	D	-		17	0.0346	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	214	L	M	L	2.0000	9	0.3684	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	260	L	L	M	2.0000	3	0.1135	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	261	I	V	I	3.0000	3	0.0565	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	268	E	T	S	1.0000	12	0.3166	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	272	L	F	I	0.0000	13	0.4506	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	278	L	L	M	2.0000	2	0.0661	1.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	283	I	L	I	2.0000	6	0.1464	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	302	V	I	V	3.0000	3	0.0139	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	319	I	M	I	1.0000	4	0.1096	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	323	H	H	Y	2.0000	4	0.1734	0.0000	1.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	349	N	S	N	1.0000	4	0.0559	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	351	N	A	S	1.0000	9	0.5554	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	362	L	I	M	1.0000	5	0.0114	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	363	L	T	F	-2.0000	12	0.0213	0.0000	1.0000	1	0	Z
+mus-musculus	otomys-irroratus	I	ND5	368	L	F	I	0.0000	6	0.0180	0.0000	1.0000	1	0	Y
+mus-musculus	otomys-irroratus	I	ND5	374	T	V	I	3.0000	7	0.0538	0.0000	1.0000	1	0	Z
+mus-musculus	otomys-irroratus	I	ND5	399	A	I	M	1.0000	6	0.0832	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	431	L	T	V	0.0000	8	0.0180	0.0000	1.0000	1	0	Z
+mus-musculus	otomys-irroratus	I	ND5	437	F	F	Y	3.0000	6	0.0302	0.0000	1.0000	1	0	Z
+mus-musculus	otomys-irroratus	I	ND5	440	L	L	F	0.0000	12	0.3095	0.0000	0.0000	1	0	X,Y,Z
+mus-musculus	otomys-irroratus	I	ND5	442	N	S	I	-2.0000	14	0.3110	0.0000	0.0000	1	0	X,Y
+mus-musculus	otomys-irroratus	I	ND5	446	N	N	K	0.0000	6	0.1925	0.0000	1.0000	1	0	Y
+mus-musculus	otomys-irroratus	I	ND5	450	L	L	M	2.0000	5	0.0060	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	451	L	M	I	1.0000	8	0.0601	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	459	A	F	L	0.0000	8	0.3172	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	463	F	F	L	0.0000	7	0.2868	0.0000	0.0000	1	0	Y
+mus-musculus	otomys-irroratus	I	ND5	467	L	V	F	-1.0000	8	0.3545	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	470	N	Y	H	2.0000	14	0.2473	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	476	S	S	N	1.0000	12	0.2222	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	478	F	P	Q	-1.0000	10	0.2493	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	479	Q	V	I	3.0000	12	0.2265	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	485	Y	F	Y	3.0000	14	0.3936	0.0000	0.0000	1	0	v
+mus-musculus	otomys-irroratus	I	ND5	488	L	T	I	-1.0000	10	0.4379	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	492	A	I	L	2.0000	11	0.4140	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	495	F	V	I	3.0000	8	0.4881	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	496	L	L	M	2.0000	7	0.4680	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	508	T	T	N	0.0000	7	0.3064	0.0000	0.0000	1	0	p
+mus-musculus	otomys-irroratus	I	ND5	511	L	L	F	0.0000	8	0.2476	0.0000	0.0000	1	0	Z,p
+mus-musculus	otomys-irroratus	I	ND5	513	M	M	T	-1.0000	15	0.2437	0.0000	0.0000	1	0	p
+mus-musculus	otomys-irroratus	I	ND5	516	P	A	I	-1.0000	15	0.3010	0.0000	0.0000	1	0	p
+mus-musculus	otomys-irroratus	I	ND5	525	M	L	S	-2.0000	7	0.1679	0.0000	1.0000	1	0	c,p
+mus-musculus	otomys-irroratus	I	ND5	528	F	F	Y	3.0000	4	0.0151	0.0000	1.0000	1	0	c
+mus-musculus	otomys-irroratus	I	ND5	533	T	I	M	1.0000	8	0.2404	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	536	T	I	T	-1.0000	13	0.1645	0.0000	1.0000	1	0	c,o
+mus-musculus	otomys-irroratus	I	ND5	537	I	T	F	-2.0000	16	0.5312	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	539	Y	M	L	2.0000	15	0.2135	0.0000	0.0000	1	0	c,o
+mus-musculus	otomys-irroratus	I	ND5	541	G	S	T	1.0000	14	0.3210	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	544	T	L	P	-3.0000	15	0.3945	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	546	Q	L	F	0.0000	9	0.0194	0.0000	1.0000	1	1	c,o
+mus-musculus	otomys-irroratus	I	ND5	551	L	T	N	0.0000	14	0.0914	0.0000	1.0000	1	0	c
+mus-musculus	otomys-irroratus	I	ND5	561	L	T	S	1.0000	9	0.4525	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	565	T	S	A	1.0000	13	0.1598	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	569	H	L	M	2.0000	12	0.3708	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	573	T	M	S	-1.0000	13	0.1388	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	574	S	T	S	1.0000	6	0.0000	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	575	I	T	K	-1.0000	14	0.2493	0.0000	0.0000	1	0	Q
+mus-musculus	otomys-irroratus	I	ND5	576	I	L	S	-2.0000	12	0.7027	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	577	T	T	L	-1.0000	7	0.3641	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	584	I	I	V	3.0000	4	0.0797	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	594	P	N	S	1.0000	4	0.1341	0.0000	1.0000	1	1	V
+mus-musculus	otomys-irroratus	I	ND5	595	L	I	L	2.0000	9	0.3485	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	598	T	I	V	3.0000	12	0.1170	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND5	599	L	I	T	-1.0000	11	0.4619	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND5	602	I	L	P	-3.0000	11	0.2267	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	2	M	N	T	0.0000	12	0.4853	0.0000	0.0000	1	0	W
+mus-musculus	otomys-irroratus	I	ND6	10	V	S	L	-2.0000	8	0.2568	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	14	M	V	T	0.0000	8	0.4211	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	33	I	I	V	3.0000	5	0.0981	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	34	V	V	I	3.0000	6	0.5475	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	64	M	L	M	2.0000	3	0.0452	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	89	L	L	F	0.0000	8	0.3478	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	90	V	G	S	0.0000	12	0.4497	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	91	S	F	I	0.0000	11	0.2665	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	93	L	V	I	3.0000	10	0.5901	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	94	V	L	M	2.0000	10	0.4858	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	96	L	V	F	-1.0000	9	0.3178	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	97	A	I	L	2.0000	10	0.4545	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	100	V	V	L	1.0000	10	0.4789	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	102	L	L	A	-1.0000	11	0.3184	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	103	V	I	V	3.0000	10	0.3046	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	104	L	C	Y	-2.0000	14	0.4867	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	105	W	V	L	1.0000	12	0.3211	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	106	V	L	F	0.0000	13	0.0278	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	107	K	N	D	1.0000	15	0.4586	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	110	D	D	G	-1.0000	13	0.1522	0.0000	1.0000	1	0	h
+mus-musculus	otomys-irroratus	I	ND6	111	G	-	G		15	0.2441	0.0000	0.0000	1	0	h
+mus-musculus	otomys-irroratus	I	ND6	115	V	V	L	1.0000	13	0.0902	0.0000	1.0000	1	1	h
+mus-musculus	otomys-irroratus	I	ND6	117	N	N	D	1.0000	13	0.0495	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	119	N	D	E	2.0000	12	0.1722	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	I	ND6	125	M	L	M	2.0000	10	0.0431	0.0000	1.0000	0	1	
+mus-musculus	otomys-irroratus	I	ND6	129	G	V	M	1.0000	14	0.2603	0.0000	0.0000	1	1	W
+mus-musculus	otomys-irroratus	I	ND6	132	S	V	I	3.0000	16	0.2696	0.0000	0.0000	1	0	S,W
+mus-musculus	otomys-irroratus	III	CYTB	4	M	M	I	1.0000	9	0.6300	0.0000	0.0000	1	0	L
+mus-musculus	otomys-irroratus	III	CYTB	11	M	F	L	0.0000	8	0.2705	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	23	T	A	T	0.0000	4	0.0491	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	39	A	V	I	3.0000	8	0.2383	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	43	L	V	L	1.0000	6	0.2043	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	46	T	I	L	2.0000	7	0.3759	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	60	S	M	T	-1.0000	12	0.5304	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	102	L	L	M	2.0000	6	0.2296	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	110	S	M	L	2.0000	14	0.3807	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	118	I	L	I	2.0000	7	0.4277	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	190	A	A	T	0.0000	7	0.2870	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	193	A	A	V	0.0000	6	0.2517	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	232	L	I	L	2.0000	8	0.3658	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	236	L	F	I	0.0000	8	0.3845	0.0000	0.0000	1	0	H
+mus-musculus	otomys-irroratus	III	CYTB	237	L	L	V	1.0000	10	0.2463	0.0000	0.0000	1	0	H
+mus-musculus	otomys-irroratus	III	CYTB	238	S	I	L	2.0000	11	0.3475	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	241	T	T	I	-1.0000	11	0.2268	0.0000	0.0000	1	0	H
+mus-musculus	otomys-irroratus	III	CYTB	249	L	M	A	-1.0000	7	0.5986	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	257	T	M	T	-1.0000	5	0.1818	0.0000	1.0000	1	0	H
+mus-musculus	otomys-irroratus	III	CYTB	304	I	M	L	2.0000	7	0.1519	0.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	316	M	M	I	1.0000	9	0.2499	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	III	CYTB	323	S	I	S	-2.0000	13	0.2673	0.0000	0.0000	1	0	A
+mus-musculus	otomys-irroratus	III	CYTB	376	M	M	L	2.0000	5	0.1664	0.0000	1.0000	1	0	F
+mus-musculus	otomys-irroratus	III	CYTB	379	W	Y	N	-2.0000	6	0.3424	0.0000	0.0000	1	0	F
+mus-musculus	otomys-irroratus	IV	COX1	3	A	I	V	3.0000	6	0.3531	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX1	403	Y	F	Y	3.0000	2	0.0046	1.0000	1.0000	1	0	L
+mus-musculus	otomys-irroratus	IV	COX1	449	T	T	M	-1.0000	6	0.0405	0.0000	1.0000	1	1	K
+mus-musculus	otomys-irroratus	IV	COX1	453	L	V	I	3.0000	5	0.2577	0.0000	0.0000	1	0	K
+mus-musculus	otomys-irroratus	IV	COX1	467	L	I	V	3.0000	5	0.0481	0.0000	1.0000	1	0	D
+mus-musculus	otomys-irroratus	IV	COX1	483	L	M	L	2.0000	17	0.1482	0.0000	1.0000	1	0	D,M
+mus-musculus	otomys-irroratus	IV	COX1	488	P	A	S	1.0000	8	0.2354	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX1	509	V	T	S	1.0000	5	0.0929	0.0000	1.0000	1	0	F
+mus-musculus	otomys-irroratus	IV	COX2	5	A	F	L	0.0000	10	0.2339	0.0000	0.0000	1	1	K
+mus-musculus	otomys-irroratus	IV	COX2	21	I	M	T	-1.0000	7	0.0667	0.0000	1.0000	1	0	I
+mus-musculus	otomys-irroratus	IV	COX2	75	L	M	L	2.0000	5	0.5213	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX2	162	S	S	A	1.0000	2	0.0000	1.0000	1.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX2	218	I	Y	H	2.0000	14	0.2677	0.0000	0.0000	1	0	I
+mus-musculus	otomys-irroratus	IV	COX3	22	L	F	I	0.0000	4	0.1615	0.0000	1.0000	1	0	J
+mus-musculus	otomys-irroratus	IV	COX3	37	F	Y	F	3.0000	5	0.4750	0.0000	0.0000	1	0	J
+mus-musculus	otomys-irroratus	IV	COX3	40	M	I	T	-1.0000	13	0.3460	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX3	61	V	V	I	3.0000	2	0.2360	1.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	IV	COX3	88	T	V	I	3.0000	6	0.2893	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	IV	COX3	95	A	A	S	1.0000	8	0.3047	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX3	164	L	L	F	0.0000	8	0.4553	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX3	168	L	M	L	2.0000	10	0.5682	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	IV	COX3	217	I	V	I	3.0000	4	0.4775	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	V	ATP6	17	L	F	L	0.0000	7	0.5588	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	V	ATP6	22	L	A	T	0.0000	8	0.5367	0.0000	0.0000	1	0	R
+mus-musculus	otomys-irroratus	V	ATP6	35	K	K	E	1.0000	16	0.4931	0.0000	0.0000	1	1	M
+mus-musculus	otomys-irroratus	V	ATP6	39	N	N	S	1.0000	8	0.0662	0.0000	1.0000	1	0	K
+mus-musculus	otomys-irroratus	V	ATP6	50	I	V	I	3.0000	8	0.0490	0.0000	1.0000	1	1	M
+mus-musculus	otomys-irroratus	V	ATP6	69	S	T	A	0.0000	4	0.0000	0.0000	1.0000	1	0	M
+mus-musculus	otomys-irroratus	V	ATP6	115	M	T	L	-1.0000	8	0.0371	0.0000	1.0000	1	0	P
+mus-musculus	otomys-irroratus	V	ATP6	123	N	S	N	1.0000	14	0.3249	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	V	ATP8	14	T	I	V	3.0000	10	0.4709	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	V	ATP8	28	M	V	I	3.0000	6	0.0000	0.0000	1.0000	1	1	M
+mus-musculus	otomys-irroratus	V	ATP8	30	N	S	M	-1.0000	10	0.2603	0.0000	0.0000	0	1	
+mus-musculus	otomys-irroratus	V	ATP8	35	L	L	T	-1.0000	20	0.1983	0.0000	1.0000	1	0	M
+mus-musculus	otomys-irroratus	V	ATP8	36	P	A	P	-1.0000	18	0.4152	0.0000	0.0000	1	0	K,M
+mus-musculus	otomys-irroratus	V	ATP8	41	P	S	I	-2.0000	18	0.5036	0.0000	0.0000	1	0	K
+mus-musculus	otomys-irroratus	V	ATP8	44	M	T	M	-1.0000	16	0.2124	0.0000	0.0000	1	0	K,M
+mus-musculus	otomys-irroratus	V	ATP8	45	K	M	Q	0.0000	18	0.7722	0.0000	0.0000	0	0	
+mus-musculus	otomys-irroratus	V	ATP8	47	Y	V	T	0.0000	17	0.5789	0.0000	0.0000	1	0	K,M
+mus-musculus	otomys-irroratus	V	ATP8	49	K	T	D	-1.0000	12	0.1251	0.0000	1.0000	1	0	K
+mus-musculus	otomys-irroratus	V	ATP8	53	P	L	S	-2.0000	17		0.0000		0	0	
+mus-musculus	otomys-irroratus	V	ATP8	62	H	H	L	-3.0000	7		0.0000		0	0	
+mus-musculus	otomys-irroratus	V	ATP8	63	S	S	L	-2.0000	2		1.0000		0	0	
+mus-musculus	otomys-irroratus	V	ATP8	64	L	L	S	-2.0000	10		0.0000		0	0	
+mus-musculus	otomys-irroratus	V	ATP8	65	P	-	S		11		0.0000		0	0	
+mus-musculus	otomys-irroratus	V	ATP8	66	P	P	L	-3.0000	5		0.0000		0	0	
+mus-musculus	rattus-norvegicus	I	ND1	2	P	F	Y	3.0000	10	0.5149	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	11	V	V	I	3.0000	7	0.3887	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	87	T	V	I	3.0000	8	0.0281	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND1	102	L	I	M	1.0000	7	0.0594	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	157	S	N	S	1.0000	4	0.0354	0.0000	1.0000	1	0	W
+mus-musculus	rattus-norvegicus	I	ND1	160	F	Y	F	3.0000	3	0.0453	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND1	164	T	T	M	-1.0000	8	0.0694	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	172	L	M	I	1.0000	12	0.1557	0.0000	1.0000	1	0	W
+mus-musculus	rattus-norvegicus	I	ND1	176	L	L	I	2.0000	8	0.2944	0.0000	0.0000	1	0	W
+mus-musculus	rattus-norvegicus	I	ND1	186	F	F	Y	3.0000	4	0.1459	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	239	T	T	S	1.0000	6	0.0195	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	241	I	I	V	3.0000	4	0.0368	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	248	D	Y	H	2.0000	14	0.3171	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	251	S	L	Y	-1.0000	14	0.2777	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	258	Y	N	S	1.0000	11	0.4848	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	261	T	M	T	-1.0000	9	0.4282	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	263	T	A	T	0.0000	7	0.0327	0.0000	1.0000	1	0	S
+mus-musculus	rattus-norvegicus	I	ND1	268	S	S	T	1.0000	9	0.2232	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND1	300	L	L	F	0.0000	7	0.1142	0.0000	1.0000	1	0	U
+mus-musculus	rattus-norvegicus	I	ND1	304	Y	H	Y	2.0000	6	0.0296	0.0000	1.0000	1	0	W
+mus-musculus	rattus-norvegicus	I	ND1	311	I	T	L	-1.0000	9	0.2023	0.0000	0.0000	1	0	U,W
+mus-musculus	rattus-norvegicus	I	ND1	314	I	V	I	3.0000	7	0.0524	0.0000	1.0000	1	1	U,W
+mus-musculus	rattus-norvegicus	I	ND1	318	T	M	T	-1.0000	9	0.0889	0.0000	1.0000	1	1	S,U,h
+mus-musculus	rattus-norvegicus	I	ND2	7	P	A	I	-1.0000	13	0.4971	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	14	F	F	L	0.0000	9	0.5128	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	15	A	L	M	2.0000	8	0.2808	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	24	S	T	S	1.0000	9	0.1220	0.0000	1.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND2	27	F	M	L	2.0000	5	0.0252	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	35	M	F	M	0.0000	5	0.0654	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	43	V	M	L	2.0000	5	0.0416	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	45	T	I	A	-1.0000	7	0.0803	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	49	N	N	S	1.0000	7	0.1075	0.0000	1.0000	1	0	Q
+mus-musculus	rattus-norvegicus	I	ND2	61	L	V	L	1.0000	6	0.0541	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	73	A	A	V	0.0000	7	0.0000	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	75	L	V	I	3.0000	10	0.0360	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	81	S	L	S	-2.0000	7	0.0441	0.0000	1.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND2	83	Q	T	M	-1.0000	12	0.0974	0.0000	1.0000	1	0	a,h
+mus-musculus	rattus-norvegicus	I	ND2	85	T	M	T	-1.0000	13	0.1108	0.0000	1.0000	1	0	a,h
+mus-musculus	rattus-norvegicus	I	ND2	86	M	F	L	0.0000	9	0.0632	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	92	Q	G	N	0.0000	16	0.4227	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	93	Y	L	M	2.0000	14	0.3396	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	94	S	I	L	2.0000	10	0.0078	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	98	I	T	M	-1.0000	9	0.0245	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	100	M	M	I	1.0000	8	0.1517	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	101	A	A	S	1.0000	3	0.0000	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	103	A	S	A	1.0000	10	0.0000	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	113	F	F	Y	3.0000	7	0.1258	0.0000	1.0000	1	1	V
+mus-musculus	rattus-norvegicus	I	ND2	126	S	M	I	1.0000	8	0.0148	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	143	Y	I	Y	-1.0000	9	0.2135	0.0000	0.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND2	145	I	I	F	0.0000	10	0.0061	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	147	P	P	Q	-1.0000	12	0.3271	0.0000	0.0000	1	0	a
+mus-musculus	rattus-norvegicus	I	ND2	151	V	S	P	-1.0000	15	0.1368	0.0000	1.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND2	154	L	I	T	-1.0000	5	0.0354	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	155	L	L	T	-1.0000	10	0.0000	0.0000	1.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND2	156	T	M	I	1.0000	10	0.3767	0.0000	0.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND2	160	L	T	S	1.0000	7	0.3538	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	162	I	I	V	3.0000	6	0.0123	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	164	A	M	V	1.0000	7	0.1196	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	175	L	M	T	-1.0000	5	0.0834	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	191	M	L	T	-1.0000	8	0.0000	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	199	N	S	N	1.0000	13	0.0946	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	206	T	M	T	-1.0000	10	0.3626	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	210	I	I	L	2.0000	9	0.2084	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	213	T	A	V	0.0000	10	0.1256	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	217	L	M	I	1.0000	11	0.1368	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	218	L	A	T	0.0000	9	0.0580	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	221	L	L	T	-1.0000	14	0.0594	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	223	S	N	S	1.0000	14	0.1704	0.0000	1.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND2	224	S	S	A	1.0000	11	0.0000	0.0000	1.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND2	225	T	M	T	-1.0000	8	0.1949	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	229	L	S	T	1.0000	7	0.0601	0.0000	1.0000	1	0	Q,w
+mus-musculus	rattus-norvegicus	I	ND2	230	L	I	L	2.0000	7	0.0414	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	233	T	L	A	-1.0000	10	0.0211	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	239	W	A	M	-1.0000	13	0.2929	0.0000	0.0000	1	0	g,w
+mus-musculus	rattus-norvegicus	I	ND2	240	L	M	I	1.0000	9	0.0474	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	244	I	I	T	-1.0000	8	0.1410	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	246	S	L	I	2.0000	11	0.1835	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	247	T	M	I	1.0000	9	0.0195	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	265	A	I	A	-1.0000	6	0.1104	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	268	E	T	S	1.0000	12	0.1220	0.0000	1.0000	1	1	u
+mus-musculus	rattus-norvegicus	I	ND2	271	T	M	L	2.0000	8	0.0249	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	276	L	L	S	-2.0000	13	0.2981	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	277	I	I	T	-1.0000	10	0.2881	0.0000	0.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND2	278	I	M	L	2.0000	9	0.0307	0.0000	1.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND2	279	P	A	S	1.0000	4	0.0000	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND2	284	T	M	I	1.0000	8	0.4187	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	289	N	N	S	1.0000	2	0.1060	1.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	300	T	T	M	-1.0000	6	0.0351	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	314	K	M	I	1.0000	15	0.0199	0.0000	1.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND2	315	W	T	S	1.0000	12	0.0127	0.0000	1.0000	1	0	g,w
+mus-musculus	rattus-norvegicus	I	ND2	317	F	Q	H	0.0000	10	0.0386	0.0000	1.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND2	318	E	T	H	-2.0000	17	0.2218	0.0000	0.0000	1	0	g,w
+mus-musculus	rattus-norvegicus	I	ND2	319	H	K	Q	1.0000	18	0.1565	0.0000	1.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND2	320	T	T	N	0.0000	14	0.5085	0.0000	0.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND2	322	P	P	H	-2.0000	16	0.6015	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	324	P	L	F	0.0000	13	0.4455	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	325	F	M	I	1.0000	14	0.6705	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND2	326	L	F	L	0.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	327	P	S	P	-1.0000	8	0.1215	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	330	I	A	T	0.0000	9	0.0483	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	331	A	I	V	3.0000	9	0.0000	0.0000	1.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	332	L	M	L	2.0000	9	0.2864	0.0000	0.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	335	L	M	L	2.0000	8	0.2937	0.0000	0.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND2	340	S	A	S	1.0000	7	0.0000	0.0000	1.0000	1	0	u
+mus-musculus	rattus-norvegicus	I	ND2	341	P	P	S	-1.0000	3	0.0076	0.0000	1.0000	1	0	g,u
+mus-musculus	rattus-norvegicus	I	ND2	343	M	-	S		9	0.1366	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	4	A	Y	L	-1.0000	10	0.3623	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	5	L	T	I	-1.0000	8	0.3107	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND3	6	I	V	I	3.0000	8	0.0729	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND3	8	M	F	T	-2.0000	8	0.5471	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	12	L	L	T	-1.0000	10	0.5747	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	15	L	L	F	0.0000	8	0.3598	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND3	16	L	T	I	-1.0000	9	0.3658	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	19	I	L	S	-2.0000	7	0.5312	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	20	I	V	I	3.0000	5	0.3732	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	82	T	I	T	-1.0000	16	0.4305	0.0000	0.0000	1	0	U
+mus-musculus	rattus-norvegicus	I	ND3	83	N	K	N	0.0000	11	0.3297	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND3	85	P	S	T	1.0000	18	0.4496	0.0000	0.0000	1	0	U
+mus-musculus	rattus-norvegicus	I	ND3	89	M	I	A	-1.0000	13	0.5292	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	90	S	M	T	-1.0000	10	0.0623	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND3	99	A	S	A	1.0000	8	0.3598	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND3	103	A	A	S	1.0000	7	0.2902	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	6	V	L	F	0.0000	9	0.1319	0.0000	1.0000	1	0	n
+mus-musculus	rattus-norvegicus	I	ND4	9	I	L	I	2.0000	7	0.3794	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	19	K	S	A	1.0000	10	0.2870	0.0000	0.0000	1	0	n
+mus-musculus	rattus-norvegicus	I	ND4	20	K	P	N	-2.0000	14	0.5800	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	23	I	T	I	-1.0000	6	0.0307	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	34	I	I	V	3.0000	4	0.0429	0.0000	1.0000	1	0	n
+mus-musculus	rattus-norvegicus	I	ND4	37	I	T	L	-1.0000	10	0.0736	0.0000	1.0000	1	0	n
+mus-musculus	rattus-norvegicus	I	ND4	40	L	T	S	1.0000	12	0.1923	0.0000	1.0000	1	0	a,e
+mus-musculus	rattus-norvegicus	I	ND4	45	I	T	N	0.0000	16	0.1715	0.0000	1.0000	1	0	e
+mus-musculus	rattus-norvegicus	I	ND4	50	F	K	L	-2.0000	15	0.1208	0.0000	1.0000	1	0	a,d
+mus-musculus	rattus-norvegicus	I	ND4	54	P	N	V	-3.0000	12	0.1643	0.0000	1.0000	1	0	a,n
+mus-musculus	rattus-norvegicus	I	ND4	70	T	A	T	0.0000	9	0.0335	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	77	I	L	M	2.0000	7	0.0184	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	78	M	M	L	2.0000	5	0.0115	0.0000	1.0000	1	0	e
+mus-musculus	rattus-norvegicus	I	ND4	84	L	L	M	2.0000	3	0.0287	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	87	E	D	E	2.0000	7	0.1509	0.0000	1.0000	1	0	Q
+mus-musculus	rattus-norvegicus	I	ND4	89	L	N	M	-2.0000	18	0.2747	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	90	S	V	M	1.0000	14	0.4936	0.0000	0.0000	1	0	w
+mus-musculus	rattus-norvegicus	I	ND4	91	R	L	H	-3.0000	11	0.1419	0.0000	1.0000	1	0	Q,w
+mus-musculus	rattus-norvegicus	I	ND4	117	M	M	L	2.0000	6	0.0435	0.0000	1.0000	1	0	u
+mus-musculus	rattus-norvegicus	I	ND4	166	Y	L	S	-2.0000	12	0.2737	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4	170	T	H	S	-1.0000	13	0.4248	0.0000	0.0000	1	0	a
+mus-musculus	rattus-norvegicus	I	ND4	171	L	V	M	1.0000	12	0.2764	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	176	I	L	F	0.0000	8	0.0981	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	177	L	M	L	2.0000	11	0.0360	0.0000	1.0000	1	0	a
+mus-musculus	rattus-norvegicus	I	ND4	181	L	F	L	0.0000	10	0.0180	0.0000	1.0000	1	0	a,d
+mus-musculus	rattus-norvegicus	I	ND4	185	E	T	P	-1.0000	17	0.4124	0.0000	0.0000	1	0	g
+mus-musculus	rattus-norvegicus	I	ND4	187	S	D	P	-1.0000	17	0.5445	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	188	N	A	S	1.0000	17	0.4373	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	189	S	S	T	1.0000	13	0.2371	0.0000	0.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND4	193	N	N	T	0.0000	15	0.1671	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	194	L	L	I	2.0000	9	0.3751	0.0000	0.0000	1	0	V
+mus-musculus	rattus-norvegicus	I	ND4	204	M	L	M	2.0000	3	0.0000	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	240	G	S	G	0.0000	3	0.0000	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	244	M	I	M	1.0000	4	0.0108	0.0000	1.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND4	246	L	I	V	3.0000	5	0.0421	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	256	H	Y	S	-2.0000	15	0.4934	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	257	M	M	L	2.0000	4	0.1806	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	263	V	L	I	2.0000	6	0.0486	0.0000	1.0000	1	0	o
+mus-musculus	rattus-norvegicus	I	ND4	299	T	A	T	0.0000	7	0.0203	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	300	A	S	A	1.0000	3	0.0094	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	332	S	S	T	1.0000	4	0.0657	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	351	L	V	I	3.0000	8	0.0634	0.0000	1.0000	1	0	a,p
+mus-musculus	rattus-norvegicus	I	ND4	361	L	M	L	2.0000	8	0.2443	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	372	T	S	L	-2.0000	5	0.1194	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	382	L	T	V	0.0000	7	0.0421	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4	384	T	S	A	1.0000	5	0.0203	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	385	T	L	T	-1.0000	7	0.0413	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	391	I	F	P	-4.0000	11	0.2731	0.0000	0.0000	1	0	o
+mus-musculus	rattus-norvegicus	I	ND4	392	T	T	S	1.0000	3	0.0000	0.0000	1.0000	1	0	o
+mus-musculus	rattus-norvegicus	I	ND4	397	G	G	A	0.0000	3	0.0464	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4	398	L	I	T	-1.0000	10	0.3953	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	401	L	I	V	3.0000	7	0.1322	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4	405	L	M	I	1.0000	7	0.2083	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4	421	H	N	S	1.0000	12	0.3285	0.0000	0.0000	1	0	o,p
+mus-musculus	rattus-norvegicus	I	ND4	424	N	I	N	-3.0000	12	0.3091	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	441	L	M	I	1.0000	7	0.0360	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	445	L	I	M	1.0000	8	0.4385	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4	449	L	T	I	-1.0000	8	0.4426	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4	450	N	S	N	1.0000	7	0.3194	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4L	2	P	P	T	-1.0000	11	0.1274	0.0000	1.0000	1	1	h
+mus-musculus	rattus-norvegicus	I	ND4L	4	I	T	A	0.0000	8	0.0490	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	6	M	F	L	0.0000	8	0.2976	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	13	T	S	T	1.0000	9	0.3813	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4L	20	L	L	F	0.0000	6	0.1983	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	37	M	V	M	1.0000	5	0.0273	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	42	I	I	V	3.0000	5	0.0245	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	46	L	V	T	0.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	47	M	T	S	1.0000	9	0.1103	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND4L	48	T	S	T	1.0000	10	0.0897	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND4L	55	L	S	I	-2.0000	10	0.0481	0.0000	1.0000	1	1	h
+mus-musculus	rattus-norvegicus	I	ND4L	58	I	P	T	-1.0000	8	0.0000	0.0000	1.0000	1	1	h
+mus-musculus	rattus-norvegicus	I	ND4L	81	I	V	I	3.0000	4	0.1226	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	3	M	I	M	1.0000	13	0.0534	0.0000	1.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND5	4	H	F	M	0.0000	13	0.0426	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	6	T	T	S	1.0000	10	0.0133	0.0000	1.0000	1	0	b,d
+mus-musculus	rattus-norvegicus	I	ND5	10	L	L	M	2.0000	8	0.0240	0.0000	1.0000	1	0	b
+mus-musculus	rattus-norvegicus	I	ND5	12	L	F	L	0.0000	6	0.2296	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	16	I	L	T	-1.0000	11	0.3985	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	17	P	S	T	1.0000	10	0.2194	0.0000	0.0000	1	0	b
+mus-musculus	rattus-norvegicus	I	ND5	20	L	L	I	2.0000	9	0.4553	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	24	V	S	T	1.0000	13	0.5374	0.0000	0.0000	1	0	a
+mus-musculus	rattus-norvegicus	I	ND5	27	N	I	P	-3.0000	18	0.4967	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	29	K	H	L	-3.0000	17	0.4473	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	31	S	N	D	1.0000	17	0.5058	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	34	H	L	S	-2.0000	19	0.4846	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	36	V	T	A	0.0000	7	0.0062	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	38	S	T	S	1.0000	11	0.2466	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	45	I	I	L	2.0000	9	0.4713	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	46	I	I	L	2.0000	8	0.1594	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	53	M	M	L	2.0000	8	0.0486	0.0000	1.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND5	57	L	N	H	1.0000	13	0.1501	0.0000	1.0000	1	0	b,d
+mus-musculus	rattus-norvegicus	I	ND5	59	Q	M	T	-1.0000	16	0.1426	0.0000	1.0000	1	0	b
+mus-musculus	rattus-norvegicus	I	ND5	65	N	T	N	0.0000	5	0.1572	0.0000	1.0000	1	0	b
+mus-musculus	rattus-norvegicus	I	ND5	69	A	V	L	1.0000	7	0.1009	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	71	T	M	I	1.0000	8	0.1840	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	74	T	M	I	1.0000	6	0.0522	0.0000	1.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND5	75	Q	E	K	1.0000	10	0.2008	0.0000	0.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND5	77	S	K	T	-1.0000	11	0.1115	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	82	L	T	I	-1.0000	7	0.0781	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	84	Y	F	Y	3.0000	5	0.1331	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	90	I	T	L	-1.0000	6	0.0858	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	113	N	N	H	1.0000	11	0.3076	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	122	L	T	M	-1.0000	5	0.0120	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	123	I	L	M	2.0000	7	0.2697	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	137	L	M	L	2.0000	6	0.0240	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	162	A	T	A	0.0000	9	0.1123	0.0000	1.0000	1	0	c
+mus-musculus	rattus-norvegicus	I	ND5	177	I	I	V	3.0000	3	0.3126	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	187	A	V	T	0.0000	8	0.0000	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	190	I	S	C	-1.0000	10	0.0123	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	202	A	M	F	0.0000	8	0.1903	0.0000	1.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND5	203	L	F	L	0.0000	10	0.1767	0.0000	1.0000	1	0	d
+mus-musculus	rattus-norvegicus	I	ND5	204	L	S	T	1.0000	11	0.1093	0.0000	1.0000	1	0	d,o
+mus-musculus	rattus-norvegicus	I	ND5	206	A	N	T	0.0000	18	0.5112	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	208	P	D	-		17	0.0346	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	211	T	I	V	3.0000	8	0.3409	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	214	L	M	T	-1.0000	9	0.3684	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	260	L	L	M	2.0000	3	0.1135	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	261	I	V	I	3.0000	3	0.0565	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	268	E	T	S	1.0000	12	0.3166	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	271	P	N	S	1.0000	16	0.5156	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	272	L	F	T	-2.0000	13	0.4506	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	274	Q	L	M	2.0000	4	0.1336	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	276	L	T	A	0.0000	9	0.3458	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	283	I	L	I	2.0000	6	0.1464	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	302	V	I	V	3.0000	3	0.0139	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	319	I	M	I	1.0000	4	0.1096	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	323	H	H	Y	2.0000	4	0.1734	0.0000	1.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	351	N	A	N	-2.0000	9	0.5554	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	362	L	I	M	1.0000	5	0.0114	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	363	L	T	M	-1.0000	12	0.0213	0.0000	1.0000	1	0	Z
+mus-musculus	rattus-norvegicus	I	ND5	365	T	I	A	-1.0000	11	0.0594	0.0000	1.0000	1	0	Y,Z
+mus-musculus	rattus-norvegicus	I	ND5	374	T	V	I	3.0000	7	0.0538	0.0000	1.0000	1	0	Z
+mus-musculus	rattus-norvegicus	I	ND5	410	S	L	M	2.0000	9	0.2850	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	421	A	M	V	1.0000	7	0.0738	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	437	F	F	Y	3.0000	6	0.0302	0.0000	1.0000	1	0	Z
+mus-musculus	rattus-norvegicus	I	ND5	438	P	P	S	-1.0000	14	0.2658	0.0000	0.0000	1	0	X,Z
+mus-musculus	rattus-norvegicus	I	ND5	442	N	S	T	1.0000	14	0.3110	0.0000	0.0000	1	0	X,Y
+mus-musculus	rattus-norvegicus	I	ND5	447	N	D	N	1.0000	11	0.2767	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	449	T	D	N	1.0000	14	0.1677	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	451	L	M	I	1.0000	8	0.0601	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	459	A	F	L	0.0000	8	0.3172	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	463	F	F	L	0.0000	7	0.2868	0.0000	0.0000	1	0	Y
+mus-musculus	rattus-norvegicus	I	ND5	467	L	V	L	1.0000	8	0.3545	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	470	N	Y	L	-1.0000	14	0.2473	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	476	S	S	N	1.0000	12	0.2222	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	478	F	P	Q	-1.0000	10	0.2493	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	479	Q	V	I	3.0000	12	0.2265	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	485	Y	F	H	-1.0000	14	0.3936	0.0000	0.0000	1	0	v
+mus-musculus	rattus-norvegicus	I	ND5	488	L	T	M	-1.0000	10	0.4379	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	492	A	I	L	2.0000	11	0.4140	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	494	T	S	T	1.0000	4	0.1458	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	495	F	V	I	3.0000	8	0.4881	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	499	L	L	A	-1.0000	9	0.3845	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	509	N	M	L	2.0000	12	0.3977	0.0000	0.0000	1	0	p
+mus-musculus	rattus-norvegicus	I	ND5	510	K	K	N	0.0000	12	0.4760	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	514	K	N	S	1.0000	15	0.3179	0.0000	0.0000	1	0	p
+mus-musculus	rattus-norvegicus	I	ND5	516	P	A	P	-1.0000	15	0.3010	0.0000	0.0000	1	0	p
+mus-musculus	rattus-norvegicus	I	ND5	517	L	N	T	0.0000	15	0.6291	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	518	C	P	K	-1.0000	16	0.4555	0.0000	0.0000	1	0	c
+mus-musculus	rattus-norvegicus	I	ND5	519	T	Y	L	-1.0000	13	0.5194	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	525	M	L	S	-2.0000	7	0.1679	0.0000	1.0000	1	0	c,p
+mus-musculus	rattus-norvegicus	I	ND5	528	F	F	Y	3.0000	4	0.0151	0.0000	1.0000	1	0	c
+mus-musculus	rattus-norvegicus	I	ND5	529	Y	F	Y	3.0000	3	0.1636	0.0000	1.0000	1	0	c
+mus-musculus	rattus-norvegicus	I	ND5	531	S	S	P	-1.0000	13	0.2077	0.0000	0.0000	1	0	c
+mus-musculus	rattus-norvegicus	I	ND5	533	T	I	M	1.0000	8	0.2404	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	537	I	T	I	-1.0000	16	0.5312	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	539	Y	M	Q	0.0000	15	0.2135	0.0000	0.0000	1	0	c,o
+mus-musculus	rattus-norvegicus	I	ND5	541	G	S	T	1.0000	14	0.3210	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	544	T	L	S	-2.0000	15	0.3945	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	546	Q	L	Y	-1.0000	9	0.0194	0.0000	1.0000	1	1	c,o
+mus-musculus	rattus-norvegicus	I	ND5	548	L	T	L	-1.0000	11	0.1976	0.0000	1.0000	1	1	o
+mus-musculus	rattus-norvegicus	I	ND5	551	L	T	N	0.0000	14	0.0914	0.0000	1.0000	1	0	c
+mus-musculus	rattus-norvegicus	I	ND5	568	Q	T	I	-1.0000	15	0.5085	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	569	H	L	T	-1.0000	12	0.3708	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	570	Q	H	Q	0.0000	5	0.1958	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	572	S	N	Q	0.0000	17	0.3918	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	573	T	M	L	2.0000	13	0.1388	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	574	S	T	S	1.0000	6	0.0000	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	575	I	T	K	-1.0000	14	0.2493	0.0000	0.0000	1	0	Q
+mus-musculus	rattus-norvegicus	I	ND5	576	I	L	M	2.0000	12	0.7027	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	577	T	T	M	-1.0000	7	0.3641	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	578	S	T	S	1.0000	6	0.1582	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	589	L	M	L	2.0000	6	0.3598	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	594	P	N	T	0.0000	4	0.1341	0.0000	1.0000	1	1	V
+mus-musculus	rattus-norvegicus	I	ND5	596	I	I	S	-2.0000	10	0.3310	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	599	L	I	F	0.0000	11	0.4619	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND5	602	I	L	F	0.0000	11	0.2267	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND5	603	T	E	Q	2.0000	12	0.4528	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	2	M	N	T	0.0000	12	0.4853	0.0000	0.0000	1	0	W
+mus-musculus	rattus-norvegicus	I	ND6	5	L	I	M	1.0000	9	0.0894	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	7	L	V	I	3.0000	10	0.5453	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	10	V	S	L	-2.0000	8	0.2568	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	14	M	V	T	0.0000	8	0.4211	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	37	V	F	C	-2.0000	8	0.2977	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	38	V	V	I	3.0000	9	0.1658	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	87	E	L	F	0.0000	13	0.5272	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	89	L	L	F	0.0000	8	0.3478	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	90	V	G	S	0.0000	12	0.4497	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	92	V	L	F	0.0000	7	0.2290	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	96	L	V	L	1.0000	9	0.3178	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	97	A	I	F	0.0000	10	0.4545	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	100	V	V	L	1.0000	10	0.4789	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	101	G	F	V	-1.0000	12	0.2465	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	102	L	L	V	1.0000	11	0.3184	0.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	103	V	I	F	0.0000	10	0.3046	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	104	L	C	Y	-2.0000	14	0.4867	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	105	W	V	L	1.0000	12	0.3211	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	106	V	L	F	0.0000	13	0.0278	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	107	K	N	S	1.0000	15	0.4586	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	108	E	Y	L	-1.0000	17	0.5853	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	109	Y	Y	N	-2.0000	14	0.4455	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	110	D	D	N	1.0000	13	0.1522	0.0000	1.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND6	111	G	-	N		15	0.2441	0.0000	0.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND6	112	V	E	K	1.0000	13	0.5757	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	I	ND6	114	V	G	E	-2.0000	14	0.1958	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	115	V	V	L	1.0000	13	0.0902	0.0000	1.0000	1	1	h
+mus-musculus	rattus-norvegicus	I	ND6	116	V	I	V	3.0000	13	0.1041	0.0000	1.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND6	117	N	N	D	1.0000	13	0.0495	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	I	ND6	118	F	L	F	0.0000	9	0.0704	0.0000	1.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND6	120	S	G	S	0.0000	15	0.4178	0.0000	0.0000	1	0	h
+mus-musculus	rattus-norvegicus	I	ND6	129	G	V	I	3.0000	14	0.2603	0.0000	0.0000	1	1	W
+mus-musculus	rattus-norvegicus	I	ND6	145	L	M	I	1.0000	5	0.0300	0.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	III	CYTB	4	M	M	I	1.0000	9	0.6300	0.0000	0.0000	1	0	L
+mus-musculus	rattus-norvegicus	III	CYTB	7	T	T	S	1.0000	10	0.5184	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	46	T	I	L	2.0000	7	0.3759	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	82	L	M	L	2.0000	6	0.1021	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	110	S	M	L	2.0000	14	0.3807	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	117	I	V	I	3.0000	5	0.1042	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	118	I	L	I	2.0000	7	0.4277	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	229	A	I	L	2.0000	8	0.2943	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	232	L	I	V	3.0000	8	0.3658	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	233	L	L	F	0.0000	10	0.1262	0.0000	1.0000	1	0	H
+mus-musculus	rattus-norvegicus	III	CYTB	234	L	I	M	1.0000	9	0.3945	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	235	F	M	L	2.0000	7	0.0755	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	236	L	F	L	0.0000	8	0.3845	0.0000	0.0000	1	0	H
+mus-musculus	rattus-norvegicus	III	CYTB	238	S	I	F	0.0000	11	0.3475	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	249	L	M	L	2.0000	7	0.5986	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	257	T	M	T	-1.0000	5	0.1818	0.0000	1.0000	1	0	H
+mus-musculus	rattus-norvegicus	III	CYTB	292	L	L	V	1.0000	5	0.4439	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	303	M	L	F	0.0000	8	0.3775	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	304	I	M	L	2.0000	7	0.1519	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	316	M	M	T	-1.0000	9	0.2499	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	372	I	I	V	3.0000	8	0.4100	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	III	CYTB	379	W	Y	W	2.0000	6	0.3424	0.0000	0.0000	1	0	F
+mus-musculus	rattus-norvegicus	III	CYTB	380	A	P	N	-2.0000	11		0.0000		0	0	
+mus-musculus	rattus-norvegicus	IV	COX1	2	F	F	L	0.0000	4	0.5109	0.0000	0.0000	1	0	L
+mus-musculus	rattus-norvegicus	IV	COX1	3	A	I	V	3.0000	6	0.3531	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX1	403	Y	F	Y	3.0000	2	0.0046	1.0000	1.0000	1	0	L
+mus-musculus	rattus-norvegicus	IV	COX1	406	D	D	N	1.0000	4	0.2021	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX1	434	S	S	A	1.0000	2	0.0285	1.0000	1.0000	0	1	
+mus-musculus	rattus-norvegicus	IV	COX1	467	L	I	V	3.0000	5	0.0481	0.0000	1.0000	1	0	D
+mus-musculus	rattus-norvegicus	IV	COX1	483	L	M	L	2.0000	17	0.1482	0.0000	1.0000	1	0	D,M
+mus-musculus	rattus-norvegicus	IV	COX1	485	V	V	I	3.0000	6	0.0617	0.0000	1.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX1	488	P	A	S	1.0000	8	0.2354	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX1	509	V	T	S	1.0000	5	0.0929	0.0000	1.0000	1	0	F
+mus-musculus	rattus-norvegicus	IV	COX2	21	I	M	T	-1.0000	7	0.0667	0.0000	1.0000	1	0	I
+mus-musculus	rattus-norvegicus	IV	COX2	75	L	M	L	2.0000	5	0.5213	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX3	22	L	F	L	0.0000	4	0.1615	0.0000	1.0000	1	0	J
+mus-musculus	rattus-norvegicus	IV	COX3	40	M	I	T	-1.0000	13	0.3460	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX3	41	T	T	I	-1.0000	14	0.4368	0.0000	0.0000	1	0	J
+mus-musculus	rattus-norvegicus	IV	COX3	44	M	T	S	1.0000	11	0.4164	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX3	61	V	V	I	3.0000	2	0.2360	1.0000	0.0000	0	1	
+mus-musculus	rattus-norvegicus	IV	COX3	122	T	S	T	1.0000	14	0.4828	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	IV	COX3	155	N	K	N	0.0000	7	0.1080	0.0000	1.0000	1	0	F
+mus-musculus	rattus-norvegicus	IV	COX3	168	L	M	L	2.0000	10	0.5682	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	V	ATP6	17	L	F	L	0.0000	7	0.5588	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	V	ATP6	22	L	A	T	0.0000	8	0.5367	0.0000	0.0000	1	0	R
+mus-musculus	rattus-norvegicus	V	ATP6	35	K	K	E	1.0000	16	0.4931	0.0000	0.0000	1	1	M
+mus-musculus	rattus-norvegicus	V	ATP6	39	N	N	S	1.0000	8	0.0662	0.0000	1.0000	1	0	K
+mus-musculus	rattus-norvegicus	V	ATP6	50	I	V	I	3.0000	8	0.0490	0.0000	1.0000	1	1	M
+mus-musculus	rattus-norvegicus	V	ATP6	69	S	T	A	0.0000	4	0.0000	0.0000	1.0000	1	0	M
+mus-musculus	rattus-norvegicus	V	ATP6	115	M	T	L	-1.0000	8	0.0371	0.0000	1.0000	1	0	P
+mus-musculus	rattus-norvegicus	V	ATP6	123	N	S	N	1.0000	14	0.3249	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	V	ATP6	183	T	N	D	1.0000	12	0.7031	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	V	ATP6	201	I	I	V	3.0000	7	0.4386	0.0000	0.0000	1	0	K
+mus-musculus	rattus-norvegicus	V	ATP8	18	L	I	A	-1.0000	8	0.4086	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	V	ATP8	28	M	V	I	3.0000	6	0.0000	0.0000	1.0000	1	1	M
+mus-musculus	rattus-norvegicus	V	ATP8	35	L	L	A	-1.0000	20	0.1983	0.0000	1.0000	1	0	M
+mus-musculus	rattus-norvegicus	V	ATP8	36	P	A	P	-1.0000	18	0.4152	0.0000	0.0000	1	0	K,M
+mus-musculus	rattus-norvegicus	V	ATP8	41	P	S	T	1.0000	18	0.5036	0.0000	0.0000	1	0	K
+mus-musculus	rattus-norvegicus	V	ATP8	42	M	L	M	2.0000	14	0.6391	0.0000	0.0000	1	0	K
+mus-musculus	rattus-norvegicus	V	ATP8	43	K	T	A	0.0000	18	0.5100	0.0000	0.0000	1	0	K
+mus-musculus	rattus-norvegicus	V	ATP8	45	K	M	E	-2.0000	18	0.7722	0.0000	0.0000	0	0	
+mus-musculus	rattus-norvegicus	V	ATP8	47	Y	V	T	0.0000	17	0.5789	0.0000	0.0000	1	0	K,M
+mus-musculus	rattus-norvegicus	V	ATP8	48	N	K	N	0.0000	19	0.2697	0.0000	0.0000	1	0	M
+mus-musculus	rattus-norvegicus	V	ATP8	49	K	T	N	0.0000	12	0.1251	0.0000	1.0000	1	0	K
+mus-musculus	rattus-norvegicus	V	ATP8	53	P	L	S	-2.0000	17		0.0000		0	0	
+mus-musculus	rattus-norvegicus	V	ATP8	58	I	I	T	-1.0000	5		0.0000		0	0	
+mus-musculus	rattus-norvegicus	V	ATP8	62	H	H	L	-3.0000	7		0.0000		0	0	
+mus-musculus	rattus-norvegicus	V	ATP8	65	P	-	P		11		0.0000		0	0	
+mus-musculus	rattus-norvegicus	V	ATP8	67	Q	Q	P	-1.0000	8		0.0000		0	0	

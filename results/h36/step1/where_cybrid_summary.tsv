@@ -1,0 +1,31 @@
+host	donor	complex	outcome	pct	significant	differences	at_conserved	at_conserved_buried	at_conserved_contact_nuclear	at_conserved_radical	at_contact_nuclear
+homo-sapiens	gorilla-gorilla	I	measured	55.0	yes	134	1	0	0	0	53
+homo-sapiens	gorilla-gorilla	III	measured		no	28	1	1	0	0	7
+homo-sapiens	gorilla-gorilla	IV	measured		no	24	1	1	0	0	8
+homo-sapiens	gorilla-gorilla	V	measured		no	23	0	0	0	0	12
+homo-sapiens	pan-paniscus	I	measured	57.0	yes	108	3	3	2	1	49
+homo-sapiens	pan-paniscus	III	measured		no	25	1	1	0	0	9
+homo-sapiens	pan-paniscus	IV	measured		no	17	1	0	1	0	8
+homo-sapiens	pan-paniscus	V	measured		no	15	1	0	0	0	6
+homo-sapiens	pan-troglodytes	I	measured	59.0	yes	107	3	3	0	2	42
+homo-sapiens	pan-troglodytes	III	measured		no	25	1	0	0	0	6
+homo-sapiens	pan-troglodytes	IV	measured		no	18	1	1	0	0	6
+homo-sapiens	pan-troglodytes	V	measured		no	17	0	0	0	0	5
+mus-musculus	mus-caroli	I	measured	89.0	no	188	0	0	0	0	73
+mus-musculus	mus-caroli	III	measured	96.0	no	11	0	0	0	0	4
+mus-musculus	mus-caroli	IV	measured	108.0	no	8	1	1	1	0	4
+mus-musculus	mus-pahari	I	measured	87.0	no	226	1	1	1	0	96
+mus-musculus	mus-pahari	III	measured	105.0	no	11	0	0	0	0	4
+mus-musculus	mus-pahari	IV	measured	59.0	yes	14	1	1	1	0	6
+mus-musculus	mus-spretus	I	measured	78.0	no	65	2	2	2	0	27
+mus-musculus	mus-spretus	III	measured	114.0	no	4	0	0	0	0	0
+mus-musculus	mus-spretus	IV	measured	85.0	no	4	1	1	1	0	3
+mus-musculus	mus-terricolor	I	measured	83.0	no	130	0	0	0	0	48
+mus-musculus	mus-terricolor	III	measured	98.0	no	7	0	0	0	0	0
+mus-musculus	mus-terricolor	IV	measured	94.0	no	8	1	1	1	0	4
+mus-musculus	otomys-irroratus	I	measured	72.0	yes	314	4	4	0	1	131
+mus-musculus	otomys-irroratus	III	measured	2.0	yes	24	0	0	0	0	8
+mus-musculus	otomys-irroratus	IV	measured	44.0	yes	22	3	2	1	0	11
+mus-musculus	rattus-norvegicus	I	measured	46.0	yes	345	1	1	0	0	126
+mus-musculus	rattus-norvegicus	III	measured	37.0	yes	23	0	0	0	0	5
+mus-musculus	rattus-norvegicus	IV	measured	64.8	yes	20	3	2	1	0	9

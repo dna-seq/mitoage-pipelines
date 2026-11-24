@@ -3179,6 +3179,24 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
 - *Step 3, if step 2 holds anywhere.* A model's reading of the nuclear residue itself: its likelihood with the
   host's mitochondrial partner against with the donor's (the pair in one input), for ESM-2 and Evo-type models, as
   H35's second part.
+- **Result of step 1, 2026-11-24** (job 6616526 at 3fb9e76; `results/h36/step1/`; the three nuclear tables have the same
+  bytes in a second run). *No subunit is named.* Complex I (5 reduced, 4 not reduced pairs): the best areas are
+  NDUFA8 0.925 (the null's mean for it 0.56, subunit p 0.013) and NDUFA9 0.900 (p 0.015), but the family-wise p of the
+  complex is 0.42; complex III (1 reduced pair): 0.88; complex IV (3 and 6): best COX7A2 0.944 and COX4I1 0.889, family-wise
+  p 0.21; complex V has no reduced pair and is not assessed. The subunit p-values below 0.05 are not corrected for the 27
+  subunits of complex I or the 11 of IV, which is what the family-wise p does; the leave-one-donor-out ranges stay high
+  (complex I 0.88 to 1.0 for the best), so no single donor makes them, but the donors that were reduced share their
+  differences (the same few mitochondrial residues), so most subunits' columns are nearly one pattern, and 50 rows are
+  far fewer than 50 independent tests. The reading the entry fixed: the cybrid data do not name a nuclear subunit here.
+  *The exploratory site tables* (no rule, no claim): of the 39 harmful human variants 74% sit at sites with at most 2
+  amino acids among the build's mammals, against 8% of the 328 harmless; 90% are buried (54% of the harmless); 21% touch
+  a nuclear subunit (32% of the harmless) and 44% touch another mitochondrial subunit (17% of the harmless): in these
+  structures harmful variants are *less* often at mito-nuclear contacts than harmless ones and more often at
+  contacts between mitochondrial subunits. *Nuclear residues* (descriptive; `nuclear_residues.tsv`): the residues that
+  face a difference in all 5 reduced complex I pairs and in none of the 4 others include NDUFA13 L134, NDUFA8 F169,
+  NDUFB6 E99, NDUFB7 K70 and NDUFB8 R114, and in complex IV COX5B R87, I88 and G90 (3 of 3 and 0 of 6); with 5 and 3
+  reduced pairs that share their differences this is a list of places to look, not evidence. That NDUFA13 is also one
+  of the genes of the swordtail hybrid case (Moran et al. 2024, not read) was noticed, not tested.
 - *If no step finds a subunit that the whole count does not already name,* the data cannot point to nuclear genes
   to edit, and the next data are those with few differences (H33) or new measurements.
 - **Changed 2026-11-24, before any number of step 1 existed** (the job had not left the queue), after a review of

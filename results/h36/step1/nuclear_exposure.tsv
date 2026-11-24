@@ -1,0 +1,30 @@
+host	donor	complex	status	NDUFA1	NDUFA10	NDUFA11	NDUFA12	NDUFA13	NDUFA3	NDUFA6	NDUFA8	NDUFA9	NDUFAB1	NDUFB1	NDUFB10	NDUFB11	NDUFB2	NDUFB3	NDUFB4	NDUFB5	NDUFB6	NDUFB7	NDUFB8	NDUFB9	NDUFC2	NDUFS2	NDUFS3	NDUFS5	NDUFS7	NDUFS8	CYC1	UQCR11	UQCRB	UQCRC1	UQCRFS1	UQCRQ	COX4I1	COX5A	COX5B	COX6A1	COX6B1	COX6C	COX7A2	COX7B	COX7C	COX8A	NDUFA4	ATP5MC1	ATP5MF	ATP5MJ	ATP5PB	ATP5PD	ATP5PF
+homo-sapiens	gorilla-gorilla	I	reduced	3.0	5.0	4.0	0.0	3.0	2.0	3.0	3.0	2.0	1.0	2.0	5.0	3.0	9.0	3.0	7.0	7.0	7.0	9.0	7.0	0.0	4.0	3.0	0.0	2.0	1.0	0.0																							
+homo-sapiens	pan-paniscus	I	reduced	7.0	0.0	2.0	1.0	2.0	6.0	0.0	3.0	2.0	0.0	4.0	3.0	4.0	3.0	4.0	6.0	5.0	4.0	9.0	6.0	0.0	3.0	11.0	0.0	4.0	3.0	1.0																							
+homo-sapiens	pan-troglodytes	I	reduced	7.0	0.0	2.0	1.0	2.0	6.0	0.0	3.0	2.0	0.0	4.0	4.0	6.0	3.0	0.0	6.0	5.0	4.0	8.0	4.0	3.0	3.0	1.0	0.0	0.0	2.0	0.0																							
+mus-musculus	mus-caroli	I	not_reduced	3.0	16.0	7.0	0.0	12.0	6.0	0.0	2.0	0.0	0.0	5.0	16.0	5.0	3.0	8.0	2.0	11.0	1.0	8.0	4.0	11.0	8.0	2.0	0.0	4.0	0.0	0.0																							
+mus-musculus	mus-pahari	I	not_reduced	3.0	18.0	8.0	0.0	7.0	5.0	0.0	3.0	0.0	1.0	4.0	14.0	6.0	6.0	10.0	7.0	11.0	6.0	10.0	9.0	7.0	13.0	5.0	0.0	17.0	1.0	0.0																							
+mus-musculus	mus-spretus	I	not_reduced	7.0	1.0	4.0	1.0	3.0	2.0	0.0	0.0	0.0	0.0	4.0	1.0	2.0	3.0	1.0	0.0	3.0	3.0	6.0	0.0	2.0	5.0	0.0	0.0	4.0	3.0	0.0																							
+mus-musculus	mus-terricolor	I	not_reduced	3.0	14.0	3.0	0.0	7.0	2.0	0.0	2.0	0.0	0.0	2.0	11.0	0.0	3.0	2.0	1.0	8.0	4.0	9.0	0.0	9.0	7.0	1.0	0.0	3.0	0.0	0.0																							
+mus-musculus	otomys-irroratus	I	reduced	8.0	19.0	7.0	0.0	10.0	8.0	0.0	5.0	4.0	2.0	5.0	22.0	12.0	12.0	8.0	7.0	15.0	16.0	11.0	12.0	14.0	16.0	3.0	0.0	19.0	1.0	0.0																							
+mus-musculus	rattus-norvegicus	I	reduced	2.0	20.0	9.0	0.0	13.0	8.0	0.0	6.0	0.0	2.0	6.0	18.0	8.0	6.0	7.0	12.0	14.0	13.0	11.0	12.0	8.0	15.0	5.0	0.0	21.0	0.0	0.0																							
+homo-sapiens	gorilla-gorilla	III	not_reduced																												5.0	0.0	3.0	0.0	1.0	3.0																	
+homo-sapiens	pan-paniscus	III	not_reduced																												9.0	0.0	4.0	1.0	4.0	3.0																	
+homo-sapiens	pan-troglodytes	III	not_reduced																												6.0	0.0	4.0	1.0	0.0	3.0																	
+mus-musculus	mus-caroli	III	not_reduced																												0.0	0.0	2.0	1.0	0.0	1.0																	
+mus-musculus	mus-pahari	III	not_reduced																												1.0	0.0	0.0	0.0	0.0	2.0																	
+mus-musculus	mus-spretus	III	not_reduced																												0.0	0.0	0.0	0.0	0.0	0.0																	
+mus-musculus	mus-terricolor	III	not_reduced																												0.0	0.0	0.0	0.0	0.0	0.0																	
+mus-musculus	otomys-irroratus	III	reduced																												5.0	0.0	4.0	1.0	0.0	1.0																	
+homo-sapiens	gorilla-gorilla	IV	not_reduced																																		2.0	0.0	10.0	2.0	2.0	0.0	0.0	0.0	0.0	0.0	2.0						
+homo-sapiens	pan-paniscus	IV	not_reduced																																		2.0	3.0	7.0	3.0	1.0	0.0	0.0	2.0	1.0	0.0	0.0						
+homo-sapiens	pan-troglodytes	IV	not_reduced																																		2.0	3.0	5.0	3.0	1.0	0.0	0.0	2.0	0.0	0.0	0.0						
+mus-musculus	mus-caroli	IV	not_reduced																																		3.0	0.0	0.0	0.0	0.0	0.0	1.0	0.0	3.0	3.0	0.0						
+mus-musculus	mus-pahari	IV	reduced																																		5.0	0.0	9.0	0.0	0.0	0.0	1.0	1.0	3.0	1.0	0.0						
+mus-musculus	mus-spretus	IV	not_reduced																																		0.0	0.0	0.0	3.0	0.0	2.0	0.0	0.0	3.0	0.0	0.0						
+mus-musculus	mus-terricolor	IV	not_reduced																																		3.0	0.0	0.0	0.0	0.0	0.0	1.0	0.0	3.0	3.0	0.0						
+mus-musculus	otomys-irroratus	IV	reduced																																		3.0	0.0	4.0	0.0	0.0	5.0	3.0	3.0	3.0	3.0	0.0						
+mus-musculus	rattus-norvegicus	IV	reduced																																		3.0	0.0	8.0	0.0	0.0	2.0	3.0	0.0	4.0	3.0	0.0						
+homo-sapiens	gorilla-gorilla	V	not_reduced																																													0.0	2.0	2.0	6.0	4.0	0.0
+homo-sapiens	pan-paniscus	V	not_reduced																																													0.0	0.0	3.0	3.0	5.0	0.0
+homo-sapiens	pan-troglodytes	V	not_reduced																																													0.0	0.0	3.0	2.0	5.0	0.0

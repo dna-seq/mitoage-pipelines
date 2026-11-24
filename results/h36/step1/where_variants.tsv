@@ -1,0 +1,17 @@
+what	label	known	with	share
+conserved	harmful	39	29	0.744
+conserved	harmless	328	25	0.076
+buried	harmful	38	34	0.895
+buried	harmless	322	174	0.540
+contact_nuclear	harmful	39	8	0.205
+contact_nuclear	harmless	328	106	0.323
+contact_mt	harmful	39	17	0.436
+contact_mt	harmless	328	57	0.174
+amino acids at the site: 1	harmful	39	21	0.538
+amino acids at the site: 1	harmless	328	4	0.012
+amino acids at the site: 2	harmful	39	8	0.205
+amino acids at the site: 2	harmless	328	21	0.064
+amino acids at the site: 3 to 4	harmful	39	8	0.205
+amino acids at the site: 3 to 4	harmless	328	64	0.195
+amino acids at the site: 5 or more	harmful	39	2	0.051
+amino acids at the site: 5 or more	harmless	328	239	0.729
