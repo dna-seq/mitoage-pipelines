@@ -77,6 +77,8 @@ breaks = [
  (S, TS, "a gene without an alignment read from the protein as if it had columns", "ids = cols if cols is not None else {c: list(chains[c][\"num\"]) for c in u_idx}", "ids = {c: [None] * len(chains[c][\"seq\"]) for c in u_idx}"),
  (S, TS, "only the first copy given the donor's protein", "        for c in u_idx:\n            s_, p_, l_, placement[c] = protein_subs", "        for c in u_idx[:1]:\n            s_, p_, l_, placement[c] = protein_subs"),
 ]
+only = sys.argv[1:]                       # names (or parts of names) of the breaks to run, all when none is given
+breaks = [b for b in breaks if not only or any(o in b[2] for o in only)]
 caught = 0
 for name_file, tests, name, a, b in breaks:
     T = Path(name_file)

@@ -10,7 +10,7 @@ S = "src/mitoage_pipelines/mitoport/cybrid_swap.py"
 C = "src/mitoage_pipelines/mitoport/cybrid_stab.py"
 breaks = [
  (S, "the residue placed against another residue kept", "            if chain_seq[s0 + k] == human_row[cols[h0 + k]]:\n                out[s0 + k] = cols[h0 + k]", "            if True:\n                out[s0 + k] = cols[h0 + k]"),
- (S, "end gaps that cost", "extend_gap_score=-0.5, end_gap_score=0)", "extend_gap_score=-0.5)"),
+ (S, "end gaps that cost", "extend_gap_score=-0.5, end_gap_score=0)       # a chain may be a part of the protein, at either end", "extend_gap_score=-0.5)       # a chain may be a part of the protein, at either end"),
  (S, "alignment columns taken as positions of the gapped row", "    cols = [c for c, ch in enumerate(human_row) if ch != \"-\"]", "    cols = list(range(len(human_row)))"),
  (S, "an unknown residue of the species placed", "        if col is None or aa not in THREE or row[col] not in THREE:", "        if col is None or aa not in THREE:"),
  (S, "an unknown residue of the structure placed", "        if col is None or aa not in THREE or row[col] not in THREE:", "        if col is None or row[col] not in THREE:"),
@@ -74,6 +74,8 @@ breaks = [
  (S, "the null rows read as missing values", "scores.append(pd.read_csv(f\"{f}.tsv\", sep=\"\\t\", keep_default_na=False, na_values=[\"\"]))", "scores.append(pd.read_csv(f\"{f}.tsv\", sep=\"\\t\"))"),
  (C, "the residues' atom counts wrong", "hv += atoms; nh.append(len(atoms))", "hv += atoms; nh.append(1)"),
 ]
+only = sys.argv[1:]                       # names (or parts of names) of the breaks to run, all when none is given
+breaks = [b for b in breaks if not only or any(o in b[1] for o in only)]
 caught = 0
 for name_file, name, a, b in breaks:
     T = Path(name_file)
