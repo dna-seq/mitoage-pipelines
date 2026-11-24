@@ -8,6 +8,7 @@ T = Path("src/mitoage_pipelines/mitoport/nuclear_where.py")
 breaks = [
  ("a mitochondrial partner counted as nuclear (the residues)", "    c = contacts[contacts.partner_is_mt == 0].copy()\n    c[\"nuclear_gene\"]", "    c = contacts.copy()\n    c[\"nuclear_gene\"]"),
  ("a mitochondrial partner counted as nuclear (the masks)", "    c = contacts[contacts.partner_is_mt == 0].copy()\n    c[\"nuc\"]", "    c = contacts.copy()\n    c[\"nuc\"]"),
+ ("rows of other complexes kept", "        meas = meas[meas[\"complex\"].isin(complexes)]", "        pass"),
  ("a residue counted once per difference", "    return out.drop_duplicates([\"host\", \"donor\", \"complex\", \"nuclear_gene\", \"partner_resnum\"])", "    return out"),
  ("disagreeing papers always left out", "            if disagree == \"leave_out\":\n                continue\n", "            continue\n"),
  ("disagreeing papers kept as they are", "        if s == \"disagree\":\n            if disagree", "        if False:\n            if disagree"),

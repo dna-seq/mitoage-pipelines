@@ -34,10 +34,13 @@ from . import cybrid
 from .complexes import COMPLEXES
 
 
-def labelled(meas: pd.DataFrame, disagree: str = "leave_out") -> pd.DataFrame:
+def labelled(meas: pd.DataFrame, disagree: str = "leave_out", complexes: tuple[str, ...] | None = None) -> pd.DataFrame:
     """One row per (host, donor, complex) with `status` (reduced / not_reduced) and the mean stated activity `pct`
     (NaN where none is stated). Pairs the papers disagree on are left out (`disagree="leave_out"`) or coded reduced
-    (`"reduced"`)."""
+    (`"reduced"`). Only the rows of `complexes` are kept when given (the table also holds whole-cybrid rows,
+    `all`, which have no structure)."""
+    if complexes is not None:
+        meas = meas[meas["complex"].isin(complexes)]
     rows = []
     for (h, d, c), m in meas.groupby(["host", "donor", "complex"], sort=True):
         s = cybrid.status(m)
@@ -173,9 +176,9 @@ def main(sites: Path, positions: Path, out: Path, measurements: Path = cybrid.ME
     diff = pd.read_csv(sites, sep="\t", keep_default_na=False, na_values=[""])
     pos = pd.read_csv(positions, sep="\t", keep_default_na=False, na_values=[""])
     meas = cybrid.read_measurements(measurements)
-    lab = labelled(meas)
+    lab = labelled(meas, complexes=tuple(COMPLEXES))
     masks, universe, faces = {}, {}, []
-    for cx in sorted(set(meas["complex"])):
+    for cx in sorted(set(lab["complex"])):
         w = COMPLEXES[cx].work
         contacts = pd.read_csv(w / "contacts.tsv", sep="\t", dtype={"chain": str, "partner_chain": str})
         chains = pd.read_csv(w / "chains.tsv", sep="\t", dtype={"chain": str})
@@ -185,7 +188,7 @@ def main(sites: Path, positions: Path, out: Path, measurements: Path = cybrid.ME
         faces.append(facing(diff[diff["complex"] == cx], contacts, chains))
     face = pd.concat(faces, ignore_index=True)
     s, expo = subunits(lab, diff, masks, universe, draws)
-    s2, _ = subunits(labelled(meas, "reduced"), diff, masks, universe, draws)
+    s2, _ = subunits(labelled(meas, "reduced", tuple(COMPLEXES)), diff, masks, universe, draws)
     s = s.merge(s2[["complex", "nuclear_gene", "named", "auc", "p_family"]].rename(
         columns={"named": "named_if_disagree_reduced", "auc": "auc_if_disagree_reduced", "p_family": "p_family_if_disagree_reduced"}),
         on=["complex", "nuclear_gene"], how="left")

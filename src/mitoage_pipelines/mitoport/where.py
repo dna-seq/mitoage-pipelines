@@ -110,6 +110,7 @@ def main(variants: Path, positions: Path, data: Path, gb: Path, out: Path, measu
     v = pd.read_csv(variants, sep="\t", keep_default_na=False, na_values=[""])
     vw = variants_where(v[["id", "gene", "protein_pos", "label", "n_aa"]], sites)
     meas = cybrid.read_measurements(measurements)
+    meas = meas[meas["complex"].isin(list(COMPLEXES))]          # whole-cybrid rows (`all`) have no structure
     records = cybrid.read_proteins(gb)
     species = sorted(set(meas.host) | set(meas.donor) | {cybrid.HUMAN})
     prot = {s: cybrid.species_proteins(records, s) for s in species}

@@ -177,3 +177,7 @@ class TestOrder:
     def test_disagreeing_papers_can_be_coded_reduced(self):
         m = pd.DataFrame({"host": "h", "donor": ["b", "b"], "complex": "X", "significant": ["yes", "no"], "pct": [60.0, 90.0]})
         assert len(nw.labelled(m)) == 0 and nw.labelled(m, "reduced").status.iloc[0] == "reduced"
+
+    def test_rows_of_other_complexes_are_dropped_when_asked(self):
+        m = pd.DataFrame({"host": "h", "donor": ["a", "a"], "complex": ["X", "all"], "significant": ["yes", "yes"], "pct": [50.0, 50.0]})
+        assert list(nw.labelled(m, complexes=("X",))["complex"]) == ["X"] and list(nw.labelled(m)["complex"]) == ["X", "all"]
