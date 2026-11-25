@@ -71,6 +71,9 @@ SCORE_COLUMNS = ["host", "donor", "complex", "gene", "kind", "draw", "species", 
 PAIR_COLUMNS = ["host", "donor", "complex", "gene", "kind", "draw", "mt_gene", "mt_chain", "u_chain", "positions", "pll"]
 RESIDUE_COLUMNS = ["host", "donor", "complex", "gene", "mt_gene", "mt_chain", "u_chain", "resnum", "host_aa", "donor_aa", "interface",
                    "min_dist", "positions", "delta_pll", "top_mt_resnum", "top_mt_delta"]
+NUMERIC_SCORES = ["draw", "seed", "substituted", "pairs", "positions", "pll", "ddG"]
+NUMERIC_PAIRS = ["draw", "positions", "pll"]
+NUMERIC_RESIDUES = ["resnum", "min_dist", "positions", "delta_pll", "top_mt_resnum", "top_mt_delta"]
 STATE = "saprot"                    # the tasks' folder under the output folder
 
 
@@ -550,6 +553,11 @@ def read_tasks(out: Path, want: list[tuple[str, str, str]]) -> tuple[pd.DataFram
     if not parts["cases"]:
         raise SystemExit("no table to collect")
     cat = {k: pd.concat(v, ignore_index=True) for k, v in parts.items()}
+    # a task with no row leaves an empty table whose columns read as text, and the join then holds numbers and booleans as objects
+    for name, cols in (("", NUMERIC_SCORES), ("pairs", NUMERIC_PAIRS), ("residues", NUMERIC_RESIDUES)):
+        for c in cols:
+            cat[name][c] = pd.to_numeric(cat[name][c])
+    cat["residues"]["interface"] = cat["residues"]["interface"].astype(str).eq("True")
     return cat["cases"], cat[""], cat["pairs"], cat["residues"], missing
 
 

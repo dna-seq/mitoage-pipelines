@@ -95,6 +95,8 @@ breaks = [
  (S, "the other host's step 1 rows read", "e = expo[(expo.host == host) & (expo.donor == d) & (expo[\"complex\"] == cx)]", "e = expo[(expo.donor == d) & (expo[\"complex\"] == cx)]"),
  (S, "a missing task not said", "    if missing:\n        print(f\"MISSING:", "    if False:\n        print(f\"MISSING:"),
  (S, "the null rows read as missing values", "pd.read_csv(f\"{f}.{name}.tsv\" if name else f\"{f}.tsv\", sep=\"\\t\", keep_default_na=False, na_values=[\"\"])", "pd.read_csv(f\"{f}.{name}.tsv\" if name else f\"{f}.tsv\", sep=\"\\t\")"),
+ (S, "the empty tables' columns left as text", "            cat[name][c] = pd.to_numeric(cat[name][c])", "            pass"),
+ (S, "the interface column left as the join made it", "    cat[\"residues\"][\"interface\"] = cat[\"residues\"][\"interface\"].astype(str).eq(\"True\")", "    pass"),
  (S, "a missing task read as zero", "        if not Path(f\"{f}.cases.tsv\").is_file():\n            missing.append", "        if False:\n            missing.append"),
 ]
 only = sys.argv[1:]                       # names (or parts of names) of the breaks to run, all when none is given

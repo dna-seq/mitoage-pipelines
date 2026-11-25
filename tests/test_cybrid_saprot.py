@@ -611,9 +611,22 @@ class TestCollect:
         cases.to_csv(f"{stem}.cases.tsv", sep="\t", index=False); scores.to_csv(f"{stem}.tsv", sep="\t", index=False)
         pd.DataFrame(columns=sp.PAIR_COLUMNS).to_csv(f"{stem}.pairs.tsv", sep="\t", index=False)
         pd.DataFrame(columns=sp.RESIDUE_COLUMNS).to_csv(f"{stem}.residues.tsv", sep="\t", index=False)
+        d2, c2, g2 = sw.tasks()[1]                                    # a second task with no residue row, whose empty table must not turn the column into text
+        stem2 = tmp_path / sp.STATE / f"{d2}.{c2}.{g2}"
+        c_, s_ = frame([d2], c2, g2, {d2: {"B0": -3.0, "B1": -2.0}})
+        c_.to_csv(f"{stem2}.cases.tsv", sep="\t", index=False); s_.to_csv(f"{stem2}.tsv", sep="\t", index=False)
+        pd.DataFrame(columns=sp.PAIR_COLUMNS).to_csv(f"{stem2}.pairs.tsv", sep="\t", index=False)
+        pd.DataFrame(columns=sp.RESIDUE_COLUMNS).to_csv(f"{stem2}.residues.tsv", sep="\t", index=False)
+        row = {k: "x" for k in sp.RESIDUE_COLUMNS} | {"mt_gene": "COX1", "interface": True, "min_dist": 3.0, "delta_pll": 1.0, "positions": 3, "resnum": 5, "top_mt_resnum": 2, "top_mt_delta": 0.5}
+        row2 = row | {"interface": False, "min_dist": 9.0, "resnum": 6, "delta_pll": 0.5}
+        pd.DataFrame([{**row, "donor": d, "complex": c, "gene": g}, {**row2, "donor": d, "complex": c, "gene": g}]).to_csv(f"{stem}.residues.tsv", sep="\t", index=False)
         res = sp.collect(tmp_path)
+        rt = pd.read_csv(tmp_path / "saprot_residues.tsv", sep="\t")
+        assert sorted(rt.interface.astype(str)) == ["False", "True"]
+        cc = pd.read_csv(tmp_path / "saprot_residue_contrast.tsv", sep="\t")
+        assert cc.n_interface.iloc[0] == 1 and cc.n_away.iloc[0] == 1
         n = len(sw.tasks())
-        assert f"MISSING: {n - 1} of {n}" in capsys.readouterr().out and len(res) == 1 and res.iloc[0].restoration == pytest.approx(4.0) and res.iloc[0].null_draws == 3
+        assert f"MISSING: {n - 2} of {n}" in capsys.readouterr().out and len(res) == 2 and res[res.gene == g].restoration.iloc[0] == pytest.approx(4.0) and res[res.gene == g].null_draws.iloc[0] == 3 and res[res.gene == g2].restoration.iloc[0] == pytest.approx(1.0)
         for t in ("scores", "pairs", "cases", "restoration", "candidates", "sums", "spearman", "dependence", "residues", "residue_contrast"):
             assert (tmp_path / f"saprot_{t}.tsv").is_file()
         assert not (tmp_path / "saprot_reduced.tsv").exists()                                  # the human host has no reduced reading
