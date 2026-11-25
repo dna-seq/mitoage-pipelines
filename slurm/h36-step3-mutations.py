@@ -48,7 +48,7 @@ breaks = [
  (S, "only the first batch read", "    for b in range(0, len(todo), batch):", "    for b in range(0, min(len(todo), batch), batch):"),
  (S, "the batch's rows mixed up", "        for j, k in enumerate(part):\n            lp", "        for j, k in enumerate(reversed(part)):\n            lp"),
  # the pairs
- (S, "a contact needs the first residue only", "            out[k] = [i for i, f in enumerate(flags[k]) if f]", "            out[k] = [i for i, f in enumerate(flags[k]) if f][:1]"),
+ (S, "a contact needs the first residue only", "            out[k] = [i for i, f in enumerate(flags) if f]", "            out[k] = [i for i, f in enumerate(flags) if f][:1]"),
  (S, "the pairs of chains that touch none kept", "        if flags.any():\n            out[k]", "        if True:\n            out[k]"),
  (S, "the distance to the first atom only", "d[a:b].min() for a, b in zip(edges[:-1], edges[1:])", "d[a] for a, b in zip(edges[:-1], edges[1:])"),
  (S, "the distance to the first mitochondrial chain only", "cKDTree(np.concatenate([chains[i][\"heavy\"] for i in mt_idx]))", "cKDTree(chains[mt_idx[0]][\"heavy\"])"),
@@ -67,7 +67,7 @@ breaks = [
  (S, "B1 read without the donor's ortholog", "for sub in [{}, donor_sub, *species_sub.values(), *shuf.values(), *single.values()]:", "for sub in [{}, {}, *species_sub.values(), *shuf.values(), *single.values()]:"),
  (S, "B1 labelled with the donor's substitutions left out", "res = [row(\"B0\", {}, -1, host), row(\"B1\", donor_sub, -1, donor),", "res = [row(\"B0\", {}, -1, host), row(\"B1\", {}, -1, donor),"),
  (S, "the donor's substitutions left off the mitochondrial chain", "mt_by_chain = {k: {i: aa for (kk, i), aa in mt_sub.items() if kk == k} for k, _, _ in pairs}", "mt_by_chain = {k: {} for k, _, _ in pairs}"),
- (S, "the nuclear chain's substitutions put on every chain", "{i: aa for (cc, i), aa in sub.items() if cc == c}) for k, c, pos in pairs}", "{i: aa for (cc, i), aa in sub.items()}) for k, c, pos in pairs}"),
+# not run: "the nuclear chain's substitutions put on every chain" is an equivalent change on these structures: no gene has copies that differ in sequence (checked), so another copy's substitutions are the same ones
  (S, "the misfit with the sign of the PLL", "\"pll\": pll, \"ddG\": -pll}", "\"pll\": pll, \"ddG\": pll}"),
  (S, "the PLL of the first pair only", "total = lambda sub: float(sum(np.nansum(v) for v in logp[key(sub)].values()))", "total = lambda sub: float(sum(np.nansum(v) for v in list(logp[key(sub)].values())[:1]))"),
  (S, "the positions counted from B1", "n_pos = int(sum(np.isfinite(v).sum() for v in logp[key({})].values()))", "n_pos = 0"),

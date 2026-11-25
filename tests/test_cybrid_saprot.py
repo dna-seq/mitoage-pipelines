@@ -212,6 +212,12 @@ class TestPairs:
         brute = [np.linalg.norm(u["heavy"][a:a + 4][:, None, :] - mt["heavy"][None], axis=2).min() for a in (0, 4, 8)]
         assert np.allclose(d, brute) and d[1] == pytest.approx(np.sqrt(5.0)) and d[0] > 900 and d[2] == pytest.approx(7.0)    # (0,3,0) is sqrt 5 from (1,1,0)
 
+    def test_the_distance_is_to_the_nearest_of_several_mitochondrial_chains(self):
+        far = chain("M1", "A", (500, 0, 0)); near = chain("M2", "A", (0, 0, 0))
+        u = chain("U", "A", (0, 0, 0)); u["heavy"] = np.array([[0.0, 0.0, 6.0]] * 4)
+        d = sp.residue_distances([far, near, u], [0, 1], 2)
+        assert d[0] == pytest.approx(np.linalg.norm(u["heavy"][0][None] - near["heavy"], axis=1).min()) and d[0] < 10
+
     def test_the_real_complex_iv_pairs_are_the_contacts_of_each_nuclear_chain_with_the_three_mitochondrial_chains(self):
         cif = paths.PDB / "5Z62.cif"
         if not cif.is_file():
@@ -369,6 +375,14 @@ class TestTask:
         (s, c), _ = self.run(tmp_path, "gorilla-gorilla", "IV", "COX5B")
         assert c["pairs_too_long"] == 0 and c["pairs"] >= 1 and c["status"] == "scored"
 
+    def test_another_host_than_human_needs_the_pinned_orthologs(self, tmp_path):
+        gb, aln, spc = inputs("IV", "COX5B")
+        m = Fake()
+        with pytest.raises(SystemExit):
+            sp.run("rattus-norvegicus", "IV", "COX5B", gb, paths.PDB, aln, spc, paths.SAPROT_TOKENS, tmp_path, tmp_path, logits_for=lambda: m, vocab_for=lambda: VOCAB,
+                   device="cpu", host=sw.MOUSE)
+        assert m.calls == 0
+
     def test_a_pair_of_exactly_the_models_length_is_read_and_one_residue_more_is_not(self, tmp_path, monkeypatch):
         gb, aln, spc = inputs("IV", "COX5B")
         chains = cs.read_chains(paths.PDB / "5Z62.cif")
@@ -391,6 +405,84 @@ class TestTask:
         m = Fake()
         s, c = sp.run("gorilla-gorilla", "IV", "COX5B", gb, paths.PDB, aln, spc, tmp_path / "tok", tmp_path, tmp_path, logits_for=lambda: m, vocab_for=lambda: VOCAB, device="cpu")
         assert c["status"].startswith("not assessed") and "no structure states" in c["status"] and c["pairs_no_states"] >= 1 and s.empty and m.calls == 0
+
+    def test_a_mitochondrial_chain_whose_states_do_not_match_makes_no_pair_while_the_others_do(self, tmp_path):
+        gb, aln, spc = inputs("IV", "COX5B")
+        base, _ = self.run(tmp_path / "ok", draws=0)
+        ok = self.tables(tmp_path / "ok")[".pairs"]
+        mt = sorted(set(ok.mt_chain.astype(str)))
+        t = pd.read_csv(paths.SAPROT_TOKENS / "5Z62.3di.tsv", sep="\t", dtype=str, keep_default_na=False)
+        t.loc[t.chain == mt[0], "aa"] = t.loc[t.chain == mt[0], "aa"].str[:-1]
+        (tmp_path / "tok").mkdir()
+        t.to_csv(tmp_path / "tok" / "5Z62.3di.tsv", sep="\t", index=False)
+        s, c = sp.run("gorilla-gorilla", "IV", "COX5B", gb, paths.PDB, aln, spc, tmp_path / "tok", tmp_path / "bad", tmp_path / "bad", draws=0, logits_for=lambda: Fake(),
+                      vocab_for=lambda: VOCAB, device="cpu")
+        n_bad = int((ok[ok.kind == "B0"].mt_chain.astype(str) == mt[0]).sum())
+        assert c["pairs_no_states"] == n_bad >= 1
+        got = pd.read_csv(tmp_path / "bad" / "saprot" / "gorilla-gorilla.IV.COX5B.pairs.tsv", sep="\t", keep_default_na=False, na_values=[""])
+        assert mt[0] not in set(got.mt_chain.astype(str)) or len(mt) == 1
+
+    def test_b0_and_b1_are_the_sums_of_the_reads_of_every_pair_with_each_chains_own_substitutions(self, tmp_path, monkeypatch):
+        """Recomputed from the structure, the records and the alignment, with the stand-in: the complex III dimer (two copies of the nuclear chain), where a
+        substitution of one copy put on the other would be seen, and the donor's 54 mitochondrial substitutions, which must reach the mitochondrial chains."""
+        d, c, g = "gorilla-gorilla", "III", "UQCRC1"
+        gb, aln, spc = inputs(c, g)
+        (scores, case), _ = self.run(tmp_path, d, c, g, draws=0)
+        assert case["copies"] == 2 and case["substituted"] > 0 and case["mt_substituted"] > 0
+        cif = paths.PDB / f"{sw.STRUCTURES[sw.HOST][c]}.cif"
+        recs = cybrid.read_proteins(gb)
+        hp, dp = cybrid.species_proteins(recs, sw.HOST), cybrid.species_proteins(recs, d)
+        genes = tuple(COMPLEXES[c].mt)
+        mt = {x: hp[x][0] for x in genes}
+        chains, mtc = cs.system(cs.read_chains(cif), mt, {x: p for x, (p, _, _) in hp.items() if x not in genes})
+        ct = pd.read_csv(COMPLEXES[c].work / "chains.tsv", sep="\t", dtype={"chain": str})
+        u_idx = sw.gene_chains(chains, mtc, dict(zip(ct.chain, ct.gene)))[g]
+        row = sw.read_alignment(aln / f"{g}.afa")
+        cols = {k: sw.chain_columns(chains[k]["seq"], row[sw.HOST]) for k in u_idx}
+        donor_sub = {(k, i): aa for k in u_idx for i, aa in sw.ortholog_subs(chains[k]["seq"], cols[k], row[d])[0].items()}
+        al = cybrid.aligner()
+        sets, _ = cs.plan(chains, mtc, mt, {x: cybrid.on_human(mt[x], dp[x][0], dp[x][1], al) for x in genes}, {x: {} for x in genes})
+        tok = sp.structure_tokens(cif, None, paths.SAPROT_TOKENS)
+        st = sp.chain_state_table(chains, tok)
+        assert len({k for k, _ in donor_sub}) == 2                                    # both copies change
+        m = Fake()
+
+        def total(sub):
+            t = 0.0
+            for k in sorted(mtc):
+                for u in u_idx:
+                    pos = sp.pair_positions(chains, [k], u).get(k)
+                    if not pos or len(chains[k]["seq"]) + sp.LINKER + len(chains[u]["seq"]) > sp.MAX_RESIDUES:
+                        continue
+                    toks, _ = sp.joined(chains[k]["seq"], st[k], chains[u]["seq"], st[u], {i: aa for (kk, i), aa in sets["all"].items() if kk == k},
+                                        {i: aa for (uu, i), aa in sub.items() if uu == u})
+                    t += float(np.nansum(sp.masked_logp(m, VOCAB, toks, pos)))
+            return t
+        assert scores[scores.kind == "B0"].pll.iloc[0] == pytest.approx(total({}))
+        assert scores[scores.kind == "B1"].pll.iloc[0] == pytest.approx(total(donor_sub))
+        assert total(donor_sub) != total({}) and total({}) != 0
+        # the residues: each (mitochondrial chain, chain of u, residue) once, the residue numbered as the structure numbers it, read beside the chains it touches
+        res = self.tables(tmp_path, d, c, g)[".residues"]
+        assert not res.duplicated(["mt_chain", "u_chain", "resnum"]).any() and len(res) > 0
+        by_id = {chains[k]["id"]: chains[k] for k in u_idx}
+        for r in res.itertuples():
+            ch = by_id[str(r.u_chain)]
+            assert ch["seq"][ch["num"].index(r.resnum)] == r.host_aa
+        pairs_of = {(str(r.mt_chain), str(r.u_chain)) for r in res.itertuples()}
+        assert all(any(mc == chains[k]["id"] and uc == ch for k in mtc for ch in by_id) for mc, uc in pairs_of)
+        n_expected = sum(1 for k in sorted(mtc) for u in u_idx if sp.pair_positions(chains, [k], u).get(k) for (uu, i) in donor_sub if uu == u)
+        assert len(res) == n_expected
+        # the interface is "at most CONTACT_A": a residue exactly that far is at the interface, one a hair beyond is not
+        dist = {chains[u]["id"]: sp.residue_distances(chains, sorted(mtc), u) for u in u_idx}
+        r0 = res.iloc[0]; ch0 = by_id[str(r0.u_chain)]
+        d0 = float(dist[str(r0.u_chain)][ch0["num"].index(r0.resnum)])
+        for limit, want in ((d0, True), (d0 - 1e-6, False)):
+            monkeypatch.setattr(cs, "CONTACT_A", limit)
+            (tmp_path / f"lim{want}").mkdir()
+            self.run(tmp_path / f"lim{want}", d, c, g, draws=0)
+            got = self.tables(tmp_path / f"lim{want}", d, c, g)[".residues"]
+            hit = got[(got.u_chain.astype(str) == str(r0.u_chain)) & (got.resnum == r0.resnum)]
+            assert len(hit) >= 1 and (hit.interface == want).all()
 
     def test_the_null_draws_the_swaps_species(self, tmp_path):
         for d, c, g in self.donors_with_change():
@@ -490,10 +582,11 @@ class TestCompare:
         sap = pd.DataFrame([{"donor": d, "complex": "I", "gene": g, "restoration": r} for d, g, r in
                             (("d1", "A", 1.0), ("d1", "B", 2.0), ("d1", "C", 4.0), ("d2", "A", 10.0), ("d2", "B", 20.0))])        # d2 has no C
         stb = pd.DataFrame([{"donor": d, "complex": "I", "gene": g, "restoration": r} for d, g, r in
-                            (("d1", "A", 0.1), ("d1", "B", 0.2), ("d2", "A", 0.3), ("d2", "B", 0.4), ("d2", "C", 5.0))])
+                            (("d1", "A", 0.1), ("d1", "B", 0.2), ("d1", "C", 9.0), ("d2", "A", 0.3), ("d2", "B", 0.4), ("d2", "C", 5.0))])
         (tmp_path / "s").mkdir(); (tmp_path / "t").mkdir()
         sap.to_csv(tmp_path / "s" / "saprot_restoration.tsv", sep="\t", index=False); stb.to_csv(tmp_path / "t" / "swap_restoration.tsv", sep="\t", index=False)
-        expo = pd.DataFrame([{"host": h, "donor": d, "complex": "I", "status": s, "A": a, "B": b, "C": 100.0} for d, s, a, b in (("d1", "reduced", 1.0, 2.0), ("d2", "not_reduced", 7.0, 8.0))])
+        expo = pd.DataFrame([{"host": "mus-musculus", "donor": d, "complex": "I", "status": s, "A": 1000.0, "B": 1000.0, "C": 1.0} for d, s in (("d1", "reduced"), ("d2", "not_reduced"))]
+                            + [{"host": h, "donor": d, "complex": "I", "status": s, "A": a, "B": b, "C": 100.0} for d, s, a, b in (("d1", "reduced", 1.0, 2.0), ("d2", "not_reduced", 7.0, 8.0))])
         expo.to_csv(tmp_path / "e.tsv", sep="\t", index=False)
         base = {"assay": "x", "outcome": "measured", "source_doi": "x", "location": "x", "note": "", "complex": "I", "host": h}
         m = pd.DataFrame([{**base, "donor": "d1", "significant": "yes", "pct_low": 50.0, "pct_high": 50.0, "pct": 50.0},
@@ -520,7 +613,7 @@ class TestCollect:
         pd.DataFrame(columns=sp.RESIDUE_COLUMNS).to_csv(f"{stem}.residues.tsv", sep="\t", index=False)
         res = sp.collect(tmp_path)
         n = len(sw.tasks())
-        assert f"MISSING: {n - 1} of {n}" in capsys.readouterr().out and len(res) == 1 and res.iloc[0].restoration == pytest.approx(4.0)
+        assert f"MISSING: {n - 1} of {n}" in capsys.readouterr().out and len(res) == 1 and res.iloc[0].restoration == pytest.approx(4.0) and res.iloc[0].null_draws == 3
         for t in ("scores", "pairs", "cases", "restoration", "candidates", "sums", "spearman", "dependence", "residues", "residue_contrast"):
             assert (tmp_path / f"saprot_{t}.tsv").is_file()
         assert not (tmp_path / "saprot_reduced.tsv").exists()                                  # the human host has no reduced reading
