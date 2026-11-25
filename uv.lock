@@ -1512,6 +1512,10 @@ fold = [
     { name = "esm", marker = "python_full_version >= '3.12'" },
     { name = "torch", marker = "python_full_version >= '3.12'" },
 ]
+saprot = [
+    { name = "torch", marker = "python_full_version >= '3.12'" },
+    { name = "transformers" },
+]
 stab = [
     { name = "stab-ddg" },
     { name = "torch", marker = "python_full_version >= '3.12'" },
@@ -1540,6 +1544,10 @@ energy = [
 fold = [
     { name = "esm", marker = "python_full_version >= '3.12'", specifier = ">=3.4.3" },
     { name = "torch", marker = "python_full_version >= '3.12'", specifier = ">=2.15" },
+]
+saprot = [
+    { name = "torch", marker = "python_full_version >= '3.12'", specifier = ">=2.15" },
+    { name = "transformers", specifier = ">=5" },
 ]
 stab = [
     { name = "stab-ddg", git = "https://github.com/LDeng0205/StaB-ddG?rev=b19a5d72637a6b581b16f38af39383658e5ae1a5" },
@@ -3404,7 +3412,8 @@ version = "5.23.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "huggingface-hub" },
-    { name = "numpy", version = "2.5.4", source = { registry = "https://pypi.org/simple" } },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "packaging" },
     { name = "pyyaml" },
     { name = "regex" },

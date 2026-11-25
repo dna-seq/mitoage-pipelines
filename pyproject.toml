@@ -29,6 +29,9 @@ fold = ["esm>=3.4.3; python_version >= '3.12'", "torch>=2.15; python_version >= 
 energy = ["openmm>=8.6", "pdbfixer>=1.12"]
 # `mitoage mitoport cybrid-stab` only (H28): StaB-ddG at its pinned commit (the weights come by `mitoage download stabddg`)
 stab = ["torch>=2.15; python_version >= '3.12'", "stab-ddg @ git+https://github.com/LDeng0205/StaB-ddG@b19a5d72637a6b581b16f38af39383658e5ae1a5"]
+# `mitoage mitoport saprot` only (H36 step 3): SaProt 650M through transformers, on a CUDA machine (no flash-attn needed); the weights
+# come by `mitoage download saprot`, the structure tokens from Foldseek's binary by `mitoage download foldseek`
+saprot = ["torch>=2.15; python_version >= '3.12'", "transformers>=5"]
 
 [build-system]
 requires = ["uv_build>=0.9,<0.14"]

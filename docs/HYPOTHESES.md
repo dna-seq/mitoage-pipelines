@@ -3144,6 +3144,7 @@ should [tell] which protein bases depend on others"). Nothing is run. The rule b
 - *If both parts fail,* sequence models of every kind tried, with or without the partner, do not read mito-nuclear
   fit from sequence, and the question goes back to data with few differences (H33) or to physics.
 
+- *Part 2, the model and the reading, 2026-11-25 (made exact in H36, step 3):* SaProt 650M (sequence and structure tokens) on the mitochondrial chain joined to one nuclear chain; the dependency is read as the change of the likelihood of the mitochondrial residues at the interface when the nuclear partner changes (swap restoration, per-residue change, shuffled partner), and the sign test over contact and control pairs written here is not run; rule, bars and null are in H36's entry, written before any score.
 - **Result of part 1, 2026-11-24** (tables: job 6629999 at a73d76f; readout: job 6630056 at 3034258; `results/h35/`). *Cybrids: Evo 2 does not count in any arm.* T1 (Spearman against the stated activities) -0.18 (both strands), -0.13 (plus), -0.19 (minus), against the bar -0.52; T2 (AUC, reduced against not) 0.71, 0.71, 0.63 against 0.83; T3 4, 3, 3 against the bar 4 (met only by both strands, while T1 and T2 fail). The mean-score version is no better. *Variants: the rule counts in two of the three arms.* Over all 95 harmful and 1,576 harmless variants Evo 2's area is 0.905 (both strands), 0.894 (plus), 0.898 (minus); on the 50 harmful and 1,201 harmless variants the build's alignments cover, the baseline (fewer different bases among mammals) has 0.910 and Evo 2 0.966 (both strands), difference +0.055, 95% interval 0.002 to 0.114: counts; minus strand +0.049 (0.001 to 0.104): counts; plus strand +0.044 (-0.015 to 0.105): does not count. Reading: Evo 2 reads the variants about as well as conservation and slightly better where an alignment exists, and it gives no help for the cybrids, as the other models did not. The variants' interval touches zero at the lower end (0.001 to 0.002), so this is a thin margin, and the arm choice (both strands) was made before the score. Tables are from one run; no second run was compared byte for byte.
 
 ## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (step 1 run: no subunit named; step 2, the swap, run on the apes and on the mouse host: no candidate)
@@ -3419,3 +3420,65 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     IV genes with no chain, of the three donors with no ortholog source, or of the loss of the reduced *M. pahari* IV pair if it is not the
     binding of a subunit to the mtDNA-encoded chains. *Not run:* part (a) (a GPU), the controls with the two other weights. The cost
     was 94 wall-clock hours at 2 cores for the first run, about 63 core-hours a donor, not the 8 that the first run's estimate gave.
+
+  - **Step 3 made exact, 2026-11-25, before any score** (`mitoage mitoport saprot`, module `cybrid_saprot`; written by an agent for the lead seat; the
+    choices below are where the entry left one open). *The model: SaProt 650M, the weights tuned on solved structures*
+    (`westlake-repl/SaProt_650M_PDB`, MIT, revision 6f7468f, `pytorch_model.bin` SHA-256 f37c5129...; config and vocabulary pinned too). It is
+    ESM-2's architecture trained on each residue paired with a structure token (Foldseek's 3Di state), so it reads a solved complex as the
+    sequence and the backbone together, which our complexes are; it fits an 11 GB card in 32-bit floats (2.6 GB of weights). The structure
+    tokens are made from our own structures by Foldseek's binary at release 10-941cd33 (archive SHA-256 e6a3e386..., the binary reports
+    941cd33f...), `mitoage mitoport saprot-tokens`. *Looked up on 2026-11-25 (a web search, not exhaustive), models newer than these:* Biohub
+    published ESM C 6B (`biohub/ESMC-6B`, MIT) and ESMFold2 in 2026: 6 billion parameters is 12 GB in half precision, which does not fit one
+    11 GB card, and ESM C is sequence-only; the ESM C 600M of 2024-12 is sequence-only and was not taken because the structure-aware model
+    uses what we have. PPLM (a language model of paired sequences, Nature Communications, 2026-03-10, code under a non-commercial licence) is
+    the closest to a joined pair, but its documented outputs are interaction scores, affinity, contacts, embeddings and attention, not a
+    likelihood of a residue, which is what is read here; not taken. Structure-Aligned Protein Language Model (ICLR 2026) and S-PLM2 (2026)
+    and HD-Prot (arXiv 2025-12): whether their weights are public and what they output was not looked into; not taken, said as unknown.
+    ESM-2 650M was run in H17 and did not count; it is not run again. *No flash-attention is needed:* SaProt runs through the `transformers`
+    ESM implementation; the older chip (RTX 2080 Ti, compute capability 7.5, no bfloat16) is why the model is read in 32-bit floats; which
+    attention kernel it uses is read off the probe job and said in the result. *How the pair is joined:* one input is one mitochondrial chain, 25
+    glycines with no structure ("G#", as H17's linker of 25 glycines), and one nuclear chain; the pairs are the (mitochondrial chain, chain of
+    u) that have a heavy atom of each within 4.5 A, over every copy of the system of the swap (the host's own structure; the mouse host as in
+    step 2). The model has no chain break; *it was trained on single chains, so a joined pair is outside what it was built for, and what it
+    does with the second chain is not assumed: the shuffled-partner control below tests it.* A pair longer than 1,022 residues, and a chain
+    whose Foldseek tokens do not match its sequence (same length and the same residues, Foldseek's unknown X allowed where the structure reads
+    a modified residue as its parent), is *not assessed* and counted (3 pairs too long in complex I of the human host and 3 of the mouse host
+    before any score; four chains of 8OM1 do not match). *The score:* the model's pseudo-log-likelihood (PLL), in nats, of the mitochondrial
+    chain's residues that touch u (heavy atom within 4.5 A of the chain of u): each in turn masked as "#" with its own structure token, and
+    its log-probability taken as a softmax over the 20 amino acids at that structure token; summed over those residues and over the pairs of
+    u. The mitochondrial chain carries the donor's substitutions (the donor read through the host, as H28 builds them). B0: beside the host's
+    own u (the chain as solved); B1: beside u carrying the donor's ortholog, placed as in step 2 (the alignment for the apes, the pinned RefSeq
+    proteins for the mouse host); *restoration = PLL(B1) - PLL(B0) in nats* (positive: the donor's own u makes the donor's mitochondrial
+    residues likelier, i.e. B0 minus B1 of the misfit, minus the PLL, which is what the step-2 code reads). *The null, the candidate rule and the
+    sums are step 2's, unchanged* (50 draws of the ortholog of a random other mammal of the alignment within 25% of the donor's differences at
+    the chain's contact residues, generator seeded (0, draw), at least 3 candidates else not assessed; not run where the ortholog changes no
+    placed residue, restoration exactly 0; u is a candidate when, in more than half of the donors that have an ortholog, it is among the
+    largest and above the null's 95th percentile). *The model is deterministic* (evaluation mode, no dropout), so there is no seed sweep;
+    "seed" is 0 in every table, and a second run of the whole is compared byte for byte. *Which amino acids matter:* for every residue of u the
+    donor's ortholog changes, that residue alone changed (host to donor) beside the donor's mitochondrial chain, the change of the PLL summed
+    over the mitochondrial residues that touch u, per mitochondrial chain and summed over them, with the residue's distance to the
+    mitochondrial chains and whether it is at the interface (4.5 A); the model's attention is not read. *Controls:* (i) the contrast of the
+    absolute change at the changed residues at the interface against those away from it (one-sided Mann-Whitney, and the correlation with the
+    distance): a model that does not see the interface shows it here; (ii) the partner shuffled three times (its amino acids permuted among
+    their places, structure tokens kept, generator seeded (1, draw)): PLL(B0) minus the shuffled mean is positive when the real partner is
+    used. *The bar, stated before any score. The model counts only if all four hold:* (1) the step-2 rule names at least one subunit in a
+    complex on either host (steps 1 and 2 named none); (2) on the cases with a stated outcome, summed over the same genes (those SaProt and
+    StaB-ddG both scored for every donor of the complex), SaProt's restoration has a stratified area (the share of (reduced, not reduced)
+    pairs of cases of one host and complex in which the reduced one scores higher, ties half) larger than that of StaB-ddG's restoration
+    (step 2) and of step 1's count of the facing residues of the same subunits (`saprot-compare`; the pairs are the human apes (none: I is
+    all reduced, III, IV and V all not reduced) and, on the mouse host, I (rat against *M. caroli* and *M. pahari*: 2 pairs) and IV (the rat
+    and *M. pahari* against *M. caroli*: 2 pairs), 4 pairs in all, the rat's III being a pair the papers disagree on): with 4 pairs
+    this is a direct table and a pass is a lead, not evidence; the Spearman correlation with the stated activities (3 cases per host,
+    complex I) is reported and claims nothing; (3) the interface contrast of control (i) has p < 0.05; (4) the real partner is used, the
+    difference of control (ii) positive in more than half of the tasks with a change. Failing (3) or (4) means the model's reading of the
+    nuclear chain is not a reading of the interface whatever else holds. *Not assessed, as in step 2:* *M. spretus*, *M. terricolor*, *Otomys
+    irroratus*, the hamsters, the genes without an alignment or a chain, and what the above adds. *Dry run of the code with a stand-in for
+    the model, before any score (structure only, to count the work):* human host 149 tasks scored of 216 (the same 149 as step 2; 61 change a
+    residue, 40 have a null), mouse host 120 of 171 (step 2 scored 123; three have no readable pair); about 75,000 and 110,000 masked
+    passes at most. *Jobs:* one Slurm array element per 16th task, each task its own tables, a task whose table is there skipped, so a
+    requeue loses only the task running; idle cards of another group's node through `GPUrequeue` with the account `cluster` (the maintainer
+    allowed it on 2026-11-25 for this work), never the A100 cards; one probe job first. *H35's part 2 (this is its other half):* the
+    model of part 2 is SaProt 650M, not ESM-2 3B or ESM C (the choice and its reasons are above); the pair's dependency is read as the
+    change of the likelihood of the mitochondrial residues at the interface when the nuclear partner changes (the step's restoration, the
+    per-residue change and the shuffled partner), not as a sign test over contact pairs and control pairs; that sign test of part 2 is not run
+    here.

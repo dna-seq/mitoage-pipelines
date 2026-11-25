@@ -121,6 +121,20 @@ def download_stabddg() -> None:
     download.stabddg(paths.STABDDG, paths.MANIFEST)
 
 
+@download_app.command("saprot")
+def download_saprot() -> None:
+    """H36, step 3: SaProt 650M (PDB) at the pinned revision from Hugging Face into data/input/saprot; a file whose SHA-256 is not the pinned one is refused."""
+    from .mitoport import cybrid_saprot
+    cybrid_saprot.download_weights(paths.SAPROT, paths.MANIFEST)
+
+
+@download_app.command("foldseek")
+def download_foldseek() -> None:
+    """H36, step 3: Foldseek's static binary at the pinned release into data/input/foldseek; the archive is checked against its SHA-256."""
+    from .mitoport import cybrid_saprot
+    print("wrote", cybrid_saprot.download_foldseek(paths.FOLDSEEK, paths.MANIFEST))
+
+
 @download_app.command("mitimpact")
 def download_mitimpact() -> None:
     """H34: MitImpact 4's table of published predictors' scores into data/input/mitimpact; refuses another file than the pinned one."""
@@ -1183,6 +1197,97 @@ def mitoport_swap_collect(out: Out = paths.CYBRID_OUT,
     """H36, step 2: the swap's tables and the candidate rule from the tasks' tables; a task without a table is said."""
     from .mitoport import cybrid_swap
     cybrid_swap.collect(out, host=host)
+
+
+@mitoport_app.command("saprot-tokens")
+def mitoport_saprot_tokens(pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+                           binary: Annotated[Path, typer.Option(help="Foldseek's binary of `download foldseek`")] = paths.FOLDSEEK / "foldseek",
+                           tokens: Annotated[Path, typer.Option(help="folder of the tokens")] = paths.SAPROT_TOKENS) -> None:
+    """H36, step 3: the structure tokens (3Di states) of every chain of the solved complexes the swap uses, written once as <PDB>.3di.tsv."""
+    from .mitoport import cybrid_saprot
+    from .mitoport.cybrid_energy import STRUCTURES
+    from .mitoport.complexes import COMPLEXES
+    ids = sorted({p for s in STRUCTURES.values() for p in s.values()} | {c.cif.stem for c in COMPLEXES.values()})
+    print("foldseek", cybrid_saprot.foldseek_version(binary))
+    for p in ids:
+        t = cybrid_saprot.structure_tokens(pdb_dir / f"{p}.cif", binary, tokens)
+        print(p, len(t), "chains", sum(len(a) for a, _ in t.values()), "residues", cybrid_saprot.sha256(tokens / f"{p}.3di.tsv"))
+
+
+@mitoport_app.command("saprot")
+def mitoport_saprot(
+    donor: Annotated[Optional[str], typer.Option(help="donor species slug (with --complex and --gene)")] = None,
+    complex_: Annotated[Optional[str], typer.Option("--complex", help="I, III, IV or V")] = None,
+    gene: Annotated[Optional[str], typer.Option(help="the nuclear gene whose ortholog is swapped")] = None,
+    task: Annotated[Optional[int], typer.Option(help="instead of the three: the 0-based index of the task, as the swap's --list prints them")] = None,
+    shard: Annotated[Optional[str], typer.Option(help="K/N: every task whose index is K modulo N, in order (a worker that resumes: a task with a table is skipped)")] = None,
+    list_: Annotated[bool, typer.Option("--list", help="print the tasks and stop")] = False,
+    gb: CybridGb = paths.CYBRID_GB / "records.gb",
+    pdb_dir: Annotated[Path, typer.Option("--pdb-dir", help="folder of the mmCIF files")] = paths.PDB,
+    aln: Annotated[Path, typer.Option("--aln", help="folder of the nuclear subunits' vertebrate alignments (<GENE>.afa)")] = paths.MITOPORT / "partners" / "aln",
+    build: Build = paths.BUILD,
+    weights: Annotated[Path, typer.Option("--weights", help="folder of `download saprot`")] = paths.SAPROT,
+    tokens: Annotated[Path, typer.Option(help="folder of `mitoport saprot-tokens`")] = paths.SAPROT_TOKENS,
+    out: Out = paths.CYBRID_OUT,
+    device: Annotated[str, typer.Option(help="cpu or cuda")] = "cuda",
+    donor_orthologs: Annotated[Optional[Path], typer.Option("--donor-orthologs", help="folder of `download donor-orthologs` (the mouse host's; the human host's first run is without)")] = None,
+    host: Annotated[str, typer.Option(help="the host species: homo-sapiens or mus-musculus")] = "homo-sapiens",
+    probe: Annotated[bool, typer.Option(help="read one real pair and print it, writing nothing (the check before the array)")] = False,
+) -> None:
+    """H36, step 3: SaProt's reading of the donor's mitochondrial chain beside one nuclear chain with the host's subunit, the donor's
+    ortholog and random mammals' (`uv sync --group saprot`), and of each changed residue alone."""
+    from .mitoport import cybrid_saprot, cybrid_swap
+    all_tasks = cybrid_swap.tasks(host=host)
+    if list_:
+        for i, t in enumerate(all_tasks):
+            print(i, *t)
+        return
+    if probe:
+        cybrid_saprot.probe(gb, pdb_dir, tokens, weights, device)
+        return
+    if shard is not None:
+        k, n = (int(x) for x in shard.split("/"))
+        todo = [t for i, t in enumerate(all_tasks) if i % n == k]
+    elif task is not None:
+        todo = [all_tasks[task]]
+    else:
+        if not (donor and complex_ and gene):
+            raise SystemExit("give --task, --shard, or --donor, --complex and --gene")
+        todo = [(donor, complex_, gene)]
+    source = None
+    if donor_orthologs is None and host != cybrid_swap.HOST:
+        donor_orthologs = paths.DONOR_ORTHOLOGS
+    if donor_orthologs is not None:
+        from .mitoport import donor_orthologs as pinned
+        source = pinned.read_source(donor_orthologs)
+    for d, c, g in todo:
+        cybrid_saprot.run(d, c, g, gb, pdb_dir, aln, build / "species.parquet", tokens, weights, out, device=device, donor_source=source, host=host)
+
+
+@mitoport_app.command("saprot-collect")
+def mitoport_saprot_collect(out: Out = paths.CYBRID_OUT,
+                            host: Annotated[str, typer.Option(help="the host species of the tasks: homo-sapiens or mus-musculus")] = "homo-sapiens") -> None:
+    """H36, step 3: SaProt's tables and the step-2 candidate rule from the tasks' tables; a task without a table is said."""
+    from .mitoport import cybrid_saprot
+    cybrid_saprot.collect(out, host=host)
+
+
+@mitoport_app.command("saprot-compare")
+def mitoport_saprot_compare(
+    human: Annotated[Path, typer.Option(help="folder of the human host's saprot_* tables")],
+    mouse: Annotated[Path, typer.Option(help="folder of the mouse host's saprot_* tables")],
+    stab_human: Annotated[Path, typer.Option(help="step 2's tables for the human host")] = Path("results/h36/step2"),
+    stab_mouse: Annotated[Path, typer.Option(help="step 2's tables for the mouse host")] = Path("results/h36/step2-mouse"),
+    exposure: Annotated[Path, typer.Option(help="step 1's nuclear_exposure.tsv")] = Path("results/h36/step1/nuclear_exposure.tsv"),
+    out: Annotated[Path, typer.Option(help="folder to write saprot_compare_cases.tsv and saprot_compare.tsv into")] = Path("."),
+) -> None:
+    """H36, step 3: the bar of the entry: SaProt's restoration against StaB-ddG's (step 2) and step 1's count, on the same cases and genes."""
+    from .mitoport import cybrid_saprot
+    cases, metrics = cybrid_saprot.compare({"homo-sapiens": human, "mus-musculus": mouse}, {"homo-sapiens": stab_human, "mus-musculus": stab_mouse}, exposure)
+    out.mkdir(parents=True, exist_ok=True)
+    cases.to_csv(out / "saprot_compare_cases.tsv", sep="\t", index=False, float_format="%.5f")
+    metrics.to_csv(out / "saprot_compare.tsv", sep="\t", index=False, float_format="%.5f")
+    print(cases.to_string(index=False)); print(metrics.to_string(index=False))
 
 
 KronTables = Annotated[Path, typer.Option("--tables", help="folder of the likelihood tables (slurm/h31-kron-table.py)")]
