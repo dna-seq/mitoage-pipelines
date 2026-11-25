@@ -1,0 +1,150 @@
+donor	complex	gene	pll_b0	pll_shuffled_mean	real_minus_shuffled	shuffles
+gorilla-gorilla	I	NDUFS5	-87.88376	-86.13784	-1.74592	3
+gorilla-gorilla	I	NDUFA1	-51.38721	-50.55713	-0.83008	3
+gorilla-gorilla	I	NDUFB11	-57.03803	-56.60197	-0.43606	3
+gorilla-gorilla	I	NDUFA10	-70.03944	-68.71805	-1.32139	3
+gorilla-gorilla	I	NDUFB8	-56.93525	-56.53915	-0.39611	3
+gorilla-gorilla	I	NDUFB7	-35.08627	-34.91653	-0.16973	3
+gorilla-gorilla	I	NDUFA9	-15.97705	-15.87850	-0.09856	3
+gorilla-gorilla	I	NDUFS3	-0.07136			0
+gorilla-gorilla	I	NDUFS7	-14.28529			0
+gorilla-gorilla	I	NDUFA3	-34.27272			0
+gorilla-gorilla	I	NDUFA6	-4.08263			0
+gorilla-gorilla	I	NDUFA8	-28.10056			0
+gorilla-gorilla	I	NDUFA11	-36.89404			0
+gorilla-gorilla	I	NDUFA12	-0.57193			0
+gorilla-gorilla	I	NDUFA13	-71.74814			0
+gorilla-gorilla	I	NDUFAB1	-8.70021			0
+gorilla-gorilla	I	NDUFB1	-29.32260			0
+gorilla-gorilla	I	NDUFB2	-29.25717			0
+gorilla-gorilla	I	NDUFB3	-35.65803			0
+gorilla-gorilla	I	NDUFB4	-56.62388			0
+gorilla-gorilla	I	NDUFB5	-57.88405			0
+gorilla-gorilla	I	NDUFB6	-53.17694			0
+gorilla-gorilla	I	NDUFB9	-52.18270			0
+gorilla-gorilla	I	NDUFC2	-45.75964			0
+gorilla-gorilla	I	NDUFS8	-7.40863	-6.96434	-0.44429	3
+gorilla-gorilla	I	NDUFS2	-30.45025	-30.02812	-0.42213	3
+gorilla-gorilla	I	NDUFB10	-74.86827	-75.21122	0.34295	3
+pan-paniscus	I	NDUFB11	-58.74213	-57.98217	-0.75996	3
+pan-paniscus	I	NDUFB8	-57.42355	-57.95728	0.53373	3
+pan-paniscus	I	NDUFA9	-15.93845	-15.98350	0.04505	3
+pan-paniscus	I	NDUFB5	-59.89197	-59.47067	-0.42130	3
+pan-paniscus	I	NDUFB9	-49.73445	-50.05722	0.32277	3
+pan-paniscus	I	NDUFB7	-37.50076	-37.12292	-0.37784	3
+pan-paniscus	I	NDUFA1	-54.89989	-53.72590	-1.17399	3
+pan-paniscus	I	NDUFS3	-0.05146			0
+pan-paniscus	I	NDUFS5	-87.15494			0
+pan-paniscus	I	NDUFS7	-17.36299			0
+pan-paniscus	I	NDUFS8	-7.65395			0
+pan-paniscus	I	NDUFA3	-41.44252			0
+pan-paniscus	I	NDUFA6	-1.67703			0
+pan-paniscus	I	NDUFA8	-22.34514			0
+pan-paniscus	I	NDUFA11	-27.57815			0
+pan-paniscus	I	NDUFA12	-3.00849			0
+pan-paniscus	I	NDUFAB1	-6.69035			0
+pan-paniscus	I	NDUFB1	-29.63451			0
+pan-paniscus	I	NDUFB2	-25.70077			0
+pan-paniscus	I	NDUFB3	-24.77188			0
+pan-paniscus	I	NDUFB4	-55.92963			0
+pan-paniscus	I	NDUFB6	-45.42743			0
+pan-paniscus	I	NDUFB10	-69.07425	-69.48698	0.41273	3
+pan-paniscus	I	NDUFA10	-73.71578	-72.19722	-1.51857	3
+pan-paniscus	I	NDUFS2	-43.55775	-41.07404	-2.48371	3
+pan-paniscus	I	NDUFC2	-46.44460	-44.48483	-1.95977	3
+pan-troglodytes	I	NDUFA13	-76.61913	-75.92973	-0.68941	3
+pan-troglodytes	I	NDUFB10	-68.73278	-68.92232	0.18954	3
+pan-troglodytes	I	NDUFB8	-55.44330	-55.93897	0.49567	3
+pan-troglodytes	I	NDUFA9	-16.04707	-16.10787	0.06079	3
+pan-troglodytes	I	NDUFB11	-55.94666	-55.38165	-0.56501	3
+pan-troglodytes	I	NDUFA1	-55.23475	-53.87513	-1.35962	3
+pan-troglodytes	I	NDUFS3	-0.05413			0
+pan-troglodytes	I	NDUFS5	-84.79480			0
+pan-troglodytes	I	NDUFS7	-14.15547			0
+pan-troglodytes	I	NDUFS8	-8.19745			0
+pan-troglodytes	I	NDUFA3	-40.78365			0
+pan-troglodytes	I	NDUFA6	-1.75781			0
+pan-troglodytes	I	NDUFA8	-24.89207			0
+pan-troglodytes	I	NDUFA11	-28.05662			0
+pan-troglodytes	I	NDUFA12	-3.05010			0
+pan-troglodytes	I	NDUFAB1	-6.83998			0
+pan-troglodytes	I	NDUFB1	-30.47017			0
+pan-troglodytes	I	NDUFB2	-27.75131			0
+pan-troglodytes	I	NDUFB3	-26.28006			0
+pan-troglodytes	I	NDUFB4	-56.91741			0
+pan-troglodytes	I	NDUFB5	-60.29869			0
+pan-troglodytes	I	NDUFB6	-52.00895			0
+pan-troglodytes	I	NDUFB7	-32.74624	-32.56744	-0.17880	3
+pan-troglodytes	I	NDUFS2	-31.33329	-31.31698	-0.01631	3
+pan-troglodytes	I	NDUFB9	-51.39058	-51.88506	0.49448	3
+pan-troglodytes	I	NDUFA10	-72.26019	-70.75126	-1.50894	3
+pan-troglodytes	I	NDUFC2	-45.53385	-43.89507	-1.63878	3
+gorilla-gorilla	III	UQCRFS1	-17.18526			0
+gorilla-gorilla	III	UQCRB	-48.51306			0
+gorilla-gorilla	III	UQCRQ	-57.60196			0
+gorilla-gorilla	III	UQCR11	-0.10524	-0.10623	0.00099	3
+gorilla-gorilla	III	UQCRC1	-29.12283	-28.02519	-1.09764	3
+gorilla-gorilla	III	CYC1	-43.49395	-43.33261	-0.16134	3
+pan-paniscus	III	UQCRC1	-29.29005			0
+pan-paniscus	III	CYC1	-55.68628			0
+pan-paniscus	III	UQCRB	-49.15808			0
+pan-paniscus	III	UQCRQ	-48.89314			0
+pan-paniscus	III	UQCR11	-0.15708			0
+pan-paniscus	III	UQCRFS1	-25.18297	-24.19031	-0.99266	3
+pan-troglodytes	III	UQCRC1	-29.36612			0
+pan-troglodytes	III	CYC1	-48.54961			0
+pan-troglodytes	III	UQCRB	-48.36338			0
+pan-troglodytes	III	UQCRQ	-49.79706			0
+pan-troglodytes	III	UQCR11	-0.11983			0
+pan-troglodytes	III	UQCRFS1	-14.62634	-14.47039	-0.15594	3
+gorilla-gorilla	IV	COX8A	-26.88003	-26.54765	-0.33238	3
+gorilla-gorilla	IV	COX5B	-45.91726	-45.63454	-0.28272	3
+gorilla-gorilla	IV	COX5A	-13.17948	-13.46988	0.29041	3
+gorilla-gorilla	IV	COX7A2	-19.86507	-19.51500	-0.35007	3
+gorilla-gorilla	IV	COX6A1	-16.96022			0
+gorilla-gorilla	IV	COX6B1	-35.66543			0
+gorilla-gorilla	IV	COX6C	-41.24618			0
+gorilla-gorilla	IV	COX7B	-21.73794			0
+gorilla-gorilla	IV	COX7C	-41.51655			0
+gorilla-gorilla	IV	NDUFA4	-11.99035	-12.40564	0.41529	3
+gorilla-gorilla	IV	COX4I1	-72.14302	-70.18579	-1.95723	3
+pan-paniscus	IV	COX8A	-27.68199	-27.40002	-0.28198	3
+pan-paniscus	IV	COX6C	-41.53349	-40.55398	-0.97951	3
+pan-paniscus	IV	COX5B	-46.26610	-46.28103	0.01493	3
+pan-paniscus	IV	COX4I1	-71.43100			0
+pan-paniscus	IV	COX6A1	-20.26791			0
+pan-paniscus	IV	COX6B1	-31.05214			0
+pan-paniscus	IV	COX7B	-19.62871			0
+pan-paniscus	IV	COX7C	-47.42475			0
+pan-paniscus	IV	NDUFA4	-13.12112			0
+pan-paniscus	IV	COX7A2	-16.48499	-16.45405	-0.03094	3
+pan-paniscus	IV	COX5A	-13.62223	-13.75972	0.13750	3
+pan-troglodytes	IV	COX8A	-27.62150	-27.34143	-0.28007	3
+pan-troglodytes	IV	COX6C	-41.53048	-40.55177	-0.97871	3
+pan-troglodytes	IV	COX4I1	-71.43071			0
+pan-troglodytes	IV	COX6A1	-20.19772			0
+pan-troglodytes	IV	COX6B1	-30.78455			0
+pan-troglodytes	IV	COX7B	-19.66716			0
+pan-troglodytes	IV	COX7C	-42.04411			0
+pan-troglodytes	IV	NDUFA4	-13.11251			0
+pan-troglodytes	IV	COX7A2	-16.56025	-16.53589	-0.02436	3
+pan-troglodytes	IV	COX5A	-13.62223	-13.75972	0.13750	3
+pan-troglodytes	IV	COX5B	-45.30862	-45.40253	0.09391	3
+gorilla-gorilla	V	ATP5MJ	-43.71626	-41.72408	-1.99218	3
+gorilla-gorilla	V	ATP5PB	-84.12809	-81.07747	-3.05063	3
+gorilla-gorilla	V	ATP5PD	-85.36994			0
+gorilla-gorilla	V	ATP5MC1	-5.03634			0
+gorilla-gorilla	V	ATP5MF	-28.77131			0
+gorilla-gorilla	V	ATP5PF	-4.19289	-3.83561	-0.35728	3
+pan-paniscus	V	ATP5PD	-84.34096	-78.61700	-5.72396	3
+pan-paniscus	V	ATP5PB	-82.05354	-78.63269	-3.42086	3
+pan-paniscus	V	ATP5MC1	-5.41639			0
+pan-paniscus	V	ATP5MF	-30.33695			0
+pan-paniscus	V	ATP5MJ	-48.53877			0
+pan-paniscus	V	ATP5PF	-4.76041	-3.82394	-0.93647	3
+pan-troglodytes	V	ATP5PB	-79.53555	-76.34592	-3.18963	3
+pan-troglodytes	V	ATP5PD	-84.28993			0
+pan-troglodytes	V	ATP5MC1	-5.77194			0
+pan-troglodytes	V	ATP5MF	-30.20380			0
+pan-troglodytes	V	ATP5MJ	-47.73123			0
+pan-troglodytes	V	ATP5PF	-4.53777	-3.56456	-0.97321	3

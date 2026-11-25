@@ -1,0 +1,73 @@
+complex	gene	donors	donors_with_ortholog	in_top	exceeds_null	both	candidate	best_restoration	not_assessed
+I	NDUFV1	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFV2	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFV3	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFS1	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFS2	3	3	0	1	0	False	-0.00572	
+I	NDUFS3	3	3	0	0	0	False	0.00000	
+I	NDUFS4	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFS5	3	3	1	0	0	False	0.12700	
+I	NDUFS6	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFS7	3	3	0	0	0	False	0.00000	
+I	NDUFS8	3	3	0	0	0	False	0.00000	
+I	NDUFA1	3	3	3	0	0	False	0.02961	
+I	NDUFA2	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFA3	3	3	0	0	0	False	0.00000	
+I	NDUFA5	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFA6	3	3	0	0	0	False	0.00000	
+I	NDUFA7	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFA8	3	3	0	0	0	False	0.00000	
+I	NDUFA9	3	3	3	0	0	False	0.02795	
+I	NDUFA10	3	3	1	0	0	False	0.02140	
+I	NDUFA11	3	3	0	0	0	False	0.00000	
+I	NDUFA12	3	3	0	0	0	False	0.00000	
+I	NDUFA13	3	2	1	0	0	False	0.07040	pan-paniscus: not assessed: no ortholog of the donor in the alignment
+I	NDUFAB1	3	3	0	0	0	False	0.00000	
+I	NDUFB1	3	3	0	0	0	False	0.00000	
+I	NDUFB2	3	3	0	0	0	False	0.00000	
+I	NDUFB3	3	3	0	0	0	False	0.00000	
+I	NDUFB4	3	3	0	0	0	False	0.00000	
+I	NDUFB5	3	3	1	0	0	False	0.01576	
+I	NDUFB6	3	3	0	0	0	False	0.00000	
+I	NDUFB7	3	3	2	0	0	False	0.01667	
+I	NDUFB8	3	3	3	0	0	False	0.03375	
+I	NDUFB9	3	3	1	0	0	False	0.01386	
+I	NDUFB10	3	3	1	0	0	False	0.06879	
+I	NDUFB11	3	3	3	0	0	False	0.04225	
+I	NDUFC1	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+I	NDUFC2	3	3	0	0	0	False	0.00000	
+III	UQCRC1	3	3	0	0	0	False	0.00000	
+III	UQCRC2	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+III	CYC1	3	3	0	0	0	False	0.00000	
+III	UQCRFS1	3	3	0	0	0	False	0.00000	
+III	UQCRB	3	3	0	0	0	False	0.00000	
+III	UQCRQ	3	3	0	0	0	False	0.00000	
+III	UQCRH	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+III	UQCR10	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+III	UQCR11	3	3	0	0	0	False	0.00000	
+IV	COX4I1	3	3	0	0	0	False	0.00000	
+IV	COX5A	3	3	1	1	1	False	0.02352	
+IV	COX5B	3	3	2	2	2	True	0.03664	
+IV	COX6A1	3	3	0	0	0	False	0.00000	
+IV	COX6B1	3	3	0	0	0	False	0.00000	
+IV	COX6C	3	3	2	0	0	False	0.15841	
+IV	COX7A2	3	3	0	0	0	False	0.01978	
+IV	COX7B	3	3	0	0	0	False	0.00000	
+IV	COX7C	3	3	0	0	0	False	0.00000	
+IV	COX8A	3	3	3	0	0	False	0.18519	
+IV	NDUFA4	3	3	0	0	0	False	0.00000	
+V	ATP5F1A	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5F1B	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5F1C	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5F1D	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5F1E	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5PB	3	3	3	0	0	False	0.07782	
+V	ATP5PD	3	3	1	1	1	False	0.23666	
+V	ATP5PF	3	3	0	0	0	False	-0.04401	
+V	ATP5PO	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5MC1	3	3	0	0	0	False	0.00000	
+V	ATP5ME	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5MF	3	3	0	0	0	False	0.00000	
+V	ATP5MG	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene
+V	ATP5MJ	3	3	1	1	1	False	0.43267	
+V	ATP5IF1	3	0	0	0	0	False		gorilla-gorilla: not assessed: no alignment of the gene; pan-paniscus: not assessed: no alignment of the gene; pan-troglodytes: not assessed: no alignment of the gene

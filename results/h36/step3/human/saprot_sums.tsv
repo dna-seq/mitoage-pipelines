@@ -1,0 +1,13 @@
+donor	complex	genes_summed	restoration_sum	genes_scored	status	pct
+gorilla-gorilla	I	26	0.16657	27	reduced	55.00000
+pan-paniscus	I	26	-0.10942	26	reduced	57.00000
+pan-troglodytes	I	26	-0.02767	27	reduced	59.00000
+gorilla-gorilla	III	6	-0.30525	6	not_reduced	
+pan-paniscus	III	6	-0.01223	6	not_reduced	
+pan-troglodytes	III	6	-0.02652	6	not_reduced	
+gorilla-gorilla	IV	11	0.11284	11	not_reduced	
+pan-paniscus	IV	11	0.33663	11	not_reduced	
+pan-troglodytes	IV	11	0.24189	11	not_reduced	
+gorilla-gorilla	V	6	0.46648	6	not_reduced	
+pan-paniscus	V	6	0.09091	6	not_reduced	
+pan-troglodytes	V	6	-0.14832	6	not_reduced	

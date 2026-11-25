@@ -1,0 +1,121 @@
+donor	complex	gene	pll_b0	pll_shuffled_mean	real_minus_shuffled	shuffles
+mus-caroli	I	NDUFA10	-52.59512	-53.06343	0.46830	3
+mus-caroli	I	NDUFA8	-40.31739	-39.33683	-0.98056	3
+mus-caroli	I	NDUFS8	-7.47550	-7.42670	-0.04879	3
+mus-caroli	I	NDUFB10	-102.81229	-99.79547	-3.01682	3
+mus-caroli	I	NDUFA13	-83.59022	-82.79745	-0.79277	3
+mus-caroli	I	NDUFB6	-44.08739	-43.34648	-0.74091	3
+mus-caroli	I	NDUFB7	-38.60446	-37.75552	-0.84893	3
+mus-caroli	I	NDUFB5	-103.60801	-101.17057	-2.43744	3
+mus-caroli	I	NDUFA11	-53.79267	-52.56615	-1.22653	3
+mus-caroli	I	NDUFS3	-0.13474			0
+mus-caroli	I	NDUFA1	-63.06954			0
+mus-caroli	I	NDUFA6	-4.57850			0
+mus-caroli	I	NDUFA7	-0.34780			0
+mus-caroli	I	NDUFA12	-3.45962			0
+mus-caroli	I	NDUFAB1	-9.96397			0
+mus-caroli	I	NDUFB2	-37.41857			0
+mus-caroli	I	NDUFB3	-44.54011			0
+mus-caroli	I	NDUFB4	-64.64496			0
+mus-caroli	I	NDUFB11	-75.58388			0
+mus-caroli	I	NDUFA3	-41.47874	-39.80635	-1.67239	3
+mus-caroli	I	NDUFB9	-65.74682	-66.00535	0.25853	3
+mus-caroli	I	NDUFB1	-33.96125	-33.92433	-0.03693	3
+mus-caroli	I	NDUFB8	-73.11988	-71.60645	-1.51343	3
+mus-caroli	I	NDUFA9	-25.34162	-23.59487	-1.74674	3
+mus-caroli	I	NDUFC2	-66.38062	-63.53074	-2.84987	3
+mus-caroli	I	NDUFS2	-42.36578	-43.68154	1.31576	3
+mus-caroli	I	NDUFS5	-88.61860	-88.15622	-0.46238	3
+mus-pahari	I	NDUFB10	-106.90895	-104.75396	-2.15498	3
+mus-pahari	I	NDUFA9	-24.91838	-23.26879	-1.64959	3
+mus-pahari	I	NDUFA10	-47.97353	-47.49535	-0.47818	3
+mus-pahari	I	NDUFB4	-60.16799	-60.32831	0.16033	3
+mus-pahari	I	NDUFB8	-74.36697	-73.25545	-1.11152	3
+mus-pahari	I	NDUFB6	-51.32624	-50.84274	-0.48350	3
+mus-pahari	I	NDUFA12	-3.24629	-3.19137	-0.05492	3
+mus-pahari	I	NDUFS8	-7.13039	-7.13593	0.00554	3
+mus-pahari	I	NDUFA8	-42.36785	-41.03085	-1.33699	3
+mus-pahari	I	NDUFA6	-4.48409			0
+mus-pahari	I	NDUFAB1	-9.92809			0
+mus-pahari	I	NDUFB1	-31.89983			0
+mus-pahari	I	NDUFB2	-38.59140			0
+mus-pahari	I	NDUFA7	-0.32175	-0.41049	0.08874	3
+mus-pahari	I	NDUFS3	-0.14229	-0.26772	0.12543	3
+mus-pahari	I	NDUFA1	-73.56902	-71.56945	-1.99957	3
+mus-pahari	I	NDUFB7	-35.60166	-35.24870	-0.35295	3
+mus-pahari	I	NDUFB5	-99.84943	-98.45970	-1.38974	3
+mus-pahari	I	NDUFB9	-79.13790	-78.75097	-0.38693	3
+mus-pahari	I	NDUFA3	-49.98271	-47.26796	-2.71475	3
+mus-pahari	I	NDUFA11	-62.96701	-62.59982	-0.36719	3
+mus-pahari	I	NDUFA13	-90.45178	-89.98749	-0.46429	3
+mus-pahari	I	NDUFB3	-46.43406	-45.00638	-1.42768	3
+mus-pahari	I	NDUFB11	-70.52422	-72.57483	2.05061	3
+mus-pahari	I	NDUFS2	-38.85294	-40.26682	1.41388	3
+mus-pahari	I	NDUFC2	-65.14371	-64.43991	-0.70380	3
+mus-pahari	I	NDUFS5	-93.78482	-93.29164	-0.49318	3
+rattus-norvegicus	I	NDUFA3	-46.00574	-44.19898	-1.80676	3
+rattus-norvegicus	I	NDUFB11	-68.41245	-69.59238	1.17993	3
+rattus-norvegicus	I	NDUFB10	-93.90908	-92.61979	-1.28928	3
+rattus-norvegicus	I	NDUFB9	-76.67077	-76.40087	-0.26990	3
+rattus-norvegicus	I	NDUFS8	-7.60606	-7.54474	-0.06132	3
+rattus-norvegicus	I	NDUFB3	-42.02865	-41.14624	-0.88241	3
+rattus-norvegicus	I	NDUFB7	-38.41965	-37.74152	-0.67813	3
+rattus-norvegicus	I	NDUFA1	-70.96349	-69.04834	-1.91515	3
+rattus-norvegicus	I	NDUFA13	-90.99830	-87.37834	-3.61995	3
+rattus-norvegicus	I	NDUFB5	-86.47293	-85.07279	-1.40014	3
+rattus-norvegicus	I	NDUFS3	-0.10433	-0.20413	0.09980	3
+rattus-norvegicus	I	NDUFAB1	-9.00209	-8.89804	-0.10405	3
+rattus-norvegicus	I	NDUFA7	-0.35566	-0.44719	0.09152	3
+rattus-norvegicus	I	NDUFB2	-37.21520	-36.68952	-0.52568	3
+rattus-norvegicus	I	NDUFA11	-53.61486	-52.43410	-1.18076	3
+rattus-norvegicus	I	NDUFA9	-25.85921	-23.74457	-2.11464	3
+rattus-norvegicus	I	NDUFA6	-4.24421	-4.09256	-0.15165	3
+rattus-norvegicus	I	NDUFA8	-42.95497	-41.81389	-1.14109	3
+rattus-norvegicus	I	NDUFA12	-3.36315	-3.31567	-0.04748	3
+rattus-norvegicus	I	NDUFB6	-53.72204	-53.65097	-0.07107	3
+rattus-norvegicus	I	NDUFC2	-49.65508	-51.99351	2.33843	3
+rattus-norvegicus	I	NDUFA10	-50.65092	-52.27406	1.62314	3
+rattus-norvegicus	I	NDUFB1	-38.84367	-38.55440	-0.28928	3
+rattus-norvegicus	I	NDUFB4	-67.71383	-68.17594	0.46212	3
+rattus-norvegicus	I	NDUFB8	-85.05805	-83.84360	-1.21445	3
+rattus-norvegicus	I	NDUFS2	-39.30841	-40.60665	1.29825	3
+rattus-norvegicus	I	NDUFS5	-93.03766	-91.14978	-1.88788	3
+mus-caroli	III	UQCRB	-27.17876	-25.32557	-1.85320	3
+mus-caroli	III	CYC1	-27.47899			0
+mus-caroli	III	UQCRFS1	-3.79612			0
+mus-caroli	III	UQCRQ	-15.28490			0
+mus-caroli	III	UQCR11	-0.00568			0
+mus-caroli	III	UQCRC1	-10.77809	-10.22321	-0.55488	3
+mus-pahari	III	UQCRFS1	-3.59109	-3.70986	0.11877	3
+mus-pahari	III	UQCR11	-0.00536			0
+mus-pahari	III	UQCRC1	-6.90778	-6.32836	-0.57942	3
+mus-pahari	III	CYC1	-32.33901	-30.56236	-1.77665	3
+mus-pahari	III	UQCRB	-24.90478	-23.64318	-1.26161	3
+mus-pahari	III	UQCRQ	-15.62995	-16.02545	0.39550	3
+rattus-norvegicus	III	UQCRB	-30.32209	-28.69535	-1.62674	3
+rattus-norvegicus	III	UQCRFS1	-4.15074	-4.04514	-0.10560	3
+rattus-norvegicus	III	UQCR11	-0.00577	-0.00541	-0.00036	3
+rattus-norvegicus	III	UQCRQ	-12.76585	-11.75468	-1.01117	3
+rattus-norvegicus	III	UQCRC1	-7.31421	-6.75654	-0.55767	3
+rattus-norvegicus	III	CYC1	-20.37922	-20.45667	0.07745	3
+mus-caroli	IV	COX6C	-49.82022	-49.49229	-0.32793	3
+mus-caroli	IV	COX7B	-14.94281	-15.32133	0.37853	3
+mus-caroli	IV	COX5B	-42.01849	-42.23536	0.21686	3
+mus-caroli	IV	COX5A	-13.44357			0
+mus-caroli	IV	COX6B1	-31.95151			0
+mus-caroli	IV	COX7C	-24.27662			0
+mus-caroli	IV	COX4I1	-61.22470	-60.25042	-0.97428	3
+mus-pahari	IV	COX7B	-18.01323	-18.19543	0.18220	3
+mus-pahari	IV	COX6C	-49.49497	-49.19489	-0.30008	3
+mus-pahari	IV	COX5A	-13.39466			0
+mus-pahari	IV	COX5B	-41.55884			0
+mus-pahari	IV	COX6B1	-32.25586			0
+mus-pahari	IV	COX7C	-23.91301			0
+mus-pahari	IV	COX4I1	-62.82691	-61.36570	-1.46122	3
+rattus-norvegicus	IV	COX7B	-14.46968	-14.73632	0.26665	3
+rattus-norvegicus	IV	COX7C	-29.30065	-28.56828	-0.73237	3
+rattus-norvegicus	IV	COX5A	-13.20419			0
+rattus-norvegicus	IV	COX6B1	-32.41084			0
+rattus-norvegicus	IV	COX4I1	-58.22927	-56.94928	-1.27998	3
+rattus-norvegicus	IV	COX6C	-50.69655	-50.41728	-0.27927	3
+rattus-norvegicus	IV	COX5B	-44.96740	-44.60806	-0.35934	3

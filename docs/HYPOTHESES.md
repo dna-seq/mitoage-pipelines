@@ -3144,10 +3144,10 @@ should [tell] which protein bases depend on others"). Nothing is run. The rule b
 - *If both parts fail,* sequence models of every kind tried, with or without the partner, do not read mito-nuclear
   fit from sequence, and the question goes back to data with few differences (H33) or to physics.
 
-- *Part 2, the model and the reading, 2026-11-25 (made exact in H36, step 3):* SaProt 650M (sequence and structure tokens) on the mitochondrial chain joined to one nuclear chain; the dependency is read as the change of the likelihood of the mitochondrial residues at the interface when the nuclear partner changes (swap restoration, per-residue change, shuffled partner), and the sign test over contact and control pairs written here is not run; rule, bars and null are in H36's entry, written before any score.
+- *Part 2, the model and the reading, 2026-11-25 (made exact in H36, step 3):* SaProt 650M (sequence and structure tokens) on the mitochondrial chain joined to one nuclear chain; the dependency is read as the change of the likelihood of the mitochondrial residues at the interface when the nuclear partner changes (swap restoration, per-residue change, shuffled partner), and the sign test over contact and control pairs written here is not run; rule, bars and null are in H36's entry, written before any score. **Result, 2026-11-25 (H36, step 3): SaProt does not count:** the real partner makes the mitochondrial residues likelier than a shuffled one in 16 of 61 (human host) and 23 of 92 (mouse host) tasks, the model reads the interface only weakly (pooled p 0.014) and is below the count of differences and StaB-ddG on the cases that exist; the sign test of this part is not run.
 - **Result of part 1, 2026-11-24** (tables: job 6629999 at a73d76f; readout: job 6630056 at 3034258; `results/h35/`). *Cybrids: Evo 2 does not count in any arm.* T1 (Spearman against the stated activities) -0.18 (both strands), -0.13 (plus), -0.19 (minus), against the bar -0.52; T2 (AUC, reduced against not) 0.71, 0.71, 0.63 against 0.83; T3 4, 3, 3 against the bar 4 (met only by both strands, while T1 and T2 fail). The mean-score version is no better. *Variants: the rule counts in two of the three arms.* Over all 95 harmful and 1,576 harmless variants Evo 2's area is 0.905 (both strands), 0.894 (plus), 0.898 (minus); on the 50 harmful and 1,201 harmless variants the build's alignments cover, the baseline (fewer different bases among mammals) has 0.910 and Evo 2 0.966 (both strands), difference +0.055, 95% interval 0.002 to 0.114: counts; minus strand +0.049 (0.001 to 0.104): counts; plus strand +0.044 (-0.015 to 0.105): does not count. Reading: Evo 2 reads the variants about as well as conservation and slightly better where an alignment exists, and it gives no help for the cybrids, as the other models did not. The variants' interval touches zero at the lower end (0.001 to 0.002), so this is a thin margin, and the arm choice (both strands) was made before the score. Tables are from one run; no second run was compared byte for byte.
 
-## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (step 1 run: no subunit named; step 2, the swap, run on the apes and on the mouse host: no candidate)
+## H36. Which nuclear subunits and residues carry the incompatibility? The cybrids read from the nuclear side (step 1 run: no subunit named; step 2, the swap, run on the apes and on the mouse host: no candidate; step 3, SaProt on the joined chains: does not count)
 
 **State: proposed on 2026-11-24, after the maintainer's correction: the aim is to find nuclear genes to edit
 (mitochondrial DNA cannot be edited), and H28, H29, H31 and H34 judged their models only by how well they ranked the
@@ -3482,3 +3482,40 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     change of the likelihood of the mitochondrial residues at the interface when the nuclear partner changes (the step's restoration, the
     per-residue change and the shuffled partner), not as a sign test over contact pairs and control pairs; that sign test of part 2 is not run
     here.
+
+  - **Result of step 3, 2026-11-25: SaProt does not count** (tasks from commit c0ccb79: probe job 6655272; first run arrays 6655308 and 6655425, second
+    run 6655426 and 6655427, with the resubmitted shards 6655589, 6655590, 6655591, 6655684, 6655685, 6655720 and 6655804; collection, byte comparison,
+    tests and breaks at 98a9d8f, job 6655958; `results/h36/step3/`). *The probe:* on one RTX 2080 Ti the model runs in 32-bit floats with the `sdpa`
+    attention of `transformers`, no flash-attention and no fallback needed, 3.5 GiB at peak, about 3 s a read of 30 masked places; a read repeated is
+    the same bytes, batch 1 against batch 16 differs by 1e-5. The two runs' task tables (864 and 684) and every collected table are identical byte for
+    byte, the second run having run on other nodes (their card model was not recorded: unknown). No job was requeued by the node's owner; 17 of 139 array elements
+    stopped at start (a file of the Python environment not found) and were resubmitted, the tasks having their tables skipped. *What was assessed:*
+    human host 149 of 216 tasks scored (61 change a residue, 40 with a null), the rest as in step 2; mouse host 120 of 171 (92 change a residue, 51
+    with a null), 3 more than step 2 lost for want of a readable pair; 6 pairs too long in all; the mouse donors with no ortholog source not
+    assessed. *The four conditions of the bar:* (1) the rule names one subunit, **COX5B in complex IV of the human host** (among the largest and above
+    its null in two of the three apes), whose restoration is 0.037 nats (the gorilla; the null's 95th percentile -0.048) and which rests on one
+    substitution, V64I, that all three apes carry; the mouse host names none (the largest with a null: *M. pahari* NDUFA9 0.608 above its null of 0.330 and
+    *M. caroli* COX6C 0.188 above 0.181, each in one donor of three; on the reduced pairs alone NDUFS8 is a candidate on one reduced donor with 0.072
+    nats). Restorations are small: median absolute 0 (human, 88 of 149 exactly 0) and 0.029 (mouse); the largest with a null are human ATP5MJ 0.433
+    (null 0.121; the gorilla, one donor) and ATP5PD 0.237 (the null's 95th percentile 0.0, its draws changing nothing); the largest without an assessable
+    null are *M. pahari* NDUFB10 0.681 and, in the human complex I, NDUFS5 0.127. (2) **Fails:** on the 20 cases with a stated outcome
+    (4 pairs of a reduced and a not reduced case of one host and complex, all on the mouse host: the apes' complex I is all reduced and III, IV and V all
+    not reduced) the stratified area is 0.00 for SaProt, 0.25 for StaB-ddG and 1.00 for step 1's count of facing residues over the same genes; the
+    Spearman correlation with the stated percentages (n 11) is 0.23 (p 0.49) for SaProt, -0.20 for StaB-ddG and -0.65 (p 0.03) for the count: the model
+    is below both. With 4 pairs this is a table, not a test. (3) *Holds pooled, not per host:* the absolute change at the changed residues at the interface
+    against those away from it, 156 against 475 rows of the two hosts together: one-sided p 0.014, area 0.56, and the absolute change falls with
+    distance (Spearman -0.20, p 2e-7); per host p 0.097 (human) and 0.065 (mouse). A weak dependence on touching, in the right direction. (4) **Fails:**
+    the real partner makes the mitochondrial residues likelier than a shuffled one in 16 of 61 tasks of the human host and 23 of 92 of the mouse host
+    (the medians of real minus shuffled are -0.38 and -0.49 nats, -2.5 in complex V): fewer than half; *the model does not use the real partner as a
+    partner, which is what the entry said in advance a model trained on single chains might not do.* Against the activities of complex I (n 3 each)
+    the sum has Spearman -0.50 (human) and 0.50 (mouse); claims nothing. *Which amino acids:* 631 rows (156 at the interface) for the changed residues,
+    each read alone; the largest changes at the interface are V35I in ATP5MJ (the gorilla, +0.30 nats), Q121L and Y120S in NDUFB10 (the rat and
+    *M. pahari*, +0.20), G33E in COX8A (the three apes, +0.14 to +0.19), M34I in NDUFC2 (*M. caroli*, +0.14), C23Y in NDUFB1 (the rat, -0.13); in COX5B
+    V64I is +0.03 to +0.04 in each ape (`results/h36/step3/*/saprot_residues.tsv`); these are descriptive, rest on a few donors that share their
+    differences, and no residue is named. *Reading:* the model reads the interface a little (condition 3) and not the partner (4), is below the plain
+    count and below StaB-ddG on the few cases that exist (2), and names one subunit whose restoration is a twentieth of a nat from one substitution
+    shared by the apes (1): it does not count, and the nuclear subunits are not named by it. *Not done:* the model's attention (not read), the
+    other models, the hamster host, a null of more than 50 draws; the PLL is taken at the mitochondrial residues touching the nuclear chain only
+    (the whole chain's would need 500 reads per variant); the structure tokens are those of the host's backbone for every ortholog.
+    *Collection:* two bugs of the collection, in how the tables of tasks without a row are joined, were found when the human host was first collected and
+    fixed in 98a9d8f, with a test and two breaks; the task tables are unchanged. *Tests and breaks:* 116 passed (this step's 39 and the swap's); breaks: 83 of 83 caught (the first break run let 13 survive on the tests as first written; their tests were added in 7ce19d2 and 98a9d8f; one change, the nuclear chain's substitutions put on every copy, is equivalent on these structures, no gene having copies that differ in sequence, and is not run); the swap's own breaks were not run again.

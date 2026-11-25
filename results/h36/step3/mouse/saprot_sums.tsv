@@ -1,0 +1,10 @@
+donor	complex	genes_summed	restoration_sum	genes_scored	status	pct
+mus-caroli	I	27	-0.30004	27	not_reduced	89.00000
+mus-pahari	I	27	0.49036	27	not_reduced	87.00000
+rattus-norvegicus	I	27	-0.50839	27	reduced	46.00000
+mus-caroli	III	6	0.00730	6	not_reduced	96.00000
+mus-pahari	III	6	-0.27210	6	not_reduced	105.00000
+rattus-norvegicus	III	6	0.01527	6		
+mus-caroli	IV	7	0.21257	7	not_reduced	108.00000
+mus-pahari	IV	7	-0.20102	7	reduced	59.00000
+rattus-norvegicus	IV	7	-0.17439	7	reduced	64.75000

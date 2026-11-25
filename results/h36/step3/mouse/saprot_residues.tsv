@@ -1,0 +1,531 @@
+donor	complex	gene	u_chain	resnum	host_aa	donor_aa	interface	min_dist	delta_pll	rank_in_gene
+mus-caroli	I	NDUFS2	D	43	A	P	False	6.26411	-0.06758	
+mus-caroli	I	NDUFS2	D	208	L	M	False	21.11650	-0.07286	
+mus-caroli	I	NDUFS2	D	240	V	I	False	6.45611	-0.01295	
+mus-caroli	I	NDUFS5	e	98	S	L	False	13.93160	-0.10371	
+mus-caroli	I	NDUFS5	e	100	R	K	False	16.81521	-0.11008	
+mus-caroli	I	NDUFS8	I	22	N	S	False	11.17415	0.02434	
+mus-caroli	I	NDUFA3	b	78	D	E	False	12.66681	-0.00388	
+mus-caroli	I	NDUFA8	X	164	T	S	True	3.60452	0.01033	1.00000
+mus-caroli	I	NDUFA8	X	171	V	M	False	5.75044	0.03306	
+mus-caroli	I	NDUFA9	P	272	L	M	False	12.87172	-0.05155	
+mus-caroli	I	NDUFA10	O	44	Q	E	False	25.63924	0.07060	
+mus-caroli	I	NDUFA10	O	109	A	S	False	8.97929	0.01635	
+mus-caroli	I	NDUFA10	O	224	D	N	False	31.36592	0.01787	
+mus-caroli	I	NDUFA10	O	242	K	N	False	20.53083	0.06162	
+mus-caroli	I	NDUFA10	O	267	T	S	True	3.34505	0.01537	1.00000
+mus-caroli	I	NDUFA11	Y	43	S	T	True	3.39240	0.01145	1.00000
+mus-caroli	I	NDUFA11	Y	114	M	V	True	3.36971	-0.01080	2.00000
+mus-caroli	I	NDUFA13	Z	109	V	M	False	9.56206	-0.00610	
+mus-caroli	I	NDUFA13	Z	123	M	L	False	6.02755	0.02258	
+mus-caroli	I	NDUFB1	f	6	L	I	False	8.39488	-0.03578	
+mus-caroli	I	NDUFB1	f	20	V	I	False	6.25222	-0.00120	
+mus-caroli	I	NDUFB5	h	26	K	R	True	3.12428	0.00228	1.00000
+mus-caroli	I	NDUFB6	i	81	V	I	True	3.66466	0.01164	1.00000
+mus-caroli	I	NDUFB7	o	32	E	D	False	25.46954	0.00592	
+mus-caroli	I	NDUFB8	l	120	V	M	False	6.03230	-0.04321	
+mus-caroli	I	NDUFB9	n	5	P	T	False	15.94151	0.08119	
+mus-caroli	I	NDUFB9	n	57	M	V	False	26.60342	-0.06023	
+mus-caroli	I	NDUFB9	n	113	M	V	False	11.14633	-0.04100	
+mus-caroli	I	NDUFB9	n	150	T	S	False	20.05861	-0.00737	
+mus-caroli	I	NDUFB10	p	29	I	V	True	3.64776	0.01705	1.00000
+mus-caroli	I	NDUFB10	p	120	Y	H	True	3.23697	0.00354	2.00000
+mus-caroli	I	NDUFC2	d	12	K	T	False	12.43835	-0.00224	
+mus-caroli	I	NDUFC2	d	34	M	I	True	3.61340	0.13693	1.00000
+mus-caroli	I	NDUFC2	d	36	L	F	False	6.48789	-0.09674	
+mus-caroli	I	NDUFC2	d	48	L	M	True	3.28734	-0.03739	2.00000
+mus-caroli	I	NDUFC2	d	55	R	K	False	8.86406	0.04233	
+mus-caroli	I	NDUFC2	d	69	V	F	False	8.67311	0.03474	
+mus-caroli	I	NDUFC2	d	80	N	D	False	5.90809	-0.08665	
+mus-caroli	I	NDUFC2	d	94	I	M	False	14.69354	-0.04490	
+mus-pahari	I	NDUFS2	D	38	I	V	False	6.67453	-0.03854	
+mus-pahari	I	NDUFS2	D	43	A	V	False	6.26411	0.01330	
+mus-pahari	I	NDUFS2	D	208	L	M	False	21.11650	-0.11368	
+mus-pahari	I	NDUFS2	D	240	V	I	False	6.45611	-0.00217	
+mus-pahari	I	NDUFS2	D	287	I	V	False	21.75033	-0.00784	
+mus-pahari	I	NDUFS3	C	43	S	T	False	41.98123	-0.00305	
+mus-pahari	I	NDUFS3	C	58	I	V	False	33.44297	-0.00171	
+mus-pahari	I	NDUFS3	C	65	R	K	False	28.80467	0.00065	
+mus-pahari	I	NDUFS3	C	120	I	V	False	28.40569	-0.00369	
+mus-pahari	I	NDUFS3	C	125	I	M	False	22.14486	-0.00288	
+mus-pahari	I	NDUFS5	e	22	A	S	False	5.45715	0.03731	
+mus-pahari	I	NDUFS5	e	60	D	E	False	7.20152	-0.08227	
+mus-pahari	I	NDUFS5	e	72	M	I	True	3.39844	-0.08701	1.00000
+mus-pahari	I	NDUFS5	e	83	E	D	False	5.68425	0.04755	
+mus-pahari	I	NDUFS5	e	98	S	L	False	13.93160	-0.14421	
+mus-pahari	I	NDUFS5	e	100	R	K	False	16.81521	-0.10141	
+mus-pahari	I	NDUFS8	I	12	S	T	False	21.43552	-0.01106	
+mus-pahari	I	NDUFS8	I	22	N	S	False	11.17415	0.01662	
+mus-pahari	I	NDUFA1	a	27	H	Q	True	3.47047	-0.01184	1.00000
+mus-pahari	I	NDUFA3	b	59	D	N	False	25.97036	0.01362	
+mus-pahari	I	NDUFA3	b	71	D	E	False	21.80651	-0.03919	
+mus-pahari	I	NDUFA3	b	78	D	E	False	12.66681	-0.02360	
+mus-pahari	I	NDUFA7	r	6	V	A	False	14.58192	-0.00491	
+mus-pahari	I	NDUFA7	r	76	V	M	False	52.07514	0.00210	
+mus-pahari	I	NDUFA8	X	123	Q	E	False	16.45328	0.00504	
+mus-pahari	I	NDUFA8	X	150	N	S	False	12.53753	-0.02223	
+mus-pahari	I	NDUFA8	X	171	V	M	False	5.75044	0.01997	
+mus-pahari	I	NDUFA9	P	53	V	I	False	12.26842	0.00089	
+mus-pahari	I	NDUFA9	P	56	I	T	False	10.65711	-0.02890	
+mus-pahari	I	NDUFA9	P	68	L	I	False	17.11536	-0.01062	
+mus-pahari	I	NDUFA9	P	78	K	R	False	27.57233	0.02866	
+mus-pahari	I	NDUFA9	P	104	F	Y	False	17.17839	0.01111	
+mus-pahari	I	NDUFA9	P	108	D	C	False	22.16178	0.07321	
+mus-pahari	I	NDUFA9	P	109	V	C	False	18.62999	0.08786	
+mus-pahari	I	NDUFA9	P	111	V	L	False	25.48108	-0.00904	
+mus-pahari	I	NDUFA9	P	112	N	C	False	26.41814	0.12021	
+mus-pahari	I	NDUFA9	P	113	I	V	False	21.02668	-0.02323	
+mus-pahari	I	NDUFA9	P	114	P	A	False	24.49604	0.04757	
+mus-pahari	I	NDUFA9	P	115	R	Q	False	28.06372	0.00985	
+mus-pahari	I	NDUFA9	P	117	I	M	False	23.80704	-0.02287	
+mus-pahari	I	NDUFA9	P	118	A	S	False	29.29615	0.02590	
+mus-pahari	I	NDUFA9	P	120	A	R	False	30.90973	0.11053	
+mus-pahari	I	NDUFA9	P	123	E	D	False	35.86112	-0.00480	
+mus-pahari	I	NDUFA9	P	124	A	S	False	34.14063	0.00793	
+mus-pahari	I	NDUFA9	P	127	E	V	False	34.16453	0.09744	
+mus-pahari	I	NDUFA9	P	128	R	Q	False	30.46564	0.05818	
+mus-pahari	I	NDUFA9	P	129	F	L	False	28.07920	0.00851	
+mus-pahari	I	NDUFA9	P	130	I	C	False	25.65231	0.07616	
+mus-pahari	I	NDUFA9	P	131	H	S	False	25.53159	-0.03013	
+mus-pahari	I	NDUFA9	P	133	S	Q	False	23.20767	-0.04829	
+mus-pahari	I	NDUFA9	P	136	N	I	False	26.00003	0.04929	
+mus-pahari	I	NDUFA9	P	138	S	D	False	30.46566	-0.01925	
+mus-pahari	I	NDUFA9	P	139	M	I	False	33.11202	0.00628	
+mus-pahari	I	NDUFA9	P	140	K	R	False	33.37522	0.03568	
+mus-pahari	I	NDUFA9	P	141	S	E	False	29.04391	0.00222	
+mus-pahari	I	NDUFA9	P	142	S	N	False	28.30861	-0.02877	
+mus-pahari	I	NDUFA9	P	143	S	E	False	24.49314	0.03061	
+mus-pahari	I	NDUFA9	P	144	K	R	False	25.02664	0.05397	
+mus-pahari	I	NDUFA9	P	145	S	H	False	22.01532	0.00677	
+mus-pahari	I	NDUFA9	P	146	L	C	False	24.91374	0.05144	
+mus-pahari	I	NDUFA9	P	148	S	G	False	25.54568	0.03228	
+mus-pahari	I	NDUFA9	P	185	Y	H	False	12.21767	-0.00055	
+mus-pahari	I	NDUFA9	P	224	V	I	False	35.11902	-0.04465	
+mus-pahari	I	NDUFA10	O	8	A	S	False	6.54699	0.06413	
+mus-pahari	I	NDUFA10	O	36	N	S	False	19.50134	-0.00481	
+mus-pahari	I	NDUFA10	O	40	K	R	False	22.77715	-0.01052	
+mus-pahari	I	NDUFA10	O	44	Q	E	False	25.63924	0.02300	
+mus-pahari	I	NDUFA10	O	103	S	N	True	3.49729	0.00322	1.00000
+mus-pahari	I	NDUFA10	O	109	A	S	False	8.97929	0.01984	
+mus-pahari	I	NDUFA10	O	179	V	I	False	25.36563	-0.01030	
+mus-pahari	I	NDUFA10	O	213	K	Q	False	18.65202	-0.01471	
+mus-pahari	I	NDUFA10	O	224	D	S	False	31.36592	0.00307	
+mus-pahari	I	NDUFA10	O	235	V	I	False	29.92192	-0.01119	
+mus-pahari	I	NDUFA10	O	242	K	E	False	20.53083	0.03240	
+mus-pahari	I	NDUFA11	Y	3	V	A	True	3.45453	-0.01259	3.00000
+mus-pahari	I	NDUFA11	Y	11	H	N	False	12.73813	-0.06320	
+mus-pahari	I	NDUFA11	Y	43	S	T	True	3.39240	-0.00616	2.00000
+mus-pahari	I	NDUFA11	Y	114	M	V	True	3.36971	0.04204	1.00000
+mus-pahari	I	NDUFA12	q	4	V	M	False	16.46311	0.00270	
+mus-pahari	I	NDUFA12	q	5	E	Q	False	15.41577	0.00631	
+mus-pahari	I	NDUFA12	q	77	V	L	False	9.76235	-0.00196	
+mus-pahari	I	NDUFA12	q	101	N	H	False	30.05234	-0.00689	
+mus-pahari	I	NDUFA13	Z	41	A	T	True	3.33129	-0.04973	2.00000
+mus-pahari	I	NDUFA13	Z	49	M	I	True	3.73608	0.00105	1.00000
+mus-pahari	I	NDUFA13	Z	109	V	M	False	9.56206	-0.00048	
+mus-pahari	I	NDUFB3	k	69	P	A	False	5.51670	-0.07614	
+mus-pahari	I	NDUFB4	m	56	V	L	True	3.68670	0.03635	2.00000
+mus-pahari	I	NDUFB4	m	84	K	R	False	6.08613	0.01665	
+mus-pahari	I	NDUFB4	m	86	S	T	True	3.72239	-0.01495	3.00000
+mus-pahari	I	NDUFB4	m	92	A	V	True	3.71935	0.05676	1.00000
+mus-pahari	I	NDUFB5	h	37	I	V	False	11.33846	0.00054	
+mus-pahari	I	NDUFB5	h	102	E	D	False	5.49235	-0.02635	
+mus-pahari	I	NDUFB6	i	81	V	I	True	3.66466	0.01052	1.00000
+mus-pahari	I	NDUFB6	i	95	T	A	True	2.81588	-0.00867	2.00000
+mus-pahari	I	NDUFB6	i	99	S	T	True	2.68313	-0.00916	3.00000
+mus-pahari	I	NDUFB6	i	110	L	M	False	11.02319	0.02714	
+mus-pahari	I	NDUFB7	o	19	E	D	False	6.13038	-0.01903	
+mus-pahari	I	NDUFB8	l	43	Y	H	True	2.81603	0.02207	1.00000
+mus-pahari	I	NDUFB8	l	62	Q	E	False	8.52689	0.06402	
+mus-pahari	I	NDUFB8	l	70	M	L	False	7.47751	0.01960	
+mus-pahari	I	NDUFB8	l	76	I	M	False	7.15263	-0.02639	
+mus-pahari	I	NDUFB8	l	119	H	D	True	3.36234	-0.03788	2.00000
+mus-pahari	I	NDUFB8	l	120	V	M	False	6.03230	-0.03372	
+mus-pahari	I	NDUFB8	l	152	V	L	False	16.48908	0.02858	
+mus-pahari	I	NDUFB9	n	113	M	V	False	11.14633	-0.01901	
+mus-pahari	I	NDUFB9	n	144	S	P	False	26.17531	-0.01454	
+mus-pahari	I	NDUFB10	p	21	P	S	False	7.21191	0.03559	
+mus-pahari	I	NDUFB10	p	77	K	R	False	7.81530	0.04025	
+mus-pahari	I	NDUFB10	p	118	E	A	False	5.55355	0.02741	
+mus-pahari	I	NDUFB10	p	120	Y	S	True	3.23697	0.19970	1.00000
+mus-pahari	I	NDUFB10	p	132	T	A	False	8.01074	0.02220	
+mus-pahari	I	NDUFB10	p	168	A	S	False	21.84790	0.20214	
+mus-pahari	I	NDUFB10	p	170	R	K	False	23.50978	-0.02053	
+mus-pahari	I	NDUFB10	p	172	E	M	False	27.91170	0.22243	
+mus-pahari	I	NDUFB11	g	23	Q	L	False	10.28804	-0.06593	
+mus-pahari	I	NDUFB11	g	78	V	L	True	3.77456	-0.01820	1.00000
+mus-pahari	I	NDUFC2	d	34	M	I	True	3.61340	0.03162	1.00000
+mus-pahari	I	NDUFC2	d	36	L	F	False	6.48789	-0.03585	
+mus-pahari	I	NDUFC2	d	41	T	S	True	3.52666	-0.00117	2.00000
+mus-pahari	I	NDUFC2	d	54	M	L	True	3.99248	-0.09754	3.00000
+mus-pahari	I	NDUFC2	d	69	V	F	False	8.67311	-0.05559	
+rattus-norvegicus	I	NDUFS2	D	3	Q	R	True	2.53859	-0.11680	2.00000
+rattus-norvegicus	I	NDUFS2	D	38	I	V	False	6.67453	-0.02250	
+rattus-norvegicus	I	NDUFS2	D	43	A	V	False	6.26411	0.02575	
+rattus-norvegicus	I	NDUFS2	D	47	M	V	True	3.66852	0.04741	1.00000
+rattus-norvegicus	I	NDUFS2	D	120	I	L	False	34.52262	0.00586	
+rattus-norvegicus	I	NDUFS2	D	208	L	M	False	21.11650	-0.10558	
+rattus-norvegicus	I	NDUFS2	D	246	T	S	False	17.14975	-0.01341	
+rattus-norvegicus	I	NDUFS3	C	14	R	S	False	48.53466	0.00419	
+rattus-norvegicus	I	NDUFS3	C	21	Q	R	False	46.60011	-0.00116	
+rattus-norvegicus	I	NDUFS3	C	43	S	T	False	41.98123	-0.00189	
+rattus-norvegicus	I	NDUFS3	C	45	L	F	False	40.44935	0.00486	
+rattus-norvegicus	I	NDUFS3	C	61	L	I	False	32.40180	-0.00093	
+rattus-norvegicus	I	NDUFS3	C	65	R	K	False	28.80467	0.00061	
+rattus-norvegicus	I	NDUFS3	C	116	P	A	False	28.99309	-0.00040	
+rattus-norvegicus	I	NDUFS5	e	5	I	V	True	3.37384	-0.00375	4.00000
+rattus-norvegicus	I	NDUFS5	e	8	K	R	False	9.14906	0.06805	
+rattus-norvegicus	I	NDUFS5	e	18	M	I	True	2.79577	0.00056	3.00000
+rattus-norvegicus	I	NDUFS5	e	48	G	A	True	4.00663	-0.04491	7.00000
+rattus-norvegicus	I	NDUFS5	e	59	F	Y	True	3.46429	-0.00759	5.00000
+rattus-norvegicus	I	NDUFS5	e	60	D	E	False	7.20152	-0.07795	
+rattus-norvegicus	I	NDUFS5	e	66	L	F	True	3.50449	0.07234	1.00000
+rattus-norvegicus	I	NDUFS5	e	69	Y	F	True	4.23631	0.01760	2.00000
+rattus-norvegicus	I	NDUFS5	e	72	M	I	True	3.39844	-0.04488	6.00000
+rattus-norvegicus	I	NDUFS5	e	77	D	E	False	5.86059	-0.05535	
+rattus-norvegicus	I	NDUFS5	e	98	S	L	False	13.93160	-0.14447	
+rattus-norvegicus	I	NDUFS5	e	100	R	K	False	16.81521	-0.07313	
+rattus-norvegicus	I	NDUFS8	I	7	K	M	False	20.84309	0.03253	
+rattus-norvegicus	I	NDUFS8	I	9	E	A	False	19.38831	-0.00817	
+rattus-norvegicus	I	NDUFS8	I	12	S	L	False	21.43552	0.02692	
+rattus-norvegicus	I	NDUFS8	I	13	E	D	False	21.82225	0.00846	
+rattus-norvegicus	I	NDUFS8	I	22	N	S	False	11.17415	0.02017	
+rattus-norvegicus	I	NDUFS8	I	33	I	F	True	4.37903	-0.00129	1.00000
+rattus-norvegicus	I	NDUFA1	a	42	Q	H	True	3.02083	0.04805	1.00000
+rattus-norvegicus	I	NDUFA3	b	2	G	A	False	22.65307	0.22868	
+rattus-norvegicus	I	NDUFA3	b	23	S	T	False	6.47037	-0.01594	
+rattus-norvegicus	I	NDUFA3	b	39	K	Q	False	5.38280	0.05405	
+rattus-norvegicus	I	NDUFA3	b	59	D	N	False	25.97036	0.00318	
+rattus-norvegicus	I	NDUFA3	b	71	D	E	False	21.80651	-0.02694	
+rattus-norvegicus	I	NDUFA3	b	78	D	E	False	12.66681	-0.04186	
+rattus-norvegicus	I	NDUFA6	W	28	N	K	False	34.38356	-0.00215	
+rattus-norvegicus	I	NDUFA6	W	105	V	I	False	10.27606	-0.00293	
+rattus-norvegicus	I	NDUFA6	W	126	M	I	False	31.37158	-0.01856	
+rattus-norvegicus	I	NDUFA7	r	89	T	A	False	58.70688	-0.00201	
+rattus-norvegicus	I	NDUFA7	r	90	E	T	False	53.77984	-0.00334	
+rattus-norvegicus	I	NDUFA7	r	92	K	R	False	51.01860	0.00199	
+rattus-norvegicus	I	NDUFA7	r	107	K	R	False	31.80014	-0.00020	
+rattus-norvegicus	I	NDUFA8	X	92	N	S	True	3.51938	0.03733	1.00000
+rattus-norvegicus	I	NDUFA8	X	101	Q	K	False	11.26192	-0.15617	
+rattus-norvegicus	I	NDUFA8	X	108	Q	E	False	21.39078	0.04585	
+rattus-norvegicus	I	NDUFA8	X	123	Q	E	False	16.45328	-0.01001	
+rattus-norvegicus	I	NDUFA8	X	145	A	P	False	15.13153	-0.00876	
+rattus-norvegicus	I	NDUFA8	X	150	N	S	False	12.53753	0.04207	
+rattus-norvegicus	I	NDUFA8	X	164	T	S	True	3.60452	0.02227	3.00000
+rattus-norvegicus	I	NDUFA8	X	170	T	N	True	3.75927	0.02956	2.00000
+rattus-norvegicus	I	NDUFA9	P	53	V	I	False	12.26842	0.00418	
+rattus-norvegicus	I	NDUFA9	P	56	I	T	False	10.65711	-0.03215	
+rattus-norvegicus	I	NDUFA9	P	69	T	I	False	21.05448	-0.12963	
+rattus-norvegicus	I	NDUFA9	P	143	S	A	False	24.49314	0.00554	
+rattus-norvegicus	I	NDUFA9	P	158	S	T	False	36.08884	-0.01619	
+rattus-norvegicus	I	NDUFA9	P	162	E	D	False	34.60834	-0.01405	
+rattus-norvegicus	I	NDUFA9	P	171	I	M	False	14.45738	-0.03931	
+rattus-norvegicus	I	NDUFA9	P	215	V	A	False	22.29708	0.04151	
+rattus-norvegicus	I	NDUFA9	P	220	D	N	False	32.29649	0.09917	
+rattus-norvegicus	I	NDUFA9	P	224	V	I	False	35.11902	-0.03125	
+rattus-norvegicus	I	NDUFA9	P	260	L	R	False	23.79140	0.08645	
+rattus-norvegicus	I	NDUFA9	P	268	K	R	False	16.00919	0.01852	
+rattus-norvegicus	I	NDUFA9	P	294	P	A	False	31.31472	-0.01436	
+rattus-norvegicus	I	NDUFA10	O	8	A	S	False	6.54699	0.03348	
+rattus-norvegicus	I	NDUFA10	O	40	K	R	False	22.77715	-0.02061	
+rattus-norvegicus	I	NDUFA10	O	41	E	D	False	25.47019	-0.05234	
+rattus-norvegicus	I	NDUFA10	O	44	Q	E	False	25.63924	0.00347	
+rattus-norvegicus	I	NDUFA10	O	61	T	S	False	6.76601	0.03789	
+rattus-norvegicus	I	NDUFA10	O	85	D	N	False	15.38837	0.00047	
+rattus-norvegicus	I	NDUFA10	O	109	A	S	False	8.97929	0.01997	
+rattus-norvegicus	I	NDUFA10	O	143	Y	F	False	14.84963	0.01102	
+rattus-norvegicus	I	NDUFA10	O	177	P	S	False	31.38482	-0.00313	
+rattus-norvegicus	I	NDUFA10	O	179	V	I	False	25.36563	0.02433	
+rattus-norvegicus	I	NDUFA10	O	204	N	D	False	24.13146	-0.00812	
+rattus-norvegicus	I	NDUFA10	O	217	M	I	False	17.36428	0.00195	
+rattus-norvegicus	I	NDUFA10	O	224	D	S	False	31.36592	-0.02786	
+rattus-norvegicus	I	NDUFA10	O	231	P	S	False	29.83719	-0.05061	
+rattus-norvegicus	I	NDUFA10	O	242	K	N	False	20.53083	0.02771	
+rattus-norvegicus	I	NDUFA10	O	254	W	R	True	3.18632	-0.06240	5.00000
+rattus-norvegicus	I	NDUFA10	O	258	Y	N	True	2.66808	0.01687	1.00000
+rattus-norvegicus	I	NDUFA10	O	267	T	R	True	3.34505	-0.01191	4.00000
+rattus-norvegicus	I	NDUFA10	O	275	I	V	True	4.06178	-0.00100	3.00000
+rattus-norvegicus	I	NDUFA10	O	294	N	D	True	3.88067	0.00928	2.00000
+rattus-norvegicus	I	NDUFA10	O	311	E	D	False	13.24618	0.00120	
+rattus-norvegicus	I	NDUFA11	Y	3	V	A	True	3.45453	0.05774	1.00000
+rattus-norvegicus	I	NDUFA11	Y	9	S	A	False	12.38215	0.05451	
+rattus-norvegicus	I	NDUFA11	Y	11	H	N	False	12.73813	-0.01080	
+rattus-norvegicus	I	NDUFA11	Y	13	V	T	False	16.53468	-0.03473	
+rattus-norvegicus	I	NDUFA11	Y	23	T	A	False	17.81347	-0.04515	
+rattus-norvegicus	I	NDUFA11	Y	32	I	L	False	6.63377	-0.05098	
+rattus-norvegicus	I	NDUFA11	Y	35	I	L	False	6.95254	-0.01399	
+rattus-norvegicus	I	NDUFA11	Y	37	G	S	False	7.39916	0.07529	
+rattus-norvegicus	I	NDUFA11	Y	42	V	I	False	5.63840	0.01206	
+rattus-norvegicus	I	NDUFA11	Y	43	S	T	True	3.39240	-0.00655	4.00000
+rattus-norvegicus	I	NDUFA11	Y	44	L	H	True	3.56348	-0.00643	3.00000
+rattus-norvegicus	I	NDUFA11	Y	50	T	P	False	8.39650	0.01062	
+rattus-norvegicus	I	NDUFA11	Y	60	Y	F	False	8.18183	-0.00360	
+rattus-norvegicus	I	NDUFA11	Y	114	M	I	True	3.36971	0.02149	2.00000
+rattus-norvegicus	I	NDUFA11	Y	128	I	M	True	3.63824	-0.03176	5.00000
+rattus-norvegicus	I	NDUFA11	Y	138	P	A	True	2.49465	-0.05838	6.00000
+rattus-norvegicus	I	NDUFA12	q	3	L	Q	False	14.59814	0.01698	
+rattus-norvegicus	I	NDUFA12	q	4	V	L	False	16.46311	-0.00456	
+rattus-norvegicus	I	NDUFA12	q	5	E	R	False	15.41577	0.02499	
+rattus-norvegicus	I	NDUFA12	q	11	V	L	False	11.03300	0.00034	
+rattus-norvegicus	I	NDUFA12	q	35	I	L	False	12.09333	-0.01815	
+rattus-norvegicus	I	NDUFA12	q	101	N	K	False	30.05234	0.00337	
+rattus-norvegicus	I	NDUFA12	q	103	P	L	False	30.95476	-0.00376	
+rattus-norvegicus	I	NDUFA12	q	135	H	Q	False	47.51721	-0.03058	
+rattus-norvegicus	I	NDUFA13	Z	37	V	L	False	5.43187	0.02981	
+rattus-norvegicus	I	NDUFA13	Z	49	M	I	True	3.73608	-0.00742	1.00000
+rattus-norvegicus	I	NDUFA13	Z	54	Q	R	True	3.32488	-0.03214	4.00000
+rattus-norvegicus	I	NDUFA13	Z	74	F	L	False	4.60498	0.05673	
+rattus-norvegicus	I	NDUFA13	Z	109	V	M	False	9.56206	0.01730	
+rattus-norvegicus	I	NDUFA13	Z	123	M	L	False	6.02755	0.00046	
+rattus-norvegicus	I	NDUFA13	Z	133	S	E	True	3.22586	-0.02300	3.00000
+rattus-norvegicus	I	NDUFA13	Z	141	W	G	True	3.24589	-0.01286	2.00000
+rattus-norvegicus	I	NDUFAB1	U	9	D	E	False	11.00038	-0.01080	
+rattus-norvegicus	I	NDUFAB1	U	12	K	R	False	11.53021	0.00992	
+rattus-norvegicus	I	NDUFAB1	U	88	E	D	False	14.07146	0.00180	
+rattus-norvegicus	I	NDUFB1	f	3	F	L	False	9.76129	-0.01665	
+rattus-norvegicus	I	NDUFB1	f	6	L	V	False	8.39488	0.00127	
+rattus-norvegicus	I	NDUFB1	f	17	A	M	False	5.15812	0.05289	
+rattus-norvegicus	I	NDUFB1	f	20	V	A	False	6.25222	-0.08603	
+rattus-norvegicus	I	NDUFB1	f	23	C	Y	True	3.71089	-0.13273	1.00000
+rattus-norvegicus	I	NDUFB2	j	5	V	G	True	3.89607	-0.02050	3.00000
+rattus-norvegicus	I	NDUFB2	j	19	R	Q	False	6.26489	0.13870	
+rattus-norvegicus	I	NDUFB2	j	24	Q	H	True	3.74906	-0.00548	1.00000
+rattus-norvegicus	I	NDUFB2	j	27	F	V	True	4.21201	-0.01351	2.00000
+rattus-norvegicus	I	NDUFB2	j	58	Q	K	False	13.63861	-0.06643	
+rattus-norvegicus	I	NDUFB2	j	66	I	V	False	20.24787	-0.02354	
+rattus-norvegicus	I	NDUFB3	k	36	T	A	False	5.41866	0.01205	
+rattus-norvegicus	I	NDUFB3	k	37	V	M	True	4.46213	0.07184	1.00000
+rattus-norvegicus	I	NDUFB3	k	64	G	D	True	3.50246	-0.01288	3.00000
+rattus-norvegicus	I	NDUFB3	k	69	P	T	False	5.51670	-0.00148	
+rattus-norvegicus	I	NDUFB3	k	72	I	M	True	4.04089	0.01727	2.00000
+rattus-norvegicus	I	NDUFB3	k	94	D	T	False	15.78465	-0.02585	
+rattus-norvegicus	I	NDUFB4	m	12	T	A	False	5.60331	-0.02699	
+rattus-norvegicus	I	NDUFB4	m	15	S	N	False	12.87936	0.00809	
+rattus-norvegicus	I	NDUFB4	m	30	R	K	False	29.07633	0.02933	
+rattus-norvegicus	I	NDUFB4	m	36	L	M	False	20.48208	0.01836	
+rattus-norvegicus	I	NDUFB4	m	56	V	Q	True	3.68670	0.03989	1.00000
+rattus-norvegicus	I	NDUFB4	m	57	S	T	True	3.64114	-0.02208	4.00000
+rattus-norvegicus	I	NDUFB4	m	75	I	V	True	3.81243	-0.05150	5.00000
+rattus-norvegicus	I	NDUFB4	m	94	F	L	False	6.29314	-0.07112	
+rattus-norvegicus	I	NDUFB4	m	104	F	I	True	3.54077	-0.00008	2.00000
+rattus-norvegicus	I	NDUFB4	m	110	R	K	False	7.69208	-0.06900	
+rattus-norvegicus	I	NDUFB4	m	125	N	S	True	3.09225	-0.01038	3.00000
+rattus-norvegicus	I	NDUFB5	h	11	V	I	False	7.48709	0.07495	
+rattus-norvegicus	I	NDUFB5	h	30	M	L	False	8.06900	0.10201	
+rattus-norvegicus	I	NDUFB5	h	78	N	T	False	7.81144	-0.02059	
+rattus-norvegicus	I	NDUFB5	h	102	E	D	False	5.49235	-0.02207	
+rattus-norvegicus	I	NDUFB5	h	108	Q	L	True	3.48339	-0.07425	1.00000
+rattus-norvegicus	I	NDUFB5	h	125	F	Y	True	3.40970	-0.09195	2.00000
+rattus-norvegicus	I	NDUFB5	h	135	H	Y	False	12.20940	0.02707	
+rattus-norvegicus	I	NDUFB5	h	139	A	S	False	4.64270	0.03058	
+rattus-norvegicus	I	NDUFB6	i	60	V	I	False	12.33797	-0.00369	
+rattus-norvegicus	I	NDUFB6	i	66	S	T	True	4.31024	0.00349	2.00000
+rattus-norvegicus	I	NDUFB6	i	70	A	T	True	4.11562	0.03396	1.00000
+rattus-norvegicus	I	NDUFB6	i	75	L	I	False	6.36822	0.01219	
+rattus-norvegicus	I	NDUFB6	i	78	M	L	True	3.81718	0.00063	4.00000
+rattus-norvegicus	I	NDUFB6	i	89	M	V	True	3.74369	-0.04248	6.00000
+rattus-norvegicus	I	NDUFB6	i	95	T	A	True	2.81588	-0.02601	5.00000
+rattus-norvegicus	I	NDUFB6	i	98	S	G	True	3.06123	-0.06554	7.00000
+rattus-norvegicus	I	NDUFB6	i	99	S	T	True	2.68313	0.00249	3.00000
+rattus-norvegicus	I	NDUFB6	i	125	Q	K	False	12.04020	0.00183	
+rattus-norvegicus	I	NDUFB7	o	21	I	M	False	8.96340	-0.01583	
+rattus-norvegicus	I	NDUFB7	o	27	D	N	False	24.02121	0.00669	
+rattus-norvegicus	I	NDUFB7	o	28	L	Y	False	23.19408	-0.04116	
+rattus-norvegicus	I	NDUFB7	o	30	F	L	False	19.33215	0.00216	
+rattus-norvegicus	I	NDUFB7	o	77	L	V	True	3.38611	-0.01918	1.00000
+rattus-norvegicus	I	NDUFB7	o	92	L	Q	False	5.85145	0.03912	
+rattus-norvegicus	I	NDUFB7	o	109	Q	R	False	19.25219	0.03303	
+rattus-norvegicus	I	NDUFB7	o	115	A	E	False	26.52095	-0.04083	
+rattus-norvegicus	I	NDUFB7	o	117	K	R	False	31.16443	0.01538	
+rattus-norvegicus	I	NDUFB7	o	119	A	Q	False	32.72850	0.04230	
+rattus-norvegicus	I	NDUFB8	l	8	L	M	False	8.93489	-0.04317	
+rattus-norvegicus	I	NDUFB8	l	62	Q	E	False	8.52689	0.05343	
+rattus-norvegicus	I	NDUFB8	l	66	S	P	True	2.93689	0.00148	1.00000
+rattus-norvegicus	I	NDUFB8	l	67	E	D	True	3.36361	-0.05222	3.00000
+rattus-norvegicus	I	NDUFB8	l	70	M	L	False	7.47751	-0.00534	
+rattus-norvegicus	I	NDUFB8	l	102	K	R	False	6.04594	-0.02114	
+rattus-norvegicus	I	NDUFB8	l	119	H	D	True	3.36234	-0.05049	2.00000
+rattus-norvegicus	I	NDUFB8	l	120	V	M	False	6.03230	-0.04316	
+rattus-norvegicus	I	NDUFB8	l	146	T	S	False	15.11406	-0.05273	
+rattus-norvegicus	I	NDUFB8	l	156	D	E	False	15.17320	-0.00375	
+rattus-norvegicus	I	NDUFB9	n	12	Q	R	False	22.43225	-0.05920	
+rattus-norvegicus	I	NDUFB9	n	31	I	V	True	3.49206	0.00079	1.00000
+rattus-norvegicus	I	NDUFB9	n	39	F	L	True	3.42433	-0.00263	2.00000
+rattus-norvegicus	I	NDUFB9	n	58	R	K	False	21.48437	0.07072	
+rattus-norvegicus	I	NDUFB9	n	65	E	Q	False	14.86913	0.04732	
+rattus-norvegicus	I	NDUFB9	n	90	F	Y	True	2.73628	-0.03892	3.00000
+rattus-norvegicus	I	NDUFB9	n	113	M	V	False	11.14633	-0.00050	
+rattus-norvegicus	I	NDUFB9	n	140	Q	E	False	20.71327	-0.00556	
+rattus-norvegicus	I	NDUFB9	n	158	R	K	False	26.41142	0.05759	
+rattus-norvegicus	I	NDUFB10	p	14	S	R	False	8.43279	0.06373	
+rattus-norvegicus	I	NDUFB10	p	25	L	I	False	9.71517	-0.00567	
+rattus-norvegicus	I	NDUFB10	p	53	R	Q	False	18.59403	-0.05843	
+rattus-norvegicus	I	NDUFB10	p	82	L	I	False	6.33298	0.01718	
+rattus-norvegicus	I	NDUFB10	p	102	M	I	True	3.87968	-0.05798	2.00000
+rattus-norvegicus	I	NDUFB10	p	119	N	S	False	8.36618	0.01698	
+rattus-norvegicus	I	NDUFB10	p	120	Y	A	True	3.23697	-0.07210	3.00000
+rattus-norvegicus	I	NDUFB10	p	121	Q	L	True	3.58172	0.20492	1.00000
+rattus-norvegicus	I	NDUFB10	p	133	K	Q	False	11.80849	0.02172	
+rattus-norvegicus	I	NDUFB10	p	135	T	S	False	7.15400	-0.02323	
+rattus-norvegicus	I	NDUFB10	p	143	L	Q	False	7.97390	-0.06428	
+rattus-norvegicus	I	NDUFB10	p	170	R	K	False	23.50978	-0.03092	
+rattus-norvegicus	I	NDUFB10	p	171	Q	E	False	22.92428	-0.02632	
+rattus-norvegicus	I	NDUFB10	p	172	E	T	False	27.91170	0.09739	
+rattus-norvegicus	I	NDUFB11	g	23	Q	V	False	10.28804	-0.01155	
+rattus-norvegicus	I	NDUFB11	g	35	V	L	True	3.31410	0.02252	1.00000
+rattus-norvegicus	I	NDUFB11	g	78	V	L	True	3.77456	0.01950	2.00000
+rattus-norvegicus	I	NDUFB11	g	100	V	L	False	20.60335	0.07504	
+rattus-norvegicus	I	NDUFC2	d	12	K	R	False	12.43835	-0.01056	
+rattus-norvegicus	I	NDUFC2	d	20	S	R	False	17.12537	0.01153	
+rattus-norvegicus	I	NDUFC2	d	34	M	I	True	3.61340	-0.02420	2.00000
+rattus-norvegicus	I	NDUFC2	d	36	L	F	False	6.48789	0.00881	
+rattus-norvegicus	I	NDUFC2	d	48	L	M	True	3.28734	0.01515	1.00000
+rattus-norvegicus	I	NDUFC2	d	55	R	K	False	8.86406	0.04650	
+rattus-norvegicus	I	NDUFC2	d	64	F	Y	True	3.63790	-0.05438	3.00000
+rattus-norvegicus	I	NDUFC2	d	69	V	F	False	8.67311	-0.05497	
+rattus-norvegicus	I	NDUFC2	d	86	K	R	False	4.64750	-0.01008	
+mus-caroli	III	UQCRC1	A	216	L	F	False	51.92709	-0.01353	
+mus-caroli	III	UQCRC1	L	216	L	F	False	54.00206	-0.01668	
+mus-caroli	III	UQCRB	F	69	T	S	True	3.42903	0.02235	1.00000
+mus-caroli	III	UQCRB	Q	69	T	S	True	3.44507	0.01515	2.00000
+mus-pahari	III	UQCRC1	A	10	S	N	False	40.05005	-0.00172	
+mus-pahari	III	UQCRC1	A	216	L	F	False	51.92709	-0.00365	
+mus-pahari	III	UQCRC1	A	231	L	V	False	34.88905	-0.00647	
+mus-pahari	III	UQCRC1	A	299	V	A	False	9.28910	-0.00482	
+mus-pahari	III	UQCRC1	A	330	S	N	False	8.09121	-0.00093	
+mus-pahari	III	UQCRC1	L	10	S	N	False	42.87946	0.01317	
+mus-pahari	III	UQCRC1	L	216	L	F	False	54.00206	-0.00200	
+mus-pahari	III	UQCRC1	L	231	L	V	False	34.22877	0.00078	
+mus-pahari	III	UQCRC1	L	299	V	A	False	9.59204	-0.00425	
+mus-pahari	III	UQCRC1	L	330	S	N	False	6.81690	-0.00268	
+mus-pahari	III	CYC1	D	76	D	E	False	9.51403	-0.00201	
+mus-pahari	III	CYC1	O	76	D	E	False	10.86059	-0.01674	
+mus-pahari	III	UQCRFS1	E	125	D	E	False	16.03160	0.01440	
+mus-pahari	III	UQCRFS1	E	190	D	N	False	24.66073	0.00471	
+mus-pahari	III	UQCRFS1	P	125	D	E	False	18.33611	0.01087	
+mus-pahari	III	UQCRFS1	P	190	D	N	False	24.78954	0.01044	
+mus-pahari	III	UQCRB	F	37	L	I	True	3.52827	0.02818	1.00000
+mus-pahari	III	UQCRB	F	87	K	N	False	8.78070	-0.05235	
+mus-pahari	III	UQCRB	Q	37	L	I	True	3.69055	0.02203	2.00000
+mus-pahari	III	UQCRB	Q	87	K	N	False	9.09206	-0.08067	
+mus-pahari	III	UQCRQ	G	8	A	T	True	3.78711	-0.02927	3.00000
+mus-pahari	III	UQCRQ	G	54	V	L	False	5.47353	-0.04167	
+mus-pahari	III	UQCRQ	G	55	V	F	True	3.61345	-0.01467	2.00000
+mus-pahari	III	UQCRQ	R	8	A	T	True	3.76661	-0.03870	4.00000
+mus-pahari	III	UQCRQ	R	54	V	L	False	5.57590	-0.04514	
+mus-pahari	III	UQCRQ	R	55	V	F	True	3.58778	-0.01443	1.00000
+rattus-norvegicus	III	UQCRC1	A	5	A	V	False	34.49377	0.00220	
+rattus-norvegicus	III	UQCRC1	A	18	I	V	False	51.33324	-0.02544	
+rattus-norvegicus	III	UQCRC1	A	33	A	P	False	47.69411	0.00334	
+rattus-norvegicus	III	UQCRC1	A	43	A	V	False	38.22062	0.00061	
+rattus-norvegicus	III	UQCRC1	A	120	S	I	False	48.80649	0.01157	
+rattus-norvegicus	III	UQCRC1	A	187	N	S	False	47.34365	0.00207	
+rattus-norvegicus	III	UQCRC1	A	204	E	K	False	51.63395	-0.00710	
+rattus-norvegicus	III	UQCRC1	A	214	K	D	False	59.25476	-0.03605	
+rattus-norvegicus	III	UQCRC1	A	216	L	F	False	51.92709	-0.00238	
+rattus-norvegicus	III	UQCRC1	A	221	R	Q	False	52.61065	-0.01078	
+rattus-norvegicus	III	UQCRC1	A	230	G	S	False	36.71258	0.01612	
+rattus-norvegicus	III	UQCRC1	A	231	L	I	False	34.88905	-0.00740	
+rattus-norvegicus	III	UQCRC1	A	269	T	A	False	19.40362	0.01440	
+rattus-norvegicus	III	UQCRC1	A	316	D	E	False	28.97789	0.00032	
+rattus-norvegicus	III	UQCRC1	A	335	V	I	False	7.81287	0.00184	
+rattus-norvegicus	III	UQCRC1	A	366	V	I	False	28.63486	0.00394	
+rattus-norvegicus	III	UQCRC1	A	400	Q	E	False	26.67767	-0.00508	
+rattus-norvegicus	III	UQCRC1	A	407	L	V	False	15.77561	0.00753	
+rattus-norvegicus	III	UQCRC1	A	409	D	E	False	19.77556	0.00853	
+rattus-norvegicus	III	UQCRC1	A	410	I	V	False	20.13529	0.00551	
+rattus-norvegicus	III	UQCRC1	A	432	P	S	False	6.42634	-0.03176	
+rattus-norvegicus	III	UQCRC1	L	5	A	V	False	37.25684	-0.00268	
+rattus-norvegicus	III	UQCRC1	L	18	I	V	False	53.10130	-0.02405	
+rattus-norvegicus	III	UQCRC1	L	33	A	P	False	50.09023	0.00434	
+rattus-norvegicus	III	UQCRC1	L	43	A	V	False	37.95559	-0.00448	
+rattus-norvegicus	III	UQCRC1	L	120	S	I	False	48.98837	0.00741	
+rattus-norvegicus	III	UQCRC1	L	187	N	S	False	46.99838	-0.00262	
+rattus-norvegicus	III	UQCRC1	L	204	E	K	False	54.73595	-0.00506	
+rattus-norvegicus	III	UQCRC1	L	214	K	D	False	61.99631	-0.00264	
+rattus-norvegicus	III	UQCRC1	L	216	L	F	False	54.00206	-0.00443	
+rattus-norvegicus	III	UQCRC1	L	221	R	Q	False	52.04004	-0.00641	
+rattus-norvegicus	III	UQCRC1	L	230	G	S	False	36.25918	0.00807	
+rattus-norvegicus	III	UQCRC1	L	231	L	I	False	34.22877	0.00032	
+rattus-norvegicus	III	UQCRC1	L	269	T	A	False	22.92786	0.00152	
+rattus-norvegicus	III	UQCRC1	L	316	D	E	False	28.72172	-0.00143	
+rattus-norvegicus	III	UQCRC1	L	335	V	I	False	7.46732	0.00545	
+rattus-norvegicus	III	UQCRC1	L	366	V	I	False	31.60588	0.00533	
+rattus-norvegicus	III	UQCRC1	L	400	Q	E	False	30.16170	0.00165	
+rattus-norvegicus	III	UQCRC1	L	407	L	V	False	18.93915	-0.00488	
+rattus-norvegicus	III	UQCRC1	L	409	D	E	False	22.09133	0.01209	
+rattus-norvegicus	III	UQCRC1	L	410	I	V	False	22.10461	-0.00032	
+rattus-norvegicus	III	UQCRC1	L	432	P	S	False	6.29623	-0.01716	
+rattus-norvegicus	III	CYC1	D	76	D	E	False	9.51403	0.01358	
+rattus-norvegicus	III	CYC1	D	79	E	N	False	15.08823	-0.05791	
+rattus-norvegicus	III	CYC1	O	76	D	E	False	10.86059	0.01672	
+rattus-norvegicus	III	CYC1	O	79	E	N	False	15.34602	-0.05529	
+rattus-norvegicus	III	UQCRFS1	E	5	V	I	False	17.71742	-0.00134	
+rattus-norvegicus	III	UQCRFS1	E	54	V	A	False	6.35994	0.02099	
+rattus-norvegicus	III	UQCRFS1	E	125	D	E	False	16.03160	0.01212	
+rattus-norvegicus	III	UQCRFS1	E	184	A	T	False	11.04210	0.00058	
+rattus-norvegicus	III	UQCRFS1	E	190	D	G	False	24.66073	0.00519	
+rattus-norvegicus	III	UQCRFS1	P	5	V	I	False	18.23242	-0.00229	
+rattus-norvegicus	III	UQCRFS1	P	54	V	A	False	6.22340	-0.02143	
+rattus-norvegicus	III	UQCRFS1	P	125	D	E	False	18.33611	0.01323	
+rattus-norvegicus	III	UQCRFS1	P	184	A	T	False	9.48048	-0.00598	
+rattus-norvegicus	III	UQCRFS1	P	190	D	G	False	24.78954	-0.00664	
+rattus-norvegicus	III	UQCRB	F	37	L	M	True	3.52827	0.07276	1.00000
+rattus-norvegicus	III	UQCRB	F	53	D	N	False	13.18861	0.04730	
+rattus-norvegicus	III	UQCRB	F	69	T	S	True	3.42903	0.02429	3.00000
+rattus-norvegicus	III	UQCRB	Q	37	L	M	True	3.69055	0.05261	2.00000
+rattus-norvegicus	III	UQCRB	Q	53	D	N	False	13.15256	0.03421	
+rattus-norvegicus	III	UQCRB	Q	69	T	S	True	3.44507	0.01082	4.00000
+rattus-norvegicus	III	UQCRQ	G	8	A	T	True	3.78711	-0.00136	2.00000
+rattus-norvegicus	III	UQCRQ	G	28	S	H	False	16.68111	0.00277	
+rattus-norvegicus	III	UQCRQ	G	54	V	L	False	5.47353	0.00822	
+rattus-norvegicus	III	UQCRQ	G	55	V	F	True	3.61345	-0.05915	4.00000
+rattus-norvegicus	III	UQCRQ	G	67	E	A	False	6.84748	0.01298	
+rattus-norvegicus	III	UQCRQ	G	76	M	K	False	17.19983	-0.01292	
+rattus-norvegicus	III	UQCRQ	R	8	A	T	True	3.76661	0.00562	1.00000
+rattus-norvegicus	III	UQCRQ	R	28	S	H	False	16.80936	-0.01347	
+rattus-norvegicus	III	UQCRQ	R	54	V	L	False	5.57590	0.01066	
+rattus-norvegicus	III	UQCRQ	R	55	V	F	True	3.58778	-0.05018	3.00000
+rattus-norvegicus	III	UQCRQ	R	67	E	A	False	6.64760	0.01477	
+rattus-norvegicus	III	UQCRQ	R	76	M	K	False	17.59852	0.02258	
+rattus-norvegicus	III	UQCR11	K	15	R	K	False	19.09684	0.00001	
+rattus-norvegicus	III	UQCR11	K	35	A	V	False	11.85322	-0.00005	
+rattus-norvegicus	III	UQCR11	V	15	R	K	False	19.89639	0.00003	
+rattus-norvegicus	III	UQCR11	V	35	A	V	False	11.49866	-0.00007	
+mus-caroli	IV	COX4I1	d	15	T	A	True	2.41650	-0.03255	1.00000
+mus-caroli	IV	COX5B	f	97	M	L	False	6.07973	0.01243	
+mus-caroli	IV	COX6C	i	24	A	V	False	6.86619	0.03077	
+mus-caroli	IV	COX6C	i	35	A	S	False	5.28813	0.16854	
+mus-caroli	IV	COX7B	k	6	A	T	False	14.69907	0.04503	
+mus-pahari	IV	COX4I1	d	15	T	A	True	2.41650	-0.02911	1.00000
+mus-pahari	IV	COX4I1	d	32	M	T	False	13.12945	-0.20862	
+mus-pahari	IV	COX4I1	d	84	M	L	True	3.61853	-0.07171	2.00000
+mus-pahari	IV	COX4I1	d	113	R	H	False	9.58946	0.04019	
+mus-pahari	IV	COX6C	i	24	A	V	False	6.86619	0.02970	
+mus-pahari	IV	COX7B	k	6	A	T	False	14.69907	0.03887	
+rattus-norvegicus	IV	COX4I1	d	13	F	L	False	5.79873	-0.00974	
+rattus-norvegicus	IV	COX4I1	d	15	T	S	True	2.41650	0.01036	2.00000
+rattus-norvegicus	IV	COX4I1	d	17	A	V	True	3.95110	0.01753	1.00000
+rattus-norvegicus	IV	COX4I1	d	31	T	K	False	11.47633	0.00910	
+rattus-norvegicus	IV	COX4I1	d	32	M	L	False	13.12945	-0.01874	
+rattus-norvegicus	IV	COX4I1	d	73	R	K	False	8.96577	0.00626	
+rattus-norvegicus	IV	COX4I1	d	84	M	L	True	3.61853	-0.02276	4.00000
+rattus-norvegicus	IV	COX4I1	d	128	A	V	True	3.66221	0.00387	3.00000
+rattus-norvegicus	IV	COX4I1	d	141	D	N	False	16.70775	0.02633	
+rattus-norvegicus	IV	COX5B	f	27	K	R	False	13.63415	-0.07685	
+rattus-norvegicus	IV	COX5B	f	53	I	V	True	3.56946	-0.03552	1.00000
+rattus-norvegicus	IV	COX5B	f	77	K	Q	False	11.49874	-0.10124	
+rattus-norvegicus	IV	COX5B	f	95	H	Y	False	8.68374	0.02117	
+rattus-norvegicus	IV	COX6C	i	24	A	V	False	6.86619	0.01101	
+rattus-norvegicus	IV	COX6C	i	28	I	V	False	7.02185	-0.12620	
+rattus-norvegicus	IV	COX6C	i	51	E	D	False	9.79877	0.03442	
+rattus-norvegicus	IV	COX6C	i	67	K	Q	False	9.21677	0.04979	
+rattus-norvegicus	IV	COX6C	i	70	I	V	True	2.39773	-0.06537	1.00000
+rattus-norvegicus	IV	COX7B	k	6	A	T	False	14.69907	0.04488	
+rattus-norvegicus	IV	COX7B	k	8	S	T	False	10.19434	-0.00037	
+rattus-norvegicus	IV	COX7B	k	17	I	V	False	7.73533	0.10599	
+rattus-norvegicus	IV	COX7B	k	22	A	S	False	12.13547	0.14017	
+rattus-norvegicus	IV	COX7B	k	26	V	I	False	11.55257	-0.08780	
+rattus-norvegicus	IV	COX7B	k	28	T	A	False	9.17447	-0.10244	
+rattus-norvegicus	IV	COX7B	k	42	M	L	True	3.62187	-0.01860	1.00000
+rattus-norvegicus	IV	COX7C	l	23	A	L	False	6.11689	0.03175	

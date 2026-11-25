@@ -1,0 +1,22 @@
+host	donor	complex	genes	saprot	stabddg	count	status	pct
+homo-sapiens	gorilla-gorilla	I	26	0.16656	0.99251	92.00000	reduced	55.00000
+homo-sapiens	pan-paniscus	I	26	-0.10941	1.72561	91.00000	reduced	57.00000
+homo-sapiens	pan-troglodytes	I	26	-0.02767	0.80434	74.00000	reduced	59.00000
+homo-sapiens	gorilla-gorilla	III	6	-0.30525	-0.04265	12.00000	not_reduced	
+homo-sapiens	pan-paniscus	III	6	-0.01223	-0.06990	21.00000	not_reduced	
+homo-sapiens	pan-troglodytes	III	6	-0.02652	-0.06940	14.00000	not_reduced	
+homo-sapiens	gorilla-gorilla	IV	11	0.11284	-0.30932	18.00000	not_reduced	
+homo-sapiens	pan-paniscus	IV	11	0.33663	-0.62283	19.00000	not_reduced	
+homo-sapiens	pan-troglodytes	IV	11	0.24189	-0.62456	16.00000	not_reduced	
+homo-sapiens	gorilla-gorilla	V	6	0.46648	0.23455	14.00000	not_reduced	
+homo-sapiens	pan-paniscus	V	6	0.09090	0.09298	11.00000	not_reduced	
+homo-sapiens	pan-troglodytes	V	6	-0.14832	0.08333	10.00000	not_reduced	
+mus-musculus	mus-caroli	I	27	-0.30005	-0.79485	134.00000	not_reduced	89.00000
+mus-musculus	mus-pahari	I	27	0.49037	-4.09085	170.00000	not_reduced	87.00000
+mus-musculus	rattus-norvegicus	I	27	-0.50840	-11.52772	216.00000	reduced	46.00000
+mus-musculus	mus-caroli	III	6	0.00730	-0.97691	4.00000	not_reduced	96.00000
+mus-musculus	mus-pahari	III	6	-0.27210	0.12184	3.00000	not_reduced	105.00000
+mus-musculus	rattus-norvegicus	III	6	0.01526	-3.21493			
+mus-musculus	mus-caroli	IV	7	0.21257	-0.15495	6.00000	not_reduced	108.00000
+mus-musculus	mus-pahari	IV	7	-0.20101	-0.36875	18.00000	reduced	59.00000
+mus-musculus	rattus-norvegicus	IV	7	-0.17437	0.62269	17.00000	reduced	64.75000

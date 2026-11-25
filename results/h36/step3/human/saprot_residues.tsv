@@ -1,0 +1,102 @@
+donor	complex	gene	u_chain	resnum	host_aa	donor_aa	interface	min_dist	delta_pll	rank_in_gene
+gorilla-gorilla	I	NDUFS2	Q	80	I	M	True	3.21231	-0.03177	1.00000
+gorilla-gorilla	I	NDUFS5	h	23	G	A	True	4.31749	0.12700	1.00000
+gorilla-gorilla	I	NDUFS8	B	200	A	T	False	33.22167	-0.00245	
+gorilla-gorilla	I	NDUFA1	S	46	S	N	True	3.06575	0.02961	1.00000
+gorilla-gorilla	I	NDUFA9	J	41	M	I	False	34.38630	-0.01517	
+gorilla-gorilla	I	NDUFA9	J	201	V	I	False	22.03762	0.02228	
+gorilla-gorilla	I	NDUFA10	w	37	R	P	False	6.03199	0.07299	
+gorilla-gorilla	I	NDUFA10	w	106	T	A	False	7.60468	-0.02980	
+gorilla-gorilla	I	NDUFA10	w	171	E	D	False	15.85991	0.03629	
+gorilla-gorilla	I	NDUFA10	w	314	L	V	False	7.06053	-0.00924	
+gorilla-gorilla	I	NDUFA10	w	336	G	A	False	6.48765	0.01389	
+gorilla-gorilla	I	NDUFA10	w	337	R	D	True	3.48405	0.02685	1.00000
+gorilla-gorilla	I	NDUFA10	w	338	K	Q	True	4.48610	-0.02036	2.00000
+gorilla-gorilla	I	NDUFB7	v	62	H	Y	False	9.76882	0.01667	
+gorilla-gorilla	I	NDUFB8	c	124	V	I	True	4.29894	0.01997	1.00000
+gorilla-gorilla	I	NDUFB10	d	20	Q	L	True	3.12762	0.03194	1.00000
+gorilla-gorilla	I	NDUFB10	d	79	M	V	True	3.45231	-0.03350	3.00000
+gorilla-gorilla	I	NDUFB10	d	87	K	R	True	3.63463	-0.00764	2.00000
+gorilla-gorilla	I	NDUFB10	d	144	S	Y	False	6.15651	-0.03968	
+gorilla-gorilla	I	NDUFB11	e	54	P	Q	False	6.33591	0.03736	
+gorilla-gorilla	I	NDUFB11	e	148	Q	E	False	14.58456	-0.01330	
+pan-paniscus	I	NDUFS2	Q	80	I	M	True	3.21231	-0.05955	1.00000
+pan-paniscus	I	NDUFS2	Q	273	I	V	False	6.03511	0.03148	
+pan-paniscus	I	NDUFS2	Q	353	P	A	False	36.58608	-0.02058	
+pan-paniscus	I	NDUFA1	S	46	S	N	True	3.06575	0.00736	1.00000
+pan-paniscus	I	NDUFA9	J	139	F	Y	False	16.52156	0.00242	
+pan-paniscus	I	NDUFA9	J	201	V	I	False	22.03762	0.02347	
+pan-paniscus	I	NDUFA10	w	106	T	A	False	7.60468	-0.00965	
+pan-paniscus	I	NDUFA10	w	269	V	A	False	32.56131	-0.03582	
+pan-paniscus	I	NDUFB5	a	161	H	R	False	6.23838	0.01576	
+pan-paniscus	I	NDUFB7	v	62	H	Y	False	9.76882	0.00752	
+pan-paniscus	I	NDUFB8	c	124	V	L	True	4.29894	0.03290	1.00000
+pan-paniscus	I	NDUFB9	p	74	R	H	True	3.72380	0.03470	1.00000
+pan-paniscus	I	NDUFB9	p	124	Q	K	False	18.56207	-0.02071	
+pan-paniscus	I	NDUFB10	d	12	E	D	False	12.83717	-0.00498	
+pan-paniscus	I	NDUFB10	d	23	P	L	False	6.62287	0.07779	
+pan-paniscus	I	NDUFB10	d	87	K	R	True	3.63463	-0.00985	1.00000
+pan-paniscus	I	NDUFB10	d	162	K	E	False	20.03606	-0.09857	
+pan-paniscus	I	NDUFB11	e	54	P	Q	False	6.33591	0.04224	
+pan-paniscus	I	NDUFC2	g	52	I	V	False	4.89491	-0.12641	
+pan-troglodytes	I	NDUFS2	Q	80	I	M	True	3.21231	-0.00572	1.00000
+pan-troglodytes	I	NDUFA1	S	46	S	N	True	3.06575	0.00791	1.00000
+pan-troglodytes	I	NDUFA9	J	139	F	Y	False	16.52156	0.00375	
+pan-troglodytes	I	NDUFA9	J	201	V	I	False	22.03762	0.02437	
+pan-troglodytes	I	NDUFA10	w	106	T	A	False	7.60468	-0.01022	
+pan-troglodytes	I	NDUFA10	w	269	V	A	False	32.56131	-0.03206	
+pan-troglodytes	I	NDUFA13	W	144	T	M	True	3.63101	0.07040	1.00000
+pan-troglodytes	I	NDUFB7	v	62	H	Y	False	9.76882	-0.00250	
+pan-troglodytes	I	NDUFB8	c	124	V	L	True	4.29894	0.03375	1.00000
+pan-troglodytes	I	NDUFB9	p	124	Q	K	False	18.56207	-0.02510	
+pan-troglodytes	I	NDUFB10	d	23	P	L	False	6.62287	0.07312	
+pan-troglodytes	I	NDUFB10	d	87	K	R	True	3.63463	-0.00467	1.00000
+pan-troglodytes	I	NDUFB11	e	54	P	Q	False	6.33591	0.02436	
+pan-troglodytes	I	NDUFC2	g	52	I	V	False	4.89491	-0.11499	
+gorilla-gorilla	III	UQCRC1	L	277	H	Y	False	10.84676	-0.01110	
+gorilla-gorilla	III	UQCRC1	Y	277	H	Y	False	11.36427	-0.01240	
+gorilla-gorilla	III	CYC1	H	161	D	N	False	13.82051	-0.11156	
+gorilla-gorilla	III	CYC1	H	211	V	I	False	11.44362	-0.02939	
+gorilla-gorilla	III	CYC1	U	161	D	N	False	14.24483	-0.08503	
+gorilla-gorilla	III	CYC1	U	211	V	I	False	11.41452	-0.05594	
+gorilla-gorilla	III	UQCR11	G	18	V	I	False	18.40213	-0.00022	
+gorilla-gorilla	III	UQCR11	T	18	V	I	False	21.20030	-0.00021	
+pan-paniscus	III	UQCRFS1	C	83	I	V	False	20.24742	-0.00841	
+pan-paniscus	III	UQCRFS1	P	83	I	V	False	18.63073	-0.00383	
+pan-troglodytes	III	UQCRFS1	C	83	I	V	False	20.24742	-0.01805	
+pan-troglodytes	III	UQCRFS1	P	83	I	V	False	18.63073	-0.00847	
+gorilla-gorilla	IV	COX4I1	D	44	H	Y	True	3.11239	-0.04377	1.00000
+gorilla-gorilla	IV	COX5A	E	101	D	E	False	16.89468	0.04175	
+gorilla-gorilla	IV	COX5A	E	111	V	A	False	7.97088	-0.01902	
+gorilla-gorilla	IV	COX5B	F	64	V	I	True	3.36168	0.03664	1.00000
+gorilla-gorilla	IV	COX7A2	J	49	V	I	False	8.41131	0.01978	
+gorilla-gorilla	IV	COX8A	M	32	E	D	True	3.28413	-0.04752	2.00000
+gorilla-gorilla	IV	COX8A	M	33	G	E	True	4.05723	0.14049	1.00000
+gorilla-gorilla	IV	NDUFA4	N	47	R	K	False	7.43061	-0.00315	
+gorilla-gorilla	IV	NDUFA4	N	48	N	S	False	5.02230	0.00121	
+gorilla-gorilla	IV	NDUFA4	N	49	N	K	False	8.31040	-0.02459	
+pan-paniscus	IV	COX5A	E	111	V	A	False	7.97088	-0.01409	
+pan-paniscus	IV	COX5B	F	64	V	I	True	3.36168	0.03413	2.00000
+pan-paniscus	IV	COX5B	F	85	N	S	False	5.39586	-0.10456	
+pan-paniscus	IV	COX5B	F	101	V	I	True	3.53013	0.08690	1.00000
+pan-paniscus	IV	COX6C	I	28	V	M	False	7.42197	0.15835	
+pan-paniscus	IV	COX7A2	J	66	T	A	True	3.33095	-0.00773	1.00000
+pan-paniscus	IV	COX8A	M	33	G	E	True	4.05723	0.18498	1.00000
+pan-troglodytes	IV	COX5A	E	111	V	A	False	7.97088	-0.01409	
+pan-troglodytes	IV	COX5B	F	64	V	I	True	3.36168	0.03500	1.00000
+pan-troglodytes	IV	COX5B	F	85	N	S	False	5.39586	-0.11355	
+pan-troglodytes	IV	COX6C	I	28	V	M	False	7.42197	0.15841	
+pan-troglodytes	IV	COX7A2	J	66	T	A	True	3.33095	-0.01010	1.00000
+pan-troglodytes	IV	COX8A	M	33	G	E	True	4.05723	0.18519	1.00000
+gorilla-gorilla	V	ATP5PB	K	110	T	M	True	3.61855	0.07782	1.00000
+gorilla-gorilla	V	ATP5PF	L	64	S	G	False	79.84465	-0.04401	
+gorilla-gorilla	V	ATP5MJ	P	19	K	Q	False	6.16892	0.19302	
+gorilla-gorilla	V	ATP5MJ	P	35	V	I	True	4.17061	0.30456	1.00000
+pan-paniscus	V	ATP5PB	K	110	T	M	True	3.61855	0.05703	1.00000
+pan-paniscus	V	ATP5PD	M	119	E	K	False	14.73564	0.23666	
+pan-paniscus	V	ATP5PF	L	64	S	G	False	79.84465	-0.09011	
+pan-paniscus	V	ATP5PF	L	76	F	S	False	60.63858	-0.11286	
+pan-troglodytes	V	ATP5PB	K	110	T	M	True	3.61855	0.04919	1.00000
+pan-troglodytes	V	ATP5PB	K	160	S	F	False	60.22149	-0.00463	
+pan-troglodytes	V	ATP5PF	L	64	S	G	False	79.84465	-0.08840	
+pan-troglodytes	V	ATP5PF	L	76	F	S	False	60.63858	-0.11014	

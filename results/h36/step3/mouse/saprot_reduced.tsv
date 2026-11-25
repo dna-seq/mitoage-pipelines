@@ -1,0 +1,58 @@
+complex	gene	reduced_donors	reduced_both	candidate_reduced	not_reduced_donors	not_reduced_both	best_reduced_restoration
+I	NDUFV1	0	0	False	0	0	
+I	NDUFV2	0	0	False	0	0	
+I	NDUFV3	0	0	False	0	0	
+I	NDUFS1	0	0	False	0	0	
+I	NDUFS2	1	0	False	2	0	-0.19677
+I	NDUFS3	1	0	False	2	0	0.00653
+I	NDUFS4	0	0	False	0	0	
+I	NDUFS5	1	0	False	2	0	-0.30020
+I	NDUFS6	0	0	False	0	0	
+I	NDUFS7	0	0	False	0	0	
+I	NDUFS8	1	1	True	2	0	0.07207
+I	NDUFA1	1	0	False	2	0	0.04805
+I	NDUFA2	0	0	False	0	0	
+I	NDUFA3	1	0	False	2	0	0.19292
+I	NDUFA5	0	0	False	0	0	
+I	NDUFA6	1	0	False	2	0	-0.02488
+I	NDUFA7	1	0	False	2	0	-0.00293
+I	NDUFA8	1	0	False	2	0	-0.02957
+I	NDUFA9	1	0	False	2	1	-0.02240
+I	NDUFA10	1	0	False	2	0	-0.08378
+I	NDUFA11	1	0	False	2	0	-0.01418
+I	NDUFA12	1	0	False	2	1	-0.03227
+I	NDUFA13	1	0	False	2	0	0.04556
+I	NDUFAB1	1	0	False	2	0	-0.00072
+I	NDUFB1	1	0	False	2	0	-0.11538
+I	NDUFB2	1	0	False	2	0	-0.00817
+I	NDUFB3	1	0	False	2	0	0.06370
+I	NDUFB4	1	0	False	2	0	-0.13939
+I	NDUFB5	1	0	False	2	0	0.00774
+I	NDUFB6	1	0	False	2	1	-0.07030
+I	NDUFB7	1	0	False	2	0	0.04819
+I	NDUFB8	1	0	False	2	0	-0.17426
+I	NDUFB9	1	0	False	2	0	0.07932
+I	NDUFB10	1	0	False	2	0	0.10058
+I	NDUFB11	1	0	False	2	0	0.11434
+I	NDUFC1	0	0	False	0	0	
+I	NDUFC2	1	0	False	2	0	-0.07220
+III	UQCRC1	0	0	False	2	0	
+III	UQCRC2	0	0	False	0	0	
+III	CYC1	0	0	False	2	0	
+III	UQCRFS1	0	0	False	2	0	
+III	UQCRB	0	0	False	2	0	
+III	UQCRQ	0	0	False	2	0	
+III	UQCRH	0	0	False	0	0	
+III	UQCR10	0	0	False	0	0	
+III	UQCR11	0	0	False	2	0	
+IV	COX4I1	2	0	False	1	0	-0.00406
+IV	COX5A	2	0	False	1	0	0.00000
+IV	COX5B	2	0	False	1	0	0.00000
+IV	COX6A1	0	0	False	0	0	
+IV	COX6B1	2	0	False	1	0	0.00000
+IV	COX6C	2	0	False	1	1	0.02970
+IV	COX7A2	0	0	False	0	0	
+IV	COX7B	2	0	False	1	0	0.08308
+IV	COX7C	2	0	False	1	0	0.03176
+IV	COX8A	0	0	False	0	0	
+IV	NDUFA4	0	0	False	0	0	

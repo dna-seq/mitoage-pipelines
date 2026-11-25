@@ -1,0 +1,150 @@
+donor	complex	gene	B0	B1	restoration	restoration_seed_sd	seeds	substituted	contact_differences	candidates	null_draws	null_mean	null_p95	null_p	exceeds_null	genes_ranked	rank	in_top
+gorilla-gorilla	I	NDUFS5	87.88376	87.75675	0.12700		1	1	1	0	0				False	27	1	True
+gorilla-gorilla	I	NDUFA1	51.38721	51.35760	0.02961		1	1	1	4	50	0.13683	0.27329	1.00000	False	27	2	True
+gorilla-gorilla	I	NDUFB11	57.03803	57.01291	0.02512		1	2	0	3	50	0.06758	0.12131	1.00000	False	27	3	True
+gorilla-gorilla	I	NDUFA10	70.03944	70.01805	0.02140		1	7	2	0	0				False	27	4	True
+gorilla-gorilla	I	NDUFB8	56.93525	56.91528	0.01997		1	1	1	4	50	-0.01151	0.04932	0.56863	False	27	5	True
+gorilla-gorilla	I	NDUFB7	35.08627	35.06959	0.01667		1	1	0	2	0				False	27	6	True
+gorilla-gorilla	I	NDUFA9	15.97705	15.97003	0.00702		1	2	0	137	50	0.06572	0.27717	0.58824	False	27	7	True
+gorilla-gorilla	I	NDUFS3	0.07136	0.07136	0.00000		1	0	0	180	0				False	27	8	False
+gorilla-gorilla	I	NDUFS7	14.28529	14.28529	0.00000		1	0	0	160	0				False	27	8	False
+gorilla-gorilla	I	NDUFA3	34.27272	34.27272	0.00000		1	0	0	2	0				False	27	8	False
+gorilla-gorilla	I	NDUFA6	4.08263	4.08263	0.00000		1	0	0	11	0				False	27	8	False
+gorilla-gorilla	I	NDUFA8	28.10056	28.10056	0.00000		1	0	0	16	0				False	27	8	False
+gorilla-gorilla	I	NDUFA11	36.89404	36.89404	0.00000		1	0	0	8	0				False	27	8	False
+gorilla-gorilla	I	NDUFA12	0.57193	0.57193	0.00000		1	0	0	120	0				False	27	8	False
+gorilla-gorilla	I	NDUFA13	71.74814	71.74814	0.00000		1	0	0	0	0				False	27	8	False
+gorilla-gorilla	I	NDUFAB1	8.70021	8.70021	0.00000		1	0	0	179	0				False	27	8	False
+gorilla-gorilla	I	NDUFB1	29.32260	29.32260	0.00000		1	0	0	17	0				False	27	8	False
+gorilla-gorilla	I	NDUFB2	29.25717	29.25717	0.00000		1	0	0	2	0				False	27	8	False
+gorilla-gorilla	I	NDUFB3	35.65803	35.65803	0.00000		1	0	0	10	0				False	27	8	False
+gorilla-gorilla	I	NDUFB4	56.62388	56.62388	0.00000		1	0	0	2	0				False	27	8	False
+gorilla-gorilla	I	NDUFB5	57.88405	57.88405	0.00000		1	0	0	2	0				False	27	8	False
+gorilla-gorilla	I	NDUFB6	53.17694	53.17694	0.00000		1	0	0	8	0				False	27	8	False
+gorilla-gorilla	I	NDUFB9	52.18270	52.18270	0.00000		1	0	0	4	0				False	27	8	False
+gorilla-gorilla	I	NDUFC2	45.75964	45.75964	0.00000		1	0	0	5	0				False	27	8	False
+gorilla-gorilla	I	NDUFS8	7.40863	7.41108	-0.00245		1	1	0	28	50	-0.03292	0.02597	0.25490	False	27	25	False
+gorilla-gorilla	I	NDUFS2	30.45025	30.48201	-0.03177		1	1	1	3	50	-0.01352	0.02252	1.00000	False	27	26	False
+gorilla-gorilla	I	NDUFB10	74.86827	74.91428	-0.04601		1	4	3	2	0				False	27	27	False
+pan-paniscus	I	NDUFB11	58.74213	58.69988	0.04225		1	1	0	3	50	0.04202	0.04676	0.64706	False	26	1	True
+pan-paniscus	I	NDUFB8	57.42355	57.39064	0.03290		1	1	1	4	50	-0.03108	0.03290	0.27451	False	26	2	True
+pan-paniscus	I	NDUFA9	15.93845	15.91270	0.02575		1	2	0	137	50	0.07687	0.28287	0.58824	False	26	3	True
+pan-paniscus	I	NDUFB5	59.89197	59.87620	0.01576		1	1	0	2	0				False	26	4	True
+pan-paniscus	I	NDUFB9	49.73445	49.72059	0.01386		1	2	1	2	0				False	26	5	True
+pan-paniscus	I	NDUFB7	37.50076	37.49325	0.00752		1	1	0	2	0				False	26	6	True
+pan-paniscus	I	NDUFA1	54.89989	54.89252	0.00737		1	1	1	4	50	0.13579	0.23670	1.00000	False	26	7	True
+pan-paniscus	I	NDUFS3	0.05146	0.05146	0.00000		1	0	0	180	0				False	26	8	False
+pan-paniscus	I	NDUFS5	87.15494	87.15494	0.00000		1	0	0	1	0				False	26	8	False
+pan-paniscus	I	NDUFS7	17.36299	17.36299	0.00000		1	0	0	160	0				False	26	8	False
+pan-paniscus	I	NDUFS8	7.65395	7.65395	0.00000		1	0	0	28	0				False	26	8	False
+pan-paniscus	I	NDUFA3	41.44252	41.44252	0.00000		1	0	0	2	0				False	26	8	False
+pan-paniscus	I	NDUFA6	1.67703	1.67703	0.00000		1	0	0	11	0				False	26	8	False
+pan-paniscus	I	NDUFA8	22.34514	22.34514	0.00000		1	0	0	16	0				False	26	8	False
+pan-paniscus	I	NDUFA11	27.57815	27.57815	0.00000		1	0	0	8	0				False	26	8	False
+pan-paniscus	I	NDUFA12	3.00849	3.00849	0.00000		1	0	0	120	0				False	26	8	False
+pan-paniscus	I	NDUFAB1	6.69035	6.69035	0.00000		1	0	0	179	0				False	26	8	False
+pan-paniscus	I	NDUFB1	29.63451	29.63451	0.00000		1	0	0	17	0				False	26	8	False
+pan-paniscus	I	NDUFB2	25.70077	25.70077	0.00000		1	0	0	2	0				False	26	8	False
+pan-paniscus	I	NDUFB3	24.77188	24.77188	0.00000		1	0	0	10	0				False	26	8	False
+pan-paniscus	I	NDUFB4	55.92963	55.92963	0.00000		1	0	0	2	0				False	26	8	False
+pan-paniscus	I	NDUFB6	45.42743	45.42743	0.00000		1	0	0	8	0				False	26	8	False
+pan-paniscus	I	NDUFB10	69.07425	69.11153	-0.03727		1	4	1	1	0				False	26	23	False
+pan-paniscus	I	NDUFA10	73.71578	73.76098	-0.04520		1	2	0	1	0				False	26	24	False
+pan-paniscus	I	NDUFS2	43.55775	43.60369	-0.04594		1	3	1	3	50	-0.06133	-0.05954	0.01961	True	26	25	False
+pan-paniscus	I	NDUFC2	46.44460	46.57101	-0.12641		1	1	0	5	50	-0.08022	0.00381	1.00000	False	26	26	False
+pan-troglodytes	I	NDUFA13	76.61913	76.54873	0.07040		1	1	1	2	0				False	27	1	True
+pan-troglodytes	I	NDUFB10	68.73278	68.66399	0.06879		1	2	1	1	0				False	27	2	True
+pan-troglodytes	I	NDUFB8	55.44330	55.40955	0.03375		1	1	1	4	50	-0.03641	0.03375	0.27451	False	27	3	True
+pan-troglodytes	I	NDUFA9	16.04707	16.01913	0.02795		1	2	0	137	50	0.08081	0.29741	0.58824	False	27	4	True
+pan-troglodytes	I	NDUFB11	55.94666	55.92230	0.02436		1	1	0	3	50	0.02972	0.03596	1.00000	False	27	5	True
+pan-troglodytes	I	NDUFA1	55.23475	55.22685	0.00791		1	1	1	4	50	0.15659	0.27341	1.00000	False	27	6	True
+pan-troglodytes	I	NDUFS3	0.05413	0.05413	0.00000		1	0	0	180	0				False	27	7	False
+pan-troglodytes	I	NDUFS5	84.79480	84.79480	0.00000		1	0	0	1	0				False	27	7	False
+pan-troglodytes	I	NDUFS7	14.15547	14.15547	0.00000		1	0	0	160	0				False	27	7	False
+pan-troglodytes	I	NDUFS8	8.19745	8.19745	0.00000		1	0	0	28	0				False	27	7	False
+pan-troglodytes	I	NDUFA3	40.78365	40.78365	0.00000		1	0	0	2	0				False	27	7	False
+pan-troglodytes	I	NDUFA6	1.75781	1.75781	0.00000		1	0	0	11	0				False	27	7	False
+pan-troglodytes	I	NDUFA8	24.89207	24.89207	0.00000		1	0	0	16	0				False	27	7	False
+pan-troglodytes	I	NDUFA11	28.05662	28.05662	0.00000		1	0	0	8	0				False	27	7	False
+pan-troglodytes	I	NDUFA12	3.05010	3.05010	0.00000		1	0	0	120	0				False	27	7	False
+pan-troglodytes	I	NDUFAB1	6.83998	6.83998	0.00000		1	0	0	179	0				False	27	7	False
+pan-troglodytes	I	NDUFB1	30.47017	30.47017	0.00000		1	0	0	17	0				False	27	7	False
+pan-troglodytes	I	NDUFB2	27.75131	27.75131	0.00000		1	0	0	2	0				False	27	7	False
+pan-troglodytes	I	NDUFB3	26.28006	26.28006	0.00000		1	0	0	10	0				False	27	7	False
+pan-troglodytes	I	NDUFB4	56.91741	56.91741	0.00000		1	0	0	2	0				False	27	7	False
+pan-troglodytes	I	NDUFB5	60.29869	60.29869	0.00000		1	0	0	2	0				False	27	7	False
+pan-troglodytes	I	NDUFB6	52.00895	52.00895	0.00000		1	0	0	8	0				False	27	7	False
+pan-troglodytes	I	NDUFB7	32.74624	32.74874	-0.00250		1	1	0	2	0				False	27	23	False
+pan-troglodytes	I	NDUFS2	31.33329	31.33901	-0.00572		1	1	1	3	50	0.00443	0.02294	1.00000	False	27	24	False
+pan-troglodytes	I	NDUFB9	51.39058	51.41568	-0.02510		1	1	0	4	50	0.00401	0.01542	1.00000	False	27	25	False
+pan-troglodytes	I	NDUFA10	72.26019	72.30231	-0.04212		1	2	0	1	0				False	27	26	False
+pan-troglodytes	I	NDUFC2	45.53385	45.64884	-0.11499		1	1	0	5	50	-0.07217	0.00789	1.00000	False	27	27	False
+gorilla-gorilla	III	UQCRFS1	17.18526	17.18526	0.00000		1	0	0	7	0				False	6	1	False
+gorilla-gorilla	III	UQCRB	48.51306	48.51306	0.00000		1	0	0	3	0				False	6	1	False
+gorilla-gorilla	III	UQCRQ	57.60196	57.60196	0.00000		1	0	0	7	0				False	6	1	False
+gorilla-gorilla	III	UQCR11	0.10524	0.10567	-0.00043		1	2	0	173	50	-0.00146	0.00119	0.25490	False	6	4	False
+gorilla-gorilla	III	UQCRC1	29.12283	29.14633	-0.02350		1	2	0	24	50	0.05936	0.19289	1.00000	False	6	5	False
+gorilla-gorilla	III	CYC1	43.49395	43.77527	-0.28132		1	4	0	5	50	-0.09695	0.00000	0.82353	False	6	6	False
+pan-paniscus	III	UQCRC1	29.29005	29.29005	0.00000		1	0	0	24	0				False	6	1	False
+pan-paniscus	III	CYC1	55.68628	55.68628	0.00000		1	0	0	5	0				False	6	1	False
+pan-paniscus	III	UQCRB	49.15808	49.15808	0.00000		1	0	0	3	0				False	6	1	False
+pan-paniscus	III	UQCRQ	48.89314	48.89314	0.00000		1	0	0	7	0				False	6	1	False
+pan-paniscus	III	UQCR11	0.15708	0.15708	0.00000		1	0	0	173	0				False	6	1	False
+pan-paniscus	III	UQCRFS1	25.18297	25.19521	-0.01223		1	2	0	7	50	0.03482	0.11875	0.74510	False	6	6	False
+pan-troglodytes	III	UQCRC1	29.36612	29.36612	0.00000		1	0	0	24	0				False	6	1	False
+pan-troglodytes	III	CYC1	48.54961	48.54961	0.00000		1	0	0	5	0				False	6	1	False
+pan-troglodytes	III	UQCRB	48.36338	48.36338	0.00000		1	0	0	3	0				False	6	1	False
+pan-troglodytes	III	UQCRQ	49.79706	49.79706	0.00000		1	0	0	7	0				False	6	1	False
+pan-troglodytes	III	UQCR11	0.11983	0.11983	0.00000		1	0	0	173	0				False	6	1	False
+pan-troglodytes	III	UQCRFS1	14.62634	14.65286	-0.02652		1	2	0	7	50	-0.04502	0.00000	0.23529	False	6	6	False
+gorilla-gorilla	IV	COX8A	26.88003	26.77321	0.10682		1	2	2	0	0				False	11	1	True
+gorilla-gorilla	IV	COX5B	45.91726	45.88062	0.03664		1	1	1	3	50	-0.06847	-0.04761	0.01961	True	11	2	True
+gorilla-gorilla	IV	COX5A	13.17948	13.15596	0.02352		1	2	0	14	50	-0.05574	-0.01083	0.01961	True	11	3	True
+gorilla-gorilla	IV	COX7A2	19.86507	19.84529	0.01978		1	1	0	0	0				False	11	4	False
+gorilla-gorilla	IV	COX6A1	16.96022	16.96022	0.00000		1	0	0	11	0				False	11	5	False
+gorilla-gorilla	IV	COX6B1	35.66543	35.66543	0.00000		1	0	0	12	0				False	11	5	False
+gorilla-gorilla	IV	COX6C	41.24618	41.24618	0.00000		1	0	0	2	0				False	11	5	False
+gorilla-gorilla	IV	COX7B	21.73794	21.73794	0.00000		1	0	0	155	0				False	11	5	False
+gorilla-gorilla	IV	COX7C	41.51655	41.51655	0.00000		1	0	0	4	0				False	11	5	False
+gorilla-gorilla	IV	NDUFA4	11.99035	12.02050	-0.03015		1	3	0	5	50	0.01992	0.03588	1.00000	False	11	10	False
+gorilla-gorilla	IV	COX4I1	72.14302	72.18680	-0.04377		1	1	1	1	0				False	11	11	False
+pan-paniscus	IV	COX8A	27.68199	27.49702	0.18498		1	1	1	4	50	0.20081	0.24586	1.00000	False	11	1	True
+pan-paniscus	IV	COX6C	41.53349	41.37514	0.15835		1	1	0	2	0				False	11	2	True
+pan-paniscus	IV	COX5B	46.26610	46.25098	0.01512		1	3	2	3	50	-0.10784	-0.08464	0.01961	True	11	3	True
+pan-paniscus	IV	COX4I1	71.43100	71.43100	0.00000		1	0	0	1	0				False	11	4	False
+pan-paniscus	IV	COX6A1	20.26791	20.26791	0.00000		1	0	0	11	0				False	11	4	False
+pan-paniscus	IV	COX6B1	31.05214	31.05214	0.00000		1	0	0	12	0				False	11	4	False
+pan-paniscus	IV	COX7B	19.62871	19.62871	0.00000		1	0	0	155	0				False	11	4	False
+pan-paniscus	IV	COX7C	47.42475	47.42475	0.00000		1	0	0	4	0				False	11	4	False
+pan-paniscus	IV	NDUFA4	13.12112	13.12112	0.00000		1	0	0	5	0				False	11	4	False
+pan-paniscus	IV	COX7A2	16.48499	16.49272	-0.00773		1	1	1	3	50	0.01987	0.03409	1.00000	False	11	10	False
+pan-paniscus	IV	COX5A	13.62223	13.63631	-0.01409		1	1	0	14	50	-0.05108	0.00932	0.31373	False	11	11	False
+pan-troglodytes	IV	COX8A	27.62150	27.43631	0.18519		1	1	1	4	50	0.20039	0.24364	1.00000	False	11	1	True
+pan-troglodytes	IV	COX6C	41.53048	41.37207	0.15841		1	1	0	2	0				False	11	2	True
+pan-troglodytes	IV	COX4I1	71.43071	71.43071	0.00000		1	0	0	1	0				False	11	3	False
+pan-troglodytes	IV	COX6A1	20.19772	20.19772	0.00000		1	0	0	11	0				False	11	3	False
+pan-troglodytes	IV	COX6B1	30.78455	30.78455	0.00000		1	0	0	12	0				False	11	3	False
+pan-troglodytes	IV	COX7B	19.66716	19.66716	0.00000		1	0	0	155	0				False	11	3	False
+pan-troglodytes	IV	COX7C	42.04411	42.04411	0.00000		1	0	0	4	0				False	11	3	False
+pan-troglodytes	IV	NDUFA4	13.11251	13.11251	0.00000		1	0	0	5	0				False	11	3	False
+pan-troglodytes	IV	COX7A2	16.56025	16.57035	-0.01010		1	1	1	3	50	0.01124	0.02224	1.00000	False	11	9	False
+pan-troglodytes	IV	COX5A	13.62223	13.63631	-0.01409		1	1	0	14	50	-0.05108	0.00932	0.31373	False	11	10	False
+pan-troglodytes	IV	COX5B	45.30862	45.38614	-0.07752		1	2	1	3	50	-0.06573	0.03500	0.31373	False	11	11	False
+gorilla-gorilla	V	ATP5MJ	43.71626	43.28359	0.43267		1	2	1	10	50	-0.08445	0.12144	0.01961	True	6	1	True
+gorilla-gorilla	V	ATP5PB	84.12809	84.05027	0.07782		1	1	1	2	0				False	6	2	True
+gorilla-gorilla	V	ATP5PD	85.36994	85.36994	0.00000		1	0	0	9	0				False	6	3	False
+gorilla-gorilla	V	ATP5MC1	5.03634	5.03634	0.00000		1	0	0	180	0				False	6	3	False
+gorilla-gorilla	V	ATP5MF	28.77131	28.77131	0.00000		1	0	0	4	0				False	6	3	False
+gorilla-gorilla	V	ATP5PF	4.19289	4.23690	-0.04401		1	1	0	177	50	0.06663	0.17954	0.90196	False	6	6	False
+pan-paniscus	V	ATP5PD	84.34096	84.10430	0.23666		1	1	0	9	50	-0.03057	0.00000	0.01961	True	6	1	True
+pan-paniscus	V	ATP5PB	82.05354	81.99651	0.05703		1	1	1	2	0				False	6	2	True
+pan-paniscus	V	ATP5MC1	5.41639	5.41639	0.00000		1	0	0	180	0				False	6	3	False
+pan-paniscus	V	ATP5MF	30.33695	30.33695	0.00000		1	0	0	4	0				False	6	3	False
+pan-paniscus	V	ATP5MJ	48.53877	48.53877	0.00000		1	0	0	2	0				False	6	3	False
+pan-paniscus	V	ATP5PF	4.76041	4.96320	-0.20279		1	2	0	177	50	0.11400	0.29197	1.00000	False	6	6	False
+pan-troglodytes	V	ATP5PB	79.53555	79.48676	0.04879		1	2	1	2	0				False	6	1	True
+pan-troglodytes	V	ATP5PD	84.28993	84.28993	0.00000		1	0	0	9	0				False	6	2	False
+pan-troglodytes	V	ATP5MC1	5.77194	5.77194	0.00000		1	0	0	180	0				False	6	2	False
+pan-troglodytes	V	ATP5MF	30.20380	30.20380	0.00000		1	0	0	4	0				False	6	2	False
+pan-troglodytes	V	ATP5MJ	47.73123	47.73123	0.00000		1	0	0	2	0				False	6	2	False
+pan-troglodytes	V	ATP5PF	4.53777	4.73488	-0.19711		1	2	0	177	50	0.09942	0.26279	1.00000	False	6	6	False

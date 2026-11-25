@@ -1,0 +1,4 @@
+readout	cases	pairs	stratified_auc	n_activity	spearman_activity	p
+saprot	20	4	0.00000	11	0.23235	0.49177
+stabddg	20	4	0.25000	11	-0.20046	0.55453
+count	20	4	1.00000	11	-0.65148	0.02988
