@@ -303,3 +303,23 @@ def test_judge_wide_refuses_a_table_that_was_not_corrected():
     t = two_tests()
     with pytest.raises(ValueError, match="correct_all"):
         rt.judge_wide(t, rt.judge(t))
+
+
+def test_the_wider_verdict_needs_both_lambda_models_as_the_bar_does():
+    """The real case of the run: a cell whose wider correction passes with lambda 1 and fails with lambda estimated."""
+    one_model = dict(p=1e-9, p_pic=0.4, p_holm=1e-7, p_holm_pic=1e-7, r=0.30)
+    rows = rt.correct_all(two_tests(default={"tRNA-Ala": one_model},
+                                    high={"tRNA-Ala": dict(p=1e-9, p_pic=1e-9, p_holm=1e-7, slope=0.1)}))
+    cell = rt.judge_wide(rows, rt.judge(rows)).set_index(["test", "gene"]).loc[("gc_percent", "tRNA-Ala")]
+    assert cell.p_holm_all < rt.ALPHA and cell.p_holm_pic_all > rt.ALPHA     # one model only
+    assert not cell.survives_controls_all and cell.verdict_all == "null"
+
+
+def test_the_wider_verdict_needs_the_high_set_under_the_wider_correction_too():
+    strong = dict(p=1e-9, p_pic=1e-9, p_holm=1e-7, p_holm_pic=1e-7, r=0.30)
+    rows = rt.correct_all(two_tests(default={"tRNA-Ala": strong},
+                                    high={"tRNA-Ala": dict(p=0.4, p_pic=0.4, p_holm=0.9, slope=0.1)}))
+    cell = rt.judge_wide(rows, rt.judge(rows)).set_index(["test", "gene"]).loc[("gc_percent", "tRNA-Ala")]
+    assert cell.survives_controls_all and cell.effect_at_least_median     # (1) and (2) hold
+    assert cell.high_p_holm_all > rt.ALPHA and not cell.holds_on_high_all  # (3) does not
+    assert cell.verdict_all == "not counting"
