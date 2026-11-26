@@ -227,3 +227,23 @@ def test_the_long_tables_put_the_lambda_one_result_beside_the_primary_and_pick_t
 def test_no_composition_test_is_run_without_the_control(tmp_path):
     with pytest.raises(SystemExit, match="rna-control"):
         rt.main_class(tmp_path, tmp_path / "c", tmp_path / "t", tmp_path, tmp_path, "Aves")
+
+
+def test_the_gene_summary_counts_every_cell_once_and_finds_the_largest_effect_against_the_median():
+    t = pd.concat([table(kind="composition", cls="Mammalia", default={"tRNA-Ala": PASS, "tRNA-Arg": {**PASS, "r": 0.10}},
+                         high={"tRNA-Ala": HIGH_OK, "tRNA-Arg": HIGH_OK}),
+                   table(kind="rate", test="rate", cls="Aves", default={"tRNA-Ala": {**PASS, "r": 0.5}},
+                         high={"tRNA-Ala": HIGH_OK})], ignore_index=True)
+    v = rt.judge(t)
+    s = rt.summarise(v).set_index("gene")
+    assert list(s.index) == rg.RNA_GENES
+    assert (s.cells == 2).all()                                   # one cell per kind, test and class
+    counted = s[[c for c in s.columns if c.startswith("n_") and c != "n_survives_controls"]].sum(axis=1)
+    assert (counted == s.cells).all()                              # every cell has exactly one verdict
+    assert s.loc["tRNA-Ala", "n_counts"] == 2 and s.loc["tRNA-Arg", "n_not_counting"] == 1 and s.loc["tRNA-Arg", "n_survives_controls"] == 1
+    assert s.loc["tRNA-Ala", "best_cell"] == "rate:rate:Aves" and s.loc["tRNA-Ala", "best_effect_over_median"] == pytest.approx(0.5 / MEDIAN)
+    assert s.loc["tRNA-Arg", "best_effect_over_median"] == pytest.approx(0.10 / MEDIAN) and s.loc["tRNA-Arg", "best_cell"] == "composition:gc_percent:Mammalia"
+    assert s.loc["tRNA-Gly", "n_null"] == 2 and s.loc["tRNA-Gly", "n_survives_controls"] == 0
+    assert s.loc["tRNA-Ala", "min_p_holm"] == pytest.approx(0.001)
+    gone = rt.summarise(rt.judge(t[~((t.set == "default") & (t.gene == "tRNA-Ala"))]))
+    assert gone.set_index("gene").loc["tRNA-Ala", "n_not_assessed"] == 2

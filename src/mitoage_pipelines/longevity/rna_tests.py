@@ -220,6 +220,28 @@ def judge(rows: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
+def summarise(v: pd.DataFrame) -> pd.DataFrame:
+    """One row per RNA gene over the cells of `judge`: how many cells ended in each verdict, the smallest Holm-adjusted p of the
+    cells that were assessed, and the cell where the gene's effect is largest against its protein-gene median
+    (`best_effect_over_median`: |r| divided by the median, so 1 is the median and above 1 is larger)."""
+    out = []
+    for gene in RNA_GENES:
+        g = v[v.gene == gene]
+        ok = g[g.verdict != "not assessed"]
+        row = {"gene": gene, "cells": len(g), "assessed": len(ok)}
+        for name in ("counts", "not counting", "null", "null, uninformative"):
+            row["n_" + name.replace(", ", "_").replace(" ", "_")] = int((g.verdict == name).sum())
+        row["n_not_assessed"] = int(g.verdict.str.startswith("not assessed").sum())
+        row["n_survives_controls"] = int(g.survives_controls.fillna(False).astype(bool).sum())
+        row["min_p_holm"] = ok.p_holm.min() if len(ok) else np.nan
+        ratio = (ok.r.abs() / ok.median_protein_r).replace([np.inf, -np.inf], np.nan).dropna()
+        if len(ratio):
+            b = ok.loc[ratio.idxmax()]
+            row.update(best_cell=f"{b.kind}:{b.test}:{b['class']}", best_effect_over_median=float(ratio.max()), best_effect_r=b.r)
+        out.append(row)
+    return pd.DataFrame(out)
+
+
 def main_verdict(out: Path, genes_dir: Path) -> pd.DataFrame:
     """Reads rna_tests.<Class>.tsv, rna_rates.tsv and protein_rates.tsv from `out`; writes rna_verdict.tsv."""
     tests = pd.concat([pd.read_csv(out / f"rna_tests.{c}.tsv", sep="\t") for c in CLASSES if (out / f"rna_tests.{c}.tsv").is_file()],
@@ -230,5 +252,6 @@ def main_verdict(out: Path, genes_dir: Path) -> pd.DataFrame:
     rates_rows = rates_rows[rates_rows["class"].isin(CLASSES)]
     v = judge(pd.concat([comp, rates_rows], ignore_index=True))
     v.to_csv(out / "rna_verdict.tsv", sep="\t", index=False, float_format="%.5g")
+    summarise(v).to_csv(out / "rna_gene_summary.tsv", sep="\t", index=False, float_format="%.5g")
     print(v.groupby(["kind", "verdict"]).size().to_string())
     return v

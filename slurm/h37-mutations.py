@@ -96,6 +96,10 @@ MUTATIONS = [
     ("the rate with the body-mass contrast not chosen", T, '(rna.normalisation == "d_mass_adj")', '(rna.normalisation == "d_raw")', TT),
     ("saturated pairs in the rate", T, '& ~rna.includes_saturated].copy()', "].copy()", TT),
     ("the protein rate not dS", T, '(protein.normalisation == "dS_mass_adj")', '(protein.normalisation == "dN_raw")', TT),
+    ("the summary's best cell by the smallest effect", T, "b = ok.loc[ratio.idxmax()]", "b = ok.loc[ratio.idxmin()]", TT),
+    ("the summary counts a cell without a verdict", T, 'row["n_not_assessed"] = int(g.verdict.str.startswith("not assessed").sum())', 'row["n_not_assessed"] = 0', TT),
+    ("the summary's survivors counted from the verdicts that count", T, 'row["n_survives_controls"] = int(g.survives_controls.fillna(False).astype(bool).sum())', 'row["n_survives_controls"] = int((g.verdict == "counts").sum())', TT),
+    ("the effect over the median taken as the effect", T, "ratio = (ok.r.abs() / ok.median_protein_r)", "ratio = (ok.r.abs() / 1.0)", TT),
     ("the gate before the composition tests removed", T, "    require_control(data, out)\n    res = run_class", "    res = run_class", TT),
 ]
 
