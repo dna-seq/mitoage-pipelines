@@ -6,7 +6,12 @@ fresh clones of it that are identical byte for byte.
 
 ## In one paragraph
 
-768 cells were judged (24 genes, each in 7 composition tests and 1 rate test in each of 4 taxon groups). **2 count**, both
+**Part A does not count: under a correction over all 768 cells every cell is null, and no tRNA or rRNA gene is named.** The
+paragraph below is the narrower reading first run, under the entry's own correction within each test; the wider one, which
+supersedes it, is under "The correction over all 768 cells".
+
+768 cells were judged (24 genes, each in 7 composition tests and 1 rate test in each of 4 taxon groups). Under the entry's
+own correction (Holm over the 24 genes within one test) **2 count**, both
 of one gene in one group: *tRNA-Thr* of ray-finned fishes, its GC skew and its AT skew, which are two readings of one difference in how much T and C the
 gene carries. 4 composition cells and 3 rate cells pass the first condition alone and are **not counting**, in the entry's words:
 the GC content, the C share and the T share of the 16S rRNA in mammals and the A share of tRNA-Gln in mammals, and the rate of tRNA-Cys, tRNA-Ser(AGY)
@@ -183,15 +188,45 @@ is in. The largest ratio is a maximum over 32 cells and is large for most genes 
 | rRNA-12S | 0 | 0 | 0.376 | 3.3 | composition G_share Reptilia |
 | rRNA-16S | 3 | 0 | 0.00381 | 4.2 | composition gc_skew Mammalia |
 
+## The correction over all 768 cells
+
+Added 2026-11-26, code 8ddbb66, on the same tables (no job). The entry's correction is within each test, over the 24 genes:
+it holds the chance of a false pass in *one* test's family at 5%. There are 32 such families (7 composition features and the
+rate in 4 groups), so a chance pass in at least one of them under no effect at all has probability 1 - 0.95^32, about 0.81,
+were they independent. The same bar was therefore read again against Holm over the whole family of 768 cells of a species
+set at once, each lambda model on its own (`correct_all`, `judge_wide`; the `_all` columns and `verdict_all` of
+`rna_verdict.tsv`).
+
+**Every one of the 768 cells is null under it: 0 count, 0 are not counting.** What the two cells that counted become:
+
+| cell (tRNA-Thr, ray-finned fishes) | Holm within its test | Holm over all 768 | BH q over all 768 |
+| --- | --- | --- | --- |
+| GC skew, lambda estimated | 0.012 | 0.387 | 0.079 |
+| GC skew, lambda 1 | 0.00006 | 0.0019 | 0.0019 |
+| AT skew, lambda estimated | 0.015 | 0.471 | 0.079 |
+| AT skew, lambda 1 | 0.0034 | 0.108 | 0.017 |
+
+The bar's first condition needs both lambda models and the primary one, lambda estimated, fails in both cells. The second
+condition (the effect against the protein-gene median) is the same number as before, corrected for nothing, and the third
+is read against the wider correction too.
+
+Three things say this is not an artefact of the family's exact size:
+
+- With lambda estimated, the smallest p of all 768 cells is 1.6e-4 (the mammalian 16S rRNA's C share), Holm 0.122; **no cell
+  anywhere reaches q below 0.05 under Benjamini-Hochberg either**, which is the lenient correction. Under lambda 1 alone 14
+  cells do, 13 of them tRNA-Thr's own and its neighbours' in the same group.
+- A defensible count of independent cells cannot be given exactly: the 7 composition features of a gene are functions of its
+  four base shares, which sum to 1, so a gene and group hold at most 3 free composition dimensions, and the genes of a group
+  share one tree and one set of species. At the most generous reduction that bound allows, 24 genes x 3 x 4 groups plus the
+  96 rates, 384 cells, tRNA-Thr's GC skew is 0.19 with lambda estimated and the best cell of the whole family is 0.061:
+  still nothing passes.
+- The two cells are one signal (one difference in T and C content), so counting them as two never helped the result.
+
 ## Reading
 
-- **The entry's bar is met by one gene in one group**, tRNA-Thr in ray-finned fishes, in two cells that are one signal. That is what the bar says and the entry is
-  not changed to fit it.
-- **The correction is within each test, as the entry states it**, over the 24 genes: it holds the chance of a false pass in one cell's family at 5%. There are 32
-  such families (7 composition features and the rate in 4 groups), so a chance pass in at least one of them under no effect at all has probability 1 - 0.95^32, about
-  0.81, if they were independent (they are not: the features of one gene are correlated); the second and third conditions are not independent of the first when the
-  effect is real or when it is chance in a subset that is most of the same species. Whether tRNA-Thr's skews would survive a correction over all the tests
-  is not computed here.
+- **Part A names no gene.** Under the entry's own correction one gene in one group passes, tRNA-Thr in ray-finned fishes, in
+  two cells that are one signal; under the correction over all 768 cells it does not, and the wider reading is the one that
+  holds. The bar was not changed to fit either result: both are reported, and the entry says the result does not count.
 - Not examined: whether tRNA-Thr's annotation in fishes is uniform (26 records of the build annotate it twice); whether a few clades of fishes carry the
   signal; any mechanism. These are unknown.
 - **No tRNA or rRNA gene shows a rate that follows lifespan** under the bar: the three mammalian tRNA rates that pass the first condition fail the third.
@@ -200,7 +235,7 @@ is in. The largest ratio is a maximum over 32 cells and is large for most genes 
 
 ## Checks
 
-- Tests: 57 of 57 of this part pass with none skipped; breaks: 78 of 78 caught (`slurm/h37-mutations.py`: each break replaces one piece of one source
+- Tests: 64 of 64 of this part pass with none skipped; breaks: 87 of 87 caught (job 6661462 at 5eaf0c5; 57 and 78 before the wider correction, job 6661283) (`slurm/h37-mutations.py`: each break replaces one piece of one source
   file and a test must fail), both in job 6661283 from the fresh clone. The first full run, at 5dab5dd (jobs 6661196 to 6661202 and 6661226 to 6661231), had 56
   tests and 74 breaks; the earlier break runs found six survivors, which were fixed by a test or by removing a guard that could change nothing.
 - Two runs from fresh clones at f9f8fdd, jobs 6661281 to 6661287 and 6661288 to 6661293: every output file, the 22 tRNA alignments, the features, the
@@ -223,7 +258,8 @@ is in. The largest ratio is a maximum over 32 cells and is large for most genes 
 
 Committed here: `gene_census.tsv`, `alignments.tsv`, `rrna_check.tsv`, `unresolved.tsv`; `rna_tests.<Group>.tsv` (every regression: gene, feature, model, set,
 n, informative columns, lambda, slope, se, t, df, p, effect r, Holm p, q); `rna_rates.tsv` and `protein_rates.tsv` (H7's table format for the RNA genes and the 13
-protein genes, on both sets, with the Holm p and the effect r); `rna_verdict.tsv`; `rna_gene_summary.tsv`; `h7_control.<build>.json`; `sha256sums.txt`
+protein genes, on both sets, with the Holm p and the effect r); `rna_verdict.tsv` (one row per cell: the entry's own verdict
+and, in the columns ending `_all`, the correction over all 768 cells and `verdict_all`); `rna_gene_summary.tsv`; `h7_control.<build>.json`; `sha256sums.txt`
 (every output of the run, the 22 tRNA alignments, `rna_features.tsv` and the contrast tables included, which are not committed).
 
 ## Reproduce

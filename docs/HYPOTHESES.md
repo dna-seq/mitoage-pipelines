@@ -3520,7 +3520,7 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     *Collection:* two bugs of the collection, in how the tables of tasks without a row are joined, were found when the human host was first collected and
     fixed in 98a9d8f, with a test and two breaks; the task tables are unchanged. *Tests and breaks:* 116 passed (this step's 39 and the swap's); breaks: 83 of 83 caught (the first break run let 13 survive on the tests as first written; their tests were added in 7ce19d2 and 98a9d8f; one change, the nuclear chain's substitutions put on every copy, is equivalent on these structures, no gene having copies that differ in sequence, and is not run); the swap's own breaks were not run again.
 
-## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: tRNA-Thr of ray-finned fishes counts in two cells that are one signal, seven other cells are not counting, the rest null; part B and part C not run)
+## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: it does not count. tRNA-Thr of ray-finned fishes passes the bar under the entry's own correction, within its test, and does not survive the correction over all 768 cells, under which every cell is null; part B and part C not run)
 
 **Why this, and why now.** Every entry above works on the 13 protein-coding genes, on their amino acids, their
 codons, their contacts with nuclear subunits, or on the control region. The 22 tRNA genes are used only as a
@@ -3563,24 +3563,45 @@ its gene, and a null on a gene with few of them is said to be uninformative rath
     (94 Leu and 78 Ser copies, left out and counted); up to 26 species annotate a gene twice (the first copy is used); 20 tRNA features are shorter than 50 or longer
     than 100 nucleotides, the longest 3539, and are kept. The rRNA sequences extracted equal the build's alignments for all 2323 and 2322 species. Informative alignment columns:
     65 to 73 over each tRNA alignment, 905 and 1483 for the rRNAs; among the species of a taxon group in a test, 22 to 68 for a tRNA.
-  - *The result, 768 cells* (24 genes; 7 composition features and the rate, in each of mammals, birds, ray-finned fishes and reptiles; Holm over the 24 genes within each
-    test, lambda estimated and lambda 1, body mass in the model, the high-confidence subset): **2 count, 7 are not counting, 759 are null, 0 are uninformative nulls and
-    0 are not assessed.** *Counts:* **tRNA-Thr of ray-finned fishes**, GC skew (+0.47 SD per tenfold lifespan, Holm p 0.012 with lambda estimated, 0.00006 with lambda 1,
+  - *The result, read first under the entry's own correction, 768 cells* (24 genes; 7 composition features and the rate, in each of mammals, birds, ray-finned fishes and
+    reptiles; Holm over the 24 genes within each test, lambda estimated and lambda 1, body mass in the model, the high-confidence subset): 2 count, 7 are not counting,
+    759 are null, 0 are uninformative nulls and 0 are not assessed. **This reading is superseded by the one below it, which corrects over all 768 cells: under that
+    correction nothing counts, and part A names no gene.** The cells of the narrower reading, kept because they are what the entry's bar as written says. *Counts under
+    the entry's own correction:* **tRNA-Thr of ray-finned fishes**, GC skew (+0.47 SD per tenfold lifespan, Holm p 0.012 with lambda estimated, 0.00006 with lambda 1,
     effect 2.2 times the 13 protein genes' median, 0.0065 on the high set) and AT skew (-0.37, 0.015 and 0.0034, 3.5 times, 0.023), 235 species with 58 informative columns;
     the two are one difference in how much T and C the gene carries, and the shares of its four bases do not pass. *Not counting* (pass the first condition and fail the
     third: the same sign on the high-confidence subset, Holm p 0.072 to 0.51): the mammalian 16S rRNA's GC content, C share and T share (effects 0.13 to 0.15 against a
     protein median of 0.08 to 0.10), the A share of tRNA-Gln in mammals, and the rate of tRNA-Cys (+), tRNA-Ser(AGY) (-) and tRNA-Tyr (+) in mammals (effects 0.25 to 0.27
     against 0.083). Every other cell is null, and no other gene passes the first condition in any cell; no rate counts.
-  - *Limits.* The entry's correction is within each test, so it holds the chance of a pass in one test at 5%; there are 32 tests (7 features and the rate in 4 groups), and
-    with no effect at all at least one family would pass the first condition with probability about 0.81 if they were independent (they are not). The two counting cells are
-    one gene and one group, and whether they survive a correction over all 32 tests is not computed. Unknown: whether tRNA-Thr's annotation in fishes is uniform (26 records
+  - **The correction over all 768 cells, 2026-11-26 (code 8ddbb66, no job: the tables are the same ones).** The entry's correction is within each test, so it holds the
+    chance of a pass in *one* test at 5%; there are 32 tests (7 features and the rate in 4 groups), and with no effect at all at least one of them would pass the first
+    condition with probability about 0.81 if they were independent. The same bar was therefore read again against Holm over the whole family of 768 cells of a species set
+    at once, each lambda model on its own (`correct_all` and `judge_wide`; the columns ending in `_all` of `rna_verdict.tsv`). **Under it every one of the 768 cells is
+    null: 0 count, 0 are not counting. Part A does not count, and tRNA-Thr is not a finding.** What the two cells become:
+
+    | cell (tRNA-Thr, ray-finned fishes) | Holm within its test | Holm over all 768 | BH q over all 768 |
+    | --- | --- | --- | --- |
+    | GC skew, lambda estimated | 0.012 | 0.387 | 0.079 |
+    | GC skew, lambda 1 | 0.00006 | 0.0019 | 0.0019 |
+    | AT skew, lambda estimated | 0.015 | 0.471 | 0.079 |
+    | AT skew, lambda 1 | 0.0034 | 0.108 | 0.017 |
+
+    The bar's first condition needs both lambda models, and the primary one (lambda estimated) fails in both cells. It is not a near miss of the family's size: with
+    lambda estimated the smallest p of all 768 cells is 1.6e-4 (the mammalian 16S rRNA's C share), whose Holm value is 0.122, and **no cell anywhere reaches q below 0.05
+    under Benjamini-Hochberg either**; under lambda 1 alone, 14 cells do, 13 of them tRNA-Thr's and its neighbours' in the same group. Nor does the answer turn on how
+    many of the 768 cells are independent, which cannot be counted exactly here (the 7 composition features of a gene are functions of its four base shares, which sum to
+    1, so a gene and group hold at most 3 free composition dimensions, and genes of a group share the tree): even at the most generous defensible reduction, 24 genes x 3
+    dimensions x 4 groups plus the 96 rates, 384 cells, tRNA-Thr's GC skew is 0.19 with lambda estimated and the best cell in the whole family is 0.061.
+  - *Limits.* Unknown: whether tRNA-Thr's annotation in fishes is uniform (26 records
     annotate it twice), whether a few clades carry it, any mechanism, and how small an effect these tests could have seen (no power calculation); a tRNA has 22 to 68
     informative columns in a group, so the nulls are weak although none is below the 20 columns chosen for "uninformative". The reptiles' rate has no protein-gene median
     (no single protein gene has 12 sister pairs with dS at or below 1 there), so a reptile tRNA passing the first condition would have been not assessed; none did.
   - *Choices the entry left open, in the code before any number* (`results/h37/partA/README.md`): the features (GC content, GC skew, AT skew as the build computes them, and the
     shares of A, C, G and T, in gene sense); the RNA rate; the effect as the absolute partial correlation; Holm for "family-wise"; the two lambda models for "survives the
     controls"; at least 25 species, 12 sister pairs, 30 shared columns, 20 informative columns; at least 7 protein genes for the median.
-  - *Tests and breaks:* 57 of 57 pass, none skipped, and 78 of 78 breaks are caught; the rest of the repository's tests give 607 passed, 183 skipped, 2 failed, the two failures
+  - *Tests and breaks:* 64 of 64 pass, none skipped, and 87 of 87 breaks are caught (job 6661462 at 5eaf0c5, after the wider correction; before it, 57 and 78 in
+    job 6661283). A first run of the new breaks let two through, both of the wide bar, because every fixture passed or failed the two lambda models together:
+    the two cases the breaks asked for were added in 5eaf0c5 and the breaks are caught. The rest of the repository's tests give 607 passed, 183 skipped, 2 failed, the two failures
     being `tests/test_audit.py` (fails the same way at the parent commit on this build) and `tests/test_cybrid_swap.py` (no `torch` in the job's environment).
 
 **Part B. Where in the tRNA, not in this round.** Whether a signal sits at the acceptor stem, the anticodon loop
