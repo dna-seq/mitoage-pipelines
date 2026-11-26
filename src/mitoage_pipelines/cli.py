@@ -439,7 +439,8 @@ def longevity_rna_control(
 ) -> None:
     """H37, part A: the positive control. The rate pipeline of the RNA genes on the 13 protein genes, compared with H7's table."""
     from .longevity import rna_rates
-    rna_rates.control(data, composition, fourfold, tree, reference, out)
+    if not rna_rates.control(data, composition, fourfold, tree, reference, out)["reproduced"]:
+        raise typer.Exit(1)          # the table and its json are written; a job that depends on this one does not start
 
 
 @longevity_app.command("rna-rates")

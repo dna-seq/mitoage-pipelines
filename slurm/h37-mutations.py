@@ -65,6 +65,7 @@ MUTATIONS = [
     ("the environment restriction accepted", R, "    if species_sets.active() is not None:", "    if False:", TR),
     ("the high set not applied", R, "        sp = sp[sp.slug.isin(species_sets.slugs(data, species_set))].reset_index(drop=True)", "        sp = sp.reset_index(drop=True)", TR),
     ("the cherries of the genes some species lack", R, "    usable = set.intersection(*[set(a) for a in alignments.values()]) & set(species.slug)", "    usable = set.union(*[set(a) for a in alignments.values()]) & set(species.slug)", TR),
+    ("a failed control exits as a passed one", Path("src/mitoage_pipelines/cli.py"), "        raise typer.Exit(1)          # the table and its json are written", "        pass          # the table and its json are written", TR),
     # --- rna_tests.py
     ("the PIC model not required", T, "d.p_holm < ALPHA and d.p_holm_pic < ALPHA and", "d.p_holm < ALPHA and", TT),
     ("the sign across models not required", T, " and np.sign(d.slope) == np.sign(d.slope_pic))", ")", TT),
@@ -103,7 +104,7 @@ def run(tests: str) -> subprocess.CompletedProcess:
     return subprocess.run([sys.executable, "-m", "pytest", "-q", "-x", "-p", "no:cacheprovider", "-rs", tests], capture_output=True, text=True)
 
 
-originals = {p: p.read_text() for p in (G, R, T)}
+originals = {p: p.read_text() for p in {m[1] for m in MUTATIONS}}
 try:
     for tests in (TG, TR, TT):
         base = run(tests)

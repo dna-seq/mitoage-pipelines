@@ -287,6 +287,12 @@ class TestOnTheBuild:
             rr.require_control(paths.BUILD, out)
         with pytest.raises(SystemExit, match="cannot reproduce H7"):
             rr.rna_rates(paths.BUILD, COMP, FOUR, paths.DATED_TREE, out, out)
+        # and the command says so with its exit code, so that a job that depends on it does not start
+        from typer.testing import CliRunner
+        from mitoage_pipelines.cli import app
+        run = lambda ref: CliRunner().invoke(app, ["longevity", "rna-control", "--reference", str(ref), "--out", str(out)])
+        assert run(h7 / "tampered.tsv").exit_code == 1
+        assert run(h7 / "rates.tsv").exit_code == 0
 
 
     @needs_build
