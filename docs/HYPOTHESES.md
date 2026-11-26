@@ -3520,7 +3520,7 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     *Collection:* two bugs of the collection, in how the tables of tasks without a row are joined, were found when the human host was first collected and
     fixed in 98a9d8f, with a test and two breaks; the task tables are unchanged. *Tests and breaks:* 116 passed (this step's 39 and the swap's); breaks: 83 of 83 caught (the first break run let 13 survive on the tests as first written; their tests were added in 7ce19d2 and 98a9d8f; one change, the nuclear chain's substitutions put on every copy, is equivalent on these structures, no gene having copies that differ in sequence, and is not run); the swap's own breaks were not run again.
 
-## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; no code, no score)
+## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: tRNA-Thr of ray-finned fishes counts in two cells that are one signal, seven other cells are not counting, the rest null; part B and part C not run)
 
 **Why this, and why now.** Every entry above works on the 13 protein-coding genes, on their amino acids, their
 codons, their contacts with nuclear subunits, or on the control region. The 22 tRNA genes are used only as a
@@ -3548,6 +3548,40 @@ that passes (1) alone is reported as not counting, in those words.
 *What would make a null here weak.* A tRNA gene is about 70 nucleotides, so a per-gene rate is noisy and a
 composition feature has few sites to move. Every result carries the number of informative alignment columns of
 its gene, and a null on a gene with few of them is said to be uninformative rather than negative.
+
+- **Result of part A, 2026-11-26** (code f9f8fdd; two runs from fresh clones, Slurm jobs 6661281 to 6661287 and 6661288 to 6661293, with every output file
+  identical byte for byte; the first two runs, at 5dab5dd, jobs 6661196 to 6661202 and 6661226 to 6661231, gave the same files; tests and breaks in job 6661283;
+  tables, the census and every choice the entry left open in `results/h37/partA/`). The build is H27's (Hugging Face revision 446dad6, which carries the confidence
+  level), RefSeq release 237, MAFFT v7.526 as the build's own nucleotide alignments.
+  - *The positive control passed before any tRNA number was read.* The rate driver on the 13 protein genes and their concatenation reproduces H7's corrected table
+    (`results/review-20261118/longevity/rates.tsv`) in all 655 rows with no cell different at the five digits the table is written at, on the build of the
+    published numbers (0f4e970) and on this build; the written tables are byte-identical to the published one. It covers the cherries, outgroups, contrasts,
+    tests and correction the RNA rates share with H7; it does not cover the RNA distance (Jukes-Cantor over the columns all three species resolve, since an RNA has no
+    dN or dS), which is new code checked on real tRNAs and by breaks, not against an earlier number. Part C's precondition is met; part C is not started.
+  - *What the records carry* (2325 live species, none without its record): each tRNA gene is in 2270 to 2323 species; a gene is missing for 2 to 13 species whose record
+    does not annotate it, and the two isoacceptors of Leu and of Ser for 40 to 44 species each, whose Leu or Ser copies the annotation and the gene order cannot place
+    (94 Leu and 78 Ser copies, left out and counted); up to 26 species annotate a gene twice (the first copy is used); 20 tRNA features are shorter than 50 or longer
+    than 100 nucleotides, the longest 3539, and are kept. The rRNA sequences extracted equal the build's alignments for all 2323 and 2322 species. Informative alignment columns:
+    65 to 73 over each tRNA alignment, 905 and 1483 for the rRNAs; among the species of a taxon group in a test, 22 to 68 for a tRNA.
+  - *The result, 768 cells* (24 genes; 7 composition features and the rate, in each of mammals, birds, ray-finned fishes and reptiles; Holm over the 24 genes within each
+    test, lambda estimated and lambda 1, body mass in the model, the high-confidence subset): **2 count, 7 are not counting, 759 are null, 0 are uninformative nulls and
+    0 are not assessed.** *Counts:* **tRNA-Thr of ray-finned fishes**, GC skew (+0.47 SD per tenfold lifespan, Holm p 0.012 with lambda estimated, 0.00006 with lambda 1,
+    effect 2.2 times the 13 protein genes' median, 0.0065 on the high set) and AT skew (-0.37, 0.015 and 0.0034, 3.5 times, 0.023), 235 species with 58 informative columns;
+    the two are one difference in how much T and C the gene carries, and the shares of its four bases do not pass. *Not counting* (pass the first condition and fail the
+    third: the same sign on the high-confidence subset, Holm p 0.072 to 0.51): the mammalian 16S rRNA's GC content, C share and T share (effects 0.13 to 0.15 against a
+    protein median of 0.08 to 0.10), the A share of tRNA-Gln in mammals, and the rate of tRNA-Cys (+), tRNA-Ser(AGY) (-) and tRNA-Tyr (+) in mammals (effects 0.25 to 0.27
+    against 0.083). Every other cell is null, and no other gene passes the first condition in any cell; no rate counts.
+  - *Limits.* The entry's correction is within each test, so it holds the chance of a pass in one test at 5%; there are 32 tests (7 features and the rate in 4 groups), and
+    with no effect at all at least one family would pass the first condition with probability about 0.81 if they were independent (they are not). The two counting cells are
+    one gene and one group, and whether they survive a correction over all 32 tests is not computed. Unknown: whether tRNA-Thr's annotation in fishes is uniform (26 records
+    annotate it twice), whether a few clades carry it, any mechanism, and how small an effect these tests could have seen (no power calculation); a tRNA has 22 to 68
+    informative columns in a group, so the nulls are weak although none is below the 20 columns chosen for "uninformative". The reptiles' rate has no protein-gene median
+    (no single protein gene has 12 sister pairs with dS at or below 1 there), so a reptile tRNA passing the first condition would have been not assessed; none did.
+  - *Choices the entry left open, in the code before any number* (`results/h37/partA/README.md`): the features (GC content, GC skew, AT skew as the build computes them, and the
+    shares of A, C, G and T, in gene sense); the RNA rate; the effect as the absolute partial correlation; Holm for "family-wise"; the two lambda models for "survives the
+    controls"; at least 25 species, 12 sister pairs, 30 shared columns, 20 informative columns; at least 7 protein genes for the median.
+  - *Tests and breaks:* 57 of 57 pass, none skipped, and 78 of 78 breaks are caught; the rest of the repository's tests give 607 passed, 183 skipped, 2 failed, the two failures
+    being `tests/test_audit.py` (fails the same way at the parent commit on this build) and `tests/test_cybrid_swap.py` (no `torch` in the job's environment).
 
 **Part B. Where in the tRNA, not in this round.** Whether a signal sits at the acceptor stem, the anticodon loop
 or the D and T loops needs the cloverleaf positions and a list of pathogenic human mt-tRNA variants to compare

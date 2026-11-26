@@ -1,0 +1,16 @@
+{
+  "cells_that_differ": 0,
+  "cherries": 340,
+  "columns_missing_in_mine": [],
+  "differing_columns": {},
+  "only_in_mine": 0,
+  "only_in_reference": 0,
+  "reference": "rates.tsv",
+  "reference_sha256": "b2b656ad2ea5cfa17ec22579e364636e39433cee78a8535c6b360f28733e6791",
+  "reproduced": true,
+  "rows_mine": 655,
+  "rows_reference": 655,
+  "rows_that_differ": 0,
+  "species_in_default_dataset": 1372,
+  "species_sha256": "267a16311cca579af2ca1cd004e99befe66e53e1ae7696d71ffb9f6b7be5dbed"
+}

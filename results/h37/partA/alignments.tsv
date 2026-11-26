@@ -1,0 +1,25 @@
+gene	source	aligner	sequences	columns	informative_columns	sha256
+tRNA-Ala	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2322	105	68	0a3e1e3b49002a3efd956e53b435aa844138f90d24002b0bb879f647b6fb153a
+tRNA-Arg	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2322	160	67	dcd7ad4482c7d87337ba7b5373a0211485f27781374cd7abe0fbf95283d827bb
+tRNA-Asn	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2323	156	73	e5e52bcf7cd194cf1b61d5b540b8f4a7ccb38737ff06ca389f2f545bfafc8414
+tRNA-Asp	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2322	436	69	f51fe429e94b8186216317cf96cdd1682cf9044175dcaf30da74745a532db5dd
+tRNA-Cys	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2322	134	65	f489483019222e72742e42dd273f58817755974cfe3fbda9b7d090945f03fcc0
+tRNA-Gln	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2321	667	71	47b9b1fb34249b1cdc0bf129db28a454540473cbe563b94827155f6904fee338
+tRNA-Glu	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2319	199	69	ee5b90e90c2d667aa36414701bcc7449f732bc18f4fcfc65afeed77fe7d2676c
+tRNA-Gly	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2322	417	67	567a09594c3f875ce59b21f442efc187f426420d740330bbc10571514ffbcbdd
+tRNA-His	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2321	164	68	4b16b83873145084091e53edb4c82b7d41513f77aa478581db28275840c79278
+tRNA-Ile	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2320	3601	69	a18926af2888cc764c20451b4b9c342a30d1ccbcacff2a2942c89b7cd415bcc1
+tRNA-Leu(CUN)	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2279	155	72	19aacf59c46e9160d71d17da27771bddba139a14b741f888c8bd66fbd6606b87
+tRNA-Leu(UUR)	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2270	165	73	43007c83be6ff54a38ac737e99e561bc34dd325e5a5afa9d1f1a0ec3ff886170
+tRNA-Lys	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2320	171	70	39bab209e5ce64748037a547b4b364a2f01043e329372ca0c6d07a192c4c5a26
+tRNA-Met	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2323	114	66	7099814c1508426aa1e7ce41673423a7cc69d74bf1e2e95b5a03882338cd0a81
+tRNA-Phe	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2319	158	69	cae905b3e4a6064a56c58b09a56da777d07f8e95d4c527bbf0cbc7dd84c25920
+tRNA-Pro	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2314	250	69	55739bb2e1317ffe372e97d56c56de6b2c03365cac8ca4eef9feebf14ad867a9
+tRNA-Ser(AGY)	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2272	197	65	0d36ccb93006859c717a0af72d0c5d2deb9cde21e0492a1e5fccc84d5b937d36
+tRNA-Ser(UCN)	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2277	131	71	0d954baee6240b0b9e88c7553d6dbd9c2818e6a602cc7f0f1723cc6354aad970
+tRNA-Thr	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2319	158	69	f28635bffb8f0dd15ae3af54055eacc6c7db9ff58e65826382814a6546704f04
+tRNA-Trp	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2323	177	69	da4d397c759ccff17d8ab915c4a500dfd05a9ee3f94c40ec40f92bb69d5cdeeb
+tRNA-Tyr	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2322	135	71	d67d4a95f51df8860e989877d17de392ea5af9ee7892aedd0308de5e42a5f826
+tRNA-Val	aligned here	MAFFT v7.526 --retree 2 --maxiterate 0 --quiet	2319	120	66	40a0906d6d476e4fa1dbf0e43a1846111d315349290cce7e2511152d35fdfda2
+rRNA-12S	the build's alignment, not realigned	as the build (MAFFT v7.526, FFT-NS-2)	2323	3419	905	8b39fd6eb8fec5b8a5572f0a50577c3f957553519d8194e09aa2e9471c09dc94
+rRNA-16S	the build's alignment, not realigned	as the build (MAFFT v7.526, FFT-NS-2)	2322	6859	1483	70b6607b6ce4fd77c669cfe12ce14294510215b22e1e40792017595030e3d8fd

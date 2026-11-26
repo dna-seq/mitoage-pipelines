@@ -1,0 +1,1037 @@
+set	class	gene	group	feature	n	informative_columns	model	lambda	slope	se	t	df	p	r	p_holm	q
+default	Actinopterygii	ATP6	protein	A_share	235		lambda_1	1	-0.13921	0.077328	-1.8002	232	0.073124	-0.11737		
+default	Actinopterygii	ATP8	protein	A_share	235		lambda_1	1	-0.16622	0.095084	-1.7481	232	0.081764	-0.11402		
+default	Actinopterygii	COX1	protein	A_share	235		lambda_1	1	-0.10727	0.087186	-1.2303	232	0.21981	-0.080514		
+default	Actinopterygii	COX2	protein	A_share	235		lambda_1	1	-0.036224	0.087836	-0.41241	232	0.68042	-0.027066		
+default	Actinopterygii	COX3	protein	A_share	235		lambda_1	1	-0.057361	0.090275	-0.6354	232	0.52579	-0.04168		
+default	Actinopterygii	CYTB	protein	A_share	235		lambda_1	1	0.075257	0.076115	0.98872	232	0.32383	0.064777		
+default	Actinopterygii	ND1	protein	A_share	235		lambda_1	1	-0.2232	0.072359	-3.0847	232	0.002285	-0.19849		
+default	Actinopterygii	ND2	protein	A_share	235		lambda_1	1	-0.12658	0.070969	-1.7837	232	0.075786	-0.11631		
+default	Actinopterygii	ND3	protein	A_share	235		lambda_1	1	-0.03844	0.090972	-0.42255	232	0.67302	-0.027731		
+default	Actinopterygii	ND4	protein	A_share	235		lambda_1	1	-0.18869	0.074414	-2.5357	232	0.011881	-0.16422		
+default	Actinopterygii	ND4L	protein	A_share	235		lambda_1	1	-0.0027079	0.093769	-0.028879	232	0.97699	-0.001896		
+default	Actinopterygii	ND5	protein	A_share	235		lambda_1	1	-0.159	0.070859	-2.2438	232	0.025787	-0.14574		
+default	Actinopterygii	ND6	protein	A_share	235		lambda_1	1	-0.11105	0.11873	-0.93526	232	0.35063	-0.061287		
+default	Actinopterygii	rRNA-12S	rna	A_share	235	544	lambda_1	1	-0.048545	0.081204	-0.59781	232	0.55055	-0.039218	1	0.85209
+default	Actinopterygii	rRNA-16S	rna	A_share	235	1018	lambda_1	1	-0.045334	0.086135	-0.52631	232	0.59918	-0.034533	1	0.85209
+default	Actinopterygii	tRNA-Ala	rna	A_share	235	49	lambda_1	1	-0.011407	0.079567	-0.14336	232	0.88613	-0.0094116	1	0.94207
+default	Actinopterygii	tRNA-Arg	rna	A_share	235	50	lambda_1	1	0.046675	0.081613	0.5719	232	0.56794	0.037521	1	0.85209
+default	Actinopterygii	tRNA-Asn	rna	A_share	235	50	lambda_1	1	0.013677	0.11189	0.12224	232	0.90282	0.0080251	1	0.94207
+default	Actinopterygii	tRNA-Asp	rna	A_share	235	60	lambda_1	1	-0.047103	0.10731	-0.43895	232	0.66111	-0.028807	1	0.85209
+default	Actinopterygii	tRNA-Cys	rna	A_share	235	58	lambda_1	1	-0.050646	0.13231	-0.38279	232	0.70223	-0.025123	1	0.85209
+default	Actinopterygii	tRNA-Gln	rna	A_share	235	54	lambda_1	1	-0.075692	0.088612	-0.8542	232	0.39388	-0.055993	1	0.85209
+default	Actinopterygii	tRNA-Glu	rna	A_share	234	58	lambda_1	1	0.058684	0.17184	0.34151	231	0.73303	0.022464	1	0.85209
+default	Actinopterygii	tRNA-Gly	rna	A_share	235	42	lambda_1	1	0.08867	0.13229	0.67026	232	0.50336	0.043962	1	0.85209
+default	Actinopterygii	tRNA-His	rna	A_share	235	48	lambda_1	1	-0.21429	0.11256	-1.9039	232	0.058161	-0.12403	1	0.69794
+default	Actinopterygii	tRNA-Ile	rna	A_share	235	51	lambda_1	1	-0.073273	0.095367	-0.76832	232	0.44308	-0.050379	1	0.85209
+default	Actinopterygii	tRNA-Leu(CUN)	rna	A_share	235	39	lambda_1	1	-0.16776	0.15447	-1.086	232	0.27861	-0.071118	1	0.85209
+default	Actinopterygii	tRNA-Leu(UUR)	rna	A_share	235	47	lambda_1	1	0.03336	0.10269	0.32486	232	0.74558	0.021323	1	0.85209
+default	Actinopterygii	tRNA-Lys	rna	A_share	235	48	lambda_1	1	0.10032	0.13431	0.74692	232	0.45587	0.048979	1	0.85209
+default	Actinopterygii	tRNA-Met	rna	A_share	235	41	lambda_1	1	0.085041	0.11095	0.76647	232	0.44417	0.050258	1	0.85209
+default	Actinopterygii	tRNA-Phe	rna	A_share	235	55	lambda_1	1	-0.071276	0.11961	-0.5959	232	0.55182	-0.039093	1	0.85209
+default	Actinopterygii	tRNA-Pro	rna	A_share	234	63	lambda_1	1	0.077475	0.13808	0.56109	231	0.57528	0.036892	1	0.85209
+default	Actinopterygii	tRNA-Ser(AGY)	rna	A_share	234	58	lambda_1	1	-0.03761	0.093172	-0.40366	231	0.68683	-0.02655	1	0.85209
+default	Actinopterygii	tRNA-Ser(UCN)	rna	A_share	235	46	lambda_1	1	0.052728	0.12521	0.4211	232	0.67407	0.027636	1	0.85209
+default	Actinopterygii	tRNA-Thr	rna	A_share	235	58	lambda_1	1	-0.34545	0.085197	-4.0547	232	6.8552e-05	-0.25725	0.0016453	0.0016453
+default	Actinopterygii	tRNA-Trp	rna	A_share	234	48	lambda_1	1	-0.072866	0.12039	-0.60524	231	0.54561	-0.03979	1	0.85209
+default	Actinopterygii	tRNA-Tyr	rna	A_share	235	56	lambda_1	1	0.13106	0.15097	0.8681	232	0.38624	0.056901	1	0.85209
+default	Actinopterygii	tRNA-Val	rna	A_share	235	53	lambda_1	1	0.0022631	0.085071	0.026603	232	0.9788	0.0017465	1	0.9788
+default	Actinopterygii	ATP6	protein	A_share	235		lambda_ml	0.99999	-0.13903	0.077385	-1.7966	232	0.073699	-0.11714		
+default	Actinopterygii	ATP8	protein	A_share	235		lambda_ml	0.99804	-0.13117	0.10709	-1.2249	232	0.22184	-0.080162		
+default	Actinopterygii	COX1	protein	A_share	235		lambda_ml	0.99548	-0.20542	0.10403	-1.9746	232	0.0495	-0.12856		
+default	Actinopterygii	COX2	protein	A_share	235		lambda_ml	0.99999	-0.036306	0.087901	-0.41303	232	0.67996	-0.027107		
+default	Actinopterygii	COX3	protein	A_share	235		lambda_ml	0.99999	-0.057462	0.090341	-0.63606	232	0.52537	-0.041723		
+default	Actinopterygii	CYTB	protein	A_share	235		lambda_ml	0.99888	0.026548	0.082812	0.32058	232	0.74882	0.021043		
+default	Actinopterygii	ND1	protein	A_share	235		lambda_ml	0.99999	-0.22325	0.072413	-3.0831	232	0.0022966	-0.19839		
+default	Actinopterygii	ND2	protein	A_share	235		lambda_ml	0.99999	-0.12683	0.07102	-1.7858	232	0.075432	-0.11645		
+default	Actinopterygii	ND3	protein	A_share	235		lambda_ml	0.99999	-0.038456	0.091039	-0.42242	232	0.67311	-0.027722		
+default	Actinopterygii	ND4	protein	A_share	235		lambda_ml	0.99999	-0.18885	0.074469	-2.5359	232	0.011872	-0.16423		
+default	Actinopterygii	ND4L	protein	A_share	235		lambda_ml	0.99307	0.028641	0.11558	0.2478	232	0.80451	0.016267		
+default	Actinopterygii	ND5	protein	A_share	235		lambda_ml	0.99817	-0.19421	0.079493	-2.4431	232	0.015308	-0.15837		
+default	Actinopterygii	ND6	protein	A_share	235		lambda_ml	0.98199	-0.14161	0.15755	-0.89888	232	0.36965	-0.058912		
+default	Actinopterygii	rRNA-12S	rna	A_share	235	544	lambda_ml	0.99999	-0.048588	0.081266	-0.59788	232	0.5505	-0.039223	1	0.91852
+default	Actinopterygii	rRNA-16S	rna	A_share	235	1018	lambda_ml	0.95734	-0.062059	0.10382	-0.59775	232	0.55059	-0.039214	1	0.91852
+default	Actinopterygii	tRNA-Ala	rna	A_share	235	49	lambda_ml	0.99999	-0.011419	0.079627	-0.14341	232	0.88609	-0.0094146	1	0.99471
+default	Actinopterygii	tRNA-Arg	rna	A_share	235	50	lambda_ml	0.97786	0.070097	0.10747	0.65226	232	0.51488	0.042783	1	0.91852
+default	Actinopterygii	tRNA-Asn	rna	A_share	235	50	lambda_ml	0.99423	-0.0057878	0.13645	-0.042418	232	0.9662	-0.0027849	1	0.99471
+default	Actinopterygii	tRNA-Asp	rna	A_share	235	60	lambda_ml	0.98878	-0.095511	0.13703	-0.697	232	0.4865	-0.045713	1	0.91852
+default	Actinopterygii	tRNA-Cys	rna	A_share	235	58	lambda_ml	0.972	0.10122	0.17984	0.56286	232	0.57407	0.036928	1	0.91852
+default	Actinopterygii	tRNA-Gln	rna	A_share	235	54	lambda_ml	0.99685	-0.060366	0.10339	-0.58387	232	0.55988	-0.038305	1	0.91852
+default	Actinopterygii	tRNA-Glu	rna	A_share	234	58	lambda_ml	0.84936	0.17604	0.23704	0.74264	231	0.45845	0.048804	1	0.91852
+default	Actinopterygii	tRNA-Gly	rna	A_share	235	42	lambda_ml	0.96809	0.03076	0.17774	0.17307	232	0.86275	0.011362	1	0.99471
+default	Actinopterygii	tRNA-His	rna	A_share	235	48	lambda_ml	0.98825	-0.3191	0.14439	-2.21	232	0.02808	-0.14359	0.67391	0.67391
+default	Actinopterygii	tRNA-Ile	rna	A_share	235	51	lambda_ml	0.9962	-0.11458	0.11267	-1.017	232	0.31023	-0.066619	1	0.91852
+default	Actinopterygii	tRNA-Leu(CUN)	rna	A_share	235	39	lambda_ml	0.89343	-0.074418	0.20501	-0.363	232	0.71693	-0.023825	1	0.94147
+default	Actinopterygii	tRNA-Leu(UUR)	rna	A_share	235	47	lambda_ml	0.99999	0.033419	0.10277	0.32519	232	0.74533	0.021345	1	0.94147
+default	Actinopterygii	tRNA-Lys	rna	A_share	235	48	lambda_ml	0.95927	0.24055	0.1797	1.3387	232	0.18199	0.087549	1	0.91852
+default	Actinopterygii	tRNA-Met	rna	A_share	235	41	lambda_ml	0.99999	0.085088	0.11103	0.76633	232	0.44426	0.050248	1	0.91852
+default	Actinopterygii	tRNA-Phe	rna	A_share	235	55	lambda_ml	0.99018	-0.063232	0.15166	-0.41693	232	0.67711	-0.027363	1	0.94147
+default	Actinopterygii	tRNA-Pro	rna	A_share	234	63	lambda_ml	0.95653	0.0011478	0.17279	0.0066425	231	0.99471	0.00043704	1	0.99471
+default	Actinopterygii	tRNA-Ser(AGY)	rna	A_share	234	58	lambda_ml	0.99999	-0.037601	0.093241	-0.40327	231	0.68713	-0.026524	1	0.94147
+default	Actinopterygii	tRNA-Ser(UCN)	rna	A_share	235	46	lambda_ml	0.94724	-0.010228	0.16967	-0.060283	232	0.95198	-0.0039577	1	0.99471
+default	Actinopterygii	tRNA-Thr	rna	A_share	235	58	lambda_ml	0.99036	-0.18412	0.10634	-1.7314	232	0.084705	-0.11295	1	0.91852
+default	Actinopterygii	tRNA-Trp	rna	A_share	234	48	lambda_ml	0.99999	-0.072949	0.12048	-0.60548	231	0.54545	-0.039806	1	0.91852
+default	Actinopterygii	tRNA-Tyr	rna	A_share	235	56	lambda_ml	0.82702	0.26693	0.20638	1.2934	232	0.19717	0.08461	1	0.91852
+default	Actinopterygii	tRNA-Val	rna	A_share	235	53	lambda_ml	0.98282	0.07062	0.11192	0.63101	232	0.52866	0.041392	1	0.91852
+default	Actinopterygii	ATP6	protein	C_share	235		lambda_1	1	-0.069982	0.090544	-0.77291	232	0.44036	-0.050679		
+default	Actinopterygii	ATP8	protein	C_share	235		lambda_1	1	0.021294	0.10383	0.20508	232	0.83769	0.013463		
+default	Actinopterygii	COX1	protein	C_share	235		lambda_1	1	0.067873	0.10273	0.6607	232	0.50946	0.043336		
+default	Actinopterygii	COX2	protein	C_share	235		lambda_1	1	0.14125	0.11907	1.1862	232	0.23674	0.077645		
+default	Actinopterygii	COX3	protein	C_share	235		lambda_1	1	0.010755	0.10573	0.10172	232	0.91907	0.0066779		
+default	Actinopterygii	CYTB	protein	C_share	235		lambda_1	1	0.089247	0.089728	0.99464	232	0.32095	0.065162		
+default	Actinopterygii	ND1	protein	C_share	235		lambda_1	1	-0.079535	0.10249	-0.77601	232	0.43853	-0.050882		
+default	Actinopterygii	ND2	protein	C_share	235		lambda_1	1	-0.012921	0.078521	-0.16456	232	0.86943	-0.010803		
+default	Actinopterygii	ND3	protein	C_share	235		lambda_1	1	-0.0033644	0.095152	-0.035359	232	0.97182	-0.0023214		
+default	Actinopterygii	ND4	protein	C_share	235		lambda_1	1	0.01909	0.089933	0.21227	232	0.83209	0.013935		
+default	Actinopterygii	ND4L	protein	C_share	235		lambda_1	1	0.17018	0.10235	1.6628	232	0.097704	0.10852		
+default	Actinopterygii	ND5	protein	C_share	235		lambda_1	1	0.029538	0.089954	0.32837	232	0.74293	0.021553		
+default	Actinopterygii	ND6	protein	C_share	235		lambda_1	1	0.23473	0.11262	2.0843	232	0.038227	0.13558		
+default	Actinopterygii	rRNA-12S	rna	C_share	235	544	lambda_1	1	-0.059153	0.075424	-0.78427	232	0.43368	-0.051422	1	0.90684
+default	Actinopterygii	rRNA-16S	rna	C_share	235	1018	lambda_1	1	0.041799	0.10656	0.39226	232	0.69522	0.025745	1	0.90684
+default	Actinopterygii	tRNA-Ala	rna	C_share	235	49	lambda_1	1	0.28912	0.12848	2.2503	232	0.025366	0.14615	0.58342	0.3044
+default	Actinopterygii	tRNA-Arg	rna	C_share	235	50	lambda_1	1	0.055113	0.065072	0.84697	232	0.39789	0.05552	1	0.90684
+default	Actinopterygii	tRNA-Asn	rna	C_share	235	50	lambda_1	1	0.018563	0.14089	0.13175	232	0.8953	0.0086494	1	0.90684
+default	Actinopterygii	tRNA-Asp	rna	C_share	235	60	lambda_1	1	-0.2162	0.10731	-2.0148	232	0.045082	-0.13113	0.99181	0.36066
+default	Actinopterygii	tRNA-Cys	rna	C_share	235	58	lambda_1	1	0.59441	0.19024	3.1245	232	0.002008	0.20095	0.048192	0.048192
+default	Actinopterygii	tRNA-Gln	rna	C_share	235	54	lambda_1	1	0.12964	0.088553	1.464	232	0.14455	0.095674	1	0.52744
+default	Actinopterygii	tRNA-Glu	rna	C_share	234	58	lambda_1	1	-0.061799	0.12863	-0.48042	231	0.63138	-0.031594	1	0.90684
+default	Actinopterygii	tRNA-Gly	rna	C_share	235	42	lambda_1	1	-0.018319	0.1321	-0.13867	232	0.88983	-0.0091041	1	0.90684
+default	Actinopterygii	tRNA-His	rna	C_share	235	48	lambda_1	1	0.14048	0.1421	0.98859	232	0.32389	0.064768	1	0.90684
+default	Actinopterygii	tRNA-Ile	rna	C_share	235	51	lambda_1	1	0.010984	0.09376	0.11715	232	0.90684	0.007691	1	0.90684
+default	Actinopterygii	tRNA-Leu(CUN)	rna	C_share	235	39	lambda_1	1	0.033248	0.098489	0.33759	232	0.73598	0.022158	1	0.90684
+default	Actinopterygii	tRNA-Leu(UUR)	rna	C_share	235	47	lambda_1	1	-0.040204	0.094514	-0.42537	232	0.67096	-0.027916	1	0.90684
+default	Actinopterygii	tRNA-Lys	rna	C_share	235	48	lambda_1	1	-0.026881	0.125	-0.21504	232	0.82993	-0.014117	1	0.90684
+default	Actinopterygii	tRNA-Met	rna	C_share	235	41	lambda_1	1	-0.11993	0.083819	-1.4308	232	0.15384	-0.093524	1	0.52744
+default	Actinopterygii	tRNA-Phe	rna	C_share	235	55	lambda_1	1	0.14525	0.10058	1.4441	232	0.15005	0.094388	1	0.52744
+default	Actinopterygii	tRNA-Pro	rna	C_share	234	63	lambda_1	1	0.086147	0.19774	0.43565	231	0.6635	0.028652	1	0.90684
+default	Actinopterygii	tRNA-Ser(AGY)	rna	C_share	234	58	lambda_1	1	0.053347	0.083104	0.64192	231	0.52156	0.042198	1	0.90684
+default	Actinopterygii	tRNA-Ser(UCN)	rna	C_share	235	46	lambda_1	1	0.048124	0.15732	0.3059	232	0.75996	0.020079	1	0.90684
+default	Actinopterygii	tRNA-Thr	rna	C_share	235	58	lambda_1	1	-0.17344	0.1085	-1.5986	232	0.11127	-0.10438	1	0.52744
+default	Actinopterygii	tRNA-Trp	rna	C_share	234	48	lambda_1	1	-0.032222	0.10738	-0.30008	231	0.76439	-0.01974	1	0.90684
+default	Actinopterygii	tRNA-Tyr	rna	C_share	235	56	lambda_1	1	0.092296	0.17939	0.5145	232	0.60739	0.033759	1	0.90684
+default	Actinopterygii	tRNA-Val	rna	C_share	235	53	lambda_1	1	-0.024703	0.099453	-0.24839	232	0.80405	-0.016306	1	0.90684
+default	Actinopterygii	ATP6	protein	C_share	235		lambda_ml	0.99999	-0.0701	0.090611	-0.77364	232	0.43993	-0.050727		
+default	Actinopterygii	ATP8	protein	C_share	235		lambda_ml	0.99999	0.02129	0.10391	0.20489	232	0.83784	0.01345		
+default	Actinopterygii	COX1	protein	C_share	235		lambda_ml	0.99999	0.067842	0.10281	0.6599	232	0.50997	0.043284		
+default	Actinopterygii	COX2	protein	C_share	235		lambda_ml	0.99813	0.15839	0.13393	1.1827	232	0.23815	0.077413		
+default	Actinopterygii	COX3	protein	C_share	235		lambda_ml	0.99999	0.010987	0.10581	0.10384	232	0.91739	0.006817		
+default	Actinopterygii	CYTB	protein	C_share	235		lambda_ml	0.99999	0.089251	0.089795	0.99394	232	0.32129	0.065117		
+default	Actinopterygii	ND1	protein	C_share	235		lambda_ml	0.99999	-0.079797	0.10257	-0.778	232	0.43736	-0.051012		
+default	Actinopterygii	ND2	protein	C_share	235		lambda_ml	0.99999	-0.012759	0.07858	-0.16237	232	0.87115	-0.01066		
+default	Actinopterygii	ND3	protein	C_share	235		lambda_ml	1	-0.0033586	0.095196	-0.035281	232	0.97189	-0.0023163		
+default	Actinopterygii	ND4	protein	C_share	235		lambda_ml	0.99999	0.019008	0.090001	0.2112	232	0.83291	0.013865		
+default	Actinopterygii	ND4L	protein	C_share	235		lambda_ml	0.97987	-0.073601	0.13364	-0.55073	232	0.58235	-0.036133		
+default	Actinopterygii	ND5	protein	C_share	235		lambda_ml	0.99999	0.029498	0.090021	0.32768	232	0.74345	0.021508		
+default	Actinopterygii	ND6	protein	C_share	235		lambda_ml	0.9965	0.35855	0.13197	2.7169	232	0.0070864	0.1756		
+default	Actinopterygii	rRNA-12S	rna	C_share	235	544	lambda_ml	0.99999	-0.059241	0.07548	-0.78485	232	0.43334	-0.05146	1	0.89363
+default	Actinopterygii	rRNA-16S	rna	C_share	235	1018	lambda_ml	0.96525	0.064076	0.13043	0.49128	232	0.62369	0.032237	1	0.89861
+default	Actinopterygii	tRNA-Ala	rna	C_share	235	49	lambda_ml	0.99213	0.28299	0.16017	1.7669	232	0.078566	0.11523	1	0.47563
+default	Actinopterygii	tRNA-Arg	rna	C_share	235	50	lambda_ml	0.99999	0.055184	0.06512	0.84741	232	0.39764	0.05555	1	0.89363
+default	Actinopterygii	tRNA-Asn	rna	C_share	235	50	lambda_ml	0.96912	0.04055	0.18704	0.2168	232	0.82855	0.014232	1	0.89861
+default	Actinopterygii	tRNA-Asp	rna	C_share	235	60	lambda_ml	0.99595	-0.24085	0.12754	-1.8884	232	0.060225	-0.12304	1	0.47563
+default	Actinopterygii	tRNA-Cys	rna	C_share	235	58	lambda_ml	0.6468	0.43088	0.20313	2.1212	232	0.03497	0.13793	0.83927	0.47563
+default	Actinopterygii	tRNA-Gln	rna	C_share	235	54	lambda_ml	0.96491	0.16587	0.11473	1.4458	232	0.14959	0.094494	1	0.47563
+default	Actinopterygii	tRNA-Glu	rna	C_share	234	58	lambda_ml	0.84542	-0.24364	0.17224	-1.4146	231	0.15854	-0.092671	1	0.47563
+default	Actinopterygii	tRNA-Gly	rna	C_share	235	42	lambda_ml	0.99429	-0.02661	0.16123	-0.16504	232	0.86905	-0.010835	1	0.89861
+default	Actinopterygii	tRNA-His	rna	C_share	235	48	lambda_ml	0.97684	0.17837	0.19121	0.93286	232	0.35186	0.061131	1	0.89363
+default	Actinopterygii	tRNA-Ile	rna	C_share	235	51	lambda_ml	0.99418	0.03283	0.11441	0.28696	232	0.7744	0.018836	1	0.89861
+default	Actinopterygii	tRNA-Leu(CUN)	rna	C_share	235	39	lambda_ml	0.99584	0.014983	0.11746	0.12756	232	0.89861	0.0083741	1	0.89861
+default	Actinopterygii	tRNA-Leu(UUR)	rna	C_share	235	47	lambda_ml	0.99777	-0.0745	0.1076	-0.6924	232	0.48938	-0.045411	1	0.89363
+default	Actinopterygii	tRNA-Lys	rna	C_share	235	48	lambda_ml	0.99686	-0.067525	0.14579	-0.46317	232	0.64368	-0.030395	1	0.89861
+default	Actinopterygii	tRNA-Met	rna	C_share	235	41	lambda_ml	0.99999	-0.11997	0.083881	-1.4303	232	0.15398	-0.093491	1	0.47563
+default	Actinopterygii	tRNA-Phe	rna	C_share	235	55	lambda_ml	0.99999	0.14539	0.10065	1.4445	232	0.14995	0.094413	1	0.47563
+default	Actinopterygii	tRNA-Pro	rna	C_share	234	63	lambda_ml	0.82585	0.17351	0.24499	0.70822	231	0.47952	0.046547	1	0.89363
+default	Actinopterygii	tRNA-Ser(AGY)	rna	C_share	234	58	lambda_ml	0.99999	0.053422	0.083168	0.64235	231	0.52128	0.042226	1	0.89363
+default	Actinopterygii	tRNA-Ser(UCN)	rna	C_share	235	46	lambda_ml	0.8283	-0.054372	0.18927	-0.28727	232	0.77416	-0.018857	1	0.89861
+default	Actinopterygii	tRNA-Thr	rna	C_share	235	58	lambda_ml	0.99999	-0.17361	0.10857	-1.599	232	0.11117	-0.10441	1	0.47563
+default	Actinopterygii	tRNA-Trp	rna	C_share	234	48	lambda_ml	0.99389	-0.019447	0.13167	-0.14769	231	0.88271	-0.0097171	1	0.89861
+default	Actinopterygii	tRNA-Tyr	rna	C_share	235	56	lambda_ml	0.64395	-0.030834	0.21708	-0.14204	232	0.88717	-0.0093249	1	0.89861
+default	Actinopterygii	tRNA-Val	rna	C_share	235	53	lambda_ml	0.99999	-0.024761	0.099528	-0.24879	232	0.80374	-0.016332	1	0.89861
+default	Actinopterygii	ATP6	protein	G_share	235		lambda_1	1	0.27039	0.13035	2.0744	232	0.039144	0.13495		
+default	Actinopterygii	ATP8	protein	G_share	235		lambda_1	1	0.34601	0.13004	2.6608	232	0.00834	0.17208		
+default	Actinopterygii	COX1	protein	G_share	235		lambda_1	1	0.12574	0.12896	0.97499	232	0.33058	0.06388		
+default	Actinopterygii	COX2	protein	G_share	235		lambda_1	1	-0.046835	0.12726	-0.36802	232	0.7132	-0.024154		
+default	Actinopterygii	COX3	protein	G_share	235		lambda_1	1	0.031074	0.13642	0.22778	232	0.82002	0.014953		
+default	Actinopterygii	CYTB	protein	G_share	235		lambda_1	1	-0.1744	0.11469	-1.5206	232	0.12973	-0.099337		
+default	Actinopterygii	ND1	protein	G_share	235		lambda_1	1	0.42878	0.10571	4.056	232	6.8211e-05	0.25732		
+default	Actinopterygii	ND2	protein	G_share	235		lambda_1	1	0.27411	0.11216	2.444	232	0.015272	0.15843		
+default	Actinopterygii	ND3	protein	G_share	235		lambda_1	1	0.10471	0.14315	0.73148	232	0.46522	0.047969		
+default	Actinopterygii	ND4	protein	G_share	235		lambda_1	1	0.38075	0.11005	3.4597	232	0.00064334	0.2215		
+default	Actinopterygii	ND4L	protein	G_share	235		lambda_1	1	-0.10694	0.1292	-0.8277	232	0.40869	-0.054261		
+default	Actinopterygii	ND5	protein	G_share	235		lambda_1	1	0.28436	0.10926	2.6025	232	0.0098516	0.16842		
+default	Actinopterygii	ND6	protein	G_share	235		lambda_1	1	0.00053431	0.10147	0.0052655	232	0.9958	0.00034569		
+default	Actinopterygii	rRNA-12S	rna	G_share	235	544	lambda_1	1	0.10168	0.096595	1.0526	232	0.29361	0.068943	1	0.95705
+default	Actinopterygii	rRNA-16S	rna	G_share	235	1018	lambda_1	1	0.079991	0.09259	0.86393	232	0.38852	0.056629	1	0.95705
+default	Actinopterygii	tRNA-Ala	rna	G_share	235	49	lambda_1	1	0.029737	0.10023	0.29668	232	0.76698	0.019474	1	0.95705
+default	Actinopterygii	tRNA-Arg	rna	G_share	235	50	lambda_1	1	-0.034243	0.10229	-0.33476	232	0.73811	-0.021973	1	0.95705
+default	Actinopterygii	tRNA-Asn	rna	G_share	235	50	lambda_1	1	-0.044563	0.1286	-0.34651	232	0.72927	-0.022744	1	0.95705
+default	Actinopterygii	tRNA-Asp	rna	G_share	235	60	lambda_1	1	0.19956	0.093965	2.1238	232	0.034745	0.1381	0.7644	0.27796
+default	Actinopterygii	tRNA-Cys	rna	G_share	235	58	lambda_1	1	-0.32432	0.21119	-1.5357	232	0.12599	-0.10031	1	0.60473
+default	Actinopterygii	tRNA-Gln	rna	G_share	235	54	lambda_1	1	-0.069413	0.092291	-0.75211	232	0.45275	-0.049318	1	0.95705
+default	Actinopterygii	tRNA-Glu	rna	G_share	234	58	lambda_1	1	-0.045973	0.16351	-0.28115	231	0.77884	-0.018495	1	0.95705
+default	Actinopterygii	tRNA-Gly	rna	G_share	235	42	lambda_1	1	0.0053703	0.11431	0.046981	232	0.96257	0.0030844	1	0.98371
+default	Actinopterygii	tRNA-His	rna	G_share	235	48	lambda_1	1	0.22413	0.11248	1.9927	232	0.047469	0.12972	0.99685	0.28481
+default	Actinopterygii	tRNA-Ile	rna	G_share	235	51	lambda_1	1	0.23447	0.10874	2.1562	232	0.032098	0.14016	0.73825	0.27796
+default	Actinopterygii	tRNA-Leu(CUN)	rna	G_share	235	39	lambda_1	1	0.096614	0.11858	0.81479	232	0.41603	0.053417	1	0.95705
+default	Actinopterygii	tRNA-Leu(UUR)	rna	G_share	235	47	lambda_1	1	-0.0022909	0.11208	-0.02044	232	0.98371	-0.001342	1	0.98371
+default	Actinopterygii	tRNA-Lys	rna	G_share	235	48	lambda_1	1	-0.020765	0.14714	-0.14112	232	0.8879	-0.0092645	1	0.98371
+default	Actinopterygii	tRNA-Met	rna	G_share	235	41	lambda_1	1	-0.061232	0.101	-0.60623	232	0.54496	-0.039769	1	0.95705
+default	Actinopterygii	tRNA-Phe	rna	G_share	235	55	lambda_1	1	0.058292	0.1302	0.44773	232	0.65477	0.029382	1	0.95705
+default	Actinopterygii	tRNA-Pro	rna	G_share	234	63	lambda_1	1	-0.061264	0.16063	-0.38139	231	0.70327	-0.025085	1	0.95705
+default	Actinopterygii	tRNA-Ser(AGY)	rna	G_share	234	58	lambda_1	1	-0.0096787	0.10721	-0.090276	231	0.92815	-0.0059396	1	0.98371
+default	Actinopterygii	tRNA-Ser(UCN)	rna	G_share	235	46	lambda_1	1	-0.084416	0.19479	-0.43337	232	0.66515	-0.028441	1	0.95705
+default	Actinopterygii	tRNA-Thr	rna	G_share	235	58	lambda_1	1	0.39912	0.08684	4.596	232	7.0744e-06	0.28888	0.00016979	0.00016979
+default	Actinopterygii	tRNA-Trp	rna	G_share	234	48	lambda_1	1	0.11936	0.10683	1.1173	231	0.26504	0.073313	1	0.95705
+default	Actinopterygii	tRNA-Tyr	rna	G_share	235	56	lambda_1	1	-0.10628	0.16007	-0.66398	232	0.50736	-0.043551	1	0.95705
+default	Actinopterygii	tRNA-Val	rna	G_share	235	53	lambda_1	1	-0.021975	0.085563	-0.25683	232	0.79754	-0.016859	1	0.95705
+default	Actinopterygii	ATP6	protein	G_share	235		lambda_ml	0.99407	0.19767	0.15935	1.2405	232	0.21604	0.081175		
+default	Actinopterygii	ATP8	protein	G_share	235		lambda_ml	0.99524	0.29278	0.15587	1.8784	232	0.061586	0.12239		
+default	Actinopterygii	COX1	protein	G_share	235		lambda_ml	0.97463	0.42849	0.1738	2.4654	232	0.014412	0.15978		
+default	Actinopterygii	COX2	protein	G_share	235		lambda_ml	0.99999	-0.046787	0.12736	-0.36737	232	0.71368	-0.024112		
+default	Actinopterygii	COX3	protein	G_share	235		lambda_ml	0.99354	0.089853	0.16831	0.53384	232	0.59396	0.035027		
+default	Actinopterygii	CYTB	protein	G_share	235		lambda_ml	0.99467	0.03662	0.13828	0.26482	232	0.79138	0.017384		
+default	Actinopterygii	ND1	protein	G_share	235		lambda_ml	0.99872	0.44415	0.11611	3.8251	232	0.00016806	0.24357		
+default	Actinopterygii	ND2	protein	G_share	235		lambda_ml	0.99601	0.39633	0.13269	2.9868	232	0.0031216	0.19243		
+default	Actinopterygii	ND3	protein	G_share	235		lambda_ml	0.9738	0.12873	0.19468	0.66124	232	0.50912	0.043372		
+default	Actinopterygii	ND4	protein	G_share	235		lambda_ml	0.99735	0.44777	0.12664	3.5358	232	0.00049067	0.22613		
+default	Actinopterygii	ND4L	protein	G_share	235		lambda_ml	0.96169	0.14545	0.17739	0.81995	232	0.41309	0.053754		
+default	Actinopterygii	ND5	protein	G_share	235		lambda_ml	0.9889	0.42603	0.13884	3.0685	232	0.0024074	0.19749		
+default	Actinopterygii	ND6	protein	G_share	235		lambda_ml	0.9889	-0.033165	0.12963	-0.25585	232	0.7983	-0.016795		
+default	Actinopterygii	rRNA-12S	rna	G_share	235	544	lambda_ml	0.99999	0.10181	0.096667	1.0532	232	0.29336	0.068979	1	0.7823
+default	Actinopterygii	rRNA-16S	rna	G_share	235	1018	lambda_ml	0.97283	0.20359	0.11646	1.7482	232	0.081756	0.11402	1	0.32702
+default	Actinopterygii	tRNA-Ala	rna	G_share	235	49	lambda_ml	0.99999	0.029779	0.10031	0.29688	232	0.76683	0.019487	1	0.92756
+default	Actinopterygii	tRNA-Arg	rna	G_share	235	50	lambda_ml	0.99183	-0.050016	0.12812	-0.39038	232	0.69661	-0.025621	1	0.92756
+default	Actinopterygii	tRNA-Asn	rna	G_share	235	50	lambda_ml	0.98118	-0.024594	0.16669	-0.14754	232	0.88283	-0.0096861	1	0.92756
+default	Actinopterygii	tRNA-Asp	rna	G_share	235	60	lambda_ml	0.99333	0.25412	0.11515	2.2068	232	0.028306	0.14339	0.62273	0.22645
+default	Actinopterygii	tRNA-Cys	rna	G_share	235	58	lambda_ml	0.64716	-0.41782	0.22456	-1.8606	232	0.064063	-0.12125	1	0.3075
+default	Actinopterygii	tRNA-Gln	rna	G_share	235	54	lambda_ml	0.97382	-0.146	0.11743	-1.2433	232	0.21502	-0.081355	1	0.64505
+default	Actinopterygii	tRNA-Glu	rna	G_share	234	58	lambda_ml	0.92186	-0.17206	0.22131	-0.77745	231	0.43769	-0.051086	1	0.87098
+default	Actinopterygii	tRNA-Gly	rna	G_share	235	42	lambda_ml	0.96073	0.11285	0.15656	0.72076	232	0.47178	0.047268	1	0.87098
+default	Actinopterygii	tRNA-His	rna	G_share	235	48	lambda_ml	0.98967	0.32803	0.14316	2.2914	232	0.022836	0.14877	0.54806	0.22645
+default	Actinopterygii	tRNA-Ile	rna	G_share	235	51	lambda_ml	0.99892	0.26821	0.11824	2.2684	232	0.024225	0.1473	0.55717	0.22645
+default	Actinopterygii	tRNA-Leu(CUN)	rna	G_share	235	39	lambda_ml	0.99999	0.096754	0.11866	0.81538	232	0.41569	0.053456	1	0.87098
+default	Actinopterygii	tRNA-Leu(UUR)	rna	G_share	235	47	lambda_ml	0.97812	-0.017429	0.1481	-0.11768	232	0.90642	-0.0077261	1	0.92756
+default	Actinopterygii	tRNA-Lys	rna	G_share	235	48	lambda_ml	0.95409	-0.10418	0.19708	-0.52863	232	0.59757	-0.034685	1	0.92756
+default	Actinopterygii	tRNA-Met	rna	G_share	235	41	lambda_ml	0.99999	-0.061243	0.10108	-0.60589	232	0.54518	-0.039747	1	0.92756
+default	Actinopterygii	tRNA-Phe	rna	G_share	235	55	lambda_ml	0.98106	0.019826	0.17217	0.11515	232	0.90842	0.0075601	1	0.92756
+default	Actinopterygii	tRNA-Pro	rna	G_share	234	63	lambda_ml	0.95598	0.024186	0.19989	0.121	231	0.9038	0.0079609	1	0.92756
+default	Actinopterygii	tRNA-Ser(AGY)	rna	G_share	234	58	lambda_ml	0.99999	-0.0097655	0.10729	-0.091019	231	0.92756	-0.0059885	1	0.92756
+default	Actinopterygii	tRNA-Ser(UCN)	rna	G_share	235	46	lambda_ml	0.74068	0.070821	0.22464	0.31526	232	0.75285	0.020693	1	0.92756
+default	Actinopterygii	tRNA-Thr	rna	G_share	235	58	lambda_ml	0.98711	0.21458	0.11029	1.9457	232	0.052904	0.12671	1	0.3075
+default	Actinopterygii	tRNA-Trp	rna	G_share	234	48	lambda_ml	0.99286	0.16881	0.1325	1.274	231	0.20393	0.083532	1	0.64505
+default	Actinopterygii	tRNA-Tyr	rna	G_share	235	56	lambda_ml	0.66096	-0.16192	0.19801	-0.81776	232	0.41433	-0.053611	1	0.87098
+default	Actinopterygii	tRNA-Val	rna	G_share	235	53	lambda_ml	0.99999	-0.022015	0.085617	-0.25714	232	0.7973	-0.016879	1	0.92756
+default	Actinopterygii	ATP6	protein	T_share	235		lambda_1	1	0.10139	0.10596	0.95686	232	0.33963	0.062698		
+default	Actinopterygii	ATP8	protein	T_share	235		lambda_1	1	-0.072934	0.13226	-0.55145	232	0.58185	-0.036181		
+default	Actinopterygii	COX1	protein	T_share	235		lambda_1	1	-0.037743	0.10464	-0.36068	232	0.71866	-0.023673		
+default	Actinopterygii	COX2	protein	T_share	235		lambda_1	1	-0.075962	0.10688	-0.71073	232	0.47797	-0.046611		
+default	Actinopterygii	COX3	protein	T_share	235		lambda_1	1	0.031917	0.10944	0.29163	232	0.77083	0.019143		
+default	Actinopterygii	CYTB	protein	T_share	235		lambda_1	1	-0.085261	0.097022	-0.87878	232	0.38043	-0.057599		
+default	Actinopterygii	ND1	protein	T_share	235		lambda_1	1	0.06057	0.09114	0.66457	232	0.50698	0.04359		
+default	Actinopterygii	ND2	protein	T_share	235		lambda_1	1	0.012224	0.080726	0.15143	232	0.87977	0.0099411		
+default	Actinopterygii	ND3	protein	T_share	235		lambda_1	1	-0.019395	0.12328	-0.15733	232	0.87512	-0.010328		
+default	Actinopterygii	ND4	protein	T_share	235		lambda_1	1	-0.044896	0.092542	-0.48514	232	0.62804	-0.031835		
+default	Actinopterygii	ND4L	protein	T_share	235		lambda_1	1	-0.14341	0.11412	-1.2567	232	0.21013	-0.082226		
+default	Actinopterygii	ND5	protein	T_share	235		lambda_1	1	-0.029936	0.098105	-0.30514	232	0.76053	-0.02003		
+default	Actinopterygii	ND6	protein	T_share	235		lambda_1	1	-0.10358	0.096954	-1.0683	232	0.28648	-0.069967		
+default	Actinopterygii	rRNA-12S	rna	T_share	235	544	lambda_1	1	0.04582	0.07261	0.63104	232	0.52864	0.041394	1	0.96357
+default	Actinopterygii	rRNA-16S	rna	T_share	235	1018	lambda_1	1	-0.046694	0.090023	-0.51868	232	0.60448	-0.034034	1	0.96357
+default	Actinopterygii	tRNA-Ala	rna	T_share	235	49	lambda_1	1	-0.28369	0.13751	-2.063	232	0.040224	-0.13422	0.92515	0.48269
+default	Actinopterygii	tRNA-Arg	rna	T_share	235	50	lambda_1	1	-0.09366	0.08033	-1.1659	232	0.24483	-0.076325	1	0.96357
+default	Actinopterygii	tRNA-Asn	rna	T_share	235	50	lambda_1	1	0.011003	0.14165	0.077676	232	0.93815	0.0050996	1	0.99639
+default	Actinopterygii	tRNA-Asp	rna	T_share	235	60	lambda_1	1	0.038633	0.095654	0.40389	232	0.68667	0.026507	1	0.96941
+default	Actinopterygii	tRNA-Cys	rna	T_share	235	58	lambda_1	1	-0.24723	0.10452	-2.3655	232	0.01883	-0.15346	0.45191	0.45191
+default	Actinopterygii	tRNA-Gln	rna	T_share	235	54	lambda_1	1	-0.0045565	0.11673	-0.039033	232	0.9689	-0.0025626	1	0.99639
+default	Actinopterygii	tRNA-Glu	rna	T_share	234	58	lambda_1	1	0.043318	0.14169	0.30572	231	0.76009	0.020111	1	0.99639
+default	Actinopterygii	tRNA-Gly	rna	T_share	235	42	lambda_1	1	-0.058039	0.11927	-0.48664	232	0.62698	-0.031933	1	0.96357
+default	Actinopterygii	tRNA-His	rna	T_share	235	48	lambda_1	1	-0.12225	0.14601	-0.83728	232	0.4033	-0.054887	1	0.96357
+default	Actinopterygii	tRNA-Ile	rna	T_share	235	51	lambda_1	1	-0.12296	0.097597	-1.2599	232	0.20898	-0.082433	1	0.96357
+default	Actinopterygii	tRNA-Leu(CUN)	rna	T_share	235	39	lambda_1	1	0.064522	0.13659	0.47239	232	0.63709	0.030999	1	0.96357
+default	Actinopterygii	tRNA-Leu(UUR)	rna	T_share	235	47	lambda_1	1	0.014269	0.1132	0.12605	232	0.8998	0.0082753	1	0.99639
+default	Actinopterygii	tRNA-Lys	rna	T_share	235	48	lambda_1	1	-0.061542	0.13235	-0.46498	232	0.64238	-0.030513	1	0.96357
+default	Actinopterygii	tRNA-Met	rna	T_share	235	41	lambda_1	1	0.08355	0.079886	1.0459	232	0.29671	0.068503	1	0.96357
+default	Actinopterygii	tRNA-Phe	rna	T_share	235	55	lambda_1	1	-0.13007	0.10532	-1.235	232	0.21809	-0.080815	1	0.96357
+default	Actinopterygii	tRNA-Pro	rna	T_share	234	63	lambda_1	1	-0.1107	0.18434	-0.60051	231	0.54875	-0.03948	1	0.96357
+default	Actinopterygii	tRNA-Ser(AGY)	rna	T_share	234	58	lambda_1	1	-0.015003	0.078103	-0.19209	231	0.84784	-0.012638	1	0.99639
+default	Actinopterygii	tRNA-Ser(UCN)	rna	T_share	235	46	lambda_1	1	-0.022778	0.1182	-0.19271	232	0.84736	-0.012651	1	0.99639
+default	Actinopterygii	tRNA-Thr	rna	T_share	235	58	lambda_1	1	0.14583	0.10025	1.4546	232	0.14713	0.095067	1	0.96357
+default	Actinopterygii	tRNA-Trp	rna	T_share	234	48	lambda_1	1	0.00056237	0.12423	0.0045269	231	0.99639	0.00029785	1	0.99639
+default	Actinopterygii	tRNA-Tyr	rna	T_share	235	56	lambda_1	1	-0.076203	0.12339	-0.61758	232	0.53746	-0.040513	1	0.96357
+default	Actinopterygii	tRNA-Val	rna	T_share	235	53	lambda_1	1	0.042853	0.091011	0.47086	232	0.63818	0.030899	1	0.96357
+default	Actinopterygii	ATP6	protein	T_share	235		lambda_ml	0.99999	0.10154	0.10604	0.95754	232	0.33929	0.062741		
+default	Actinopterygii	ATP8	protein	T_share	235		lambda_ml	0.99999	-0.072982	0.13236	-0.5514	232	0.58189	-0.036177		
+default	Actinopterygii	COX1	protein	T_share	235		lambda_ml	0.99999	-0.037676	0.10472	-0.35977	232	0.71935	-0.023614		
+default	Actinopterygii	COX2	protein	T_share	235		lambda_ml	0.99999	-0.076048	0.10696	-0.71101	232	0.47779	-0.046629		
+default	Actinopterygii	COX3	protein	T_share	235		lambda_ml	0.99999	0.031722	0.10952	0.28964	232	0.77235	0.019013		
+default	Actinopterygii	CYTB	protein	T_share	235		lambda_ml	0.99999	-0.085243	0.097094	-0.87794	232	0.38089	-0.057544		
+default	Actinopterygii	ND1	protein	T_share	235		lambda_ml	0.99999	0.060786	0.091207	0.66646	232	0.50578	0.043714		
+default	Actinopterygii	ND2	protein	T_share	235		lambda_ml	0.99999	0.012037	0.080787	0.149	232	0.88169	0.0097817		
+default	Actinopterygii	ND3	protein	T_share	235		lambda_ml	0.97531	-0.11582	0.16523	-0.70098	232	0.48402	-0.045973		
+default	Actinopterygii	ND4	protein	T_share	235		lambda_ml	0.99999	-0.044828	0.092611	-0.48405	232	0.62881	-0.031763		
+default	Actinopterygii	ND4L	protein	T_share	235		lambda_ml	0.99063	-0.0027261	0.14407	-0.018922	232	0.98492	-0.0012423		
+default	Actinopterygii	ND5	protein	T_share	235		lambda_ml	0.99999	-0.029891	0.098178	-0.30445	232	0.76105	-0.019984		
+default	Actinopterygii	ND6	protein	T_share	235		lambda_ml	0.99931	-0.13203	0.10307	-1.281	232	0.20149	-0.083803		
+default	Actinopterygii	rRNA-12S	rna	T_share	235	544	lambda_ml	0.99999	0.045872	0.072664	0.63129	232	0.52847	0.04141	1	0.85672
+default	Actinopterygii	rRNA-16S	rna	T_share	235	1018	lambda_ml	0.96692	-0.14695	0.11154	-1.3174	232	0.189	-0.086171	1	0.73843
+default	Actinopterygii	tRNA-Ala	rna	T_share	235	49	lambda_ml	0.98929	-0.28906	0.17529	-1.6491	232	0.10049	-0.10764	1	0.73843
+default	Actinopterygii	tRNA-Arg	rna	T_share	235	50	lambda_ml	0.99999	-0.093771	0.08039	-1.1664	232	0.24463	-0.076358	1	0.73843
+default	Actinopterygii	tRNA-Asn	rna	T_share	235	50	lambda_ml	0.97555	0.011211	0.18784	0.059685	232	0.95246	0.0039185	1	0.99387
+default	Actinopterygii	tRNA-Asp	rna	T_share	235	60	lambda_ml	0.99999	0.03867	0.095725	0.40397	232	0.6866	0.026513	1	0.86729
+default	Actinopterygii	tRNA-Cys	rna	T_share	235	58	lambda_ml	0.97107	-0.39397	0.14004	-2.8134	232	0.0053228	-0.18163	0.12775	0.12775
+default	Actinopterygii	tRNA-Gln	rna	T_share	235	54	lambda_ml	0.93726	-0.048004	0.14177	-0.33861	232	0.73521	-0.022225	1	0.88225
+default	Actinopterygii	tRNA-Glu	rna	T_share	234	58	lambda_ml	0.87243	0.20197	0.18501	1.0917	231	0.2761	0.071644	1	0.73843
+default	Actinopterygii	tRNA-Gly	rna	T_share	235	42	lambda_ml	0.98396	-0.085681	0.15657	-0.54723	232	0.58475	-0.035904	1	0.85672
+default	Actinopterygii	tRNA-His	rna	T_share	235	48	lambda_ml	0.98667	-0.16014	0.19109	-0.83806	232	0.40286	-0.054939	1	0.85672
+default	Actinopterygii	tRNA-Ile	rna	T_share	235	51	lambda_ml	0.99485	-0.14868	0.1179	-1.261	232	0.20856	-0.082509	1	0.73843
+default	Actinopterygii	tRNA-Leu(CUN)	rna	T_share	235	39	lambda_ml	0.85794	0.11819	0.18307	0.64559	232	0.51918	0.042347	1	0.85672
+default	Actinopterygii	tRNA-Leu(UUR)	rna	T_share	235	47	lambda_ml	0.99911	0.026078	0.12185	0.21403	232	0.83071	0.01405	1	0.92481
+default	Actinopterygii	tRNA-Lys	rna	T_share	235	48	lambda_ml	1	-0.061547	0.13243	-0.46476	232	0.64254	-0.030499	1	0.85672
+default	Actinopterygii	tRNA-Met	rna	T_share	235	41	lambda_ml	0.99999	0.083562	0.079946	1.0452	232	0.297	0.068462	1	0.73843
+default	Actinopterygii	tRNA-Phe	rna	T_share	235	55	lambda_ml	0.99999	-0.13019	0.1054	-1.2352	232	0.21801	-0.080828	1	0.73843
+default	Actinopterygii	tRNA-Pro	rna	T_share	234	63	lambda_ml	0.82739	-0.22606	0.22111	-1.0224	231	0.30768	-0.067115	1	0.73843
+default	Actinopterygii	tRNA-Ser(AGY)	rna	T_share	234	58	lambda_ml	0.99999	-0.015025	0.078163	-0.19222	231	0.84774	-0.012646	1	0.92481
+default	Actinopterygii	tRNA-Ser(UCN)	rna	T_share	235	46	lambda_ml	0.95502	0.10341	0.15719	0.65789	232	0.51126	0.043152	1	0.85672
+default	Actinopterygii	tRNA-Thr	rna	T_share	235	58	lambda_ml	0.99999	0.14596	0.10033	1.4549	232	0.14705	0.095086	1	0.73843
+default	Actinopterygii	tRNA-Trp	rna	T_share	234	48	lambda_ml	0.99999	0.00055028	0.12432	0.0044263	231	0.99647	0.00029123	1	0.99647
+default	Actinopterygii	tRNA-Tyr	rna	T_share	235	56	lambda_ml	0.89994	-0.082527	0.16827	-0.49044	232	0.62429	-0.032182	1	0.85672
+default	Actinopterygii	tRNA-Val	rna	T_share	235	53	lambda_ml	0.99999	0.042908	0.09108	0.4711	232	0.63801	0.030914	1	0.85672
+default	Actinopterygii	ATP6	protein	at_skew	235		lambda_1	1	-0.16984	0.085875	-1.9778	232	0.049137	-0.12877		
+default	Actinopterygii	ATP8	protein	at_skew	235		lambda_1	1	-0.060145	0.12237	-0.49151	232	0.62353	-0.032252		
+default	Actinopterygii	COX1	protein	at_skew	235		lambda_1	1	-0.057095	0.086532	-0.65982	232	0.51003	-0.043278		
+default	Actinopterygii	COX2	protein	at_skew	235		lambda_1	1	0.020665	0.086347	0.23932	232	0.81107	0.01571		
+default	Actinopterygii	COX3	protein	at_skew	235		lambda_1	1	-0.054211	0.093582	-0.57929	232	0.56296	-0.038005		
+default	Actinopterygii	CYTB	protein	at_skew	235		lambda_1	1	0.099558	0.075777	1.3138	232	0.1902	0.085938		
+default	Actinopterygii	ND1	protein	at_skew	235		lambda_1	1	-0.18417	0.067562	-2.7259	232	0.0069012	-0.17617		
+default	Actinopterygii	ND2	protein	at_skew	235		lambda_1	1	-0.10001	0.069065	-1.448	232	0.14897	-0.094639		
+default	Actinopterygii	ND3	protein	at_skew	235		lambda_1	1	-0.024867	0.099686	-0.24945	232	0.80323	-0.016375		
+default	Actinopterygii	ND4	protein	at_skew	235		lambda_1	1	-0.10793	0.072233	-1.4942	232	0.13647	-0.097632		
+default	Actinopterygii	ND4L	protein	at_skew	235		lambda_1	1	0.083702	0.093945	0.89097	232	0.37387	0.058395		
+default	Actinopterygii	ND5	protein	at_skew	235		lambda_1	1	-0.093995	0.078125	-1.2031	232	0.23015	-0.078744		
+default	Actinopterygii	ND6	protein	at_skew	235		lambda_1	1	-0.031436	0.10606	-0.2964	232	0.76719	-0.019456		
+default	Actinopterygii	rRNA-12S	rna	at_skew	235	544	lambda_1	1	-0.061153	0.074519	-0.82063	232	0.4127	-0.053799	1	0.95367
+default	Actinopterygii	rRNA-16S	rna	at_skew	235	1018	lambda_1	1	0.0037673	0.096713	0.038954	232	0.96896	0.0025574	1	0.98443
+default	Actinopterygii	tRNA-Ala	rna	at_skew	235	49	lambda_1	1	0.13471	0.10271	1.3116	232	0.19096	0.085792	1	0.95367
+default	Actinopterygii	tRNA-Arg	rna	at_skew	235	50	lambda_1	1	0.15314	0.11944	1.2822	232	0.20107	0.083881	1	0.95367
+default	Actinopterygii	tRNA-Asn	rna	at_skew	235	50	lambda_1	1	-0.0025896	0.13258	-0.019532	232	0.98443	-0.0012824	1	0.98443
+default	Actinopterygii	tRNA-Asp	rna	at_skew	235	60	lambda_1	1	-0.093877	0.14117	-0.66501	232	0.50671	-0.043618	1	0.95367
+default	Actinopterygii	tRNA-Cys	rna	at_skew	235	58	lambda_1	1	0.16879	0.11889	1.4197	232	0.15704	0.092804	1	0.95367
+default	Actinopterygii	tRNA-Gln	rna	at_skew	235	54	lambda_1	1	-0.055626	0.090389	-0.61541	232	0.53889	-0.040371	1	0.95367
+default	Actinopterygii	tRNA-Glu	rna	at_skew	234	58	lambda_1	1	0.017147	0.18589	0.09224	231	0.92659	0.0060688	1	0.98443
+default	Actinopterygii	tRNA-Gly	rna	at_skew	235	42	lambda_1	1	0.096477	0.1338	0.72105	232	0.4716	0.047286	1	0.95367
+default	Actinopterygii	tRNA-His	rna	at_skew	235	48	lambda_1	1	-0.081717	0.12693	-0.64378	232	0.52035	-0.042228	1	0.95367
+default	Actinopterygii	tRNA-Ile	rna	at_skew	235	51	lambda_1	1	0.037865	0.1051	0.36027	232	0.71898	0.023646	1	0.95367
+default	Actinopterygii	tRNA-Leu(CUN)	rna	at_skew	235	39	lambda_1	1	-0.13783	0.16482	-0.83623	232	0.40388	-0.054819	1	0.95367
+default	Actinopterygii	tRNA-Leu(UUR)	rna	at_skew	235	47	lambda_1	1	0.01139	0.11927	0.095503	232	0.924	0.00627	1	0.98443
+default	Actinopterygii	tRNA-Lys	rna	at_skew	235	48	lambda_1	1	0.11189	0.14171	0.78958	232	0.43058	0.051769	1	0.95367
+default	Actinopterygii	tRNA-Met	rna	at_skew	235	41	lambda_1	1	-0.032229	0.10315	-0.31244	232	0.75499	-0.020508	1	0.95367
+default	Actinopterygii	tRNA-Phe	rna	at_skew	235	55	lambda_1	1	0.071859	0.10754	0.66822	232	0.50466	0.043829	1	0.95367
+default	Actinopterygii	tRNA-Pro	rna	at_skew	234	63	lambda_1	1	0.10337	0.17718	0.58344	231	0.56016	0.038359	1	0.95367
+default	Actinopterygii	tRNA-Ser(AGY)	rna	at_skew	234	58	lambda_1	1	-0.0064819	0.098909	-0.065534	231	0.94781	-0.0043118	1	0.98443
+default	Actinopterygii	tRNA-Ser(UCN)	rna	at_skew	235	46	lambda_1	1	0.052833	0.15488	0.34112	232	0.73332	0.02239	1	0.95367
+default	Actinopterygii	tRNA-Thr	rna	at_skew	235	58	lambda_1	1	-0.39638	0.10243	-3.8697	232	0.00014168	-0.24623	0.0034002	0.0034002
+default	Actinopterygii	tRNA-Trp	rna	at_skew	234	48	lambda_1	1	-0.057063	0.159	-0.35888	231	0.72001	-0.023606	1	0.95367
+default	Actinopterygii	tRNA-Tyr	rna	at_skew	235	56	lambda_1	1	0.15095	0.18007	0.83827	232	0.40274	0.054952	1	0.95367
+default	Actinopterygii	tRNA-Val	rna	at_skew	235	53	lambda_1	1	-0.03678	0.098636	-0.37288	232	0.70958	-0.024474	1	0.95367
+default	Actinopterygii	ATP6	protein	at_skew	235		lambda_ml	0.99999	-0.16982	0.08594	-1.976	232	0.049335	-0.12866		
+default	Actinopterygii	ATP8	protein	at_skew	235		lambda_ml	0.99999	-0.059936	0.12246	-0.48944	232	0.62499	-0.032117		
+default	Actinopterygii	COX1	protein	at_skew	235		lambda_ml	0.99926	-0.089053	0.092242	-0.96543	232	0.33534	-0.063256		
+default	Actinopterygii	COX2	protein	at_skew	235		lambda_ml	0.99999	0.020664	0.086412	0.23913	232	0.81121	0.015698		
+default	Actinopterygii	COX3	protein	at_skew	235		lambda_ml	0.99442	-0.047121	0.11427	-0.41238	232	0.68044	-0.027064		
+default	Actinopterygii	CYTB	protein	at_skew	235		lambda_ml	0.99999	0.099268	0.075832	1.3091	232	0.19181	0.085628		
+default	Actinopterygii	ND1	protein	at_skew	235		lambda_ml	0.99999	-0.18433	0.067612	-2.7264	232	0.0068928	-0.17619		
+default	Actinopterygii	ND2	protein	at_skew	235		lambda_ml	0.99999	-0.10007	0.069117	-1.4478	232	0.14903	-0.094625		
+default	Actinopterygii	ND3	protein	at_skew	235		lambda_ml	0.98595	0.023942	0.13027	0.18378	232	0.85434	0.012065		
+default	Actinopterygii	ND4	protein	at_skew	235		lambda_ml	0.99999	-0.10809	0.072287	-1.4954	232	0.13618	-0.097705		
+default	Actinopterygii	ND4L	protein	at_skew	235		lambda_ml	0.99682	0.064205	0.10965	0.58554	232	0.55876	0.038414		
+default	Actinopterygii	ND5	protein	at_skew	235		lambda_ml	0.99783	-0.1252	0.088736	-1.4109	232	0.1596	-0.092237		
+default	Actinopterygii	ND6	protein	at_skew	235		lambda_ml	0.98694	0.0057399	0.13783	0.041645	232	0.96682	0.0027341		
+default	Actinopterygii	rRNA-12S	rna	at_skew	235	544	lambda_ml	0.99999	-0.061216	0.074575	-0.82086	232	0.41257	-0.053814	1	0.99448
+default	Actinopterygii	rRNA-16S	rna	at_skew	235	1018	lambda_ml	0.93642	0.090042	0.10931	0.82373	232	0.41094	0.054002	1	0.99448
+default	Actinopterygii	tRNA-Ala	rna	at_skew	235	49	lambda_ml	0.99999	0.13483	0.10278	1.3118	232	0.19089	0.085805	1	0.99448
+default	Actinopterygii	tRNA-Arg	rna	at_skew	235	50	lambda_ml	0.97937	0.20735	0.15656	1.3244	232	0.18667	0.086625	1	0.99448
+default	Actinopterygii	tRNA-Asn	rna	at_skew	235	50	lambda_ml	0.98926	-0.024761	0.16909	-0.14643	232	0.88371	-0.0096132	1	0.99448
+default	Actinopterygii	tRNA-Asp	rna	at_skew	235	60	lambda_ml	0.99692	-0.12625	0.16444	-0.76773	232	0.44343	-0.05034	1	0.99448
+default	Actinopterygii	tRNA-Cys	rna	at_skew	235	58	lambda_ml	0.97011	0.39877	0.15939	2.5019	232	0.013043	0.16209	0.29998	0.15651
+default	Actinopterygii	tRNA-Gln	rna	at_skew	235	54	lambda_ml	0.9675	0.0048954	0.11558	0.042354	232	0.96625	0.0027806	1	0.99448
+default	Actinopterygii	tRNA-Glu	rna	at_skew	234	58	lambda_ml	0.70204	-0.048419	0.23285	-0.20794	231	0.83546	-0.01368	1	0.99448
+default	Actinopterygii	tRNA-Gly	rna	at_skew	235	42	lambda_ml	0.95906	0.094732	0.17922	0.52858	232	0.5976	0.034682	1	0.99448
+default	Actinopterygii	tRNA-His	rna	at_skew	235	48	lambda_ml	0.99999	-0.081826	0.12703	-0.64415	232	0.52011	-0.042253	1	0.99448
+default	Actinopterygii	tRNA-Ile	rna	at_skew	235	51	lambda_ml	0.99195	0.013224	0.13102	0.10093	232	0.91969	0.0066263	1	0.99448
+default	Actinopterygii	tRNA-Leu(CUN)	rna	at_skew	235	39	lambda_ml	0.78948	-0.068865	0.20364	-0.33816	232	0.73555	-0.022196	1	0.99448
+default	Actinopterygii	tRNA-Leu(UUR)	rna	at_skew	235	47	lambda_ml	0.99706	0.00095783	0.13838	0.0069218	232	0.99448	0.00045444	1	0.99448
+default	Actinopterygii	tRNA-Lys	rna	at_skew	235	48	lambda_ml	0.97872	0.14217	0.18724	0.75928	232	0.44846	0.049787	1	0.99448
+default	Actinopterygii	tRNA-Met	rna	at_skew	235	41	lambda_ml	0.99999	-0.032216	0.10323	-0.31209	232	0.75526	-0.020485	1	0.99448
+default	Actinopterygii	tRNA-Phe	rna	at_skew	235	55	lambda_ml	1	0.071898	0.10758	0.66829	232	0.50461	0.043834	1	0.99448
+default	Actinopterygii	tRNA-Pro	rna	at_skew	234	63	lambda_ml	0.88167	0.055217	0.20332	0.27158	231	0.78619	0.017866	1	0.99448
+default	Actinopterygii	tRNA-Ser(AGY)	rna	at_skew	234	58	lambda_ml	0.99999	-0.0064429	0.098983	-0.065091	231	0.94816	-0.0042826	1	0.99448
+default	Actinopterygii	tRNA-Ser(UCN)	rna	at_skew	235	46	lambda_ml	0.85756	-0.20643	0.19429	-1.0625	232	0.28912	-0.069587	1	0.99448
+default	Actinopterygii	tRNA-Thr	rna	at_skew	235	58	lambda_ml	0.99952	-0.37236	0.10726	-3.4716	232	0.0006169	-0.22222	0.014806	0.014806
+default	Actinopterygii	tRNA-Trp	rna	at_skew	234	48	lambda_ml	1	-0.057099	0.15908	-0.35894	231	0.71997	-0.02361	1	0.99448
+default	Actinopterygii	tRNA-Tyr	rna	at_skew	235	56	lambda_ml	0.69321	0.23499	0.22727	1.034	232	0.30221	0.06773	1	0.99448
+default	Actinopterygii	tRNA-Val	rna	at_skew	235	53	lambda_ml	0.99999	-0.0368	0.098709	-0.37282	232	0.70963	-0.024469	1	0.99448
+default	Actinopterygii	ATP6	protein	gc_percent	235		lambda_1	1	0.032706	0.098751	0.3312	232	0.74079	0.021739		
+default	Actinopterygii	ATP8	protein	gc_percent	235		lambda_1	1	0.18408	0.10489	1.7549	232	0.080589	0.11446		
+default	Actinopterygii	COX1	protein	gc_percent	235		lambda_1	1	0.10225	0.1051	0.97288	232	0.33163	0.063743		
+default	Actinopterygii	COX2	protein	gc_percent	235		lambda_1	1	0.10237	0.12243	0.83616	232	0.40392	0.054814		
+default	Actinopterygii	COX3	protein	gc_percent	235		lambda_1	1	0.022085	0.10932	0.20202	232	0.84008	0.013262		
+default	Actinopterygii	CYTB	protein	gc_percent	235		lambda_1	1	-0.0022736	0.098726	-0.023029	232	0.98165	-0.001512		
+default	Actinopterygii	ND1	protein	gc_percent	235		lambda_1	1	0.21063	0.11526	1.8273	232	0.068934	0.11912		
+default	Actinopterygii	ND2	protein	gc_percent	235		lambda_1	1	0.13139	0.093202	1.4097	232	0.15996	0.092159		
+default	Actinopterygii	ND3	protein	gc_percent	235		lambda_1	1	0.044929	0.10548	0.42593	232	0.67055	0.027953		
+default	Actinopterygii	ND4	protein	gc_percent	235		lambda_1	1	0.20002	0.098131	2.0384	232	0.042649	0.13264		
+default	Actinopterygii	ND4L	protein	gc_percent	235		lambda_1	1	0.11134	0.11496	0.9685	232	0.33381	0.063457		
+default	Actinopterygii	ND5	protein	gc_percent	235		lambda_1	1	0.17895	0.094105	1.9016	232	0.058465	0.12388		
+default	Actinopterygii	ND6	protein	gc_percent	235		lambda_1	1	0.18712	0.11895	1.5732	232	0.11704	0.10274		
+default	Actinopterygii	rRNA-12S	rna	gc_percent	235	544	lambda_1	1	0.0039494	0.079402	0.049739	232	0.96037	0.0032655	1	0.97382
+default	Actinopterygii	rRNA-16S	rna	gc_percent	235	1018	lambda_1	1	0.080927	0.073	1.1086	232	0.26875	0.072591	1	0.80626
+default	Actinopterygii	tRNA-Ala	rna	gc_percent	235	49	lambda_1	1	0.19418	0.10986	1.7675	232	0.078451	0.11527	1	0.52911
+default	Actinopterygii	tRNA-Arg	rna	gc_percent	235	50	lambda_1	1	0.027402	0.067455	0.40622	232	0.68496	0.02666	1	0.97382
+default	Actinopterygii	tRNA-Asn	rna	gc_percent	235	50	lambda_1	1	-0.01782	0.11076	-0.16088	232	0.87232	-0.010562	1	0.97382
+default	Actinopterygii	tRNA-Asp	rna	gc_percent	235	60	lambda_1	1	0.0026982	0.082132	0.032852	232	0.97382	0.0021569	1	0.97382
+default	Actinopterygii	tRNA-Cys	rna	gc_percent	235	58	lambda_1	1	0.20808	0.10986	1.894	232	0.059464	0.1234	1	0.52911
+default	Actinopterygii	tRNA-Gln	rna	gc_percent	235	54	lambda_1	1	0.063341	0.1167	0.54278	232	0.5878	0.035613	1	0.97382
+default	Actinopterygii	tRNA-Glu	rna	gc_percent	234	58	lambda_1	1	-0.077525	0.10337	-0.75	231	0.45402	-0.049286	1	0.97382
+default	Actinopterygii	tRNA-Gly	rna	gc_percent	235	42	lambda_1	1	-0.008719	0.11367	-0.076706	232	0.93892	-0.0050359	1	0.97382
+default	Actinopterygii	tRNA-His	rna	gc_percent	235	48	lambda_1	1	0.2269	0.12726	1.7829	232	0.075903	0.11626	1	0.52911
+default	Actinopterygii	tRNA-Ile	rna	gc_percent	235	51	lambda_1	1	0.12819	0.091379	1.4028	232	0.16201	0.091712	1	0.77763
+default	Actinopterygii	tRNA-Leu(CUN)	rna	gc_percent	235	39	lambda_1	1	0.084854	0.10469	0.81053	232	0.41846	0.053139	1	0.97382
+default	Actinopterygii	tRNA-Leu(UUR)	rna	gc_percent	235	47	lambda_1	1	-0.033134	0.095977	-0.34523	232	0.73024	-0.022659	1	0.97382
+default	Actinopterygii	tRNA-Lys	rna	gc_percent	235	48	lambda_1	1	-0.031685	0.12662	-0.25025	232	0.80262	-0.016427	1	0.97382
+default	Actinopterygii	tRNA-Met	rna	gc_percent	235	41	lambda_1	1	-0.10612	0.084867	-1.2505	232	0.21239	-0.081822	1	0.80626
+default	Actinopterygii	tRNA-Phe	rna	gc_percent	235	55	lambda_1	1	0.13038	0.11544	1.1293	232	0.25992	0.073941	1	0.80626
+default	Actinopterygii	tRNA-Pro	rna	gc_percent	234	63	lambda_1	1	0.019083	0.11913	0.16018	231	0.87288	0.010539	1	0.97382
+default	Actinopterygii	tRNA-Ser(AGY)	rna	gc_percent	234	58	lambda_1	1	0.031916	0.075726	0.42147	231	0.6738	0.02772	1	0.97382
+default	Actinopterygii	tRNA-Ser(UCN)	rna	gc_percent	235	46	lambda_1	1	-0.013398	0.092615	-0.14466	232	0.8851	-0.0094971	1	0.97382
+default	Actinopterygii	tRNA-Thr	rna	gc_percent	235	58	lambda_1	1	0.14788	0.086366	1.7123	232	0.088184	0.11171	1	0.52911
+default	Actinopterygii	tRNA-Trp	rna	gc_percent	234	48	lambda_1	1	0.047651	0.090781	0.5249	231	0.60016	0.034515	1	0.97382
+default	Actinopterygii	tRNA-Tyr	rna	gc_percent	235	56	lambda_1	1	-0.011742	0.093049	-0.1262	232	0.89969	-0.0082849	1	0.97382
+default	Actinopterygii	tRNA-Val	rna	gc_percent	235	53	lambda_1	1	-0.027581	0.078264	-0.35242	232	0.72485	-0.023131	1	0.97382
+default	Actinopterygii	ATP6	protein	gc_percent	235		lambda_ml	0.99999	0.032463	0.098823	0.3285	232	0.74283	0.021562		
+default	Actinopterygii	ATP8	protein	gc_percent	235		lambda_ml	0.99999	0.18388	0.10497	1.7518	232	0.081132	0.11426		
+default	Actinopterygii	COX1	protein	gc_percent	235		lambda_ml	0.99999	0.10249	0.10518	0.97448	232	0.33083	0.063848		
+default	Actinopterygii	COX2	protein	gc_percent	235		lambda_ml	0.99678	0.1392	0.14316	0.97231	232	0.33191	0.063706		
+default	Actinopterygii	COX3	protein	gc_percent	235		lambda_ml	0.99999	0.02232	0.1094	0.20402	232	0.83852	0.013393		
+default	Actinopterygii	CYTB	protein	gc_percent	235		lambda_ml	0.99999	-0.0019341	0.098798	-0.019576	232	0.9844	-0.0012852		
+default	Actinopterygii	ND1	protein	gc_percent	235		lambda_ml	0.99999	0.21049	0.11535	1.8248	232	0.069317	0.11895		
+default	Actinopterygii	ND2	protein	gc_percent	235		lambda_ml	0.99944	0.1615	0.098147	1.6455	232	0.10122	0.10741		
+default	Actinopterygii	ND3	protein	gc_percent	235		lambda_ml	0.99355	0.0641	0.13006	0.49285	232	0.62259	0.03234		
+default	Actinopterygii	ND4	protein	gc_percent	235		lambda_ml	0.99999	0.20012	0.098203	2.0378	232	0.042708	0.1326		
+default	Actinopterygii	ND4L	protein	gc_percent	235		lambda_ml	0.98573	-0.024694	0.14857	-0.16621	232	0.86814	-0.010911		
+default	Actinopterygii	ND5	protein	gc_percent	235		lambda_ml	0.99949	0.19123	0.098751	1.9365	232	0.054019	0.12612		
+default	Actinopterygii	ND6	protein	gc_percent	235		lambda_ml	0.99626	0.26263	0.14056	1.8684	232	0.062963	0.12176		
+default	Actinopterygii	rRNA-12S	rna	gc_percent	235	544	lambda_ml	0.99999	0.0039441	0.079462	0.049635	232	0.96046	0.0032587	1	0.96046
+default	Actinopterygii	rRNA-16S	rna	gc_percent	235	1018	lambda_ml	0.99951	0.099395	0.076494	1.2994	232	0.1951	0.085	1	0.85031
+default	Actinopterygii	tRNA-Ala	rna	gc_percent	235	49	lambda_ml	0.98956	0.20407	0.14054	1.4521	232	0.14784	0.094902	1	0.85031
+default	Actinopterygii	tRNA-Arg	rna	gc_percent	235	50	lambda_ml	0.99999	0.027434	0.067506	0.4064	232	0.68483	0.026672	1	0.96046
+default	Actinopterygii	tRNA-Asn	rna	gc_percent	235	50	lambda_ml	0.98459	0.0097067	0.14297	0.067893	232	0.94593	0.0044573	1	0.96046
+default	Actinopterygii	tRNA-Asp	rna	gc_percent	235	60	lambda_ml	0.99784	0.013154	0.09326	0.14104	232	0.88796	0.0092595	1	0.96046
+default	Actinopterygii	tRNA-Cys	rna	gc_percent	235	58	lambda_ml	0.98655	0.24662	0.14333	1.7206	232	0.086659	0.11225	1	0.85031
+default	Actinopterygii	tRNA-Gln	rna	gc_percent	235	54	lambda_ml	0.96827	0.024898	0.15249	0.16327	232	0.87044	0.010719	1	0.96046
+default	Actinopterygii	tRNA-Glu	rna	gc_percent	234	58	lambda_ml	0.99999	-0.077667	0.10344	-0.75083	231	0.45352	-0.049341	1	0.96046
+default	Actinopterygii	tRNA-Gly	rna	gc_percent	235	42	lambda_ml	0.99999	-0.0087298	0.11375	-0.076745	232	0.93889	-0.0050385	1	0.96046
+default	Actinopterygii	tRNA-His	rna	gc_percent	235	48	lambda_ml	0.97629	0.32993	0.16912	1.9508	232	0.052282	0.12704	1	0.85031
+default	Actinopterygii	tRNA-Ile	rna	gc_percent	235	51	lambda_ml	0.99782	0.16116	0.1038	1.5525	232	0.1219	0.1014	1	0.85031
+default	Actinopterygii	tRNA-Leu(CUN)	rna	gc_percent	235	39	lambda_ml	0.99999	0.084944	0.10477	0.81079	232	0.41832	0.053156	1	0.96046
+default	Actinopterygii	tRNA-Leu(UUR)	rna	gc_percent	235	47	lambda_ml	0.99999	-0.033226	0.096047	-0.34593	232	0.72971	-0.022706	1	0.96046
+default	Actinopterygii	tRNA-Lys	rna	gc_percent	235	48	lambda_ml	0.9907	-0.1204	0.16024	-0.75138	232	0.45319	-0.049271	1	0.96046
+default	Actinopterygii	tRNA-Met	rna	gc_percent	235	41	lambda_ml	0.99999	-0.10616	0.08493	-1.2499	232	0.21258	-0.081788	1	0.85031
+default	Actinopterygii	tRNA-Phe	rna	gc_percent	235	55	lambda_ml	0.9973	0.13598	0.13315	1.0213	232	0.3082	0.066898	1	0.96046
+default	Actinopterygii	tRNA-Pro	rna	gc_percent	234	63	lambda_ml	0.99999	0.019144	0.11922	0.16057	231	0.87257	0.010564	1	0.96046
+default	Actinopterygii	tRNA-Ser(AGY)	rna	gc_percent	234	58	lambda_ml	0.99999	0.031926	0.075783	0.42128	231	0.67394	0.027708	1	0.96046
+default	Actinopterygii	tRNA-Ser(UCN)	rna	gc_percent	235	46	lambda_ml	0.99761	-0.03303	0.10592	-0.31182	232	0.75545	-0.020468	1	0.96046
+default	Actinopterygii	tRNA-Thr	rna	gc_percent	235	58	lambda_ml	0.99223	0.030924	0.10652	0.29032	232	0.77183	0.019057	1	0.96046
+default	Actinopterygii	tRNA-Trp	rna	gc_percent	234	48	lambda_ml	0.99999	0.047713	0.090848	0.5252	231	0.59995	0.034535	1	0.96046
+default	Actinopterygii	tRNA-Tyr	rna	gc_percent	235	56	lambda_ml	0.99113	-0.030336	0.11693	-0.25944	232	0.79552	-0.017031	1	0.96046
+default	Actinopterygii	tRNA-Val	rna	gc_percent	235	53	lambda_ml	0.99999	-0.027643	0.078321	-0.35294	232	0.72445	-0.023166	1	0.96046
+default	Actinopterygii	ATP6	protein	gc_skew	235		lambda_1	1	0.22133	0.10504	2.107	232	0.036188	0.13703		
+default	Actinopterygii	ATP8	protein	gc_skew	235		lambda_1	1	0.24102	0.12451	1.9358	232	0.054109	0.12608		
+default	Actinopterygii	COX1	protein	gc_skew	235		lambda_1	1	0.031614	0.12688	0.24916	232	0.80346	0.016356		
+default	Actinopterygii	COX2	protein	gc_skew	235		lambda_1	1	-0.14438	0.1215	-1.1882	232	0.23595	-0.077775		
+default	Actinopterygii	COX3	protein	gc_skew	235		lambda_1	1	0.015446	0.12329	0.12528	232	0.90041	0.0082247		
+default	Actinopterygii	CYTB	protein	gc_skew	235		lambda_1	1	-0.18575	0.099678	-1.8635	232	0.063656	-0.12144		
+default	Actinopterygii	ND1	protein	gc_skew	235		lambda_1	1	0.35489	0.095676	3.7092	232	0.00026019	0.23661		
+default	Actinopterygii	ND2	protein	gc_skew	235		lambda_1	1	0.22933	0.096531	2.3758	232	0.018327	0.15411		
+default	Actinopterygii	ND3	protein	gc_skew	235		lambda_1	1	0.074111	0.12334	0.60089	232	0.5485	0.039419		
+default	Actinopterygii	ND4	protein	gc_skew	235		lambda_1	1	0.27975	0.099588	2.8091	232	0.0053921	0.18137		
+default	Actinopterygii	ND4L	protein	gc_skew	235		lambda_1	1	-0.18789	0.11133	-1.6877	232	0.092813	-0.11013		
+default	Actinopterygii	ND5	protein	gc_skew	235		lambda_1	1	0.19781	0.10328	1.9154	232	0.056675	0.12477		
+default	Actinopterygii	ND6	protein	gc_skew	235		lambda_1	1	-0.18703	0.10293	-1.8171	232	0.070498	-0.11846		
+default	Actinopterygii	rRNA-12S	rna	gc_skew	235	544	lambda_1	1	0.11291	0.087041	1.2972	232	0.19584	0.084861	1	0.61858
+default	Actinopterygii	rRNA-16S	rna	gc_skew	235	1018	lambda_1	1	0.029721	0.12338	0.24089	232	0.80985	0.015813	1	0.97829
+default	Actinopterygii	tRNA-Ala	rna	gc_skew	235	49	lambda_1	1	-0.23763	0.12156	-1.9549	232	0.051792	-0.1273	1	0.31075
+default	Actinopterygii	tRNA-Arg	rna	gc_skew	235	50	lambda_1	1	-0.1219	0.096164	-1.2677	232	0.20619	-0.082939	1	0.61858
+default	Actinopterygii	tRNA-Asn	rna	gc_skew	235	50	lambda_1	1	-0.041146	0.1563	-0.26325	232	0.79259	-0.017281	1	0.97829
+default	Actinopterygii	tRNA-Asp	rna	gc_skew	235	60	lambda_1	1	0.38308	0.14127	2.7117	232	0.007195	0.17528	0.16548	0.086339
+default	Actinopterygii	tRNA-Cys	rna	gc_skew	235	58	lambda_1	1	-0.73955	0.28954	-2.5543	232	0.011282	-0.16539	0.24819	0.090252
+default	Actinopterygii	tRNA-Gln	rna	gc_skew	235	54	lambda_1	1	-0.12532	0.081262	-1.5422	232	0.12439	-0.10073	1	0.59708
+default	Actinopterygii	tRNA-Glu	rna	gc_skew	234	58	lambda_1	1	0.023556	0.1647	0.14302	231	0.8864	0.0094099	1	0.97829
+default	Actinopterygii	tRNA-Gly	rna	gc_skew	235	42	lambda_1	1	0.015974	0.13189	0.12111	232	0.90371	0.0079511	1	0.97829
+default	Actinopterygii	tRNA-His	rna	gc_skew	235	48	lambda_1	1	0.099831	0.12712	0.78533	232	0.43306	0.051491	1	0.94486
+default	Actinopterygii	tRNA-Ile	rna	gc_skew	235	51	lambda_1	1	0.1554	0.11336	1.3709	232	0.17173	0.089643	1	0.61858
+default	Actinopterygii	tRNA-Leu(CUN)	rna	gc_skew	235	39	lambda_1	1	0.034785	0.10736	0.324	232	0.74623	0.021267	1	0.97829
+default	Actinopterygii	tRNA-Leu(UUR)	rna	gc_skew	235	47	lambda_1	1	0.023143	0.1073	0.21568	232	0.82943	0.014159	1	0.97829
+default	Actinopterygii	tRNA-Lys	rna	gc_skew	235	48	lambda_1	1	0.0038835	0.14254	0.027246	232	0.97829	0.0017888	1	0.97829
+default	Actinopterygii	tRNA-Met	rna	gc_skew	235	41	lambda_1	1	-0.0086625	0.11516	-0.075223	232	0.9401	-0.0049386	1	0.97829
+default	Actinopterygii	tRNA-Phe	rna	gc_skew	235	55	lambda_1	1	-0.093326	0.11017	-0.84714	232	0.39779	-0.055532	1	0.94486
+default	Actinopterygii	tRNA-Pro	rna	gc_skew	234	63	lambda_1	1	-0.095928	0.20671	-0.46407	231	0.64304	-0.030519	1	0.97829
+default	Actinopterygii	tRNA-Ser(AGY)	rna	gc_skew	234	58	lambda_1	1	-0.073043	0.12686	-0.57579	231	0.56531	-0.037857	1	0.97829
+default	Actinopterygii	tRNA-Ser(UCN)	rna	gc_skew	235	46	lambda_1	1	-0.075875	0.21316	-0.35596	232	0.72219	-0.023364	1	0.97829
+default	Actinopterygii	tRNA-Thr	rna	gc_skew	235	58	lambda_1	1	0.56543	0.11715	4.8267	232	2.5184e-06	0.30208	6.0441e-05	6.0441e-05
+default	Actinopterygii	tRNA-Trp	rna	gc_skew	234	48	lambda_1	1	0.15875	0.15254	1.0407	231	0.29911	0.068312	1	0.79762
+default	Actinopterygii	tRNA-Tyr	rna	gc_skew	235	56	lambda_1	1	-0.15978	0.22603	-0.70692	232	0.48033	-0.046361	1	0.96065
+default	Actinopterygii	tRNA-Val	rna	gc_skew	235	53	lambda_1	1	-0.0081588	0.11438	-0.071329	232	0.9432	-0.0046829	1	0.97829
+default	Actinopterygii	ATP6	protein	gc_skew	235		lambda_ml	0.99458	0.19827	0.12752	1.5548	232	0.12136	0.10155		
+default	Actinopterygii	ATP8	protein	gc_skew	235		lambda_ml	0.99892	0.21221	0.13534	1.5679	232	0.11826	0.1024		
+default	Actinopterygii	COX1	protein	gc_skew	235		lambda_ml	0.99704	0.15034	0.147	1.0227	232	0.3075	0.066994		
+default	Actinopterygii	COX2	protein	gc_skew	235		lambda_ml	0.99999	-0.14446	0.12159	-1.1881	232	0.23602	-0.077765		
+default	Actinopterygii	COX3	protein	gc_skew	235		lambda_ml	0.9959	-0.0023688	0.14675	-0.016142	232	0.98713	-0.0010598		
+default	Actinopterygii	CYTB	protein	gc_skew	235		lambda_ml	0.99653	-0.066693	0.11677	-0.57114	232	0.56846	-0.037471		
+default	Actinopterygii	ND1	protein	gc_skew	235		lambda_ml	0.99837	0.38876	0.1066	3.6468	232	0.00032781	0.23284		
+default	Actinopterygii	ND2	protein	gc_skew	235		lambda_ml	0.99895	0.26624	0.10478	2.5408	232	0.011711	0.16454		
+default	Actinopterygii	ND3	protein	gc_skew	235		lambda_ml	0.9886	0.060732	0.15887	0.38227	232	0.70261	0.02509		
+default	Actinopterygii	ND4	protein	gc_skew	235		lambda_ml	0.99999	0.28007	0.099661	2.8102	232	0.0053737	0.18144		
+default	Actinopterygii	ND4L	protein	gc_skew	235		lambda_ml	0.96206	0.15589	0.15085	1.0334	232	0.3025	0.06769		
+default	Actinopterygii	ND5	protein	gc_skew	235		lambda_ml	0.9955	0.28467	0.12355	2.304	232	0.022107	0.14956		
+default	Actinopterygii	ND6	protein	gc_skew	235		lambda_ml	0.99403	-0.32388	0.12535	-2.5838	232	0.010386	-0.16724		
+default	Actinopterygii	rRNA-12S	rna	gc_skew	235	544	lambda_ml	0.99999	0.11307	0.087105	1.298	232	0.19556	0.084913	1	0.58668
+default	Actinopterygii	rRNA-16S	rna	gc_skew	235	1018	lambda_ml	0.93926	0.12965	0.14183	0.91414	232	0.36159	0.059908	1	0.72643
+default	Actinopterygii	tRNA-Ala	rna	gc_skew	235	49	lambda_ml	0.99884	-0.25365	0.13268	-1.9118	232	0.057136	-0.12454	1	0.32771
+default	Actinopterygii	tRNA-Arg	rna	gc_skew	235	50	lambda_ml	0.98949	-0.16499	0.1226	-1.3458	232	0.1797	-0.08801	1	0.58668
+default	Actinopterygii	tRNA-Asn	rna	gc_skew	235	50	lambda_ml	0.95414	-0.054474	0.21026	-0.25908	232	0.79581	-0.017007	1	0.86815
+default	Actinopterygii	tRNA-Asp	rna	gc_skew	235	60	lambda_ml	0.99154	0.44552	0.17715	2.5149	232	0.012584	0.16291	0.27684	0.10067
+default	Actinopterygii	tRNA-Cys	rna	gc_skew	235	58	lambda_ml	0.12177	-0.5908	0.21174	-2.7902	232	0.0057064	-0.18018	0.13125	0.068477
+default	Actinopterygii	tRNA-Gln	rna	gc_skew	235	54	lambda_ml	0.97158	-0.18954	0.10347	-1.8317	232	0.068272	-0.1194	1	0.32771
+default	Actinopterygii	tRNA-Glu	rna	gc_skew	234	58	lambda_ml	0.72259	0.14185	0.20153	0.70389	231	0.48221	0.046263	1	0.77154
+default	Actinopterygii	tRNA-Gly	rna	gc_skew	235	42	lambda_ml	0.97305	0.088924	0.17698	0.50244	232	0.61583	0.032969	1	0.85317
+default	Actinopterygii	tRNA-His	rna	gc_skew	235	48	lambda_ml	0.99999	0.099947	0.12721	0.78566	232	0.43287	0.051512	1	0.74206
+default	Actinopterygii	tRNA-Ile	rna	gc_skew	235	51	lambda_ml	0.99385	0.18165	0.13907	1.3062	232	0.19278	0.085442	1	0.58668
+default	Actinopterygii	tRNA-Leu(CUN)	rna	gc_skew	235	39	lambda_ml	0.96113	0.15339	0.14903	1.0293	232	0.30443	0.067421	1	0.72643
+default	Actinopterygii	tRNA-Leu(UUR)	rna	gc_skew	235	47	lambda_ml	0.98195	0.11622	0.14039	0.82783	232	0.40862	0.05427	1	0.74206
+default	Actinopterygii	tRNA-Lys	rna	gc_skew	235	48	lambda_ml	0.97284	0.053782	0.18988	0.28325	232	0.77724	0.018593	1	0.86815
+default	Actinopterygii	tRNA-Met	rna	gc_skew	235	41	lambda_ml	0.99999	-0.0086699	0.11524	-0.075232	232	0.9401	-0.0049391	1	0.94319
+default	Actinopterygii	tRNA-Phe	rna	gc_skew	235	55	lambda_ml	0.96287	-0.13849	0.15201	-0.91105	232	0.36321	-0.059707	1	0.72643
+default	Actinopterygii	tRNA-Pro	rna	gc_skew	234	63	lambda_ml	0.89183	-0.064954	0.2437	-0.26653	231	0.79007	-0.017534	1	0.86815
+default	Actinopterygii	tRNA-Ser(AGY)	rna	gc_skew	234	58	lambda_ml	0.99999	-0.073198	0.12695	-0.57658	231	0.56478	-0.037909	1	0.84717
+default	Actinopterygii	tRNA-Ser(UCN)	rna	gc_skew	235	46	lambda_ml	0.60429	0.084174	0.21862	0.38502	232	0.70057	0.02527	1	0.86815
+default	Actinopterygii	tRNA-Thr	rna	gc_skew	235	58	lambda_ml	0.99774	0.46913	0.13301	3.527	232	0.00050641	0.22559	0.012154	0.012154
+default	Actinopterygii	tRNA-Trp	rna	gc_skew	234	48	lambda_ml	0.92837	0.23404	0.21352	1.0961	231	0.27418	0.07193	1	0.72643
+default	Actinopterygii	tRNA-Tyr	rna	gc_skew	235	56	lambda_ml	0.31236	-0.1086	0.23181	-0.46848	232	0.63988	-0.030743	1	0.85317
+default	Actinopterygii	tRNA-Val	rna	gc_skew	235	53	lambda_ml	0.99999	-0.0081662	0.11447	-0.071341	232	0.94319	-0.0046837	1	0.94319
+high	Actinopterygii	ATP6	protein	A_share	184		lambda_1	1	-0.18686	0.084813	-2.2031	181	0.028847	-0.16161		
+high	Actinopterygii	ATP8	protein	A_share	184		lambda_1	1	-0.21756	0.10344	-2.1032	181	0.036828	-0.15446		
+high	Actinopterygii	COX1	protein	A_share	184		lambda_1	1	-0.070282	0.095249	-0.73787	181	0.46155	-0.054763		
+high	Actinopterygii	COX2	protein	A_share	184		lambda_1	1	-0.05902	0.091224	-0.64698	181	0.51846	-0.048034		
+high	Actinopterygii	COX3	protein	A_share	184		lambda_1	1	-0.06155	0.099993	-0.61554	181	0.53897	-0.045705		
+high	Actinopterygii	CYTB	protein	A_share	184		lambda_1	1	0.13138	0.085743	1.5323	181	0.1272	0.11316		
+high	Actinopterygii	ND1	protein	A_share	184		lambda_1	1	-0.23209	0.078177	-2.9687	181	0.0033952	-0.21548		
+high	Actinopterygii	ND2	protein	A_share	184		lambda_1	1	-0.1061	0.079578	-1.3332	181	0.18413	-0.098616		
+high	Actinopterygii	ND3	protein	A_share	184		lambda_1	1	-0.082344	0.10174	-0.80932	181	0.41939	-0.060048		
+high	Actinopterygii	ND4	protein	A_share	184		lambda_1	1	-0.16943	0.079481	-2.1318	181	0.034376	-0.1565		
+high	Actinopterygii	ND4L	protein	A_share	184		lambda_1	1	-0.0020547	0.1032	-0.01991	181	0.98414	-0.0014799		
+high	Actinopterygii	ND5	protein	A_share	184		lambda_1	1	-0.16715	0.077073	-2.1687	181	0.031406	-0.15915		
+high	Actinopterygii	ND6	protein	A_share	184		lambda_1	1	-0.13182	0.11467	-1.1496	181	0.25182	-0.085139		
+high	Actinopterygii	rRNA-12S	rna	A_share	184	528	lambda_1	1	-0.073336	0.082763	-0.8861	181	0.37674	-0.065721	1	0.98984
+high	Actinopterygii	rRNA-16S	rna	A_share	184	996	lambda_1	1	-0.00089483	0.061931	-0.014449	181	0.98849	-0.001074	1	0.99334
+high	Actinopterygii	tRNA-Ala	rna	A_share	184	48	lambda_1	1	-0.017132	0.085406	-0.20059	181	0.84124	-0.014908	1	0.99082
+high	Actinopterygii	tRNA-Arg	rna	A_share	184	45	lambda_1	1	0.02784	0.088904	0.31315	181	0.75453	0.02327	1	0.99082
+high	Actinopterygii	tRNA-Asn	rna	A_share	184	48	lambda_1	1	0.040458	0.12697	0.31864	181	0.75037	0.023678	1	0.99082
+high	Actinopterygii	tRNA-Asp	rna	A_share	184	58	lambda_1	1	-0.053144	0.10868	-0.489	181	0.62543	-0.036323	1	0.99082
+high	Actinopterygii	tRNA-Cys	rna	A_share	184	56	lambda_1	1	-0.10539	0.1412	-0.74638	181	0.45641	-0.055392	1	0.98984
+high	Actinopterygii	tRNA-Gln	rna	A_share	184	48	lambda_1	1	-0.16573	0.095327	-1.7385	181	0.083821	-0.12816	1	0.95486
+high	Actinopterygii	tRNA-Glu	rna	A_share	183	54	lambda_1	1	0.0019293	0.18278	0.010555	180	0.99159	0.00078676	1	0.99334
+high	Actinopterygii	tRNA-Gly	rna	A_share	184	38	lambda_1	1	0.02988	0.12636	0.23648	181	0.81333	0.017575	1	0.99082
+high	Actinopterygii	tRNA-His	rna	A_share	184	47	lambda_1	1	-0.14063	0.11412	-1.2323	181	0.21945	-0.091211	1	0.9799
+high	Actinopterygii	tRNA-Ile	rna	A_share	184	48	lambda_1	1	-0.058656	0.10508	-0.55819	181	0.5774	-0.041454	1	0.98984
+high	Actinopterygii	tRNA-Leu(CUN)	rna	A_share	184	39	lambda_1	1	-0.19903	0.18459	-1.0782	181	0.28237	-0.079888	1	0.9799
+high	Actinopterygii	tRNA-Leu(UUR)	rna	A_share	184	44	lambda_1	1	-0.019207	0.1145	-0.16775	181	0.86697	-0.012468	1	0.99082
+high	Actinopterygii	tRNA-Lys	rna	A_share	184	47	lambda_1	1	-0.084817	0.14192	-0.59764	181	0.55083	-0.044379	1	0.98984
+high	Actinopterygii	tRNA-Met	rna	A_share	184	36	lambda_1	1	0.18799	0.12483	1.506	181	0.1338	0.11125	1	0.95486
+high	Actinopterygii	tRNA-Phe	rna	A_share	184	51	lambda_1	1	-0.12216	0.1242	-0.98358	181	0.32663	-0.072914	1	0.9799
+high	Actinopterygii	tRNA-Pro	rna	A_share	184	60	lambda_1	1	0.034404	0.1202	0.28624	181	0.77502	0.021271	1	0.99082
+high	Actinopterygii	tRNA-Ser(AGY)	rna	A_share	184	58	lambda_1	1	-0.13189	0.093287	-1.4138	181	0.15914	-0.10451	1	0.95486
+high	Actinopterygii	tRNA-Ser(UCN)	rna	A_share	184	35	lambda_1	1	-0.0008625	0.1032	-0.0083578	181	0.99334	-0.00062123	1	0.99334
+high	Actinopterygii	tRNA-Thr	rna	A_share	184	57	lambda_1	1	-0.41578	0.093832	-4.4312	181	1.6204e-05	-0.31283	0.00038889	0.00038889
+high	Actinopterygii	tRNA-Trp	rna	A_share	183	47	lambda_1	1	-0.082662	0.13992	-0.59076	180	0.55542	-0.04399	1	0.98984
+high	Actinopterygii	tRNA-Tyr	rna	A_share	184	54	lambda_1	1	0.17374	0.16298	1.066	181	0.28783	0.07899	1	0.9799
+high	Actinopterygii	tRNA-Val	rna	A_share	184	52	lambda_1	1	-0.058011	0.089304	-0.64959	181	0.51678	-0.048228	1	0.98984
+high	Actinopterygii	ATP6	protein	A_share	184		lambda_ml	0.99999	-0.18671	0.084886	-2.1995	181	0.029106	-0.16135		
+high	Actinopterygii	ATP8	protein	A_share	184		lambda_ml	0.9948	-0.19534	0.12953	-1.5081	181	0.13328	-0.1114		
+high	Actinopterygii	COX1	protein	A_share	184		lambda_ml	0.99063	-0.19966	0.1258	-1.5871	181	0.11424	-0.11715		
+high	Actinopterygii	COX2	protein	A_share	184		lambda_ml	0.99999	-0.059155	0.091302	-0.6479	181	0.51787	-0.048103		
+high	Actinopterygii	COX3	protein	A_share	184		lambda_ml	0.99999	-0.06167	0.10008	-0.61622	181	0.53853	-0.045755		
+high	Actinopterygii	CYTB	protein	A_share	184		lambda_ml	0.99962	0.11097	0.089667	1.2376	181	0.21748	0.091601		
+high	Actinopterygii	ND1	protein	A_share	184		lambda_ml	0.99999	-0.23217	0.078244	-2.9673	181	0.0034106	-0.21538		
+high	Actinopterygii	ND2	protein	A_share	184		lambda_ml	0.99999	-0.10635	0.079645	-1.3353	181	0.18346	-0.098767		
+high	Actinopterygii	ND3	protein	A_share	184		lambda_ml	0.98707	-0.092888	0.14058	-0.66074	181	0.50962	-0.049053		
+high	Actinopterygii	ND4	protein	A_share	184		lambda_ml	0.99999	-0.16959	0.079549	-2.1319	181	0.034361	-0.15651		
+high	Actinopterygii	ND4L	protein	A_share	184		lambda_ml	0.98354	-0.0087309	0.14364	-0.060784	181	0.9516	-0.004518		
+high	Actinopterygii	ND5	protein	A_share	184		lambda_ml	0.99695	-0.22392	0.091976	-2.4346	181	0.01588	-0.17807		
+high	Actinopterygii	ND6	protein	A_share	184		lambda_ml	0.99999	-0.13174	0.11477	-1.1479	181	0.25253	-0.085012		
+high	Actinopterygii	rRNA-12S	rna	A_share	184	528	lambda_ml	0.99999	-0.073434	0.082835	-0.88651	181	0.37652	-0.065751	1	0.95315
+high	Actinopterygii	rRNA-16S	rna	A_share	184	996	lambda_ml	0.99999	-0.0010008	0.061984	-0.016145	181	0.98714	-0.0012001	1	0.99313
+high	Actinopterygii	tRNA-Ala	rna	A_share	184	48	lambda_ml	0.99999	-0.017157	0.085481	-0.20072	181	0.84115	-0.014917	1	0.99313
+high	Actinopterygii	tRNA-Arg	rna	A_share	184	45	lambda_ml	0.97578	0.054414	0.12555	0.43341	181	0.66523	0.032199	1	0.99313
+high	Actinopterygii	tRNA-Asn	rna	A_share	184	48	lambda_ml	0.98916	0.0097077	0.17061	0.056901	181	0.95469	0.0042294	1	0.99313
+high	Actinopterygii	tRNA-Asp	rna	A_share	184	58	lambda_ml	0.9947	-0.089966	0.13635	-0.65983	181	0.5102	-0.048986	1	0.99313
+high	Actinopterygii	tRNA-Cys	rna	A_share	184	56	lambda_ml	0.95578	0.053085	0.20656	0.257	181	0.79747	0.019099	1	0.99313
+high	Actinopterygii	tRNA-Gln	rna	A_share	184	48	lambda_ml	0.99719	-0.18609	0.11323	-1.6435	181	0.10201	-0.12126	1	0.74064
+high	Actinopterygii	tRNA-Glu	rna	A_share	183	54	lambda_ml	0.87004	0.055887	0.26731	0.20907	180	0.83463	0.015581	1	0.99313
+high	Actinopterygii	tRNA-Gly	rna	A_share	184	38	lambda_ml	0.99999	0.029901	0.12646	0.23643	181	0.81336	0.017571	1	0.99313
+high	Actinopterygii	tRNA-His	rna	A_share	184	47	lambda_ml	0.99999	-0.14085	0.11422	-1.2331	181	0.21914	-0.091273	1	0.87654
+high	Actinopterygii	tRNA-Ile	rna	A_share	184	48	lambda_ml	0.99508	-0.11135	0.13119	-0.84874	181	0.39715	-0.062961	1	0.95315
+high	Actinopterygii	tRNA-Leu(CUN)	rna	A_share	184	39	lambda_ml	0.81286	-0.074205	0.25181	-0.29469	181	0.76857	-0.021899	1	0.99313
+high	Actinopterygii	tRNA-Leu(UUR)	rna	A_share	184	44	lambda_ml	0.98776	-0.015947	0.15596	-0.10225	181	0.91867	-0.0075998	1	0.99313
+high	Actinopterygii	tRNA-Lys	rna	A_share	184	47	lambda_ml	0.93479	-0.035231	0.20348	-0.17314	181	0.86273	-0.012869	1	0.99313
+high	Actinopterygii	tRNA-Met	rna	A_share	184	36	lambda_ml	0.99999	0.18823	0.12493	1.5066	181	0.13365	0.11129	1	0.74064
+high	Actinopterygii	tRNA-Phe	rna	A_share	184	51	lambda_ml	0.99999	-0.12229	0.12431	-0.98381	181	0.32652	-0.072931	1	0.95315
+high	Actinopterygii	tRNA-Pro	rna	A_share	184	60	lambda_ml	0.99919	0.032718	0.13023	0.25123	181	0.80192	0.01867	1	0.99313
+high	Actinopterygii	tRNA-Ser(AGY)	rna	A_share	184	58	lambda_ml	0.99891	-0.14732	0.10298	-1.4305	181	0.1543	-0.10573	1	0.74064
+high	Actinopterygii	tRNA-Ser(UCN)	rna	A_share	184	35	lambda_ml	0.99999	-0.00089059	0.10328	-0.0086227	181	0.99313	-0.00064092	1	0.99313
+high	Actinopterygii	tRNA-Thr	rna	A_share	184	57	lambda_ml	0.98126	-0.22696	0.12983	-1.7481	181	0.08214	-0.12885	1	0.74064
+high	Actinopterygii	tRNA-Trp	rna	A_share	183	47	lambda_ml	0.94535	-0.18445	0.2171	-0.84959	180	0.39668	-0.063198	1	0.95315
+high	Actinopterygii	tRNA-Tyr	rna	A_share	184	54	lambda_ml	0.7367	0.47645	0.22937	2.0772	181	0.039194	0.15259	0.94066	0.74064
+high	Actinopterygii	tRNA-Val	rna	A_share	184	52	lambda_ml	0.99005	-0.031358	0.11931	-0.26283	181	0.79298	-0.019532	1	0.99313
+high	Actinopterygii	ATP6	protein	C_share	184		lambda_1	1	-0.069019	0.10016	-0.68908	181	0.49166	-0.051152		
+high	Actinopterygii	ATP8	protein	C_share	184		lambda_1	1	0.014899	0.11184	0.13321	181	0.89418	0.0099009		
+high	Actinopterygii	COX1	protein	C_share	184		lambda_1	1	0.069874	0.11469	0.60927	181	0.54311	0.04524		
+high	Actinopterygii	COX2	protein	C_share	184		lambda_1	1	0.14181	0.12765	1.1109	181	0.26807	0.082295		
+high	Actinopterygii	COX3	protein	C_share	184		lambda_1	1	-0.070329	0.116	-0.6063	181	0.54507	-0.04502		
+high	Actinopterygii	CYTB	protein	C_share	184		lambda_1	1	0.038145	0.10181	0.37468	181	0.70833	0.027839		
+high	Actinopterygii	ND1	protein	C_share	184		lambda_1	1	-0.065489	0.11115	-0.58918	181	0.55647	-0.043752		
+high	Actinopterygii	ND2	protein	C_share	184		lambda_1	1	-0.050223	0.085211	-0.5894	181	0.55633	-0.043768		
+high	Actinopterygii	ND3	protein	C_share	184		lambda_1	1	-0.079265	0.10404	-0.7619	181	0.44711	-0.056541		
+high	Actinopterygii	ND4	protein	C_share	184		lambda_1	1	-0.026867	0.10035	-0.26772	181	0.78922	-0.019895		
+high	Actinopterygii	ND4L	protein	C_share	184		lambda_1	1	0.12834	0.098084	1.3084	181	0.19238	0.096798		
+high	Actinopterygii	ND5	protein	C_share	184		lambda_1	1	-0.010504	0.096452	-0.1089	181	0.9134	-0.0080944		
+high	Actinopterygii	ND6	protein	C_share	184		lambda_1	1	0.26264	0.12266	2.1413	181	0.033589	0.15718		
+high	Actinopterygii	rRNA-12S	rna	C_share	184	528	lambda_1	1	-0.057177	0.080085	-0.71396	181	0.47617	-0.052993	1	0.97175
+high	Actinopterygii	rRNA-16S	rna	C_share	184	996	lambda_1	1	-0.0069052	0.079942	-0.086378	181	0.93126	-0.0064203	1	0.97175
+high	Actinopterygii	tRNA-Ala	rna	C_share	184	48	lambda_1	1	0.29589	0.14641	2.021	181	0.044758	0.14855	0.98467	0.35806
+high	Actinopterygii	tRNA-Arg	rna	C_share	184	45	lambda_1	1	0.037826	0.072723	0.52014	181	0.6036	0.038633	1	0.97175
+high	Actinopterygii	tRNA-Asn	rna	C_share	184	48	lambda_1	1	0.096623	0.13778	0.7013	181	0.48401	0.052057	1	0.97175
+high	Actinopterygii	tRNA-Asp	rna	C_share	184	58	lambda_1	1	-0.19295	0.11162	-1.7287	181	0.085575	-0.12744	1	0.51345
+high	Actinopterygii	tRNA-Cys	rna	C_share	184	56	lambda_1	1	0.64849	0.21333	3.0398	181	0.0027179	0.22039	0.065231	0.065231
+high	Actinopterygii	tRNA-Gln	rna	C_share	184	48	lambda_1	1	0.12557	0.10361	1.2119	181	0.22714	0.089715	1	0.90856
+high	Actinopterygii	tRNA-Glu	rna	C_share	183	54	lambda_1	1	-0.059977	0.14449	-0.41509	180	0.67857	-0.030924	1	0.97175
+high	Actinopterygii	tRNA-Gly	rna	C_share	184	38	lambda_1	1	0.049148	0.13618	0.3609	181	0.71859	0.026816	1	0.97175
+high	Actinopterygii	tRNA-His	rna	C_share	184	47	lambda_1	1	-0.047982	0.13964	-0.3436	181	0.73154	-0.025531	1	0.97175
+high	Actinopterygii	tRNA-Ile	rna	C_share	184	48	lambda_1	1	0.049827	0.10121	0.4923	181	0.6231	0.036568	1	0.97175
+high	Actinopterygii	tRNA-Leu(CUN)	rna	C_share	184	39	lambda_1	1	0.022012	0.10547	0.20872	181	0.8349	0.015512	1	0.97175
+high	Actinopterygii	tRNA-Leu(UUR)	rna	C_share	184	44	lambda_1	1	0.026392	0.10238	0.25779	181	0.79686	0.019158	1	0.97175
+high	Actinopterygii	tRNA-Lys	rna	C_share	184	47	lambda_1	1	0.0024831	0.13396	0.018537	181	0.98523	0.0013778	1	0.98523
+high	Actinopterygii	tRNA-Met	rna	C_share	184	36	lambda_1	1	-0.19177	0.091106	-2.1049	181	0.036679	-0.15458	0.84362	0.35806
+high	Actinopterygii	tRNA-Phe	rna	C_share	184	51	lambda_1	1	0.10424	0.11256	0.9261	181	0.35563	0.068674	1	0.97175
+high	Actinopterygii	tRNA-Pro	rna	C_share	184	60	lambda_1	1	0.028325	0.16437	0.17233	181	0.86337	0.012808	1	0.97175
+high	Actinopterygii	tRNA-Ser(AGY)	rna	C_share	184	58	lambda_1	1	0.017146	0.089474	0.19164	181	0.84824	0.014243	1	0.97175
+high	Actinopterygii	tRNA-Ser(UCN)	rna	C_share	184	35	lambda_1	1	0.12824	0.11886	1.0789	181	0.28207	0.079937	1	0.9671
+high	Actinopterygii	tRNA-Thr	rna	C_share	184	57	lambda_1	1	-0.14409	0.11295	-1.2757	181	0.2037	-0.094397	1	0.90856
+high	Actinopterygii	tRNA-Trp	rna	C_share	183	47	lambda_1	1	0.013993	0.11661	0.12	180	0.90462	0.008944	1	0.97175
+high	Actinopterygii	tRNA-Tyr	rna	C_share	184	54	lambda_1	1	0.15831	0.20031	0.79034	181	0.43036	0.058644	1	0.97175
+high	Actinopterygii	tRNA-Val	rna	C_share	184	52	lambda_1	1	0.017402	0.10679	0.16295	181	0.87074	0.012111	1	0.97175
+high	Actinopterygii	ATP6	protein	C_share	184		lambda_ml	0.99999	-0.069167	0.10025	-0.68996	181	0.4911	-0.051217		
+high	Actinopterygii	ATP8	protein	C_share	184		lambda_ml	0.99999	0.014894	0.11194	0.13305	181	0.8943	0.009889		
+high	Actinopterygii	COX1	protein	C_share	184		lambda_ml	0.99999	0.069848	0.11479	0.60851	181	0.54361	0.045184		
+high	Actinopterygii	COX2	protein	C_share	184		lambda_ml	0.99999	0.14197	0.12776	1.1112	181	0.26794	0.082318		
+high	Actinopterygii	COX3	protein	C_share	184		lambda_ml	0.99999	-0.070197	0.1161	-0.60464	181	0.54618	-0.044897		
+high	Actinopterygii	CYTB	protein	C_share	184		lambda_ml	0.99999	0.038067	0.10189	0.37359	181	0.70915	0.027758		
+high	Actinopterygii	ND1	protein	C_share	184		lambda_ml	0.99999	-0.065767	0.11125	-0.59117	181	0.55514	-0.043899		
+high	Actinopterygii	ND2	protein	C_share	184		lambda_ml	0.99999	-0.050101	0.085286	-0.58745	181	0.55764	-0.043623		
+high	Actinopterygii	ND3	protein	C_share	184		lambda_ml	0.99999	-0.079373	0.10412	-0.7623	181	0.44687	-0.056571		
+high	Actinopterygii	ND4	protein	C_share	184		lambda_ml	0.99999	-0.027035	0.10044	-0.26916	181	0.78811	-0.020003		
+high	Actinopterygii	ND4L	protein	C_share	184		lambda_ml	0.99327	-0.083036	0.12541	-0.6621	181	0.50875	-0.049154		
+high	Actinopterygii	ND5	protein	C_share	184		lambda_ml	0.99999	-0.010621	0.096536	-0.11003	181	0.91251	-0.0081778		
+high	Actinopterygii	ND6	protein	C_share	184		lambda_ml	0.99561	0.43723	0.15093	2.897	181	0.0042331	0.2105		
+high	Actinopterygii	rRNA-12S	rna	C_share	184	528	lambda_ml	0.99999	-0.057265	0.080153	-0.71444	181	0.47587	-0.053029	1	0.90862
+high	Actinopterygii	rRNA-16S	rna	C_share	184	996	lambda_ml	0.99999	-0.0067955	0.080011	-0.084932	181	0.93241	-0.0063128	1	0.93241
+high	Actinopterygii	tRNA-Ala	rna	C_share	184	48	lambda_ml	0.98405	0.22563	0.20234	1.1151	181	0.26629	0.082602	1	0.84628
+high	Actinopterygii	tRNA-Arg	rna	C_share	184	45	lambda_ml	0.99999	0.03788	0.072786	0.52043	181	0.6034	0.038655	1	0.90862
+high	Actinopterygii	tRNA-Asn	rna	C_share	184	48	lambda_ml	0.9918	0.15636	0.1789	0.87399	181	0.38328	0.064826	1	0.90862
+high	Actinopterygii	tRNA-Asp	rna	C_share	184	58	lambda_ml	0.99984	-0.19837	0.114	-1.7401	181	0.083535	-0.12827	1	0.66828
+high	Actinopterygii	tRNA-Cys	rna	C_share	184	56	lambda_ml	0.54618	0.45994	0.225	2.0442	181	0.042384	0.15022	0.97484	0.50861
+high	Actinopterygii	tRNA-Gln	rna	C_share	184	48	lambda_ml	0.95076	0.20113	0.14186	1.4177	181	0.15798	0.1048	1	0.81427
+high	Actinopterygii	tRNA-Glu	rna	C_share	183	54	lambda_ml	0.81238	-0.27462	0.20289	-1.3535	180	0.17759	-0.10038	1	0.81427
+high	Actinopterygii	tRNA-Gly	rna	C_share	184	38	lambda_ml	0.99364	0.086046	0.17459	0.49285	181	0.62272	0.036608	1	0.90862
+high	Actinopterygii	tRNA-His	rna	C_share	184	47	lambda_ml	0.99999	-0.048064	0.13977	-0.34389	181	0.73133	-0.025553	1	0.90862
+high	Actinopterygii	tRNA-Ile	rna	C_share	184	48	lambda_ml	0.9945	0.093008	0.12775	0.72805	181	0.46752	0.054036	1	0.90862
+high	Actinopterygii	tRNA-Leu(CUN)	rna	C_share	184	39	lambda_ml	0.97006	-0.12253	0.15441	-0.79352	181	0.42851	-0.05888	1	0.90862
+high	Actinopterygii	tRNA-Leu(UUR)	rna	C_share	184	44	lambda_ml	0.99193	-0.031167	0.13424	-0.23217	181	0.81667	-0.017255	1	0.90862
+high	Actinopterygii	tRNA-Lys	rna	C_share	184	47	lambda_ml	0.981	-0.11286	0.18827	-0.59944	181	0.54963	-0.044512	1	0.90862
+high	Actinopterygii	tRNA-Met	rna	C_share	184	36	lambda_ml	0.99999	-0.19195	0.091183	-2.1051	181	0.036665	-0.15459	0.87995	0.50861
+high	Actinopterygii	tRNA-Phe	rna	C_share	184	51	lambda_ml	0.99458	0.093876	0.14223	0.66003	181	0.51008	0.049	1	0.90862
+high	Actinopterygii	tRNA-Pro	rna	C_share	184	60	lambda_ml	0.99317	0.056947	0.21193	0.2687	181	0.78846	0.019969	1	0.90862
+high	Actinopterygii	tRNA-Ser(AGY)	rna	C_share	184	58	lambda_ml	0.99999	0.017183	0.089552	0.19188	181	0.84805	0.014261	1	0.90862
+high	Actinopterygii	tRNA-Ser(UCN)	rna	C_share	184	35	lambda_ml	0.99999	0.12834	0.11896	1.0788	181	0.28209	0.079933	1	0.84628
+high	Actinopterygii	tRNA-Thr	rna	C_share	184	57	lambda_ml	0.99999	-0.14426	0.11305	-1.2761	181	0.20357	-0.094425	1	0.81427
+high	Actinopterygii	tRNA-Trp	rna	C_share	183	47	lambda_ml	0.99093	0.044798	0.15441	0.29012	180	0.77206	0.021619	1	0.90862
+high	Actinopterygii	tRNA-Tyr	rna	C_share	184	54	lambda_ml	0.57802	-0.043918	0.24689	-0.17789	181	0.85901	-0.013221	1	0.90862
+high	Actinopterygii	tRNA-Val	rna	C_share	184	52	lambda_ml	0.99999	0.017413	0.10688	0.16292	181	0.87077	0.012109	1	0.90862
+high	Actinopterygii	ATP6	protein	G_share	184		lambda_1	1	0.3175	0.14708	2.1586	181	0.032198	0.15842		
+high	Actinopterygii	ATP8	protein	G_share	184		lambda_1	1	0.41512	0.12966	3.2016	181	0.0016146	0.23151		
+high	Actinopterygii	COX1	protein	G_share	184		lambda_1	1	0.052784	0.13514	0.3906	181	0.69655	0.029021		
+high	Actinopterygii	COX2	protein	G_share	184		lambda_1	1	0.0064394	0.13851	0.04649	181	0.96297	0.0034556		
+high	Actinopterygii	COX3	protein	G_share	184		lambda_1	1	0.044913	0.14177	0.3168	181	0.75176	0.023541		
+high	Actinopterygii	CYTB	protein	G_share	184		lambda_1	1	-0.24987	0.12233	-2.0426	181	0.042541	-0.15011		
+high	Actinopterygii	ND1	protein	G_share	184		lambda_1	1	0.42269	0.11325	3.7322	181	0.00025399	0.26732		
+high	Actinopterygii	ND2	protein	G_share	184		lambda_1	1	0.22816	0.1232	1.8519	181	0.065667	0.13637		
+high	Actinopterygii	ND3	protein	G_share	184		lambda_1	1	0.18186	0.15466	1.1758	181	0.24121	0.087066		
+high	Actinopterygii	ND4	protein	G_share	184		lambda_1	1	0.3342	0.11612	2.8781	181	0.004483	0.20919		
+high	Actinopterygii	ND4L	protein	G_share	184		lambda_1	1	-0.09367	0.13693	-0.68408	181	0.4948	-0.050782		
+high	Actinopterygii	ND5	protein	G_share	184		lambda_1	1	0.305	0.11553	2.64	181	0.0090145	0.19256		
+high	Actinopterygii	ND6	protein	G_share	184		lambda_1	1	0.037683	0.10207	0.36917	181	0.71244	0.02743		
+high	Actinopterygii	rRNA-12S	rna	G_share	184	528	lambda_1	1	0.1472	0.099217	1.4836	181	0.13965	0.10961	1	0.62472
+high	Actinopterygii	rRNA-16S	rna	G_share	184	996	lambda_1	1	0.049066	0.072826	0.67374	181	0.50133	0.050016	1	0.8165
+high	Actinopterygii	tRNA-Ala	rna	G_share	184	48	lambda_1	1	0.034336	0.10676	0.32162	181	0.74811	0.023899	1	0.97869
+high	Actinopterygii	tRNA-Arg	rna	G_share	184	45	lambda_1	1	-0.013067	0.11273	-0.11591	181	0.90785	-0.0086155	1	0.97869
+high	Actinopterygii	tRNA-Asn	rna	G_share	184	48	lambda_1	1	-0.080989	0.14546	-0.5568	181	0.57835	-0.041351	1	0.8165
+high	Actinopterygii	tRNA-Asp	rna	G_share	184	58	lambda_1	1	0.18	0.093819	1.9186	181	0.056609	0.14118	1	0.56346
+high	Actinopterygii	tRNA-Cys	rna	G_share	184	56	lambda_1	1	-0.33178	0.233	-1.424	181	0.15618	-0.10525	1	0.62472
+high	Actinopterygii	tRNA-Gln	rna	G_share	184	48	lambda_1	1	-0.016505	0.090012	-0.18337	181	0.85472	-0.013628	1	0.97869
+high	Actinopterygii	tRNA-Glu	rna	G_share	183	54	lambda_1	1	0.0090925	0.17325	0.052481	180	0.9582	0.0039117	1	0.97869
+high	Actinopterygii	tRNA-Gly	rna	G_share	184	38	lambda_1	1	0.010373	0.11402	0.090975	181	0.92761	0.006762	1	0.97869
+high	Actinopterygii	tRNA-His	rna	G_share	184	47	lambda_1	1	0.1479	0.11713	1.2627	181	0.20833	0.093442	1	0.71429
+high	Actinopterygii	tRNA-Ile	rna	G_share	184	48	lambda_1	1	0.21076	0.11581	1.8199	181	0.070433	0.13405	1	0.56346
+high	Actinopterygii	tRNA-Leu(CUN)	rna	G_share	184	39	lambda_1	1	0.079352	0.13292	0.59697	181	0.55127	0.044329	1	0.8165
+high	Actinopterygii	tRNA-Leu(UUR)	rna	G_share	184	44	lambda_1	1	0.0039784	0.11974	0.033225	181	0.97353	0.0024696	1	0.97869
+high	Actinopterygii	tRNA-Lys	rna	G_share	184	47	lambda_1	1	0.15673	0.15618	1.0035	181	0.31695	0.074385	1	0.78253
+high	Actinopterygii	tRNA-Met	rna	G_share	184	36	lambda_1	1	-0.17103	0.1062	-1.6105	181	0.10902	-0.11886	1	0.62472
+high	Actinopterygii	tRNA-Phe	rna	G_share	184	51	lambda_1	1	0.12317	0.13813	0.89169	181	0.37374	0.066134	1	0.78253
+high	Actinopterygii	tRNA-Pro	rna	G_share	184	60	lambda_1	1	-0.0034852	0.13032	-0.026744	181	0.97869	-0.0019879	1	0.97869
+high	Actinopterygii	tRNA-Ser(AGY)	rna	G_share	184	58	lambda_1	1	0.09119	0.10611	0.85938	181	0.39127	0.063748	1	0.78253
+high	Actinopterygii	tRNA-Ser(UCN)	rna	G_share	184	35	lambda_1	1	-0.087958	0.13399	-0.65645	181	0.51237	-0.048735	1	0.8165
+high	Actinopterygii	tRNA-Thr	rna	G_share	184	57	lambda_1	1	0.48542	0.098567	4.9248	181	1.8955e-06	0.34375	4.5491e-05	4.5491e-05
+high	Actinopterygii	tRNA-Trp	rna	G_share	183	47	lambda_1	1	0.12171	0.12193	0.99815	180	0.31955	0.074193	1	0.78253
+high	Actinopterygii	tRNA-Tyr	rna	G_share	184	54	lambda_1	1	-0.15407	0.17716	-0.86964	181	0.38565	-0.064505	1	0.78253
+high	Actinopterygii	tRNA-Val	rna	G_share	184	52	lambda_1	1	0.059881	0.086725	0.69047	181	0.49078	0.051255	1	0.8165
+high	Actinopterygii	ATP6	protein	G_share	184		lambda_ml	0.98903	0.25459	0.19864	1.2817	181	0.20159	0.094839		
+high	Actinopterygii	ATP8	protein	G_share	184		lambda_ml	0.98564	0.42957	0.17697	2.4274	181	0.016188	0.17756		
+high	Actinopterygii	COX1	protein	G_share	184		lambda_ml	0.97696	0.33049	0.19311	1.7114	181	0.088713	0.12619		
+high	Actinopterygii	COX2	protein	G_share	184		lambda_ml	0.99621	0.086575	0.16934	0.51125	181	0.6098	0.037974		
+high	Actinopterygii	COX3	protein	G_share	184		lambda_ml	0.99999	0.045024	0.14189	0.31732	181	0.75137	0.023579		
+high	Actinopterygii	CYTB	protein	G_share	184		lambda_ml	0.99493	-0.048211	0.15267	-0.31578	181	0.75253	-0.023465		
+high	Actinopterygii	ND1	protein	G_share	184		lambda_ml	0.999	0.43946	0.12431	3.5352	181	0.00051746	0.25414		
+high	Actinopterygii	ND2	protein	G_share	184		lambda_ml	0.99283	0.39583	0.15911	2.4877	181	0.01376	0.18183		
+high	Actinopterygii	ND3	protein	G_share	184		lambda_ml	0.93726	0.31274	0.23723	1.3183	181	0.18906	0.097523		
+high	Actinopterygii	ND4	protein	G_share	184		lambda_ml	0.9991	0.36811	0.12664	2.9068	181	0.0041077	0.21119		
+high	Actinopterygii	ND4L	protein	G_share	184		lambda_ml	0.9444	0.29603	0.20441	1.4482	181	0.14929	0.10703		
+high	Actinopterygii	ND5	protein	G_share	184		lambda_ml	0.98894	0.48934	0.15383	3.181	181	0.0017274	0.2301		
+high	Actinopterygii	ND6	protein	G_share	184		lambda_ml	0.99999	0.037499	0.10216	0.36706	181	0.71401	0.027273		
+high	Actinopterygii	rRNA-12S	rna	G_share	184	528	lambda_ml	0.99999	0.14743	0.099302	1.4847	181	0.13938	0.10969	1	0.5575
+high	Actinopterygii	rRNA-16S	rna	G_share	184	996	lambda_ml	0.99999	0.049323	0.072888	0.67669	181	0.49946	0.050235	1	0.81959
+high	Actinopterygii	tRNA-Ala	rna	G_share	184	48	lambda_ml	0.99999	0.034396	0.10685	0.32191	181	0.7479	0.02392	1	0.94471
+high	Actinopterygii	tRNA-Arg	rna	G_share	184	45	lambda_ml	0.99361	-0.024549	0.14462	-0.16975	181	0.8654	-0.012616	1	0.97903
+high	Actinopterygii	tRNA-Asn	rna	G_share	184	48	lambda_ml	0.97784	-0.077113	0.20269	-0.38044	181	0.70406	-0.028267	1	0.93875
+high	Actinopterygii	tRNA-Asp	rna	G_share	184	58	lambda_ml	0.99078	0.22525	0.12292	1.8326	181	0.068511	0.13497	1	0.52811
+high	Actinopterygii	tRNA-Cys	rna	G_share	184	56	lambda_ml	0.6276	-0.40085	0.2496	-1.606	181	0.11002	-0.11853	1	0.52811
+high	Actinopterygii	tRNA-Gln	rna	G_share	184	48	lambda_ml	0.99179	-0.047456	0.11768	-0.40327	181	0.68723	-0.029961	1	0.93875
+high	Actinopterygii	tRNA-Glu	rna	G_share	183	54	lambda_ml	0.92157	-0.056499	0.25849	-0.21858	180	0.82723	-0.01629	1	0.97903
+high	Actinopterygii	tRNA-Gly	rna	G_share	184	38	lambda_ml	0.99999	0.010397	0.11411	0.091113	181	0.9275	0.0067722	1	0.97903
+high	Actinopterygii	tRNA-His	rna	G_share	184	47	lambda_ml	0.99999	0.14811	0.11723	1.2634	181	0.20806	0.093499	1	0.6134
+high	Actinopterygii	tRNA-Ile	rna	G_share	184	48	lambda_ml	0.99932	0.23676	0.12428	1.9051	181	0.058357	0.1402	1	0.52811
+high	Actinopterygii	tRNA-Leu(CUN)	rna	G_share	184	39	lambda_ml	0.97984	0.1465	0.18995	0.7713	181	0.44154	0.057236	1	0.81959
+high	Actinopterygii	tRNA-Leu(UUR)	rna	G_share	184	44	lambda_ml	0.97289	-0.012424	0.17122	-0.072561	181	0.94224	-0.0053934	1	0.97903
+high	Actinopterygii	tRNA-Lys	rna	G_share	184	47	lambda_ml	0.92287	0.17689	0.21821	0.81062	181	0.41865	0.060144	1	0.81959
+high	Actinopterygii	tRNA-Met	rna	G_share	184	36	lambda_ml	0.99999	-0.17123	0.10629	-1.611	181	0.10891	-0.1189	1	0.52811
+high	Actinopterygii	tRNA-Phe	rna	G_share	184	51	lambda_ml	0.99662	0.13118	0.16685	0.78618	181	0.43279	0.058337	1	0.81959
+high	Actinopterygii	tRNA-Pro	rna	G_share	184	60	lambda_ml	0.99999	-0.0034326	0.13043	-0.026318	181	0.97903	-0.0019562	1	0.97903
+high	Actinopterygii	tRNA-Ser(AGY)	rna	G_share	184	58	lambda_ml	0.9921	0.080744	0.13922	0.57999	181	0.56265	0.04307	1	0.84397
+high	Actinopterygii	tRNA-Ser(UCN)	rna	G_share	184	35	lambda_ml	0.99999	-0.088059	0.13411	-0.65664	181	0.51225	-0.04875	1	0.81959
+high	Actinopterygii	tRNA-Thr	rna	G_share	184	57	lambda_ml	0.97402	0.29099	0.13936	2.088	181	0.038197	0.15336	0.91673	0.52811
+high	Actinopterygii	tRNA-Trp	rna	G_share	183	47	lambda_ml	0.98008	0.20754	0.17232	1.2044	180	0.23003	0.089409	1	0.6134
+high	Actinopterygii	tRNA-Tyr	rna	G_share	184	54	lambda_ml	0.61898	-0.2756	0.22404	-1.2302	181	0.22023	-0.091058	1	0.6134
+high	Actinopterygii	tRNA-Val	rna	G_share	184	52	lambda_ml	0.99999	0.059956	0.0868	0.69073	181	0.49062	0.051274	1	0.81959
+high	Actinopterygii	ATP6	protein	T_share	184		lambda_1	1	0.12976	0.12154	1.0676	181	0.28712	0.079106		
+high	Actinopterygii	ATP8	protein	T_share	184		lambda_1	1	-0.059236	0.14252	-0.41564	181	0.67817	-0.03088		
+high	Actinopterygii	COX1	protein	T_share	184		lambda_1	1	-0.036408	0.11743	-0.31005	181	0.75688	-0.023039		
+high	Actinopterygii	COX2	protein	T_share	184		lambda_1	1	-0.079318	0.11233	-0.70612	181	0.48102	-0.052413		
+high	Actinopterygii	COX3	protein	T_share	184		lambda_1	1	0.11699	0.12081	0.96845	181	0.33411	0.071799		
+high	Actinopterygii	CYTB	protein	T_share	184		lambda_1	1	-0.037509	0.10846	-0.34582	181	0.72988	-0.025696		
+high	Actinopterygii	ND1	protein	T_share	184		lambda_1	1	0.057763	0.097253	0.59395	181	0.55329	0.044105		
+high	Actinopterygii	ND2	protein	T_share	184		lambda_1	1	0.047562	0.088225	0.53909	181	0.59048	0.040038		
+high	Actinopterygii	ND3	protein	T_share	184		lambda_1	1	0.083402	0.14057	0.5933	181	0.55372	0.044057		
+high	Actinopterygii	ND4	protein	T_share	184		lambda_1	1	0.0074686	0.10303	0.072491	181	0.94229	0.0053881		
+high	Actinopterygii	ND4L	protein	T_share	184		lambda_1	1	-0.10067	0.11453	-0.87898	181	0.38058	-0.065195		
+high	Actinopterygii	ND5	protein	T_share	184		lambda_1	1	0.0083122	0.10488	0.079256	181	0.93692	0.0058909		
+high	Actinopterygii	ND6	protein	T_share	184		lambda_1	1	-0.13991	0.10488	-1.334	181	0.18387	-0.098674		
+high	Actinopterygii	rRNA-12S	rna	T_share	184	528	lambda_1	1	0.036566	0.078095	0.46823	181	0.64019	0.034782	1	0.91266
+high	Actinopterygii	rRNA-16S	rna	T_share	184	996	lambda_1	1	-0.03227	0.07329	-0.4403	181	0.66025	-0.03271	1	0.91266
+high	Actinopterygii	tRNA-Ala	rna	T_share	184	48	lambda_1	1	-0.27702	0.14997	-1.8471	181	0.066368	-0.13602	1	0.69246
+high	Actinopterygii	tRNA-Arg	rna	T_share	184	45	lambda_1	1	-0.065855	0.087975	-0.74856	181	0.45509	-0.055554	1	0.91266
+high	Actinopterygii	tRNA-Asn	rna	T_share	184	48	lambda_1	1	-0.063789	0.1403	-0.45467	181	0.64989	-0.033776	1	0.91266
+high	Actinopterygii	tRNA-Asp	rna	T_share	184	58	lambda_1	1	0.034197	0.09837	0.34764	181	0.72851	0.025831	1	0.91266
+high	Actinopterygii	tRNA-Cys	rna	T_share	184	56	lambda_1	1	-0.23231	0.11183	-2.0773	181	0.039188	-0.15259	0.94052	0.69246
+high	Actinopterygii	tRNA-Gln	rna	T_share	184	48	lambda_1	1	0.025095	0.12151	0.20654	181	0.8366	0.01535	1	0.91266
+high	Actinopterygii	tRNA-Glu	rna	T_share	183	54	lambda_1	1	0.043269	0.14863	0.29113	180	0.77129	0.021694	1	0.91266
+high	Actinopterygii	tRNA-Gly	rna	T_share	184	38	lambda_1	1	-0.075712	0.12701	-0.59613	181	0.55183	-0.044266	1	0.91266
+high	Actinopterygii	tRNA-His	rna	T_share	184	47	lambda_1	1	0.067004	0.14466	0.46319	181	0.64378	0.034409	1	0.91266
+high	Actinopterygii	tRNA-Ile	rna	T_share	184	48	lambda_1	1	-0.16608	0.10868	-1.5281	181	0.12823	-0.11286	1	0.76937
+high	Actinopterygii	tRNA-Leu(CUN)	rna	T_share	184	39	lambda_1	1	0.11572	0.15692	0.73746	181	0.4618	0.054733	1	0.91266
+high	Actinopterygii	tRNA-Leu(UUR)	rna	T_share	184	44	lambda_1	1	-0.016083	0.12423	-0.12946	181	0.89714	-0.0096224	1	0.91616
+high	Actinopterygii	tRNA-Lys	rna	T_share	184	47	lambda_1	1	-0.040023	0.14085	-0.28415	181	0.77662	-0.021116	1	0.91266
+high	Actinopterygii	tRNA-Met	rna	T_share	184	36	lambda_1	1	0.15105	0.087657	1.7232	181	0.086557	0.12705	1	0.69246
+high	Actinopterygii	tRNA-Phe	rna	T_share	184	51	lambda_1	1	-0.095656	0.12515	-0.76432	181	0.44567	-0.05672	1	0.91266
+high	Actinopterygii	tRNA-Pro	rna	T_share	184	60	lambda_1	1	-0.063049	0.15758	-0.40012	181	0.68954	-0.029727	1	0.91266
+high	Actinopterygii	tRNA-Ser(AGY)	rna	T_share	184	58	lambda_1	1	0.025949	0.083784	0.30971	181	0.75714	0.023014	1	0.91266
+high	Actinopterygii	tRNA-Ser(UCN)	rna	T_share	184	35	lambda_1	1	-0.073939	0.11995	-0.61641	181	0.5384	-0.045769	1	0.91266
+high	Actinopterygii	tRNA-Thr	rna	T_share	184	57	lambda_1	1	0.10688	0.10512	1.0167	181	0.31063	0.075359	1	0.91266
+high	Actinopterygii	tRNA-Trp	rna	T_share	183	47	lambda_1	1	-0.031633	0.13711	-0.23071	180	0.8178	-0.017194	1	0.91266
+high	Actinopterygii	tRNA-Tyr	rna	T_share	184	54	lambda_1	1	-0.11785	0.1359	-0.8672	181	0.38698	-0.064325	1	0.91266
+high	Actinopterygii	tRNA-Val	rna	T_share	184	52	lambda_1	1	-0.010303	0.097737	-0.10542	181	0.91616	-0.0078354	1	0.91616
+high	Actinopterygii	ATP6	protein	T_share	184		lambda_ml	0.99999	0.12999	0.12165	1.0685	181	0.2867	0.079175		
+high	Actinopterygii	ATP8	protein	T_share	184		lambda_ml	0.99999	-0.059277	0.14264	-0.41557	181	0.67822	-0.030874		
+high	Actinopterygii	COX1	protein	T_share	184		lambda_ml	0.99999	-0.036332	0.11753	-0.30913	181	0.75758	-0.022971		
+high	Actinopterygii	COX2	protein	T_share	184		lambda_ml	0.99999	-0.079417	0.11243	-0.70639	181	0.48085	-0.052434		
+high	Actinopterygii	COX3	protein	T_share	184		lambda_ml	0.99999	0.11691	0.12091	0.96697	181	0.33485	0.071689		
+high	Actinopterygii	CYTB	protein	T_share	184		lambda_ml	0.99999	-0.03741	0.10856	-0.34461	181	0.73079	-0.025606		
+high	Actinopterygii	ND1	protein	T_share	184		lambda_ml	0.99999	0.058008	0.097336	0.59596	181	0.55195	0.044254		
+high	Actinopterygii	ND2	protein	T_share	184		lambda_ml	0.99999	0.047413	0.088302	0.53694	181	0.59197	0.039879		
+high	Actinopterygii	ND3	protein	T_share	184		lambda_ml	0.96648	0.02472	0.20539	0.12035	181	0.90434	0.0089455		
+high	Actinopterygii	ND4	protein	T_share	184		lambda_ml	0.99999	0.0076357	0.10312	0.074049	181	0.94105	0.0055039		
+high	Actinopterygii	ND4L	protein	T_share	184		lambda_ml	0.99993	-0.095778	0.11563	-0.82832	181	0.40858	-0.061452		
+high	Actinopterygii	ND5	protein	T_share	184		lambda_ml	0.99999	0.0084367	0.10497	0.080375	181	0.93603	0.0059741		
+high	Actinopterygii	ND6	protein	T_share	184		lambda_ml	0.99844	-0.20684	0.11863	-1.7436	181	0.082926	-0.12853		
+high	Actinopterygii	rRNA-12S	rna	T_share	184	528	lambda_ml	0.99999	0.036606	0.078163	0.46833	181	0.64011	0.03479	1	0.96412
+high	Actinopterygii	rRNA-16S	rna	T_share	184	996	lambda_ml	0.99999	-0.032441	0.073353	-0.44225	181	0.65883	-0.032855	1	0.96412
+high	Actinopterygii	tRNA-Ala	rna	T_share	184	48	lambda_ml	0.9805	-0.23716	0.20983	-1.1302	181	0.25987	-0.083715	1	0.89995
+high	Actinopterygii	tRNA-Arg	rna	T_share	184	45	lambda_ml	0.99999	-0.065937	0.088051	-0.74885	181	0.45492	-0.055576	1	0.96412
+high	Actinopterygii	tRNA-Asn	rna	T_share	184	48	lambda_ml	0.99654	-0.086495	0.1693	-0.5109	181	0.61005	-0.037947	1	0.96412
+high	Actinopterygii	tRNA-Asp	rna	T_share	184	58	lambda_ml	0.99999	0.034237	0.098455	0.34774	181	0.72844	0.025838	1	0.96412
+high	Actinopterygii	tRNA-Cys	rna	T_share	184	56	lambda_ml	0.95882	-0.37709	0.16169	-2.3322	181	0.020792	-0.1708	0.499	0.499
+high	Actinopterygii	tRNA-Gln	rna	T_share	184	48	lambda_ml	0.94932	-0.015446	0.16662	-0.092702	181	0.92624	-0.0068903	1	0.96412
+high	Actinopterygii	tRNA-Glu	rna	T_share	183	54	lambda_ml	0.85235	0.2466	0.21502	1.1469	180	0.25294	0.085175	1	0.89995
+high	Actinopterygii	tRNA-Gly	rna	T_share	184	38	lambda_ml	0.97797	-0.13788	0.18094	-0.76203	181	0.44703	-0.056551	1	0.96412
+high	Actinopterygii	tRNA-His	rna	T_share	184	47	lambda_ml	0.99999	0.06713	0.14478	0.46366	181	0.64345	0.034443	1	0.96412
+high	Actinopterygii	tRNA-Ile	rna	T_share	184	48	lambda_ml	0.9947	-0.21092	0.13658	-1.5443	181	0.12427	-0.11404	1	0.89995
+high	Actinopterygii	tRNA-Leu(CUN)	rna	T_share	184	39	lambda_ml	0.79644	0.24072	0.21416	1.124	181	0.26249	0.083259	1	0.89995
+high	Actinopterygii	tRNA-Leu(UUR)	rna	T_share	184	44	lambda_ml	0.99809	0.0064369	0.14289	0.045047	181	0.96412	0.0033483	1	0.96412
+high	Actinopterygii	tRNA-Lys	rna	T_share	184	47	lambda_ml	0.99066	0.017886	0.18664	0.095831	181	0.92376	0.0071229	1	0.96412
+high	Actinopterygii	tRNA-Met	rna	T_share	184	36	lambda_ml	0.99999	0.15118	0.087732	1.7232	181	0.086562	0.12705	1	0.89995
+high	Actinopterygii	tRNA-Phe	rna	T_share	184	51	lambda_ml	0.9907	-0.045902	0.16689	-0.27505	181	0.78359	-0.02044	1	0.96412
+high	Actinopterygii	tRNA-Pro	rna	T_share	184	60	lambda_ml	0.8836	-0.27559	0.23916	-1.1523	181	0.25071	-0.085339	1	0.89995
+high	Actinopterygii	tRNA-Ser(AGY)	rna	T_share	184	58	lambda_ml	0.99999	0.025984	0.083858	0.30986	181	0.75702	0.023026	1	0.96412
+high	Actinopterygii	tRNA-Ser(UCN)	rna	T_share	184	35	lambda_ml	0.98362	0.018325	0.16632	0.11018	181	0.91239	0.0081892	1	0.96412
+high	Actinopterygii	tRNA-Thr	rna	T_share	184	57	lambda_ml	0.99999	0.10698	0.10521	1.0169	181	0.31058	0.075367	1	0.93174
+high	Actinopterygii	tRNA-Trp	rna	T_share	183	47	lambda_ml	0.99999	-0.031689	0.13723	-0.23092	180	0.81764	-0.017209	1	0.96412
+high	Actinopterygii	tRNA-Tyr	rna	T_share	184	54	lambda_ml	0.86775	-0.14143	0.19604	-0.72144	181	0.47157	-0.053548	1	0.96412
+high	Actinopterygii	tRNA-Val	rna	T_share	184	52	lambda_ml	0.99999	-0.010336	0.097823	-0.10566	181	0.91597	-0.0078535	1	0.96412
+high	Actinopterygii	ATP6	protein	at_skew	184		lambda_1	1	-0.21935	0.096165	-2.2809	181	0.023717	-0.16716		
+high	Actinopterygii	ATP8	protein	at_skew	184		lambda_1	1	-0.10377	0.13567	-0.76489	181	0.44533	-0.056762		
+high	Actinopterygii	COX1	protein	at_skew	184		lambda_1	1	-0.030306	0.093787	-0.32313	181	0.74697	-0.024011		
+high	Actinopterygii	COX2	protein	at_skew	184		lambda_1	1	0.011512	0.09052	0.12718	181	0.89894	0.0094525		
+high	Actinopterygii	COX3	protein	at_skew	184		lambda_1	1	-0.11142	0.10345	-1.077	181	0.2829	-0.079799		
+high	Actinopterygii	CYTB	protein	at_skew	184		lambda_1	1	0.11289	0.085131	1.3261	181	0.18649	0.09809		
+high	Actinopterygii	ND1	protein	at_skew	184		lambda_1	1	-0.18482	0.073284	-2.5219	181	0.012533	-0.18425		
+high	Actinopterygii	ND2	protein	at_skew	184		lambda_1	1	-0.10667	0.077303	-1.3799	181	0.16931	-0.10203		
+high	Actinopterygii	ND3	protein	at_skew	184		lambda_1	1	-0.10779	0.11258	-0.95742	181	0.33963	-0.070985		
+high	Actinopterygii	ND4	protein	at_skew	184		lambda_1	1	-0.12517	0.078278	-1.5991	181	0.11155	-0.11803		
+high	Actinopterygii	ND4L	protein	at_skew	184		lambda_1	1	0.058354	0.098978	0.58956	181	0.55622	0.04378		
+high	Actinopterygii	ND5	protein	at_skew	184		lambda_1	1	-0.11986	0.086944	-1.3786	181	0.16973	-0.10194		
+high	Actinopterygii	ND6	protein	at_skew	184		lambda_1	1	-0.03117	0.1059	-0.29433	181	0.76885	-0.021872		
+high	Actinopterygii	rRNA-12S	rna	at_skew	184	528	lambda_1	1	-0.069274	0.079878	-0.86725	181	0.38695	-0.064329	1	0.94326
+high	Actinopterygii	rRNA-16S	rna	at_skew	184	996	lambda_1	1	0.019073	0.064992	0.29348	181	0.76949	0.021809	1	0.94326
+high	Actinopterygii	tRNA-Ala	rna	at_skew	184	48	lambda_1	1	0.12868	0.11341	1.1346	181	0.25804	0.084036	1	0.94326
+high	Actinopterygii	tRNA-Arg	rna	at_skew	184	45	lambda_1	1	0.099614	0.1257	0.79248	181	0.42912	0.058803	1	0.94326
+high	Actinopterygii	tRNA-Asn	rna	at_skew	184	48	lambda_1	1	0.057479	0.14041	0.40937	181	0.68275	0.030414	1	0.94326
+high	Actinopterygii	tRNA-Asp	rna	at_skew	184	58	lambda_1	1	-0.088564	0.14907	-0.59412	181	0.55318	-0.044117	1	0.94326
+high	Actinopterygii	tRNA-Cys	rna	at_skew	184	56	lambda_1	1	0.12316	0.12525	0.98328	181	0.32678	0.072892	1	0.94326
+high	Actinopterygii	tRNA-Gln	rna	at_skew	184	48	lambda_1	1	-0.12523	0.093772	-1.3355	181	0.18339	-0.09878	1	0.94326
+high	Actinopterygii	tRNA-Glu	rna	at_skew	183	54	lambda_1	1	-0.022634	0.1948	-0.11619	180	0.90763	-0.0086602	1	0.94326
+high	Actinopterygii	tRNA-Gly	rna	at_skew	184	38	lambda_1	1	0.076843	0.13258	0.57959	181	0.56291	0.04304	1	0.94326
+high	Actinopterygii	tRNA-His	rna	at_skew	184	47	lambda_1	1	-0.16249	0.1349	-1.2045	181	0.22997	-0.089172	1	0.94326
+high	Actinopterygii	tRNA-Ile	rna	at_skew	184	48	lambda_1	1	0.079615	0.11368	0.70035	181	0.48461	0.051986	1	0.94326
+high	Actinopterygii	tRNA-Leu(CUN)	rna	at_skew	184	39	lambda_1	1	-0.19347	0.19853	-0.97451	181	0.33111	-0.072245	1	0.94326
+high	Actinopterygii	tRNA-Leu(UUR)	rna	at_skew	184	44	lambda_1	1	-0.0096912	0.13597	-0.071276	181	0.94326	-0.0052978	1	0.94326
+high	Actinopterygii	tRNA-Lys	rna	at_skew	184	47	lambda_1	1	-0.024522	0.14715	-0.16664	181	0.86784	-0.012386	1	0.94326
+high	Actinopterygii	tRNA-Met	rna	at_skew	184	36	lambda_1	1	-0.034725	0.11534	-0.30105	181	0.76372	-0.022371	1	0.94326
+high	Actinopterygii	tRNA-Phe	rna	at_skew	184	51	lambda_1	1	0.013491	0.1194	0.11299	181	0.91017	0.008398	1	0.94326
+high	Actinopterygii	tRNA-Pro	rna	at_skew	184	60	lambda_1	1	0.053848	0.14075	0.38259	181	0.70248	0.028426	1	0.94326
+high	Actinopterygii	tRNA-Ser(AGY)	rna	at_skew	184	58	lambda_1	1	-0.12129	0.10227	-1.186	181	0.23718	-0.087813	1	0.94326
+high	Actinopterygii	tRNA-Ser(UCN)	rna	at_skew	184	35	lambda_1	1	0.05875	0.13677	0.42957	181	0.66802	0.031913	1	0.94326
+high	Actinopterygii	tRNA-Thr	rna	at_skew	184	57	lambda_1	1	-0.41674	0.10815	-3.8534	181	0.00016163	-0.27535	0.0038791	0.0038791
+high	Actinopterygii	tRNA-Trp	rna	at_skew	183	47	lambda_1	1	-0.020937	0.17654	-0.1186	180	0.90573	-0.0088395	1	0.94326
+high	Actinopterygii	tRNA-Tyr	rna	at_skew	184	54	lambda_1	1	0.20351	0.19518	1.0427	181	0.29848	0.077271	1	0.94326
+high	Actinopterygii	tRNA-Val	rna	at_skew	184	52	lambda_1	1	-0.035797	0.10529	-0.33998	181	0.73427	-0.025262	1	0.94326
+high	Actinopterygii	ATP6	protein	at_skew	184		lambda_ml	0.99999	-0.21939	0.096249	-2.2795	181	0.023807	-0.16705		
+high	Actinopterygii	ATP8	protein	at_skew	184		lambda_ml	0.99999	-0.10358	0.13579	-0.76285	181	0.44655	-0.056611		
+high	Actinopterygii	COX1	protein	at_skew	184		lambda_ml	0.99879	-0.077117	0.10416	-0.74036	181	0.46004	-0.054947		
+high	Actinopterygii	COX2	protein	at_skew	184		lambda_ml	0.99999	0.01149	0.090597	0.12682	181	0.89922	0.0094264		
+high	Actinopterygii	COX3	protein	at_skew	184		lambda_ml	0.99999	-0.11145	0.10354	-1.0764	181	0.28319	-0.079752		
+high	Actinopterygii	CYTB	protein	at_skew	184		lambda_ml	0.99999	0.11258	0.085203	1.3213	181	0.18808	0.09774		
+high	Actinopterygii	ND1	protein	at_skew	184		lambda_ml	0.99999	-0.18502	0.073347	-2.5225	181	0.012514	-0.18429		
+high	Actinopterygii	ND2	protein	at_skew	184		lambda_ml	0.99999	-0.10676	0.07737	-1.3798	181	0.16934	-0.10203		
+high	Actinopterygii	ND3	protein	at_skew	184		lambda_ml	0.95329	-0.068612	0.1699	-0.40383	181	0.68681	-0.030003		
+high	Actinopterygii	ND4	protein	at_skew	184		lambda_ml	0.99999	-0.12539	0.078345	-1.6005	181	0.11123	-0.11813		
+high	Actinopterygii	ND4L	protein	at_skew	184		lambda_ml	0.99999	0.058351	0.099062	0.58904	181	0.55657	0.043741		
+high	Actinopterygii	ND5	protein	at_skew	184		lambda_ml	0.99502	-0.1896	0.10878	-1.7431	181	0.08302	-0.12849		
+high	Actinopterygii	ND6	protein	at_skew	184		lambda_ml	0.99999	-0.030893	0.10599	-0.29147	181	0.77103	-0.021659		
+high	Actinopterygii	rRNA-12S	rna	at_skew	184	528	lambda_ml	0.99999	-0.06936	0.079947	-0.86757	181	0.38678	-0.064352	1	0.83889
+high	Actinopterygii	rRNA-16S	rna	at_skew	184	996	lambda_ml	0.99999	0.019133	0.065047	0.29414	181	0.76899	0.021858	1	0.83889
+high	Actinopterygii	tRNA-Ala	rna	at_skew	184	48	lambda_ml	0.99999	0.12881	0.11351	1.1348	181	0.25797	0.084048	1	0.83889
+high	Actinopterygii	tRNA-Arg	rna	at_skew	184	45	lambda_ml	0.97853	0.13773	0.17554	0.78464	181	0.43369	0.058223	1	0.83889
+high	Actinopterygii	tRNA-Asn	rna	at_skew	184	48	lambda_ml	0.99901	0.061525	0.15404	0.3994	181	0.69007	0.029674	1	0.83889
+high	Actinopterygii	tRNA-Asp	rna	at_skew	184	58	lambda_ml	0.99999	-0.088715	0.14919	-0.59463	181	0.55283	-0.044155	1	0.83889
+high	Actinopterygii	tRNA-Cys	rna	at_skew	184	56	lambda_ml	0.96033	0.35029	0.17963	1.95	181	0.05272	0.14344	1	0.63264
+high	Actinopterygii	tRNA-Gln	rna	at_skew	184	48	lambda_ml	0.97388	-0.11726	0.13072	-0.89703	181	0.37089	-0.066528	1	0.83889
+high	Actinopterygii	tRNA-Glu	rna	at_skew	183	54	lambda_ml	0.73325	-0.12576	0.26318	-0.47786	180	0.63333	-0.035595	1	0.83889
+high	Actinopterygii	tRNA-Gly	rna	at_skew	184	38	lambda_ml	0.98443	0.091331	0.18443	0.4952	181	0.62106	0.036783	1	0.83889
+high	Actinopterygii	tRNA-His	rna	at_skew	184	47	lambda_ml	0.99999	-0.16276	0.13502	-1.2055	181	0.2296	-0.089243	1	0.83889
+high	Actinopterygii	tRNA-Ile	rna	at_skew	184	48	lambda_ml	0.9942	0.067834	0.14384	0.4716	181	0.63778	0.035032	1	0.83889
+high	Actinopterygii	tRNA-Leu(CUN)	rna	at_skew	184	39	lambda_ml	0.6602	-0.1207	0.24175	-0.49929	181	0.61818	-0.037086	1	0.83889
+high	Actinopterygii	tRNA-Leu(UUR)	rna	at_skew	184	44	lambda_ml	0.98997	-0.074572	0.18121	-0.41152	181	0.68118	-0.030574	1	0.83889
+high	Actinopterygii	tRNA-Lys	rna	at_skew	184	47	lambda_ml	0.97312	-0.081121	0.20798	-0.39004	181	0.69697	-0.028979	1	0.83889
+high	Actinopterygii	tRNA-Met	rna	at_skew	184	36	lambda_ml	0.99999	-0.034711	0.11544	-0.30067	181	0.76401	-0.022343	1	0.83889
+high	Actinopterygii	tRNA-Phe	rna	at_skew	184	51	lambda_ml	0.99999	0.013478	0.1195	0.11279	181	0.91032	0.008383	1	0.9499
+high	Actinopterygii	tRNA-Pro	rna	at_skew	184	60	lambda_ml	0.96478	0.086014	0.20539	0.41879	181	0.67587	0.031113	1	0.83889
+high	Actinopterygii	tRNA-Ser(AGY)	rna	at_skew	184	58	lambda_ml	0.99999	-0.12143	0.10236	-1.1864	181	0.23703	-0.087841	1	0.83889
+high	Actinopterygii	tRNA-Ser(UCN)	rna	at_skew	184	35	lambda_ml	0.96296	-0.15924	0.19989	-0.79666	181	0.42669	-0.059112	1	0.83889
+high	Actinopterygii	tRNA-Thr	rna	at_skew	184	57	lambda_ml	0.99939	-0.38683	0.11542	-3.3515	181	0.00097836	-0.24173	0.023481	0.023481
+high	Actinopterygii	tRNA-Trp	rna	at_skew	183	47	lambda_ml	0.73491	-0.0088661	0.27672	-0.03204	180	0.97448	-0.0023881	1	0.97448
+high	Actinopterygii	tRNA-Tyr	rna	at_skew	184	54	lambda_ml	0.65531	0.3798	0.25617	1.4826	181	0.13991	0.10954	1	0.83889
+high	Actinopterygii	tRNA-Val	rna	at_skew	184	52	lambda_ml	0.99999	-0.035809	0.10538	-0.3398	181	0.7344	-0.025249	1	0.83889
+high	Actinopterygii	ATP6	protein	gc_percent	184		lambda_1	1	0.046988	0.11128	0.42226	181	0.67333	0.031371		
+high	Actinopterygii	ATP8	protein	gc_percent	184		lambda_1	1	0.20371	0.11399	1.787	181	0.075609	0.13167		
+high	Actinopterygii	COX1	protein	gc_percent	184		lambda_1	1	0.074298	0.1183	0.62803	181	0.53078	0.04663		
+high	Actinopterygii	COX2	protein	gc_percent	184		lambda_1	1	0.12773	0.1292	0.98863	181	0.32416	0.073287		
+high	Actinopterygii	COX3	protein	gc_percent	184		lambda_1	1	-0.041519	0.1203	-0.34513	181	0.73039	-0.025645		
+high	Actinopterygii	CYTB	protein	gc_percent	184		lambda_1	1	-0.088375	0.11054	-0.79949	181	0.42505	-0.059321		
+high	Actinopterygii	ND1	protein	gc_percent	184		lambda_1	1	0.23279	0.1241	1.8758	181	0.062296	0.13809		
+high	Actinopterygii	ND2	protein	gc_percent	184		lambda_1	1	0.081351	0.10306	0.78934	181	0.43094	0.058571		
+high	Actinopterygii	ND3	protein	gc_percent	184		lambda_1	1	0.016245	0.11899	0.13653	181	0.89156	0.010148		
+high	Actinopterygii	ND4	protein	gc_percent	184		lambda_1	1	0.14521	0.10683	1.3593	181	0.17573	0.10053		
+high	Actinopterygii	ND4L	protein	gc_percent	184		lambda_1	1	0.080197	0.12064	0.66478	181	0.50704	0.049352		
+high	Actinopterygii	ND5	protein	gc_percent	184		lambda_1	1	0.15798	0.097343	1.6229	181	0.10635	0.11976		
+high	Actinopterygii	ND6	protein	gc_percent	184		lambda_1	1	0.23906	0.12154	1.967	181	0.050712	0.14467		
+high	Actinopterygii	rRNA-12S	rna	gc_percent	184	528	lambda_1	1	0.029812	0.080755	0.36916	181	0.71244	0.027429	1	0.94842
+high	Actinopterygii	rRNA-16S	rna	gc_percent	184	996	lambda_1	1	0.02566	0.074313	0.34529	181	0.73028	0.025657	1	0.94842
+high	Actinopterygii	tRNA-Ala	rna	gc_percent	184	48	lambda_1	1	0.20487	0.11909	1.7203	181	0.087084	0.12684	1	0.5225
+high	Actinopterygii	tRNA-Arg	rna	gc_percent	184	45	lambda_1	1	0.022815	0.075247	0.3032	181	0.76209	0.022531	1	0.94842
+high	Actinopterygii	tRNA-Asn	rna	gc_percent	184	48	lambda_1	1	0.015103	0.1184	0.12756	181	0.89864	0.0094814	1	0.94842
+high	Actinopterygii	tRNA-Asp	rna	gc_percent	184	58	lambda_1	1	0.0091961	0.080257	0.11458	181	0.9089	0.0085166	1	0.94842
+high	Actinopterygii	tRNA-Cys	rna	gc_percent	184	56	lambda_1	1	0.23201	0.11788	1.9682	181	0.050567	0.14476	1	0.40454
+high	Actinopterygii	tRNA-Gln	rna	gc_percent	184	48	lambda_1	1	0.11311	0.1292	0.87543	181	0.3825	0.064933	1	0.94842
+high	Actinopterygii	tRNA-Glu	rna	gc_percent	183	54	lambda_1	1	-0.03984	0.10237	-0.38918	180	0.6976	-0.028996	1	0.94842
+high	Actinopterygii	tRNA-Gly	rna	gc_percent	184	38	lambda_1	1	0.039445	0.12065	0.32693	181	0.7441	0.024294	1	0.94842
+high	Actinopterygii	tRNA-His	rna	gc_percent	184	47	lambda_1	1	0.068173	0.12074	0.56463	181	0.57302	0.041932	1	0.94842
+high	Actinopterygii	tRNA-Ile	rna	gc_percent	184	48	lambda_1	1	0.14609	0.10283	1.4207	181	0.15713	0.10501	1	0.75424
+high	Actinopterygii	tRNA-Leu(CUN)	rna	gc_percent	184	39	lambda_1	1	0.065957	0.11639	0.56669	181	0.57163	0.042084	1	0.94842
+high	Actinopterygii	tRNA-Leu(UUR)	rna	gc_percent	184	44	lambda_1	1	0.023972	0.10223	0.23449	181	0.81487	0.017427	1	0.94842
+high	Actinopterygii	tRNA-Lys	rna	gc_percent	184	47	lambda_1	1	0.091916	0.13702	0.6708	181	0.5032	0.049798	1	0.94842
+high	Actinopterygii	tRNA-Met	rna	gc_percent	184	36	lambda_1	1	-0.21194	0.091788	-2.309	181	0.022073	-0.16915	0.50768	0.26488
+high	Actinopterygii	tRNA-Phe	rna	gc_percent	184	51	lambda_1	1	0.14671	0.13341	1.0997	181	0.27294	0.081465	1	0.94842
+high	Actinopterygii	tRNA-Pro	rna	gc_percent	184	60	lambda_1	1	0.021029	0.1334	0.15764	181	0.87492	0.011716	1	0.94842
+high	Actinopterygii	tRNA-Ser(AGY)	rna	gc_percent	184	58	lambda_1	1	0.056203	0.078079	0.71982	181	0.47256	0.053428	1	0.94842
+high	Actinopterygii	tRNA-Ser(UCN)	rna	gc_percent	184	35	lambda_1	1	0.049214	0.099327	0.49547	181	0.62087	0.036803	1	0.94842
+high	Actinopterygii	tRNA-Thr	rna	gc_percent	184	57	lambda_1	1	0.22204	0.09383	2.3664	181	0.01902	0.17323	0.45649	0.26488
+high	Actinopterygii	tRNA-Trp	rna	gc_percent	183	47	lambda_1	1	0.07521	0.099131	0.7587	180	0.44903	0.05646	1	0.94842
+high	Actinopterygii	tRNA-Tyr	rna	gc_percent	184	54	lambda_1	1	-0.0013611	0.099576	-0.013669	181	0.98911	-0.001016	1	0.98911
+high	Actinopterygii	tRNA-Val	rna	gc_percent	184	52	lambda_1	1	0.048596	0.082853	0.58653	181	0.55825	0.043555	1	0.94842
+high	Actinopterygii	ATP6	protein	gc_percent	184		lambda_ml	0.99999	0.046716	0.11137	0.41946	181	0.67538	0.031163		
+high	Actinopterygii	ATP8	protein	gc_percent	184		lambda_ml	0.99999	0.20354	0.11409	1.784	181	0.076094	0.13146		
+high	Actinopterygii	COX1	protein	gc_percent	184		lambda_ml	0.99999	0.074532	0.1184	0.62947	181	0.52983	0.046737		
+high	Actinopterygii	COX2	protein	gc_percent	184		lambda_ml	0.99999	0.12794	0.12931	0.98943	181	0.32377	0.073346		
+high	Actinopterygii	COX3	protein	gc_percent	184		lambda_ml	0.99999	-0.04136	0.1204	-0.34352	181	0.73161	-0.025525		
+high	Actinopterygii	CYTB	protein	gc_percent	184		lambda_ml	0.99999	-0.088117	0.11063	-0.79649	181	0.42679	-0.059099		
+high	Actinopterygii	ND1	protein	gc_percent	184		lambda_ml	0.99999	0.23266	0.12421	1.8732	181	0.062659	0.1379		
+high	Actinopterygii	ND2	protein	gc_percent	184		lambda_ml	0.99958	0.10484	0.10818	0.96914	181	0.33377	0.07185		
+high	Actinopterygii	ND3	protein	gc_percent	184		lambda_ml	0.98434	0.037473	0.16622	0.22544	181	0.82189	0.016754		
+high	Actinopterygii	ND4	protein	gc_percent	184		lambda_ml	0.99999	0.14523	0.10692	1.3583	181	0.17605	0.10045		
+high	Actinopterygii	ND4L	protein	gc_percent	184		lambda_ml	0.9912	-0.07996	0.15835	-0.50497	181	0.61419	-0.037508		
+high	Actinopterygii	ND5	protein	gc_percent	184		lambda_ml	0.99999	0.15815	0.097425	1.6233	181	0.10627	0.11979		
+high	Actinopterygii	ND6	protein	gc_percent	184		lambda_ml	0.99853	0.29956	0.13693	2.1877	181	0.029974	0.1605		
+high	Actinopterygii	rRNA-12S	rna	gc_percent	184	528	lambda_ml	0.99999	0.029859	0.080825	0.36943	181	0.71224	0.027449	1	0.88927
+high	Actinopterygii	rRNA-16S	rna	gc_percent	184	996	lambda_ml	0.99999	0.025901	0.074376	0.34825	181	0.72806	0.025877	1	0.88927
+high	Actinopterygii	tRNA-Ala	rna	gc_percent	184	48	lambda_ml	0.98135	0.19467	0.16716	1.1646	181	0.24571	0.086243	1	0.88927
+high	Actinopterygii	tRNA-Arg	rna	gc_percent	184	45	lambda_ml	0.99999	0.022843	0.075312	0.30331	181	0.762	0.022539	1	0.88927
+high	Actinopterygii	tRNA-Asn	rna	gc_percent	184	48	lambda_ml	0.98813	0.062834	0.15858	0.39623	181	0.6924	0.029439	1	0.88927
+high	Actinopterygii	tRNA-Asp	rna	gc_percent	184	58	lambda_ml	0.99999	0.009237	0.080324	0.115	181	0.90858	0.0085473	1	0.94808
+high	Actinopterygii	tRNA-Cys	rna	gc_percent	184	56	lambda_ml	0.96905	0.2652	0.17224	1.5397	181	0.12537	0.11371	1	0.88927
+high	Actinopterygii	tRNA-Gln	rna	gc_percent	184	48	lambda_ml	0.97135	0.12532	0.18227	0.68753	181	0.49263	0.051037	1	0.88927
+high	Actinopterygii	tRNA-Glu	rna	gc_percent	183	54	lambda_ml	0.99999	-0.039926	0.10246	-0.38968	180	0.69723	-0.029033	1	0.88927
+high	Actinopterygii	tRNA-Gly	rna	gc_percent	184	38	lambda_ml	0.99999	0.039507	0.12076	0.32716	181	0.74392	0.024311	1	0.88927
+high	Actinopterygii	tRNA-His	rna	gc_percent	184	47	lambda_ml	0.99999	0.068266	0.12084	0.56491	181	0.57283	0.041953	1	0.88927
+high	Actinopterygii	tRNA-Ile	rna	gc_percent	184	48	lambda_ml	0.99439	0.21355	0.13008	1.6417	181	0.10239	0.12113	1	0.88927
+high	Actinopterygii	tRNA-Leu(CUN)	rna	gc_percent	184	39	lambda_ml	0.99999	0.066028	0.11649	0.56682	181	0.57154	0.042094	1	0.88927
+high	Actinopterygii	tRNA-Leu(UUR)	rna	gc_percent	184	44	lambda_ml	0.99999	0.023953	0.10232	0.23411	181	0.81517	0.017398	1	0.88927
+high	Actinopterygii	tRNA-Lys	rna	gc_percent	184	47	lambda_ml	0.9634	0.0054534	0.20068	0.027175	181	0.97835	0.0020199	1	0.97835
+high	Actinopterygii	tRNA-Met	rna	gc_percent	184	36	lambda_ml	0.99983	-0.21742	0.093811	-2.3177	181	0.021584	-0.16977	0.51802	0.51802
+high	Actinopterygii	tRNA-Phe	rna	gc_percent	184	51	lambda_ml	0.99577	0.14688	0.16442	0.89336	181	0.37285	0.066257	1	0.88927
+high	Actinopterygii	tRNA-Pro	rna	gc_percent	184	60	lambda_ml	0.99773	0.043752	0.15567	0.28105	181	0.77899	0.020886	1	0.88927
+high	Actinopterygii	tRNA-Ser(AGY)	rna	gc_percent	184	58	lambda_ml	0.99999	0.056265	0.078146	0.72	181	0.47245	0.053441	1	0.88927
+high	Actinopterygii	tRNA-Ser(UCN)	rna	gc_percent	184	35	lambda_ml	1	0.049232	0.099392	0.49533	181	0.62097	0.036793	1	0.88927
+high	Actinopterygii	tRNA-Thr	rna	gc_percent	184	57	lambda_ml	0.99032	0.10269	0.12326	0.83306	181	0.40591	0.061803	1	0.88927
+high	Actinopterygii	tRNA-Trp	rna	gc_percent	183	47	lambda_ml	0.9989	0.088286	0.1095	0.80623	180	0.42117	0.059985	1	0.88927
+high	Actinopterygii	tRNA-Tyr	rna	gc_percent	184	54	lambda_ml	0.97962	-0.046415	0.13993	-0.3317	181	0.7405	-0.024647	1	0.88927
+high	Actinopterygii	tRNA-Val	rna	gc_percent	184	52	lambda_ml	0.99999	0.048651	0.082924	0.58669	181	0.55814	0.043567	1	0.88927
+high	Actinopterygii	ATP6	protein	gc_skew	184		lambda_1	1	0.23855	0.11278	2.1152	181	0.03578	0.15531		
+high	Actinopterygii	ATP8	protein	gc_skew	184		lambda_1	1	0.30586	0.1235	2.4766	181	0.014181	0.18104		
+high	Actinopterygii	COX1	protein	gc_skew	184		lambda_1	1	-0.030127	0.12967	-0.23234	181	0.81653	-0.017267		
+high	Actinopterygii	COX2	protein	gc_skew	184		lambda_1	1	-0.10911	0.13464	-0.81035	181	0.41881	-0.060124		
+high	Actinopterygii	COX3	protein	gc_skew	184		lambda_1	1	0.088726	0.13007	0.68216	181	0.49601	0.05064		
+high	Actinopterygii	CYTB	protein	gc_skew	184		lambda_1	1	-0.20645	0.1094	-1.887	181	0.060754	-0.1389		
+high	Actinopterygii	ND1	protein	gc_skew	184		lambda_1	1	0.34168	0.10431	3.2755	181	0.0012639	0.23656		
+high	Actinopterygii	ND2	protein	gc_skew	184		lambda_1	1	0.20716	0.10648	1.9455	181	0.053264	0.14312		
+high	Actinopterygii	ND3	protein	gc_skew	184		lambda_1	1	0.18748	0.13151	1.4256	181	0.15571	0.10537		
+high	Actinopterygii	ND4	protein	gc_skew	184		lambda_1	1	0.27433	0.10902	2.5162	181	0.012731	0.18384		
+high	Actinopterygii	ND4L	protein	gc_skew	184		lambda_1	1	-0.15824	0.10996	-1.4391	181	0.15185	-0.10636		
+high	Actinopterygii	ND5	protein	gc_skew	184		lambda_1	1	0.23624	0.11241	2.1015	181	0.03698	0.15433		
+high	Actinopterygii	ND6	protein	gc_skew	184		lambda_1	1	-0.19546	0.11332	-1.7249	181	0.086256	-0.12717		
+high	Actinopterygii	rRNA-12S	rna	gc_skew	184	528	lambda_1	1	0.14277	0.094351	1.5132	181	0.13198	0.11177	1	0.63351
+high	Actinopterygii	rRNA-16S	rna	gc_skew	184	996	lambda_1	1	0.044494	0.079611	0.55889	181	0.57693	0.041506	1	0.86539
+high	Actinopterygii	tRNA-Ala	rna	gc_skew	184	48	lambda_1	1	-0.2348	0.13806	-1.7007	181	0.09071	-0.12542	1	0.54426
+high	Actinopterygii	tRNA-Arg	rna	gc_skew	184	45	lambda_1	1	-0.089052	0.10602	-0.83998	181	0.40203	-0.062314	1	0.83779
+high	Actinopterygii	tRNA-Asn	rna	gc_skew	184	48	lambda_1	1	-0.12608	0.15562	-0.81019	181	0.4189	-0.060112	1	0.83779
+high	Actinopterygii	tRNA-Asp	rna	gc_skew	184	58	lambda_1	1	0.33497	0.14985	2.2354	181	0.026616	0.16391	0.58556	0.21293
+high	Actinopterygii	tRNA-Cys	rna	gc_skew	184	56	lambda_1	1	-0.80506	0.33224	-2.4231	181	0.016372	-0.17726	0.37655	0.19646
+high	Actinopterygii	tRNA-Gln	rna	gc_skew	184	48	lambda_1	1	-0.086399	0.087513	-0.98727	181	0.32483	-0.073187	1	0.83779
+high	Actinopterygii	tRNA-Glu	rna	gc_skew	183	54	lambda_1	1	0.049663	0.17996	0.27597	180	0.78289	0.020565	1	0.91636
+high	Actinopterygii	tRNA-Gly	rna	gc_skew	184	38	lambda_1	1	-0.028209	0.12691	-0.22227	181	0.82435	-0.016519	1	0.91636
+high	Actinopterygii	tRNA-His	rna	gc_skew	184	47	lambda_1	1	0.18056	0.14208	1.2708	181	0.20543	0.09404	1	0.82171
+high	Actinopterygii	tRNA-Ile	rna	gc_skew	184	48	lambda_1	1	0.10578	0.11329	0.93368	181	0.35171	0.069233	1	0.83779
+high	Actinopterygii	tRNA-Leu(CUN)	rna	gc_skew	184	39	lambda_1	1	0.033105	0.11558	0.28644	181	0.77487	0.021286	1	0.91636
+high	Actinopterygii	tRNA-Leu(UUR)	rna	gc_skew	184	44	lambda_1	1	-0.023261	0.11504	-0.20219	181	0.83999	-0.015027	1	0.91636
+high	Actinopterygii	tRNA-Lys	rna	gc_skew	184	47	lambda_1	1	0.10784	0.14936	0.72197	181	0.47124	0.053587	1	0.86539
+high	Actinopterygii	tRNA-Met	rna	gc_skew	184	36	lambda_1	1	-0.073244	0.11768	-0.62237	181	0.53448	-0.046211	1	0.86539
+high	Actinopterygii	tRNA-Phe	rna	gc_skew	184	51	lambda_1	1	0.0038274	0.10868	0.035217	181	0.97195	0.0026176	1	0.97195
+high	Actinopterygii	tRNA-Pro	rna	gc_skew	184	60	lambda_1	1	-0.022206	0.15247	-0.14564	181	0.88436	-0.010825	1	0.92282
+high	Actinopterygii	tRNA-Ser(AGY)	rna	gc_skew	184	58	lambda_1	1	0.038543	0.13445	0.28668	181	0.77468	0.021304	1	0.91636
+high	Actinopterygii	tRNA-Ser(UCN)	rna	gc_skew	184	35	lambda_1	1	-0.15907	0.1421	-1.1194	181	0.26445	-0.082918	1	0.83779
+high	Actinopterygii	tRNA-Thr	rna	gc_skew	184	57	lambda_1	1	0.62682	0.12639	4.9593	181	1.6214e-06	0.34587	3.8913e-05	3.8913e-05
+high	Actinopterygii	tRNA-Trp	rna	gc_skew	183	47	lambda_1	1	0.098122	0.1684	0.58266	180	0.56085	0.043388	1	0.86539
+high	Actinopterygii	tRNA-Tyr	rna	gc_skew	184	54	lambda_1	1	-0.25202	0.24818	-1.0155	181	0.31123	-0.075266	1	0.83779
+high	Actinopterygii	tRNA-Val	rna	gc_skew	184	52	lambda_1	1	0.045507	0.11531	0.39463	181	0.69358	0.02932	1	0.91636
+high	Actinopterygii	ATP6	protein	gc_skew	184		lambda_ml	0.99671	0.22743	0.13593	1.6731	181	0.096032	0.12341		
+high	Actinopterygii	ATP8	protein	gc_skew	184		lambda_ml	0.99351	0.30435	0.15788	1.9278	181	0.055447	0.14184		
+high	Actinopterygii	COX1	protein	gc_skew	184		lambda_ml	0.99807	0.059009	0.14905	0.3959	181	0.69265	0.029414		
+high	Actinopterygii	COX2	protein	gc_skew	184		lambda_ml	0.9924	-0.020033	0.17605	-0.11379	181	0.90953	-0.0084578		
+high	Actinopterygii	COX3	protein	gc_skew	184		lambda_ml	0.99999	0.088684	0.13018	0.68125	181	0.49658	0.050572		
+high	Actinopterygii	CYTB	protein	gc_skew	184		lambda_ml	0.99332	-0.024802	0.14041	-0.17664	181	0.85999	-0.013128		
+high	Actinopterygii	ND1	protein	gc_skew	184		lambda_ml	0.9967	0.39554	0.12567	3.1475	181	0.0019262	0.2278		
+high	Actinopterygii	ND2	protein	gc_skew	184		lambda_ml	0.99904	0.2458	0.11652	2.1096	181	0.036269	0.15491		
+high	Actinopterygii	ND3	protein	gc_skew	184		lambda_ml	0.99999	0.18771	0.13162	1.4262	181	0.15554	0.10542		
+high	Actinopterygii	ND4	protein	gc_skew	184		lambda_ml	0.99999	0.27469	0.10911	2.5175	181	0.012689	0.18393		
+high	Actinopterygii	ND4L	protein	gc_skew	184		lambda_ml	0.96045	0.27999	0.16191	1.7293	181	0.085466	0.12749		
+high	Actinopterygii	ND5	protein	gc_skew	184		lambda_ml	0.99458	0.37492	0.1414	2.6516	181	0.008723	0.19337		
+high	Actinopterygii	ND6	protein	gc_skew	184		lambda_ml	0.99621	-0.34106	0.13752	-2.4801	181	0.014049	-0.18129		
+high	Actinopterygii	rRNA-12S	rna	gc_skew	184	528	lambda_ml	0.99999	0.14299	0.094431	1.5142	181	0.13172	0.11184	1	0.5603
+high	Actinopterygii	rRNA-16S	rna	gc_skew	184	996	lambda_ml	0.99999	0.044605	0.079681	0.55979	181	0.57631	0.041573	1	0.83415
+high	Actinopterygii	tRNA-Ala	rna	gc_skew	184	48	lambda_ml	0.99575	-0.23431	0.17013	-1.3772	181	0.17014	-0.10184	1	0.5603
+high	Actinopterygii	tRNA-Arg	rna	gc_skew	184	45	lambda_ml	0.99472	-0.12272	0.13364	-0.91834	181	0.35966	-0.068101	1	0.68893
+high	Actinopterygii	tRNA-Asn	rna	gc_skew	184	48	lambda_ml	0.9856	-0.18123	0.21144	-0.85713	181	0.39251	-0.063581	1	0.68893
+high	Actinopterygii	tRNA-Asp	rna	gc_skew	184	58	lambda_ml	0.97815	0.3391	0.21443	1.5814	181	0.11553	0.11674	1	0.5603
+high	Actinopterygii	tRNA-Cys	rna	gc_skew	184	56	lambda_ml	0.10699	-0.5639	0.23541	-2.3954	181	0.017623	-0.17529	0.40532	0.21147
+high	Actinopterygii	tRNA-Gln	rna	gc_skew	184	48	lambda_ml	0.96823	-0.144	0.12046	-1.1955	181	0.23346	-0.088511	1	0.5603
+high	Actinopterygii	tRNA-Glu	rna	gc_skew	183	54	lambda_ml	0.70713	0.1966	0.23398	0.84027	180	0.40187	0.062507	1	0.68893
+high	Actinopterygii	tRNA-Gly	rna	gc_skew	184	38	lambda_ml	0.99999	-0.028236	0.12702	-0.2223	181	0.82433	-0.016521	1	0.89927
+high	Actinopterygii	tRNA-His	rna	gc_skew	184	47	lambda_ml	0.99999	0.18083	0.1422	1.2716	181	0.20513	0.094101	1	0.5603
+high	Actinopterygii	tRNA-Ile	rna	gc_skew	184	48	lambda_ml	0.99999	0.1059	0.11339	0.93393	181	0.35159	0.069252	1	0.68893
+high	Actinopterygii	tRNA-Leu(CUN)	rna	gc_skew	184	39	lambda_ml	0.93252	0.23233	0.17227	1.3487	181	0.17913	0.099746	1	0.5603
+high	Actinopterygii	tRNA-Leu(UUR)	rna	gc_skew	184	44	lambda_ml	0.97591	0.055192	0.16284	0.33894	181	0.73505	0.025185	1	0.88206
+high	Actinopterygii	tRNA-Lys	rna	gc_skew	184	47	lambda_ml	0.95639	0.26134	0.20971	1.2462	181	0.2143	0.092235	1	0.5603
+high	Actinopterygii	tRNA-Met	rna	gc_skew	184	36	lambda_ml	0.9945	-0.1113	0.14906	-0.74671	181	0.45621	-0.055417	1	0.72993
+high	Actinopterygii	tRNA-Phe	rna	gc_skew	184	51	lambda_ml	0.99999	0.0038276	0.10877	0.035188	181	0.97197	0.0026155	1	0.97197
+high	Actinopterygii	tRNA-Pro	rna	gc_skew	184	60	lambda_ml	0.99999	-0.022213	0.1526	-0.14557	181	0.88442	-0.010819	1	0.92288
+high	Actinopterygii	tRNA-Ser(AGY)	rna	gc_skew	184	58	lambda_ml	0.99999	0.038546	0.13456	0.28646	181	0.77486	0.021287	1	0.88555
+high	Actinopterygii	tRNA-Ser(UCN)	rna	gc_skew	184	35	lambda_ml	0.84452	-0.078054	0.22675	-0.34423	181	0.73107	-0.025578	1	0.88206
+high	Actinopterygii	tRNA-Thr	rna	gc_skew	184	57	lambda_ml	0.99799	0.54114	0.14563	3.716	181	0.00026962	0.26624	0.006471	0.006471
+high	Actinopterygii	tRNA-Trp	rna	gc_skew	183	47	lambda_ml	0.83864	0.30859	0.25011	1.2339	180	0.21887	0.09158	1	0.5603
+high	Actinopterygii	tRNA-Tyr	rna	gc_skew	184	54	lambda_ml	0.24334	-0.13802	0.25628	-0.53856	181	0.59085	-0.039999	1	0.83415
+high	Actinopterygii	tRNA-Val	rna	gc_skew	184	52	lambda_ml	0.99999	0.045573	0.11541	0.39487	181	0.6934	0.029338	1	0.88206
