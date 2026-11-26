@@ -3519,3 +3519,55 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     (the whole chain's would need 500 reads per variant); the structure tokens are those of the host's backbone for every ortholog.
     *Collection:* two bugs of the collection, in how the tables of tasks without a row are joined, were found when the human host was first collected and
     fixed in 98a9d8f, with a test and two breaks; the task tables are unchanged. *Tests and breaks:* 116 passed (this step's 39 and the swap's); breaks: 83 of 83 caught (the first break run let 13 survive on the tests as first written; their tests were added in 7ce19d2 and 98a9d8f; one change, the nuclear chain's substitutions put on every copy, is equivalent on these structures, no gene having copies that differ in sequence, and is not run); the swap's own breaks were not run again.
+
+## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; no code, no score)
+
+**Why this, and why now.** Every entry above works on the 13 protein-coding genes, on their amino acids, their
+codons, their contacts with nuclear subunits, or on the control region. The 22 tRNA genes are used only as a
+length and a composition aggregate (`total_tRNA`), and the two rRNA genes only as `rRNA-12S` and `rRNA-16S`
+aggregates and their alignments. Two things follow. First, no test we have run could have seen a signal carried
+by the tRNAs, whatever its size. Second, the mitochondrial tRNAs are the other mito-nuclear interface: a
+mitochondrial tRNA is charged by a nuclear-encoded mitochondrial aminoacyl-tRNA synthetase, and in human disease
+the pathogenic mtDNA mutations concentrate in the tRNA genes far more than in the protein genes, which is the
+opposite of where all our modelling has looked. Asked on 2026-11-26 what had not been investigated, the
+maintainer took this first ("Lgtm", `#mitoage>general chat`).
+
+**Part A. The genes themselves against lifespan.** Per species of the build, take the 22 tRNAs and the two
+rRNAs from the records as `build2/genome.py` already resolves them (including the Leu and Ser isoacceptors,
+which it places by vertebrate gene order where the annotation does not name them: a gene whose isoacceptor is
+`unresolved` is left out of that gene's alignment and counted). One alignment per gene; per gene and species,
+length, GC, the composition features of H1, and a per-branch rate as H7 computes it. Test against maximum
+lifespan under the controls H11 and H27 settled, not against lifespan alone: body mass, phylogenetically
+independent contrasts, within taxon group, and on the confidence-filtered records.
+
+*The bar, stated before any number exists.* A gene counts only if (1) it survives those controls, (2) its effect
+is at least as large as the median protein gene's in the same class and the same test, and (3) it still holds on
+the high-confidence subset of H27. The family-wise correction is over the 24 genes within each test. Anything
+that passes (1) alone is reported as not counting, in those words.
+
+*What would make a null here weak.* A tRNA gene is about 70 nucleotides, so a per-gene rate is noisy and a
+composition feature has few sites to move. Every result carries the number of informative alignment columns of
+its gene, and a null on a gene with few of them is said to be uninformative rather than negative.
+
+**Part B. Where in the tRNA, not in this round.** Whether a signal sits at the acceptor stem, the anticodon loop
+or the D and T loops needs the cloverleaf positions and a list of pathogenic human mt-tRNA variants to compare
+against. MITOMAP, the obvious list, is behind a bot check we do not work around (H33's note). Deferred until a
+usable source exists; ClinVar's mitochondrial tRNA entries are the candidate. Nothing of Part B is run or
+claimed meanwhile.
+
+**Part C. The interface: does a tRNA covary with its own synthetase?** The nuclear mitochondrial
+aminoacyl-tRNA synthetases, one per amino acid (the human symbols are to be read from NCBI at run time, not
+from this entry: Gln has no direct synthetase and is charged by the GatCAB amidotransferase, and two of the
+set are dual-localised, so the list is verified before use and the genes it cannot resolve are named as "not
+assessed"). Their orthologs over the same mammals the mitoport alignments already use, tested with the
+machinery of H5 and H14: does the per-branch rate of a tRNA covary with the per-branch rate of its own
+synthetase more than with the other synthetases, the mispairing being the null that H5 defines?
+
+*The bar, stated before any number exists.* The real pair must beat the 95th percentile of its mispaired nulls,
+in more than half the classes tested, and the coupling must be at least as strong as the protein-gene coupling
+H5 and H14 found on the same mammals. Below any of these it does not count. H5's own result is the control:
+if the mispaired nulls here behave unlike H5's, the machinery is wrong before the biology is read.
+
+**Order and cost.** Part A first, on the build we already hold, CPU only. Part C after it, and only if Part A's
+alignments and rates reproduce H7's protein-gene numbers on the protein genes as a positive control: a rate
+pipeline that cannot reproduce H7 is not used on the tRNAs. Nothing here needs a GPU.
