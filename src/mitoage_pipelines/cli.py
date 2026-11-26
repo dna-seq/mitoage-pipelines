@@ -415,6 +415,62 @@ def longevity_rates(
     rates.main(data, composition, fourfold, tree, out)
 
 
+RnaOut = Annotated[Path, typer.Option("--out", help="folder of H37 part A: the RNA genes' alignments and every table of the part")]
+
+
+@longevity_app.command("rna-genes")
+def longevity_rna_genes(
+    data: Build = paths.BUILD, out: RnaOut = paths.RNA_OUT,
+    release: Annotated[Path, typer.Option(help="RefSeq release 237 (md5-checked)")] = paths.refseq_release("237"),
+    contig: Annotated[Path, typer.Option(help="the CONTIG-only records' sequence, from `download contig`")] = paths.B2_GENBANK / "contig",
+    workers: Annotated[Optional[int], typer.Option(help="MAFFT processes at once, one thread each; default: the cores")] = None,
+) -> None:
+    """H37, part A: extract the 22 tRNA and 2 rRNA genes from the records, align the tRNAs, write the census and the features."""
+    from .longevity import rna_genes
+    rna_genes.main(data, release, contig, out, workers)
+
+
+@longevity_app.command("rna-control")
+def longevity_rna_control(
+    reference: Annotated[Path, typer.Option(help="H7's rates.tsv for this build")],
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: RnaOut = paths.RNA_OUT,
+) -> None:
+    """H37, part A: the positive control. The rate pipeline of the RNA genes on the 13 protein genes, compared with H7's table."""
+    from .longevity import rna_rates
+    rna_rates.control(data, composition, fourfold, tree, reference, out)
+
+
+@longevity_app.command("rna-rates")
+def longevity_rna_rates(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION, fourfold: Fourfold = FOURFOLD,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: RnaOut = paths.RNA_OUT,
+) -> None:
+    """H37, part A: the RNA genes' rates against lifespan (refused unless the control reproduced H7)."""
+    from .longevity import rna_rates
+    rna_rates.rna_rates(data, composition, fourfold, tree, out, out)
+
+
+@longevity_app.command("rna-tests")
+def longevity_rna_tests(
+    cls: Class, data: Build = paths.BUILD, composition: Composition = COMPOSITION,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    out: RnaOut = paths.RNA_OUT,
+) -> None:
+    """H37, part A: the RNA genes' composition against lifespan in one taxon group (refused unless the control reproduced H7)."""
+    from .longevity import rna_tests
+    rna_tests.main_class(data, composition, tree, out, out, cls)
+
+
+@longevity_app.command("rna-verdict")
+def longevity_rna_verdict(out: RnaOut = paths.RNA_OUT) -> None:
+    """H37, part A: the entry's bar applied to every composition test and rate."""
+    from .longevity import rna_tests
+    rna_tests.main_verdict(out, out)
+
+
 @longevity_app.command("technology")
 def longevity_technology(data: Build = paths.BUILD, out: Out = paths.LONGEVITY_OUT) -> None:
     """H8's control: the sequencing technology each mitogenome's record states, into technology.tsv

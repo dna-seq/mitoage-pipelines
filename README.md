@@ -105,6 +105,13 @@ uv run mitoage mitoport partners          # discordance of the mito-nuclear cont
 uv run mitoage structure embed            # ESM-2 650M means at the contact and control residues (a CUDA GPU)
 uv run mitoage longevity structure-pgls --family embedding --out data/output/longevity/embedding
 uv run mitoage longevity generation-time   # H11: lifespan, maturity, gestation, birth weight and the slow-fast axis; mammals and birds (on haumea: slurm/generation-time.sbatch)
+# H37, part A: the 22 tRNA and 2 rRNA genes against lifespan, with H7's rates on the 13 protein genes as the control that must pass
+# first (slurm/h37-prepare, -genes, -control, -rates, -tests, -verdict .sbatch, after `download refseq` and `download contig` with
+# --from-snapshot; MAFFT v7.526 on PATH; the control has to reproduce H7's table, and the other two steps refuse without it)
+uv run mitoage longevity rna-genes                                    # extract from the records, align the tRNAs, census, features
+uv run mitoage longevity rna-control --reference <H7's rates.tsv>     # the positive control
+uv run mitoage longevity rna-rates && uv run mitoage longevity rna-tests --class Mammalia   # likewise Aves, Actinopterygii, Reptilia
+uv run mitoage longevity rna-verdict                                  # the entry's bar, per gene, group and test
 uv run mitoage download fishbase-temperature   # FishBase's species, synonyms and stocks tables, md5-checked
 uv run mitoage longevity thermal   # H20: temperature, size and metabolic rate against sister-pair rates and composition; Lehmann et al. retested (on haumea: slurm/h20-thermal.sbatch)
 uv run mitoage download hibernation   # H23-H25: bat hibernation (Wilkinson & Adams 2019, DRUM, SHA-256 pinned); the mammal table

@@ -108,6 +108,7 @@ STRUCTURE_OUT = OUTPUT / "structure"      # within_species.tsv, chains.tsv, stru
 ADAPT_OUT = OUTPUT / "adaptations"        # traits, pairs, fits, selection/, coupling/, readout (H21-H25)
 ADAPT_LONGEVITY_OUT = OUTPUT / "adapt-longevity"   # the same steps for H26's trait, long-lived for body mass
 AUDIT_OUT = OUTPUT / "audit"              # inputs, strand, order, code, pairs, nearest (.tsv): the audit of the records (H13)
+RNA_OUT = LONGEVITY_OUT / "rna"           # H37 part A: the tRNA and rRNA genes: alignments, census, features, the H7 control, tests, verdict
 COEVOL_OUT = LONGEVITY_OUT / "coevol"     # chain<N>.* as Coevol writes them, chain<N>.cov from readcoevol
 COEVOL_FIXED_OUT = LONGEVITY_OUT / "coevol-fixed"   # the chains run with the ages held (-fixtimes)
 THERMAL_OUT = LONGEVITY_OUT / "thermal"      # H20: traits, pairs, pair_fits, composition, lehmann, readout
