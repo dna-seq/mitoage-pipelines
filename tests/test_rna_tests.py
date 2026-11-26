@@ -117,7 +117,7 @@ MEDIAN = 0.20
 def table(kind="composition", test="gc_percent", cls="Mammalia", default=None, high=None, protein=None, extra=None):
     """The rows the bar reads: all 24 RNA genes null on both sets, 13 protein genes whose median |r| is MEDIAN, and the
     changes `default` and `high` ({gene: {column: value}}) make to the RNA genes."""
-    base = dict(n=300, informative_columns=40.0, slope=0.1, slope_pic=0.1, p=0.5, p_holm=1.0, p_holm_pic=1.0, r=0.05)
+    base = dict(n=300, informative_columns=40.0, slope=0.1, slope_pic=0.1, p=0.5, p_pic=0.5, p_holm=1.0, p_holm_pic=1.0, r=0.05)
     rows = []
     for s, over in (("default", default or {}), ("high", high or {})):
         for g in rg.RNA_GENES:
@@ -247,3 +247,59 @@ def test_the_gene_summary_counts_every_cell_once_and_finds_the_largest_effect_ag
     assert s.loc["tRNA-Ala", "min_p_holm"] == pytest.approx(0.001)
     gone = rt.summarise(rt.judge(t[~((t.set == "default") & (t.gene == "tRNA-Ala"))]))
     assert gone.set_index("gene").loc["tRNA-Ala", "n_not_assessed"] == 2
+
+
+# --- the correction over the whole family ----------------------------------------------------------
+WEAK = dict(p=2e-3, p_pic=2e-3, p_holm=0.04, p_holm_pic=0.045, r=0.30)
+WEAK_HIGH = dict(p=1e-3, p_pic=1e-3, p_holm=0.03, slope=0.1)
+
+
+def two_tests(**over):
+    """Two cells of the bar in one frame: 24 RNA genes in each of two tests, so the family of a set is 48 cells while
+    the entry's own correction is over 24."""
+    return pd.concat([table(test="gc_percent", **over), table(test="at_skew")], ignore_index=True)
+
+
+def test_the_wider_correction_is_over_every_cell_of_a_set_and_not_within_one_test():
+    t = two_tests(default={"tRNA-Ala": WEAK}, high={"tRNA-Ala": WEAK_HIGH})
+    c = rt.correct_all(t)
+    for s in ("default", "high"):
+        cells = c[(c.group == "rna") & (c.set == s)]
+        assert len(cells) == 48                                            # both tests in one family
+        for src, holm, bh in (("p", "p_holm_all", "q_all"), ("p_pic", "p_holm_pic_all", "q_pic_all")):
+            assert cells[holm].to_numpy() == pytest.approx(multipletests(cells[src], method="holm")[1])
+            assert cells[bh].to_numpy() == pytest.approx(multipletests(cells[src], method="fdr_bh")[1])
+    ala = c[(c.set == "default") & (c.gene == "tRNA-Ala") & (c.test == "gc_percent")].iloc[0]
+    assert ala.p_holm_all == pytest.approx(ala.p * 48) and ala.p_holm_all > ala.p_holm   # wider than the entry's own
+    assert c[c.group == "protein"].p_holm_all.isna().all()                 # the comparison is not corrected
+
+
+def test_correct_all_refuses_rows_without_the_second_models_raw_p():
+    with pytest.raises(ValueError, match="p_pic"):
+        rt.correct_all(two_tests().drop(columns=["p_pic"]))
+
+
+def test_a_cell_that_counts_within_its_test_does_not_count_when_the_whole_family_is_corrected():
+    rows = rt.correct_all(two_tests(default={"tRNA-Ala": WEAK}, high={"tRNA-Ala": WEAK_HIGH}))
+    v = rt.judge_wide(rows, rt.judge(rows)).set_index(["test", "gene"])
+    cell = v.loc[("gc_percent", "tRNA-Ala")]
+    assert cell.verdict == "counts"                                        # the entry's own correction
+    assert cell.p_holm_all == pytest.approx(2e-3 * 48) and cell.p_holm_all > rt.ALPHA
+    assert not cell.survives_controls_all and cell.verdict_all == "null"
+    assert cell.effect_at_least_median                                     # the effect is the same number
+    assert (v.verdict_all.isin(["null", "null, uninformative"])).all()
+
+
+def test_the_wider_verdict_still_counts_a_cell_the_whole_family_cannot_account_for():
+    strong = dict(p=1e-9, p_pic=2e-9, p_holm=1e-7, p_holm_pic=1e-7, r=0.30)
+    rows = rt.correct_all(two_tests(default={"tRNA-Ala": strong}, high={"tRNA-Ala": dict(p=1e-9, p_pic=1e-9, p_holm=1e-7, slope=0.1)}))
+    v = rt.judge_wide(rows, rt.judge(rows)).set_index(["test", "gene"])
+    cell = v.loc[("gc_percent", "tRNA-Ala")]
+    assert cell.verdict == "counts" and cell.verdict_all == "counts"
+    assert cell.p_holm_all < rt.ALPHA and cell.p_holm_pic_all < rt.ALPHA and cell.high_p_holm_all < rt.ALPHA
+
+
+def test_judge_wide_refuses_a_table_that_was_not_corrected():
+    t = two_tests()
+    with pytest.raises(ValueError, match="correct_all"):
+        rt.judge_wide(t, rt.judge(t))

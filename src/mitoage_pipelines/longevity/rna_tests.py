@@ -19,6 +19,9 @@ The bar (`judge`), as H37 states it, per taxon group and test (a feature, or the
   (2) its effect, the absolute partial correlation of lifespan, is at least the median of the 13 protein genes' in
       the same group, the same test and the same species set;
   (3) it holds on the high-confidence subset: Holm-adjusted p below 0.05 there too, with the same sign.
+Beside that verdict, `correct_all` and `judge_wide` read the same bar against a correction over all 768 cells of a
+species set at once, since the entry's correction is within one test and there are 32 of them; the columns of the
+wider reading end in `_all`, and `verdict_all` is the verdict under it.
 A gene that passes (1) alone is reported as "not counting". One that passes none is a null, said to be "uninformative"
 when its alignment has fewer than WEAK_COLUMNS informative columns among the species of the test. A cell with fewer than
 MIN_SPECIES species (MIN_CONTRASTS contrasts for a rate) is "not assessed", as is a passing gene for which fewer than
@@ -156,6 +159,7 @@ def long_composition(tests: pd.DataFrame) -> pd.DataFrame:
     b = tests[tests.model == "lambda_1"].set_index(["set", "group", "class", "gene", "feature"])
     d = a[["n", "informative_columns", "slope", "p", "p_holm", "r"]].copy()
     d["slope_pic"] = b.slope
+    d["p_pic"] = b.p
     d["p_holm_pic"] = b.p_holm
     d = d.reset_index().rename(columns={"feature": "test"})
     d.insert(0, "kind", "composition")
@@ -169,10 +173,31 @@ def long_rates(rna: pd.DataFrame, protein: pd.DataFrame, informative: pd.DataFra
     p = protein[(protein.normalisation == "dS_mass_adj") & ~protein.includes_saturated].copy()
     out = []
     for d, group in ((r, "rna"), (p, "protein")):
-        out.append(d.assign(group=group, test="rate", kind="rate", slope_pic=d.slope, p_holm_pic=d.p_holm))
+        out.append(d.assign(group=group, test="rate", kind="rate", slope_pic=d.slope, p_pic=d.p, p_holm_pic=d.p_holm))
     d = pd.concat(out, ignore_index=True).merge(informative, on=["gene", "class"], how="left")
     return d[["kind", "set", "group", "class", "gene", "test", "n", "informative_columns", "slope", "p", "p_holm", "r",
-              "slope_pic", "p_holm_pic"]]
+              "slope_pic", "p_pic", "p_holm_pic"]]
+
+
+def correct_all(rows: pd.DataFrame) -> pd.DataFrame:
+    """Holm and Benjamini-Hochberg over every RNA cell of a species set at once, beside the entry's own correction.
+
+    The entry's bar corrects over the 24 genes within one test, and there are 32 tests (7 composition features and the
+    rate, in each of the 4 taxon groups), so a cell that passes there has been corrected for 23 other genes and for
+    none of the other 31 tests. These columns say whether it still passes when the whole family of 768 cells is
+    corrected together. Each lambda model is corrected on its own, the bar reading both; the protein genes are not
+    corrected, being the comparison and not the claim."""
+    rows = rows.copy()
+    for src, holm, bh in (("p", "p_holm_all", "q_all"), ("p_pic", "p_holm_pic_all", "q_pic_all")):
+        if src not in rows.columns:
+            raise ValueError(f"correct_all needs the raw p-values in {src!r}")
+        rows[holm] = np.nan
+        rows[bh] = np.nan
+        cells = rows[(rows.group == "rna") & rows[src].notna()]
+        for _, g in cells.groupby("set"):
+            rows.loc[g.index, holm] = multipletests(g[src], method="holm")[1]
+            rows.loc[g.index, bh] = multipletests(g[src], method="fdr_bh")[1]
+    return rows
 
 
 def judge(rows: pd.DataFrame) -> pd.DataFrame:
@@ -220,6 +245,50 @@ def judge(rows: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
+def judge_wide(rows: pd.DataFrame, v: pd.DataFrame) -> pd.DataFrame:
+    """The same bar read against `correct_all`'s wider correction, added to `judge`'s table as its own columns.
+
+    Only conditions (1) and (3) can change: the effect against the protein-gene median is the same number, corrected
+    for nothing. A cell that counts under the entry's own correction and not here is one the other 31 tests account
+    for, and the entry says so of it in those words."""
+    for col in ("p_holm_all", "p_holm_pic_all"):
+        if col not in rows.columns:
+            raise ValueError("judge_wide reads the columns of correct_all; call it first")
+    key = ["kind", "test", "class", "gene"]
+    rna = rows[rows.group == "rna"]
+    d = rna[rna.set == "default"].set_index(key)
+    h = rna[rna.set == "high"].set_index(key)
+    out = []
+    for row in v.to_dict("records"):
+        k = (row["kind"], row["test"], row["class"], row["gene"])
+        row.update(p_holm_all=np.nan, p_holm_pic_all=np.nan, high_p_holm_all=np.nan,
+                   survives_controls_all=None, holds_on_high_all=None, verdict_all="not assessed")
+        if k not in d.index:
+            out.append(row)
+            continue
+        dd, hh = d.loc[k], (h.loc[k] if k in h.index else None)
+        row.update(p_holm_all=dd["p_holm_all"], p_holm_pic_all=dd["p_holm_pic_all"],
+                   high_p_holm_all=np.nan if hh is None else hh["p_holm_all"])
+        if pd.notna(dd["p"]):
+            c1 = bool(dd["p_holm_all"] < ALPHA and dd["p_holm_pic_all"] < ALPHA
+                      and np.sign(dd["slope"]) == np.sign(dd["slope_pic"]))
+            c2 = row["effect_at_least_median"]
+            c3 = bool(hh is not None and pd.notna(hh["p_holm_all"]) and hh["p_holm_all"] < ALPHA
+                      and np.sign(hh["slope"]) == np.sign(dd["slope"]))
+            weak = pd.isna(row["informative_columns"]) or row["informative_columns"] < WEAK_COLUMNS
+            row.update(survives_controls_all=c1, holds_on_high_all=c3)
+            if c1 and c2 is None:
+                row["verdict_all"] = "not assessed (no protein-gene median)"
+            elif c1 and c2 and c3:
+                row["verdict_all"] = "counts"
+            elif c1:
+                row["verdict_all"] = "not counting"
+            else:
+                row["verdict_all"] = "null, uninformative" if weak else "null"
+        out.append(row)
+    return pd.DataFrame(out)
+
+
 def summarise(v: pd.DataFrame) -> pd.DataFrame:
     """One row per RNA gene over the cells of `judge`: how many cells ended in each verdict, the smallest Holm-adjusted p of the
     cells that were assessed, and the cell where the gene's effect is largest against its protein-gene median
@@ -250,8 +319,11 @@ def main_verdict(out: Path, genes_dir: Path) -> pd.DataFrame:
     inf = tests[(tests.set == "default") & (tests.group == "rna")][["gene", "class", "informative_columns"]].drop_duplicates()
     rates_rows = long_rates(pd.read_csv(out / "rna_rates.tsv", sep="\t"), pd.read_csv(out / "protein_rates.tsv", sep="\t"), inf)
     rates_rows = rates_rows[rates_rows["class"].isin(CLASSES)]
-    v = judge(pd.concat([comp, rates_rows], ignore_index=True))
+    rows = correct_all(pd.concat([comp, rates_rows], ignore_index=True))
+    v = judge_wide(rows, judge(rows))
     v.to_csv(out / "rna_verdict.tsv", sep="\t", index=False, float_format="%.5g")
     summarise(v).to_csv(out / "rna_gene_summary.tsv", sep="\t", index=False, float_format="%.5g")
     print(v.groupby(["kind", "verdict"]).size().to_string())
+    print("under the correction over all cells:")
+    print(v.groupby(["kind", "verdict_all"]).size().to_string())
     return v
