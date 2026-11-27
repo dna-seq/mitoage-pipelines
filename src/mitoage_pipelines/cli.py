@@ -919,6 +919,16 @@ def mitoport_branch_lengths(
         raise typer.Exit(1)
 
 
+@mitoport_app.command("synthetases")
+def mitoport_synthetases(
+    out: Annotated[Path, typer.Option("--out", help="the table to write")] = paths.MITOPORT_OUT / "synthetases.tsv",
+    xml: Annotated[Optional[Path], typer.Option("--xml", help="an efetch answer to read instead of the network; written there when it is absent, so a run can be repeated on the same bytes")] = None,
+) -> None:
+    """H37 part C: the nuclear synthetases that charge the mitochondrial tRNAs, resolved from NCBI at run time."""
+    from .mitoport import synthetases
+    synthetases.main(out, xml)
+
+
 @mitoport_app.command("erc")
 def mitoport_erc(
     genes: GenesFile = paths.MITOPORT_GENES, bl_dir: BlDir = paths.MITOPORT_BL,

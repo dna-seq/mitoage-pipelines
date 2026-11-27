@@ -3562,7 +3562,7 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     *Collection:* two bugs of the collection, in how the tables of tasks without a row are joined, were found when the human host was first collected and
     fixed in 98a9d8f, with a test and two breaks; the task tables are unchanged. *Tests and breaks:* 116 passed (this step's 39 and the swap's); breaks: 83 of 83 caught (the first break run let 13 survive on the tests as first written; their tests were added in 7ce19d2 and 98a9d8f; one change, the nuclear chain's substitutions put on every copy, is equivalent on these structures, no gene having copies that differ in sequence, and is not run); the swap's own breaks were not run again.
 
-## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: it does not count. tRNA-Thr of ray-finned fishes passes the bar under the entry's own correction, within its test, and does not survive the correction over all 768 cells, under which every cell is null; part B and part C not run)
+## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: it does not count. tRNA-Thr of ray-finned fishes passes the bar under the entry's own correction, within its test, and does not survive the correction over all 768 cells, under which every cell is null; part B not run; part C's gene set resolved 2026-11-28, 18 of 20 amino acids, nothing tested yet)
 
 **Why this, and why now.** Every entry above works on the 13 protein-coding genes, on their amino acids, their
 codons, their contacts with nuclear subunits, or on the control region. The 22 tRNA genes are used only as a
@@ -3664,6 +3664,26 @@ synthetase more than with the other synthetases, the mispairing being the null t
 in more than half the classes tested, and the coupling must be at least as strong as the protein-gene coupling
 H5 and H14 found on the same mammals. Below any of these it does not count. H5's own result is the control:
 if the mispaired nulls here behave unlike H5's, the machinery is wrong before the biology is read.
+
+- **The gene set, resolved 2026-11-28 (`mitoport/synthetases.py`, `mitoage mitoport synthetases`; the table and the
+  rule in `results/h37/partC/`). No rate is computed and nothing is tested yet**: this is the one step the entry puts
+  before the test, done and written down so the pairing cannot be adjusted later to suit a number. The symbols are read
+  from NCBI at run time as the entry requires, and no list of them is kept in the code. **18 of the 20 amino acids have
+  a gene**: Ala AARS2, Arg RARS2, Asn NARS2, Asp DARS2, Cys CARS2, Glu EARS2, Gly GARS1, His HARS2, Ile IARS2, Leu
+  LARS2, Met MARS2, Phe FARS2, Pro PARS2, Ser SARS2, Thr TARS2, Trp WARS2, Tyr YARS2, Val VARS2. **Gln and Lys are not
+  assessed**, both of them foreseen in the paragraph above, which is a check on the rule rather than a coincidence:
+  the mitochondrial Gln-tRNA is charged by the GatCAB amidotransferase and not by a synthetase at all, and KARS1,
+  dual-localised in the literature, carries mitochondrial components at NCBI with no mitochondrial aminoacylation
+  process, which is also what a cytosolic synthetase with one stray annotation looks like — so this rule cannot tell
+  it from QARS1 and uses neither. Part C will test 18 pairs, not 20. Two things found on the way are worth keeping:
+  a search for these genes by their own words does not find them (the description `tRNA synthetase 2, mitochondrial`
+  is not indexed in `[Title]`, and `aminoacyl-tRNA ligase activity` returns 38 genes without HARS2, the gene for
+  histidine), so the search is the wider `tRNA ligase activity` and every narrowing is done on the records; and
+  NCBI's GO process term for DARS2, the aspartyl synthetase, reads `mitochondrial asparaginyl-tRNA aminoacylation`,
+  so the amino acid is taken from the description, never from the process terms. Tests: 13 of 13 pass on nine real
+  trimmed records, and all 5 breaks of the rule are caught. What is still open before any test — the orthologs, the
+  per-branch tRNA rate, the Leu and Ser isoacceptors, the null's draws and the nuclear background — is listed in that
+  README as open, not settled.
 
 **Order and cost.** Part A first, on the build we already hold, CPU only. Part C after it, and only if Part A's
 alignments and rates reproduce H7's protein-gene numbers on the protein genes as a positive control: a rate
