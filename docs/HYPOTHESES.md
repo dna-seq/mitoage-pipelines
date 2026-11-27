@@ -3692,7 +3692,13 @@ none counting) before the tests and breaks of the code were finished; no definit
   audit's own (G0), and where a family's arrangement is its class's the class distance equal to the family distance (G4); no exception allowed
   at either tier, and the lifespan step refuses without it (non-zero exit). The records for which the two references differ are counted and listed
   (`arch_control_class.tsv`), not hidden. This is the one reading in which the control is a test of the measure; it is a departure from the
-  entry's wording and is reported as such.
+  entry's wording and is reported as such. *Ruled on 2026-11-27 by the seat that wrote the sentence:* the departure
+  is accepted and the fault is the entry's. The sentence took the audit's reference (the family) and the measure's
+  reference (the class) to be the same, and they are not; read literally it would fail a measure that is working.
+  What the control then establishes is the arrangement strings and the distance function, checked against the
+  audit's own flags; it does not test the choice of the class as the reference for the lifespan tests, which stays
+  a judgement of this entry and is not validated by anything. The reading was fixed and written here before the
+  run, and no cell counts under either reference, so nothing was loosened to save a result.
 - *The annotation covariate.* One 0/1 variable per species, 1 when the audit flags the record in any of four ways: a singly arranged record of its family
   at either tier (`order_flags.tsv`), a strand reversed or mixed, neither genetic code clean, or the build's annotation differing from the record's. It
   enters every model as one more column beside log10 lifespan and log10 mass. It does not catch a poorly annotated record in a family the audit cannot
