@@ -1,0 +1,10 @@
+check	tier	records	exceptions	families
+G0 the arrangements are the audit's	both	2325	0	
+G1 a record flagged as singly arranged is above zero from its family	full	54	0	
+G2 a reversed deposit is at zero	full	1	0	
+G3 a record of a uniform family is at zero from its family	full	470	0	81.0
+G4 where the family's arrangement is its class's, class distance equals family distance	full	484	0	
+G1 a record flagged as singly arranged is above zero from its family	genes	15	0	
+G2 a reversed deposit is at zero	genes	4	0	
+G3 a record of a uniform family is at zero from its family	genes	1640	0	173.0
+G4 where the family's arrangement is its class's, class distance equals family distance	genes	1646	0	

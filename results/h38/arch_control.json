@@ -1,0 +1,43 @@
+{
+  "against_published_flags": {
+    "full": {
+      "here": 55,
+      "in_both": 54,
+      "only_here": 1,
+      "only_published": 0,
+      "published": 54
+    },
+    "genes": {
+      "here": 19,
+      "in_both": 18,
+      "only_here": 1,
+      "only_published": 0,
+      "published": 18
+    }
+  },
+  "architecture_sha256": "338769f1f68750d867f94bd2e2f6bb5e76c50e975f7ff1e936dfe88b6fe4d00b",
+  "checks": 9,
+  "checks_with_exceptions": 0,
+  "class_level": {
+    "full": {
+      "flagged_at_zero_from_class": 4,
+      "flagged_records": 55,
+      "records_in_families_that_differ_from_their_class": 41,
+      "reversed_deposits": 1,
+      "uniform_families": 81,
+      "uniform_family_records": 470,
+      "uniform_family_records_above_zero_from_class": 29
+    },
+    "genes": {
+      "flagged_at_zero_from_class": 1,
+      "flagged_records": 19,
+      "records_in_families_that_differ_from_their_class": 13,
+      "reversed_deposits": 4,
+      "uniform_families": 173,
+      "uniform_family_records": 1640,
+      "uniform_family_records_above_zero_from_class": 10
+    }
+  },
+  "reproduced": true,
+  "species_sha256": "fa967e33724af62dab5859eab48393404627e54aee951bcd7fe69895b86a6db1"
+}

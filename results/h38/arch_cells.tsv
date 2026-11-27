@@ -1,0 +1,433 @@
+set	class	measure	n	n_off_mode	n_flagged	covariate	model	reason	lambda	slope	se	t	df	p	r	p_holm_run	q_run	family_size
+high	Actinopterygii	cr_copies	156	0	2	False	lambda_1	only 0 species off the most common value										384
+high	Actinopterygii	cr_copies	156	0	2	False	lambda_ml	only 0 species off the most common value										384
+high	Actinopterygii	cr_copies	156	0	2	False	raw	only 0 species off the most common value										384
+high	Actinopterygii	cr_copies	156	0	2	True	lambda_1	only 0 species off the most common value										384
+high	Actinopterygii	cr_copies	156	0	2	True	lambda_ml	only 0 species off the most common value										384
+high	Actinopterygii	cr_copies	156	0	2	True	raw	only 0 species off the most common value										384
+not_unreliable	Actinopterygii	cr_copies	196	3	3	False	lambda_1	only 3 species off the most common value										384
+not_unreliable	Actinopterygii	cr_copies	196	3	3	False	lambda_ml	only 3 species off the most common value										384
+not_unreliable	Actinopterygii	cr_copies	196	3	3	False	raw	only 3 species off the most common value										384
+not_unreliable	Actinopterygii	cr_copies	196	3	3	True	lambda_1	only 3 species off the most common value										384
+not_unreliable	Actinopterygii	cr_copies	196	3	3	True	lambda_ml	only 3 species off the most common value										384
+not_unreliable	Actinopterygii	cr_copies	196	3	3	True	raw	only 3 species off the most common value										384
+high	Aves	cr_copies	290	47	10	False	lambda_1		1	-1.02523	0.288674	-3.55151	287	0.000447535	-0.205179	0.164693	0.00951085	384
+high	Aves	cr_copies	290	47	10	False	lambda_ml		0.825172	-0.352782	0.313184	-1.12644	287	0.260921	-0.066345	1	0.511193	384
+high	Aves	cr_copies	290	47	10	False	raw		0	0.364141	0.317394	1.14729	287	0.252219	0.0675674	1	0.508643	384
+high	Aves	cr_copies	290	47	10	True	lambda_1		1	-1.02421	0.288859	-3.54571	286	0.000457309	-0.205201	0.167832	0.00951085	384
+high	Aves	cr_copies	290	47	10	True	lambda_ml		0.816778	-0.31754	0.31116	-1.0205	286	0.308352	-0.060234	1	0.572016	384
+high	Aves	cr_copies	290	47	10	True	raw		0	0.366834	0.313849	1.16882	286	0.243448	0.0689495	1	0.507327	384
+not_unreliable	Aves	cr_copies	323	56	11	False	lambda_1		1	-0.809108	0.248232	-3.25948	320	0.00123623	-0.179259	0.447517	0.0206397	384
+not_unreliable	Aves	cr_copies	323	56	11	False	lambda_ml		0.807029	-0.330962	0.275366	-1.2019	320	0.230292	-0.0670369	1	0.488575	384
+not_unreliable	Aves	cr_copies	323	56	11	False	raw		0	0.195298	0.29453	0.663086	320	0.507753	0.0370422	1	0.693868	384
+not_unreliable	Aves	cr_copies	323	56	11	True	lambda_1		1	-0.780302	0.250597	-3.11378	319	0.00201452	-0.171747	0.7212	0.028651	384
+not_unreliable	Aves	cr_copies	323	56	11	True	lambda_ml		0.800362	-0.256329	0.274046	-0.935349	319	0.350316	-0.0522978	1	0.608694	384
+not_unreliable	Aves	cr_copies	323	56	11	True	raw		0	0.217131	0.290496	0.747449	319	0.455343	0.0418125	1	0.671313	384
+high	Mammalia	cr_copies	461	4	10	False	lambda_1	only 4 species off the most common value										384
+high	Mammalia	cr_copies	461	4	10	False	lambda_ml	only 4 species off the most common value										384
+high	Mammalia	cr_copies	461	4	10	False	raw	only 4 species off the most common value										384
+high	Mammalia	cr_copies	461	4	10	True	lambda_1	only 4 species off the most common value										384
+high	Mammalia	cr_copies	461	4	10	True	lambda_ml	only 4 species off the most common value										384
+high	Mammalia	cr_copies	461	4	10	True	raw	only 4 species off the most common value										384
+not_unreliable	Mammalia	cr_copies	528	5	12	False	lambda_1		1	-0.275471	0.420259	-0.65548	525	0.512446	-0.0285958	1	0.697799	384
+not_unreliable	Mammalia	cr_copies	528	5	12	False	lambda_ml		0.108687	0.00425636	0.247553	0.0171937	525	0.986289	0.000750396	1	0.991452	384
+not_unreliable	Mammalia	cr_copies	528	5	12	False	raw		0	0.0384459	0.203853	0.188596	525	0.850482	0.00823073	1	0.942273	384
+not_unreliable	Mammalia	cr_copies	528	5	12	True	lambda_1		1	-0.283202	0.420212	-0.67395	524	0.50064	-0.0294289	1	0.686592	384
+not_unreliable	Mammalia	cr_copies	528	5	12	True	lambda_ml		0.109063	0.00162711	0.247906	0.00656341	524	0.994766	0.000286724	1	0.99496	384
+not_unreliable	Mammalia	cr_copies	528	5	12	True	raw		0	0.0377465	0.204037	0.184998	524	0.853302	0.00808142	1	0.942273	384
+high	Reptilia	cr_copies	74	18	1	False	lambda_1		1	0.350847	0.328328	1.06859	71	0.288875	0.12581	1	0.541113	384
+high	Reptilia	cr_copies	74	18	1	False	lambda_ml		0.84981	0.243816	0.338202	0.720919	71	0.473327	0.0852459	1	0.681957	384
+high	Reptilia	cr_copies	74	18	1	False	raw		0	-0.706915	0.445791	-1.58575	71	0.117239	-0.184948	1	0.335969	384
+high	Reptilia	cr_copies	74	18	1	True	lambda_1		1	-0.0732697	0.188576	-0.388542	70	0.698794	-0.0463897	1	0.857307	384
+high	Reptilia	cr_copies	74	18	1	True	lambda_ml		0.999994	-0.0732774	0.188585	-0.388565	70	0.698778	-0.0463924	1	0.857307	384
+high	Reptilia	cr_copies	74	18	1	True	raw		0	-1.15037	0.429994	-2.67531	70	0.00928871	-0.304569	1	0.0994708	384
+not_unreliable	Reptilia	cr_copies	83	21	4	False	lambda_1		1	0.371464	0.321617	1.15499	80	0.251533	0.128068	1	0.508643	384
+not_unreliable	Reptilia	cr_copies	83	21	4	False	lambda_ml		0.871931	0.29438	0.334348	0.880462	80	0.381247	0.0979651	1	0.626353	384
+not_unreliable	Reptilia	cr_copies	83	21	4	False	raw		0	-0.577004	0.445688	-1.29463	80	0.199171	-0.143252	1	0.444374	384
+not_unreliable	Reptilia	cr_copies	83	21	4	True	lambda_1		1	0.272735	0.276004	0.988156	79	0.326093	0.110495	1	0.579722	384
+not_unreliable	Reptilia	cr_copies	83	21	4	True	lambda_ml		0.999994	0.272752	0.276013	0.988186	79	0.326079	0.110499	1	0.579722	384
+not_unreliable	Reptilia	cr_copies	83	21	4	True	raw		0	-0.576934	0.448812	-1.28547	79	0.202384	-0.143137	1	0.446641	384
+high	Actinopterygii	cr_length	156	152	2	False	lambda_1		1	-0.135095	0.221238	-0.610633	153	0.542349	-0.0493067	1	0.730606	384
+high	Actinopterygii	cr_length	156	152	2	False	lambda_ml		4.1244e-06	0.172081	0.250808	0.686105	153	0.493686	0.0553831	1	0.684274	384
+high	Actinopterygii	cr_length	156	152	2	False	raw		0	0.172078	0.250808	0.686096	153	0.493691	0.0553824	1	0.684274	384
+high	Actinopterygii	cr_length	156	152	2	True	lambda_1		1	-0.136328	0.221976	-0.614157	152	0.54003	-0.049753	1	0.730181	384
+high	Actinopterygii	cr_length	156	152	2	True	lambda_ml		4.32087e-06	0.175956	0.251591	0.699375	152	0.485387	0.0566358	1	0.684274	384
+high	Actinopterygii	cr_length	156	152	2	True	raw		0	0.175953	0.25159	0.699366	152	0.485392	0.056635	1	0.684274	384
+not_unreliable	Actinopterygii	cr_length	196	191	3	False	lambda_1		1	-0.120312	0.20543	-0.585657	193	0.55879	-0.0421191	1	0.739915	384
+not_unreliable	Actinopterygii	cr_length	196	191	3	False	lambda_ml		5.70029e-06	0.0528167	0.224493	0.235271	193	0.814248	0.0169327	1	0.919788	384
+not_unreliable	Actinopterygii	cr_length	196	191	3	False	raw		0	0.0528113	0.224492	0.235248	193	0.814266	0.0169311	1	0.919788	384
+not_unreliable	Actinopterygii	cr_length	196	191	3	True	lambda_1		1	-0.114009	0.205952	-0.553571	192	0.580517	-0.0399187	1	0.763419	384
+not_unreliable	Actinopterygii	cr_length	196	191	3	True	lambda_ml		5.95631e-06	0.0482771	0.224909	0.214652	192	0.830267	0.0154893	1	0.929531	384
+not_unreliable	Actinopterygii	cr_length	196	191	3	True	raw		0	0.0482719	0.224908	0.21463	192	0.830284	0.0154877	1	0.929531	384
+high	Aves	cr_length	290	284	10	False	lambda_1		1	-1.26511	0.46015	-2.74934	287	0.00635038	-0.160193	1	0.0825491	384
+high	Aves	cr_length	290	284	10	False	lambda_ml		0.248804	-0.351067	0.34548	-1.01617	287	0.310404	-0.059875	1	0.573054	384
+high	Aves	cr_length	290	284	10	False	raw		0	-0.745064	0.315936	-2.35828	287	0.0190307	-0.137875	1	0.141813	384
+high	Aves	cr_length	290	284	10	True	lambda_1		1	-1.26496	0.460954	-2.74421	286	0.00644915	-0.160174	1	0.0825491	384
+high	Aves	cr_length	290	284	10	True	lambda_ml		0.244784	-0.340221	0.345487	-0.984758	286	0.325575	-0.0581315	1	0.579722	384
+high	Aves	cr_length	290	284	10	True	raw		0	-0.744125	0.315991	-2.35489	286	0.0192038	-0.137917	1	0.141813	384
+not_unreliable	Aves	cr_length	323	317	11	False	lambda_1		1	-0.972845	0.389879	-2.49525	320	0.0130903	-0.138151	1	0.118567	384
+not_unreliable	Aves	cr_length	323	317	11	False	lambda_ml		0.327934	-0.252981	0.320594	-0.789099	320	0.430638	-0.0440691	1	0.66378	384
+not_unreliable	Aves	cr_length	323	317	11	False	raw		0	-0.684487	0.293096	-2.33536	320	0.0201421	-0.129452	1	0.143813	384
+not_unreliable	Aves	cr_length	323	317	11	True	lambda_1		1	-0.98465	0.394016	-2.49901	319	0.0129564	-0.138568	1	0.118567	384
+not_unreliable	Aves	cr_length	323	317	11	True	lambda_ml		0.3127	-0.236988	0.321017	-0.738241	319	0.460911	-0.0412983	1	0.672965	384
+not_unreliable	Aves	cr_length	323	317	11	True	raw		0	-0.677562	0.293178	-2.3111	319	0.0214648	-0.128327	1	0.149863	384
+high	Mammalia	cr_length	461	457	10	False	lambda_1		1	0.518491	0.259973	1.9944	458	0.0467003	0.0927903	1	0.229605	384
+high	Mammalia	cr_length	461	457	10	False	lambda_ml		0.995869	0.340459	0.27272	1.24838	458	0.212529	0.058234	1	0.46635	384
+high	Mammalia	cr_length	461	457	10	False	raw		0	0.440213	0.218895	2.01107	458	0.0449036	0.0935589	1	0.229605	384
+high	Mammalia	cr_length	461	457	10	True	lambda_1		1	0.514312	0.260215	1.97649	457	0.0487004	0.0920635	1	0.229605	384
+high	Mammalia	cr_length	461	457	10	True	lambda_ml		0.995874	0.335448	0.272997	1.22876	457	0.219793	0.0573844	1	0.47416	384
+high	Mammalia	cr_length	461	457	10	True	raw		0	0.440244	0.219143	2.00893	457	0.0451317	0.0935618	1	0.229605	384
+not_unreliable	Mammalia	cr_length	528	523	12	False	lambda_1		1	0.350371	0.241551	1.4505	525	0.147515	0.0631787	1	0.389972	384
+not_unreliable	Mammalia	cr_length	528	523	12	False	lambda_ml		0.995106	0.208922	0.251869	0.829486	525	0.407206	0.036178	1	0.643196	384
+not_unreliable	Mammalia	cr_length	528	523	12	False	raw		0	0.424725	0.202562	2.09676	525	0.0364923	0.0911295	1	0.212319	384
+not_unreliable	Mammalia	cr_length	528	523	12	True	lambda_1		1	0.349315	0.241798	1.44466	524	0.149151	0.062985	1	0.389972	384
+not_unreliable	Mammalia	cr_length	528	523	12	True	lambda_ml		0.995111	0.207767	0.252136	0.824029	524	0.410298	0.0359746	1	0.643196	384
+not_unreliable	Mammalia	cr_length	528	523	12	True	raw		0	0.425613	0.202732	2.09939	524	0.0362607	0.0913288	1	0.212319	384
+high	Reptilia	cr_length	74	72	1	False	lambda_1		1	0.253074	0.367982	0.687735	71	0.49386	0.0813486	1	0.684274	384
+high	Reptilia	cr_length	74	72	1	False	lambda_ml		0.999994	0.253061	0.367995	0.687676	71	0.493897	0.0813417	1	0.684274	384
+high	Reptilia	cr_length	74	72	1	False	raw		0	-0.238726	0.491069	-0.486136	71	0.628367	-0.057598	1	0.801638	384
+high	Reptilia	cr_length	74	72	1	True	lambda_1		1	0.282314	0.376411	0.750014	70	0.45576	0.0892857	1	0.671313	384
+high	Reptilia	cr_length	74	72	1	True	lambda_ml		0.999994	0.282302	0.376425	0.749956	70	0.455794	0.089279	1	0.671313	384
+high	Reptilia	cr_length	74	72	1	True	raw		0	-0.273305	0.515798	-0.529869	70	0.59788	-0.0632048	1	0.772908	384
+not_unreliable	Reptilia	cr_length	83	81	4	False	lambda_1		1	0.28306	0.362583	0.780676	80	0.437297	0.0869516	1	0.66378	384
+not_unreliable	Reptilia	cr_length	83	81	4	False	lambda_ml		0.999994	0.283046	0.362595	0.780612	80	0.437334	0.0869446	1	0.66378	384
+not_unreliable	Reptilia	cr_length	83	81	4	False	raw		0	-0.338652	0.469302	-0.721607	80	0.47264	-0.0804168	1	0.681957	384
+not_unreliable	Reptilia	cr_length	83	81	4	True	lambda_1		1	0.28563	0.365622	0.781218	79	0.437009	0.0875564	1	0.66378	384
+not_unreliable	Reptilia	cr_length	83	81	4	True	lambda_ml		0.999994	0.285617	0.365634	0.781154	79	0.437047	0.0875492	1	0.66378	384
+not_unreliable	Reptilia	cr_length	83	81	4	True	raw		0	-0.33054	0.471957	-0.700359	79	0.48576	-0.0785531	1	0.684274	384
+high	Actinopterygii	gene_overlap_bp	184	141	3	False	lambda_1		1	0.0782808	0.330531	0.236834	181	0.813054	0.017601	1	0.919788	384
+high	Actinopterygii	gene_overlap_bp	184	141	3	False	lambda_ml		3.4086e-06	-0.166147	0.219289	-0.757661	181	0.449639	-0.0562274	1	0.671313	384
+high	Actinopterygii	gene_overlap_bp	184	141	3	False	raw		0	-0.166147	0.219288	-0.757666	181	0.449636	-0.0562278	1	0.671313	384
+high	Actinopterygii	gene_overlap_bp	184	141	3	True	lambda_1		1	0.156591	0.289748	0.54044	180	0.589562	0.0402494	1	0.768691	384
+high	Actinopterygii	gene_overlap_bp	184	141	3	True	lambda_ml		4.59698e-06	-0.149378	0.218671	-0.683118	180	0.495411	-0.0508507	1	0.684274	384
+high	Actinopterygii	gene_overlap_bp	184	141	3	True	raw		0	-0.149378	0.218669	-0.683123	180	0.495407	-0.0508511	1	0.684274	384
+not_unreliable	Actinopterygii	gene_overlap_bp	232	179	5	False	lambda_1		1	0.0590743	0.414855	0.142397	229	0.886891	0.00940947	1	0.947964	384
+not_unreliable	Actinopterygii	gene_overlap_bp	232	179	5	False	lambda_ml		0.0931304	-0.288222	0.211784	-1.36092	229	0.174876	-0.0895708	1	0.427323	384
+not_unreliable	Actinopterygii	gene_overlap_bp	232	179	5	False	raw		0	-0.318127	0.193279	-1.64595	229	0.101146	-0.10813	1	0.301087	384
+not_unreliable	Actinopterygii	gene_overlap_bp	232	179	5	True	lambda_1		1	0.0967795	0.41468	0.233384	228	0.815673	0.0154544	1	0.919788	384
+not_unreliable	Actinopterygii	gene_overlap_bp	232	179	5	True	lambda_ml		0.0885104	-0.289809	0.211537	-1.37001	228	0.17203	-0.0903603	1	0.42619	384
+not_unreliable	Actinopterygii	gene_overlap_bp	232	179	5	True	raw		0	-0.317382	0.193669	-1.63878	228	0.102637	-0.107898	1	0.303175	384
+high	Aves	gene_overlap_bp	332	279	11	False	lambda_1		1	-0.135625	0.223368	-0.607181	329	0.544149	-0.0334562	1	0.730606	384
+high	Aves	gene_overlap_bp	332	279	11	False	lambda_ml		0.923046	-0.152473	0.253742	-0.600896	329	0.548323	-0.0331103	1	0.733645	384
+high	Aves	gene_overlap_bp	332	279	11	False	raw		0	-0.701196	0.293239	-2.39121	329	0.0173544	-0.130701	1	0.136551	384
+high	Aves	gene_overlap_bp	332	279	11	True	lambda_1		1	-0.133197	0.223549	-0.595828	328	0.551701	-0.0328813	1	0.733848	384
+high	Aves	gene_overlap_bp	332	279	11	True	lambda_ml		0.923371	-0.151214	0.254169	-0.594935	328	0.552297	-0.0328321	1	0.733848	384
+high	Aves	gene_overlap_bp	332	279	11	True	raw		0	-0.701817	0.293679	-2.38974	328	0.0174245	-0.130818	1	0.136551	384
+not_unreliable	Aves	gene_overlap_bp	369	309	12	False	lambda_1		1	0.0391935	0.155555	0.251959	366	0.801214	0.013169	1	0.919788	384
+not_unreliable	Aves	gene_overlap_bp	369	309	12	False	lambda_ml		0.999994	0.0391888	0.155569	0.251907	366	0.801255	0.0131662	1	0.919788	384
+not_unreliable	Aves	gene_overlap_bp	369	309	12	False	raw		0	-0.0887182	0.276422	-0.320952	366	0.74843	-0.0167741	1	0.897396	384
+not_unreliable	Aves	gene_overlap_bp	369	309	12	True	lambda_1		1	0.036386	0.156903	0.231902	365	0.816744	0.0121374	1	0.919788	384
+not_unreliable	Aves	gene_overlap_bp	369	309	12	True	lambda_ml		0.999994	0.0363798	0.156916	0.231842	365	0.816791	0.0121343	1	0.919788	384
+not_unreliable	Aves	gene_overlap_bp	369	309	12	True	raw		0	-0.0905005	0.27689	-0.326847	365	0.743971	-0.0171054	1	0.897396	384
+high	Mammalia	gene_overlap_bp	527	432	11	False	lambda_1		1	-0.304749	0.359833	-0.84692	524	0.397427	-0.0369726	1	0.638543	384
+high	Mammalia	gene_overlap_bp	527	432	11	False	lambda_ml		5.96086e-06	0.00380676	0.205993	0.0184801	524	0.985263	0.000807306	1	0.991452	384
+high	Mammalia	gene_overlap_bp	527	432	11	False	raw		0	0.00381769	0.205987	0.0185337	524	0.98522	0.000809648	1	0.991452	384
+high	Mammalia	gene_overlap_bp	527	432	11	True	lambda_1		1	-0.289266	0.358473	-0.80694	523	0.420068	-0.0352631	1	0.653061	384
+high	Mammalia	gene_overlap_bp	527	432	11	True	lambda_ml		5.96086e-06	0.0282244	0.201582	0.140014	523	0.888703	0.00612228	1	0.947964	384
+high	Mammalia	gene_overlap_bp	527	432	11	True	raw		0	0.0282352	0.201577	0.140072	523	0.888657	0.0061248	1	0.947964	384
+not_unreliable	Mammalia	gene_overlap_bp	599	500	14	False	lambda_1		1	-0.23391	0.328733	-0.711552	596	0.477021	-0.0291339	1	0.683493	384
+not_unreliable	Mammalia	gene_overlap_bp	599	500	14	False	lambda_ml		5.96086e-06	-0.00684325	0.191847	-0.0356704	596	0.971557	-0.00146112	1	0.990167	384
+not_unreliable	Mammalia	gene_overlap_bp	599	500	14	False	raw		0	-0.00683481	0.191841	-0.0356275	596	0.971591	-0.00145936	1	0.990167	384
+not_unreliable	Mammalia	gene_overlap_bp	599	500	14	True	lambda_1		1	-0.231986	0.327884	-0.707524	595	0.479518	-0.0289935	1	0.684274	384
+not_unreliable	Mammalia	gene_overlap_bp	599	500	14	True	lambda_ml		5.96086e-06	0.0210995	0.18882	0.111744	595	0.911064	0.00458101	1	0.958572	384
+not_unreliable	Mammalia	gene_overlap_bp	599	500	14	True	raw		0	0.0211079	0.188814	0.111792	595	0.911026	0.00458298	1	0.958572	384
+high	Reptilia	gene_overlap_bp	85	79	1	False	lambda_1		1	-0.109653	0.343175	-0.319526	82	0.75014	-0.0352638	1	0.897396	384
+high	Reptilia	gene_overlap_bp	85	79	1	False	lambda_ml		0.999994	-0.109645	0.343187	-0.319491	82	0.750167	-0.0352599	1	0.897396	384
+high	Reptilia	gene_overlap_bp	85	79	1	False	raw		0	0.290437	0.425867	0.681989	82	0.497168	0.0751004	1	0.684274	384
+high	Reptilia	gene_overlap_bp	85	79	1	True	lambda_1		1	-0.118477	0.350242	-0.338274	81	0.736032	-0.0375594	1	0.891626	384
+high	Reptilia	gene_overlap_bp	85	79	1	True	lambda_ml		0.999994	-0.118471	0.350254	-0.338242	81	0.736056	-0.0375559	1	0.891626	384
+high	Reptilia	gene_overlap_bp	85	79	1	True	raw		0	0.371754	0.445101	0.835214	81	0.406054	0.0924045	1	0.643196	384
+not_unreliable	Reptilia	gene_overlap_bp	95	89	4	False	lambda_1		1	-0.140614	0.34071	-0.41271	92	0.680779	-0.0429882	1	0.848798	384
+not_unreliable	Reptilia	gene_overlap_bp	95	89	4	False	lambda_ml		0.999994	-0.140606	0.340722	-0.412672	92	0.680807	-0.0429843	1	0.848798	384
+not_unreliable	Reptilia	gene_overlap_bp	95	89	4	False	raw		0	0.35859	0.410647	0.873231	92	0.384811	0.0906657	1	0.626353	384
+not_unreliable	Reptilia	gene_overlap_bp	95	89	4	True	lambda_1		1	-0.136343	0.343427	-0.397006	91	0.692292	-0.0415816	1	0.854826	384
+not_unreliable	Reptilia	gene_overlap_bp	95	89	4	True	lambda_ml		0.999994	-0.136335	0.343439	-0.396969	91	0.69232	-0.0415777	1	0.854826	384
+not_unreliable	Reptilia	gene_overlap_bp	95	89	4	True	raw		0	0.361286	0.411856	0.877216	91	0.382679	0.0915708	1	0.626353	384
+high	Actinopterygii	non_coding_bp	184	180	3	False	lambda_1		1	0.225557	0.258985	0.870929	181	0.384946	0.0646004	1	0.626353	384
+high	Actinopterygii	non_coding_bp	184	180	3	False	lambda_ml		0.745984	0.42788	0.237726	1.79989	181	0.0735437	0.132603	1	0.261489	384
+high	Actinopterygii	non_coding_bp	184	180	3	False	raw		0	0.901117	0.207986	4.33259	181	2.43896e-05	0.306536	0.00919486	0.0011707	384
+high	Actinopterygii	non_coding_bp	184	180	3	True	lambda_1		1	0.224424	0.259863	0.863627	180	0.388942	0.064238	1	0.630185	384
+high	Actinopterygii	non_coding_bp	184	180	3	True	lambda_ml		0.743452	0.42158	0.237957	1.77166	180	0.0781426	0.130915	1	0.26748	384
+high	Actinopterygii	non_coding_bp	184	180	3	True	raw		0	0.907965	0.208551	4.35369	180	2.2418e-05	0.30866	0.00847402	0.0011707	384
+not_unreliable	Actinopterygii	non_coding_bp	232	228	5	False	lambda_1		1	0.212289	0.211506	1.0037	229	0.316581	0.0661811	1	0.574186	384
+not_unreliable	Actinopterygii	non_coding_bp	232	228	5	False	lambda_ml		0.863705	0.238579	0.206546	1.15509	229	0.249258	0.076109	1	0.508643	384
+not_unreliable	Actinopterygii	non_coding_bp	232	228	5	False	raw		0	0.764508	0.188428	4.0573	229	6.81179e-05	0.258967	0.0256123	0.0026721	384
+not_unreliable	Actinopterygii	non_coding_bp	232	228	5	True	lambda_1		1	0.218321	0.212293	1.0284	228	0.304853	0.0679498	1	0.56827	384
+not_unreliable	Actinopterygii	non_coding_bp	232	228	5	True	lambda_ml		0.864477	0.24456	0.207483	1.1787	228	0.239746	0.0778246	1	0.503074	384
+not_unreliable	Actinopterygii	non_coding_bp	232	228	5	True	raw		0	0.765145	0.188818	4.05228	228	6.95859e-05	0.259197	0.0260947	0.0026721	384
+high	Aves	non_coding_bp	332	329	11	False	lambda_1		1	-0.310771	0.227875	-1.36378	329	0.173569	-0.0749759	1	0.427248	384
+high	Aves	non_coding_bp	332	329	11	False	lambda_ml		0.901018	-0.129472	0.262323	-0.49356	329	0.621946	-0.0272008	1	0.796091	384
+high	Aves	non_coding_bp	332	329	11	False	raw		0	0.536473	0.291731	1.83893	329	0.0668261	0.100867	1	0.246743	384
+high	Aves	non_coding_bp	332	329	11	True	lambda_1		1	-0.318191	0.226556	-1.40447	328	0.161125	-0.0773169	1	0.409747	384
+high	Aves	non_coding_bp	332	329	11	True	lambda_ml		0.904847	-0.137653	0.262103	-0.525186	328	0.599809	-0.0289864	1	0.772908	384
+high	Aves	non_coding_bp	332	329	11	True	raw		0	0.539764	0.291604	1.85102	328	0.0650657	0.101676	1	0.242575	384
+not_unreliable	Aves	non_coding_bp	369	366	12	False	lambda_1		1	-0.308399	0.197794	-1.5592	366	0.119814	-0.0812313	1	0.336348	384
+not_unreliable	Aves	non_coding_bp	369	366	12	False	lambda_ml		0.884901	-0.172248	0.238157	-0.723255	366	0.469985	-0.0377781	1	0.681957	384
+not_unreliable	Aves	non_coding_bp	369	366	12	False	raw		0	0.437146	0.273114	1.6006	366	0.110329	0.0833732	1	0.320957	384
+not_unreliable	Aves	non_coding_bp	369	366	12	True	lambda_1		1	-0.35007	0.198687	-1.76192	365	0.0789202	-0.0918333	1	0.26748	384
+not_unreliable	Aves	non_coding_bp	369	366	12	True	lambda_ml		0.885859	-0.178178	0.239361	-0.744391	365	0.457119	-0.0389336	1	0.671313	384
+not_unreliable	Aves	non_coding_bp	369	366	12	True	raw		0	0.44898	0.272708	1.64638	365	0.100546	0.0858573	1	0.301087	384
+high	Mammalia	non_coding_bp	527	521	11	False	lambda_1		1	0.500761	0.261002	1.91861	524	0.0555761	0.0835222	1	0.235573	384
+high	Mammalia	non_coding_bp	527	521	11	False	lambda_ml		0.978118	0.248516	0.277088	0.896885	524	0.370192	0.0391505	1	0.626229	384
+high	Mammalia	non_coding_bp	527	521	11	False	raw		0	0.715098	0.201207	3.55404	524	0.00041366	0.153421	0.152641	0.00951085	384
+high	Mammalia	non_coding_bp	527	521	11	True	lambda_1		1	0.488063	0.259657	1.87964	523	0.0607122	0.0819149	1	0.235573	384
+high	Mammalia	non_coding_bp	527	521	11	True	lambda_ml		0.969615	0.205192	0.275673	0.744331	523	0.457011	0.0325301	1	0.671313	384
+high	Mammalia	non_coding_bp	527	521	11	True	raw		0	0.696726	0.198767	3.50525	523	0.000495357	0.151504	0.180805	0.00951085	384
+not_unreliable	Mammalia	non_coding_bp	599	593	14	False	lambda_1		1	0.467073	0.24247	1.92631	596	0.0545411	0.0786602	1	0.235573	384
+not_unreliable	Mammalia	non_coding_bp	599	593	14	False	lambda_ml		0.989509	0.310496	0.255515	1.21518	596	0.22478	0.049714	1	0.48221	384
+not_unreliable	Mammalia	non_coding_bp	599	593	14	False	raw		0	0.600841	0.18778	3.19971	596	0.00144876	0.129954	0.523001	0.0231801	384
+not_unreliable	Mammalia	non_coding_bp	599	593	14	True	lambda_1		1	0.466429	0.242505	1.92338	595	0.0549087	0.0786071	1	0.235573	384
+not_unreliable	Mammalia	non_coding_bp	599	593	14	True	lambda_ml		0.988806	0.305866	0.255789	1.19577	595	0.232261	0.0489631	1	0.490046	384
+not_unreliable	Mammalia	non_coding_bp	599	593	14	True	raw		0	0.593249	0.18779	3.1591	595	0.00166283	0.128438	0.598619	0.0255411	384
+high	Reptilia	non_coding_bp	85	83	1	False	lambda_1		1	-0.0148557	0.423727	-0.0350595	82	0.972117	-0.00387165	1	0.990167	384
+high	Reptilia	non_coding_bp	85	83	1	False	lambda_ml		0.55841	-0.0605961	0.426699	-0.142011	82	0.887419	-0.0156806	1	0.947964	384
+high	Reptilia	non_coding_bp	85	83	1	False	raw		0	-0.491922	0.405439	-1.21331	82	0.228496	-0.132801	1	0.487458	384
+high	Reptilia	non_coding_bp	85	83	1	True	lambda_1		1	-0.108112	0.428113	-0.252531	81	0.80127	-0.028048	1	0.919788	384
+high	Reptilia	non_coding_bp	85	83	1	True	lambda_ml		0.5775	-0.113356	0.443291	-0.255715	81	0.798819	-0.0284013	1	0.919788	384
+high	Reptilia	non_coding_bp	85	83	1	True	raw		0	-0.5524	0.424185	-1.30226	81	0.196518	-0.143204	1	0.443899	384
+not_unreliable	Reptilia	non_coding_bp	95	93	4	False	lambda_1		1	-0.00718537	0.411578	-0.0174581	92	0.986109	-0.00182013	1	0.991452	384
+not_unreliable	Reptilia	non_coding_bp	95	93	4	False	lambda_ml		0.620974	-0.0548828	0.420857	-0.130407	92	0.896529	-0.0135946	1	0.951014	384
+not_unreliable	Reptilia	non_coding_bp	95	93	4	False	raw		0	-0.520294	0.398178	-1.30669	92	0.194576	-0.134985	1	0.443899	384
+not_unreliable	Reptilia	non_coding_bp	95	93	4	True	lambda_1		1	-0.035885	0.412852	-0.0869197	91	0.930926	-0.00911128	1	0.963546	384
+not_unreliable	Reptilia	non_coding_bp	95	93	4	True	lambda_ml		0.627494	-0.0580957	0.423474	-0.137188	91	0.891185	-0.0143798	1	0.947964	384
+not_unreliable	Reptilia	non_coding_bp	95	93	4	True	raw		0	-0.519383	0.400254	-1.29764	91	0.197693	-0.134788	1	0.443941	384
+high	Actinopterygii	non_coding_frac	184	182	3	False	lambda_1		1	0.240585	0.270935	0.88798	181	0.37573	0.0658597	1	0.626353	384
+high	Actinopterygii	non_coding_frac	184	182	3	False	lambda_ml		0.66057	0.526359	0.240569	2.18797	181	0.0299528	0.160522	1	0.19154	384
+high	Actinopterygii	non_coding_frac	184	182	3	False	raw		0	0.947585	0.20702	4.57725	181	8.73152e-06	0.322093	0.00330924	0.000558817	384
+high	Actinopterygii	non_coding_frac	184	182	3	True	lambda_1		1	0.238551	0.271832	0.877568	180	0.381348	0.0652706	1	0.626353	384
+high	Actinopterygii	non_coding_frac	184	182	3	True	lambda_ml		0.658279	0.5187	0.240209	2.15937	180	0.032145	0.158905	1	0.199092	384
+high	Actinopterygii	non_coding_frac	184	182	3	True	raw		0	0.957658	0.207274	4.62024	180	7.2833e-06	0.325606	0.00276765	0.000558817	384
+not_unreliable	Actinopterygii	non_coding_frac	232	230	5	False	lambda_1		1	0.203661	0.209918	0.970194	229	0.332973	0.0639809	1	0.589224	384
+not_unreliable	Actinopterygii	non_coding_frac	232	230	5	False	lambda_ml		0.860897	0.239655	0.210666	1.13761	229	0.256473	0.0749637	1	0.509096	384
+not_unreliable	Actinopterygii	non_coding_frac	232	230	5	False	raw		0	0.747757	0.188799	3.96059	229	9.98532e-05	0.253195	0.0373451	0.00322786	384
+not_unreliable	Actinopterygii	non_coding_frac	232	230	5	True	lambda_1		1	0.211241	0.210642	1.00285	228	0.316998	0.0662691	1	0.574186	384
+not_unreliable	Actinopterygii	non_coding_frac	232	230	5	True	lambda_ml		0.862106	0.246245	0.211594	1.16376	228	0.245737	0.0768442	1	0.507327	384
+not_unreliable	Actinopterygii	non_coding_frac	232	230	5	True	raw		0	0.748708	0.189148	3.95831	228	0.000100871	0.253578	0.0376247	0.00322786	384
+high	Aves	non_coding_frac	332	329	11	False	lambda_1		1	-0.502778	0.193263	-2.60153	329	0.00970037	-0.141974	1	0.0995168	384
+high	Aves	non_coding_frac	332	329	11	False	lambda_ml		0.943736	-0.349818	0.215154	-1.6259	329	0.104929	-0.0892806	1	0.307578	384
+high	Aves	non_coding_frac	332	329	11	False	raw		0	0.610716	0.290399	2.10303	329	0.0362227	0.115172	1	0.212319	384
+high	Aves	non_coding_frac	332	329	11	True	lambda_1		1	-0.510138	0.191614	-2.66233	328	0.0081427	-0.145439	1	0.0977125	384
+high	Aves	non_coding_frac	332	329	11	True	lambda_ml		0.947653	-0.362179	0.214278	-1.69023	328	0.0919339	-0.0929236	1	0.285882	384
+high	Aves	non_coding_frac	332	329	11	True	raw		0	0.614544	0.290058	2.11869	328	0.034868	0.116193	1	0.212319	384
+not_unreliable	Aves	non_coding_frac	369	366	12	False	lambda_1		1	-0.463842	0.176895	-2.62214	366	0.00910285	-0.135792	1	0.0994708	384
+not_unreliable	Aves	non_coding_frac	369	366	12	False	lambda_ml		0.906568	-0.336698	0.204207	-1.64881	366	0.100045	-0.0858663	1	0.301087	384
+not_unreliable	Aves	non_coding_frac	369	366	12	False	raw		0	0.505021	0.271964	1.85694	366	0.0641223	0.09661	1	0.241402	384
+not_unreliable	Aves	non_coding_frac	369	366	12	True	lambda_1		1	-0.504769	0.177541	-2.84311	365	0.00471893	-0.147194	1	0.0647167	384
+not_unreliable	Aves	non_coding_frac	369	366	12	True	lambda_ml		0.907215	-0.341805	0.205319	-1.66475	365	0.0968201	-0.0868082	1	0.295071	384
+not_unreliable	Aves	non_coding_frac	369	366	12	True	raw		0	0.518604	0.271267	1.91178	365	0.0566867	0.09957	1	0.235573	384
+high	Mammalia	non_coding_frac	527	525	11	False	lambda_1		1	0.571614	0.230027	2.48499	524	0.0132664	0.107923	1	0.118567	384
+high	Mammalia	non_coding_frac	527	525	11	False	lambda_ml		0.964866	0.258219	0.23541	1.09689	524	0.273193	0.047863	1	0.516417	384
+high	Mammalia	non_coding_frac	527	525	11	False	raw		0	0.710302	0.199701	3.55684	524	0.000409379	0.153539	0.15147	0.00951085	384
+high	Mammalia	non_coding_frac	527	525	11	True	lambda_1		1	0.562632	0.229357	2.45308	523	0.0144893	0.106654	1	0.126452	384
+high	Mammalia	non_coding_frac	527	525	11	True	lambda_ml		0.962735	0.235183	0.234325	1.00366	523	0.316006	0.0438448	1	0.574186	384
+high	Mammalia	non_coding_frac	527	525	11	True	raw		0	0.699177	0.19896	3.51415	523	0.000479413	0.15188	0.175465	0.00951085	384
+not_unreliable	Mammalia	non_coding_frac	599	597	14	False	lambda_1		1	0.572654	0.238679	2.39926	596	0.0167343	0.0978063	1	0.136551	384
+not_unreliable	Mammalia	non_coding_frac	599	597	14	False	lambda_ml		0.930482	0.366427	0.253981	1.44273	596	0.149621	0.0589937	1	0.389972	384
+not_unreliable	Mammalia	non_coding_frac	599	597	14	False	raw		0	0.389976	0.187575	2.07904	596	0.0380405	0.0848538	1	0.215855	384
+not_unreliable	Mammalia	non_coding_frac	599	597	14	True	lambda_1		1	0.574574	0.237334	2.42096	595	0.0157779	0.0987643	1	0.134638	384
+not_unreliable	Mammalia	non_coding_frac	599	597	14	True	lambda_ml		0.949476	0.394992	0.253685	1.55701	595	0.119999	0.0637017	1	0.336348	384
+not_unreliable	Mammalia	non_coding_frac	599	597	14	True	raw		0	0.405338	0.18682	2.16967	595	0.0304269	0.088598	1	0.19154	384
+high	Reptilia	non_coding_frac	85	84	1	False	lambda_1		1	-0.0451725	0.43096	-0.104818	82	0.916776	-0.0115745	1	0.959242	384
+high	Reptilia	non_coding_frac	85	84	1	False	lambda_ml		0.631501	-0.0761634	0.432974	-0.175907	82	0.8608	-0.0194221	1	0.944421	384
+high	Reptilia	non_coding_frac	85	84	1	False	raw		0	-0.450945	0.409774	-1.10047	82	0.274347	-0.120639	1	0.516417	384
+high	Reptilia	non_coding_frac	85	84	1	True	lambda_1		1	-0.128887	0.436413	-0.295333	81	0.768496	-0.0327971	1	0.913629	384
+high	Reptilia	non_coding_frac	85	84	1	True	lambda_ml		0.644535	-0.124188	0.44831	-0.277015	81	0.782474	-0.0307648	1	0.918869	384
+high	Reptilia	non_coding_frac	85	84	1	True	raw		0	-0.49385	0.42907	-1.15098	81	0.253128	-0.126853	1	0.508643	384
+not_unreliable	Reptilia	non_coding_frac	95	94	4	False	lambda_1		1	-0.0376489	0.421459	-0.0893299	92	0.929014	-0.00931288	1	0.963546	384
+not_unreliable	Reptilia	non_coding_frac	95	94	4	False	lambda_ml		0.635865	-0.0786614	0.426077	-0.184618	92	0.853935	-0.0192442	1	0.942273	384
+not_unreliable	Reptilia	non_coding_frac	95	94	4	False	raw		0	-0.469319	0.401056	-1.17021	92	0.244941	-0.121104	1	0.507327	384
+not_unreliable	Reptilia	non_coding_frac	95	94	4	True	lambda_1		1	-0.0620448	0.423426	-0.146531	91	0.883827	-0.0153588	1	0.947964	384
+not_unreliable	Reptilia	non_coding_frac	95	94	4	True	lambda_ml		0.638209	-0.0800039	0.428728	-0.186608	91	0.852384	-0.019558	1	0.942273	384
+not_unreliable	Reptilia	non_coding_frac	95	94	4	True	raw		0	-0.467605	0.402834	-1.16079	91	0.248765	-0.120793	1	0.508643	384
+high	Actinopterygii	rearr_full	184	32	3	False	lambda_1		1	0.260186	0.210805	1.23425	181	0.218711	0.0913572	1	0.47416	384
+high	Actinopterygii	rearr_full	184	32	3	False	lambda_ml		0.251254	-0.103624	0.258667	-0.400606	181	0.689183	-0.0297636	1	0.854826	384
+high	Actinopterygii	rearr_full	184	32	3	False	raw		0	-0.0434988	0.219601	-0.198081	181	0.843204	-0.0147216	1	0.941251	384
+high	Actinopterygii	rearr_full	184	32	3	True	lambda_1		1	0.228317	0.201073	1.13549	180	0.257679	0.0843331	1	0.509096	384
+high	Actinopterygii	rearr_full	184	32	3	True	lambda_ml		0.255719	-0.0878435	0.24395	-0.360088	180	0.719204	-0.0268297	1	0.876743	384
+high	Actinopterygii	rearr_full	184	32	3	True	raw		0	0.00443551	0.208001	0.0213245	180	0.98301	0.00158943	1	0.991452	384
+not_unreliable	Actinopterygii	rearr_full	232	50	5	False	lambda_1		1	0.249358	0.22683	1.09932	229	0.272785	0.0724539	1	0.516417	384
+not_unreliable	Actinopterygii	rearr_full	232	50	5	False	lambda_ml		0.459162	-0.179206	0.241078	-0.743351	229	0.458031	-0.0490629	1	0.671313	384
+not_unreliable	Actinopterygii	rearr_full	232	50	5	False	raw		0	-0.198545	0.196244	-1.01172	229	0.312738	-0.0667077	1	0.574186	384
+not_unreliable	Actinopterygii	rearr_full	232	50	5	True	lambda_1		1	0.211041	0.224157	0.941485	228	0.347453	0.0622305	1	0.606463	384
+not_unreliable	Actinopterygii	rearr_full	232	50	5	True	lambda_ml		0.431126	-0.206608	0.235577	-0.877029	228	0.381394	-0.0579849	1	0.626353	384
+not_unreliable	Actinopterygii	rearr_full	232	50	5	True	raw		0	-0.192318	0.193456	-0.994118	228	0.321219	-0.0656948	1	0.5791	384
+high	Aves	rearr_full	332	35	11	False	lambda_1		1	-0.564632	0.330409	-1.70889	329	0.0884145	-0.0937987	1	0.281665	384
+high	Aves	rearr_full	332	35	11	False	lambda_ml		0.358472	-0.100582	0.322444	-0.311935	329	0.755287	-0.017195	1	0.900715	384
+high	Aves	rearr_full	332	35	11	False	raw		0	0.00184924	0.292509	0.00632198	329	0.99496	0.000348542	1	0.99496	384
+high	Aves	rearr_full	332	35	11	True	lambda_1		1	-0.536685	0.314034	-1.709	328	0.0883966	-0.0939465	1	0.281665	384
+high	Aves	rearr_full	332	35	11	True	lambda_ml		0.418799	-0.0104514	0.28917	-0.0361429	328	0.97119	-0.00199565	1	0.990167	384
+high	Aves	rearr_full	332	35	11	True	raw		0	0.0245817	0.263647	0.093237	328	0.925772	0.00514808	1	0.963405	384
+not_unreliable	Aves	rearr_full	369	40	12	False	lambda_1		1	-0.912726	0.2917	-3.12899	366	0.0018948	-0.16141	0.680235	0.0279848	384
+not_unreliable	Aves	rearr_full	369	40	12	False	lambda_ml		0.360766	-0.228617	0.298785	-0.765156	366	0.444672	-0.0399634	1	0.671313	384
+not_unreliable	Aves	rearr_full	369	40	12	False	raw		0	-0.09841	0.273354	-0.36001	366	0.719048	-0.0188147	1	0.876743	384
+not_unreliable	Aves	rearr_full	369	40	12	True	lambda_1		1	-0.722455	0.282346	-2.55876	365	0.0109073	-0.132746	1	0.107395	384
+not_unreliable	Aves	rearr_full	369	40	12	True	lambda_ml		0.355742	-0.0710644	0.270929	-0.262299	365	0.793239	-0.0137281	1	0.919788	384
+not_unreliable	Aves	rearr_full	369	40	12	True	raw		0	-0.0355369	0.247554	-0.143552	365	0.885934	-0.00751363	1	0.947964	384
+high	Mammalia	rearr_full	527	88	11	False	lambda_1		1	0.606398	0.337156	1.79857	524	0.0726626	0.0783294	1	0.26077	384
+high	Mammalia	rearr_full	527	88	11	False	lambda_ml		0.515435	-0.195131	0.238861	-0.816925	524	0.414343	-0.0356648	1	0.646779	384
+high	Mammalia	rearr_full	527	88	11	False	raw		0	-0.692912	0.201975	-3.43068	524	0.000649575	-0.148215	0.236445	0.0118779	384
+high	Mammalia	rearr_full	527	88	11	True	lambda_1		1	0.627988	0.333859	1.881	523	0.0605274	0.0819735	1	0.235573	384
+high	Mammalia	rearr_full	527	88	11	True	lambda_ml		0.524912	-0.151062	0.236429	-0.638931	523	0.523148	-0.0279276	1	0.709854	384
+high	Mammalia	rearr_full	527	88	11	True	raw		0	-0.671645	0.198626	-3.38146	523	0.00077494	-0.146271	0.281303	0.0135262	384
+not_unreliable	Mammalia	rearr_full	598	106	13	False	lambda_1		1	0.546889	0.328368	1.66547	595	0.0963444	0.0681192	1	0.295071	384
+not_unreliable	Mammalia	rearr_full	598	106	13	False	lambda_ml		0.496772	-0.204835	0.222538	-0.920448	595	0.357712	-0.0377078	1	0.614557	384
+not_unreliable	Mammalia	rearr_full	598	106	13	False	raw		0	-0.706729	0.188437	-3.75048	595	0.000193751	-0.151969	0.0718815	0.0053143	384
+not_unreliable	Mammalia	rearr_full	598	106	13	True	lambda_1		1	0.569343	0.321745	1.76955	594	0.0773155	0.0724148	1	0.26747	384
+not_unreliable	Mammalia	rearr_full	598	106	13	True	lambda_ml		0.503681	-0.173456	0.218256	-0.794738	594	0.427083	-0.0325912	1	0.66129	384
+not_unreliable	Mammalia	rearr_full	598	106	13	True	raw		0	-0.686767	0.182983	-3.75318	594	0.000191753	-0.152201	0.0713322	0.0053143	384
+high	Reptilia	rearr_full	85	46	1	False	lambda_1		1	0.411819	0.305512	1.34796	82	0.181383	0.147235	1	0.427323	384
+high	Reptilia	rearr_full	85	46	1	False	lambda_ml		0.999994	0.411825	0.305522	1.34794	82	0.18139	0.147233	1	0.427323	384
+high	Reptilia	rearr_full	85	46	1	False	raw		0	-0.627249	0.42166	-1.48757	82	0.1407	-0.162102	1	0.377823	384
+high	Reptilia	rearr_full	85	46	1	True	lambda_1		1	0.268262	0.297115	0.90289	81	0.369262	0.09982	1	0.626229	384
+high	Reptilia	rearr_full	85	46	1	True	lambda_ml		0.999994	0.268262	0.297125	0.902859	81	0.369278	0.0998167	1	0.626229	384
+high	Reptilia	rearr_full	85	46	1	True	raw		0	-0.78735	0.437257	-1.80066	81	0.075479	-0.196185	1	0.265257	384
+not_unreliable	Reptilia	rearr_full	95	52	4	False	lambda_1		1	0.352548	0.316382	1.11431	92	0.268048	0.115399	1	0.516417	384
+not_unreliable	Reptilia	rearr_full	95	52	4	False	lambda_ml		0.999994	0.352549	0.316391	1.11428	92	0.268061	0.115396	1	0.516417	384
+not_unreliable	Reptilia	rearr_full	95	52	4	False	raw		0	-0.767231	0.405054	-1.89415	92	0.061347	-0.193737	1	0.235573	384
+not_unreliable	Reptilia	rearr_full	95	52	4	True	lambda_1		1	0.256865	0.287462	0.893564	91	0.373913	0.0932627	1	0.626353	384
+not_unreliable	Reptilia	rearr_full	95	52	4	True	lambda_ml		0.999994	0.256864	0.287471	0.89353	91	0.37393	0.0932592	1	0.626353	384
+not_unreliable	Reptilia	rearr_full	95	52	4	True	raw		0	-0.772919	0.402488	-1.92035	91	0.0579451	-0.197349	1	0.235573	384
+high	Actinopterygii	rearr_genes	184	1	3	False	lambda_1	only 1 species off the most common value										384
+high	Actinopterygii	rearr_genes	184	1	3	False	lambda_ml	only 1 species off the most common value										384
+high	Actinopterygii	rearr_genes	184	1	3	False	raw	only 1 species off the most common value										384
+high	Actinopterygii	rearr_genes	184	1	3	True	lambda_1	only 1 species off the most common value										384
+high	Actinopterygii	rearr_genes	184	1	3	True	lambda_ml	only 1 species off the most common value										384
+high	Actinopterygii	rearr_genes	184	1	3	True	raw	only 1 species off the most common value										384
+not_unreliable	Actinopterygii	rearr_genes	232	5	5	False	lambda_1		1	-0.00840305	0.077398	-0.108569	229	0.913639	-0.00717428	1	0.958572	384
+not_unreliable	Actinopterygii	rearr_genes	232	5	5	False	lambda_ml		0.999994	-0.00841385	0.0774605	-0.108621	229	0.913598	-0.0071777	1	0.958572	384
+not_unreliable	Actinopterygii	rearr_genes	232	5	5	False	raw		0	-0.104067	0.196687	-0.529099	229	0.597249	-0.0349425	1	0.772908	384
+not_unreliable	Actinopterygii	rearr_genes	232	5	5	True	lambda_1		1	-0.0116239	0.0776463	-0.149703	228	0.881132	-0.00991381	1	0.947964	384
+not_unreliable	Actinopterygii	rearr_genes	232	5	5	True	lambda_ml		0.999994	-0.0116404	0.0777093	-0.149794	228	0.88106	-0.00991985	1	0.947964	384
+not_unreliable	Actinopterygii	rearr_genes	232	5	5	True	raw		0	-0.0978317	0.193899	-0.504551	228	0.614362	-0.033396	1	0.789013	384
+high	Aves	rearr_genes	332	14	11	False	lambda_1		1	-0.41948	0.319825	-1.31159	329	0.190572	-0.0721222	1	0.438201	384
+high	Aves	rearr_genes	332	14	11	False	lambda_ml		0.151304	-0.171879	0.319126	-0.538595	329	0.590531	-0.0296806	1	0.768691	384
+high	Aves	rearr_genes	332	14	11	False	raw		0	0.0244624	0.293819	0.0832567	329	0.933698	0.00459004	1	0.963817	384
+high	Aves	rearr_genes	332	14	11	True	lambda_1		1	-0.397734	0.309866	-1.28357	328	0.2002	-0.0706958	1	0.444374	384
+high	Aves	rearr_genes	332	14	11	True	lambda_ml		0.213136	-0.132516	0.309889	-0.427624	328	0.669206	-0.023605	1	0.842541	384
+high	Aves	rearr_genes	332	14	11	True	raw		0	0.0391728	0.28243	0.138699	328	0.889773	0.00765817	1	0.947964	384
+not_unreliable	Aves	rearr_genes	369	15	12	False	lambda_1		1	-0.394593	0.283397	-1.39237	366	0.164655	-0.0725885	1	0.413559	384
+not_unreliable	Aves	rearr_genes	369	15	12	False	lambda_ml		0.165185	-0.2132	0.29758	-0.716446	366	0.474173	-0.037423	1	0.681957	384
+not_unreliable	Aves	rearr_genes	369	15	12	False	raw		0	-0.0275367	0.274423	-0.100344	366	0.920126	-0.00524499	1	0.960132	384
+not_unreliable	Aves	rearr_genes	369	15	12	True	lambda_1		1	-0.228307	0.27655	-0.825555	365	0.409596	-0.0431712	1	0.643196	384
+not_unreliable	Aves	rearr_genes	369	15	12	True	lambda_ml		0.172295	-0.120068	0.285632	-0.420359	365	0.674471	-0.0219973	1	0.846394	384
+not_unreliable	Aves	rearr_genes	369	15	12	True	raw		0	0.0161525	0.262597	0.0615106	365	0.950986	0.0032196	1	0.979031	384
+high	Mammalia	rearr_genes	527	1	11	False	lambda_1	only 1 species off the most common value										384
+high	Mammalia	rearr_genes	527	1	11	False	lambda_ml	only 1 species off the most common value										384
+high	Mammalia	rearr_genes	527	1	11	False	raw	only 1 species off the most common value										384
+high	Mammalia	rearr_genes	527	1	11	True	lambda_1	only 1 species off the most common value										384
+high	Mammalia	rearr_genes	527	1	11	True	lambda_ml	only 1 species off the most common value										384
+high	Mammalia	rearr_genes	527	1	11	True	raw	only 1 species off the most common value										384
+not_unreliable	Mammalia	rearr_genes	599	2	14	False	lambda_1	only 2 species off the most common value										384
+not_unreliable	Mammalia	rearr_genes	599	2	14	False	lambda_ml	only 2 species off the most common value										384
+not_unreliable	Mammalia	rearr_genes	599	2	14	False	raw	only 2 species off the most common value										384
+not_unreliable	Mammalia	rearr_genes	599	2	14	True	lambda_1	only 2 species off the most common value										384
+not_unreliable	Mammalia	rearr_genes	599	2	14	True	lambda_ml	only 2 species off the most common value										384
+not_unreliable	Mammalia	rearr_genes	599	2	14	True	raw	only 2 species off the most common value										384
+high	Reptilia	rearr_genes	85	3	1	False	lambda_1	only 3 species off the most common value										384
+high	Reptilia	rearr_genes	85	3	1	False	lambda_ml	only 3 species off the most common value										384
+high	Reptilia	rearr_genes	85	3	1	False	raw	only 3 species off the most common value										384
+high	Reptilia	rearr_genes	85	3	1	True	lambda_1	only 3 species off the most common value										384
+high	Reptilia	rearr_genes	85	3	1	True	lambda_ml	only 3 species off the most common value										384
+high	Reptilia	rearr_genes	85	3	1	True	raw	only 3 species off the most common value										384
+not_unreliable	Reptilia	rearr_genes	95	3	4	False	lambda_1	only 3 species off the most common value										384
+not_unreliable	Reptilia	rearr_genes	95	3	4	False	lambda_ml	only 3 species off the most common value										384
+not_unreliable	Reptilia	rearr_genes	95	3	4	False	raw	only 3 species off the most common value										384
+not_unreliable	Reptilia	rearr_genes	95	3	4	True	lambda_1	only 3 species off the most common value										384
+not_unreliable	Reptilia	rearr_genes	95	3	4	True	lambda_ml	only 3 species off the most common value										384
+not_unreliable	Reptilia	rearr_genes	95	3	4	True	raw	only 3 species off the most common value										384
+high	Actinopterygii	repeat_cr	156	64	2	False	lambda_1		1	-0.343312	0.198041	-1.73354	153	0.085014	-0.138792	1	0.280121	384
+high	Actinopterygii	repeat_cr	156	64	2	False	lambda_ml		0.877133	-0.241162	0.261843	-0.921017	153	0.358491	-0.0742543	1	0.614557	384
+high	Actinopterygii	repeat_cr	156	64	2	False	raw		0	0.107562	0.245805	0.437589	153	0.662302	0.0353548	1	0.839352	384
+high	Actinopterygii	repeat_cr	156	64	2	True	lambda_1		1	-0.34336	0.198742	-1.72767	152	0.0860787	-0.138776	1	0.280121	384
+high	Actinopterygii	repeat_cr	156	64	2	True	lambda_ml		0.876684	-0.243784	0.262874	-0.927382	152	0.355199	-0.0750087	1	0.614398	384
+high	Actinopterygii	repeat_cr	156	64	2	True	raw		0	0.107208	0.246746	0.434486	152	0.664552	0.0352196	1	0.839434	384
+not_unreliable	Actinopterygii	repeat_cr	196	79	3	False	lambda_1		1	-0.290911	0.185609	-1.56733	193	0.118676	-0.112108	1	0.336348	384
+not_unreliable	Actinopterygii	repeat_cr	196	79	3	False	lambda_ml		0.898369	-0.132886	0.235023	-0.565419	193	0.572446	-0.0406661	1	0.755392	384
+not_unreliable	Actinopterygii	repeat_cr	196	79	3	False	raw		0	0.182885	0.22111	0.827124	193	0.409189	0.0594324	1	0.643196	384
+not_unreliable	Actinopterygii	repeat_cr	196	79	3	True	lambda_1		1	-0.278478	0.185282	-1.503	192	0.134482	-0.107837	1	0.368865	384
+not_unreliable	Actinopterygii	repeat_cr	196	79	3	True	lambda_ml		0.902712	-0.128543	0.234453	-0.548269	192	0.584144	-0.0395369	1	0.765568	384
+not_unreliable	Actinopterygii	repeat_cr	196	79	3	True	raw		0	0.18298	0.221784	0.825041	192	0.410372	0.0594369	1	0.643196	384
+high	Aves	repeat_cr	290	149	10	False	lambda_1		1	-0.25164	0.263521	-0.954914	287	0.340425	-0.0562774	1	0.59691	384
+high	Aves	repeat_cr	290	149	10	False	lambda_ml		0.853859	-0.448666	0.289752	-1.54845	287	0.122616	-0.0910227	1	0.341192	384
+high	Aves	repeat_cr	290	149	10	False	raw		0	-0.41566	0.312862	-1.32857	287	0.185044	-0.0781832	1	0.432032	384
+high	Aves	repeat_cr	290	149	10	True	lambda_1		1	-0.247715	0.25869	-0.957577	286	0.339085	-0.0565322	1	0.59691	384
+high	Aves	repeat_cr	290	149	10	True	lambda_ml		0.876176	-0.411008	0.285672	-1.43874	286	0.151317	-0.0847683	1	0.389972	384
+high	Aves	repeat_cr	290	149	10	True	raw		0	-0.414191	0.312177	-1.32678	286	0.185639	-0.078214	1	0.432032	384
+not_unreliable	Aves	repeat_cr	323	166	11	False	lambda_1		1	-0.187755	0.220916	-0.849893	320	0.39602	-0.047457	1	0.638543	384
+not_unreliable	Aves	repeat_cr	323	166	11	False	lambda_ml		0.884316	-0.343363	0.254379	-1.34981	320	0.178031	-0.0752428	1	0.427323	384
+not_unreliable	Aves	repeat_cr	323	166	11	False	raw		0	-0.416773	0.28969	-1.43868	320	0.151217	-0.0801661	1	0.389972	384
+not_unreliable	Aves	repeat_cr	323	166	11	True	lambda_1		1	-0.0996321	0.220223	-0.452415	319	0.651278	-0.0253222	1	0.828115	384
+not_unreliable	Aves	repeat_cr	323	166	11	True	lambda_ml		0.898007	-0.27761	0.252329	-1.10019	319	0.272078	-0.0614824	1	0.516417	384
+not_unreliable	Aves	repeat_cr	323	166	11	True	raw		0	-0.408329	0.289534	-1.4103	319	0.159426	-0.0787166	1	0.408129	384
+high	Mammalia	repeat_cr	461	259	10	False	lambda_1		1	0.39903	0.226974	1.75804	458	0.0794082	0.0818722	1	0.26748	384
+high	Mammalia	repeat_cr	461	259	10	False	lambda_ml		0.94238	0.300004	0.23146	1.29614	458	0.195581	0.0604538	1	0.443899	384
+high	Mammalia	repeat_cr	461	259	10	False	raw		0	0.0567555	0.216873	0.261699	458	0.793671	0.0122275	1	0.919788	384
+high	Mammalia	repeat_cr	461	259	10	True	lambda_1		1	0.39051	0.226714	1.72248	457	0.0856593	0.0803139	1	0.280121	384
+high	Mammalia	repeat_cr	461	259	10	True	lambda_ml		0.943192	0.285873	0.231437	1.23521	457	0.217387	0.0576845	1	0.47416	384
+high	Mammalia	repeat_cr	461	259	10	True	raw		0	0.0580871	0.217013	0.267666	457	0.789077	0.0125199	1	0.919788	384
+not_unreliable	Mammalia	repeat_cr	528	290	12	False	lambda_1		1	0.480154	0.213126	2.25291	525	0.024677	0.0978531	1	0.166245	384
+not_unreliable	Mammalia	repeat_cr	528	290	12	False	lambda_ml		0.936001	0.393313	0.211967	1.85554	525	0.0640788	0.0807183	1	0.241402	384
+not_unreliable	Mammalia	repeat_cr	528	290	12	False	raw		0	0.0331567	0.200869	0.165066	525	0.868955	0.00720389	1	0.947964	384
+not_unreliable	Mammalia	repeat_cr	528	290	12	True	lambda_1		1	0.476936	0.213186	2.23718	524	0.0256942	0.0972683	1	0.170113	384
+not_unreliable	Mammalia	repeat_cr	528	290	12	True	lambda_ml		0.936423	0.388504	0.212151	1.83126	524	0.0676297	0.0797441	1	0.247332	384
+not_unreliable	Mammalia	repeat_cr	528	290	12	True	raw		0	0.0352944	0.200871	0.175707	524	0.860592	0.00767556	1	0.944421	384
+high	Reptilia	repeat_cr	74	56	1	False	lambda_1		1	0.952402	0.456509	2.08627	71	0.0405472	0.240338	1	0.219297	384
+high	Reptilia	repeat_cr	74	56	1	False	lambda_ml		0.327154	0.915249	0.466317	1.96272	71	0.0535976	0.226859	1	0.235573	384
+high	Reptilia	repeat_cr	74	56	1	False	raw		0	1.03896	0.466487	2.22719	71	0.0291062	0.255543	1	0.189437	384
+high	Reptilia	repeat_cr	74	56	1	True	lambda_1		1	1.18313	0.442355	2.67462	70	0.009306	0.304498	1	0.0994708	384
+high	Reptilia	repeat_cr	74	56	1	True	lambda_ml		0.435669	1.12011	0.479538	2.33581	70	0.0223712	0.2689	1	0.153402	384
+high	Reptilia	repeat_cr	74	56	1	True	raw		0	1.18876	0.486136	2.44532	70	0.0169908	0.280536	1	0.136551	384
+not_unreliable	Reptilia	repeat_cr	83	62	4	False	lambda_1		1	0.894827	0.444305	2.01399	80	0.0473717	0.219671	1	0.229605	384
+not_unreliable	Reptilia	repeat_cr	83	62	4	False	lambda_ml		0.362894	0.670496	0.457504	1.46555	80	0.14669	0.161697	1	0.389972	384
+not_unreliable	Reptilia	repeat_cr	83	62	4	False	raw		0	0.840238	0.45626	1.84158	80	0.0692435	0.201664	1	0.250844	384
+not_unreliable	Reptilia	repeat_cr	83	62	4	True	lambda_1		1	0.930089	0.443912	2.09521	79	0.0393561	0.229441	1	0.216899	384
+not_unreliable	Reptilia	repeat_cr	83	62	4	True	lambda_ml		0.318192	0.682005	0.456844	1.49286	79	0.139457	0.16564	1	0.377122	384
+not_unreliable	Reptilia	repeat_cr	83	62	4	True	raw		0	0.863376	0.454122	1.9012	79	0.0609222	0.20917	1	0.235573	384
+high	Actinopterygii	repeat_genome	184	88	3	False	lambda_1		1	-0.0953713	0.332602	-0.286743	181	0.774637	-0.0213086	1	0.915263	384
+high	Actinopterygii	repeat_genome	184	88	3	False	lambda_ml		0.398835	0.421496	0.246313	1.71122	181	0.0887537	0.126177	1	0.281665	384
+high	Actinopterygii	repeat_genome	184	88	3	False	raw		0	1.01818	0.206042	4.94161	181	1.75667e-06	0.344784	0.000671047	0.000178657	384
+high	Actinopterygii	repeat_genome	184	88	3	True	lambda_1		1	-0.0971034	0.333724	-0.290969	180	0.77141	-0.0216825	1	0.914263	384
+high	Actinopterygii	repeat_genome	184	88	3	True	lambda_ml		0.401685	0.418176	0.247103	1.69232	180	0.0923161	0.125146	1	0.285882	384
+high	Actinopterygii	repeat_genome	184	88	3	True	raw		0	1.0197	0.206847	4.92975	180	1.86101e-06	0.344896	0.000709046	0.000178657	384
+not_unreliable	Actinopterygii	repeat_genome	232	109	5	False	lambda_1		1	-0.0807873	0.288733	-0.279799	229	0.779884	-0.0184865	1	0.918637	384
+not_unreliable	Actinopterygii	repeat_genome	232	109	5	False	lambda_ml		0.528607	0.254315	0.224522	1.1327	229	0.258526	0.074642	1	0.509096	384
+not_unreliable	Actinopterygii	repeat_genome	232	109	5	False	raw		0	0.931816	0.187055	4.98151	229	1.2428e-06	0.312681	0.000477235	0.000178657	384
+not_unreliable	Actinopterygii	repeat_genome	232	109	5	True	lambda_1		1	-0.0672596	0.289585	-0.232262	228	0.816543	-0.0153801	1	0.919788	384
+not_unreliable	Actinopterygii	repeat_genome	232	109	5	True	lambda_ml		0.533583	0.257234	0.225091	1.1428	228	0.254322	0.0754677	1	0.508643	384
+not_unreliable	Actinopterygii	repeat_genome	232	109	5	True	raw		0	0.930782	0.187385	4.96723	228	1.33193e-06	0.312489	0.00051013	0.000178657	384
+high	Aves	repeat_genome	332	203	11	False	lambda_1		1	-0.373214	0.180579	-2.06676	329	0.0395388	-0.113212	1	0.216899	384
+high	Aves	repeat_genome	332	203	11	False	lambda_ml		0.956404	-0.476421	0.20024	-2.37925	329	0.0179177	-0.130058	1	0.137608	384
+high	Aves	repeat_genome	332	203	11	False	raw		0	-0.399738	0.28711	-1.39228	329	0.164777	-0.0765338	1	0.413559	384
+high	Aves	repeat_genome	332	203	11	True	lambda_1		1	-0.368562	0.180036	-2.04715	328	0.0414397	-0.11232	1	0.221012	384
+high	Aves	repeat_genome	332	203	11	True	lambda_ml		0.958569	-0.465116	0.199318	-2.33354	328	0.0202237	-0.127792	1	0.143813	384
+high	Aves	repeat_genome	332	203	11	True	raw		0	-0.396866	0.287108	-1.38229	328	0.167824	-0.0761028	1	0.418469	384
+not_unreliable	Aves	repeat_genome	369	228	12	False	lambda_1		1	-0.27378	0.153851	-1.77951	366	0.0759852	-0.0926169	1	0.265257	384
+not_unreliable	Aves	repeat_genome	369	228	12	False	lambda_ml		0.966141	-0.367411	0.176643	-2.07996	366	0.0382243	-0.108085	1	0.215855	384
+not_unreliable	Aves	repeat_genome	369	228	12	False	raw		0	-0.360882	0.268642	-1.34336	366	0.179989	-0.0700459	1	0.427323	384
+not_unreliable	Aves	repeat_genome	369	228	12	True	lambda_1		1	-0.246619	0.154738	-1.59379	365	0.11185	-0.0831338	1	0.322934	384
+not_unreliable	Aves	repeat_genome	369	228	12	True	lambda_ml		0.967362	-0.340429	0.1771	-1.92224	365	0.0553531	-0.100109	1	0.235573	384
+not_unreliable	Aves	repeat_genome	369	228	12	True	raw		0	-0.354522	0.268856	-1.31863	365	0.188118	-0.0688567	1	0.435165	384
+high	Mammalia	repeat_genome	527	336	11	False	lambda_1		1	0.405256	0.201875	2.00747	524	0.0452131	0.0873612	1	0.229605	384
+high	Mammalia	repeat_genome	527	336	11	False	lambda_ml		0.953252	0.32045	0.210449	1.5227	524	0.128438	0.0663726	1	0.354822	384
+high	Mammalia	repeat_genome	527	336	11	False	raw		0	0.271543	0.202241	1.34267	524	0.17996	0.0585541	1	0.427323	384
+high	Mammalia	repeat_genome	527	336	11	True	lambda_1		1	0.401375	0.201906	1.98793	523	0.0473405	0.0865995	1	0.229605	384
+high	Mammalia	repeat_genome	527	336	11	True	lambda_ml		0.953236	0.3133	0.210557	1.48795	523	0.137366	0.0649264	1	0.374103	384
+high	Mammalia	repeat_genome	527	336	11	True	raw		0	0.272129	0.202492	1.3439	523	0.179564	0.0586634	1	0.427323	384
+not_unreliable	Mammalia	repeat_genome	599	372	14	False	lambda_1		1	0.378333	0.191428	1.97638	596	0.0485729	0.0806915	1	0.229605	384
+not_unreliable	Mammalia	repeat_genome	599	372	14	False	lambda_ml		0.948218	0.379037	0.195085	1.94293	596	0.0524953	0.0793346	1	0.235573	384
+not_unreliable	Mammalia	repeat_genome	599	372	14	False	raw		0	0.20777	0.188804	1.10045	596	0.27158	0.0450305	1	0.516417	384
+not_unreliable	Mammalia	repeat_genome	599	372	14	True	lambda_1		1	0.378191	0.191579	1.97407	595	0.0488355	0.0806654	1	0.229605	384
+not_unreliable	Mammalia	repeat_genome	599	372	14	True	lambda_ml		0.948216	0.378749	0.195246	1.93985	595	0.0528697	0.0792759	1	0.235573	384
+not_unreliable	Mammalia	repeat_genome	599	372	14	True	raw		0	0.212062	0.188983	1.12212	595	0.262265	0.0459538	1	0.511216	384
+high	Reptilia	repeat_genome	85	70	1	False	lambda_1		1	1.21261	0.455393	2.66279	82	0.00932538	0.282111	1	0.0994708	384
+high	Reptilia	repeat_genome	85	70	1	False	lambda_ml		0.116265	0.843879	0.435232	1.93892	82	0.0559508	0.209372	1	0.235573	384
+high	Reptilia	repeat_genome	85	70	1	False	raw		0	0.786733	0.414159	1.89959	82	0.0610027	0.205306	1	0.235573	384
+high	Reptilia	repeat_genome	85	70	1	True	lambda_1		1	1.17526	0.46418	2.53191	81	0.0132771	0.270811	1	0.118567	384
+high	Reptilia	repeat_genome	85	70	1	True	lambda_ml		0.0844233	0.802955	0.45481	1.76548	81	0.0812525	0.192495	1	0.271313	384
+high	Reptilia	repeat_genome	85	70	1	True	raw		0	0.742758	0.433652	1.7128	81	0.0905755	0.186955	1	0.28509	384
+not_unreliable	Reptilia	repeat_genome	95	76	4	False	lambda_1		1	1.22317	0.452068	2.70573	92	0.00812221	0.271496	1	0.0977125	384
+not_unreliable	Reptilia	repeat_genome	95	76	4	False	lambda_ml		0.072051	0.803711	0.419943	1.91386	92	0.0587473	0.195676	1	0.235573	384
+not_unreliable	Reptilia	repeat_genome	95	76	4	False	raw		0	0.799343	0.400725	1.99474	92	0.0490302	0.20361	1	0.229605	384
+not_unreliable	Reptilia	repeat_genome	95	76	4	True	lambda_1		1	1.19767	0.454255	2.63655	91	0.00984802	0.266397	1	0.0995168	384
+not_unreliable	Reptilia	repeat_genome	95	76	4	True	lambda_ml		0.0545711	0.798024	0.417799	1.91007	91	0.0592739	0.196333	1	0.235573	384
+not_unreliable	Reptilia	repeat_genome	95	76	4	True	raw		0	0.79602	0.401287	1.98366	91	0.0503071	0.203589	1	0.232746	384

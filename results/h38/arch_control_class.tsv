@@ -1,0 +1,55 @@
+tier	slug	in	family_distance	class_distance
+full	anguilla-anguilla	uniform family	0	2
+full	anguilla-australis	uniform family	0	2
+full	anguilla-bicolor	uniform family	0	2
+full	anguilla-dieffenbachii	uniform family	0	2
+full	anguilla-labiata	uniform family	0	2
+full	anguilla-marmorata	uniform family	0	2
+full	anguilla-mossambica	uniform family	0	2
+full	anguilla-nebulosa	uniform family	0	2
+full	anguilla-reinhardtii	uniform family	0	2
+full	anguilla-rostrata	uniform family	0	2
+full	aphanopus-carbo	flagged	1.5	0
+full	calotes-versicolor	flagged	2	5
+full	crocodylus-acutus	uniform family	0	3
+full	crocodylus-intermedius	uniform family	0	3
+full	crocodylus-johnstoni	uniform family	0	3
+full	crocodylus-moreletii	uniform family	0	3
+full	crocodylus-niloticus	uniform family	0	3
+full	crocodylus-novaeguineae	uniform family	0	3
+full	crocodylus-palustris	uniform family	0	3
+full	crocodylus-porosus	uniform family	0	3
+full	crocodylus-rhombifer	uniform family	0	3
+full	crocodylus-siamensis	uniform family	0	3
+full	dactylopsila-trivirgata	flagged	2	5
+full	hynobius-nebulosus	flagged	4	0
+full	lagorchestes-hirsutus	uniform family	0	5
+full	macropus-fuliginosus	uniform family	0	5
+full	macropus-giganteus	uniform family	0	5
+full	macropus-robustus	uniform family	0	5
+full	macrotis-lagotis	flagged	1.5	6.5
+full	malayopython-reticulatus	uniform family	0	3
+full	mecistops-cataphractus	uniform family	0	3
+full	morone-saxatilis	flagged	1.5	3.5
+full	osteolaemus-tetraspis	uniform family	0	3
+full	paleosuchus-palpebrosus	flagged	2.5	5.5
+full	phoebastria-albatrus	flagged	2	2
+full	python-molurus	uniform family	0	3
+full	python-regius	uniform family	0	3
+full	rana-amurensis	flagged	3	3
+full	spilogale-putorius	flagged	3	0
+full	symphurus-plagiusa	flagged	3	0
+full	trachypenaeus-curvirostris	flagged	4	11
+genes	aplysia-californica	uniform family	0	14
+genes	aplysia-dactylomela	uniform family	0	14
+genes	aplysia-kurodai	uniform family	0	14
+genes	dicentrarchus-labrax	uniform family	0	3
+genes	morone-americana	uniform family	0	3
+genes	morone-saxatilis	uniform family	0	3
+genes	ostrea-edulis	flagged	7.5	11.5
+genes	phalacrocorax-auritus	flagged	0.5	0
+genes	phoebastria-albatrus	uniform family	0	0.5
+genes	phoebastria-immutabilis	uniform family	0	0.5
+genes	phoebastria-nigripes	uniform family	0	0.5
+genes	prolasmidonta-heterodon	flagged	0	12.5
+genes	thalassarche-melanophris	uniform family	0	0.5

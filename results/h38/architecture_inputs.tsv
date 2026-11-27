@@ -1,0 +1,7 @@
+item	sha256
+species.parquet	fa967e33724af62dab5859eab48393404627e54aee951bcd7fe69895b86a6db1
+audit records.parquet	1b1e41fb5c02e90870da5de578312b55bb1c56e63d7cc8d070fce1b0b2a4ed30
+trf binary	dc8e610afe6674f770639fa0bcf026e09ba1b51588de68b8710c3d3466859fa8
+trf 4.09.1	parameters 2 7 7 80 10 50 500; bioconda trf 4.09.1 build h031d066_4 (the program reports Version 4.09)
+trf_repeats.tsv	2bbaa9dd5b1c7b1b583c852c783dc09289347091b48cb2175f100e295ce5971a
+architecture.tsv	338769f1f68750d867f94bd2e2f6bb5e76c50e975f7ff1e936dfe88b6fe4d00b

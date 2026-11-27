@@ -1,0 +1,10 @@
+measure	groups	n_counts	n_explained_by_annotation	n_not_counting	n_null	n_not_assessed	measure_counts	counts_in
+rearr_full	4	0	0	0	4	0	False	
+rearr_genes	4	0	0	0	2	2	False	
+cr_length	4	0	0	0	4	0	False	
+cr_copies	4	0	0	0	3	1	False	
+repeat_genome	4	0	0	0	4	0	False	
+repeat_cr	4	0	0	0	4	0	False	
+non_coding_bp	4	0	0	0	4	0	False	
+non_coding_frac	4	0	0	0	4	0	False	
+gene_overlap_bp	4	0	0	0	4	0	False	

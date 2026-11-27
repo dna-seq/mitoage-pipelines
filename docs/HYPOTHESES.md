@@ -3627,7 +3627,7 @@ if the mispaired nulls here behave unlike H5's, the machinery is wrong before th
 alignments and rates reproduce H7's protein-gene numbers on the protein genes as a positive control: a rate
 pipeline that cannot reproduce H7 is not used on the tRNAs. Nothing here needs a GPU.
 
-## H38. Genome architecture as a trait: rearrangement, the control region and repeat content against lifespan (proposed 2026-11-27; code written 2026-11-27, not yet run)
+## H38. Genome architecture as a trait: rearrangement, the control region and repeat content against lifespan (proposed 2026-11-27; run 2026-11-27: no measure counts, no cell is anything but null or not assessed)
 
 **Why.** H13 read gene order to find records that are wrong, and `audit/order.py` already builds each record's
 signed circular arrangement, canonical under rotation and under reversal, at two tiers. Nothing has ever tested
@@ -3711,4 +3711,28 @@ none counting) before the tests and breaks of the code were finished; no definit
 - *Tests and breaks* (`tests/test_arch.py`, `slurm/h38-mutations.py`): the conditions of the bar are separated from each other (each lambda form, each
   set, the sign and the threshold, singly), the correction is checked against Holm over the whole table, and each check of the control against a
   corrupted copy of the audit's own tables.
+
+- **Result, 2026-11-27** (code a5c46ab; two runs from fresh clones, Slurm jobs 6665458 and 6665460, every output file identical byte for byte, and the same bytes as the first two runs at
+  c7990d8, jobs 6665266 and 6665268; tests and breaks in job 6665459; tables, the control and the README in `results/h38/`). The build is H27's (Hugging Face revision 446dad6), RefSeq release 237,
+  Tandem Repeats Finder 4.09.1.
+  - *The positive control passed before any lifespan number was read, on the reading above* (against the family, not the class): no exception in any of its 9 checks over 2325 live species at both
+    tiers; the arrangements are the audit's for every record; the audit's 55 and 19 flags on this build include all of H13's published 54 and 18. Read against the class, as the entry's
+    sentence is literally worded, it cannot hold: 29 records of uniform families at the full tier (10 at the genes tier) are above zero from their class because their family's arrangement is not the
+    class's, and 4 flagged records (1) are at the class's arrangement. This departure is the one thing the run changed in how the entry reads; it is listed in `arch_control_class.tsv`.
+  - **No architecture measure counts.** Nine measures in four taxon groups, 36 cells: **33 are null, 3 are not assessed, 0 count, 0 are explained by annotation, 0 are not counting.** Not assessed: the
+    number of control-region features of ray-finned fishes (3 species off one), and the gene-tier distance of mammals (2) and reptiles (3): a measure almost constant cannot be regressed. Species: from 83
+    (reptiles, control-region measures) to 599 (mammals) in a primary cell; unknown at the full tier 1 (*Crocidura russula*, no tRNA annotated), at the genes tier 0; no control-region feature annotated in 350.
+  - *The correction over the run.* One Holm over all 384 p-values (every measure, group, set, model and covariate variant), in the table of the raw p. With the tree in the model, lambda estimated: smallest raw
+    p 0.0012, every Holm p 1.0 on the primary set, no q below 0.05 in any of its 128 rows; lambda 1: 36 raw p below 0.05 and 5 q below 0.05 (birds: the number of control-region features, in three rows, and the full-tier
+    distance), the smallest Holm p 0.16. Each of the five fails the first condition, since lambda estimated is null there (raw p 0.23 and 0.44); the bar needs both. The 12 cells with a Holm p below 0.05 are
+    raw regressions that ignore the tree (ray-finned fishes: the non-coding length and share and the repeat share, on both sets), reported for comparison only and null with the tree in the model, as the
+    entry anticipated for architecture.
+  - *The annotation covariate* (3 to 14 flagged species in a cell) moved no cell across a threshold; nothing needed explaining by it.
+  - *Limits.* Unknown: whether the lambda-1 signal in birds (control-region count, full-tier distance) is annotation, since the flag cannot see a poorly annotated record in a family of fewer than three; most species are at zero
+    distance, so the distance regressions are crude; no power calculation was made, so these nulls are not shown to exclude a small effect; H1's species only (a record lacking a protein gene is not in them); the control-region count
+    is a count of annotated features and 350 records have none; TRF reads the circular genome as a line.
+  - *Tests and breaks:* 56 of 56 pass, none skipped, and 118 of 118 breaks are caught (job 6665459 at a5c46ab). The first check, at c7990d8 (job 6665267), caught 115 of 119: two survivors were
+    redundancies in the code, now written so each is caught (the share's base, and a species the audit has no row for); two were an equivalent break (a change of the flag's sign is already a move by a quarter of the slope,
+    so that clause went) and a missing boundary case (a change of exactly a quarter), now tested. Like H37's, the first break run let breaks through. The rest of the repository's tests give 636 passed, 218 skipped, 2 failed,
+    `tests/test_audit.py` and `tests/test_cybrid_swap.py`, the two failures H37 reported on this kind of checkout; not looked into again here.
 
