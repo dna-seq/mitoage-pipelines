@@ -1,0 +1,27 @@
+pmid	doi	year	search	decision	reason	points
+12777531	10.1093/molbev/msg132	2003	xenomitochondrial	already_used	one of H16's five source papers	0
+10961998	10.1074/jbc.M004070200	2000	xenomitochondrial	already_used	one of H16's five source papers	0
+10908563	10.1074/jbc.M004053200	2000	xenomitochondrial	already_used	one of H16's five source papers	0
+9603924	10.1074/jbc.273.23.14210	1998	xenomitochondrial	already_used	one of H16's five source papers	0
+9256447	10.1073/pnas.94.17.9131	1997	xenomitochondrial	already_used	one of H16's five source papers	0
+20638486	10.1016/j.mito.2010.07.003	2010	xenomitochondrial	included	transmitochondrial mouse line carrying Mus terricolor mtDNA; complex I-linked respiration of skeletal-muscle mitochondria stated with its control and called not different	1
+39978712	10.1016/j.yexcr.2025.114466	2025	cybrid interspecific mitochondria	unread	reciprocal brown hare and mountain hare cybrids with respirometry; the publisher refuses automated access (403 at the article page, a redirect to the same publisher from the DOI). Not worked around. The most promising single candidate: a third and fourth host species	0
+14745024	10.1073/pnas.0303184101	2004	xenomitochondrial	unread	homoplasmic xenomitochondrial mice, Mus spretus and Mus terricolor mtDNA on a Mus musculus background; the abstract states grossly normal respiratory function with no per-complex number, and PMC serves no full text for it	0
+15377882	10.1023/B:JOBB.0000041778.84464.16	2004	xenomitochondrial	unread	development and initial characterization of xenomitochondrial mice; no PMC copy	0
+10347173	10.1074/jbc.274.23.16188	1999	xenomitochondrial	unread	titration of complex I impairment; may restate the 1998 ape xenocybrids rather than add points; no PMC copy	0
+24555799	10.1080/10495398.2013.841709	2014	xenomitochondrial	unread	human, mouse and pig interspecies cybrids all died in selection, which the abstract states without any respiratory measurement; whether each pair is reported separately enough to enter as no-cybrid points needs the full text, and there is no PMC copy	0
+33031404	10.1371/journal.pone.0239804	2020	xenomitochondrial	unscreened	divergent mtDNA genotypes within the mouse; needs the amino-acid check of rule 3 before it is read	0
+38397785	10.3390/antiox13020187	2024	xenomitochondrial	unscreened	a mismatched-mtDNA mouse model; needs the amino-acid check of rule 3 before it is read	0
+38155240	10.1038/s41598-023-50444-2	2023	xenomitochondrial	excluded	bovine mitochondria in mouse embryos; the outcome is embryonic development, not a stated outcome for any respiratory complex	0
+26416548	10.1038/srep14512	2015	xenomitochondrial	excluded	the same design and the same reason	0
+17445713	10.1016/S0091-679X(06)80027-0	2007	transmitochondrial mice xenomitochondrial	excluded	a methods chapter, no new measurement	0
+26530681	10.1007/978-1-4939-3040-1_12	2015	xenomitochondrial	excluded	a methods chapter, no new measurement	0
+18501533	10.1016/j.gene.2008.04.001	2008	xenomitochondrial	excluded	a mitochondrial genome sequence of Mus terricolor; a sequence source, not an outcome	0
+25628643	10.3389/fgene.2014.00454	2014	xenomitochondrial	excluded	yeast; outside the vertebrate build and its complex structures	0
+30980913	10.1016/j.mito.2019.03.006	2019	xenomitochondrial	excluded	yeast as a vehicle for mammalian genomes; no host-donor outcome of the kind defined	0
+12594919	10.1098/rstb.2002.1177	2003	cybrid interspecific mitochondria	excluded	plants, and a review	0
+21214654	10.1111/j.1365-294X.2010.04984.x	2011	cybrid interspecific mitochondria	excluded	plants, and a review	0
+10852478	10.1007/pl00008686	2000	cybrid interspecific mitochondria	excluded	plants	0
+1679525	10.1007/BF00282465	1991	cybrid interspecific mitochondria	excluded	plants	0
+7221838	10.1007/BF01544749	1981	cybrid interspecific mitochondria	excluded	hamster and mouse hybrids scored by chloramphenicol resistance and viability; no stated outcome for any complex	0
+1035581	10.1007/BF02835451	1976	cybrid interspecific mitochondria	excluded	the same, scored by chloramphenicol resistance	0

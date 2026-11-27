@@ -1,0 +1,2 @@
+host	donor	complex	assay	outcome	pct_low	pct_high	significant	source_doi	location	note
+mus-musculus	mus-terricolor	I	complex I-linked state 3 respiration / CS	measured	90	90	no	10.1016/j.mito.2010.07.003	Results, "Oxygen consumption"	in vivo line B6NTac(129S6)-mt(M. terricolor), skeletal-muscle mitochondria: 21.3 +/- 8.1 against 23.7 +/- 8.1 nmol O2/min/CS, the authors state not different (p > 0.05); the percentage was computed here from the two means; a substrate-driven respiration measure, not an enzyme assay of complex I alone
