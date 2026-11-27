@@ -789,6 +789,12 @@ class TestBar:
         v = verdict(over={(P, True, L1): {"slope": 0.0001}})
         assert v.c1_survives_controls and v.c2_holds_on_high and v.c3_survives_run_correction and not v.c4_unmoved_by_flag
 
+    def test_a_change_of_exactly_a_quarter_of_the_slope_is_not_a_move_and_a_change_of_sign_is(self):
+        both = {(P, False, ML): {"slope": 4.0}, (P, False, L1): {"slope": 4.0}}
+        assert verdict(over={**both, (P, True, ML): {"slope": 3.0}, (P, True, L1): {"slope": 5.0}}).verdict == "counts"
+        assert verdict(over={**both, (P, True, ML): {"slope": -3.0}}).verdict == "explained by annotation"
+        assert verdict(over={**both, (P, True, L1): {"slope": -5.0}}).verdict == "explained by annotation"
+
     def test_a_flag_that_moves_a_result_that_failed_an_earlier_condition_does_not_make_it_explained_by_annotation(self):
         assert verdict(over={(P, True, ML): {"slope": -0.29}, (PH, False, ML): FAIL}).verdict == "not counting"
         assert verdict(over={(P, True, ML): {"slope": -0.29}, (P, False, ML): FAIL}).verdict == "null"

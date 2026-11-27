@@ -37,8 +37,9 @@ The bar (`judge`), per measure and taxon group:
   (2) holds on the high-confidence subset: the same on the `high` set, with the sign of the primary result;
   (3) survives the correction over the whole run: `p_holm_run` below 0.05 in both lambda models, on the primary set and on
       the high set;
-  (4) does not move when the annotation flag is added: in both lambda models the sign is kept, `p_holm_run` of the row with
-      the flag is below 0.05, and the slope changes by no more than MOVE_TOLERANCE of itself.
+  (4) does not move when the annotation flag is added: in both lambda models `p_holm_run` of the row with the flag is below
+      0.05 and the slope changes by no more than MOVE_TOLERANCE (a quarter, so less than the slope itself: a change of sign is a
+      move) of itself.
 Verdicts: `counts` (all four); `explained by annotation` (1 to 3 and not 4); `not counting` (1 and not 2 or not 3);
 `null` (not 1); `not assessed` where a condition that matters could not be evaluated (a set too small, or no covariate row),
 with the reason. A measure counts only where one of its taxon groups counts.
@@ -336,7 +337,7 @@ def judge(cells: pd.DataFrame) -> pd.DataFrame:
             moved = []
             for k in ("lambda_ml", "lambda_1"):
                 s0, s1 = prim.at[k, "slope"], cov.at[k, "slope"]
-                moved.append(not (np.sign(s1) == np.sign(s0) and cov.at[k, "p_holm_run"] < ALPHA and abs(s1 - s0) <= MOVE_TOLERANCE * abs(s0)))
+                moved.append(not (cov.at[k, "p_holm_run"] < ALPHA and abs(s1 - s0) <= MOVE_TOLERANCE * abs(s0)))
             c4 = not any(moved)
             row.update(cov_slope_ml=cov.at["lambda_ml", "slope"], cov_slope_pic=cov.at["lambda_1", "slope"],
                        cov_p_holm_run_ml=cov.at["lambda_ml", "p_holm_run"], cov_p_holm_run_pic=cov.at["lambda_1", "p_holm_run"])

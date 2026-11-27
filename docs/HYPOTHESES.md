@@ -3704,8 +3704,8 @@ none counting) before the tests and breaks of the code were finished; no definit
   variant), computed in the function that returns the rows, so that `p_holm_run` and `q_run` are columns of the table the raw p are in; the verdict
   refuses a table without them.
 - *The bar, as coded.* (1) raw p below 0.05 with lambda estimated and with lambda 1, the same sign, on the primary set; (2) the same on the high set
-  with the primary sign; (3) `p_holm_run` below 0.05 in both lambda forms on both sets; (4) with the flag in the model, in both lambda forms the sign is
-  kept, `p_holm_run` is below 0.05 and the lifespan slope changes by no more than a quarter of itself. `counts` is all four; `explained by annotation`
+  with the primary sign; (3) `p_holm_run` below 0.05 in both lambda forms on both sets; (4) with the flag in the model, in both lambda forms `p_holm_run`
+  is below 0.05 and the lifespan slope changes by no more than a quarter of itself (so a change of sign is a move). `counts` is all four; `explained by annotation`
   is 1 to 3 without 4; `not counting` is 1 without 2 or 3; `null` is not 1; `not assessed` where a condition that matters could not be evaluated, with
   the reason. A measure counts where one of its taxon groups counts.
 - *Tests and breaks* (`tests/test_arch.py`, `slurm/h38-mutations.py`): the conditions of the bar are separated from each other (each lambda form, each
