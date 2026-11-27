@@ -232,6 +232,36 @@ correlation and the partial correlation given the other three variables (order d
   traits 603 to 1,963, relative differences below 0.08; tree length 48, variance of dS 147; the correlations and
   partial correlations as above to the second decimal. Ages held: effective sample sizes of the covariances with
   the traits 20 to 86, relative differences 0.37 to 0.66: still not read.
+**Coevol, the ages-estimated chains read (2026-11-27; `results/h3/coevol-2026-11-27/`).** The fourth leg ended
+on 2026-11-27 and a fifth brought both resumed chains to 15,002 points. They now pass the bar fixed in
+advance: `tracecomp -x 1500` gives every effective sample size at 165 or more (tree length 165, dN/dS 339, the
+covariances with the traits 1,350 to 10,028) and every relative difference at 0.16 or less. Read with
+`readcoevol -x 1500 1 15000` (job 6666586, chains from commit d6581f1, legs 6490194–6490201 and 6666186), on
+copies, 13,500 points.
+- *Correlations* (chain 1 / chain 2, posterior probability of a positive value in brackets): dS with lifespan
+  −0.493 / −0.496 (0.0003, 0.00007); dN/dS with lifespan +0.439 / +0.439 (0.99, 0.99); dS with mass −0.381 /
+  −0.384 (0.0039, 0.0027); dN/dS with mass +0.212 / +0.212 (0.86); lifespan with mass +0.715 (1); dS with
+  dN/dS −0.633 / −0.634 (0.00015, 0.00007).
+- *Partial correlations*, given the other three: dS with lifespan −0.116 / −0.120 (0.15, 0.14); dN/dS with
+  lifespan +0.287 / +0.284 (0.92); dS with mass −0.162 / −0.163 (0.063); dN/dS with mass −0.227 / −0.225
+  (0.11); lifespan with mass +0.679 / +0.678 (1); dS with dN/dS −0.536 / −0.537 (0.00096, 0.0013).
+- **With body mass held, nothing about lifespan reaches 0.975.** The rise of dN/dS with lifespan is +0.29 at
+  0.92 and the raw fall of dS with lifespan goes with body mass (−0.12 at 0.15). These are the numbers the
+  unconverged chains gave at 1,100 and at 4,300 points, to the second decimal, now from chains that have
+  mixed: more points will not move them. The provisional reading above stands as the final one for this
+  analysis, and it counts nothing.
+- **This answers the question only for the analysis that samples the node ages.** The reading fixed on
+  2026-11-15 says that with the ages held dS is a rate per unit of the dated tree's time, which is the form
+  that answers the question as stated; those chains have not mixed (below) and are not read, so that form
+  stays open and may never be answered.
+**Coevol with the dated ages held: not readable, and getting worse.** After leg 4 (14,104 and 13,955 points,
+burn-in 1,500) the effective sample size of tree length is 4, down from 31 after leg 3, with the chains 0.231
+apart on it; the covariances with the traits are 66 to 672 and differ by up to 0.286. An effective sample size
+that falls as a chain lengthens is a chain not mixing on a parameter, not one short of points, and holding the
+ages removes the parameter that absorbs rate variation, so this is a plausible consequence of the setup rather
+than bad luck. Leg 5 (jobs 6666187, 6666188) is running; the judgement put to the maintainer on 2026-11-27 is
+that if tree length is still this bad after it, the ages-held analysis is declared unreadable rather than
+given further legs.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 
