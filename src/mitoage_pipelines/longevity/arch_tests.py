@@ -99,8 +99,9 @@ def control_tables(arch: pd.DataFrame, audit_order: pd.DataFrame, audit_flags: p
     rows, depart, counts = [], [], {}
     merged = arch.merge(audit_order, on="slug", how="left", suffixes=("", "_audit"), indicator=True)
     exceptions = int((merged._merge != "both").sum())              # a live species the audit has no row for
+    both = merged[merged._merge == "both"]
     for tier in am.TIERS:
-        a, b = merged[f"order_{tier}_unoriented"], merged[f"order_{tier}_unoriented_audit"]
+        a, b = both[f"order_{tier}_unoriented"], both[f"order_{tier}_unoriented_audit"]
         exceptions += int(((a != b) & ~(a.isna() & b.isna())).sum())
     rows.append({"check": "G0 the arrangements are the audit's", "tier": "both", "records": int(len(merged)), "exceptions": exceptions})
     for tier in am.TIERS:

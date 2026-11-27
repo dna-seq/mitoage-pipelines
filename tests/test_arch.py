@@ -697,6 +697,10 @@ def test_the_table_has_a_row_per_live_species_with_the_distances_the_repeats_and
                 assert r[f"rearr_{tier}"] == naive_distance(r[col], modal) or am.breakpoint_distance(r[col], modal) == r[f"rearr_{tier}"]
     s = sp.set_index("slug")
     assert np.allclose(tab.non_coding_frac, (s.loc[tab.slug, "non_coding_bp"] / s.loc[tab.slug, "mtdna_size_bp"]).to_numpy())
+    sp2 = sp.copy()
+    sp2.loc[sp2.slug == tab.slug.iloc[0], "mtdna_size_bp"] *= 2                  # the stored size, not the record's length, is the share's base
+    tab2, _ = am.table(pick, sp2, 2, tmp_path)
+    assert tab2.non_coding_frac.iloc[0] == pytest.approx(tab.non_coding_frac.iloc[0] / 2)
     assert set(rep.slug) <= set(tab.slug) and (rep.start >= 1).all() and (rep.start <= rep.end).all()
     for r in tab.itertuples():
         mine = rep[rep.slug == r.slug]
