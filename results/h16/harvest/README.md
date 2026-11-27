@@ -11,7 +11,15 @@ literature), `cybrid interspecific mitochondria` (7), `transmitochondrial mice x
 animal literature by its own terms: `transmitochondrial mice respiratory` (21), `conplastic mice mitochondrial
 respiration` (3). Queries are recorded per row in `candidates.tsv`.
 
-Searches still to run: forward citations of H16's five source papers, and the reviews' reference lists.
+Third pass, the forward reach of H16's own sources: PubMed's related-article links for all five of them at
+once (about 600 records, which reproduced the candidate set the targeted searches had already found and
+added nothing of the right design), then `xenocybrid` (7), `interspecies cybrid respiratory` (0) and
+`cybrid primate mitochondria oxidative phosphorylation` (106, screened by title).
+
+**The searchable literature is now worked through.** 52 candidates are logged: 5 already used, 2 included,
+36 excluded, 9 unread for want of a readable copy. The 600 related records were screened by their overlap
+with the design terms rather than one by one, which is the one place this log is thinner than a full
+reading would be.
 
 ## Files
 
@@ -96,9 +104,16 @@ points are named in `candidates.tsv`, and the ones that matter are out of reach:
   host by itself. The publisher refuses automated access (403 at the article page, and the DOI redirects to
   the same publisher). That gate is there on purpose and was not worked around. It is recorded as `unread`,
   which is not a negative.
-- Seven others are `unread` for want of a readable copy (10.1073/pnas.0303184101,
+- Eight others are `unread` for want of a readable copy (10.1073/pnas.0303184101,
   10.1023/B:JOBB.0000041778.84464.16, 10.1074/jbc.274.23.16188, 10.1080/10495398.2013.841709,
-  10.1074/jbc.M609367200, 10.1016/j.freeradbiomed.2016.11.035, 10.1093/hmg/ddl005).
+  10.1074/jbc.M609367200, 10.1016/j.freeradbiomed.2016.11.035, 10.1093/hmg/ddl005,
+  10.1016/j.bbabio.2013.03.012).
+- One of those eight matters more than its row suggests. **The *Rattus* xenocybrid paper
+  (10.1016/j.bbabio.2013.03.012, 2013)** is a third source on the one point this table already holds in
+  disagreement: mouse with rat mtDNA, complex III, which stands here once at 37% and significant and once as
+  not different. Its abstract states a deficiency in complex III activity, so it agrees with the reduced
+  reading and would break the tie. It names no percentage and no figure in the abstract, and its publisher
+  serves no automated request, so nothing can be entered from it.
 
 So the direction is still not answerable either way, and the reason is access rather than absence. The
 judgement of whether to ask the maintainer for copies of the unread papers belongs to him; it is desk
