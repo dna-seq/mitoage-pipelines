@@ -3723,7 +3723,7 @@ none counting) before the tests and breaks of the code were finished; no definit
     number of control-region features of ray-finned fishes (3 species off one), and the gene-tier distance of mammals (2) and reptiles (3): a measure almost constant cannot be regressed. Species: from 83
     (reptiles, control-region measures) to 599 (mammals) in a primary cell; unknown at the full tier 1 (*Crocidura russula*, no tRNA annotated), at the genes tier 0; no control-region feature annotated in 350.
   - *The correction over the run.* One Holm over all 384 p-values (every measure, group, set, model and covariate variant), in the table of the raw p. With the tree in the model, lambda estimated: smallest raw
-    p 0.0012, every Holm p 1.0 on the primary set, no q below 0.05 in any of its 128 rows; lambda 1: 36 raw p below 0.05 and 5 q below 0.05 (birds: the number of control-region features, in three rows, and the full-tier
+    p 0.018, every Holm p 1.0, no q below 0.05 (smallest 0.14) in any of its 128 rows; lambda 1: 36 raw p below 0.05 and 5 q below 0.05 (birds: the number of control-region features, in three rows, and the full-tier
     distance), the smallest Holm p 0.16. Each of the five fails the first condition, since lambda estimated is null there (raw p 0.23 and 0.44); the bar needs both. The 12 cells with a Holm p below 0.05 are
     raw regressions that ignore the tree (ray-finned fishes: the non-coding length and share and the repeat share, on both sets), reported for comparison only and null with the tree in the model, as the
     entry anticipated for architecture.
