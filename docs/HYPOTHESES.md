@@ -3627,7 +3627,7 @@ if the mispaired nulls here behave unlike H5's, the machinery is wrong before th
 alignments and rates reproduce H7's protein-gene numbers on the protein genes as a positive control: a rate
 pipeline that cannot reproduce H7 is not used on the tRNAs. Nothing here needs a GPU.
 
-## H38. Genome architecture as a trait: rearrangement, the control region and repeat content against lifespan (proposed 2026-11-27; no code, no score)
+## H38. Genome architecture as a trait: rearrangement, the control region and repeat content against lifespan (proposed 2026-11-27; code written 2026-11-27, not yet run)
 
 **Why.** H13 read gene order to find records that are wrong, and `audit/order.py` already builds each record's
 signed circular arrangement, canonical under rotation and under reversal, at two tiers. Nothing has ever tested
@@ -3667,3 +3667,48 @@ move when the annotation-flag covariate is added. Anything less is reported as n
 audit where the two overlap: the records the audit flags as singly-arranged within their family must come out at
 a distance above zero, and the families the audit finds uniform must come out at zero. A measure that cannot
 reproduce the audit's own flags is not used against lifespan. Nothing here needs a GPU.
+
+**Code, and the choices the entry left open, fixed before any run** (2026-11-27; `longevity/arch_measures.py`, `arch_tests.py`, `slurm/h38-run.sbatch`,
+`h38-check.sbatch`, `h38-mutations.py`, `tests/test_arch.py`). Nothing below was changed to fit a number. One thing was seen before this paragraph
+was written: a trial of the test step on the build, run while the code was being debugged, printed its count of verdicts (33 null, 3 not assessed,
+none counting) before the tests and breaks of the code were finished; no definition below was altered after it.
+- *The species.* H1's default dataset (a lifespan, a body mass, all 13 proteins, a tip of the dated tree: `rna_tests.test_species`), as H37 used, in
+  four taxon groups (Mammalia, Aves, Actinopterygii, Reptilia), at least 25 species in a cell. The primary set is H27's confidence-filtered records
+  (`not_unreliable`: level high, caveat or low), not the unfiltered default; the high-confidence subset (`high`) is the second set.
+- *The nine measures.* `rearr_full` and `rearr_genes` (breakpoint distance, defined and tested in `arch_measures.py`, to the commonest arrangement of the
+  species' class among all live records, at the audit's two tiers; a record with no tRNA annotated is unknown at the full tier); `cr_length`
+  (log10 of the total length of the control-region features) and `cr_copies` (their number); `repeat_genome` and `repeat_cr` (the share of the genome,
+  and of the control region, covered by a tandem repeat of Tandem Repeats Finder 4.09.1, bioconda build h031d066_4, parameters `2 7 7 80 10 50 500`, its binary
+  pinned by SHA-256 in the code and its output kept and checksummed); `non_coding_bp` (log10) and `non_coding_frac` (the build's stored non-coding
+  length, and its share of the genome); `gene_overlap_bp` (positions in two or more CDS, rRNA or tRNA features). A record with no control-region
+  feature has `cr_length`, `cr_copies` and `repeat_cr` unknown, never zero. A measure with fewer than 5 species off its most common value in a cell is
+  not assessed there (a count that is the same in almost every species cannot be regressed).
+- *The positive control, and how the entry's sentence was read.* The entry says records the audit flags as singly arranged in their family must be above
+  zero and families the audit finds uniform must be at zero, while measure (a) is the distance from the class's commonest arrangement. Those two
+  statements cannot both hold literally: a family whose own arrangement is not its class's is uniform and at a distance above zero from the class
+  (this is a real rearrangement of the lineage, not an annotation error). The control therefore reads the same function and the same arrangement
+  strings against the audit's own reference, the family: every flagged record other than a reversed deposit above zero from its family, every reversed
+  deposit (canonical under reversal: the other strand, not a rearrangement) at zero, every record of a uniform family at zero, the arrangements the
+  audit's own (G0), and where a family's arrangement is its class's the class distance equal to the family distance (G4); no exception allowed
+  at either tier, and the lifespan step refuses without it (non-zero exit). The records for which the two references differ are counted and listed
+  (`arch_control_class.tsv`), not hidden. This is the one reading in which the control is a test of the measure; it is a departure from the
+  entry's wording and is reported as such.
+- *The annotation covariate.* One 0/1 variable per species, 1 when the audit flags the record in any of four ways: a singly arranged record of its family
+  at either tier (`order_flags.tsv`), a strand reversed or mixed, neither genetic code clean, or the build's annotation differing from the record's. It
+  enters every model as one more column beside log10 lifespan and log10 mass. It does not catch a poorly annotated record in a family the audit cannot
+  judge (a family below three records), which is a limit and is said in the result.
+- *The models.* The standardised measure on log10 lifespan and log10 adult mass (and the flag), a phylogenetic regression on the dated tree
+  (`aa_pgls.fit`): lambda estimated, lambda 1 (the regression equal to phylogenetically independent contrasts, the primary form here) and lambda 0
+  (the raw regression, which only sits beside them). The effect is the partial correlation of lifespan.
+- *The correction.* One Holm and one Benjamini-Hochberg over every row of the run that has a p-value (every measure, group, set, model and covariate
+  variant), computed in the function that returns the rows, so that `p_holm_run` and `q_run` are columns of the table the raw p are in; the verdict
+  refuses a table without them.
+- *The bar, as coded.* (1) raw p below 0.05 with lambda estimated and with lambda 1, the same sign, on the primary set; (2) the same on the high set
+  with the primary sign; (3) `p_holm_run` below 0.05 in both lambda forms on both sets; (4) with the flag in the model, in both lambda forms the sign is
+  kept, `p_holm_run` is below 0.05 and the lifespan slope changes by no more than a quarter of itself. `counts` is all four; `explained by annotation`
+  is 1 to 3 without 4; `not counting` is 1 without 2 or 3; `null` is not 1; `not assessed` where a condition that matters could not be evaluated, with
+  the reason. A measure counts where one of its taxon groups counts.
+- *Tests and breaks* (`tests/test_arch.py`, `slurm/h38-mutations.py`): the conditions of the bar are separated from each other (each lambda form, each
+  set, the sign and the threshold, singly), the correction is checked against Holm over the whole table, and each check of the control against a
+  corrupted copy of the audit's own tables.
+

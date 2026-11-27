@@ -11,4 +11,5 @@ dependencies:
   - fasttree
   - usalign=20241201     # `structure within` (the binary reports version 20241108)
   - foldmason=4.dd3c235  # `structure msa`
+  - trf=4.09.1=h031d066_4  # `longevity arch-measures` (H38): Tandem Repeats Finder; the code refuses any binary whose SHA-256 is not this build's (it reports Version 4.09)
   - ncbi-datasets-cli    # not called by the code (the downloader uses NCBI's REST API): the same download by hand

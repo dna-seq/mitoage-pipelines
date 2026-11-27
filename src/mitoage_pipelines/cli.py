@@ -472,6 +472,44 @@ def longevity_rna_verdict(out: RnaOut = paths.RNA_OUT) -> None:
     rna_tests.main_verdict(out, out)
 
 
+ArchOut = Annotated[Path, typer.Option("--out", help="folder of H38: the architecture table, the control, the cells and the verdicts")]
+
+
+@longevity_app.command("arch-measures")
+def longevity_arch_measures(
+    data: Build = paths.BUILD, out: ArchOut = paths.ARCH_OUT,
+    audit_work: Annotated[Path, typer.Option("--audit-work", help="folder of records.parquet, from `audit records`")] = paths.AUDIT,
+    workers: Annotated[Optional[int], typer.Option(help="processes at once; default: the cores")] = None,
+) -> None:
+    """H38: the architecture of every live species' mitochondrial genome (rearrangement distances, control region, repeats, non-coding, overlaps). Needs `audit records` and Tandem Repeats Finder 4.09.1 on PATH."""
+    from .longevity import arch_measures
+    arch_measures.main(data, audit_work, out, workers)
+
+
+@longevity_app.command("arch-control")
+def longevity_arch_control(
+    data: Build = paths.BUILD, out: ArchOut = paths.ARCH_OUT,
+    audit: Annotated[Path, typer.Option(help="the audit's tables, from `audit order|strand|code`")] = paths.AUDIT_OUT,
+    published: Annotated[Optional[Path], typer.Option(help="H13's published order_flags.tsv, compared with this run's flags and not gated")] = None,
+) -> None:
+    """H38: the positive control. The rearrangement measure against the audit's flags of H13 on the same records."""
+    from .longevity import arch_tests
+    if not arch_tests.control(out / "architecture.tsv", audit, data / "species.parquet", out, published)["reproduced"]:
+        raise typer.Exit(1)          # the tables and the json are written; a job that depends on this one does not start
+
+
+@longevity_app.command("arch-tests")
+def longevity_arch_tests(
+    data: Build = paths.BUILD, composition: Composition = COMPOSITION,
+    tree: Annotated[Path, typer.Option("--tree", help="the dated species tree, from `longevity dated-tree`")] = paths.DATED_TREE,
+    audit: Annotated[Path, typer.Option(help="the audit's tables")] = paths.AUDIT_OUT,
+    out: ArchOut = paths.ARCH_OUT,
+) -> None:
+    """H38: the architecture measures against lifespan and the entry's bar (refused unless the control reproduced the audit's flags)."""
+    from .longevity import arch_tests
+    arch_tests.main(data, composition, tree, out, audit, out)
+
+
 @longevity_app.command("technology")
 def longevity_technology(data: Build = paths.BUILD, out: Out = paths.LONGEVITY_OUT) -> None:
     """H8's control: the sequencing technology each mitogenome's record states, into technology.tsv

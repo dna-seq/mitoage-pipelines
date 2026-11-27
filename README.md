@@ -112,6 +112,10 @@ uv run mitoage longevity rna-genes                                    # extract 
 uv run mitoage longevity rna-control --reference <H7's rates.tsv>     # the positive control
 uv run mitoage longevity rna-rates && uv run mitoage longevity rna-tests --class Mammalia   # likewise Aves, Actinopterygii, Reptilia
 uv run mitoage longevity rna-verdict                                  # the entry's bar, per gene, group and test
+# H38: genome architecture (rearrangement from the class's commonest arrangement, control region, tandem repeats, non-coding, overlaps) against
+# lifespan (slurm/h38-run.sbatch: after the audit's records, strand, order and code; Tandem Repeats Finder 4.09.1 on PATH; the rearrangement
+# measure has to reproduce the audit's flags, and `arch-tests` refuses without it)
+uv run mitoage longevity arch-measures && uv run mitoage longevity arch-control && uv run mitoage longevity arch-tests
 uv run mitoage download fishbase-temperature   # FishBase's species, synonyms and stocks tables, md5-checked
 uv run mitoage longevity thermal   # H20: temperature, size and metabolic rate against sister-pair rates and composition; Lehmann et al. retested (on haumea: slurm/h20-thermal.sbatch)
 uv run mitoage download hibernation   # H23-H25: bat hibernation (Wilkinson & Adams 2019, DRUM, SHA-256 pinned); the mammal table
