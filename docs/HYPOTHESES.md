@@ -3626,3 +3626,44 @@ if the mispaired nulls here behave unlike H5's, the machinery is wrong before th
 **Order and cost.** Part A first, on the build we already hold, CPU only. Part C after it, and only if Part A's
 alignments and rates reproduce H7's protein-gene numbers on the protein genes as a positive control: a rate
 pipeline that cannot reproduce H7 is not used on the tRNAs. Nothing here needs a GPU.
+
+## H38. Genome architecture as a trait: rearrangement, the control region and repeat content against lifespan (proposed 2026-11-27; no code, no score)
+
+**Why.** H13 read gene order to find records that are wrong, and `audit/order.py` already builds each record's
+signed circular arrangement, canonical under rotation and under reversal, at two tiers. Nothing has ever tested
+architecture as a trait: how far a genome's arrangement has moved, how long and how repetitive its control region
+is, how much of it is not coding. These are cheap on the build we hold and no entry above touches them.
+
+**The measures**, per live species of the build: (a) a rearrangement distance of the record's arrangement from
+its class's most common arrangement, at both of `order.py`'s tiers, by breakpoint distance on the signed circular
+order; (b) the control region's length, and the number of control-region features the record carries (a
+duplicated control region is known in several vertebrate groups and is the clearest architectural difference
+there is); (c) tandem-repeat content, genome-wide and within the control region, by one pinned tool at a pinned
+version; (d) the non-coding content the build already stores, and the total length of gene overlaps.
+
+**The confound that governs this entry, said first.** `audit/order.py` states it for its own purpose and it is
+sharper here: *a real rearrangement and an annotation error look the same in a record.* A species whose record is
+poorly annotated will score as rearranged, as repeat-poor (unannotated repeats) and as non-coding-rich at once,
+and badly annotated records are not distributed at random across the tree or across how well a species is
+studied. Therefore: every test is run on the confidence-filtered records of H27 as its primary form, not as a
+robustness check; the audit's own per-record flags enter the model as a covariate; and a result that moves when
+that covariate is added is reported as explained by annotation, not as a finding.
+
+**The test.** Each measure against maximum lifespan (log10 years) under the controls H11 and H27 settled: body
+mass, phylogenetically independent contrasts, within taxon group. Architecture tracks phylogeny more strongly
+than composition does, so the contrast form is the primary one here and the raw regression is reported beside it
+only for comparison.
+
+**The bar, stated before any number exists, and corrected over the whole family from the start.** H37 part A is
+the reason this is written out: there, the correction was over the genes within each test, one cell of 768 passed,
+and it vanished once the correction covered the whole family. So here the family-wise correction (Holm, with
+Benjamini-Hochberg q beside it) runs over **every cell of the entire run** — every measure, every taxon group,
+every model variant — and is computed and reported in the same table as the raw p-values, never added afterwards.
+A measure counts only if it (1) survives those controls in both the lambda-estimated and the lambda-1 forms with
+the same sign, (2) holds on the high-confidence subset, (3) survives the family-wide correction, and (4) does not
+move when the annotation-flag covariate is added. Anything less is reported as not counting, in those words.
+
+**The positive control, before any lifespan number is read.** The rearrangement measure must agree with the H13
+audit where the two overlap: the records the audit flags as singly-arranged within their family must come out at
+a distance above zero, and the families the audit finds uniform must come out at zero. A measure that cannot
+reproduce the audit's own flags is not used against lifespan. Nothing here needs a GPU.
