@@ -1408,6 +1408,18 @@ on human structures through its own sequences, not on a mouse structure. Activit
 control, by different assays and normalisations. Failure to form a cybrid can have causes other than the respiratory
 chain (replication, translation). T2b was added after the first run.
 
+**A point may not be well defined without a tissue (2026-11-27, from the harvest; `results/h16/harvest/`).** The
+literature harvest the maintainer chose on 2026-11-26 turned up a reading that contradicts this table rather than
+extending it. *Mus musculus* with *Mus terricolor* mtDNA, complex I, stands here twice as not reduced: 83% of
+control in the cell cybrid, and 90% in skeletal-muscle mitochondria of the in-vivo line
+(doi 10.1016/j.mito.2010.07.003). In cardiac mitochondria of that same in-vivo line, complex I-linked
+ADP-stimulated respiration is stated significantly decreased by about 40% (doi 10.3390/antiox13020187). The
+harvest's rule for a disagreement is applied and the point is excluded from testing. But this disagreement tracks
+the **tissue**, not the laboratory, and the table has no tissue column: every row here is one (host, donor,
+complex), which assumes the outcome does not depend on where it was measured. If that assumption is wrong for this
+pairing it may be wrong for the others, and the 30 points are fewer than they look rather than more. This is
+recorded, not acted on: no test is rerun until the harvest closes.
+
 ## H17. The cybrids again, with scores that weigh substitutions: co-evolved pairs and ESM-2 (H16's open item)
 
 **Question.** H16's count of differing contact residues did about as well as divergence and could not say which
