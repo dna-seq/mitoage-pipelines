@@ -262,6 +262,16 @@ ages removes the parameter that absorbs rate variation, so this is a plausible c
 than bad luck. Leg 5 (jobs 6666187, 6666188) is running; the judgement put to the maintainer on 2026-11-27 is
 that if tree length is still this bad after it, the ages-held analysis is declared unreadable rather than
 given further legs.
+**Stopped, 2026-11-28, under desk #96's own default** (`results/h3/coevol-fixed-2026-11-28/`). Leg 5 finished —
+both chains at their full 15,001 points, jobs 6666187 (17 h 34 m) and 6666188 (21 h 28 m) — and the number was
+checked once. Tree length is still at an effective sample size of **4** with the chains 0.24 apart, after about
+3,500 more points per chain; four covariance entries are below 100 (71, 71, 92, 98) and the covariances differ by
+0.17 to 0.27. Two entries do pass on both counts, and a result cannot be assembled from the two that converged
+while seven did not. **The ages-held form of H3's Coevol run is unreadable and is not read**: no number from it
+is claimed in either direction, and an unreadable chain is not a negative result. H3's Coevol claim rests on the
+ages-estimated half alone (`results/h3/coevol-2026-11-27/`: with body mass held, nothing about lifespan passes),
+with this limit named beside it. The chains are on disk, so the two options the maintainer did not take — more
+legs, or a calibrated prior instead of fixed ages — remain open to him.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 
