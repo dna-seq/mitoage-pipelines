@@ -83,19 +83,34 @@ it in three genes (CARS2 161 to 5, RARS2 115 to 0, NARS2 92 to 2).
 Whether the earlier mitoport runs that used the old anchor should be done again under the new one is not part C's
 to decide and is not assumed either way: it is desk question #100.
 
+## A third amino acid is not assessed, and this was decided before any rate existed (2026-11-28)
+
+The test runs on the mammals H5's run used, so that the coupling the bar compares against is measured on the same
+branches. H5's set is 62 mammals, and `mitoport align` wants a complete matrix: a species missing from one gene is
+missing from all of them.
+
+**HARS2 does not cover them.** Its NCBI ortholog set holds 164 genes where the other seventeen hold about 270, and
+it reaches 38 of H5's 62 mammals where every other synthetase reaches 60 to 62. Keeping it would set the complete
+matrix at **35 species**; dropping it gives **57**. That is 22 species taken off all seventeen other pairs to keep
+one, and it is the whole weight of a pair that would itself rest on 38.
+
+So **histidine is not assessed for want of orthologs**, and it is recorded here with its number rather than left
+to fall out of a later step. Dropping YARS2 as well would give 59 instead of 57, which is not worth an amino acid,
+so it stays.
+
+**Part C therefore tests 17 pairs over 57 mammals**: 20 amino acids, less glutamine (charged by GatCAB, not by a
+synthetase), lysine (KARS1's annotation cannot be told from a cytosolic synthetase's) and histidine (orthologs).
+Each of the three is a different reason, and none of them is a result about rates.
+
 ## What this does not yet decide, and must be fixed before the test is run
 
 Written here as open, so that none of it is settled after a number is seen.
 
-- The alignments and the branch lengths: `mitoport align` and `branch-lengths` on the selected proteins, against
-  the same topology and the same 62 mammals H5's run used, as its nuclear proteins were done. HARS2 is the
-  constraint to watch: its ortholog set holds 164 genes where the others hold about 270, and it reaches 109 species
-  of the build where the others reach about 181, so the complete-matrix species set may be decided by that one gene.
 - The tRNA side: part A's RNA rates are per sister pair, and part C needs a per-branch rate on the mitoport
   topology. Which of the two is used, and how a tRNA with too few informative columns on a branch is treated.
 - The isoacceptors: Leu and Ser each have two tRNA genes and one synthetase. Whether the pair is the synthetase
   against each tRNA separately or against the two together.
-- The null: H5's mispairing, drawn over the other 17 synthetases, and how many draws.
+- The null: H5's mispairing, drawn over the other 16 synthetases, and how many draws.
 - The controls' set: the cytosolic proteins H5 uses as the nuclear background, for these genes too.
 
 The bar itself is already fixed in the entry and is not restated here: the real pair must beat the 95th percentile
