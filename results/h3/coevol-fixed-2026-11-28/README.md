@@ -44,9 +44,38 @@ converged while seven did not.
 **The tree length's history is the reason this is a stop and not a wait.** It was 31 after the third leg, 4 after
 the fourth, and 4 again now after a fifth leg of about 3,500 more points per chain. An effective sample size that
 falls, or sits still, while a chain gets longer is the signature of a chain fighting itself on that parameter, not
-of one that needs more time. There is a plausible mechanism, stated when the question was filed rather than
-invented now: holding the ages fixed removes the very parameter that would otherwise absorb variation in rates,
-so the chain has nowhere to put it.
+of one that needs more time.
+
+## The mechanism, corrected the same day (2026-11-28)
+
+The paragraph that stood here gave the mechanism as: holding the ages fixed removes the parameter that would
+otherwise absorb variation in rates, so the chain has nowhere to put it. That was offered as plausible, and an
+outside review of the setup — asked for by the maintainer — found something far more ordinary sitting in our own
+files. It is checked here against the data rather than taken on the reviewer's word.
+
+**The dated tree this form was given has nine internal branches of exactly zero duration.** Verified two ways: by
+counting the lengths in the Newick file (9 of its 104 non-root internal branches are `0`, and no tip is), and by
+Coevol itself, which printed `warning : non strictly positive branch length : 0` into our own chain logs
+**3,672 times in chain 1 and 3,744 times in chain 2**, from the first leg onward. Nobody read those lines.
+
+With the ages held, a branch of zero duration still carries substitutions, so the rate on it is being asked to be
+infinite. That is a degenerate parameterisation, and it is exactly the kind of thing that stops a chain mixing on
+anything involving tree length while leaving other parameters looking healthy — which is the pattern we have.
+
+**The ages-estimated form is not affected, and its own warnings are a red herring**: its tree carries no dates at
+all, so all 104 internal branches are zero and Coevol warns about every one of them (82,317 times). There the ages
+are sampled, zero is only a starting value, and that run converged. Zero durations are harmless when the ages are
+free and degenerate when they are held — which is why this showed up in one half and not the other.
+
+What remains unverified: the review also reported that a single terminal branch, *Erinaceus concolor*, accounts for
+most of the late rise in the length trace. That branch is in the tree at 65.17 time units, long but not extreme
+(the longest tip is 83.51 and the median 35.39), and the claim rests on a reconstruction of per-branch
+contributions that has not been reproduced here. It is recorded as the reviewer's, not as ours.
+
+**What this changes.** The chains stay unreadable and the stop stands: nothing can be read out of what was run.
+But the reason is no longer "fixing the ages is inherently hard here". It is a defect in the input that can be
+repaired, so declaring this half permanently unanswerable would be wrong, and the write-up must not say it. What
+the analysis needs is a dated tree with strictly positive internal durations, and then a rerun.
 
 ## The decision and whose it was
 
@@ -63,3 +92,17 @@ It says the ages-held form of this analysis **could not be read**, and why. It d
 relationship between the synonymous rate and lifespan in real time, and the write-up must not let the two be
 confused: an unreadable chain is not a negative result. H3's claim stands on the ages-estimated half alone, with
 that limit named.
+
+It also does not say the question cannot be answered. With the mechanism corrected above, the honest statement is
+narrower and more useful: *this run* was given a defective time tree and cannot be read, so the analysis has not
+yet been done properly rather than having been done and failed.
+
+## Where the review came from, and what it was
+
+The maintainer asked on 2026-11-28 for an outside review of the Coevol setup. He asked for Astra-6.2; **that model
+is refused for this account** ("not supported when using Codex with a ChatGPT account"), so the review ran on the
+Codex model the account does serve, GPT-6, and the substitution was reported to him rather than passed over. It was
+given the job script, the preparation code, the driver and both runs' convergence output, and no data files; it
+read further files of its own accord, read-only, within this project and the Coevol source. Its claims are treated
+as leads to check, not as results: the zero-duration branches are ours now because they were checked against the
+tree and the logs, and the hedgehog branch is not.

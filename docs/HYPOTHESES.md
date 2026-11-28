@@ -259,7 +259,9 @@ burn-in 1,500) the effective sample size of tree length is 4, down from 31 after
 apart on it; the covariances with the traits are 66 to 672 and differ by up to 0.286. An effective sample size
 that falls as a chain lengthens is a chain not mixing on a parameter, not one short of points, and holding the
 ages removes the parameter that absorbs rate variation, so this is a plausible consequence of the setup rather
-than bad luck. Leg 5 (jobs 6666187, 6666188) is running; the judgement put to the maintainer on 2026-11-27 is
+than bad luck. *(That last clause is wrong, and is corrected below under 2026-11-28: the cause is nine internal
+branches of zero duration in the dated tree, not a property of fixing the ages.)* Leg 5 (jobs 6666187, 6666188) is
+running; the judgement put to the maintainer on 2026-11-27 is
 that if tree length is still this bad after it, the ages-held analysis is declared unreadable rather than
 given further legs.
 **Stopped, 2026-11-28, under desk #96's own default** (`results/h3/coevol-fixed-2026-11-28/`). Leg 5 finished —
@@ -272,6 +274,22 @@ is claimed in either direction, and an unreadable chain is not a negative result
 ages-estimated half alone (`results/h3/coevol-2026-11-27/`: with body mass held, nothing about lifespan passes),
 with this limit named beside it. The chains are on disk, so the two options the maintainer did not take — more
 legs, or a calibrated prior instead of fixed ages — remain open to him.
+**Why it would not mix: nine internal branches of zero duration, and the mechanism above was wrong (2026-11-28).**
+An outside review of the setup, asked for by the maintainer that day, pointed at the input rather than the model,
+and the claim was checked here before it was taken. **The dated tree given to the ages-held form has 9 of its 104
+non-root internal branches at exactly zero**, no tip affected; and Coevol said so itself, printing `warning : non
+strictly positive branch length : 0` into our own chain logs **3,672 times in chain 1 and 3,744 in chain 2**, from
+the first leg on, where nobody read it. With the ages held, a zero-duration branch that still carries substitutions
+demands an infinite rate: a degenerate parameterisation, which stops a chain mixing on anything involving tree
+length while other parameters look healthy — the pattern observed. The ages-estimated form is untouched by this and
+its own warnings mislead: its tree carries no dates, so all 104 internal branches are zero and Coevol warns 82,317
+times, but there the ages are sampled, zero is a starting value only, and that run converged. **Zero durations are
+harmless when the ages are free and degenerate when they are held**, which is why one half failed and the other did
+not. So the ages-held analysis has not been done and failed; it has not been done properly. It needs a dated tree
+with strictly positive internal durations and a rerun, which is the maintainer's to call. Not verified, and not
+claimed: the review also attributed most of the late rise in the length trace to one terminal branch (*Erinaceus
+concolor*, 65.17 time units against a median tip of 35.39 and a longest of 83.51); that rests on a reconstruction
+not reproduced here.
 **Open.** The RELAX runs above used the gene-built tree for their species tree; `relax-prep` now writes the
 dated one, and the runs have not been repeated on it.
 
