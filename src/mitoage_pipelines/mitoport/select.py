@@ -26,8 +26,34 @@ def fasta(p: Path):
         yield f"{name} {description}".strip(), seq
 
 
-def main(data: Path, ncbi: Path, out: Path, classes: tuple[str, ...] = ("Mammalia",)) -> None:
-    """`classes`: the classes of the build whose species are kept (the published run: mammals only)."""
+def human_length(prots: list[tuple[str, str, str, str]], anchor: str) -> int:
+    """The length every species' isoform is chosen nearest to.
+
+    `first` is the first human RefSeq protein in NCBI's file order, which is what every run before 2026-11-28 used;
+    it is kept as the default so that no published number moves. It is arbitrary: NCBI's order is by accession, and
+    a gene whose alternative isoforms were accessioned later than its canonical one (`NP_001...` sorts before
+    `NP_0...`) anchors on an isoform. Measured over the 72 ortholog sets on this machine, the first human protein is
+    not the one tagged `[isoform=1]` in 11 of the 18 synthetases and in 20 of the 54 genes of H5's set, and where it
+    is a short isoform the per-species choice follows it: `CARS2` anchors at 302 aa against a canonical 564, and 161
+    of its 181 species then come out more than 20% from the anchor.
+
+    `longest` takes the longest human RefSeq protein instead. It does not depend on file order or on an isoform tag
+    (NCBI writes `[isoform=1]`, `[isoform=a]`, `[isoform=X1]` or nothing at all, so no tag rule covers every gene),
+    and the fullest annotated form is what an alignment of orthologs is for. H37 part C uses it.
+    """
+    human = [len(s) for a, o, gid, s in prots if o == "Homo sapiens" and a.startswith("NP_")]
+    if not human:
+        raise ValueError("no human RefSeq protein in the ortholog set")
+    if anchor == "first":
+        return human[0]
+    if anchor == "longest":
+        return max(human)
+    raise ValueError(f"anchor: expected 'first' or 'longest', got {anchor!r}")
+
+
+def main(data: Path, ncbi: Path, out: Path, classes: tuple[str, ...] = ("Mammalia",), anchor: str = "first") -> None:
+    """`classes`: the classes of the build whose species are kept (the published run: mammals only).
+    `anchor`: which human protein the per-species isoform is chosen nearest to, see `human_length`."""
     out.mkdir(parents=True, exist_ok=True)
     sp = pl.read_parquet(data / "species.parquet").filter(pl.col("class").is_in(list(classes)))
     slug = {" ".join(n.split()[:2]): s for n, s in zip(sp["scientific_name"], sp["slug"])}
@@ -44,7 +70,7 @@ def main(data: Path, ncbi: Path, out: Path, classes: tuple[str, ...] = ("Mammali
             for c in bygene.get(gid, []):
                 if tr(c).replace("U", "*") == s or tr(c) == s: cds[h.split()[0]] = c; break
         prots = [(h.split()[0], re.search(r"\[organism=([^\]]+)\]", h).group(1), re.search(r"GeneID=(\d+)", h).group(1), s) for h, s in proteins]
-        hlen = next(len(s) for a, o, gid, s in prots if o == "Homo sapiens" and a.startswith("NP_"))
+        hlen = human_length(prots, anchor)
         best, genes = {}, {}
         for a, o, gid, s in prots:
             k = " ".join(o.split()[:2]); genes.setdefault(k, set()).add(gid)
@@ -58,4 +84,4 @@ def main(data: Path, ncbi: Path, out: Path, classes: tuple[str, ...] = ("Mammali
                 if len(c) != 3 * (len(s) + 1) and len(c) != 3 * len(s): bad += 1; continue
                 fa.write(f">{slug[k]} {a}\n{s}\n"); fn.write(f">{slug[k]} {a}\n{c[:3 * len(s)]}\n")
         lens = sorted(len(v[2]) for v in best.values())
-        print(f"{g}\thuman {hlen} aa\tspecies {len(best)}\tlength min/median/max {lens[0]}/{lens[len(lens)//2]}/{lens[-1]}\toff by >20% {sum(abs(l-hlen) > 0.2*hlen for l in lens)}\tspecies with 2+ gene ids {len(multi)}\tCDS length mismatch dropped {bad}")
+        print(f"{g}\thuman {hlen} aa ({anchor})\tspecies {len(best)}\tlength min/median/max {lens[0]}/{lens[len(lens)//2]}/{lens[-1]}\toff by >20% {sum(abs(l-hlen) > 0.2*hlen for l in lens)}\tspecies with 2+ gene ids {len(multi)}\tCDS length mismatch dropped {bad}")

@@ -884,10 +884,11 @@ def mitoport_select(
     data: Build = paths.BUILD, ncbi: Ncbi = paths.NCBI,
     out: Annotated[Path, typer.Option("--out", help="folder for <GENE>.faa and <GENE>.fna")] = paths.MITOPORT_SEL,
     classes: Annotated[Optional[list[str]], typer.Option("--class", help="class of the build whose species are kept; repeat for several (default: Mammalia)")] = None,
+    anchor: Annotated[str, typer.Option("--anchor", help="the human protein every species' isoform is chosen nearest to: 'first' in NCBI's file order (every run before 2026-11-28, kept so no published number moves) or 'longest' (H37 part C)")] = "first",
 ) -> None:
     """One protein and coding sequence per species and gene from the NCBI ortholog sets."""
     from .mitoport import select
-    select.main(data, ncbi, out, tuple(classes or ("Mammalia",)))
+    select.main(data, ncbi, out, tuple(classes or ("Mammalia",)), anchor)
 
 
 @mitoport_app.command("align")

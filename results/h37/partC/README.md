@@ -58,12 +58,39 @@ coincidence: the entry says Gln has no direct synthetase and that two of the set
   mitochondrial aminoacylation process, so this rule cannot separate it from QARS1. It is not used. The cost is
   stated here rather than paid quietly: part C will test 18 pairs, not 20, and tRNA-Lys and tRNA-Gln are left out.
 
+## The orthologs, and a defect found in taking them (2026-11-28)
+
+The 18 ortholog sets are downloaded over Mammalia (`mitoage download orthologs`, 2026-11-28; the files are outside
+the repository). Taking one protein per species out of them turned up something that is not part C's own and is
+reported rather than worked around.
+
+`mitoport/select.py` picks, for each species, the isoform whose length is nearest the human one — and took "the
+human one" to be **the first human RefSeq protein in NCBI's file order**. That order is by accession and means
+nothing biologically: a gene whose alternative isoforms were accessioned after its canonical one (`NP_001…` sorts
+before `NP_0…`) anchors on an isoform. Measured on this machine's 72 ortholog sets, the first human protein is not
+the one NCBI tags `[isoform=1]` in 11 of the 18 synthetases and in 20 of the 54 genes of H5's set. Where the
+anchor lands on a short isoform the whole column follows it: CARS2 anchored at 302 residues against a canonical
+564, and 161 of its 181 species then came out more than 20% from the anchor.
+
+So `select` now takes an anchor. `first` is the old rule and stays the **default, so that no published number
+moves**; `longest` takes the longest human RefSeq protein, which depends neither on file order nor on an isoform
+tag — NCBI writes `[isoform=1]`, `[isoform=a]`, `[isoform=X1]` or nothing, so no tag rule covers every gene — and
+the fullest annotated form is what an alignment of orthologs is for. **Part C uses `longest`, fixed here before any
+rate is computed.** Over the 18 synthetases the species per gene do not change; what changes is which isoform each
+species contributes, and the count of species more than 20% from the anchor falls from **396 to 28**, nearly all of
+it in three genes (CARS2 161 to 5, RARS2 115 to 0, NARS2 92 to 2).
+
+Whether the earlier mitoport runs that used the old anchor should be done again under the new one is not part C's
+to decide and is not assumed either way: it is desk question #100.
+
 ## What this does not yet decide, and must be fixed before the test is run
 
 Written here as open, so that none of it is settled after a number is seen.
 
-- The orthologs: `mitoage download orthologs` for these 18 symbols over the mammals the mitoport alignments
-  already use, then `mitoport select`, `align` and `branch-lengths`, as H5's nuclear proteins were done.
+- The alignments and the branch lengths: `mitoport align` and `branch-lengths` on the selected proteins, against
+  the same topology and the same 62 mammals H5's run used, as its nuclear proteins were done. HARS2 is the
+  constraint to watch: its ortholog set holds 164 genes where the others hold about 270, and it reaches 109 species
+  of the build where the others reach about 181, so the complete-matrix species set may be decided by that one gene.
 - The tRNA side: part A's RNA rates are per sister pair, and part C needs a per-branch rate on the mitoport
   topology. Which of the two is used, and how a tRNA with too few informative columns on a branch is treated.
 - The isoacceptors: Leu and Ser each have two tRNA genes and one synthetase. Whether the pair is the synthetase
