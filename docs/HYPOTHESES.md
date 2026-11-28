@@ -3562,7 +3562,7 @@ donors, which is the mitochondrial side. "I want to reevaluate." The rule below 
     *Collection:* two bugs of the collection, in how the tables of tasks without a row are joined, were found when the human host was first collected and
     fixed in 98a9d8f, with a test and two breaks; the task tables are unchanged. *Tests and breaks:* 116 passed (this step's 39 and the swap's); breaks: 83 of 83 caught (the first break run let 13 survive on the tests as first written; their tests were added in 7ce19d2 and 98a9d8f; one change, the nuclear chain's substitutions put on every copy, is equivalent on these structures, no gene having copies that differ in sequence, and is not run); the swap's own breaks were not run again.
 
-## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: it does not count. tRNA-Thr of ray-finned fishes passes the bar under the entry's own correction, within its test, and does not survive the correction over all 768 cells, under which every cell is null; part B not run; part C's gene set resolved 2026-11-28, 18 of 20 amino acids, nothing tested yet)
+## H37. The tRNA and rRNA genes: is anything outside the protein genes tied to lifespan, and does a mitochondrial tRNA covary with its own nuclear synthetase? (proposed 2026-11-26, on the maintainer's go; part A run 2026-11-26: it does not count. tRNA-Thr of ray-finned fishes passes the bar under the entry's own correction, within its test, and does not survive the correction over all 768 cells, under which every cell is null; part B not run; part C's gene set and species set resolved 2026-11-28, 17 pairs over 57 mammals, nothing tested yet)
 
 **Why this, and why now.** Every entry above works on the 13 protein-coding genes, on their amino acids, their
 codons, their contacts with nuclear subunits, or on the control region. The 22 tRNA genes are used only as a
@@ -3684,6 +3684,23 @@ if the mispaired nulls here behave unlike H5's, the machinery is wrong before th
   trimmed records, and all 5 breaks of the rule are caught. What is still open before any test — the orthologs, the
   per-branch tRNA rate, the Leu and Ser isoacceptors, the null's draws and the nuclear background — is listed in that
   README as open, not settled.
+- **The orthologs, and a defect they turned up, 2026-11-28 (pipelines `9c18b63`, `15724b4`; still no rate and no
+  test).** The 18 ortholog sets are taken over Mammalia. Two things were decided before any number exists, both in
+  `results/h37/partC/README.md`. First, **the human anchor**: `mitoport/select.py` chooses each species' isoform by
+  length against the human one and took that to be the first human RefSeq protein *in NCBI's file order*, which is
+  accession order and means nothing; where a gene's alternative isoforms were accessioned after its canonical one
+  the anchor is an isoform and the whole column follows it. Over the 72 ortholog sets on this machine the first
+  human protein is not the one NCBI tags `[isoform=1]` in 31 of them, and CARS2 anchored at 302 residues against a
+  canonical 564, with 161 of its 181 species then more than 20% from the anchor. `select` now takes an anchor, the
+  old rule stays the default so that no published number moves, and part C uses `longest`: the same species per
+  gene, a different isoform per species, and the count more than 20% from the anchor falls from 396 to 28. Whether
+  H19's and H12's earlier runs should be done again under it is desk #100; part C is not blocked by it. Second,
+  **a third amino acid is not assessed**: the test runs on the 62 mammals of H5's run so that the coupling the bar
+  compares against is measured on the same branches, and the alignment wants a complete matrix, but HARS2's
+  ortholog set reaches only 38 of those 62 where every other synthetase reaches 60 to 62. Keeping it would set the
+  matrix at 35 species and dropping it gives 57, so **histidine is not assessed for want of orthologs**. **Part C
+  tests 17 pairs over 57 mammals**, with glutamine, lysine and histidine each out for a different reason, and none
+  of the three a result about rates.
 
 **Order and cost.** Part A first, on the build we already hold, CPU only. Part C after it, and only if Part A's
 alignments and rates reproduce H7's protein-gene numbers on the protein genes as a positive control: a rate
